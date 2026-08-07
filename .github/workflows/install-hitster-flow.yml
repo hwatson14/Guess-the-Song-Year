@@ -1,0 +1,46 @@
+name: Install streamlined game flow
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install UX shell
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text()
+          css='<link rel="stylesheet" href="./ux-hitster.css">'
+          js='<script src="./ux-hitster.js"></script>'
+          if css not in s:
+              s=s.replace('</head>', css+'\n</head>', 1)
+          if js not in s:
+              s=s.replace('</body>', js+'\n</body>', 1)
+          p.write_text(s)
+          PY
+      - name: Verify JavaScript
+        run: |
+          node --check ux-hitster.js
+          python - <<'PY'
+          from pathlib import Path
+          s=Path('index.html').read_text()
+          assert './ux-hitster.css' in s
+          assert './ux-hitster.js' in s
+          PY
+      - name: Commit
+        run: |
+          if git diff --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Install streamlined scan-play-reveal UX"
+          git push
