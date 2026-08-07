@@ -1,8 +1,9 @@
-name: One-time v2 resilience patch
+name: V2 resilience hotfix
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -13,65 +14,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Cache YouTube resolution and add transparent mode fallback
+      - name: Apply patch
+        run: |
+          echo 'ZnJvbSBwYXRobGliIGltcG9ydCBQYXRoCmltcG9ydCByZQoKcCA9IFBhdGgoImluZGV4Lmh0bWwiKQpzID0gcC5yZWFkX3RleHQoKQoKZGVmIG9uZShvbGQsIG5ldywgbGFiZWwpOgogICAgZ2xvYmFsIHMKICAgIGlmIG9sZCBub3QgaW4gczoKICAgICAgICByYWlzZSBTeXN0ZW1FeGl0KGYiYW5jaG9yIG1pc3Npbmc6IHtsYWJlbH0iKQogICAgcyA9IHMucmVwbGFjZShvbGQsIG5ldywgMSkKCm9uZSgieXQ6J2dzeS55dCd9OyIsICJ5dDonZ3N5Lnl0JyxjYWNoZTonZ3N5LnJlc29sdmUnfTsiLCAiSyBjYWNoZSIpCm9uZSgibGV0IG92ZXJyaWRlcz1sb2FkKEsub3Zlcix7fSksZ2FtZT1sb2FkKEsuZ2FtZSx7aGlzdG9yeTpbXSx1c2VkOltdLGFzc2lnbjp7fX0pLHRva2VuPWxvYWQoSy50b2tlbixudWxsKTsiLAogICAgImxldCBvdmVycmlkZXM9bG9hZChLLm92ZXIse30pLGdhbWU9bG9hZChLLmdhbWUse2hpc3Rvcnk6W10sdXNlZDpbXSxhc3NpZ246e319KSx0b2tlbj1sb2FkKEsudG9rZW4sbnVsbCkscmVzb2x1dGlvbnM9bG9hZChLLmNhY2hlLHt9KTsiLAogICAgInN0YXRlIGNhY2hlIikKCmNob29zZSA9ICIiImFzeW5jIGZ1bmN0aW9uIGNob29zZUFuZFJlc29sdmUoeWVhcixtb2RlSWQscHJvdil7bGV0IHVzZWQ9bmV3IFNldChnYW1lLnVzZWR8fFtdKSxwcmltYXJ5PVtdO2lmKG1vZGVJZD09PSdhdXN0cmFsaWFuJyl7bGV0IGM9YXdhaXQgYXVzdHJhbGlhbkNhbmRpZGF0ZSh5ZWFyLHVzZWQpO2lmKGMpcHJpbWFyeT1bY119ZWxzZSBpZihtb2RlSWQ9PT0ndW5leHBlY3RlZCcpe3ByaW1hcnk9c2h1ZmZsZShUSU1FV0FSUC5maWx0ZXIoeD0+eC55ZWFyPT09eWVhciYmIXVzZWQuaGFzKHNvbmdLZXkoeCkpKSk7cHJpbWFyeS5wdXNoKC4uLmF3YWl0IGNhdGFsb2dDYW5kaWRhdGVzKHllYXIsJ3VuZXhwZWN0ZWQnLHVzZWQpKX1lbHNlIHByaW1hcnk9YXdhaXQgY2F0YWxvZ0NhbmRpZGF0ZXMoeWVhcixtb2RlSWQsdXNlZCk7bGV0IGNhbmRpZGF0ZXM9Wy4uLnByaW1hcnldO2lmKG1vZGVJZCE9PSdncmVhdGVzdCcpe2xldCBmYWxsYmFjaz1hd2FpdCBjYXRhbG9nQ2FuZGlkYXRlcyh5ZWFyLCdncmVhdGVzdCcsdXNlZCk7bGV0IGV4aXN0aW5nPW5ldyBTZXQoY2FuZGlkYXRlcy5tYXAoc29uZ0tleSkpO2NhbmRpZGF0ZXMucHVzaCguLi5mYWxsYmFjay5maWx0ZXIoYz0+IWV4aXN0aW5nLmhhcyhzb25nS2V5KGMpKSkubWFwKGM9Pih7Li4uYyxmYWxsYmFja0Zyb206bW9kZUlkfSkpKX1sZXQgZXJyb3JzPVtdO2Zvcihjb25zdCBjIG9mIGNhbmRpZGF0ZXMuc2xpY2UoMCwyNCkpe3RyeXtsZXQgb2s9cHJvdj09PSdzcG90aWZ5Jz90cnVlOmF3YWl0IHZhbGlkYXRlUmVsZWFzZVllYXIoYyx5ZWFyKTtpZighb2spY29udGludWU7bGV0IHJlc29sdmVkPWF3YWl0IHJlc29sdmVQcm92aWRlcihjLHllYXIscHJvdik7cmV0dXJuIHtjYW5kaWRhdGU6ey4uLmMseWVhcn0scmVzb2x2ZWR9fWNhdGNoKGUpe2Vycm9ycy5wdXNoKGUubWVzc2FnZSl9fXRocm93IG5ldyBFcnJvcignQ291bGQgbm90IGZpbmQgYSBwbGF5YWJsZSAnK3llYXIrJyBzb25nIGZvciAnK01PREVTW21vZGVJZF0ubmFtZSsnLiAnKyhlcnJvcnMuYXQoLTEpfHwnVHJ5IGFub3RoZXIgbW9kZS4nKSl9CiIiIgppcywgbjxvbnRvIG5vc3VwcG9ydD4=' | base64 -d > /tmp/patch.py
+          cat >> /tmp/patch.py <<'PY'
+PY
+          python /tmp/patch.py
+      - name: Verify JavaScript
         run: |
           python - <<'PY'
           from pathlib import Path
           import re
-
-          p = Path('index.html')
-          s = p.read_text()
-
-          old = "yt:'gsy.yt'};"
-          new = "yt:'gsy.yt',cache:'gsy.resolve'};"
-          assert old in s, 'K cache anchor missing'
-          s = s.replace(old, new, 1)
-
-          old = "let overrides=load(K.over,{}),game=load(K.game,{history:[],used:[],assign:{}}),token=load(K.token,null);"
-          new = "let overrides=load(K.over,{}),game=load(K.game,{history:[],used:[],assign:{}}),token=load(K.token,null),resolutions=load(K.cache,{});"
-          assert old in s, 'state cache anchor missing'
-          s = s.replace(old, new, 1)
-
-          choose = """async function chooseAndResolve(year,modeId,prov){let used=new Set(game.used||[]),primary=[];if(modeId==='australian'){let c=await australianCandidate(year,used);if(c)primary=[c]}else if(modeId==='unexpected'){primary=shuffle(TIMEWARP.filter(x=>x.year===year&&!used.has(songKey(x))));primary.push(...await catalogCandidates(year,'unexpected',used))}else primary=await catalogCandidates(year,modeId,used);let candidates=[...primary];if(modeId!=='greatest'){let fallback=await catalogCandidates(year,'greatest',used);let existing=new Set(candidates.map(songKey));candidates.push(...fallback.filter(c=>!existing.has(songKey(c))).map(c=>({...c,fallbackFrom:modeId})))}let errors=[];for(const c of candidates.slice(0,24)){try{let ok=prov==='spotify'?true:await validateReleaseYear(c,year);if(!ok)continue;let resolved=await resolveProvider(c,year,prov);return {candidate:{...c,year},resolved}}catch(e){errors.push(e.message)}}throw new Error('Could not find a playable '+year+' song for '+MODES[modeId].name+'. '+(errors.at(-1)||'Try another mode.'))}
-"""
-          s, n = re.subn(r"async function chooseAndResolve\(year,modeId,prov\)\{.*?\}\n(?=async function catalogCandidates)", choose, s, count=1, flags=re.S)
-          assert n == 1, 'chooseAndResolve function not patched'
-
-          old = "async function resolveProvider(c,year){return provider==='youtube'?youtubeResolve(c,year):spotifyResolve(c,year)}"
-          new = "async function resolveProvider(c,year,prov=provider){return prov==='youtube'?youtubeResolve(c,year):spotifyResolve(c,year)}"
-          assert old in s, 'resolveProvider anchor missing'
-          s = s.replace(old, new, 1)
-
-          youtube = """async function youtubeResolve(c,year){if(c.youtubeId)return {provider:'youtube',videoId:c.youtubeId,url:'https://www.youtube.com/watch?v='+c.youtubeId,title:c.title,artist:c.artist};let ck='yt:'+songKey(c);if(resolutions[ck])return {...resolutions[ck],title:c.title,artist:c.artist};if(!ytKey)throw new Error('YouTube needs a Data API key. Add it once in Settings, or switch to Spotify.');let q=encodeURIComponent(c.title+' '+mainArtist(c.artist)+' official audio');let url='https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&videoEmbeddable=true&videoSyndicated=true&maxResults=5&safeSearch=none&regionCode=AU&q='+q+'&key='+encodeURIComponent(ytKey);let r=await fetch(url);if(!r.ok){let text=await r.text().catch(()=>\"\");throw new Error('YouTube search failed ('+r.status+'). '+(text.includes('quota')?'API quota may be exhausted.':''))}let d=await r.json(),items=d.items||[];if(!items.length)throw new Error('YouTube could not find a playable video for '+c.title+'.');items.sort((a,b)=>ytScore(b,c)-ytScore(a,c));let v=items[0],resolved={provider:'youtube',videoId:v.id.videoId,url:'https://www.youtube.com/watch?v='+v.id.videoId};resolutions[ck]=resolved;localStorage.setItem(K.cache,JSON.stringify(resolutions));return {...resolved,title:c.title,artist:c.artist}}
-"""
-          s, n = re.subn(r"async function youtubeResolve\(c,year\)\{.*?\}\n(?=function ytScore)", youtube, s, count=1, flags=re.S)
-          assert n == 1, 'youtubeResolve function not patched'
-
-          old = "E.answerTags.innerHTML=`<span class=\"tag\">${esc(MODES[current.mode].name)}</span><span class=\"tag\">${current.provider==='youtube'?'YouTube':'Spotify'}</span>${current.candidate.source==='australian'?'<span class=\"tag\">Australian pick</span>':''}`;"
-          new = "E.answerTags.innerHTML=`<span class=\"tag\">${esc(MODES[current.mode].name)}</span><span class=\"tag\">${current.provider==='youtube'?'YouTube':'Spotify'}</span>${current.candidate.source==='australian'?'<span class=\"tag\">Australian pick</span>':''}${current.candidate.fallbackFrom?'<span class=\"tag\">Mode fallback</span>':''}`;"
-          assert old in s, 'answer tag anchor missing'
-          s = s.replace(old, new, 1)
-
-          p.write_text(s)
-          PY
-      - name: Verify JavaScript parses
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          import re
-          s=Path('index.html').read_text()
-          js='\n'.join(re.findall(r'<script>(.*?)</script>',s,re.S))
+          s = Path('index.html').read_text()
+          js = '\n'.join(re.findall(r'<script>(.*?)</script>', s, re.S))
           Path('/tmp/app.js').write_text(js)
           PY
           node --check /tmp/app.js
-      - name: Commit patch if needed
+      - name: Commit if changed
         run: |
-          if git diff --quiet; then
-            echo "No patch required"
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add index.html
-          git commit -m "Improve mode fallback and YouTube quota resilience"
+          git commit -m 'Improve mode fallback and YouTube quota resilience'
           git push
