@@ -1,0 +1,77 @@
+name: One-time v2 resilience patch
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Cache YouTube resolution and add transparent mode fallback
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          p = Path('index.html')
+          s = p.read_text()
+
+          old = "yt:'gsy.yt'};"
+          new = "yt:'gsy.yt',cache:'gsy.resolve'};"
+          assert old in s, 'K cache anchor missing'
+          s = s.replace(old, new, 1)
+
+          old = "let overrides=load(K.over,{}),game=load(K.game,{history:[],used:[],assign:{}}),token=load(K.token,null);"
+          new = "let overrides=load(K.over,{}),game=load(K.game,{history:[],used:[],assign:{}}),token=load(K.token,null),resolutions=load(K.cache,{});"
+          assert old in s, 'state cache anchor missing'
+          s = s.replace(old, new, 1)
+
+          choose = """async function chooseAndResolve(year,modeId,prov){let used=new Set(game.used||[]),primary=[];if(modeId==='australian'){let c=await australianCandidate(year,used);if(c)primary=[c]}else if(modeId==='unexpected'){primary=shuffle(TIMEWARP.filter(x=>x.year===year&&!used.has(songKey(x))));primary.push(...await catalogCandidates(year,'unexpected',used))}else primary=await catalogCandidates(year,modeId,used);let candidates=[...primary];if(modeId!=='greatest'){let fallback=await catalogCandidates(year,'greatest',used);let existing=new Set(candidates.map(songKey));candidates.push(...fallback.filter(c=>!existing.has(songKey(c))).map(c=>({...c,fallbackFrom:modeId})))}let errors=[];for(const c of candidates.slice(0,24)){try{let ok=prov==='spotify'?true:await validateReleaseYear(c,year);if(!ok)continue;let resolved=await resolveProvider(c,year,prov);return {candidate:{...c,year},resolved}}catch(e){errors.push(e.message)}}throw new Error('Could not find a playable '+year+' song for '+MODES[modeId].name+'. '+(errors.at(-1)||'Try another mode.'))}
+"""
+          s, n = re.subn(r"async function chooseAndResolve\(year,modeId,prov\)\{.*?\}\n(?=async function catalogCandidates)", choose, s, count=1, flags=re.S)
+          assert n == 1, 'chooseAndResolve function not patched'
+
+          old = "async function resolveProvider(c,year){return provider==='youtube'?youtubeResolve(c,year):spotifyResolve(c,year)}"
+          new = "async function resolveProvider(c,year,prov=provider){return prov==='youtube'?youtubeResolve(c,year):spotifyResolve(c,year)}"
+          assert old in s, 'resolveProvider anchor missing'
+          s = s.replace(old, new, 1)
+
+          youtube = """async function youtubeResolve(c,year){if(c.youtubeId)return {provider:'youtube',videoId:c.youtubeId,url:'https://www.youtube.com/watch?v='+c.youtubeId,title:c.title,artist:c.artist};let ck='yt:'+songKey(c);if(resolutions[ck])return {...resolutions[ck],title:c.title,artist:c.artist};if(!ytKey)throw new Error('YouTube needs a Data API key. Add it once in Settings, or switch to Spotify.');let q=encodeURIComponent(c.title+' '+mainArtist(c.artist)+' official audio');let url='https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&videoEmbeddable=true&videoSyndicated=true&maxResults=5&safeSearch=none&regionCode=AU&q='+q+'&key='+encodeURIComponent(ytKey);let r=await fetch(url);if(!r.ok){let text=await r.text().catch(()=>\"\");throw new Error('YouTube search failed ('+r.status+'). '+(text.includes('quota')?'API quota may be exhausted.':''))}let d=await r.json(),items=d.items||[];if(!items.length)throw new Error('YouTube could not find a playable video for '+c.title+'.');items.sort((a,b)=>ytScore(b,c)-ytScore(a,c));let v=items[0],resolved={provider:'youtube',videoId:v.id.videoId,url:'https://www.youtube.com/watch?v='+v.id.videoId};resolutions[ck]=resolved;localStorage.setItem(K.cache,JSON.stringify(resolutions));return {...resolved,title:c.title,artist:c.artist}}
+"""
+          s, n = re.subn(r"async function youtubeResolve\(c,year\)\{.*?\}\n(?=function ytScore)", youtube, s, count=1, flags=re.S)
+          assert n == 1, 'youtubeResolve function not patched'
+
+          old = "E.answerTags.innerHTML=`<span class=\"tag\">${esc(MODES[current.mode].name)}</span><span class=\"tag\">${current.provider==='youtube'?'YouTube':'Spotify'}</span>${current.candidate.source==='australian'?'<span class=\"tag\">Australian pick</span>':''}`;"
+          new = "E.answerTags.innerHTML=`<span class=\"tag\">${esc(MODES[current.mode].name)}</span><span class=\"tag\">${current.provider==='youtube'?'YouTube':'Spotify'}</span>${current.candidate.source==='australian'?'<span class=\"tag\">Australian pick</span>':''}${current.candidate.fallbackFrom?'<span class=\"tag\">Mode fallback</span>':''}`;"
+          assert old in s, 'answer tag anchor missing'
+          s = s.replace(old, new, 1)
+
+          p.write_text(s)
+          PY
+      - name: Verify JavaScript parses
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          s=Path('index.html').read_text()
+          js='\n'.join(re.findall(r'<script>(.*?)</script>',s,re.S))
+          Path('/tmp/app.js').write_text(js)
+          PY
+          node --check /tmp/app.js
+      - name: Commit patch if needed
+        run: |
+          if git diff --quiet; then
+            echo "No patch required"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Improve mode fallback and YouTube quota resilience"
+          git push
