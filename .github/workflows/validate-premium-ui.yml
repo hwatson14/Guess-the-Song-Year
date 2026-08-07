@@ -1,0 +1,31 @@
+name: Validate premium UI
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Validate UX JavaScript
+        run: node --check ux-hitster.js
+      - name: Validate shell hooks
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          html=Path('index.html').read_text()
+          js=Path('ux-hitster.js').read_text()
+          css=Path('ux-hitster.css').read_text()
+          assert './ux-hitster.css' in html and './ux-hitster.js' in html
+          for token in ['uxHome','uxNewGame','uxScanner','uxReady','uxPlaying','uxReveal','uxMusic','uxJoin']:
+              assert token in js, token
+          for token in ['.ux-start-card','.ux-deck','.ux-wave-card','.ux-answer-card','.ux-camera']:
+              assert token in css, token
+          print('premium UI shell validated')
+          PY
