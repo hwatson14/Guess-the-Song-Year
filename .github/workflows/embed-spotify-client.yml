@@ -50,19 +50,24 @@ jobs:
 
           p.write_text(s)
           PY
-      - name: Validate JavaScript
+      - name: Validate configuration
         run: |
           python - <<'PY'
           from pathlib import Path
+          import re
           s=Path('index.html').read_text()
           assert "const BUILTIN_SPOTIFY_CLIENT_ID='c088fe548e9b4f6c886bce6b0db64e16';" in s
           assert "client=localStorage.getItem(K.client)||BUILTIN_SPOTIFY_CLIENT_ID" in s
           assert "invalid_grant" in s
-          start=s.index('<script>')+len('<script>')
-          end=s.rindex('</script>')
-          Path('/tmp/app.js').write_text(s[start:end])
+          scripts=[]
+          for attrs, body in re.findall(r'<script([^>]*)>(.*?)</script>', s, re.S|re.I):
+              if 'src=' not in attrs.lower() and body.strip():
+                  scripts.append(body)
+          assert scripts, 'No inline JavaScript found'
+          Path('/tmp/app.js').write_text('\n'.join(scripts))
           PY
           node --check /tmp/app.js
+          node --check ux-hitster.js
       - name: Commit configuration
         run: |
           if git diff --quiet; then exit 0; fi
