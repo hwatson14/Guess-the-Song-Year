@@ -1,127 +1,86 @@
 # Guess the Song Year
 
-A private-use, mobile-first web app that reuses the QR codes on an existing 308-card music timeline deck as **physical random card IDs**.
+A private-use, mobile-first music timeline game that reuses the QR codes on an existing 308-card physical deck.
 
-The app does **not** follow the QR URL. Instead it:
+The app never follows the QR URL. It reads the five-digit card ID, looks up the card's assumed year, chooses a different song from that same year, plays it, then reveals the answer only when requested.
 
-1. scans the QR;
-2. extracts the five-digit card ID;
-3. looks up the card's year;
-4. chooses a replacement song from that exact year;
-5. tells Spotify to play it on your selected device;
-6. reveals the replacement song + year only when you tap **Reveal answer**.
+Live site:
 
-## What is already built
+`https://hwatson14.github.io/Guess-the-Song-Year/`
 
-- Camera QR scanning + manual fallback.
-- Built-in 00001–00308 year profile.
-- Per-card year corrections, stored locally and exportable/importable.
-- Spotify Authorization Code + PKCE. No client secret in the browser.
-- Spotify Connect device selection and direct playback control.
-- **Discover mode:** random Spotify track with a strict exact-year metadata check; it will fail rather than silently play a different year.
-- **My Library mode:** import an owned/collaborative Spotify playlist or CSV, then restrict replacements to exact-year songs from that library.
-- No-repeat song selection within a game where possible.
-- Fixed card→song assignment within a game so rescanning the same physical card is deterministic.
-- Session history, new-game reset, library coverage by year.
-- Installable PWA shell.
-- Global error/status toast so setup issues remain visible when the app changes tabs.
-- Year corrections invalidate any prior wrong-year assignment for that card.
+## Game modes
 
-## 5-minute setup
+- **Greatest Hits**: highly recognisable songs, biased toward major chart hits.
+- **Australian**: Australian and Australian-formed acts where exact-year coverage is available.
+- **Unexpected Years**: songs that are intentionally difficult to place by sound, including tracks that feel ahead of or behind their time.
+- **Rock & Anthems**: rock, alternative, punk, metal and guitar-heavy picks.
+- **Dancefloor**: pop, dance, disco, funk, R&B and party-friendly tracks.
+- **Wildcard**: broad exact-year selection.
 
-### 1. Host the folder over HTTPS
+Every mode still uses the physical card's year. The category changes the replacement song, not the timeline distribution.
 
-For phone camera use, deploy the contents of this folder to any static HTTPS host. GitHub Pages, Cloudflare Pages, Netlify, etc. all work.
+## Playback options
 
-For local desktop testing only:
+### YouTube
 
-```bash
-cd Guess-the-Song-Year
-python -m http.server 8080 --bind 127.0.0.1
-```
+Best universal option. Players do not need a YouTube or Google login.
 
-Open `http://127.0.0.1:8080/`.
+The app uses the YouTube Data API to find the selected song and the official YouTube IFrame Player API to play it. The player remains visible and YouTube may show ads.
 
-### 2. Create a Spotify Developer app
+One-time setup:
 
-In the Spotify Developer Dashboard create one Development Mode app and copy its **Client ID**.
+1. Create a Google Cloud project.
+2. Enable **YouTube Data API v3**.
+3. Create an API key.
+4. Restrict the key to **YouTube Data API v3**.
+5. Add an HTTP referrer restriction for:
+   `https://hwatson14.github.io/Guess-the-Song-Year/*`
+6. Open Guess the Song Year → **Settings** → paste the key under YouTube.
 
-In the app's Redirect URIs add the exact URI shown by Guess the Song Year under **Settings → Redirect URI**.
+The key is stored only in that browser at present. A website-restricted key can later be baked into the deployment for zero-setup guests.
 
-Examples:
+### Spotify
 
-- deployed: `https://hwatson14.github.io/Guess-the-Song-Year/`
-- local: `http://127.0.0.1:8080/`
+Optional cleaner playback path for a Spotify Premium user.
 
-Do not use `localhost`; Spotify requires an explicit loopback IP for HTTP local testing.
+1. The Spotify developer-app owner creates a Spotify Web API app.
+2. Add the exact Redirect URI shown in **Settings**.
+3. Paste the Client ID into the app.
+4. Tap **Connect Spotify** and log into the player's Spotify account.
+5. Select their active Spotify device.
 
-### 3. Connect Spotify
+The app uses Authorization Code + PKCE, so no Spotify client secret is stored in the browser.
 
-In Guess the Song Year:
+## Song selection and year integrity
 
-1. Settings → paste Client ID.
-2. Add the displayed redirect URI to Spotify's dashboard.
-3. Tap **Connect Spotify**.
-4. Open Spotify on the phone/speaker/TV you want to use and play/pause anything once.
-5. Guess the Song Year → Settings → **Refresh** devices.
+- The physical card supplies the target year.
+- Greatest Hits and genre modes use a public Billboard year-end research catalogue as candidate material.
+- Candidate chart year is **not** trusted as release year by itself.
+- YouTube selections are checked against MusicBrainz first-release metadata before playback where required.
+- Spotify selections are checked against Spotify album release metadata.
+- Australian mode searches a curated set of Australian/Australian-formed artists and constrains MusicBrainz results to the target release year.
+- Unexpected Years includes curated time-warp candidates, but candidates are still subject to exact-year validation before playback.
 
-Spotify playback control requires Spotify Premium.
+## Physical card mapping
 
-## GitHub Pages deployment
+The built-in `00001–00308` year mapping is the prototype mapping accepted for this project. It has not been verified card-by-card against every physical card back.
 
-This package is ready for the `Guess-the-Song-Year` repository. The included `.github/workflows/pages.yml` validates the app and deploys the repository root to GitHub Pages on every push to `main`.
+If a card is wrong, use **Correct card year** after reveal. Corrections are saved in that browser.
 
-First-time GitHub setup:
+Known calibration point:
 
-1. Open **Settings → Pages → Build and deployment → Source** and choose **GitHub Actions**.
-2. Push/commit to `main`. The workflow validates and publishes the site.
-3. Open the deployed site, then **Settings → Run test** inside Guess the Song Year.
-4. Copy the redirect URI shown in the app into the Spotify Developer Dashboard before connecting Spotify.
+`00067 → 1998`
 
-For this repository, the normal project-site address is `https://hwatson14.github.io/Guess-the-Song-Year/`. The app calculates its own redirect URI from the actual deployed URL.
+## Current limitations
 
-The page includes `noindex` metadata and `robots.txt` because it is intended for private use.
+- YouTube may show ads and visible video/player metadata.
+- YouTube search requires a Data API key and is subject to API quota.
+- Spotify Development Mode has account/user restrictions and requires Premium for playback control.
+- Public music metadata can contain reissues, remasters and imperfect release dates, so exact-year validation can sometimes reject an otherwise reasonable candidate.
+- Australian and narrow genre modes can have sparse coverage in some early years.
 
-## Song-source modes
+## Deployment
 
-### Discover
+GitHub Pages is deployed automatically from `main` using `.github/workflows/pages.yml`.
 
-No song list required. Each card year is sent to Spotify Search using the `year:` filter. The returned track is independently checked against Spotify album-release metadata and rejected if the year does not match. Difficulty changes how deep into the results the app samples.
-
-### My Library
-
-Best for a curated family/friends version.
-
-Option A: create a Spotify playlist you own (or collaborate on), then import it in the app.
-
-Option B: import CSV:
-
-```csv
-title,artist,year,spotify_uri
-Closing Time,Semisonic,1998,spotify:track:4EnkwZd0UJAuHpNMMemQaA
-```
-
-`spotify_uri` is optional. If omitted, the app resolves title + artist via Spotify Search when selected.
-
-## Important data assumption
-
-The built-in 308-card year profile assumes the AU/UK original ordering used during the prototype. It is intentionally editable: if a physical card disagrees, tap **Correct it** after reveal. Corrections are retained on that device and can be exported as JSON.
-
-## Known limitations
-
-- The 308-card year table is an **assumed prototype mapping**, as requested. It has not been verified card-by-card against the physical backs.
-- Spotify album release metadata can represent reissues/remasters rather than the first historical release. For a high-integrity custom pack, use **My Library + CSV** with years you have curated.
-- Discover mode does not know the original song printed on each physical card, so there is a small chance it can randomly select the original song itself.
-- Spotify and the QR scanner library require internet access.
-
-## Validation
-
-Run:
-
-```bash
-python tests/validate.py
-```
-
-## Private-use / trademark note
-
-This app is independent and is not affiliated with Jumbo, HITSTER or Spotify. It does not reproduce the original app or alter the physical cards; it reads QR text on cards you own and controls your Spotify account.
+The repository is intended for private personal gameplay and is not affiliated with HITSTER, Jumbo, Spotify, Google or YouTube.
