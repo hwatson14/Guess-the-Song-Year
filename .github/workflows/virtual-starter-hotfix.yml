@@ -1,0 +1,137 @@
+name: Virtual starter and placement hotfix
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/virtual-starter-hotfix.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Apply virtual gameplay fix
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          p=Path('app.js')
+          s=p.read_text()
+
+          def rep(old,new,label):
+              global s
+              if old not in s:
+                  raise SystemExit(f'missing {label}')
+              s=s.replace(old,new,1)
+
+          rep(
+          "let screen=match?.active?(match.phase==='gameover'?'gameover':'resume'):'setup',current=match?.current||null,pendingSlot=null,placementResult=match?.placementResult||null;",
+          "let screen=match?.active?(match.phase==='gameover'?'gameover':'resume'):'setup',current=match?.current||null,pendingSlot=Number.isInteger(match?.pendingSlot)?match.pendingSlot:null,placementResult=match?.placementResult||null;",
+          'initial pending slot')
+
+          rep(
+          "  function migrateMatch(){\n    if(!match?.active)return;\n    match.mode=MODE;\n    match.phase=match.phase||'between';\n    match.current=match.current||null;\n    match.placementResult=match.placementResult||null;\n    match.used=Array.isArray(match.used)?match.used:[];\n    match.assign=match.assign&&typeof match.assign==='object'?match.assign:{};\n    if(cfg.playMode==='virtual'){\n      match.virtualDeck=Array.isArray(match.virtualDeck)&&match.virtualDeck.length?match.virtualDeck:shuffle(Array.from({length:308},(_,i)=>i+1));\n      match.virtualPos=Math.max(0,Number(match.virtualPos)||0);\n    }\n    saveMatch();\n  }",
+          "  function takeVirtualCardId(){\n    if(!match)return null;\n    if(!Array.isArray(match.virtualDeck)||!match.virtualDeck.length)match.virtualDeck=shuffle(Array.from({length:308},(_,i)=>i+1));\n    if(match.virtualPos>=match.virtualDeck.length){match.virtualDeck=shuffle(Array.from({length:308},(_,i)=>i+1));match.virtualPos=0}\n    return match.virtualDeck[match.virtualPos++];\n  }\n\n  function ensureVirtualStarters(){\n    if(cfg.playMode!=='virtual'||!match)return;\n    match.virtualDeck=Array.isArray(match.virtualDeck)&&match.virtualDeck.length?match.virtualDeck:shuffle(Array.from({length:308},(_,i)=>i+1));\n    match.virtualPos=Math.max(0,Number(match.virtualPos)||0);\n    for(const team of match.teams||[]){\n      team.timeline=Array.isArray(team.timeline)?team.timeline.map(Number).filter(Number.isFinite):[];\n      if(!team.timeline.length){\n        const id=takeVirtualCardId(),year=E.cardYear(id);\n        if(year){team.timeline=[year];team.starterCardId=id;team.starterYear=year}\n      }else if(!Number.isFinite(Number(team.starterYear))){\n        team.starterYear=team.timeline[0];\n      }\n    }\n  }\n\n  function migrateMatch(){\n    if(!match?.active)return;\n    match.mode=MODE;\n    match.phase=match.phase||'between';\n    match.current=match.current||null;\n    match.placementResult=match.placementResult||null;\n    match.pendingSlot=Number.isInteger(match.pendingSlot)?match.pendingSlot:null;\n    match.used=Array.isArray(match.used)?match.used:[];\n    match.assign=match.assign&&typeof match.assign==='object'?match.assign:{};\n    if(cfg.playMode==='virtual')ensureVirtualStarters();\n    saveMatch();\n  }",
+          'virtual starter helpers')
+
+          rep(
+          "<button class=\"choice ${cfg.playMode==='virtual'?'on':''}\" data-play=\"virtual\">Virtual<small>App deals the cards</small></button>",
+          "<button class=\"choice ${cfg.playMode==='virtual'?'on':''}\" data-play=\"virtual\">Virtual<small>Starter year + app dealt cards</small></button>",
+          'virtual setup copy')
+
+          old="""  function virtualTimeline(){
+    const years=[...(activeTeam().timeline||[])].sort((a,b)=>a-b);let html='';
+    for(let i=0;i<=years.length;i++){
+      html+=`<button class="slot ${pendingSlot===i?'on':''}" data-slot="${i}" aria-label="Place here"></button>`;
+      if(i<years.length)html+=`<div class="year-card">${years[i]}</div>`;
+    }
+    if(!years.length)html='<button class="slot on" data-slot="0" style="flex-basis:80px"></button>';
+    return `<div class="card"><div class="timeline">${html}</div><div class="timeline-note">Before, after, or between your existing cards.</div></div><div class="virtual-actions"><button class="btn primary" data-action="lock-placement" ${pendingSlot===null?'disabled':''}>Lock Placement</button></div>`;
+  }"""
+          new="""  function virtualTimeline(){
+    const team=activeTeam(),years=[...(team.timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b);let html='';
+    for(let i=0;i<=years.length;i++){
+      const label=i===0?`Before ${years[0]??'timeline'}`:i===years.length?`After ${years[years.length-1]??'timeline'}`:`Between ${years[i-1]} and ${years[i]}`;
+      html+=`<button class="slot ${pendingSlot===i?'on':''}" data-slot="${i}" aria-label="${label}" aria-pressed="${pendingSlot===i?'true':'false'}"></button>`;
+      if(i<years.length)html+=`<div class="year-card">${years[i]}</div>`;
+    }
+    const starter=Number(team.starterYear);
+    return `<div class="card"><div class="timeline">${html}</div><div class="timeline-note">Starter year: <b>${Number.isFinite(starter)?starter:years[0]}</b> · Tap a + before, between or after the years.</div></div><div class="virtual-actions"><button class="btn primary" data-action="lock-placement" ${pendingSlot===null?'disabled':''}>Lock Placement</button></div>`;
+  }"""
+          rep(old,new,'virtual timeline')
+
+          rep(
+          "    match={active:true,id:`g${Date.now()}`,mode:MODE,phase:'between',round:0,turn:0,teams:Array.from({length:cfg.teams},(_,i)=>({name:`Team ${i+1}`,score:0,timeline:[]})),used:[],assign:{},virtualDeck:shuffle(Array.from({length:308},(_,i)=>i+1)),virtualPos:0,current:null,placementResult:null};\n    current=null;placementResult=null;pendingSlot=null;",
+          "    match={active:true,id:`g${Date.now()}`,mode:MODE,phase:'between',round:0,turn:0,teams:Array.from({length:cfg.teams},(_,i)=>({name:`Team ${i+1}`,score:0,timeline:[],starterYear:null,starterCardId:null})),used:[],assign:{},virtualDeck:shuffle(Array.from({length:308},(_,i)=>i+1)),virtualPos:0,current:null,placementResult:null,pendingSlot:null};\n    if(cfg.playMode==='virtual')ensureVirtualStarters();\n    current=null;placementResult=null;pendingSlot=null;",
+          'start match starters')
+
+          rep(
+          "    current=match.current||null;placementResult=match.placementResult||null;pendingSlot=null;",
+          "    current=match.current||null;placementResult=match.placementResult||null;pendingSlot=Number.isInteger(match.pendingSlot)?match.pendingSlot:null;",
+          'resume pending slot')
+
+          rep(
+          "    if(match){match.current=null;match.placementResult=null;match.phase='between'}",
+          "    if(match){match.current=null;match.placementResult=null;match.pendingSlot=null;match.phase='between'}",
+          'clear pending slot')
+
+          rep(
+          "  function nextVirtualCard(){\n    if(match.virtualPos>=match.virtualDeck.length){match.virtualDeck=shuffle(Array.from({length:308},(_,i)=>i+1));match.virtualPos=0}\n    const id=match.virtualDeck[match.virtualPos++];saveMatch();return id;\n  }",
+          "  function nextVirtualCard(){const id=takeVirtualCardId();saveMatch();return id}",
+          'next virtual card')
+
+          old="  function selectSlot(slot){pendingSlot=slot;root.querySelectorAll('[data-slot]').forEach(x=>x.classList.toggle('on',Number(x.dataset.slot)===slot));const lock=root.querySelector('[data-action=\"lock-placement\"]');if(lock)lock.disabled=false}"
+          new="""  function selectSlot(slot){
+    if(cfg.playMode!=='virtual'||!current||!['playing','guess'].includes(screen))return;
+    const years=[...(activeTeam().timeline||[])];
+    if(!Number.isInteger(slot)||slot<0||slot>years.length){toast('That placement is not available.');return}
+    pendingSlot=slot;match.pendingSlot=slot;saveMatch();
+    root.querySelectorAll('[data-slot]').forEach(x=>{const on=Number(x.dataset.slot)===slot;x.classList.toggle('on',on);x.setAttribute('aria-pressed',on?'true':'false')});
+    const lock=root.querySelector('[data-action=\"lock-placement\"]');if(lock)lock.disabled=false;
+  }"""
+          rep(old,new,'select slot')
+
+          old="  function lockPlacement(){if(pendingSlot===null||!current)return;const years=[...(activeTeam().timeline||[])].sort((a,b)=>a-b),left=pendingSlot>0?years[pendingSlot-1]:null,right=pendingSlot<years.length?years[pendingSlot]:null;const correct=(left===null||left<=current.year)&&(right===null||current.year<=right);placementResult={correct,left,right,slot:pendingSlot};recordSongUsed();stopPlayback();if(correct){years.splice(pendingSlot,0,current.year);activeTeam().timeline=years;activeTeam().score++}match.placementResult=placementResult;match.phase='reveal';syncCurrent();screen='reveal';render()}"
+          new="""  function lockPlacement(){
+    if(pendingSlot===null||!current||cfg.playMode!=='virtual'||!['playing','guess'].includes(screen))return;
+    const team=activeTeam(),years=[...(team.timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b),slot=pendingSlot;
+    if(!Number.isInteger(slot)||slot<0||slot>years.length){toast('Choose a valid placement first.');pendingSlot=null;match.pendingSlot=null;saveMatch();render();return}
+    const left=slot>0?years[slot-1]:null,right=slot<years.length?years[slot]:null;
+    const correct=(left===null||left<=current.year)&&(right===null||current.year<=right);
+    placementResult={correct,left,right,slot};recordSongUsed();stopPlayback();
+    if(correct){years.splice(slot,0,current.year);team.timeline=years;team.score++}
+    pendingSlot=null;match.pendingSlot=null;match.placementResult=placementResult;match.phase='reveal';syncCurrent();screen='reveal';render();resetScroll();
+  }"""
+          rep(old,new,'lock placement')
+
+          p.write_text(s)
+
+          p=Path('app.css');c=p.read_text()
+          c += "\n/* v7.2.2 virtual placement */\n.slot{flex-basis:46px;min-width:46px;touch-action:manipulation}.slot:after{font-size:25px;font-weight:800}.slot.on:after{content:'✓';font-size:22px}.timeline-note b{color:var(--mint)}\n"
+          p.write_text(c)
+
+          p=Path('index.html');h=p.read_text()
+          h=re.sub(r'app\.css\?v=[^\"\']+','app.css?v=7.2.2',h)
+          h=re.sub(r'engine\.js\?v=[^\"\']+','engine.js?v=7.2.2',h)
+          h=re.sub(r'engine-v7\.js\?v=[^\"\']+','engine-v7.js?v=7.2.2',h)
+          h=re.sub(r'app\.js\?v=[^\"\']+','app.js?v=7.2.2',h)
+          p.write_text(h)
+          PY
+          node --check app.js
+          grep -q "ensureVirtualStarters" app.js
+          grep -q "match.pendingSlot=slot" app.js
+          grep -q "Starter year:" app.js
+          grep -q "v=7.2.2" index.html
+      - name: Commit virtual gameplay fix
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app.js app.css index.html
+          git commit -m "Add virtual starter years and reliable placement selection"
+          git pull --rebase origin main
+          git push
