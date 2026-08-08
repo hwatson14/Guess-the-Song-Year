@@ -37,7 +37,28 @@ jobs:
           PY
           python -m py_compile scripts/build_catalogue.py
       - name: Build catalogue
-        run: python scripts/build_catalogue.py
+        run: |
+          python - <<'PY'
+          import scripts.build_catalogue as b
+
+          # Australian Chart Book/KMR-era fallback for years before the
+          # Wikipedia annual Top 25 pages begin. These are the Australian
+          # annual leaders used only for #1 Australia in 1950-1954.
+          early = {
+              1950: {'rank':1,'title':'Quicksilver','artist':'Bing Crosby & The Andrews Sisters'},
+              1951: {'rank':1,'title':'Too Young','artist':'Nat King Cole'},
+              1952: {'rank':1,'title':"Auf Wiederseh'n Sweetheart",'artist':'Vera Lynn'},
+              1953: {'rank':1,'title':'Pretend','artist':'Nat King Cole'},
+              1954: {'rank':1,'title':'The Happy Wanderer','artist':'Frank Weir'},
+          }
+          original = b.annual_chart
+          def annual_chart(year):
+              if year in early:
+                  return [early[year]]
+              return original(year)
+          b.annual_chart = annual_chart
+          b.main()
+          PY
       - name: Validate catalogue coverage
         run: |
           python - <<'PY'
