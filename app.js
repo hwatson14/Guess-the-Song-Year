@@ -327,7 +327,11 @@
         if(seq!==prepareSeq)return;
         current={cardId,year,song,resolved,provider:E.getProvider(),mode:MODE};
         match.current=current;match.placementResult=null;
-        if(cfg.playMode==='physical'){saveMatch();beginMusicCountdown();return}
+        if(cfg.playMode==='physical'){
+          saveMatch();
+          if(current.provider==='spotify'){await startSpotifyListening();return}
+          beginMusicCountdown();return;
+        }
         match.phase='ready';saveMatch();screen='ready';render();return;
       }catch(err){
         lastErr=err;
@@ -449,6 +453,7 @@
 
   async function playCurrent(){
     if(!current||playing)return;
+    if(current.provider==='spotify'){await startSpotifyListening();return}
     beginMusicCountdown();
   }
 
@@ -516,9 +521,10 @@
     navigator.vibrate?.([35,60,35]);
   }
 
-  function listenAgain(){
+  async function listenAgain(){
     if(!current)return;
     stopPlayback();
+    if(current.provider==='spotify'){await startSpotifyListening();return}
     beginMusicCountdown();
   }
 
