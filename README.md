@@ -24,6 +24,8 @@ Music provider setup is separate from the game rules and opens as a lightweight 
 
 ## Catalogue
 
-The catalogue is prebuilt so runtime APIs resolve playback, rather than decide which song belongs in a deck. Modes are Greatest Hits, Australian, Unexpected Years, #1 US and #1 Australia.
+The static Greatest Hits catalogue is complete for every supported card year from 1950 through 2022 and is ready for gameplay testing. #1 US and #1 Australia also have complete year coverage; the other themed decks can continue to be refined independently.
+
+Runtime APIs now resolve playback rather than decide which song belongs in a deck. Modes are Greatest Hits, Australian, Unexpected Years, #1 US and #1 Australia.
 
 The v6 app intentionally has one UI shell only. Legacy dashboard, v4 and experimental UX layers have been removed.
