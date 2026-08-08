@@ -13,9 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Validate UX JavaScript
+      - name: Validate JavaScript
         run: node --check ux-hitster.js
-      - name: Validate shell hooks
+      - name: Validate v4 game architecture
         run: |
           python - <<'PY'
           from pathlib import Path
@@ -23,9 +23,16 @@ jobs:
           js=Path('ux-hitster.js').read_text()
           css=Path('ux-hitster.css').read_text()
           assert './ux-hitster.css' in html and './ux-hitster.js' in html
-          for token in ['uxHome','uxNewGame','uxScanner','uxReady','uxPlaying','uxReveal','uxMusic','uxJoin']:
+          for token in [
+              'uxHome','uxSetup','uxRoundDeck','uxScanner','uxReady','uxPlaying',
+              'uxVirtualPlace','uxReveal','uxWin','uxMusic','data-play="physical"',
+              'data-play="virtual"','data-policy="each"','data-victory="unlimited"',
+              'virtualOrder','pendingSlot','scorePhysical'
+          ]:
               assert token in js, token
-          for token in ['.ux-start-card','.ux-deck','.ux-wave-card','.ux-answer-card','.ux-camera']:
+          for token in ['.ux-choice-grid','.ux-start-card','.ux-deck','.ux-wave-card','.ux-timeline-slot','.ux-answer-card','.ux-camera']:
               assert token in css, token
-          print('premium UI shell validated')
+          assert 'Join Shared Game' not in js
+          assert 'No example years are shown here' in js
+          print('v4 physical + virtual UI validated')
           PY
