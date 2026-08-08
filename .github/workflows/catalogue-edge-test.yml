@@ -1,0 +1,37 @@
+name: Catalogue edge-year test
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/catalogue-edge-test.yml
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install requests beautifulsoup4
+      - name: Verify edge-year pools
+        run: |
+          python - <<'PY'
+          import importlib.util
+          from pathlib import Path
+          path=Path('scripts/build_catalogue_v8.py')
+          spec=importlib.util.spec_from_file_location('b',path)
+          b=importlib.util.module_from_spec(spec);spec.loader.exec_module(b)
+          playback=b.bimmuda_lookup()
+          for year in [1950,1951,1958,2021,2022]:
+              rows=b.billboard_year_rows(year)
+              pool=b.verified_pool(year,rows,playback)
+              print('EDGE',year,'chart candidates',len(rows),'verified',len(pool))
+              for s in pool[:12]: print(' ',s['title'],'—',s['artist'])
+              assert len(pool)>=8
+          PY
