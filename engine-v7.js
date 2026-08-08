@@ -33,7 +33,8 @@
     s=s.replace(/\(([^)]*)\)/g,(whole,inside)=>versionMarker.test(inside)||/^\s*(feat\.?|ft\.?|featuring|with)\b/i.test(inside)?' ':whole);
     s=s.replace(/\[([^\]]*)\]/g,(whole,inside)=>versionMarker.test(inside)||/^\s*(feat\.?|ft\.?|featuring|with)\b/i.test(inside)?' ':whole);
     s=s.replace(/\s[-–—:]\s([^\n]+)$/,(whole,suffix)=>versionMarker.test(suffix)?' ':whole);
-    s=s.replace(/\s+(feat\.?|ft\.?|featuring|with)\s+.+$/i,' ');
+    // "with" is often real title text (Dancing with a Stranger, Break Up with Your Girlfriend...).
+    s=s.replace(/\s+(feat\.?|ft\.?|featuring)\s+.+$/i,' ');
     if(strongTrailingVersion.test(s))s=s.replace(strongTrailingVersion,' ');
     return norm(s);
   }
