@@ -1,4 +1,4 @@
-name: Canonical catalogue and playlists
+name: Deep canonical Greatest Hits catalogue
 
 on:
   push:
@@ -7,9 +7,6 @@ on:
       - .github/workflows/no-repeat-results-hotfix.yml
       - scripts/build_catalogue_v10.py
       - scripts/audit_catalogue_variants.py
-      - scripts/augment_playlists_v10.py
-      - scripts/finalize_playlist_runtime_v11.py
-      - scripts/build_modes.py
 
 permissions:
   contents: write
@@ -29,25 +26,26 @@ jobs:
           python-version: '3.12'
       - name: Install builder dependencies
         run: pip install requests beautifulsoup4
-      - name: Promote canonical Greatest Hits builder
+      - name: Promote canonical single-mode builder
         run: cp scripts/build_catalogue_v10.py scripts/build_catalogue.py
       # Exact per-candidate recording verification is deliberate: batch OR searches dropped valid old songs.
-      - name: Rebuild canonical Greatest Hits catalogue
+      - name: Rebuild prebuilt Greatest Hits catalogue
         run: python scripts/build_catalogue.py
-      - name: Validate canonical Greatest Hits runtime
+      - name: Validate JavaScript and no-repeat identity
         run: |
           node --check engine.js
           node --check engine-v7.js
           node --check app.js
           node scripts/test_engine_v7.mjs
-      - name: Audit every Greatest Hits song for alternate versions
+      - name: Audit every song for alternate versions
         run: python scripts/audit_catalogue_variants.py
-      - name: Validate canonical Greatest Hits contract
+      - name: Validate catalogue contract
         run: |
           python - <<'PY'
-          import ast,json,re,sys
+          import ast,json,re
           from collections import Counter
           from pathlib import Path
+          import sys
           sys.path.insert(0,'scripts')
           import build_catalogue_v10 as b
 
@@ -84,89 +82,40 @@ jobs:
               assert title not in titles(2021),(title,2021)
           for title in ['heat waves','shivers','bad habits']:
               assert title not in titles(2022),(title,2022)
-          print('canonical Greatest Hits passed',{'years':len(g),'songs':total,'min':min(map(len,g.values())),'max':max(map(len,g.values()))})
+
+          # Version identity must collapse edits/remasters while preserving genuine titles.
+          assert b.underlying_key('Example - 2011 Remaster','Artist')==b.underlying_key('Example','Artist')
+          assert b.underlying_key('Example (Radio Edit)','Artist feat. Guest')==b.underlying_key('Example','Artist')
+          assert b.is_explicit_alternate_title('Example (Live)')
+          assert not b.is_explicit_alternate_title('Live and Let Die')
+          print('catalogue contract passed',{'years':len(g),'songs':total,'min':min(map(len,g.values())),'max':max(map(len,g.values()))})
           PY
-      - name: Add verified themed playlists
-        run: python scripts/augment_playlists_v10.py
-      - name: Apply context-aware multi-playlist runtime
-        run: python scripts/finalize_playlist_runtime_v11.py
-      - name: Validate six-playlist catalogue and runtime
+      - name: Update deployed cache versions
         run: |
-          node --check engine.js
-          node --check engine-v7.js
-          node --check app.js
-          node scripts/test_engine_v7.mjs
+          python - <<'PY'
+          import re
+          from pathlib import Path
+          p=Path('engine.js')
+          s=p.read_text()
+          s=re.sub(r'\./data/catalogue\.json\?v=\d+(?:\.\d+)*','./data/catalogue.json?v=10',s)
+          p.write_text(s)
+          p=Path('index.html')
+          h=p.read_text()
+          for asset in ['app.css','engine.js','engine-v7.js','app.js']:
+              h=re.sub(rf'{re.escape(asset)}\?v=[^"\']+',f'{asset}?v=7.4.0',h)
+          p.write_text(h)
+          PY
+          grep -q "catalogue.json?v=10" engine.js
+          grep -q "v=7.4.0" index.html
+      - name: Validate normal app catalogue checks
+        run: |
           python scripts/validate_catalogue.py
           python -m json.tool data/catalogue.schema.json >/dev/null
-          python - <<'PY'
-          import ast,json,re,sys
-          from collections import Counter
-          from pathlib import Path
-          sys.path.insert(0,'scripts')
-          import build_catalogue_v10 as b
-
-          d=json.loads(Path('data/catalogue.json').read_text())
-          expected={'greatest','sing_along','australian','unexpected','party','rock'}
-          assert d.get('version')==11,d.get('version')
-          assert set(d.get('modes',{}))==expected,set(d.get('modes',{}))
-          g=d['modes']['greatest']
-
-          engine=Path('engine.js').read_text()
-          m=re.search(r'const YEAR_MAP=(\[[^;]+\]);',engine)
-          years=ast.literal_eval(re.sub(r'\bnull\b','None',m.group(1)))[1:]
-          counts=Counter(int(y) for y in years if y)
-
-          for year in range(1950,2023):
-              pool=g[str(year)]
-              assert len(pool)>=max(12,counts.get(year,0)),(year,len(pool),counts.get(year,0))
-              for s in pool:
-                  assert int(s['year'])==year,(year,s)
-                  assert s['yearEvidence']=='MusicBrainz recording earliest first-release-date',(year,s)
-                  assert not b.is_explicit_alternate_title(s['title']),(year,s)
-                  assert s['canonicalKey']==b.underlying_key(s['title'],s['artist']),(year,s)
-
-          for mode in expected-{'greatest'}:
-              assert d['modeFallbacks'].get(mode)=='greatest',mode
-              stats=d['playlistStats'][mode]
-              assert stats['years']>=15,(mode,stats)
-              assert stats['songs']>=20,(mode,stats)
-              for year,pool in d['modes'][mode].items():
-                  keys=set()
-                  for s in pool:
-                      assert int(s['year'])==int(year),(mode,year,s)
-                      assert s['yearEvidence']=='MusicBrainz recording earliest first-release-date',(mode,year,s)
-                      assert not b.is_explicit_alternate_title(s['title']),(mode,year,s)
-                      key=b.underlying_key(s['title'],s['artist'])
-                      assert s['canonicalKey']==key,(mode,year,s)
-                      assert key not in keys,(mode,year,key)
-                      keys.add(key)
-
-          titles=lambda y:{b.norm(s['title']) for s in g[str(y)]}
-          for title in ['blinding lights','levitating','save your tears']:
-              assert title not in titles(2021),(title,2021)
-          for title in ['heat waves','shivers','bad habits']:
-              assert title not in titles(2022),(title,2022)
-
-          app=Path('app.js').read_text()
-          runtime=Path('engine-v7.js').read_text()
-          assert 'data-mode=' in app
-          assert 'function modeId()' in app
-          assert "const MODE='greatest'" not in app
-          assert 'E.isAlternateSongTitle=isAlternateTitle' in runtime
-          print('final playlist stats',d['playlistStats'])
-          PY
-          grep -q "catalogue.json?v=11" engine.js
-          grep -q "v=8.0.0" index.html
-          grep -q "Sing Along" engine-v7.js
-          grep -q "Australian" engine-v7.js
-          grep -q "Unexpected Years" engine-v7.js
-          grep -q "Party Anthems" engine-v7.js
-          grep -q "Rock Classics" engine-v7.js
-      - name: Commit canonical catalogue and playlists
+      - name: Commit canonical variant-free catalogue
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add scripts/build_catalogue.py scripts/build_catalogue_v10.py scripts/audit_catalogue_variants.py scripts/augment_playlists_v10.py scripts/finalize_playlist_runtime_v11.py scripts/build_modes.py scripts/validate_catalogue.py scripts/test_engine_v7.mjs data/catalogue.json data/catalogue.schema.json engine.js engine-v7.js app.js app.css index.html README.md
-          git commit -m "Build canonical catalogue and verified playlists"
+          git add scripts/build_catalogue.py scripts/build_catalogue_v10.py scripts/audit_catalogue_variants.py scripts/test_engine_v7.mjs data/catalogue.json data/catalogue.schema.json engine.js engine-v7.js index.html
+          git commit -m "Build variant-free canonical Greatest Hits catalogue"
           git pull --rebase origin main
           git push
