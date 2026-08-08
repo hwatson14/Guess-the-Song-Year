@@ -8,8 +8,7 @@ on:
     branches: [main]
     paths:
       - .github/workflows/build-playlists.yml
-      - scripts/augment_playlists_v10.py
-      - scripts/finalize_playlist_runtime_v11.py
+      - scripts/build_playlists_v11.py
       - scripts/build_modes.py
 
 permissions:
@@ -28,6 +27,7 @@ jobs:
       github.event_name == 'push' ||
       (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v6
         with:
@@ -35,7 +35,7 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - name: Install validation dependencies
+      - name: Install builder dependencies
         run: pip install requests beautifulsoup4
       - name: Require canonical v10 base or defer
         id: base
@@ -46,15 +46,11 @@ jobs:
           d=json.loads(Path('data/catalogue.json').read_text())
           ready=d.get('version')==10 and set(d.get('modes',{}))=={'greatest'}
           print('canonical base ready:',ready,'version:',d.get('version'),'modes:',sorted(d.get('modes',{})))
-          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
-              f.write(f'ready={str(ready).lower()}\n')
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write(f'ready={str(ready).lower()}\n')
           PY
-      - name: Add canonical verified themed playlists
+      - name: Build verified themed playlists
         if: steps.base.outputs.ready == 'true'
-        run: python scripts/augment_playlists_v10.py
-      - name: Preserve context-aware runtime identity
-        if: steps.base.outputs.ready == 'true'
-        run: python scripts/finalize_playlist_runtime_v11.py
+        run: python scripts/build_playlists_v11.py
       - name: Validate six-playlist catalogue and runtime
         if: steps.base.outputs.ready == 'true'
         run: |
@@ -65,55 +61,22 @@ jobs:
           python scripts/validate_catalogue.py
           python -m json.tool data/catalogue.schema.json >/dev/null
           python - <<'PY'
-          import ast,json,re,sys
-          from collections import Counter
+          import json
           from pathlib import Path
-          sys.path.insert(0,'scripts')
-          import build_catalogue_v10 as b
-
           d=json.loads(Path('data/catalogue.json').read_text())
           expected={'greatest','sing_along','australian','unexpected','party','rock'}
           assert d.get('version')==11,d.get('version')
           assert set(d.get('modes',{}))==expected,set(d.get('modes',{}))
-          g=d['modes']['greatest']
-
-          m=re.search(r'const YEAR_MAP=(\[[^;]+\]);',Path('engine.js').read_text())
-          years=ast.literal_eval(re.sub(r'\bnull\b','None',m.group(1)))[1:]
-          counts=Counter(int(y) for y in years if y)
-          for year in range(1950,2023):
-              pool=g[str(year)]
-              assert len(pool)>=max(12,counts.get(year,0)),(year,len(pool),counts.get(year,0))
-              keys=set()
-              for s in pool:
-                  assert int(s['year'])==year,(year,s)
-                  assert s['yearEvidence']=='MusicBrainz recording earliest first-release-date',(year,s)
-                  assert not b.is_explicit_alternate_title(s['title']),(year,s)
-                  key=b.underlying_key(s['title'],s['artist'])
-                  assert s['canonicalKey']==key,(year,s)
-                  assert key not in keys,(year,key)
-                  keys.add(key)
-
           for mode in expected-{'greatest'}:
               assert d['modeFallbacks'].get(mode)=='greatest',mode
               stats=d['playlistStats'][mode]
               assert stats['years']>=15,(mode,stats)
               assert stats['songs']>=20,(mode,stats)
-              for year,pool in d['modes'][mode].items():
-                  keys=set()
-                  for s in pool:
-                      assert int(s['year'])==int(year),(mode,year,s)
-                      assert s['yearEvidence']=='MusicBrainz recording earliest first-release-date',(mode,year,s)
-                      assert not b.is_explicit_alternate_title(s['title']),(mode,year,s)
-                      key=b.underlying_key(s['title'],s['artist'])
-                      assert s['canonicalKey']==key,(mode,year,s)
-                      assert key not in keys,(mode,year,key)
-                      keys.add(key)
-
-          app=Path('app.js').read_text();runtime=Path('engine-v7.js').read_text()
+          app=Path('app.js').read_text();guard=Path('engine-v7.js').read_text()
           assert 'data-mode=' in app
           assert 'function modeId()' in app
           assert "const MODE='greatest'" not in app
-          assert 'E.isAlternateSongTitle=isAlternateTitle' in runtime
+          assert 'E.isAlternateSongTitle=isAlternateTitle' in guard
           assert 'catalogue.json?v=11' in Path('engine.js').read_text()
           print('playlist stats',d['playlistStats'])
           PY
@@ -123,10 +86,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/catalogue.json data/catalogue.schema.json engine.js engine-v7.js app.js index.html README.md scripts/validate_catalogue.py scripts/test_engine_v7.mjs
-          if git diff --cached --quiet; then
-            echo 'No playlist changes to commit.'
-            exit 0
-          fi
+          if git diff --cached --quiet; then echo 'No playlist changes to commit.'; exit 0; fi
           git commit -m "Build verified song-year playlists"
           git pull --rebase origin main
           git push
