@@ -1,0 +1,57 @@
+name: Expand alternate-version detection
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/expand-version-lexicon.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - run: pip install requests beautifulsoup4
+      - name: Expand annotation-aware alternate-version vocabulary
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('scripts/build_catalogue_v10.py')
+          s=p.read_text()
+          start=s.index('VERSION_MARKER = re.compile(')
+          end=s.index('FEATURE_MARKER =',start)
+          new='''VERSION_MARKER = re.compile(\n    r'\\b(?:karaoke|tribute|demo|live|remix|re[- ]?mix|mix|edit|version|acoustic|unplugged|'\n    r'a cappella|acapella|backing(?: track)?|instrumental|bootleg|mashup|refix|rework|'\n    r'preview|playback|deluxe|bonus|voice note|alternate|alternative|'\n    r'remaster(?:ed)?(?:\\s*\\d{4})?|radio edit|radio version|single edit|single version|'\n    r'album version|extended(?: version| edit| mix)?|club mix|dance mix|original mix|'\n    r'dub(?: version| mix)?|mono|stereo|sped up|slowed|re[- ]?record(?:ed)?|'\n    r'music video|video version|solo vocal|take\\s*\\d+|pt\\.?\\s*\\d+|part\\s*\\d+|'\n    r'special disco version|clean version)\\b', re.I,\n)\n'''
+          s=s[:start]+new+s[end:]
+          start=s.index('STRONG_TRAILING_VERSION = re.compile(')
+          end=s.index('\n\ndef is_explicit_alternate_title',start)
+          new='''STRONG_TRAILING_VERSION = re.compile(\n    r'\\b(?:remix|re[- ]?mix|remaster(?:ed)?(?:\\s*\\d{4})?|radio edit|radio version|'\n    r'single edit|single version|album version|extended(?: version| edit| mix)?|club mix|'\n    r'dance mix|original mix|dub(?: version| mix)?|acoustic(?: version)?|unplugged|'\n    r'live version|instrumental(?: version)?|a cappella|acapella|sped up|slowed|'\n    r're[- ]?record(?:ed)?|refix|rework|voice note|alternate version|alternative version|'\n    r'clean version)\\s*$', re.I,\n)'''
+          s=s[:start]+new+s[end:]
+          p.write_text(s)
+          PY
+          python -m py_compile scripts/build_catalogue_v10.py
+          python - <<'PY'
+          import sys
+          sys.path.insert(0,'scripts')
+          import build_catalogue_v10 as b
+          bad=[
+            'Song (Pop edit)','Song (Zwette Edit)','Song (LP version)','Song (dub version)',
+            'Song (solo vocal)','Song (Erol Alkan rework)','Song (Benny Royal ReFix)',
+            'Song (acoustic MTV unplugged)','Song (alternative version)','Song (voice note)',
+            'Song (full version)','Song (Deluxe Ultra edit)','Song (House mix)','Song (Bonus)'
+          ]
+          for title in bad:
+              assert b.is_explicit_alternate_title(title),title
+          for title in ['Live and Let Die','I Want to Live','Another Brick in the Wall (Part II)','Alone Again (Naturally)']:
+              assert not b.is_explicit_alternate_title(title),title
+          PY
+      - name: Commit vocabulary update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/build_catalogue_v10.py
+          git commit -m "Recognize broader alternate song versions"
+          git pull --rebase origin main
+          git push
