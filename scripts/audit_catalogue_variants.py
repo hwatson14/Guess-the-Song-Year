@@ -21,12 +21,13 @@ def main():
 
     pools = data['modes']['greatest']
     global_seen = {}
+    global_mb = {}
+    global_spotify = {}
+    global_youtube = {}
     total = 0
 
     for year in sorted(pools, key=int):
         seen_keys = {}
-        seen_spotify = {}
-        seen_youtube = {}
         pool = pools[year]
         if len(pool) < 8:
             fail(f'{year} has only {len(pool)} songs; need at least 8 distinct underlying songs')
@@ -35,6 +36,7 @@ def main():
             total += 1
             title = str(song.get('title') or '').strip()
             artist = str(song.get('artist') or '').strip()
+            label = f'{year}: {title} — {artist}'
             if not title or not artist:
                 fail(f'{year}[{i}] missing title/artist')
             if int(song.get('year') or 0) != int(year):
@@ -45,13 +47,12 @@ def main():
             computed = identity.underlying_key(title, artist)
             stored = str(song.get('canonicalKey') or '')
             if not stored:
-                fail(f'{year}: {title} — {artist} has no canonicalKey')
+                fail(f'{label} has no canonicalKey')
             if stored != computed:
-                fail(f'{year}: canonicalKey mismatch for {title} — {artist}: {stored!r} != {computed!r}')
+                fail(f'{label}: canonicalKey mismatch: {stored!r} != {computed!r}')
 
             if stored in seen_keys:
-                other = seen_keys[stored]
-                fail(f'{year}: alternate/duplicate underlying song: {other}  <=>  {title} — {artist}')
+                fail(f'{year}: alternate/duplicate underlying song: {seen_keys[stored]}  <=>  {title} — {artist}')
             seen_keys[stored] = f'{title} — {artist}'
 
             prior_year = global_seen.get(stored)
@@ -59,29 +60,41 @@ def main():
                 fail(f'underlying song {stored!r} appears in both {prior_year} and {year}')
             global_seen[stored] = year
 
+            # Strong second-line identity checks. If the same verified recording or playback
+            # target is reused under another label, that is still the same song/version family.
+            mb = str(song.get('musicbrainzId') or '')
             sp = str(song.get('spotifyId') or '')
             yt = str(song.get('youtubeId') or '')
-            if sp:
-                if sp in seen_spotify:
-                    fail(f'{year}: Spotify track {sp} reused by {seen_spotify[sp]} and {title} — {artist}')
-                seen_spotify[sp] = f'{title} — {artist}'
-            if yt:
-                if yt in seen_youtube:
-                    fail(f'{year}: YouTube video {yt} reused by {seen_youtube[yt]} and {title} — {artist}')
-                seen_youtube[yt] = f'{title} — {artist}'
+            for kind, value, registry in (
+                ('MusicBrainz recording', mb, global_mb),
+                ('Spotify track', sp, global_spotify),
+                ('YouTube video', yt, global_youtube),
+            ):
+                if not value:
+                    continue
+                if value in registry and registry[value] != label:
+                    fail(f'{kind} {value} reused by {registry[value]} and {label}')
+                registry[value] = label
 
             # If the verified original recording has a materially simpler artist credit,
             # a remix/guest billing should already have been replaced by canonical_display().
+            mb_title = str(song.get('musicbrainzMatchedTitle') or '').strip()
             mb_artist = str(song.get('musicbrainzMatchedArtist') or '').strip()
+            if mb_title and identity.is_explicit_alternate_title(mb_title):
+                fail(f'{label}: verification points to alternate recording title {mb_title!r}')
             if mb_artist:
                 p1 = identity.norm(identity.primary_artist(artist)).removeprefix('the ')
                 p2 = identity.norm(identity.primary_artist(mb_artist)).removeprefix('the ')
                 if p1 and p1 == p2:
                     extra = len(identity.toks(artist)) - len(identity.toks(mb_artist))
                     if extra >= 2 and re.search(r'\b(?:feat\.?|ft\.?|featuring|with|and|&)\b', artist, re.I):
-                        fail(f'{year}: likely alternate guest/remix billing survived: {title} — {artist}; earliest recording credit is {mb_artist}')
+                        fail(f'{label}: likely alternate guest/remix billing survived; earliest recording credit is {mb_artist}')
 
-    print(f'catalogue variant audit passed: {total} entries, {len(global_seen)} distinct underlying songs')
+    print(
+        'catalogue variant audit passed:',
+        {'entries': total, 'underlyingSongs': len(global_seen), 'recordingIds': len(global_mb),
+         'spotifyIds': len(global_spotify), 'youtubeIds': len(global_youtube)},
+    )
 
 
 if __name__ == '__main__':
