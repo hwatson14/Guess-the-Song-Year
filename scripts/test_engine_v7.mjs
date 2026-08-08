@@ -34,10 +34,18 @@ if(alphaKey!=='alpha|artist a')throw new Error(`unexpected Alpha underlying key:
 if(E.songUseKey(songs[1])!==alphaKey)throw new Error('remaster must collapse to original song identity');
 if(E.songUseKey(songs[2])!==alphaKey)throw new Error('radio edit / featured version must collapse to original song identity');
 if(E.songUseKey(songs[5])!==E.songUseKey(songs[6]))throw new Error('featured-artist title/credit variants must collapse');
-if(!E.isAlternateSongTitle('Alpha (Live)'))throw new Error('annotated live version must be recognised');
-if(!E.isAlternateSongTitle('Alpha - Radio Edit'))throw new Error('radio edit suffix must be recognised');
-if(E.isAlternateSongTitle('Live and Let Die'))throw new Error('genuine title containing Live must not be treated as a live version');
-if(E.isAlternateSongTitle('I Want to Live'))throw new Error('genuine title ending in live must not be treated as a live version');
+
+for(const title of [
+  'Alpha (Live)','Alpha - Radio Edit','Alpha (Pop edit)','Alpha (LP version)',
+  'Alpha (Third Recording)','Alpha (master)','Alpha (radio)','Alpha (solo vocal)',
+  'Alpha (strumentale)','Alpha (base musicale)','Alpha (rework)','Alpha (ReFix)',
+  'Alpha (voice note)','Alpha (alternative version)','Alpha (full version)'
+]){
+  if(!E.isAlternateSongTitle(title))throw new Error(`alternate-version label not recognised: ${title}`);
+}
+for(const title of ['Live and Let Die','I Want to Live','Radio Ga Ga','Another Brick in the Wall (Part II)','Alone Again (Naturally)']){
+  if(E.isAlternateSongTitle(title))throw new Error(`genuine title incorrectly treated as alternate: ${title}`);
+}
 
 for(let i=0;i<40;i++){
   const picked=await E.chooseSong(2000,'greatest',[alphaKey]);
