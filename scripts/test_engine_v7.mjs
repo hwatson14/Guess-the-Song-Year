@@ -16,6 +16,7 @@ const songs=[
   {title:'Gamma',artist:'Artist C',year:2000,youtubeId:'yt-c',canonicalKey:'gamma|artist c'},
   {title:'Delta (feat. Guest)',artist:'Artist D',year:2000,canonicalKey:'delta|artist d'},
   {title:'Delta',artist:'Artist D and Guest',year:2000},
+  {title:'Live and Let Die',artist:'Artist E',year:2000,canonicalKey:'live and let die|artist e'},
 ];
 
 globalThis.window={GSYEngine:{
@@ -33,13 +34,17 @@ if(alphaKey!=='alpha|artist a')throw new Error(`unexpected Alpha underlying key:
 if(E.songUseKey(songs[1])!==alphaKey)throw new Error('remaster must collapse to original song identity');
 if(E.songUseKey(songs[2])!==alphaKey)throw new Error('radio edit / featured version must collapse to original song identity');
 if(E.songUseKey(songs[5])!==E.songUseKey(songs[6]))throw new Error('featured-artist title/credit variants must collapse');
+if(!E.isAlternateSongTitle('Alpha (Live)'))throw new Error('annotated live version must be recognised');
+if(!E.isAlternateSongTitle('Alpha - Radio Edit'))throw new Error('radio edit suffix must be recognised');
+if(E.isAlternateSongTitle('Live and Let Die'))throw new Error('genuine title containing Live must not be treated as a live version');
+if(E.isAlternateSongTitle('I Want to Live'))throw new Error('genuine title ending in live must not be treated as a live version');
 
 for(let i=0;i<40;i++){
   const picked=await E.chooseSong(2000,'greatest',[alphaKey]);
   if(E.songUseKey(picked)===alphaKey)throw new Error('used underlying song was selected again through an alternate version');
 }
 
-const allUsed=[alphaKey,E.songUseKey(songs[3]),E.songUseKey(songs[4]),E.songUseKey(songs[5])];
+const allUsed=[alphaKey,E.songUseKey(songs[3]),E.songUseKey(songs[4]),E.songUseKey(songs[5]),E.songUseKey(songs[7])];
 let exhausted=false;
 try{await E.chooseSong(2000,'greatest',allUsed)}catch(err){exhausted=err?.code==='NO_UNUSED_SONG'}
 if(!exhausted)throw new Error('depleted year must throw NO_UNUSED_SONG rather than recycle an alternate version');
