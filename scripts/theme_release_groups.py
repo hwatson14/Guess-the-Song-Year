@@ -6,10 +6,11 @@ recording entities ahead of the original. For themed playlists we therefore use
 release groups as the answer-year evidence and reject uncertainty rather than guess:
 
 1. title must match the seed's underlying title exactly after punctuation/version cleanup;
-2. lead artist must match strongly;
-3. alternate/live/remix/compilation release groups are rejected;
-4. the earliest remaining release-group first-release-date is the game year;
-5. if no strict release group exists, the seed is omitted and same-year Greatest Hits
+2. for paired A/B singles, an exact match to one slash-separated side is also accepted;
+3. lead artist must match strongly;
+4. alternate/live/remix/compilation release groups are rejected;
+5. the earliest remaining release-group first-release-date is the game year;
+6. if no strict release group exists, the seed is omitted and same-year Greatest Hits
    fallback handles that card year at runtime.
 """
 import re
@@ -40,6 +41,18 @@ def base_title(v):
     s=re.sub(r'\s+(?:feat\.?|ft\.?|featuring)\s+.+$','',s,flags=re.I)
     s=canonical.STRONG_TRAILING_VERSION.sub(' ',s)
     return canonical.clean(s)
+
+
+def title_components(v):
+    """Return exact underlying titles represented by one release-group title.
+
+    MusicBrainz commonly names historical singles as "A-side / B-side". Splitting
+    requires whitespace around the slash so genuine titles such as Love/Paranoia
+    remain one title.
+    """
+    raw=canonical.clean(v)
+    parts=re.split(r'\s+/\s+|\s+\|\s+',raw)
+    return [canonical.norm(base_title(p)) for p in parts if canonical.norm(base_title(p))]
 
 
 def underlying_key(title,artist):
@@ -79,7 +92,7 @@ def strict_candidates(title,artist,entities):
     for e in entities:
         et=canonical.clean(e.get('title'));ea=rg_artist(e);date=canonical.clean(e.get('first-release-date'))
         if not re.match(r'^\d{4}',date) or not et or not ea:continue
-        if canonical.norm(base_title(et))!=wanted_title:continue
+        if wanted_title not in title_components(et):continue
         if canonical.is_explicit_alternate_title(et):continue
         if artist_score(ea,artist)<0.60:continue
         secondary={str(x).lower() for x in (e.get('secondary-types') or [])}
