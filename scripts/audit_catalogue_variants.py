@@ -28,6 +28,7 @@ def main():
 
     for year in sorted(pools, key=int):
         seen_keys = {}
+        seen_titles = {}
         pool = pools[year]
         if len(pool) < 12:
             fail(f'{year} has only {len(pool)} songs; need at least 12 distinct underlying songs')
@@ -43,6 +44,12 @@ def main():
                 fail(f'{year}: {title} has stored year {song.get("year")}')
             if identity.is_explicit_alternate_title(title):
                 fail(f'{year}: alternate/version title survived: {title} — {artist}')
+
+            # In one year, two performers of the same named chart song are not useful variety.
+            title_key = identity.norm(identity.base_title(title))
+            if title_key in seen_titles:
+                fail(f'{year}: same song title appears twice: {seen_titles[title_key]}  <=>  {title} — {artist}')
+            seen_titles[title_key] = f'{title} — {artist}'
 
             computed = identity.underlying_key(title, artist)
             stored = str(song.get('canonicalKey') or '')
