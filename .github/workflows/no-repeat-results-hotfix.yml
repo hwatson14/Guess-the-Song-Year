@@ -51,10 +51,11 @@ jobs:
         run: |
           node --check app.js
           node --check engine-v7.js
+          node scripts/test_engine_v7.mjs
           python scripts/validate_catalogue.py
           python -m json.tool data/catalogue.schema.json >/dev/null
           python - <<'PY'
-          import json,re
+          import json,re,unicodedata
           from pathlib import Path
           d=json.loads(Path('data/catalogue.json').read_text())
           g=d['modes']['greatest']
@@ -62,15 +63,19 @@ jobs:
           assert len(sizes)==73, len(sizes)
           assert min(sizes.values())>=8, min(sizes.values())
           assert sum(sizes.values())>=584, sum(sizes.values())
+          def norm(v):
+              return re.sub(r'[^a-z0-9]+',' ',unicodedata.normalize('NFKD',str(v)).encode('ascii','ignore').decode().lower()).strip()
           global_seen={}
+          bad_variant=re.compile(r'\b(pt\.?\s*\d+|mixed|remix|karaoke|backing track)\b',re.I)
           for year,pool in g.items():
               local=set()
               for s in pool:
-                  k=(re.sub(r'[^a-z0-9]+',' ',s['title'].lower()).strip(), re.sub(r'[^a-z0-9]+',' ',s['artist'].lower()).strip())
+                  k=(norm(s['title']),norm(s['artist']))
                   assert k not in local,(year,k)
                   local.add(k)
                   assert int(s['year'])==int(year),(year,s)
                   assert s.get('yearEvidence')=='MusicBrainz first-release-date',(year,s)
+                  assert not bad_variant.search(s['title']),s
                   prior=global_seen.get(k)
                   assert prior in (None,year),(k,prior,year)
                   global_seen[k]=year
@@ -82,6 +87,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git rm scripts/build_catalogue_v8.py
           git add scripts/build_catalogue.py scripts/validate_catalogue.py data/catalogue.json data/catalogue.schema.json
-          git commit -m "Build deep verified Greatest Hits catalogue"
+          git commit -m "Build deep canonical verified Greatest Hits catalogue"
           git pull --rebase origin main
           git push
