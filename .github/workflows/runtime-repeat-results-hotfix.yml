@@ -1,0 +1,34 @@
+name: Runtime repeat and result controls
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/runtime-repeat-results-hotfix.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Apply runtime gameplay patch only
+        run: |
+          python scripts/patch_no_repeat_results.py
+          git checkout HEAD -- scripts/build_catalogue.py scripts/validate_catalogue.py data/catalogue.schema.json
+          node --check app.js
+          node --check engine-v7.js
+          grep -q 'data-action="new-card"' app.js
+          grep -q 'Wrong answer' app.js
+          grep -q 'NO_UNUSED_SONG' engine-v7.js
+          grep -q 'v=7.3.0' index.html
+      - name: Commit runtime changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app.js engine-v7.js index.html
+          git commit -m "Add wrong-answer tracking, game-wide no-repeat songs, and new-card replacement"
+          git pull --rebase origin main
+          git push
