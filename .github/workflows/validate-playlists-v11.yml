@@ -1,0 +1,51 @@
+name: Validate v11 playlists
+
+on:
+  push:
+    branches: [feature/verified-playlists-v11]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate-v11-source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install requests beautifulsoup4
+      - name: Exercise v11 builder deterministically
+        run: |
+          python - <<'PY'
+          import json,sys
+          from pathlib import Path
+          sys.path.insert(0,'scripts')
+          import build_playlists_v11 as b
+          p=Path('data/catalogue.json')
+          d=json.loads(p.read_text())
+          d['version']=10
+          d['modes']={'greatest':d['modes']['greatest']}
+          p.write_text(json.dumps(d,separators=(',',':')))
+          b.canonical.bimmuda_lookup=lambda: ({},{})
+          b.canonical.confirm_release_year=lambda row:{'year':2000,'musicbrainzId':'fixture','musicbrainzMatchedTitle':row['title'],'musicbrainzMatchedArtist':row['artist'],'mbScore':100.0,'titleSimilarity':1.0,'artistSimilarity':1.0}
+          b.canonical.canonical_display=lambda row,e:(row['title'],row['artist'])
+          b.main()
+          PY
+      - name: Validate generated runtime
+        run: |
+          node --check engine.js
+          node --check engine-v7.js
+          node --check app.js
+          node scripts/test_engine_v7.mjs
+          grep -q 'data-mode=' app.js
+          grep -q 'function modeId()' app.js
+          ! grep -q "const MODE='greatest'" app.js
+          grep -q 'Sing Along' engine-v7.js
+          grep -q 'Australian' engine-v7.js
+          grep -q 'Unexpected Years' engine-v7.js
+          grep -q 'Party Anthems' engine-v7.js
+          grep -q 'Rock Classics' engine-v7.js
