@@ -5,8 +5,7 @@ on:
     branches: [main]
     paths:
       - .github/workflows/test-playlist-sources.yml
-      - scripts/augment_playlists_v10.py
-      - scripts/finalize_playlist_runtime_v11.py
+      - scripts/build_playlists_v11.py
       - scripts/build_modes.py
 
 jobs:
@@ -18,36 +17,19 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install requests beautifulsoup4
-      - name: Exercise augmentation and app patch without external metadata calls
+      - name: Exercise v11 builder without external metadata calls
         run: |
           python - <<'PY'
           import json,sys
           from pathlib import Path
           sys.path.insert(0,'scripts')
-          import augment_playlists_v10 as a
-
-          p=Path('data/catalogue.json')
-          d=json.loads(p.read_text())
-          d['version']=10
-          d['modes']={'greatest':d['modes']['greatest']}
-          p.write_text(json.dumps(d,separators=(',',':')))
-
-          a.canonical.bimmuda_lookup=lambda: ({},{})
-          def evidence(row):
-              return {
-                  'year': 2000,
-                  'musicbrainzId': 'fixture-recording',
-                  'musicbrainzMatchedTitle': row['title'],
-                  'musicbrainzMatchedArtist': row['artist'],
-                  'mbScore': 100.0,
-                  'titleSimilarity': 1.0,
-                  'artistSimilarity': 1.0,
-              }
-          a.canonical.confirm_release_year=evidence
-          a.canonical.canonical_display=lambda row,e:(row['title'],row['artist'])
-          a.main()
+          import build_playlists_v11 as b
+          p=Path('data/catalogue.json');d=json.loads(p.read_text());d['version']=10;d['modes']={'greatest':d['modes']['greatest']};p.write_text(json.dumps(d,separators=(',',':')))
+          b.canonical.bimmuda_lookup=lambda: ({},{})
+          b.canonical.confirm_release_year=lambda row:{'year':2000,'musicbrainzId':'fixture','musicbrainzMatchedTitle':row['title'],'musicbrainzMatchedArtist':row['artist'],'mbScore':100.0,'titleSimilarity':1.0,'artistSimilarity':1.0}
+          b.canonical.canonical_display=lambda row,e:(row['title'],row['artist'])
+          b.main()
           PY
-          python scripts/finalize_playlist_runtime_v11.py
       - name: Validate generated JavaScript contract
         run: |
           node --check engine.js
