@@ -134,14 +134,16 @@
   }
 
   function youtubeListeningScreen(){
-    return `${topLine(false,false)}${matchHeader()}${scoreStrip()}<div class="youtube-listening"><div class="kicker">NOW PLAYING · PHONE DOWN</div><h1>Listen, then guess</h1><p>Listen for as long as you want. Lift the phone or tap Guess now whenever you are ready.</p><div class="youtube-guess-actions"><button class="btn primary" data-action="guess-now">Guess now</button></div><div class="youtube-player"><div id="youtubePlayer"></div></div><button class="btn primary yt-start-fallback hidden" id="ytStartFallback" data-action="yt-start">Tap to start YouTube</button><small class="provider-warning">If your browser blocks autoplay, tap the button above and put the phone face-down again.</small></div>`;
+    const virtual=cfg.playMode==='virtual';
+    const copy=virtual?'Listen for as long as you want. Lift the phone or tap Guess now when you are ready to place the song.':'Listen for as long as you want. Pick up the phone and tap Guess now when you are ready to reveal.';
+    return `${topLine(false,false)}${matchHeader()}${scoreStrip()}<div class="youtube-listening"><div class="kicker">NOW PLAYING · PHONE DOWN</div><h1>Listen, then guess</h1><p>${copy}</p><div class="youtube-guess-actions"><button class="btn primary" data-action="guess-now">Guess now</button></div><div class="youtube-player"><div id="youtubePlayer"></div></div><button class="btn primary yt-start-fallback hidden" id="ytStartFallback" data-action="yt-start">Tap to start YouTube</button><small class="provider-warning">If your browser blocks autoplay, tap the button above and put the phone face-down again.</small></div>`;
   }
 
   function playingScreen(){
     const virtual=cfg.playMode==='virtual';
     return `${topLine(true,false)}${matchHeader()}${scoreStrip()}<div class="kicker">NOW PLAYING</div><div class="wave-card"><button class="play-core" data-action="toggle-play">Ⅱ</button><div class="wave"></div></div>
       <div class="playing-instruction"><h2>${virtual?'Place it on your timeline':'Place the physical card on your timeline'}</h2><p>${virtual?'Choose the gap where you think this song belongs.':'Use the cards already on the table. No example years are shown here so the app cannot influence your guess.'}</p></div>
-      ${virtual?virtualTimeline():`<div class="play-actions"><button class="btn ghost" data-action="replay">↻ Replay</button><button class="btn primary" data-action="reveal">Reveal Answer</button></div>`}`;
+      ${virtual?virtualTimeline():`<div class="play-actions"><button class="btn ghost" data-action="replay">↻ Replay</button><button class="btn primary" data-action="guess-now">Guess now</button></div>`}`;
   }
 
   function guessScreen(){
@@ -207,7 +209,7 @@
       if(a==='motion')b.onclick=enableMotion;
       if(a==='toggle-play')b.onclick=togglePlay;
       if(a==='yt-start')b.onclick=startYouTubeFromTap;
-      if(a==='guess-now')b.onclick=finishYouTubeListening;
+      if(a==='guess-now')b.onclick=guessNow;
       if(a==='listen-again')b.onclick=listenAgain;
       if(a==='replay')b.onclick=replay;
       if(a==='reveal')b.onclick=revealPhysical;
@@ -324,8 +326,9 @@
         const resolved=await E.resolveSong(song,E.getProvider());
         if(seq!==prepareSeq)return;
         current={cardId,year,song,resolved,provider:E.getProvider(),mode:MODE};
-        match.current=current;match.placementResult=null;match.phase='ready';saveMatch();
-        screen='ready';render();return;
+        match.current=current;match.placementResult=null;
+        if(cfg.playMode==='physical'){saveMatch();beginMusicCountdown();return}
+        match.phase='ready';saveMatch();screen='ready';render();return;
       }catch(err){
         lastErr=err;
         const failed=match.assign[assignKey];
@@ -407,7 +410,7 @@
     const down=Math.abs(b)>135&&Math.abs(g)<70,changed=down!==faceDown;
     faceDown=down;
     if(screen==='ready'&&changed&&down&&current?.provider==='spotify'){playCurrent();return}
-    if(screen==='youtube'){
+    if(screen==='youtube'&&cfg.playMode==='virtual'){
       if(down){
         if(!youtubeDownAt)youtubeDownAt=Date.now();
       }else if(youtubeDownAt&&Date.now()-youtubeDownAt>700){
@@ -428,7 +431,7 @@
     youtubeDownAt=0;
   }
 
-  function beginYouTubeCountdown(){
+  function beginMusicCountdown(){
     if(!current)return;
     cancelCountdown();cancelYoutubeListening();
     const seq=++prepareSeq;
@@ -440,13 +443,17 @@
       const el=document.getElementById('countdownNumber');
       if(remaining>0){if(el)el.textContent=String(remaining);return}
       cancelCountdown();
-      if(seq===prepareSeq&&screen==='countdown')startYouTubeListening();
+      if(seq===prepareSeq&&screen==='countdown'){if(current?.provider==='youtube')startYouTubeListening();else startSpotifyListening()}
     },1000);
   }
 
   async function playCurrent(){
     if(!current||playing)return;
-    if(current.provider==='youtube'){beginYouTubeCountdown();return}
+    beginMusicCountdown();
+  }
+
+  async function startSpotifyListening(){
+    if(!current||current.provider!=='spotify')return;
     match.phase='playing';match.current=current;saveMatch();screen='playing';render();resetScroll();
     try{
       await E.playSpotify(current.resolved.uri);playing=true;playNeedsTap=false
@@ -490,6 +497,16 @@
     cancelYoutubeListening();
   }
 
+  function guessNow(){
+    if(!current)return;
+    if(cfg.playMode==='physical'){
+      cancelYoutubeListening();
+      E.pauseYouTube();E.destroyYouTube();playing=false;playNeedsTap=false;
+      revealPhysical();return;
+    }
+    if(screen==='youtube')finishYouTubeListening();
+  }
+
   function finishYouTubeListening(){
     if(screen!=='youtube'||!current)return;
     cancelYoutubeListening();
@@ -501,8 +518,8 @@
 
   function listenAgain(){
     if(!current)return;
-    if(current.provider==='youtube'){beginYouTubeCountdown();return}
-    replay();
+    stopPlayback();
+    beginMusicCountdown();
   }
 
   async function replaceCurrentSong(){
