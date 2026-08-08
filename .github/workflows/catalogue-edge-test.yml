@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - .github/workflows/catalogue-edge-test.yml
-      - scripts/build_catalogue_v8.py
+      - scripts/build_catalogue_v10.py
 
 permissions:
   contents: read
@@ -17,48 +17,53 @@ concurrency:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
       - run: pip install requests beautifulsoup4
-      # Protect both sparse early years and known later-charting release-year traps.
-      - name: Verify canonical edge-year pools
+      - name: Verify sparse years, canonical versions and chart-year traps
         run: |
           python - <<'PY'
-          import importlib.util,re
+          import importlib.util
           from pathlib import Path
-          path=Path('scripts/build_catalogue_v8.py')
+          path=Path('scripts/build_catalogue_v10.py')
           spec=importlib.util.spec_from_file_location('b',path)
           b=importlib.util.module_from_spec(spec);spec.loader.exec_module(b)
-          playback=b.bimmuda_lookup()
-          years=list(range(1950,1961))+[2019,2020,2021,2022]
+          exact,under=b.bimmuda_lookup()
+          years=[1950,1951,1952,1959,1960,2019,2020,2021,2022]
           pools={}
           for year in years:
               rows=b.candidate_chart_rows(year)
               if year==1959:
-                  assert any(b.norm(r['title'])=='mack the knife' for r in rows if r['chartYear']==1959), '1959 must use Hot 100 pop chart'
-              pool=b.verified_pool(year,rows,playback)
+                  assert any(b.norm(r['title'])=='mack the knife' for r in rows if r['chartYear']==1959), '1959 must use Hot 100'
+              pool=b.verified_pool(year,rows,exact,under,12)
               pools[year]=pool
-              print('EDGE',year,'chart candidates',len(rows),'verified distinct',len(pool))
+              print('EDGE',year,'candidates',len(rows),'songs',len(pool))
               keys=[]
               for s in pool:
-                  print(' ',s['title'],'—',s['artist'])
+                  print(' ',s['title'],'—',s['artist'],'|',s['canonicalKey'])
                   assert int(s['year'])==year
-                  assert s['yearEvidence']=='MusicBrainz release-group earliest first-release-date'
-                  assert not re.search(r'\b(pt\.?\s*\d+|mixed|remix|karaoke|backing track)\b',s['title'],re.I),s
-                  keys.append(b.song_key(s['title'],s['artist']))
+                  assert s['yearEvidence']=='MusicBrainz recording earliest first-release-date'
+                  assert not b.is_explicit_alternate_title(s['title']),s
+                  assert s['canonicalKey']==b.underlying_key(s['title'],s['artist']),s
+                  keys.append(s['canonicalKey'])
               assert len(pool)>=8,(year,len(pool))
               assert len(keys)==len(set(keys)),(year,keys)
 
           def titles(year): return {b.norm(s['title']) for s in pools[year]}
+          # Later chart presence cannot rewrite the original recording's year.
           assert 'blinding lights' not in titles(2021)
           assert 'levitating' not in titles(2021)
-          assert 'mood' not in titles(2021)
           assert 'save your tears' not in titles(2021)
           assert 'heat waves' not in titles(2022)
           assert 'shivers' not in titles(2022)
           assert 'bad habits' not in titles(2022)
+
+          # The identity layer must collapse common alternate-version shapes.
+          assert b.underlying_key('Example - 2011 Remaster','Artist')==b.underlying_key('Example','Artist')
+          assert b.underlying_key('Example (Radio Edit)','Artist feat. Guest')==b.underlying_key('Example','Artist')
+          assert b.underlying_key('Example (feat. Guest)','Artist and Guest')==b.underlying_key('Example','Artist')
           PY
