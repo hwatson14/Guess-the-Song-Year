@@ -112,7 +112,7 @@ def wikipedia_page_title(year):
     # The Hot 100 began during 1958; 1959 has a normal Hot 100 year-end page.
     if year >= 1959:
         return f'Billboard Year-End Hot 100 singles of {year}'
-    q = f'Billboard year-end pop singles {year}'
+    q = f'Billboard year-end singles {year}'
     data = get(WIKI_API, params={'action': 'query', 'list': 'search', 'srsearch': q, 'srlimit': 12, 'format': 'json', 'origin': '*'}).json()
     hits = data.get('query', {}).get('search', [])
     ranked = []
@@ -134,7 +134,7 @@ def wikipedia_page_title(year):
             bonus += 2
         ranked.append((bonus, title))
     if not ranked:
-        raise RuntimeError(f'No Billboard pop year-end page found for {year}')
+        raise RuntimeError(f'No Billboard year-end page found for {year}')
     ranked.sort(reverse=True)
     return ranked[0][1]
 
