@@ -17,7 +17,7 @@
   function saveCfg(){localStorage.setItem(CFG_KEY,JSON.stringify(cfg))}
   function saveMatch(){if(match)localStorage.setItem(MATCH_KEY,JSON.stringify(match));else localStorage.removeItem(MATCH_KEY)}
   function shuffle(a){a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
-  function activeTeam(){return match?.teams?.[match.turn]||{name:'Team 1',score:0,timeline:[]}}
+  function activeTeam(){return match?.teams?.[match.turn]||{name:'Team 1',score:0,correct:0,wrong:0,timeline:[]}}
   function winner(){return cfg.victory==='10'?match?.teams?.find(t=>t.score>=10)||null:null}
   function victoryLabel(){return cfg.victory==='unlimited'?'Unlimited':'10 cards'}
   function providerName(){return E.getProvider()==='spotify'?'Spotify':'YouTube'}
@@ -75,7 +75,9 @@
     match.placementResult=match.placementResult||null;
     match.pendingSlot=Number.isInteger(match.pendingSlot)?match.pendingSlot:null;
     match.used=Array.isArray(match.used)?match.used:[];
-    match.assign=match.assign&&typeof match.assign==='object'?match.assign:{};
+    match.history=Array.isArray(match.history)?match.history:[];
+    for(const team of match.teams||[]){team.correct=Number(team.correct)||Number(team.score)||0;team.wrong=Number(team.wrong)||0;team.timeline=Array.isArray(team.timeline)?team.timeline:[]}
+    delete match.assign;
     if(cfg.playMode==='virtual')ensureVirtualStarters();
     saveMatch();
   }
@@ -134,22 +136,22 @@
   }
 
   function youtubeListeningScreen(){
-    const virtual=cfg.playMode==='virtual';
-    const copy=virtual?'Listen for as long as you want. Lift the phone or tap Guess now when you are ready to place the song.':'Listen for as long as you want. Pick up the phone and tap Guess now when you are ready to reveal.';
-    return `${topLine(false,false)}${matchHeader()}${scoreStrip()}<div class="youtube-listening"><div class="kicker">NOW PLAYING · PHONE DOWN</div><h1>Listen, then guess</h1><p>${copy}</p><div class="youtube-guess-actions"><button class="btn primary" data-action="guess-now">Guess now</button></div><div class="youtube-player"><div id="youtubePlayer"></div></div><button class="btn primary yt-start-fallback hidden" id="ytStartFallback" data-action="yt-start">Tap to start YouTube</button><small class="provider-warning">If your browser blocks autoplay, tap the button above and put the phone face-down again.</small></div>`;
+    const virtual=cfg.playMode==='virtual',replaceLabel=virtual?'Deal new card':'Scan new card';
+    const copy=virtual?'Listen for as long as you want. Tap Guess now when you are ready to place the song.':'Listen for as long as you want. Tap Guess now when you are ready to reveal.';
+    return `${topLine(false,false)}${matchHeader()}${scoreStrip()}<div class="youtube-listening"><div class="kicker">NOW PLAYING · PHONE DOWN</div><h1>Listen, then guess</h1><p>${copy}</p><div class="youtube-guess-actions"><button class="btn primary" data-action="guess-now">Guess now</button><button class="btn ghost" data-action="new-card">↻ ${replaceLabel}</button></div><div class="youtube-player"><div id="youtubePlayer"></div></div><button class="btn primary yt-start-fallback hidden" id="ytStartFallback" data-action="yt-start">Tap to start YouTube</button><small class="provider-warning">Recognised a recent repeat? Use ${replaceLabel}; the current team keeps its turn and the hidden year changes.</small></div>`;
   }
 
   function playingScreen(){
     const virtual=cfg.playMode==='virtual';
     return `${topLine(true,false)}${matchHeader()}${scoreStrip()}<div class="kicker">NOW PLAYING</div><div class="wave-card"><button class="play-core" data-action="toggle-play">Ⅱ</button><div class="wave"></div></div>
       <div class="playing-instruction"><h2>${virtual?'Place it on your timeline':'Place the physical card on your timeline'}</h2><p>${virtual?'Choose the gap where you think this song belongs.':'Use the cards already on the table. No example years are shown here so the app cannot influence your guess.'}</p></div>
-      ${virtual?virtualTimeline():`<div class="play-actions"><button class="btn ghost" data-action="replay">↻ Replay</button><button class="btn primary" data-action="guess-now">Guess now</button></div>`}`;
+      ${virtual?virtualTimeline():`<div class="play-actions"><button class="btn ghost" data-action="replay">↻ Replay</button><button class="btn ghost" data-action="new-card">↻ Scan new card</button><button class="btn primary" data-action="guess-now">Guess now</button></div>`}`;
   }
 
   function guessScreen(){
     const virtual=cfg.playMode==='virtual';
     return `${topLine(true,false)}${matchHeader()}${scoreStrip()}<div class="kicker">MUSIC STOPPED</div><div class="guess-stage"><div class="guess-disc" aria-hidden="true"></div><h1>${virtual?'Place the song':'Make your guess'}</h1><p>${virtual?'Choose where the song belongs on your timeline.':'Place the physical card on your timeline, then reveal the answer.'}</p></div>
-      ${virtual?virtualTimeline():`<div class="play-actions"><button class="btn ghost" data-action="listen-again">↻ Listen again</button><button class="btn primary" data-action="reveal">Reveal Answer</button></div>`}`;
+      ${virtual?virtualTimeline():`<div class="play-actions"><button class="btn ghost" data-action="listen-again">↻ Listen again</button><button class="btn ghost" data-action="new-card">↻ Scan new card</button><button class="btn primary" data-action="reveal">Reveal Answer</button></div>`}`;
   }
 
   function virtualTimeline(){
@@ -160,18 +162,18 @@
       if(i<years.length)html+=`<div class="year-card">${years[i]}</div>`;
     }
     const starter=Number(team.starterYear);
-    return `<div class="card"><div class="timeline">${html}</div><div class="timeline-note">Starter year: <b>${Number.isFinite(starter)?starter:years[0]}</b> · Tap a + before, between or after the years.</div></div><div class="virtual-actions"><button class="btn ghost" data-action="listen-again">↻ Listen Again</button><button class="btn primary" data-action="lock-placement" ${pendingSlot===null?'disabled':''}>Lock Placement</button></div>`;
+    return `<div class="card"><div class="timeline">${html}</div><div class="timeline-note">Starter year: <b>${Number.isFinite(starter)?starter:years[0]}</b> · Tap a + before, between or after the years.</div></div><div class="virtual-actions"><button class="btn ghost" data-action="listen-again">↻ Listen Again</button><button class="btn ghost" data-action="new-card">↻ Deal new card</button><button class="btn primary" data-action="lock-placement" ${pendingSlot===null?'disabled':''}>Lock Placement</button></div>`;
   }
 
   function revealScreen(){
     const virtual=cfg.playMode==='virtual';
-    const result=virtual?(placementResult?.correct?'Correct placement':'Wrong position'):'Check your physical timeline';
+    const result=virtual?(placementResult?.correct?'Correct placement':'Wrong position'):'Mark the answer';
     const resultClass=virtual?(placementResult?.correct?'ok':'bad'):'';
     const source=current?.song?.sourceLabel||current?.song?.source||'Greatest Hits catalogue';
     return `${topLine(true,false)}${matchHeader()}${scoreStrip()}<h1 class="reveal-heading">Reveal</h1><div class="reveal-sub">Greatest Hits · ${esc(activeTeam().name)}</div>
       <section class="card answer-card"><div class="answer-top"><div class="answer-art"></div><div><div class="answer-song">${esc(current?.song?.title||'Unknown')}</div><div class="answer-artist">${esc(current?.song?.artist||'')}</div></div></div><div class="answer-year">${current?.year||'----'}</div><div class="result-badge ${resultClass}">${esc(result)}</div></section>
-      <div class="card reveal-help">${virtual?(placementResult?.correct?`It fits at that point in ${esc(activeTeam().name)}’s timeline. The card has been added.`:`It does not fit between those neighbouring years, so the card is discarded.`):`If ${current?.year} fits where ${esc(activeTeam().name)} placed the physical card, keep it. Otherwise discard it.`}</div>
-      <div class="reveal-actions">${virtual?'':`<button class="btn ghost" data-action="discard">Discard</button><button class="btn primary" data-action="keep">Keep card</button>`}${virtual?'<button class="btn primary" data-action="next-turn">Next Team</button>':''}<button class="btn text" data-action="open-track">Open song in ${current?.provider==='spotify'?'Spotify':'YouTube'}</button></div><div class="source-note">Catalogue source: ${esc(source)}</div>`;
+      <div class="card reveal-help">${virtual?(placementResult?.correct?`It fits at that point in ${esc(activeTeam().name)}’s timeline. The card has been added.`:`It does not fit between those neighbouring years, so the card is discarded.`):`Did ${esc(activeTeam().name)} place the card correctly? Mark the result below.`}</div>
+      <div class="reveal-actions">${virtual?'':`<button class="btn ghost" data-action="wrong-answer">✕ Wrong answer</button><button class="btn primary" data-action="correct-answer">✓ Correct answer</button>`}${virtual?'<button class="btn primary" data-action="next-turn">Next Team</button>':''}<button class="btn text" data-action="open-track">Open song in ${current?.provider==='spotify'?'Spotify':'YouTube'}</button></div><div class="source-note">Catalogue source: ${esc(source)}</div>`;
   }
 
   function gameOverScreen(){
@@ -210,12 +212,13 @@
       if(a==='toggle-play')b.onclick=togglePlay;
       if(a==='yt-start')b.onclick=startYouTubeFromTap;
       if(a==='guess-now')b.onclick=guessNow;
+      if(a==='new-card')b.onclick=newCardForRepeat;
       if(a==='listen-again')b.onclick=listenAgain;
       if(a==='replay')b.onclick=replay;
       if(a==='reveal')b.onclick=revealPhysical;
       if(a==='lock-placement')b.onclick=lockPlacement;
-      if(a==='keep')b.onclick=()=>finishPhysical(true);
-      if(a==='discard')b.onclick=()=>finishPhysical(false);
+      if(a==='correct-answer')b.onclick=()=>finishPhysical(true);
+      if(a==='wrong-answer')b.onclick=()=>finishPhysical(false);
       if(a==='next-turn')b.onclick=finishVirtualTurn;
       if(a==='open-track')b.onclick=openTrack;
       if(a==='connect-spotify')b.onclick=()=>E.spotifyConnect();
@@ -264,7 +267,7 @@
 
   async function startMatch(){
     if(!providerReady()){musicModal=true;render();toast('Connect Spotify first, or switch to YouTube.');return}
-    match={active:true,id:`g${Date.now()}`,mode:MODE,phase:'between',round:0,turn:0,teams:Array.from({length:cfg.teams},(_,i)=>({name:`Team ${i+1}`,score:0,timeline:[],starterYear:null,starterCardId:null})),used:[],assign:{},virtualDeck:shuffle(Array.from({length:308},(_,i)=>i+1)),virtualPos:0,current:null,placementResult:null,pendingSlot:null};
+    match={active:true,id:`g${Date.now()}`,mode:MODE,phase:'between',round:0,turn:0,teams:Array.from({length:cfg.teams},(_,i)=>({name:`Team ${i+1}`,score:0,correct:0,wrong:0,timeline:[],starterYear:null,starterCardId:null})),used:[],history:[],virtualDeck:shuffle(Array.from({length:308},(_,i)=>i+1)),virtualPos:0,current:null,placementResult:null,pendingSlot:null};
     if(cfg.playMode==='virtual')ensureVirtualStarters();
     current=null;placementResult=null;pendingSlot=null;
     saveCfg();saveMatch();
@@ -317,12 +320,11 @@
     const seq=++prepareSeq;
     const year=E.cardYear(cardId);if(!year){toast('That card has no year mapping.');return nextRound()}
     match.phase='loading';saveMatch();screen='loading';render();
-    const assignKey=String(cardId),excluded=[...(match.used||[])];let lastErr=null;
-    for(let attempt=0;attempt<4;attempt++){
+    const excluded=[...(match.used||[])];let lastErr=null;
+    for(let attempt=0;attempt<5;attempt++){
+      let song=null;
       try{
-        let song=attempt===0?match.assign[assignKey]:null;
-        if(!song){song=await E.chooseSong(year,MODE,excluded);match.assign[assignKey]=song;saveMatch()}
-        if(Number(song.year)!==Number(year))throw new E.AppError('CATALOGUE_YEAR_MISMATCH',`Catalogue error: ${song.title} is not mapped to ${year}.`);
+        song=await E.chooseSong(year,MODE,excluded);
         const resolved=await E.resolveSong(song,E.getProvider());
         if(seq!==prepareSeq)return;
         current={cardId,year,song,resolved,provider:E.getProvider(),mode:MODE};
@@ -335,14 +337,17 @@
         match.phase='ready';saveMatch();screen='ready';render();return;
       }catch(err){
         lastErr=err;
-        const failed=match.assign[assignKey];
-        if(failed){const k=E.songKey(failed);if(!excluded.includes(k))excluded.push(k)}
+        if(song){const k=E.songUseKey?.(song)||E.songKey(song);if(!excluded.includes(k))excluded.push(k)}
         const retryable=['SPOTIFY_TRACK_NOT_FOUND','YOUTUBE_VIDEO_NOT_FOUND','YOUTUBE_PLAY_FAILED'].includes(err?.code);
-        if(retryable){delete match.assign[assignKey];saveMatch();continue}
+        if(retryable)continue;
         break;
       }
     }
     if(seq!==prepareSeq)return;
+    if(lastErr?.code==='NO_UNUSED_SONG'){
+      toast(`${year} has no unused songs left in this game. ${cfg.playMode==='physical'?'Scan':'Deal'} a new card.`);
+      setTimeout(()=>{if(seq!==prepareSeq)return;if(cfg.playMode==='physical'){match.phase='scanner';match.current=null;saveMatch();screen='scanner';render()}else nextRound()},900);return;
+    }
     toast(errorText(lastErr));
     if(['NO_SPOTIFY_DEVICE','SPOTIFY_NOT_CONNECTED','SPOTIFY_REAUTH'].includes(lastErr?.code)){musicModal=true;screen='resume';render();return}
     if(cfg.playMode==='physical'){setTimeout(()=>{if(seq!==prepareSeq)return;match.phase='scanner';saveMatch();screen='scanner';render()},1200)}
@@ -461,7 +466,7 @@
     if(!current||current.provider!=='spotify')return;
     match.phase='playing';match.current=current;saveMatch();screen='playing';render();resetScroll();
     try{
-      await E.playSpotify(current.resolved.uri);playing=true;playNeedsTap=false
+      await E.playSpotify(current.resolved.uri);playing=true;playNeedsTap=false;recordSongUsed()
     }catch(err){
       playing=false;toast(errorText(err));
       if(err?.code?.startsWith('SPOTIFY')){screen='resume';musicModal=true;render()}
@@ -475,7 +480,7 @@
     screen='youtube';render();resetScroll();
     try{
       const r=await E.playYouTube('youtubePlayer',current.resolved);
-      playing=!!r.started;playNeedsTap=!!r.needsTap;
+      playing=!!r.started;playNeedsTap=!!r.needsTap;if(playing)recordSongUsed();
       if(playNeedsTap){
         document.getElementById('ytStartFallback')?.classList.remove('hidden');
         toast('Browser blocked autoplay. Tap Start YouTube, then put the phone face-down.');
@@ -492,7 +497,7 @@
   function startYouTubeFromTap(){
     if(!current||current.provider!=='youtube'||screen!=='youtube')return;
     try{
-      E.resumeYouTube();playing=true;playNeedsTap=false;
+      E.resumeYouTube();playing=true;playNeedsTap=false;recordSongUsed();
       document.getElementById('ytStartFallback')?.classList.add('hidden');
       armYoutubeStopTimer();
     }catch{toast('YouTube still could not start. Try again or switch to Spotify.')}
@@ -531,21 +536,23 @@
   async function replaceCurrentSong(){
     if(!current)return;
     const seq=++prepareSeq;
-    const {cardId,year}=current,assignKey=String(cardId),excluded=[...(match.used||[]),E.songKey(current.song)];
-    delete match.assign[assignKey];saveMatch();E.destroyYouTube();playing=false;match.phase='loading';saveMatch();screen='loading';render();
+    const {cardId,year}=current,excluded=[...(match.used||[])];
+    const failedKey=E.songUseKey?.(current.song)||E.songKey(current.song);if(!excluded.includes(failedKey))excluded.push(failedKey);
+    E.destroyYouTube();playing=false;match.phase='loading';saveMatch();screen='loading';render();
     let lastErr=null;
-    for(let attempt=0;attempt<3;attempt++){
+    for(let attempt=0;attempt<4;attempt++){
+      let song=null;
       try{
-        const song=await E.chooseSong(year,MODE,excluded),k=E.songKey(song);if(!excluded.includes(k))excluded.push(k);
+        song=await E.chooseSong(year,MODE,excluded);
         const resolved=await E.resolveSong(song,E.getProvider());
         if(seq!==prepareSeq)return;
-        match.assign[assignKey]=song;current={cardId,year,song,resolved,provider:E.getProvider(),mode:MODE};
+        current={cardId,year,song,resolved,provider:E.getProvider(),mode:MODE};
         match.current=current;match.phase='ready';saveMatch();screen='ready';render();toast('A replacement track is ready.');return;
-      }catch(err){lastErr=err}
+      }catch(err){lastErr=err;if(song){const k=E.songUseKey?.(song)||E.songKey(song);if(!excluded.includes(k))excluded.push(k)}}
     }
     if(seq!==prepareSeq)return;
     toast(errorText(lastErr)||'No alternative song could be prepared.');
-    if(cfg.playMode==='physical'){match.phase='scanner';saveMatch();screen='scanner';render()}else nextRound();
+    if(cfg.playMode==='physical'){match.phase='scanner';match.current=null;saveMatch();screen='scanner';render()}else nextRound();
   }
 
   async function togglePlay(){if(!current)return;if(current.provider==='youtube'){const p=E.youtubePlayer();try{const state=p?.getPlayerState?.();if(state===1){E.pauseYouTube();playing=false}else{E.resumeYouTube();playing=true}}catch{}}else{if(playing){await E.pauseSpotify();playing=false}else{await E.playSpotify(current.resolved.uri);playing=true}}}
@@ -560,6 +567,14 @@
     root.querySelectorAll('[data-slot]').forEach(x=>{const on=Number(x.dataset.slot)===slot;x.classList.toggle('on',on);x.setAttribute('aria-pressed',on?'true':'false')});
     const lock=root.querySelector('[data-action="lock-placement"]');if(lock)lock.disabled=false;
   }
+  function recordSongUsed(){if(!current?.song||!match)return;const key=E.songUseKey?.(current.song)||E.songKey(current.song);if(!match.used.includes(key)){match.used.push(key);saveMatch()}}
+  function logOutcome(outcome,extra={}){if(!match)return;match.history=Array.isArray(match.history)?match.history:[];match.history.push({round:match.round,team:match.turn,teamName:activeTeam().name,cardId:current?.cardId||null,year:current?.year||null,songKey:current?.song?(E.songUseKey?.(current.song)||E.songKey(current.song)):null,outcome,...extra});saveMatch()}
+  function newCardForRepeat(){
+    if(!match||!current)return;
+    recordSongUsed();logOutcome('repeat-replaced');
+    stopPlayback();E.destroyYouTube();playing=false;playNeedsTap=false;
+    nextRound();
+  }
   function revealPhysical(){if(!current)return;recordSongUsed();stopPlayback();placementResult=null;match.placementResult=null;match.phase='reveal';syncCurrent();screen='reveal';render()}
   function lockPlacement(){
     if(pendingSlot===null||!current||cfg.playMode!=='virtual'||!['playing','guess'].includes(screen))return;
@@ -568,11 +583,16 @@
     const left=slot>0?years[slot-1]:null,right=slot<years.length?years[slot]:null;
     const correct=(left===null||left<=current.year)&&(right===null||current.year<=right);
     placementResult={correct,left,right,slot};recordSongUsed();stopPlayback();
-    if(correct){years.splice(slot,0,current.year);team.timeline=years;team.score++}
+    if(correct){years.splice(slot,0,current.year);team.timeline=years;team.score++;team.correct=(team.correct||0)+1}else team.wrong=(team.wrong||0)+1;
+    logOutcome(correct?'correct':'wrong',{slot,left,right});
     pendingSlot=null;match.pendingSlot=null;match.placementResult=placementResult;match.phase='reveal';syncCurrent();screen='reveal';render();resetScroll();
   }
-  function recordSongUsed(){if(!current?.song)return;const key=E.songKey(current.song);if(!match.used.includes(key))match.used.push(key)}
-  function finishPhysical(keep){if(screen!=='reveal'||!match)return;if(keep)activeTeam().score++;advanceTurn()}
+  function finishPhysical(correct){
+    if(screen!=='reveal'||!match)return;
+    const team=activeTeam();
+    if(correct){team.score++;team.correct=(team.correct||0)+1}else team.wrong=(team.wrong||0)+1;
+    logOutcome(correct?'correct':'wrong');advanceTurn();
+  }
   function finishVirtualTurn(){if(screen!=='reveal'||!match)return;advanceTurn()}
   function advanceTurn(){if(!match)return;match.turn=(match.turn+1)%match.teams.length;match.round++;saveMatch();nextRound()}
   function endGame(reason){if(!match)return;cancelCountdown();cancelYoutubeListening();prepareSeq++;stopScanner();stopPlayback();E.destroyYouTube();match.endReason=reason;match.phase='gameover';match.current=current;saveMatch();screen='gameover';render();resetScroll()}
