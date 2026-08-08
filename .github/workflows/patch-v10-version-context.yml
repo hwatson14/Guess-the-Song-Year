@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+      - run: pip install requests beautifulsoup4
       - name: Make version detection annotation-aware
         run: |
           python - <<'PY'
@@ -25,7 +26,6 @@ jobs:
           if old not in s:
               raise SystemExit('alternate-title function patch point not found')
           s=s.replace(old,new,1)
-          # base_title already strips annotated brackets/suffixes. Also strip a strong bare trailing version label.
           old2="""    s = re.sub(r'\\s+(?:feat\\.?|ft\\.?|featuring|with)\\s+.+$', '', s, flags=re.I)\n    return clean(s)\n"""
           new2="""    s = re.sub(r'\\s+(?:feat\\.?|ft\\.?|featuring|with)\\s+.+$', '', s, flags=re.I)\n    s = STRONG_TRAILING_VERSION.sub(' ', s) if 'STRONG_TRAILING_VERSION' in globals() else s\n    return clean(s)\n"""
           if old2 not in s:
