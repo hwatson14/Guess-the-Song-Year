@@ -16,6 +16,7 @@ jobs:
       - name: Validate JavaScript
         run: |
           node --check engine.js
+          node --check engine-v7.js
           node --check app.js
       - name: Validate prebuilt catalogue
         run: |
@@ -26,11 +27,14 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           html=Path('index.html').read_text()
-          assert 'engine.js' in html and 'app.js' in html and 'app.css' in html
+          for asset in ['engine.js','engine-v7.js','app.js','app.css']:
+              assert asset in html, asset
           js=Path('app.js').read_text()
+          guard=Path('engine-v7.js').read_text()
           for token in ["const MODE='greatest'",'Play style','Teams','Victory target','physical','virtual','lock-placement','popstate','end-game']:
               assert token in js, token
           for forbidden in ['data-deck=','data-policy=','data-round-deck=']:
               assert forbidden not in js, forbidden
+          assert "Only Greatest Hits is enabled" in guard
           print('one-mode app contract validated')
           PY
