@@ -1,0 +1,46 @@
+name: Test playlist runtime patch
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/test-playlist-runtime.yml
+      - scripts/build_modes.py
+      - app.js
+      - engine-v7.js
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install requests
+      - name: Generate playlist runtime against current app
+        run: |
+          python - <<'PY'
+          import sys
+          sys.path.insert(0,'scripts')
+          import build_modes as b
+          b.write_schema()
+          b.write_engine_guard()
+          b.patch_app()
+          b.write_engine_test()
+          b.patch_versions_and_readme()
+          PY
+      - name: Check generated runtime
+        run: |
+          node --check engine.js
+          node --check engine-v7.js
+          node --check app.js
+          node scripts/test_engine_v7.mjs
+          grep -q 'data-mode=' app.js
+          grep -q "mode:'greatest'" app.js
+          ! grep -q "const MODE='greatest'" app.js
+          grep -q 'Sing Along' engine-v7.js
+          grep -q 'Australian' engine-v7.js
+          grep -q 'Unexpected Years' engine-v7.js
+          grep -q 'Party Anthems' engine-v7.js
+          grep -q 'Rock Classics' engine-v7.js
