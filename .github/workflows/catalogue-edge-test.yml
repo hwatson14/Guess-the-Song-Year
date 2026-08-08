@@ -24,6 +24,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install requests beautifulsoup4
+      # This is the fast preflight for the current v10 builder before the 73-year build.
       - name: Verify sparse years, canonical versions and chart-year traps
         run: |
           python - <<'PY'
@@ -54,7 +55,6 @@ jobs:
               assert len(keys)==len(set(keys)),(year,keys)
 
           def titles(year): return {b.norm(s['title']) for s in pools[year]}
-          # Later chart presence cannot rewrite the original recording's year.
           assert 'blinding lights' not in titles(2021)
           assert 'levitating' not in titles(2021)
           assert 'save your tears' not in titles(2021)
@@ -62,7 +62,6 @@ jobs:
           assert 'shivers' not in titles(2022)
           assert 'bad habits' not in titles(2022)
 
-          # The identity layer must collapse common alternate-version shapes.
           assert b.underlying_key('Example - 2011 Remaster','Artist')==b.underlying_key('Example','Artist')
           assert b.underlying_key('Example (Radio Edit)','Artist feat. Guest')==b.underlying_key('Example','Artist')
           assert b.underlying_key('Example (feat. Guest)','Artist and Guest')==b.underlying_key('Example','Artist')
