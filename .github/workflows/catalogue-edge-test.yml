@@ -17,7 +17,7 @@ concurrency:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
@@ -33,18 +33,32 @@ jobs:
           spec=importlib.util.spec_from_file_location('b',path)
           b=importlib.util.module_from_spec(spec);spec.loader.exec_module(b)
           playback=b.bimmuda_lookup()
-          years=list(range(1950,1961))+[2021,2022]
+          years=list(range(1950,1961))+[2019,2020,2021,2022]
+          pools={}
           for year in years:
               rows=b.candidate_chart_rows(year)
+              if year==1959:
+                  assert any(b.norm(r['title'])=='mack the knife' for r in rows if r['chartYear']==1959), '1959 must use Hot 100 pop chart'
               pool=b.verified_pool(year,rows,playback)
+              pools[year]=pool
               print('EDGE',year,'chart candidates',len(rows),'verified distinct',len(pool))
               keys=[]
               for s in pool:
                   print(' ',s['title'],'—',s['artist'])
                   assert int(s['year'])==year
-                  assert s['yearEvidence']=='MusicBrainz first-release-date'
+                  assert s['yearEvidence']=='MusicBrainz release-group earliest first-release-date'
                   assert not re.search(r'\b(pt\.?\s*\d+|mixed|remix|karaoke|backing track)\b',s['title'],re.I),s
                   keys.append(b.song_key(s['title'],s['artist']))
               assert len(pool)>=8,(year,len(pool))
               assert len(keys)==len(set(keys)),(year,keys)
+
+          # Regression checks for songs whose chart peak/year-end presence is later than release.
+          def titles(year): return {b.norm(s['title']) for s in pools[year]}
+          assert 'blinding lights' not in titles(2021)
+          assert 'levitating' not in titles(2021)
+          assert 'mood' not in titles(2021)
+          assert 'save your tears' not in titles(2021)
+          assert 'heat waves' not in titles(2022)
+          assert 'shivers' not in titles(2022)
+          assert 'bad habits' not in titles(2022)
           PY
