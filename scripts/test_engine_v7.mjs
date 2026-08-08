@@ -9,10 +9,13 @@ const norm=v=>String(v??'').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/
 const songKey=s=>`${norm(s.title)}|${norm(s.artist)}`;
 
 const songs=[
-  {title:'Alpha',artist:'Artist A',year:2000,spotifyId:'sp-a'},
-  {title:'Alpha',artist:'Artist A',year:2000,spotifyId:'sp-a-remaster'},
-  {title:'Beta',artist:'Artist B',year:2000,spotifyId:'sp-b'},
-  {title:'Gamma',artist:'Artist C',year:2000,youtubeId:'yt-c'},
+  {title:'Alpha',artist:'Artist A',year:2000,spotifyId:'sp-a',canonicalKey:'alpha|artist a'},
+  {title:'Alpha - 2011 Remaster',artist:'Artist A',year:2000,spotifyId:'sp-a-remaster'},
+  {title:'Alpha (Radio Edit)',artist:'Artist A featuring Guest',year:2000,spotifyId:'sp-a-radio'},
+  {title:'Beta',artist:'Artist B',year:2000,spotifyId:'sp-b',canonicalKey:'beta|artist b'},
+  {title:'Gamma',artist:'Artist C',year:2000,youtubeId:'yt-c',canonicalKey:'gamma|artist c'},
+  {title:'Delta (feat. Guest)',artist:'Artist D',year:2000,canonicalKey:'delta|artist d'},
+  {title:'Delta',artist:'Artist D and Guest',year:2000},
 ];
 
 globalThis.window={GSYEngine:{
@@ -25,20 +28,24 @@ globalThis.window={GSYEngine:{
 await import(`${pathToFileURL(path.resolve('engine-v7.js')).href}?test=${Date.now()}`);
 const E=globalThis.window.GSYEngine;
 
-if(E.songUseKey(songs[0])!==songKey(songs[0]))throw new Error('songUseKey must use canonical title + artist identity');
+const alphaKey=E.songUseKey(songs[0]);
+if(alphaKey!=='alpha|artist a')throw new Error(`unexpected Alpha underlying key: ${alphaKey}`);
+if(E.songUseKey(songs[1])!==alphaKey)throw new Error('remaster must collapse to original song identity');
+if(E.songUseKey(songs[2])!==alphaKey)throw new Error('radio edit / featured version must collapse to original song identity');
+if(E.songUseKey(songs[5])!==E.songUseKey(songs[6]))throw new Error('featured-artist title/credit variants must collapse');
 
 for(let i=0;i<40;i++){
-  const picked=await E.chooseSong(2000,'greatest',[songKey(songs[0])]);
-  if(songKey(picked)===songKey(songs[0]))throw new Error('used canonical song was selected again');
+  const picked=await E.chooseSong(2000,'greatest',[alphaKey]);
+  if(E.songUseKey(picked)===alphaKey)throw new Error('used underlying song was selected again through an alternate version');
 }
 
-const allUsed=[songKey(songs[0]),songKey(songs[2]),songKey(songs[3])];
+const allUsed=[alphaKey,E.songUseKey(songs[3]),E.songUseKey(songs[4]),E.songUseKey(songs[5])];
 let exhausted=false;
 try{await E.chooseSong(2000,'greatest',allUsed)}catch(err){exhausted=err?.code==='NO_UNUSED_SONG'}
-if(!exhausted)throw new Error('depleted year must throw NO_UNUSED_SONG rather than recycle a song');
+if(!exhausted)throw new Error('depleted year must throw NO_UNUSED_SONG rather than recycle an alternate version');
 
 let disabled=false;
 try{await E.chooseSong(2000,'unexpected',[])}catch(err){disabled=err?.code==='MODE_DISABLED'}
 if(!disabled)throw new Error('inactive modes must remain disabled');
 
-console.log('engine-v7 no-repeat regression tests passed');
+console.log('engine-v7 underlying-song / alternate-version regression tests passed');
