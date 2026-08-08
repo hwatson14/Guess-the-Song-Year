@@ -2,30 +2,38 @@
 
 Private music timeline game using the existing 308-card QR deck or a fully virtual deck.
 
+## v7 scope
+
+The playable product is intentionally narrow while the core loop is stabilised:
+
+- One active music mode: **Greatest Hits**
+- Two play styles: **Real cards** and **Virtual**
+- 1–6 teams
+- First to 10 cards or Unlimited
+- Spotify Premium playback or YouTube fallback
+- Browser/device Back is captured as in-app navigation instead of immediately leaving the game
+- Match phase, current card/song and reveal state are persisted so Resume restores the current turn
+
+Additional catalogues and custom playlists are deferred until this core mode is reliable.
+
 ## Architecture
 
 - `index.html` — minimal app shell
-- `app.css` — one consolidated visual system
-- `engine.js` — card map, static catalogue selection and resilient Spotify/YouTube playback
+- `app.css` — consolidated visual system
+- `engine.js` — card map plus Spotify/YouTube integrations
+- `engine-v7.js` — v7 runtime guard: exposes Greatest Hits only and filters obvious duplicate/variant catalogue records
 - `app.js` — physical/virtual game state and UI
-- `data/catalogue.json` — generated static song catalogue
-- `scripts/build_catalogue.py` — catalogue builder
+- `data/catalogue.json` — prebuilt song catalogue
+- `data/catalogue.schema.json` — static catalogue contract
+- `scripts/validate_catalogue.py` — validates all 308 cards have a covered Greatest Hits year and enforces the active app contract
+- `scripts/build_catalogue.py` — legacy catalogue builder; catalogue generation is not part of runtime gameplay
 
-## Game setup
+## Core invariant
 
-Four game options live on one setup screen:
+For every played card, the selected song must come from the prebuilt Greatest Hits bucket for that card year. Runtime mode fallback is not permitted in v7.
 
-1. Real cards or Virtual
-2. Fixed deck or choose a deck before every song
-3. 1–6 teams
-4. First to 10 cards or Unlimited
+The existing catalogue still needs further human curation for canonical release-year quality and recognisability. The v7 runtime filter removes obvious remix/live/backing-track duplicates, but this is not a substitute for a fully curated canonical catalogue.
 
-Music provider setup is separate from the game rules and opens as a lightweight sheet.
+## Deployment
 
-## Catalogue
-
-The static Greatest Hits catalogue is complete for every supported card year from 1950 through 2022 and is ready for gameplay testing. #1 US and #1 Australia also have complete year coverage; the other themed decks can continue to be refined independently.
-
-Runtime APIs now resolve playback rather than decide which song belongs in a deck. Modes are Greatest Hits, Australian, Unexpected Years, #1 US and #1 Australia.
-
-The v6 app intentionally has one UI shell only. Legacy dashboard, v4 and experimental UX layers have been removed.
+GitHub Pages deployment now runs JavaScript and catalogue validation before publishing. A failed validation step prevents that deployment run from continuing.
