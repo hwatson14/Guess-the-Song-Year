@@ -1,0 +1,77 @@
+name: Diagnose strict release evidence
+
+on:
+  push:
+    branches: [feature/verified-playlists-v11]
+    paths: [.github/workflows/diagnose-release-evidence.yml]
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install requests beautifulsoup4
+      - name: Inspect strict release-group and recording-linked evidence
+        run: |
+          python - <<'PY'
+          import re,sys,time
+          sys.path.insert(0,'scripts')
+          import build_catalogue_v10 as b
+
+          RG='https://musicbrainz.org/ws/2/release-group/'
+          REC='https://musicbrainz.org/ws/2/recording/'
+          tests=[
+            ('Stand by Me','Ben E. King'),
+            ('Jailhouse Rock','Elvis Presley'),
+            ('The Twist','Chubby Checker'),
+            ("I'm a Believer",'The Monkees'),
+            ('Shout','The Isley Brothers'),
+            ('Uptown Funk','Mark Ronson'),
+          ]
+
+          def credit(e):
+              return ''.join(x if isinstance(x,str) else x.get('name') or (x.get('artist') or {}).get('name') or '' for x in e.get('artist-credit',[])).strip()
+
+          def exact_title(a,bv):return b.base_title(a)==b.base_title(bv)
+          def artist_ok(a,bv):return max(b.sim(a,bv),b.sim(b.primary_artist(a),b.primary_artist(bv)))>=0.60
+
+          for title,artist in tests:
+              print('\n###',title,'/',artist,flush=True)
+              q=f'releasegroup:"{b.lucene(b.base_title(title))}" AND artistname:"{b.lucene(b.primary_artist(artist))}"'
+              r=b.get(RG,params={'fmt':'json','limit':100,'query':q},headers={'Accept':'application/json','User-Agent':b.UA}).json()
+              strict=[]
+              for e in r.get('release-groups',[]):
+                  et=b.clean(e.get('title'));ea=credit(e);date=b.clean(e.get('first-release-date'))
+                  if exact_title(et,title) and artist_ok(ea,artist) and re.match(r'^\d{4}',date) and not b.is_explicit_alternate_title(et):
+                      strict.append((date,e.get('primary-type'),e.get('id'),et,ea,e.get('score')))
+              print('STRICT_RG',sorted(strict)[:12],flush=True)
+              time.sleep(1.1)
+
+              q=f'recording:"{b.lucene(b.base_title(title))}" AND artistname:"{b.lucene(b.primary_artist(artist))}"'
+              recs=b.get(REC,params={'fmt':'json','limit':100,'query':q},headers={'Accept':'application/json','User-Agent':b.UA}).json().get('recordings',[])
+              plausible=[]
+              for rec in recs:
+                  rt=b.clean(rec.get('title'));ra=credit(rec)
+                  if not exact_title(rt,title) or not artist_ok(ra,artist) or b.is_explicit_alternate_title(rt):continue
+                  plausible.append((float(rec.get('score') or 0),rec.get('id'),rt,ra,b.clean(rec.get('first-release-date'))))
+              plausible=sorted(plausible,reverse=True)[:12]
+              print('STRICT_RECORDINGS',plausible,flush=True)
+              time.sleep(1.1)
+
+              linked=[]
+              for _,rid,rt,ra,fr in plausible[:6]:
+                  d=b.get(f'{REC}{rid}',params={'fmt':'json','inc':'releases+release-groups'},headers={'Accept':'application/json','User-Agent':b.UA}).json()
+                  dates=[]
+                  for rg in d.get('release-groups',[]) or []:
+                      dt=b.clean(rg.get('first-release-date'))
+                      if re.match(r'^\d{4}',dt):dates.append(('rg',dt,rg.get('title'),rg.get('primary-type')))
+                  for rel in d.get('releases',[]) or []:
+                      dt=b.clean(rel.get('date'))
+                      if re.match(r'^\d{4}',dt):dates.append(('release',dt,rel.get('title'),(rel.get('release-group') or {}).get('primary-type')))
+                  linked.append((rid,fr,sorted(dates)[:8]))
+                  time.sleep(1.1)
+              print('LINKED',linked,flush=True)
+          PY
