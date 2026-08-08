@@ -16,42 +16,8 @@ jobs:
       - uses: actions/checkout@v6
       - name: Patch YouTube listening controls
         run: |
-          python - <<'PY'
-          from pathlib import Path
-          import re
-
-          p=Path('app.js')
-          s=p.read_text()
-          old="""  function youtubeListeningScreen(){
-    return `${topLine(false,false)}${matchHeader()}${scoreStrip()}<div class=\"youtube-listening\"><div class=\"kicker\">NOW PLAYING · PHONE DOWN</div><h1>Listen, then lift the phone</h1><p>Listen for as long as you want. Lift the phone whenever you are ready to guess.</p><div class=\"youtube-player\"><div id=\"youtubePlayer\"></div></div><button class=\"btn primary yt-start-fallback hidden\" id=\"ytStartFallback\" data-action=\"yt-start\">Tap to start YouTube</button><small class=\"provider-warning\">If your browser blocks autoplay, tap the button above and put the phone face-down again.</small></div>`;
-  }"""
-          new="""  function youtubeListeningScreen(){
-    return `${topLine(false,false)}${matchHeader()}${scoreStrip()}<div class=\"youtube-listening\"><div class=\"kicker\">NOW PLAYING · PHONE DOWN</div><h1>Listen, then guess</h1><p>Listen for as long as you want. Lift the phone or tap Guess now whenever you are ready.</p><div class=\"youtube-guess-actions\"><button class=\"btn primary\" data-action=\"guess-now\">Guess now</button></div><div class=\"youtube-player\"><div id=\"youtubePlayer\"></div></div><button class=\"btn primary yt-start-fallback hidden\" id=\"ytStartFallback\" data-action=\"yt-start\">Tap to start YouTube</button><small class=\"provider-warning\">If your browser blocks autoplay, tap the button above and put the phone face-down again.</small></div>`;
-  }"""
-          if old not in s:
-              raise SystemExit('youtubeListeningScreen block not found')
-          s=s.replace(old,new,1)
-          old_bind="      if(a==='yt-start')b.onclick=startYouTubeFromTap;"
-          new_bind="      if(a==='yt-start')b.onclick=startYouTubeFromTap;\n      if(a==='guess-now')b.onclick=finishYouTubeListening;"
-          if old_bind not in s:
-              raise SystemExit('yt-start binding not found')
-          s=s.replace(old_bind,new_bind,1)
-          p.write_text(s)
-
-          p=Path('app.css')
-          c=p.read_text()
-          if '.youtube-guess-actions{' not in c:
-              c += "\n/* v7.2.3 explicit YouTube guess control */\n.youtube-guess-actions{margin:18px auto 14px;width:min(100%,520px)}.youtube-guess-actions .btn{width:100%;min-height:62px;font-size:18px}\n"
-          p.write_text(c)
-
-          p=Path('index.html')
-          h=p.read_text()
-          h=re.sub(r'app\.css\?v=[^\"\']+','app.css?v=7.2.3',h)
-          h=re.sub(r'engine\.js\?v=[^\"\']+','engine.js?v=7.2.3',h)
-          h=re.sub(r'engine-v7\.js\?v=[^\"\']+','engine-v7.js?v=7.2.3',h)
-          h=re.sub(r'app\.js\?v=[^\"\']+','app.js?v=7.2.3',h)
-          p.write_text(h)
-          PY
+          echo 'ZnJvbSBwYXRobGliIGltcG9ydCBQYXRoCmltcG9ydCByZQoKcD1QYXRoKCJhcHAuanMiKQpzPXAucmVhZF90ZXh0KCkKb2xkPSIiIiAgZnVuY3Rpb24geW91dHViZUxpc3RlbmluZ1NjcmVlbigpewogICAgcmV0dXJuIGAke3RvcExpbmUoZmFsc2UsZmFsc2UpfSR7bWF0Y2hIZWFkZXIoKX0ke3Njb3JlU3RyaXAoKX08ZGl2IGNsYXNzPSJ5b3V0dWJlLWxpc3RlbmluZyI+PGRpdiBjbGFzcz0ia2lja2VyIj5OT1cgUExBWUlORyDCtyBQSE9ORSBET1dOPC9kaXY+PGgxPkxpc3RlbiwgdGhlbiBsaWZ0IHRoZSBwaG9uZTwvaDE+PHA+TGlzdGVuIGZvciBhcyBsb25nIGFzIHlvdSB3YW50LiBMaWZ0IHRoZSBwaG9uZSB3aGVuZXZlciB5b3UgYXJlIHJlYWR5IHRvIGd1ZXNzLjwvcD48ZGl2IGNsYXNzPSJ5b3V0dWJlLXBsYXllciI+PGRpdiBpZD0ieW91dHViZVBsYXllciI+PC9kaXY+PC9kaXY+PGJ1dHRvbiBjbGFzcz0iYnRuIHByaW1hcnkgeXQtc3RhcnQtZmFsbGJhY2sgaGlkZGVuIiBpZD0ieXRTdGFydEZhbGxiYWNrIiBkYXRhLWFjdGlvbj0ieXQtc3RhcnQiPlRhcCB0byBzdGFydCBZb3VUdWJlPC9idXR0b24+PHNtYWxsIGNsYXNzPSJwcm92aWRlci13YXJuaW5nIj5JZiB5b3VyIGJyb3dzZXIgYmxvY2tzIGF1dG9wbGF5LCB0YXAgdGhlIGJ1dHRvbiBhYm92ZSBhbmQgcHV0IHRoZSBwaG9uZSBmYWNlLWRvd24gYWdhaW4uPC9zbWFsbD48L2Rpdj5gOwogIH0iIiIKbmV3PSIiIiAgZnVuY3Rpb24geW91dHViZUxpc3RlbmluZ1NjcmVlbigpewogICAgcmV0dXJuIGAke3RvcExpbmUoZmFsc2UsZmFsc2UpfSR7bWF0Y2hIZWFkZXIoKX0ke3Njb3JlU3RyaXAoKX08ZGl2IGNsYXNzPSJ5b3V0dWJlLWxpc3RlbmluZyI+PGRpdiBjbGFzcz0ia2lja2VyIj5OT1cgUExBWUlORyDCtyBQSE9ORSBET1dOPC9kaXY+PGgxPkxpc3RlbiwgdGhlbiBndWVzczwvaDE+PHA+TGlzdGVuIGZvciBhcyBsb25nIGFzIHlvdSB3YW50LiBMaWZ0IHRoZSBwaG9uZSBvciB0YXAgR3Vlc3Mgbm93IHdoZW5ldmVyIHlvdSBhcmUgcmVhZHkuPC9wPjxkaXYgY2xhc3M9InlvdXR1YmUtZ3Vlc3MtYWN0aW9ucyI+PGJ1dHRvbiBjbGFzcz0iYnRuIHByaW1hcnkiIGRhdGEtYWN0aW9uPSJndWVzcy1ub3ciPkd1ZXNzIG5vdzwvYnV0dG9uPjwvZGl2PjxkaXYgY2xhc3M9InlvdXR1YmUtcGxheWVyIj48ZGl2IGlkPSJ5b3V0dWJlUGxheWVyIj48L2Rpdj48L2Rpdj48YnV0dG9uIGNsYXNzPSJidG4gcHJpbWFyeSB5dC1zdGFydC1mYWxsYmFjayBoaWRkZW4iIGlkPSJ5dFN0YXJ0RmFsbGJhY2siIGRhdGEtYWN0aW9uPSJ5dC1zdGFydCI+VGFwIHRvIHN0YXJ0IFlvdVR1YmU8L2J1dHRvbj48c21hbGwgY2xhc3M9InByb3ZpZGVyLXdhcm5pbmciPklmIHlvdXIgYnJvd3NlciBibG9ja3MgYXV0b3BsYXksIHRhcCB0aGUgYnV0dG9uIGFib3ZlIGFuZCBwdXQgdGhlIHBob25lIGZhY2UtZG93biBhZ2Fpbi48L3NtYWxsPjwvZGl2PmA7CiAgfSIiIgppZiBvbGQgbm90IGluIHM6CiAgICByYWlzZSBTeXN0ZW1FeGl0KCJ5b3V0dWJlTGlzdGVuaW5nU2NyZWVuIGJsb2NrIG5vdCBmb3VuZCIpCnM9cy5yZXBsYWNlKG9sZCxuZXcsMSkKb2xkX2JpbmQ9IiAgICAgIGlmKGE9PT0neXQtc3RhcnQnKWIub25jbGljaz1zdGFydFlvdVR1YmVGcm9tVGFwOyIKbmV3X2JpbmQ9b2xkX2JpbmQrIlxuICAgICAgaWYoYT09PSdndWVzcy1ub3cnKWIub25jbGljaz1maW5pc2hZb3VUdWJlTGlzdGVuaW5nOyIKaWYgb2xkX2JpbmQgbm90IGluIHM6CiAgICByYWlzZSBTeXN0ZW1FeGl0KCJ5dC1zdGFydCBiaW5kaW5nIG5vdCBmb3VuZCIpCnM9cy5yZXBsYWNlKG9sZF9iaW5kLG5ld19iaW5kLDEpCnAud3JpdGVfdGV4dChzKQoKcD1QYXRoKCJhcHAuY3NzIikKYz1wLnJlYWRfdGV4dCgpCmlmICIueW91dHViZS1ndWVzcy1hY3Rpb25zeyIgbm90IGluIGM6CiAgICBjICs9ICJcbi8qIHY3LjIuMyBleHBsaWNpdCBZb3VUdWJlIGd1ZXNzIGNvbnRyb2wgKi9cbi55b3V0dWJlLWd1ZXNzLWFjdGlvbnN7bWFyZ2luOjE4cHggYXV0byAxNHB4O3dpZHRoOm1pbigxMDAlLDUyMHB4KX0ueW91dHViZS1ndWVzcy1hY3Rpb25zIC5idG57d2lkdGg6MTAwJTttaW4taGVpZ2h0OjYycHg7Zm9udC1zaXplOjE4cHh9XG4iCnAud3JpdGVfdGV4dChjKQoKcD1QYXRoKCJpbmRleC5odG1sIikKaD1wLnJlYWRfdGV4dCgpCmg9cmUuc3ViKHInYXBwXC5jc3NcP3Y9W14iXCddKycsJ2FwcC5jc3M/dj03LjIuMycsaCkKaD1yZS5zdWIocidlbmdpbmVcLmpzXD92PVteIlwnXSsnLCdlbmdpbmUuanM/dj03LjIuMycsaCkKaD1yZS5zdWIocidlbmdpbmUtdjdcLmpzXD92PVteIlwnXSsnLCdlbmdpbmUtdjcuanM/dj03LjIuMycsaCkKaD1yZS5zdWIocidhcHBcLmpzXD92PVteIlwnXSsnLCdhcHAuanM/dj03LjIuMycsaCkKcC53cml0ZV90ZXh0KGgpCg==' | base64 -d > /tmp/guess_now_patch.py
+          python /tmp/guess_now_patch.py
           node --check app.js
           grep -q 'data-action="guess-now"' app.js
           grep -q "guess-now')b.onclick=finishYouTubeListening" app.js
