@@ -19,10 +19,10 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install requests beautifulsoup4
-      - name: Verify edge-year pools
+      - name: Verify canonical edge-year pools
         run: |
           python - <<'PY'
-          import importlib.util
+          import importlib.util,re
           from pathlib import Path
           path=Path('scripts/build_catalogue_v8.py')
           spec=importlib.util.spec_from_file_location('b',path)
@@ -31,7 +31,15 @@ jobs:
           for year in [1950,1951,1958,2021,2022]:
               rows=b.billboard_year_rows(year)
               pool=b.verified_pool(year,rows,playback)
-              print('EDGE',year,'chart candidates',len(rows),'verified',len(pool))
-              for s in pool[:12]: print(' ',s['title'],'—',s['artist'])
+              print('EDGE',year,'chart candidates',len(rows),'verified distinct',len(pool))
+              keys=[]
+              for s in pool:
+                  print(' ',s['title'],'—',s['artist'])
+                  assert s['title']==next(r['title'] for r in rows if b.song_key(r['title'],r['artist'])==b.song_key(s['title'],s['artist']))
+                  assert int(s['year'])==year
+                  assert s['yearEvidence']=='MusicBrainz first-release-date'
+                  assert not re.search(r'\b(pt\.?\s*\d+|mixed|remix|karaoke|backing track)\b',s['title'],re.I),s
+                  keys.append(b.song_key(s['title'],s['artist']))
               assert len(pool)>=8
+              assert len(keys)==len(set(keys))
           PY
