@@ -11,19 +11,25 @@ SCHEMA = ROOT / 'data' / 'catalogue.schema.json'
 ENGINE = ROOT / 'engine.js'
 APP = ROOT / 'app.js'
 
+# Only treat these as version markers inside metadata-like parentheses/brackets/suffixes.
+# This intentionally does not reject genuine song titles such as "Live and Let Die".
 VERSION_ANNOTATION = re.compile(
-    r'\b(?:karaoke|tribute|demo|live|remix|re[- ]?mix|mix|acoustic|a cappella|acapella|'
-    r'backing(?: track)?|instrumental|bootleg|mashup|preview|playback|deluxe|'
+    r'\b(?:karaoke|tribute|demo|live|remix|re[- ]?mix|mix|edit|version|acoustic|unplugged|'
+    r'a cappella|acapella|backing(?: track)?|instrumental|bootleg|mashup|refix|rework|'
+    r'preview|playback|deluxe|bonus|voice note|alternate|alternative|'
     r'remaster(?:ed)?(?:\s*\d{4})?|radio edit|radio version|single edit|single version|'
-    r'album version|extended(?: version| mix)?|club mix|dance mix|original mix|'
-    r'mono|stereo|sped up|slowed|re[- ]?record(?:ed)?|music video|video version|'
-    r'take\s*\d+|special disco version|clean version)\b', re.I,
+    r'album version|extended(?: version| edit| mix)?|club mix|dance mix|original mix|'
+    r'dub(?: version| mix)?|mono|stereo|sped up|slowed|re[- ]?record(?:ed)?|'
+    r'music video|video version|solo vocal|take\s*\d+|pt\.?\s*\d+|part\s*\d+|'
+    r'special disco version|clean version)\b', re.I,
 )
 STRONG_TRAILING_VERSION = re.compile(
     r'\b(?:remix|re[- ]?mix|remaster(?:ed)?(?:\s*\d{4})?|radio edit|radio version|'
-    r'single edit|single version|album version|extended version|club mix|dance mix|'
-    r'original mix|acoustic version|live version|instrumental version|sped up|slowed|'
-    r're[- ]?record(?:ed)?|clean version)\s*$', re.I,
+    r'single edit|single version|album version|extended(?: version| edit| mix)?|club mix|'
+    r'dance mix|original mix|dub(?: version| mix)?|acoustic(?: version)?|unplugged|'
+    r'live version|instrumental(?: version)?|a cappella|acapella|sped up|slowed|'
+    r're[- ]?record(?:ed)?|refix|rework|voice note|alternate version|alternative version|'
+    r'clean version)\s*$', re.I,
 )
 
 
@@ -67,8 +73,8 @@ def main():
 
     if set(data.get('modes', {})) != {'greatest'}:
         fail(f"only Greatest Hits is enabled right now; found modes {sorted(data.get('modes', {}))}")
-    if int(data.get('version') or 0) < 10:
-        fail(f"canonical catalogue v10+ required, found {data.get('version')}")
+    if int(data.get('version') or 0) != 10:
+        fail(f"canonical one-mode catalogue v10 required, found {data.get('version')}")
 
     greatest = data['modes']['greatest']
     if not isinstance(greatest, dict):
@@ -84,6 +90,8 @@ def main():
 
     global_keys = {}
     global_recordings = {}
+    global_spotify = {}
+    global_youtube = {}
     total = 0
 
     for year in required_years:
@@ -95,8 +103,6 @@ def main():
             fail(f'{year} has only {len(pool)} songs; need at least {minimum}')
 
         local_keys = set()
-        local_spotify = set()
-        local_youtube = set()
         for index, song in enumerate(pool):
             total += 1
             if not isinstance(song, dict):
@@ -104,16 +110,17 @@ def main():
             title = str(song.get('title') or '').strip()
             artist = str(song.get('artist') or '').strip()
             song_year = int(song.get('year') or 0)
+            label = f'{year}[{index}] {title} — {artist}'
             if not title or not artist:
                 fail(f'{year}[{index}] is missing title/artist')
             if song_year != year:
-                fail(f'{year}[{index}] {title!r} declares year {song_year}')
+                fail(f'{label} declares year {song_year}')
             if is_alternate_title(title):
-                fail(f'{year}[{index}] alternate-version title survived: {title!r} / {artist}')
+                fail(f'{label} is an alternate/version title')
 
             canonical = str(song.get('canonicalKey') or '').strip()
             if not canonical:
-                fail(f'{year}[{index}] {title!r} has no canonicalKey')
+                fail(f'{label} has no canonicalKey')
             if canonical in local_keys:
                 fail(f'{year} repeats underlying song {canonical!r}')
             local_keys.add(canonical)
@@ -124,28 +131,42 @@ def main():
 
             evidence = str(song.get('yearEvidence') or '')
             if evidence != 'MusicBrainz recording earliest first-release-date':
-                fail(f'{year}[{index}] {title!r} has noncanonical year evidence: {evidence!r}')
+                fail(f'{label} has noncanonical year evidence: {evidence!r}')
             mb = str(song.get('musicbrainzId') or '').strip()
             if not mb:
-                fail(f'{year}[{index}] {title!r} has no verified recording id')
-            if mb in global_recordings and global_recordings[mb] != canonical:
-                fail(f'MusicBrainz recording {mb} reused by {global_recordings[mb]!r} and {canonical!r}')
+                fail(f'{label} has no verified recording id')
+            prior_mb = global_recordings.get(mb)
+            if prior_mb is not None and prior_mb != canonical:
+                fail(f'MusicBrainz recording {mb} reused by {prior_mb!r} and {canonical!r}')
             global_recordings[mb] = canonical
 
             chart_year = int(song.get('chartYear') or 0)
             if chart_year < year or chart_year > min(2022, year + 2):
-                fail(f'{year}[{index}] invalid chartYear {chart_year}')
+                fail(f'{label} has invalid chartYear {chart_year}')
 
-            sp = str(song.get('spotifyId') or '').strip()
-            yt = str(song.get('youtubeId') or '').strip()
-            if sp:
-                if sp in local_spotify:
-                    fail(f'{year}: Spotify track {sp} is reused')
-                local_spotify.add(sp)
-            if yt:
-                if yt in local_youtube:
-                    fail(f'{year}: YouTube video {yt} is reused')
-                local_youtube.add(yt)
+            for kind, value, registry in (
+                ('Spotify track', str(song.get('spotifyId') or '').strip(), global_spotify),
+                ('YouTube video', str(song.get('youtubeId') or '').strip(), global_youtube),
+            ):
+                if not value:
+                    continue
+                prior_value = registry.get(value)
+                if prior_value is not None and prior_value != canonical:
+                    fail(f'{kind} {value} reused by {prior_value!r} and {canonical!r}')
+                registry[value] = canonical
+
+    # Regression checks for the broader edit/version vocabulary and genuine-title safety.
+    for bad in (
+        'Song (Pop edit)', 'Song (Zwette Edit)', 'Song (LP version)', 'Song (dub version)',
+        'Song (solo vocal)', 'Song (Erol Alkan rework)', 'Song (Benny Royal ReFix)',
+        'Song (acoustic MTV unplugged)', 'Song (alternative version)', 'Song (voice note)',
+        'Song (full version)', 'Song (Deluxe Ultra edit)', 'Song (House mix)', 'Song - 2011 Remaster',
+    ):
+        if not is_alternate_title(bad):
+            fail(f'alternate-version detector missed regression example: {bad}')
+    for genuine in ('Live and Let Die', 'I Want to Live', 'Another Brick in the Wall (Part II)', 'Alone Again (Naturally)'):
+        if is_alternate_title(genuine):
+            fail(f'alternate-version detector falsely rejects genuine title: {genuine}')
 
     app = APP.read_text(encoding='utf-8')
     for forbidden in ('data-deck=', 'data-policy=', 'data-round-deck=', 'data-mode=', 'function modeId()'):
