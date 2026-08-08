@@ -7,10 +7,10 @@
   const greatest=E.MODES?.greatest||{name:'Greatest Hits',short:'Hits',desc:'Big recognisable songs from the same year.'};
   E.MODES={greatest};
 
-  // These words indicate a version only when they occur in version annotations/suffixes.
-  // A blanket /live/ check would incorrectly reject genuine titles such as "Live and Let Die".
-  const versionMarker=/\b(karaoke|tribute|demo|live|remix|re[- ]?mix|mix|acoustic|a cappella|acapella|backing(?: track)?|instrumental|bootleg|mashup|preview|playback|deluxe|remaster(?:ed)?(?:\s*\d{4})?|radio edit|radio version|single edit|single version|album version|extended(?: version| mix)?|club mix|dance mix|original mix|mono|stereo|sped up|slowed|re[- ]?record(?:ed)?|music video|video version|take \d+|special disco version|clean version)\b/i;
-  const strongTrailingVersion=/\b(remix|re[- ]?mix|remaster(?:ed)?(?:\s*\d{4})?|radio edit|radio version|single edit|single version|album version|extended version|club mix|dance mix|original mix|acoustic version|live version|instrumental version|sped up|slowed|re[- ]?record(?:ed)?|clean version)\s*$/i;
+  // Version words matter only in metadata-like annotations/suffixes. Genuine titles such as
+  // "Live and Let Die" and "Another Brick in the Wall (Part II)" remain valid songs.
+  const versionMarker=/\b(karaoke|tribute|demo|live|remix|re[- ]?mix|mix|edit|version|acoustic|unplugged|a cappella|acapella|backing(?: track)?|instrumental|bootleg|mashup|refix|rework|preview|playback|deluxe|bonus|voice note|alternate|alternative|remaster(?:ed)?(?:\s*\d{4})?|radio edit|radio version|single edit|single version|album version|extended(?: version| edit| mix)?|club mix|dance mix|original mix|dub(?: version| mix)?|mono|stereo|sped up|slowed|re[- ]?record(?:ed)?|music video|video version|solo vocal|take \d+|pt\.?\s*\d+|special disco version|clean version)\b/i;
+  const strongTrailingVersion=/\b(remix|re[- ]?mix|remaster(?:ed)?(?:\s*\d{4})?|radio edit|radio version|single edit|single version|album version|extended(?: version| edit| mix)?|club mix|dance mix|original mix|dub(?: version| mix)?|acoustic(?: version)?|unplugged|live version|instrumental(?: version)?|a cappella|acapella|sped up|slowed|re[- ]?record(?:ed)?|refix|rework|voice note|alternate version|alternative version|clean version)\s*$/i;
   const malformedArtist=/[a-zà-ÿ][A-Z]/;
 
   function norm(v){
@@ -41,8 +41,8 @@
   function primaryArtist(v){
     let s=String(v??'').trim();
     s=s.split(/\s+(?:feat\.?|ft\.?|featuring|with)\s+/i)[0];
-    // Billboard can credit a later remix as "Lead Artist and Guest". For repeat identity,
-    // use the lead artist so that remix cannot masquerade as a new song.
+    // A later remix can be billed "Lead Artist and Guest". For repeat identity we use the
+    // lead artist so that the remix cannot masquerade as a new underlying song.
     s=s.split(/\s+(?:and|&)\s+/i)[0];
     return norm(s).replace(/^the\s+/,'');
   }
