@@ -1,0 +1,32 @@
+name: Debug I Want to Hold Your Hand release group
+
+on:
+  push:
+    branches: [feature/verified-playlists-v11]
+    paths: [.github/workflows/debug-iwant-release-group.yml]
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install requests beautifulsoup4
+      - run: |
+          python - <<'PY'
+          import sys
+          sys.path.insert(0,'scripts')
+          import theme_release_groups as t
+          import build_catalogue_v10 as c
+          title='I Want to Hold Your Hand';artist='The Beatles';clean=t.base_title(title)
+          queries=[f'releasegroup:"{c.lucene(clean)}" AND artistname:"{c.lucene(c.primary_artist(artist))}"',f'releasegroup:"{c.lucene(clean)}"']
+          for q in queries:
+              print('\nQUERY',q)
+              rows=t.search_release_groups(q)
+              for e in rows:
+                  et=c.clean(e.get('title'));ea=t.rg_artist(e)
+                  if 'hold your hand' in c.norm(et):
+                      print({'title':et,'artist':ea,'date':e.get('first-release-date'),'primary':e.get('primary-type'),'secondary':e.get('secondary-types'),'score':e.get('score'),'alt':c.is_explicit_alternate_title(et),'base':t.base_title(et),'artistScore':t.artist_score(ea,artist),'id':e.get('id')})
+          PY
