@@ -18,6 +18,39 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install requests beautifulsoup4
+      - name: Validate materialized themes against current canonical rules
+        run: |
+          python - <<'PY'
+          import json,sys
+          from pathlib import Path
+          sys.path.insert(0,'scripts')
+          import build_catalogue_v10 as c
+          p=Path('data/themed_playlists_v11.json')
+          if not p.exists():
+              print('No materialized themed data yet; source/runtime checks still apply.')
+              raise SystemExit(0)
+          d=json.loads(p.read_text())
+          expected={'sing_along','australian','unexpected','party','rock'}
+          assert set(d['modes'])==expected,set(d['modes'])
+          for mode,pools in d['modes'].items():
+              assert len(pools)>=15,(mode,len(pools))
+              assert sum(map(len,pools.values()))>=20,(mode,sum(map(len,pools.values())))
+              song_keys=set()
+              for year,pool in pools.items():
+                  title_keys=set()
+                  for s in pool:
+                      assert int(s['year'])==int(year),(mode,year,s)
+                      assert s['yearEvidence']=='MusicBrainz recording earliest first-release-date',(mode,year,s)
+                      assert not c.is_explicit_alternate_title(s['title']),(mode,year,s)
+                      key=c.underlying_key(s['title'],s['artist'])
+                      assert s['canonicalKey']==key,(mode,year,s)
+                      assert key not in song_keys,(mode,key)
+                      song_keys.add(key)
+                      title=c.base_title(s['title'])
+                      assert title not in title_keys,(mode,year,'same-title duplicate',title)
+                      title_keys.add(title)
+          print('Materialized themed data passes current canonical rules.')
+          PY
       - name: Exercise v11 builder deterministically
         run: |
           python - <<'PY'
