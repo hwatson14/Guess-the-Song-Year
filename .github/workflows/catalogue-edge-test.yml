@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install requests beautifulsoup4
-      # Preflight the exact-per-candidate verifier now used by the full v10 build.
+      # Final v10 preflight: exact year verification plus underlying-song/version identity.
       - name: Verify sparse years, canonical versions and chart-year traps
         run: |
           python - <<'PY'
@@ -65,4 +65,7 @@ jobs:
           assert b.underlying_key('Example - 2011 Remaster','Artist')==b.underlying_key('Example','Artist')
           assert b.underlying_key('Example (Radio Edit)','Artist feat. Guest')==b.underlying_key('Example','Artist')
           assert b.underlying_key('Example (feat. Guest)','Artist and Guest')==b.underlying_key('Example','Artist')
+          assert b.is_explicit_alternate_title('Example (Live)')
+          assert not b.is_explicit_alternate_title('Live and Let Die')
+          assert not b.is_explicit_alternate_title('I Want to Live')
           PY
