@@ -9,8 +9,8 @@
 
   let cfg=load(CFG_KEY,DEFAULT_CFG),match=load(MATCH_KEY,null);
   let screen=match?.active?(match.phase==='gameover'?'gameover':'resume'):'setup',current=match?.current||null,pendingSlot=null,placementResult=match?.placementResult||null;
-  let scanner=null,scanning=false,motionReady=false,faceDown=false,playing=false,playNeedsTap=false,toastTimer=null;
-  let musicModal=false,deviceList=[],backGuardReady=false,prepareSeq=0;
+  let scanner=null,scanning=false,scanBusy=false,motionReady=false,faceDown=false,playing=false,playNeedsTap=false,toastTimer=null;
+  let musicModal=false,deviceList=[],backGuardReady=false,prepareSeq=0,countdownTimer=null,youtubeListenTimer=null,youtubeDownAt=0;
 
   const esc=s=>String(s??'').replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));
   function load(k,f){try{return JSON.parse(localStorage.getItem(k))??f}catch{return f}}
@@ -61,7 +61,7 @@
   }
 
   function render(){
-    const content=screen==='setup'?setupScreen():screen==='resume'?resumeScreen():screen==='scanner'?scannerScreen():screen==='loading'?loadingScreen():screen==='ready'?readyScreen():screen==='playing'?playingScreen():screen==='reveal'?revealScreen():screen==='gameover'?gameOverScreen():setupScreen();
+    const content=screen==='setup'?setupScreen():screen==='resume'?resumeScreen():screen==='scanner'?scannerScreen():screen==='loading'?loadingScreen():screen==='ready'?readyScreen():screen==='countdown'?countdownScreen():screen==='youtube'?youtubeListeningScreen():screen==='playing'?playingScreen():screen==='guess'?guessScreen():screen==='reveal'?revealScreen():screen==='gameover'?gameOverScreen():setupScreen();
     root.innerHTML=`<div class="app">${content}</div>${musicSheet()}`;
     bind();
     if(screen==='scanner')setTimeout(startScanner,20);
@@ -92,7 +92,7 @@
 
   function resumeScreen(){
     const phase=match?.phase||'between';
-    const phaseText=phase==='reveal'?'Answer ready':phase==='ready'||phase==='playing'?'Song ready':phase==='scanner'?'Waiting for a card':'Ready for the next card';
+    const phaseText=phase==='reveal'?'Answer ready':['ready','countdown','youtube','playing','guess'].includes(phase)?'Song in progress':phase==='scanner'?'Waiting for a card':'Ready for the next card';
     return `${topLine(false)}<div class="kicker">GAME IN PROGRESS</div><h1 class="display title">Ready to <span class="mint">continue?</span></h1>
       <section class="hero"><h2>${esc(activeTeam().name)} is up</h2><p>${cfg.playMode==='physical'?'Real cards':'Virtual'} · Greatest Hits · ${cfg.teams} team${cfg.teams===1?'':'s'} · ${victoryLabel()} · ${phaseText}</p><div class="hero-actions"><button class="btn primary" data-action="resume">Resume Game</button><button class="btn ghost" data-action="new-game">New Game</button>${cfg.victory==='unlimited'?'<button class="btn text" data-action="end-game">End Game</button>':''}</div></section>${scoreStrip()}`;
   }
@@ -105,16 +105,29 @@
 
   function readyScreen(){
     const isYt=current?.provider==='youtube';
-    const copy=isYt?'Tap Start music. YouTube needs a real player and may require a tap.':'Flip the phone face-down, or tap Start music.';
-    return `${topLine(true,false)}${matchHeader()}${scoreStrip()}<div class="kicker">✦ ${cfg.playMode==='physical'?'CARD SCANNED':'CARD DEALT'}</div><h1 class="ready-title">Ready to play</h1><div class="flip-art"></div><div class="ready-copy"><h2>${isYt?'Start the music':'Flip your phone'}</h2><p>${copy}</p><div class="locked">▣ Song locked · year hidden</div><div class="ready-actions"><button class="btn primary" data-action="play-current">Start music</button>${!isYt?'<button class="btn ghost" data-action="motion">Enable flip-to-start</button>':''}</div></div>`;
+    const copy=isYt?'Tap Start music, then you get 3 seconds to put the phone face-down before YouTube starts.':'Flip the phone face-down, or tap Start music.';
+    return `${topLine(true,false)}${matchHeader()}${scoreStrip()}<div class="kicker">✦ ${cfg.playMode==='physical'?'CARD SCANNED':'CARD DEALT'}</div><h1 class="ready-title">Ready to play</h1><div class="ready-visual" aria-hidden="true"><div class="ready-glow"></div><div class="ready-phone"><div class="ready-phone-screen"><span>?</span></div><i></i></div></div><div class="ready-copy"><h2>${isYt?'Phone down in 3':'Flip your phone'}</h2><p>${copy}</p><div class="locked">▣ Song locked · year hidden</div><div class="ready-actions"><button class="btn primary" data-action="play-current">Start music</button>${!isYt?'<button class="btn ghost" data-action="motion">Enable flip-to-start</button>':''}</div></div>`;
+  }
+
+  function countdownScreen(){
+    return `${topLine(true,false)}${matchHeader()}${scoreStrip()}<div class="countdown-wrap"><div class="kicker">PUT PHONE FACE-DOWN</div><div class="countdown-number" id="countdownNumber">3</div><h1>Music is about to start</h1><p>Keep the screen face-down until you are ready to guess.</p></div>`;
+  }
+
+  function youtubeListeningScreen(){
+    return `${topLine(false,false)}${matchHeader()}${scoreStrip()}<div class="youtube-listening"><div class="kicker">NOW PLAYING · PHONE DOWN</div><h1>Listen, then lift the phone</h1><p>When you lift the phone, playback stops before the guessing screen appears. It also stops automatically after 30 seconds.</p><div class="youtube-player"><div id="youtubePlayer"></div></div><button class="btn primary yt-start-fallback hidden" id="ytStartFallback" data-action="yt-start">Tap to start YouTube</button><small class="provider-warning">If your browser blocks autoplay, tap the button above and put the phone face-down again.</small></div>`;
   }
 
   function playingScreen(){
     const virtual=cfg.playMode==='virtual';
     return `${topLine(true,false)}${matchHeader()}${scoreStrip()}<div class="kicker">NOW PLAYING</div><div class="wave-card"><button class="play-core" data-action="toggle-play">Ⅱ</button><div class="wave"></div></div>
-      ${current?.provider==='youtube'?`<div class="youtube-player"><div id="youtubePlayer"></div></div><div class="provider-warning">YouTube requires a visible player. If playback does not start automatically, tap the player.</div>`:''}
       <div class="playing-instruction"><h2>${virtual?'Place it on your timeline':'Place the physical card on your timeline'}</h2><p>${virtual?'Choose the gap where you think this song belongs.':'Use the cards already on the table. No example years are shown here so the app cannot influence your guess.'}</p></div>
       ${virtual?virtualTimeline():`<div class="play-actions"><button class="btn ghost" data-action="replay">↻ Replay</button><button class="btn primary" data-action="reveal">Reveal Answer</button></div>`}`;
+  }
+
+  function guessScreen(){
+    const virtual=cfg.playMode==='virtual';
+    return `${topLine(true,false)}${matchHeader()}${scoreStrip()}<div class="kicker">MUSIC STOPPED</div><div class="guess-stage"><div class="guess-disc" aria-hidden="true"></div><h1>${virtual?'Place the song':'Make your guess'}</h1><p>${virtual?'Choose where the song belongs on your timeline.':'Place the physical card on your timeline, then reveal the answer.'}</p></div>
+      ${virtual?virtualTimeline():`<div class="play-actions"><button class="btn ghost" data-action="listen-again">↻ Listen again</button><button class="btn primary" data-action="reveal">Reveal Answer</button></div>`}`;
   }
 
   function virtualTimeline(){
@@ -147,9 +160,9 @@
 
   function musicSheet(){
     const sp=E.isSpotifyConnected(),selected=E.getSpotifyDevice();
-    return `<div class="modal ${musicModal?'on':''}" id="musicModal"><div class="sheet"><div class="sheet-head"><h2>Music</h2><button class="close" data-action="close-music">×</button></div><div class="service-grid"><button class="service ${E.getProvider()==='spotify'?'on':''}" data-provider="spotify"><strong>Spotify</strong><small>${sp?'Connected · best hidden playback':'Premium account required'}</small></button><button class="service ${E.getProvider()==='youtube'?'on':''}" data-provider="youtube"><strong>YouTube</strong><small>No login · ads/player UI possible</small></button></div>
+    return `<div class="modal ${musicModal?'on':''}" id="musicModal"><div class="sheet"><div class="sheet-head"><h2>Music</h2><button class="close" data-action="close-music">×</button></div><div class="service-grid"><button class="service ${E.getProvider()==='spotify'?'on':''}" data-provider="spotify"><strong>Spotify</strong><small>${sp?'Connected · best hidden playback':'Premium account required'}</small></button><button class="service ${E.getProvider()==='youtube'?'on':''}" data-provider="youtube"><strong>YouTube</strong><small>No login · keep phone face-down while YouTube plays</small></button></div>
       <div class="spotify-controls ${E.getProvider()==='spotify'?'':'hidden'}">${sp?`<select id="deviceSelect"><option value="">Automatic device</option>${deviceList.map(d=>`<option value="${esc(d.id)}" ${selected===d.id?'selected':''}>${esc(d.name)} · ${esc(d.type)}${d.is_active?' · active':''}</option>`).join('')}</select><button class="btn ghost" data-action="refresh-devices">Refresh devices</button><button class="btn danger" data-action="disconnect-spotify">Disconnect Spotify</button>`:'<button class="btn primary" data-action="connect-spotify">Connect Spotify</button>'}</div>
-      <div class="diagnostic">${E.getProvider()==='spotify'?'For reliable playback, open Spotify on the target phone or speaker and play/pause once.':'YouTube playback is the universal fallback. A visible player is required and autoplay can be restricted by the browser.'}</div></div></div>`;
+      <div class="diagnostic">${E.getProvider()==='spotify'?'For reliable playback, open Spotify on the target phone or speaker and play/pause once.':'YouTube remains a normal visible player while it plays. The game uses a countdown and face-down workflow so the video does not accidentally give away the song.'}</div></div></div>`;
   }
 
   function bind(){
@@ -172,6 +185,8 @@
       if(a==='play-current')b.onclick=playCurrent;
       if(a==='motion')b.onclick=enableMotion;
       if(a==='toggle-play')b.onclick=togglePlay;
+      if(a==='yt-start')b.onclick=startYouTubeFromTap;
+      if(a==='listen-again')b.onclick=listenAgain;
       if(a==='replay')b.onclick=replay;
       if(a==='reveal')b.onclick=revealPhysical;
       if(a==='lock-placement')b.onclick=lockPlacement;
@@ -200,10 +215,10 @@
 
   function handleBack(){
     if(musicModal){musicModal=false;render();return}
-    if(['scanner','loading','ready','playing','reveal'].includes(screen)){
-      prepareSeq++;
+    if(['scanner','loading','ready','countdown','youtube','playing','guess','reveal'].includes(screen)){
+      cancelCountdown();cancelYoutubeListening();prepareSeq++;
       if(screen==='scanner')stopScanner();
-      if(screen==='playing')stopPlayback();
+      if(screen==='playing'||screen==='youtube')stopPlayback();
       screen='resume';render();resetScroll();return;
     }
     if(screen==='gameover'){toast('Game complete. Tap New Game to start again.');return}
@@ -244,23 +259,30 @@
       }catch(err){toast(errorText(err));screen='resume';render();return}
     }
     if(phase==='scanner'&&cfg.playMode==='physical'){screen='scanner';render();return}
-    if((phase==='ready'||phase==='playing')&&current){match.phase='ready';saveMatch();screen='ready';render();return}
+    if(['ready','countdown','youtube','playing'].includes(phase)&&current){match.phase='ready';saveMatch();screen='ready';render();return}
+    if(phase==='guess'&&current){screen='guess';render();return}
     if(phase==='reveal'&&current){screen='reveal';render();return}
     if(phase==='gameover'){screen='gameover';render();return}
     nextRound();
   }
 
   function newGame(){
-    stopScanner();E.destroyYouTube();playing=false;playNeedsTap=false;musicModal=false;
+    cancelCountdown();cancelYoutubeListening();stopScanner();E.destroyYouTube();playing=false;playNeedsTap=false;musicModal=false;
     prepareSeq++;match=null;current=null;pendingSlot=null;placementResult=null;
     localStorage.removeItem(MATCH_KEY);screen='setup';render();resetScroll();
   }
 
+  function clearRoundState(){
+    cancelCountdown();cancelYoutubeListening();prepareSeq++;
+    current=null;pendingSlot=null;placementResult=null;playing=false;playNeedsTap=false;youtubeDownAt=0;
+    E.destroyYouTube();
+    if(match){match.current=null;match.placementResult=null;match.phase='between'}
+  }
+
   function nextRound(){
     if(winner()){endGame('target');return}
-    current=null;pendingSlot=null;placementResult=null;playing=false;playNeedsTap=false;E.destroyYouTube();
-    match.current=null;match.placementResult=null;match.phase='between';saveMatch();
-    if(cfg.playMode==='physical'){match.phase='scanner';saveMatch();screen='scanner';render()}
+    clearRoundState();saveMatch();
+    if(cfg.playMode==='physical'){match.phase='scanner';saveMatch();screen='scanner';render();resetScroll()}
     else{const id=nextVirtualCard();prepareCard(id)}
   }
 
@@ -301,19 +323,168 @@
   }
 
   async function loadQr(){if(window.Html5Qrcode)return;await new Promise((res,rej)=>{const s=document.createElement('script');s.src='https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js';s.onload=res;s.onerror=rej;document.head.appendChild(s)})}
-  async function startScanner(){if(screen!=='scanner'||scanning)return;try{await loadQr();if(screen!=='scanner'||scanning)return;scanner=new Html5Qrcode('reader');await scanner.start({facingMode:'environment'},{fps:12,qrbox:{width:260,height:260}},async text=>{if(!scanning)return;scanning=false;navigator.vibrate?.(35);await stopScanner();const id=E.parseCardId(text);if(!id){toast('That QR code is not one of the supported cards.');setTimeout(()=>{screen='scanner';render()},900);return}await prepareCard(id)},()=>{});scanning=true}catch{toast('Camera could not start. Allow camera access or enter the card number manually.')}}
-  async function stopScanner(){if(!scanner)return;try{if(scanning)await scanner.stop()}catch{}try{await scanner.clear()}catch{}scanner=null;scanning=false}
+  async function startScanner(){
+    if(screen!=='scanner'||scanning||scanBusy||scanner)return;
+    scanBusy=true;
+    let instance=null;
+    try{
+      await loadQr();
+      if(screen!=='scanner')return;
+      instance=new Html5Qrcode('reader');
+      scanner=instance;
+      await instance.start({facingMode:'environment'},{fps:12,qrbox:{width:260,height:260}},async text=>{
+        if(scanner!==instance||!scanning||scanBusy)return;
+        scanBusy=true;
+        navigator.vibrate?.(35);
+        await stopScanner();
+        const id=E.parseCardId(text);
+        if(!id){
+          toast('That QR code is not one of the supported cards.');
+          if(screen==='scanner')setTimeout(()=>render(),600);
+          return;
+        }
+        await prepareCard(id);
+      },()=>{});
+      if(scanner!==instance||screen!=='scanner'){
+        try{await instance.stop()}catch{}
+        try{await instance.clear()}catch{}
+        return;
+      }
+      scanning=true;
+    }catch{
+      if(scanner===instance)scanner=null;
+      scanning=false;
+      toast('Camera could not start. Allow camera access or enter the card number manually.');
+    }finally{
+      scanBusy=false;
+    }
+  }
+
+  async function stopScanner(){
+    const instance=scanner;
+    scanner=null;
+    const wasRunning=scanning;
+    scanning=false;
+    if(!instance){scanBusy=false;return}
+    try{if(wasRunning)await instance.stop()}catch{}
+    try{await instance.clear()}catch{}
+    scanBusy=false;
+  }
+
   function manualCard(){const raw=prompt('Enter the card number (1–308) or paste its QR URL');const id=E.parseCardId(raw);if(!id){if(raw)toast('Card number not recognised.');return}stopScanner().finally(()=>prepareCard(id))}
 
   async function requestMotion(showToast=true){
     try{
       if(typeof DeviceOrientationEvent!=='undefined'&&typeof DeviceOrientationEvent.requestPermission==='function'){const p=await DeviceOrientationEvent.requestPermission();if(p!=='granted')throw new Error('Motion permission not granted')}
       if(!motionReady){window.addEventListener('deviceorientation',onOrientation,{passive:true});motionReady=true}
-      if(showToast)toast('Flip-to-start enabled.');return true;
-    }catch{if(showToast)toast('Flip-to-start is unavailable. Use Start music instead.');return false}
+      if(showToast)toast('Flip controls enabled.');return true
+    }catch{if(showToast)toast('Flip controls are unavailable. Use the on-screen controls instead.');return false}
   }
   function enableMotion(){requestMotion(true)}
-  function onOrientation(e){const b=Number(e.beta),g=Number(e.gamma);if(!Number.isFinite(b)||!Number.isFinite(g))return;const down=Math.abs(b)>135&&Math.abs(g)<70,changed=down!==faceDown;faceDown=down;if(changed&&down&&screen==='ready'&&current?.provider==='spotify')playCurrent()}
+  function onOrientation(e){
+    const b=Number(e.beta),g=Number(e.gamma);
+    if(!Number.isFinite(b)||!Number.isFinite(g))return;
+    const down=Math.abs(b)>135&&Math.abs(g)<70,changed=down!==faceDown;
+    faceDown=down;
+    if(screen==='ready'&&changed&&down&&current?.provider==='spotify'){playCurrent();return}
+    if(screen==='youtube'){
+      if(down){
+        if(!youtubeDownAt)youtubeDownAt=Date.now();
+      }else if(youtubeDownAt&&Date.now()-youtubeDownAt>700){
+        youtubeDownAt=0;
+        finishYouTubeListening();
+      }else{
+        youtubeDownAt=0;
+      }
+    }
+  }
+
+  function cancelCountdown(){
+    if(countdownTimer){clearInterval(countdownTimer);countdownTimer=null}
+  }
+
+  function cancelYoutubeListening(){
+    if(youtubeListenTimer){clearTimeout(youtubeListenTimer);youtubeListenTimer=null}
+    youtubeDownAt=0;
+  }
+
+  function beginYouTubeCountdown(){
+    if(!current)return;
+    cancelCountdown();cancelYoutubeListening();
+    const seq=++prepareSeq;
+    match.phase='countdown';match.current=current;saveMatch();
+    screen='countdown';render();resetScroll();
+    let remaining=3;
+    countdownTimer=setInterval(()=>{
+      remaining--;
+      const el=document.getElementById('countdownNumber');
+      if(remaining>0){if(el)el.textContent=String(remaining);return}
+      cancelCountdown();
+      if(seq===prepareSeq&&screen==='countdown')startYouTubeListening();
+    },1000);
+  }
+
+  async function playCurrent(){
+    if(!current||playing)return;
+    if(current.provider==='youtube'){beginYouTubeCountdown();return}
+    match.phase='playing';match.current=current;saveMatch();screen='playing';render();resetScroll();
+    try{
+      await E.playSpotify(current.resolved.uri);playing=true;playNeedsTap=false
+    }catch(err){
+      playing=false;toast(errorText(err));
+      if(err?.code?.startsWith('SPOTIFY')){screen='resume';musicModal=true;render()}
+    }
+  }
+
+  async function startYouTubeListening(){
+    if(!current||current.provider!=='youtube')return;
+    cancelCountdown();cancelYoutubeListening();
+    match.phase='youtube';match.current=current;saveMatch();
+    screen='youtube';render();resetScroll();
+    try{
+      const r=await E.playYouTube('youtubePlayer',current.resolved);
+      playing=!!r.started;playNeedsTap=!!r.needsTap;
+      if(playNeedsTap){
+        document.getElementById('ytStartFallback')?.classList.remove('hidden');
+        toast('Browser blocked autoplay. Tap Start YouTube, then put the phone face-down.');
+        return;
+      }
+      armYoutubeStopTimer();
+    }catch(err){
+      playing=false;
+      if(err?.code==='YOUTUBE_PLAY_FAILED'){toast('That upload would not play. Swapping in another song from the same year.');await replaceCurrentSong();return}
+      toast(errorText(err));
+    }
+  }
+
+  function startYouTubeFromTap(){
+    if(!current||current.provider!=='youtube'||screen!=='youtube')return;
+    try{
+      E.resumeYouTube();playing=true;playNeedsTap=false;
+      document.getElementById('ytStartFallback')?.classList.add('hidden');
+      armYoutubeStopTimer();
+    }catch{toast('YouTube still could not start. Try again or switch to Spotify.')}
+  }
+
+  function armYoutubeStopTimer(){
+    cancelYoutubeListening();
+    youtubeListenTimer=setTimeout(()=>finishYouTubeListening(),30000);
+  }
+
+  function finishYouTubeListening(){
+    if(screen!=='youtube'||!current)return;
+    cancelYoutubeListening();
+    E.pauseYouTube();E.destroyYouTube();playing=false;playNeedsTap=false;
+    match.phase='guess';match.current=current;saveMatch();
+    screen='guess';render();resetScroll();
+    navigator.vibrate?.([35,60,35]);
+  }
+
+  function listenAgain(){
+    if(!current)return;
+    if(current.provider==='youtube'){beginYouTubeCountdown();return}
+    replay();
+  }
 
   async function playCurrent(){
     if(!current||playing)return;
@@ -357,10 +528,10 @@
   function revealPhysical(){if(!current)return;recordSongUsed();stopPlayback();placementResult=null;match.placementResult=null;match.phase='reveal';syncCurrent();screen='reveal';render()}
   function lockPlacement(){if(pendingSlot===null||!current)return;const years=[...(activeTeam().timeline||[])].sort((a,b)=>a-b),left=pendingSlot>0?years[pendingSlot-1]:null,right=pendingSlot<years.length?years[pendingSlot]:null;const correct=(left===null||left<=current.year)&&(right===null||current.year<=right);placementResult={correct,left,right,slot:pendingSlot};recordSongUsed();stopPlayback();if(correct){years.splice(pendingSlot,0,current.year);activeTeam().timeline=years;activeTeam().score++}match.placementResult=placementResult;match.phase='reveal';syncCurrent();screen='reveal';render()}
   function recordSongUsed(){if(!current?.song)return;const key=E.songKey(current.song);if(!match.used.includes(key))match.used.push(key)}
-  function finishPhysical(keep){if(keep)activeTeam().score++;advanceTurn()}
-  function finishVirtualTurn(){advanceTurn()}
-  function advanceTurn(){match.turn=(match.turn+1)%match.teams.length;match.round++;current=null;placementResult=null;pendingSlot=null;match.current=null;match.placementResult=null;match.phase='between';saveMatch();if(winner())endGame('target');else nextRound()}
-  function endGame(reason){if(!match)return;prepareSeq++;stopScanner();stopPlayback();E.destroyYouTube();match.endReason=reason;match.phase='gameover';match.current=current;saveMatch();screen='gameover';render();resetScroll()}
+  function finishPhysical(keep){if(screen!=='reveal'||!match)return;if(keep)activeTeam().score++;advanceTurn()}
+  function finishVirtualTurn(){if(screen!=='reveal'||!match)return;advanceTurn()}
+  function advanceTurn(){if(!match)return;match.turn=(match.turn+1)%match.teams.length;match.round++;saveMatch();nextRound()}
+  function endGame(reason){if(!match)return;cancelCountdown();cancelYoutubeListening();prepareSeq++;stopScanner();stopPlayback();E.destroyYouTube();match.endReason=reason;match.phase='gameover';match.current=current;saveMatch();screen='gameover';render();resetScroll()}
   function openTrack(){const url=current?.resolved?.url;if(url)window.open(url,'_blank','noopener')}
 
   boot();
