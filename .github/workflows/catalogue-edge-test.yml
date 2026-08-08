@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install requests beautifulsoup4
-      # Final v10 preflight including edit/version/recording/master/radio/vocal labels.
+      # Final v10 preflight including edits, alternate recordings and same-title cover replacement.
       - name: Verify sparse years, canonical versions and chart-year traps
         run: |
           python - <<'PY'
@@ -43,7 +43,7 @@ jobs:
               pool=b.verified_pool(year,rows,exact,under,12)
               pools[year]=pool
               print('EDGE',year,'candidates',len(rows),'songs',len(pool))
-              keys=[]
+              keys=[];title_keys=[]
               for s in pool:
                   print(' ',s['title'],'—',s['artist'],'|',s['canonicalKey'])
                   assert int(s['year'])==year
@@ -51,8 +51,10 @@ jobs:
                   assert not b.is_explicit_alternate_title(s['title']),s
                   assert s['canonicalKey']==b.underlying_key(s['title'],s['artist']),s
                   keys.append(s['canonicalKey'])
-              assert len(pool)>=8,(year,len(pool))
+                  title_keys.append(b.norm(b.base_title(s['title'])))
+              assert len(pool)==12,(year,len(pool))
               assert len(keys)==len(set(keys)),(year,keys)
+              assert len(title_keys)==len(set(title_keys)),(year,title_keys)
 
           def titles(year): return {b.norm(s['title']) for s in pools[year]}
           assert 'blinding lights' not in titles(2021)
