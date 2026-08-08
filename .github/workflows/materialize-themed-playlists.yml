@@ -40,16 +40,7 @@ jobs:
           import theme_release_groups as t
           from build_modes import MODE_META
           modes,rejected=t.build_themed_modes()
-          out={
-            'version':11,
-            'generatedAt':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),
-            'yearSemantics':'MusicBrainz release-group earliest first-release-date; exact underlying title + matching artist required',
-            'modes':modes,
-            'modeMeta':{m:MODE_META[m] for m in modes},
-            'fallback':'greatest-same-year',
-            'stats':{m:{'years':len(v),'songs':sum(len(p) for p in v.values()),'rejectedSeeds':len(rejected[m])} for m,v in modes.items()},
-            'rejectedSeeds':rejected,
-          }
+          out={'version':11,'generatedAt':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'yearSemantics':'MusicBrainz release-group earliest first-release-date; exact underlying title + matching artist required','modes':modes,'modeMeta':{m:MODE_META[m] for m in modes},'fallback':'greatest-same-year','stats':{m:{'years':len(v),'songs':sum(len(p) for p in v.values()),'rejectedSeeds':len(rejected[m])} for m,v in modes.items()},'rejectedSeeds':rejected}
           Path('data/themed_playlists_v11.json').write_text(json.dumps(out,ensure_ascii=False,separators=(',',':')))
           print('Verified themed playlist stats',out['stats'])
           PY
@@ -60,6 +51,7 @@ jobs:
           from pathlib import Path
           sys.path.insert(0,'scripts')
           import build_catalogue_v10 as c
+          import theme_release_groups as t
           d=json.loads(Path('data/themed_playlists_v11.json').read_text())
           expected={'sing_along','australian','unexpected','party','rock'}
           assert set(d['modes'])==expected,set(d['modes'])
@@ -77,14 +69,13 @@ jobs:
                       assert int(s['year'])==int(year),(mode,year,s)
                       assert s['yearEvidence']=='MusicBrainz release-group earliest first-release-date',(mode,year,s)
                       assert not c.is_explicit_alternate_title(s['title']),(mode,year,s)
-                      key=c.underlying_key(s['title'],s['artist'])
+                      key=t.underlying_key(s['title'],s['artist'])
                       assert s['canonicalKey']==key,(mode,year,s)
                       assert key not in seen,(mode,key)
                       seen.add(key)
-                      title=c.norm(c.base_title(s['title']))
+                      title=c.norm(t.base_title(s['title']))
                       assert title not in title_keys,(mode,year,'same-title duplicate',title)
                       title_keys.add(title)
-          # Regression anchors that exposed the recording-first-release bug.
           assert song_year('sing_along','Stand by Me')==1961
           assert song_year('sing_along','Jailhouse Rock')==1957
           assert song_year('sing_along','The Twist')==1960
