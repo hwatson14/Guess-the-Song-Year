@@ -116,20 +116,11 @@ def confirm_theme_year(title,artist):
     if key in _cache:return _cache[key]
 
     clean_title=base_title(title)
-    queries=[
-        f'releasegroup:"{canonical.lucene(clean_title)}" AND artistname:"{canonical.lucene(canonical.primary_artist(artist))}"',
-        f'releasegroup:"{canonical.lucene(clean_title)}"',
-    ]
-    # Always collect both searches. The artist-constrained query can rank a later
-    # reissue/re-recording highly while the title-only result set still contains the
-    # earlier original release group for the same artist.
-    found=[];seen=set()
-    for query in queries:
-        for e in search_release_groups(query):
-            rid=canonical.clean(e.get('id'))
-            if rid and rid not in seen:
-                seen.add(rid);found.append(e)
-
+    # Search by title first, then enforce artist identity ourselves. This avoids the
+    # artist-constrained Lucene query over-ranking later reissues/re-recordings while
+    # retaining the earlier exact original release group in the result set.
+    query=f'releasegroup:"{canonical.lucene(clean_title)}"'
+    found=search_release_groups(query)
     candidates=strict_candidates(title,artist,found)
     if not candidates:
         _cache[key]=None;return None
