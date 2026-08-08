@@ -1,0 +1,86 @@
+name: Assemble v11 from canonical main
+
+on:
+  push:
+    branches: [feature/verified-playlists-v11]
+    paths:
+      - .github/workflows/assemble-v11-from-main.yml
+      - scripts/build_final_v11.py
+      - scripts/assemble_playlists_v11.py
+      - scripts/finalize_runtime_v11.py
+      - data/themed_playlists_v11.json
+
+permissions:
+  contents: write
+
+concurrency:
+  group: assemble-v11-from-main
+  cancel-in-progress: true
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: feature/verified-playlists-v11
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install requests beautifulsoup4
+      - name: Import canonical v10 catalogue from main or defer
+        id: base
+        run: |
+          git fetch origin main
+          git show origin/main:data/catalogue.json > /tmp/main-catalogue.json
+          python - <<'PY'
+          import json,os,shutil
+          from pathlib import Path
+          d=json.loads(Path('/tmp/main-catalogue.json').read_text())
+          ready=d.get('version')==10 and set(d.get('modes',{}))=={'greatest'}
+          print('main canonical ready:',ready,'version:',d.get('version'),'modes:',sorted(d.get('modes',{})))
+          if ready:
+              shutil.copy('/tmp/main-catalogue.json','data/catalogue.json')
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write(f'ready={str(ready).lower()}\n')
+          PY
+      - name: Build final six-playlist v11
+        if: steps.base.outputs.ready == 'true'
+        run: python scripts/build_final_v11.py
+      - name: Validate final v11
+        if: steps.base.outputs.ready == 'true'
+        run: |
+          node --check engine.js
+          node --check engine-v7.js
+          node --check app.js
+          node scripts/test_engine_v7.mjs
+          python scripts/validate_catalogue.py
+          python -m json.tool data/catalogue.schema.json >/dev/null
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('data/catalogue.json').read_text())
+          expected={'greatest','sing_along','australian','unexpected','party','rock'}
+          assert d.get('version')==11,d.get('version')
+          assert set(d['modes'])==expected,set(d['modes'])
+          for mode in expected-{'greatest'}:
+              assert d['modeFallbacks'][mode]=='greatest'
+              assert d['playlistStats'][mode]['years']>=15,d['playlistStats'][mode]
+              assert d['playlistStats'][mode]['songs']>=20,d['playlistStats'][mode]
+          app=Path('app.js').read_text();guard=Path('engine-v7.js').read_text()
+          assert 'data-mode=' in app and 'function modeId()' in app
+          assert "const MODE='greatest'" not in app
+          assert 'Dancing with a Stranger' in Path('scripts/test_engine_v7.mjs').read_text()
+          assert 'E.isAlternateSongTitle=isAlternateTitle' in guard
+          print('final v11 assembly passed',d['playlistStats'])
+          PY
+      - name: Commit final v11 to feature branch
+        if: steps.base.outputs.ready == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/catalogue.json data/catalogue.schema.json engine.js engine-v7.js app.js index.html README.md scripts/validate_catalogue.py scripts/test_engine_v7.mjs
+          if git diff --cached --quiet; then echo 'Final v11 already materialised.'; exit 0; fi
+          git commit -m "Assemble final verified six-playlist v11"
+          git pull --rebase origin feature/verified-playlists-v11
+          git push origin feature/verified-playlists-v11
