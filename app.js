@@ -134,7 +134,7 @@
   }
 
   function youtubeListeningScreen(){
-    return `${topLine(false,false)}${matchHeader()}${scoreStrip()}<div class="youtube-listening"><div class="kicker">NOW PLAYING · PHONE DOWN</div><h1>Listen, then lift the phone</h1><p>Listen for as long as you want. Lift the phone whenever you are ready to guess.</p><div class="youtube-player"><div id="youtubePlayer"></div></div><button class="btn primary yt-start-fallback hidden" id="ytStartFallback" data-action="yt-start">Tap to start YouTube</button><small class="provider-warning">If your browser blocks autoplay, tap the button above and put the phone face-down again.</small></div>`;
+    return `${topLine(false,false)}${matchHeader()}${scoreStrip()}<div class="youtube-listening"><div class="kicker">NOW PLAYING · PHONE DOWN</div><h1>Listen, then guess</h1><p>Listen for as long as you want. Lift the phone or tap Guess now whenever you are ready.</p><div class="youtube-guess-actions"><button class="btn primary" data-action="guess-now">Guess now</button></div><div class="youtube-player"><div id="youtubePlayer"></div></div><button class="btn primary yt-start-fallback hidden" id="ytStartFallback" data-action="yt-start">Tap to start YouTube</button><small class="provider-warning">If your browser blocks autoplay, tap the button above and put the phone face-down again.</small></div>`;
   }
 
   function playingScreen(){
@@ -207,6 +207,7 @@
       if(a==='motion')b.onclick=enableMotion;
       if(a==='toggle-play')b.onclick=togglePlay;
       if(a==='yt-start')b.onclick=startYouTubeFromTap;
+      if(a==='guess-now')b.onclick=finishYouTubeListening;
       if(a==='listen-again')b.onclick=listenAgain;
       if(a==='replay')b.onclick=replay;
       if(a==='reveal')b.onclick=revealPhysical;

@@ -37,3 +37,6 @@ button,input,select{font:inherit}.hidden{display:none!important}button{cursor:po
 
 /* v7.2.2 virtual placement */
 .slot{flex-basis:46px;min-width:46px;touch-action:manipulation}.slot:after{font-size:25px;font-weight:800}.slot.on:after{content:'✓';font-size:22px}.timeline-note b{color:var(--mint)}.virtual-actions{display:grid;grid-template-columns:1fr 1.4fr;gap:9px}.virtual-actions .btn{width:100%}@media(max-width:520px){.slot{flex-basis:50px;min-width:50px}.virtual-actions{grid-template-columns:1fr}}
+
+/* v7.2.3 explicit YouTube guess control */
+.youtube-guess-actions{margin:18px auto 14px;width:min(100%,520px)}.youtube-guess-actions .btn{width:100%;min-height:62px;font-size:18px}
