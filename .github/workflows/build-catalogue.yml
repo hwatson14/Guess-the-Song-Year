@@ -13,7 +13,7 @@ permissions:
 
 concurrency:
   group: build-catalogue
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -44,9 +44,6 @@ jobs:
         run: |
           python - <<'PY'
           import scripts.build_catalogue as b
-
-          # Pre-1955 annual pages are not published. Use the historical
-          # Australian number-one leaders for those five years.
           early = {
               1950: {'rank':1,'title':'Quicksilver','artist':'Bing Crosby & The Andrews Sisters'},
               1951: {'rank':1,'title':'Too Young','artist':'Nat King Cole'},
@@ -56,9 +53,7 @@ jobs:
           }
           original = b.annual_chart
           def annual_chart(year):
-              if year in early:
-                  return [early[year]]
-              return original(year)
+              return [early[year]] if year in early else original(year)
           b.annual_chart = annual_chart
           b.main()
           PY
@@ -82,4 +77,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add scripts/build_catalogue.py data/catalogue.json
           git commit -m "Build static song catalogue"
+          git pull --rebase origin main
           git push
