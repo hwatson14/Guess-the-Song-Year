@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install requests beautifulsoup4
-      # This is the fast preflight for the current v10 builder before the 73-year build.
+      # Preflight the exact-per-candidate verifier now used by the full v10 build.
       - name: Verify sparse years, canonical versions and chart-year traps
         run: |
           python - <<'PY'
