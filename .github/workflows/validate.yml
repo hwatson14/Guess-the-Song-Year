@@ -23,21 +23,39 @@ jobs:
         run: |
           python scripts/validate_catalogue.py
           python -m json.tool data/catalogue.schema.json >/dev/null
-      - name: Validate one-mode gameplay contract
+      - name: Validate gameplay contract
         run: |
           python - <<'PY'
+          import json
           from pathlib import Path
+
           html=Path('index.html').read_text()
-          for asset in ['engine.js','engine-v7.js','app.js','app.css']:
-              assert asset in html, asset
           js=Path('app.js').read_text()
           guard=Path('engine-v7.js').read_text()
-          for token in ["const MODE='greatest'",'Play style','Teams','Victory target','physical','virtual','lock-placement','popstate','end-game','ensureVirtualStarters','starterYear','match.pendingSlot=slot','Starter year:','Listen Again','Listen for as long as you want','data-action="new-card"','Wrong answer','Correct answer','repeat-replaced']:
+          data=json.loads(Path('data/catalogue.json').read_text())
+
+          for asset in ['engine.js','engine-v7.js','app.js','app.css']:
+              assert asset in html, asset
+          for token in ['Play style','Teams','Victory target','physical','virtual','lock-placement','popstate','end-game','ensureVirtualStarters','starterYear','match.pendingSlot=slot','Starter year:','Listen Again','Listen for as long as you want','data-action="new-card"','Wrong answer','Correct answer','repeat-replaced']:
               assert token in js, token
-          for forbidden in ['data-deck=','data-policy=','data-round-deck=','setTimeout(()=>finishYouTubeListening(),30000)','match.assign[']:
+          for forbidden in ['data-policy=','data-round-deck=','setTimeout(()=>finishYouTubeListening(),30000)','match.assign[']:
               assert forbidden not in js, forbidden
-          assert "Only Greatest Hits is enabled" in guard
           assert 'NO_UNUSED_SONG' in guard
-          assert 'return E.songKey(song)' in guard
-          print('one-mode gameplay contract validated')
+
+          if data.get('version')==11:
+              expected={'greatest','sing_along','australian','unexpected','party','rock'}
+              assert set(data.get('modes',{}))==expected
+              assert 'data-mode=' in js
+              assert 'function modeId()' in js
+              assert "const MODE='greatest'" not in js
+              assert 'E.isAlternateSongTitle=isAlternateTitle' in guard
+              for label in ['Sing Along','Australian','Unexpected Years','Party Anthems','Rock Classics']:
+                  assert label in guard,label
+              for mode in expected-{'greatest'}:
+                  assert data['modeFallbacks'].get(mode)=='greatest',mode
+              print('six-playlist gameplay contract validated')
+          else:
+              assert "const MODE='greatest'" in js
+              assert 'Only Greatest Hits is enabled' in guard
+              print('single-mode canonical gameplay contract validated')
           PY
