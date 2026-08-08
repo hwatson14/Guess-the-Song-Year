@@ -1,0 +1,36 @@
+name: Catalogue release-year diagnostic
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/catalogue-diagnostic.yml
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install requests beautifulsoup4
+      - name: Inspect sparse candidates
+        run: |
+          python - <<'PY'
+          import importlib.util
+          from pathlib import Path
+          p=Path('scripts/build_catalogue_v8.py')
+          spec=importlib.util.spec_from_file_location('b',p)
+          b=importlib.util.module_from_spec(spec);spec.loader.exec_module(b)
+          for target in [1950,1951,1952]:
+              rows=b.candidate_chart_rows(target)
+              print('\nTARGET',target,'candidate rows',len(rows))
+              for r in rows[:35]:
+                  ev=b.confirm_release_year(r)
+                  print(f"{r['chartYear']} #{r['rank']:>3} | {r['title']} — {r['artist']} | earliest={ev and ev['year']} | MB={ev and ev['musicbrainzMatchedTitle']} — {ev and ev['musicbrainzMatchedArtist']} | sim={ev and ev['titleSimilarity']}/{ev and ev['artistSimilarity']}")
+          PY
