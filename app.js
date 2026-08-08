@@ -198,7 +198,7 @@
   }
 
   function resumeMatch(){if(!match?.active){screen='setup';render();return}nextRound()}
-  function newGame(){stopScanner();E.destroyYouTube();match=null;current=null;pendingSlot=null;placementResult=null;saveMatch();screen='setup';render()}
+  function newGame(){stopScanner();E.destroyYouTube();playing=false;playNeedsTap=false;musicModal=false;match=null;current=null;pendingSlot=null;placementResult=null;localStorage.removeItem(MATCH_KEY);screen='setup';render();requestAnimationFrame(()=>window.scrollTo({top:0,left:0,behavior:'instant'}))}
   function nextRound(){if(winner()){screen='gameover';render();return}current=null;pendingSlot=null;placementResult=null;playing=false;playNeedsTap=false;E.destroyYouTube();roundDeck=cfg.deck;if(cfg.deckPolicy==='each'){screen='deckpick';render()}else beginRound(cfg.deck)}
 
   async function beginRound(deck){roundDeck=deck;if(cfg.playMode==='physical'){screen='scanner';render()}else{const id=nextVirtualCard();await prepareCard(id)}}
