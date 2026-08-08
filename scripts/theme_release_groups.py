@@ -24,6 +24,28 @@ _cache={}
 BAD_SECONDARY={'compilation','remix','live','dj-mix','mixtape/street','demo','broadcast'}
 
 
+def base_title(v):
+    """Latest canonical title cleanup, preserving real bare 'with' title text."""
+    s=canonical.clean(v)
+    def strip_bracket(match):
+        inside=match.group(1)
+        if canonical.VERSION_MARKER.search(inside) or re.match(r'^\s*(?:feat\.?|ft\.?|featuring|with)\b',inside,re.I):
+            return ' '
+        return match.group(0)
+    s=re.sub(r'\(([^)]*)\)',strip_bracket,s)
+    s=re.sub(r'\[([^]]*)\]',strip_bracket,s)
+    m=re.search(r'\s[-–—:]\s(.+)$',s)
+    if m and canonical.VERSION_MARKER.search(m.group(1)):s=s[:m.start()]
+    # Bare "with" can be genuine title text; only explicit feat/ft/featuring is stripped here.
+    s=re.sub(r'\s+(?:feat\.?|ft\.?|featuring)\s+.+$','',s,flags=re.I)
+    s=canonical.STRONG_TRAILING_VERSION.sub(' ',s)
+    return canonical.clean(s)
+
+
+def underlying_key(title,artist):
+    return f'{canonical.norm(base_title(title))}|{canonical.norm(canonical.primary_artist(artist)).removeprefix("the ")}'
+
+
 def rg_artist(entity):
     return ''.join(
         x if isinstance(x,str) else x.get('name') or (x.get('artist') or {}).get('name') or ''
@@ -52,12 +74,12 @@ def search_release_groups(query):
 
 
 def strict_candidates(title,artist,entities):
-    wanted_title=canonical.norm(canonical.base_title(title))
+    wanted_title=canonical.norm(base_title(title))
     out=[]
     for e in entities:
         et=canonical.clean(e.get('title'));ea=rg_artist(e);date=canonical.clean(e.get('first-release-date'))
         if not re.match(r'^\d{4}',date) or not et or not ea:continue
-        if canonical.norm(canonical.base_title(et))!=wanted_title:continue
+        if canonical.norm(base_title(et))!=wanted_title:continue
         if canonical.is_explicit_alternate_title(et):continue
         if artist_score(ea,artist)<0.60:continue
         secondary={str(x).lower() for x in (e.get('secondary-types') or [])}
@@ -77,12 +99,13 @@ def strict_candidates(title,artist,entities):
 
 
 def confirm_theme_year(title,artist):
-    key=canonical.underlying_key(title,artist)
+    key=underlying_key(title,artist)
     if key in _cache:return _cache[key]
 
+    clean_title=base_title(title)
     queries=[
-        f'releasegroup:"{canonical.lucene(canonical.base_title(title))}" AND artistname:"{canonical.lucene(canonical.primary_artist(artist))}"',
-        f'releasegroup:"{canonical.lucene(canonical.base_title(title))}"',
+        f'releasegroup:"{canonical.lucene(clean_title)}" AND artistname:"{canonical.lucene(canonical.primary_artist(artist))}"',
+        f'releasegroup:"{canonical.lucene(clean_title)}"',
     ]
     found=[];seen=set()
     for query in queries:
@@ -121,8 +144,8 @@ def build_themed_modes():
             if not evidence:
                 misses.append(f'{title} / {artist} [no strict original release-group evidence]');continue
             year=int(evidence['year'])
-            display_title=canonical.base_title(title);display_artist=canonical.clean(artist)
-            key=canonical.underlying_key(display_title,display_artist)
+            display_title=base_title(title);display_artist=canonical.clean(artist)
+            key=underlying_key(display_title,display_artist)
             if key in seen:continue
             seen.add(key)
             ids=playback_exact.get(canonical.song_key(display_title,display_artist)) or playback_underlying.get(key) or {}
