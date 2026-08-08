@@ -10,11 +10,19 @@ permissions:
 
 jobs:
   assemble:
-    if: ${{ hashFiles('.build/engine.js.gz') != '' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+      - name: Check staging files
+        id: staging
+        run: |
+          if [ -f .build/engine.js.gz ] && [ -f .build/app.js.gz ] && [ -f .build/build_catalogue.py.gz ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Assemble source
+        if: steps.staging.outputs.ready == 'true'
         run: |
           gzip -dc .build/engine.js.gz > engine.js
           gzip -dc .build/app.js.gz > app.js
@@ -24,6 +32,7 @@ jobs:
           node --check app.js
           python -m py_compile scripts/build_catalogue.py
       - name: Commit source and remove staging files
+        if: steps.staging.outputs.ready == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
