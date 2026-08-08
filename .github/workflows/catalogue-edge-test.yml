@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install requests beautifulsoup4
-      # Final v10 preflight including edits, alternate recordings and same-title cover replacement.
+      # Final v10 preflight including edits, alternate recordings, same-title covers, and title integrity.
       - name: Verify sparse years, canonical versions and chart-year traps
         run: |
           python - <<'PY'
@@ -33,6 +33,14 @@ jobs:
           path=Path('scripts/build_catalogue_v10.py')
           spec=importlib.util.spec_from_file_location('b',path)
           b=importlib.util.module_from_spec(spec);spec.loader.exec_module(b)
+
+          # Never mistake English title text for a feature credit.
+          assert b.base_title('Dancing with a Stranger')=='Dancing with a Stranger'
+          assert b.base_title("Break Up with Your Girlfriend, I'm Bored")=="Break Up with Your Girlfriend, I'm Bored"
+          assert b.base_title('With or Without You')=='With or Without You'
+          assert b.base_title('Example (with Guest)')=='Example'
+          assert b.base_title('Example feat. Guest')=='Example'
+
           exact,under=b.bimmuda_lookup()
           years=[1950,1951,1952,1959,1960,2019,2020,2021,2022]
           pools={}
@@ -77,6 +85,10 @@ jobs:
           assert b.underlying_key('Example - 2011 Remaster','Artist')==b.underlying_key('Example','Artist')
           assert b.underlying_key('Example (Radio Edit)','Artist feat. Guest')==b.underlying_key('Example','Artist')
           assert b.underlying_key('Example (feat. Guest)','Artist and Guest')==b.underlying_key('Example','Artist')
-          for genuine in ['Live and Let Die','I Want to Live','Another Brick in the Wall (Part II)','Alone Again (Naturally)','Radio Ga Ga']:
+          for genuine in [
+              'Live and Let Die','I Want to Live','Another Brick in the Wall (Part II)',
+              'Alone Again (Naturally)','Radio Ga Ga','Dancing with a Stranger',
+              "Break Up with Your Girlfriend, I'm Bored",'With or Without You'
+          ]:
               assert not b.is_explicit_alternate_title(genuine),genuine
           PY
