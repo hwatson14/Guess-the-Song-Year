@@ -14,21 +14,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Apply gameplay hotfix
+      - name: Remove stale playback handler
         run: |
-          python scripts/hotfix_round_youtube.py
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('app.js')
+          s=p.read_text()
+          start="\n  async function playCurrent(){\n    if(!current||playing)return;\n    match.phase='playing';match.current=current;saveMatch();screen='playing';render();"
+          i=s.find(start)
+          if i < 0:
+              raise SystemExit('stale playCurrent handler not found')
+          j=s.find("\n  async function replaceCurrentSong(){", i)
+          if j < 0:
+              raise SystemExit('replaceCurrentSong boundary not found')
+          s=s[:i]+s[j:]
+          p.write_text(s)
+          PY
           node --check app.js
-          python scripts/validate_catalogue.py
-          grep -q "v=7.2" index.html
-          grep -q "countdownScreen" app.js
-          grep -q "youtubeListeningScreen" app.js
-          grep -q "guessScreen" app.js
-          grep -q "scanBusy" app.js
-      - name: Commit gameplay files
+          test "$(grep -c 'async function playCurrent' app.js)" -eq 1
+          grep -q "beginYouTubeCountdown" app.js
+      - name: Commit gameplay file
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add app.js app.css index.html
-          git commit -m "Fix scanner lifecycle and YouTube face-down flow"
+          git add app.js
+          git commit -m "Remove stale playback handler"
           git pull --rebase origin main
           git push
