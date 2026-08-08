@@ -18,11 +18,12 @@ jobs:
           node --check engine.js
           node --check engine-v7.js
           node --check app.js
+          node scripts/test_engine_v7.mjs
       - name: Validate prebuilt catalogue
         run: |
           python scripts/validate_catalogue.py
           python -m json.tool data/catalogue.schema.json >/dev/null
-      - name: Validate one-mode app shell
+      - name: Validate one-mode gameplay contract
         run: |
           python - <<'PY'
           from pathlib import Path
@@ -31,10 +32,12 @@ jobs:
               assert asset in html, asset
           js=Path('app.js').read_text()
           guard=Path('engine-v7.js').read_text()
-          for token in ["const MODE='greatest'",'Play style','Teams','Victory target','physical','virtual','lock-placement','popstate','end-game','ensureVirtualStarters','starterYear','match.pendingSlot=slot','Starter year:','Listen Again','Listen for as long as you want']:
+          for token in ["const MODE='greatest'",'Play style','Teams','Victory target','physical','virtual','lock-placement','popstate','end-game','ensureVirtualStarters','starterYear','match.pendingSlot=slot','Starter year:','Listen Again','Listen for as long as you want','data-action="new-card"','Wrong answer','Correct answer','repeat-replaced']:
               assert token in js, token
-          for forbidden in ['data-deck=','data-policy=','data-round-deck=','setTimeout(()=>finishYouTubeListening(),30000)']:
+          for forbidden in ['data-deck=','data-policy=','data-round-deck=','setTimeout(()=>finishYouTubeListening(),30000)','match.assign[']:
               assert forbidden not in js, forbidden
           assert "Only Greatest Hits is enabled" in guard
-          print('one-mode app contract validated')
+          assert 'NO_UNUSED_SONG' in guard
+          assert 'return E.songKey(song)' in guard
+          print('one-mode gameplay contract validated')
           PY
