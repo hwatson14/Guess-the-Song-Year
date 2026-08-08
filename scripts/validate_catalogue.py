@@ -14,9 +14,9 @@ APP = ROOT / 'app.js'
 # Only treat these as version markers inside metadata-like parentheses/brackets/suffixes.
 # This intentionally does not reject genuine song titles such as "Live and Let Die".
 VERSION_ANNOTATION = re.compile(
-    r'\b(?:karaoke|tribute|demo|live|remix|re[- ]?mix|mix|edit|version|acoustic|unplugged|'
-    r'a cappella|acapella|backing(?: track)?|instrumental|bootleg|mashup|refix|rework|'
-    r'preview|playback|deluxe|bonus|voice note|alternate|alternative|'
+    r'\b(?:karaoke|tribute|demo|live|remix|re[- ]?mix|mix|edit|version|recording|master|radio|single|album|vocal|acoustic|unplugged|'
+    r'a cappella|acapella|backing(?: track)?|instrumental|strumentale|base musicale|bootleg|mashup|refix|rework|'
+    r'preview|playback|deluxe|bonus|voice note|alternate|alternative|original|rehearsal|session|concert|'
     r'remaster(?:ed)?(?:\s*\d{4})?|radio edit|radio version|single edit|single version|'
     r'album version|extended(?: version| edit| mix)?|club mix|dance mix|original mix|'
     r'dub(?: version| mix)?|mono|stereo|sped up|slowed|re[- ]?record(?:ed)?|'
@@ -155,16 +155,18 @@ def main():
                     fail(f'{kind} {value} reused by {prior_value!r} and {canonical!r}')
                 registry[value] = canonical
 
-    # Regression checks for the broader edit/version vocabulary and genuine-title safety.
+    # Regression checks for edit/version vocabulary and genuine-title safety.
     for bad in (
         'Song (Pop edit)', 'Song (Zwette Edit)', 'Song (LP version)', 'Song (dub version)',
         'Song (solo vocal)', 'Song (Erol Alkan rework)', 'Song (Benny Royal ReFix)',
         'Song (acoustic MTV unplugged)', 'Song (alternative version)', 'Song (voice note)',
         'Song (full version)', 'Song (Deluxe Ultra edit)', 'Song (House mix)', 'Song - 2011 Remaster',
+        'Song (Third Recording)', 'Song (master)', 'Song (radio)', 'Song (strumentale)',
+        'Song (base musicale)', 'Song (original)', 'Song (rehearsal)',
     ):
         if not is_alternate_title(bad):
             fail(f'alternate-version detector missed regression example: {bad}')
-    for genuine in ('Live and Let Die', 'I Want to Live', 'Another Brick in the Wall (Part II)', 'Alone Again (Naturally)'):
+    for genuine in ('Live and Let Die', 'I Want to Live', 'Another Brick in the Wall (Part II)', 'Alone Again (Naturally)', 'Radio Ga Ga'):
         if is_alternate_title(genuine):
             fail(f'alternate-version detector falsely rejects genuine title: {genuine}')
 
