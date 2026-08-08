@@ -37,6 +37,27 @@ def fail(message):
     raise SystemExit(f'catalogue validation failed: {message}')
 
 
+def norm(v):
+    import unicodedata
+    return re.sub(
+        r'[^a-z0-9]+', ' ',
+        unicodedata.normalize('NFKD', str(v or '')).encode('ascii', 'ignore').decode().lower(),
+    ).strip()
+
+
+def base_title(title):
+    s = str(title or '').strip()
+    def strip_bracket(match):
+        inside = match.group(1)
+        return ' ' if VERSION_ANNOTATION.search(inside) or re.match(r'^\s*(?:feat\.?|ft\.?|featuring|with)\b', inside, re.I) else match.group(0)
+    s = re.sub(r'\(([^)]*)\)', strip_bracket, s)
+    s = re.sub(r'\[([^]]*)\]', strip_bracket, s)
+    suffix = re.search(r'\s[-–—:]\s(.+)$', s)
+    if suffix and VERSION_ANNOTATION.search(suffix.group(1)):
+        s = s[:suffix.start()]
+    return norm(s)
+
+
 def load_year_map():
     text = ENGINE.read_text(encoding='utf-8')
     m = re.search(r'const YEAR_MAP=(\[[^;]+\]);', text)
@@ -103,6 +124,7 @@ def main():
             fail(f'{year} has only {len(pool)} songs; need at least {minimum}')
 
         local_keys = set()
+        local_titles = {}
         for index, song in enumerate(pool):
             total += 1
             if not isinstance(song, dict):
@@ -117,6 +139,11 @@ def main():
                 fail(f'{label} declares year {song_year}')
             if is_alternate_title(title):
                 fail(f'{label} is an alternate/version title')
+
+            title_key = base_title(title)
+            if title_key in local_titles:
+                fail(f'{year} contains the same song title twice: {local_titles[title_key]} and {title} — {artist}')
+            local_titles[title_key] = f'{title} — {artist}'
 
             canonical = str(song.get('canonicalKey') or '').strip()
             if not canonical:
@@ -155,7 +182,6 @@ def main():
                     fail(f'{kind} {value} reused by {prior_value!r} and {canonical!r}')
                 registry[value] = canonical
 
-    # Regression checks for edit/version vocabulary and genuine-title safety.
     for bad in (
         'Song (Pop edit)', 'Song (Zwette Edit)', 'Song (LP version)', 'Song (dub version)',
         'Song (solo vocal)', 'Song (Erol Alkan rework)', 'Song (Benny Royal ReFix)',
