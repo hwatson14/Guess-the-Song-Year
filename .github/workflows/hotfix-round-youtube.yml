@@ -1,0 +1,214 @@
+name: Hotfix round and YouTube gameplay
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/hotfix-round-youtube.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Apply gameplay hotfix
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          def between(s,start,end,new):
+              i=s.index(start)
+              j=s.index(end,i)
+              return s[:i]+new+s[j:]
+
+          p=Path('app.js')
+          s=p.read_text()
+          s=s.replace(
+              "let scanner=null,scanning=false,motionReady=false,faceDown=false,playing=false,playNeedsTap=false,toastTimer=null;\n  let musicModal=false,deviceList=[],backGuardReady=false,prepareSeq=0;",
+              "let scanner=null,scanning=false,scanBusy=false,motionReady=false,faceDown=false,playing=false,playNeedsTap=false,toastTimer=null;\n  let musicModal=false,deviceList=[],backGuardReady=false,prepareSeq=0,countdownTimer=null;"
+          )
+          s=s.replace(
+              "screen==='ready'?readyScreen():screen==='playing'?playingScreen()",
+              "screen==='ready'?readyScreen():screen==='countdown'?countdownScreen():screen==='playing'?playingScreen()"
+          )
+          s=s.replace(
+              "const phaseText=phase==='reveal'?'Answer ready':phase==='ready'||phase==='playing'?'Song ready':phase==='scanner'?'Waiting for a card':'Ready for the next card';",
+              "const phaseText=phase==='reveal'?'Answer ready':['ready','countdown','playing'].includes(phase)?'Song ready':phase==='scanner'?'Waiting for a card':'Ready for the next card';"
+          )
+
+          s=between(s,"  function readyScreen(){","  function playingScreen(){",'''  function readyScreen(){
+    const isYt=current?.provider==='youtube';
+    const copy=isYt?'Tap Start music, then you get a 3-second countdown before playback. The YouTube picture stays obscured while you guess.':'Flip the phone face-down, or tap Start music.';
+    return `${topLine(true,false)}${matchHeader()}${scoreStrip()}<div class="kicker">✦ ${cfg.playMode==='physical'?'CARD SCANNED':'CARD DEALT'}</div><h1 class="ready-title">Ready to play</h1><div class="ready-visual" aria-hidden="true"><div class="ready-glow"></div><div class="ready-phone"><div class="ready-phone-screen"><span>?</span></div><i></i></div></div><div class="ready-copy"><h2>${isYt?'Start the music':'Flip your phone'}</h2><p>${copy}</p><div class="locked">▣ Song locked · year hidden</div><div class="ready-actions"><button class="btn primary" data-action="play-current">Start music</button>${!isYt?'<button class="btn ghost" data-action="motion">Enable flip-to-start</button>':''}</div></div>`;
+  }
+
+  function countdownScreen(){
+    return `${topLine(true,false)}${matchHeader()}${scoreStrip()}<div class="countdown-wrap"><div class="kicker">GET READY</div><div class="countdown-number" id="countdownNumber">3</div><h1>Phone down</h1><p>Music starts when the countdown reaches zero.</p></div>`;
+  }
+
+''')
+
+          s=between(s,"  function playingScreen(){","  function virtualTimeline(){",'''  function playingScreen(){
+    const virtual=cfg.playMode==='virtual',isYt=current?.provider==='youtube';
+    return `${topLine(true,false)}${matchHeader()}${scoreStrip()}<div class="kicker">NOW PLAYING</div><div class="wave-card"><button class="play-core" data-action="toggle-play">Ⅱ</button><div class="wave"></div></div>
+      ${isYt?`<div class="youtube-stage"><div class="youtube-player youtube-obscured"><div id="youtubePlayer"></div></div><div class="youtube-mask"><strong>Song hidden</strong><span>YouTube picture obscured while you guess</span></div></div><button class="btn primary yt-start-fallback hidden" id="ytStartFallback" data-action="yt-start">Tap to start audio</button>`:''}
+      <div class="playing-instruction"><h2>${virtual?'Place it on your timeline':'Place the physical card on your timeline'}</h2><p>${virtual?'Choose the gap where you think this song belongs.':'Use the cards already on the table. The video and answer stay obscured until you reveal.'}</p></div>
+      ${virtual?virtualTimeline():`<div class="play-actions"><button class="btn ghost" data-action="replay">↻ Replay</button><button class="btn primary" data-action="reveal">Reveal Answer</button></div>`}`;
+  }
+
+''')
+
+          s=s.replace("if(a==='toggle-play')b.onclick=togglePlay;","if(a==='toggle-play')b.onclick=togglePlay;\n      if(a==='yt-start')b.onclick=startYouTubeFromTap;")
+          s=s.replace("if(['scanner','loading','ready','playing','reveal'].includes(screen)){\n      prepareSeq++;", "if(['scanner','loading','ready','countdown','playing','reveal'].includes(screen)){\n      cancelCountdown();prepareSeq++;")
+          s=s.replace("if((phase==='ready'||phase==='playing')&&current)","if((phase==='ready'||phase==='playing'||phase==='countdown')&&current)")
+          s=s.replace("stopScanner();E.destroyYouTube();playing=false;playNeedsTap=false;musicModal=false;", "cancelCountdown();stopScanner();E.destroyYouTube();playing=false;playNeedsTap=false;musicModal=false;")
+
+          s=between(s,"  function nextRound(){","  function nextVirtualCard(){",'''  function clearRoundState(){
+    cancelCountdown();prepareSeq++;
+    current=null;pendingSlot=null;placementResult=null;playing=false;playNeedsTap=false;
+    E.destroyYouTube();
+    if(match){match.current=null;match.placementResult=null;match.phase='between'}
+  }
+
+  function nextRound(){
+    if(winner()){endGame('target');return}
+    clearRoundState();saveMatch();
+    if(cfg.playMode==='physical'){match.phase='scanner';saveMatch();screen='scanner';render();resetScroll()}
+    else{const id=nextVirtualCard();prepareCard(id)}
+  }
+
+''')
+
+          s=between(s,"  async function startScanner(){","  function manualCard(){",'''  async function startScanner(){
+    if(screen!=='scanner'||scanning||scanBusy)return;
+    try{
+      await loadQr();
+      if(screen!=='scanner'||scanning||scanBusy)return;
+      const instance=new Html5Qrcode('reader');scanner=instance;scanBusy=false;
+      await instance.start({facingMode:'environment'},{fps:12,qrbox:{width:260,height:260}},async text=>{
+        if(!scanning||scanBusy||scanner!==instance)return;
+        scanBusy=true;navigator.vibrate?.(35);
+        await stopScanner();
+        const id=E.parseCardId(text);
+        if(!id){toast('That QR code is not one of the supported cards.');setTimeout(()=>{if(screen==='scanner')render()},900);return}
+        await prepareCard(id);
+      },()=>{});
+      if(scanner!==instance){try{await instance.stop()}catch{};try{await instance.clear()}catch{};return}
+      scanning=true;
+    }catch{
+      scanning=false;scanBusy=false;scanner=null;
+      toast('Camera could not start. Allow camera access or enter the card number manually.');
+    }
+  }
+
+  async function stopScanner(){
+    const instance=scanner;scanner=null;
+    const wasRunning=scanning;scanning=false;
+    if(!instance){scanBusy=false;return}
+    try{if(wasRunning)await instance.stop()}catch{}
+    try{await instance.clear()}catch{}
+    scanBusy=false;
+  }
+
+''')
+
+          s=between(s,"  async function playCurrent(){","  async function replaceCurrentSong(){",'''  function cancelCountdown(){
+    if(countdownTimer){clearInterval(countdownTimer);countdownTimer=null}
+  }
+
+  function beginYouTubeCountdown(){
+    if(!current)return;
+    cancelCountdown();
+    const seq=++prepareSeq;
+    match.phase='countdown';match.current=current;saveMatch();screen='countdown';render();resetScroll();
+    let remaining=3;
+    countdownTimer=setInterval(()=>{
+      remaining--;
+      const el=document.getElementById('countdownNumber');
+      if(remaining>0){if(el)el.textContent=String(remaining);return}
+      cancelCountdown();
+      if(seq===prepareSeq&&screen==='countdown')startPlaybackNow();
+    },1000);
+  }
+
+  async function playCurrent(){
+    if(!current||playing)return;
+    if(current.provider==='youtube'){beginYouTubeCountdown();return}
+    await startPlaybackNow();
+  }
+
+  async function startPlaybackNow(){
+    if(!current)return;
+    cancelCountdown();
+    match.phase='playing';match.current=current;saveMatch();screen='playing';render();resetScroll();
+    try{
+      if(current.provider==='spotify'){await E.playSpotify(current.resolved.uri);playing=true;playNeedsTap=false}
+      else{
+        const r=await E.playYouTube('youtubePlayer',current.resolved);playing=!!r.started;playNeedsTap=!!r.needsTap;
+        if(playNeedsTap){const b=document.getElementById('ytStartFallback');b?.classList.remove('hidden');toast('Browser blocked autoplay. Tap Start audio; the video stays obscured.')}
+      }
+    }catch(err){
+      playing=false;
+      if(err?.code==='YOUTUBE_PLAY_FAILED'){toast('That upload would not play. Swapping in another song from the same year.');await replaceCurrentSong();return}
+      toast(errorText(err));
+      if(err?.code?.startsWith('SPOTIFY')){screen='resume';musicModal=true;render()}
+    }
+  }
+
+  function startYouTubeFromTap(){
+    if(!current||current.provider!=='youtube')return;
+    try{E.resumeYouTube();playing=true;playNeedsTap=false;document.getElementById('ytStartFallback')?.classList.add('hidden')}catch{toast('YouTube still could not start. Try again or switch to Spotify.')}
+  }
+
+''')
+
+          s=s.replace(
+              "function advanceTurn(){match.turn=(match.turn+1)%match.teams.length;match.round++;current=null;placementResult=null;pendingSlot=null;match.current=null;match.placementResult=null;match.phase='between';saveMatch();if(winner())endGame('target');else nextRound()}",
+              "function advanceTurn(){if(!match)return;match.turn=(match.turn+1)%match.teams.length;match.round++;saveMatch();nextRound()}"
+          )
+          s=s.replace("function finishPhysical(keep){if(keep)activeTeam().score++;advanceTurn()}","function finishPhysical(keep){if(screen!=='reveal'||!match)return;if(keep)activeTeam().score++;advanceTurn()}")
+          s=s.replace("function finishVirtualTurn(){advanceTurn()}","function finishVirtualTurn(){if(screen!=='reveal'||!match)return;advanceTurn()}")
+          s=s.replace("prepareSeq++;stopScanner();stopPlayback();E.destroyYouTube();", "cancelCountdown();prepareSeq++;stopScanner();stopPlayback();E.destroyYouTube();")
+          s=s.replace("'YouTube playback is the universal fallback. A visible player is required and autoplay can be restricted by the browser.'", "'YouTube playback is the universal fallback. The picture is obscured during guessing; some browsers may require a second tap to start audio.'")
+          s=s.replace("<small>No login · ads/player UI possible</small>","<small>No login · picture obscured during guessing</small>")
+          p.write_text(s)
+
+          p=Path('app.css');c=p.read_text()
+          c += r'''
+
+/* v7.2 gameplay hotfix */
+.ready-visual{width:min(78vw,390px);aspect-ratio:1/1.04;margin:20px auto 18px;position:relative;display:grid;place-items:center;overflow:hidden;border-radius:34px;border:1px solid #54e5c12e;background:radial-gradient(circle at 50% 42%,#1c6a5c45,#071014 58%,#04080a 100%);box-shadow:0 24px 70px #0009,inset 0 1px #ffffff0d}.ready-glow{position:absolute;width:72%;height:72%;border-radius:50%;background:radial-gradient(circle,#55e4c130,transparent 66%);filter:blur(12px)}.ready-phone{position:relative;width:45%;aspect-ratio:.54;border:3px solid #69eac9;border-radius:28px;background:#081619;box-shadow:0 0 32px #38dcb778,0 22px 50px #000a;transform:rotate(-7deg);padding:10px}.ready-phone-screen{height:86%;border-radius:19px;border:1px solid #5de9c94a;background:radial-gradient(circle at 50% 38%,#183e39,#071014 70%);display:grid;place-items:center}.ready-phone-screen span{font-family:var(--serif);font-size:76px;color:var(--mint);text-shadow:0 0 24px #55e4c188}.ready-phone i{display:block;width:22%;height:5px;border-radius:99px;background:#5de9c977;margin:8px auto 0}
+.countdown-wrap{min-height:68dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.countdown-number{font-family:var(--serif);font-size:clamp(150px,45vw,260px);line-height:.78;color:var(--mint);text-shadow:0 0 55px #45e1ba55;margin:28px 0 22px}.countdown-wrap h1{font-family:var(--serif);font-size:50px;font-weight:500}.countdown-wrap p{color:var(--muted);font-size:17px;margin-top:10px}
+.youtube-stage{position:relative;margin:14px auto 0;width:min(100%,520px);border-radius:22px;overflow:hidden;border:1px solid #5ce3c035;background:#020506;min-height:180px}.youtube-stage .youtube-player{margin:0;width:100%;border-radius:0}.youtube-obscured iframe{filter:blur(34px) brightness(.10) saturate(.25);transform:scale(1.16);pointer-events:none}.youtube-mask{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle,#0b2421d9,#020607f2 72%);pointer-events:none}.youtube-mask strong{font-family:var(--serif);font-size:34px;font-weight:500;color:var(--mint)}.youtube-mask span{margin-top:5px;color:#9ba9a8;font-size:13px}.yt-start-fallback{display:block;width:min(100%,520px);margin:10px auto 0}
+.answer-art{background:radial-gradient(circle at 50% 50%,#061113 0 22%,#55e4c1 23% 25%,#0c1c1e 26% 43%,#55e4c133 44% 46%,#071014 47% 100%)!important}
+'''
+          p.write_text(c)
+
+          p=Path('index.html');h=p.read_text()
+          h=h.replace('app.css?v=7.1','app.css?v=7.2').replace('engine.js?v=7.1','engine.js?v=7.2').replace('engine-v7.js?v=7.1','engine-v7.js?v=7.2').replace('app.js?v=7.1','app.js?v=7.2')
+          h=h.replace('app.css?v=7','app.css?v=7.2').replace('engine.js?v=7','engine.js?v=7.2').replace('engine-v7.js?v=7','engine-v7.js?v=7.2').replace('app.js?v=7','app.js?v=7.2')
+          p.write_text(h)
+
+          p=Path('.github/workflows/validate.yml');v=p.read_text()
+          v=v.replace("'popstate','end-game']", "'popstate','end-game','countdownScreen','scanBusy','startYouTubeFromTap']")
+          p.write_text(v)
+          PY
+          node --check app.js
+          python scripts/validate_catalogue.py
+          grep -q "v=7.2" index.html
+          grep -q "youtube-obscured" app.js
+          grep -q "countdownScreen" app.js
+          grep -q "scanBusy" app.js
+      - name: Commit hotfix
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app.js app.css index.html .github/workflows/validate.yml
+          git rm .github/workflows/hotfix-round-youtube.yml
+          git commit -m "Fix round reset, scanner lifecycle and YouTube concealment"
+          git pull --rebase origin main
+          git push
