@@ -11,7 +11,7 @@
   const malformedArtist=/[a-zà-ÿ][A-Z]/;
 
   function useKey(song){
-    return String(song?.spotifyId||song?.youtubeId||E.songKey(song));
+    return E.songKey(song);
   }
 
   function quality(song){
@@ -26,12 +26,12 @@
 
   function dedupe(pool){
     const ranked=[...pool].sort((a,b)=>quality(b)-quality(a));
-    const out=[],seen=new Set();
+    const out=[],songs=new Set(),spotify=new Set(),youtube=new Set();
     for(const song of ranked){
       if(!song||!song.title||!song.artist)continue;
-      const key=useKey(song);
-      if(seen.has(key))continue;
-      seen.add(key);out.push(song);
+      const canonical=useKey(song),sp=String(song.spotifyId||''),yt=String(song.youtubeId||'');
+      if(songs.has(canonical)||(sp&&spotify.has(sp))||(yt&&youtube.has(yt)))continue;
+      songs.add(canonical);if(sp)spotify.add(sp);if(yt)youtube.add(yt);out.push(song);
     }
     return out;
   }
@@ -48,7 +48,7 @@
     if(clean.length)pool=clean;
 
     const used=new Set(usedKeys||[]);
-    const available=pool.filter(song=>!used.has(useKey(song))&&!used.has(E.songKey(song)));
+    const available=pool.filter(song=>!used.has(useKey(song)));
     if(!available.length)throw new E.AppError('NO_UNUSED_SONG',`Every ${year} song in this game has already been used. Scan or deal a new card.`);
 
     return {...available[Math.floor(Math.random()*available.length)]};
