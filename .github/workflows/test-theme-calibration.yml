@@ -1,0 +1,40 @@
+name: Test themed year calibration
+
+on:
+  push:
+    branches: [feature/verified-playlists-v11]
+    paths:
+      - .github/workflows/test-theme-calibration.yml
+      - scripts/theme_release_groups.py
+      - scripts/build_catalogue_v10.py
+
+jobs:
+  calibrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install requests beautifulsoup4
+      - name: Verify known original years
+        run: |
+          python - <<'PY'
+          import sys
+          sys.path.insert(0,'scripts')
+          import theme_release_groups as t
+          anchors=[
+            ('Stand by Me','Ben E. King',1961),
+            ('Jailhouse Rock','Elvis Presley',1957),
+            ('The Twist','Chubby Checker',1960),
+            ('Shout','The Isley Brothers',1959),
+            ('I Want to Hold Your Hand','The Beatles',1963),
+            ('Levitating','Dua Lipa',2020),
+            ('Old Town Road','Lil Nas X',2018),
+          ]
+          for title,artist,year in anchors:
+              e=t.confirm_theme_year(title,artist)
+              print(title,'=>',e)
+              assert e and e['year']==year,(title,e,year)
+          print('strict themed year calibration passed')
+          PY
