@@ -1,4 +1,4 @@
-name: No-repeat gameplay and deep catalogue
+name: Deep Greatest Hits catalogue
 
 on:
   push:
@@ -9,8 +9,12 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: deep-greatest-hits-catalogue
+  cancel-in-progress: true
+
 jobs:
-  patch-build-validate:
+  build-validate:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
@@ -19,44 +23,65 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install builder dependencies
-        run: pip install requests
-      - name: Apply gameplay and catalogue architecture patch
-        run: python scripts/patch_no_repeat_results.py
-      - name: Widen verified release candidate chart window
+        run: pip install requests beautifulsoup4
+      - name: Promote full-year catalogue builder
+        run: cp scripts/build_catalogue_v8.py scripts/build_catalogue.py
+      - name: Rebuild prebuilt Greatest Hits catalogue
+        run: python scripts/build_catalogue.py
+      - name: Install deep catalogue validation gates
         run: |
           python - <<'PY'
           from pathlib import Path
-          p=Path('scripts/build_catalogue.py')
+          import json
+
+          p=Path('scripts/validate_catalogue.py')
           s=p.read_text()
-          old="rows=sorted([r for r in bim if r['chartYear']==year],key=lambda r:r['rank'])[:50]"
-          new="rows=sorted([r for r in bim if year<=r['chartYear']<=min(YEARS[-1],year+2)],key=lambda r:((r['chartYear']-year),r['rank']))[:120]"
-          if old not in s: raise SystemExit('candidate row selector not found')
-          s=s.replace(old,new,1)
-          old="ranked.append((best['rank'],-score,-f['mbScore'],f))"
-          new="ranked.append(((best['chartYear']-year)*100+best['rank'],-score,-f['mbScore'],f))"
-          if old not in s: raise SystemExit('ranking selector not found')
-          s=s.replace(old,new,1)
+          s=s.replace('    warnings = []\n', '    warnings = []\n    min_unique_required = 8\n')
+          s=s.replace("        if unique < 1:\n            fail(f'{year} has no unique playable candidate')", "        if unique < min_unique_required:\n            fail(f'{year} has only {unique} unique songs; need at least {min_unique_required}')")
+          s=s.replace("    app = APP.read_text(encoding='utf-8')", "    if set(data.get('modes', {})) != {'greatest'}:\n        fail('catalogue must contain only the active Greatest Hits mode')\n\n    app = APP.read_text(encoding='utf-8')")
           p.write_text(s)
+
+          p=Path('data/catalogue.schema.json')
+          schema=json.loads(p.read_text())
+          year_schema=schema['properties']['modes']['properties']['greatest']['patternProperties']['^(19[5-9][0-9]|20[0-2][0-9])$']
+          year_schema['minItems']=8
+          p.write_text(json.dumps(schema, ensure_ascii=False, indent=2)+'\n')
           PY
-      - name: Add verified Wikidata fallback for sparse years
-        run: python scripts/augment_builder_wikidata.py
-      - name: Rebuild prebuilt Greatest Hits catalogue
-        run: python scripts/build_catalogue.py
-      - name: Validate app and deep catalogue
+      - name: Validate deep catalogue
         run: |
           node --check app.js
           node --check engine-v7.js
           python scripts/validate_catalogue.py
           python -m json.tool data/catalogue.schema.json >/dev/null
-          grep -q 'data-action="new-card"' app.js
-          grep -q 'Wrong answer' app.js
-          grep -q 'NO_UNUSED_SONG' engine-v7.js
-          grep -q 'v=7.3.0' index.html
-      - name: Commit completed gameplay and catalogue rebuild
+          python - <<'PY'
+          import json,re
+          from pathlib import Path
+          d=json.loads(Path('data/catalogue.json').read_text())
+          g=d['modes']['greatest']
+          sizes={int(y):len(v) for y,v in g.items()}
+          assert len(sizes)==73, len(sizes)
+          assert min(sizes.values())>=8, min(sizes.values())
+          assert sum(sizes.values())>=584, sum(sizes.values())
+          global_seen={}
+          for year,pool in g.items():
+              local=set()
+              for s in pool:
+                  k=(re.sub(r'[^a-z0-9]+',' ',s['title'].lower()).strip(), re.sub(r'[^a-z0-9]+',' ',s['artist'].lower()).strip())
+                  assert k not in local,(year,k)
+                  local.add(k)
+                  assert int(s['year'])==int(year),(year,s)
+                  assert s.get('yearEvidence')=='MusicBrainz first-release-date',(year,s)
+                  prior=global_seen.get(k)
+                  assert prior in (None,year),(k,prior,year)
+                  global_seen[k]=year
+          print('pool stats', {'min':min(sizes.values()),'max':max(sizes.values()),'total':sum(sizes.values())})
+          PY
+      - name: Commit deep prebuilt catalogue
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add app.js engine-v7.js index.html scripts/build_catalogue.py scripts/validate_catalogue.py data/catalogue.json data/catalogue.schema.json
-          git commit -m "Add explicit wrong answers, new-card replacement, and deep no-repeat catalogue"
+          git rm scripts/build_catalogue_v8.py
+          git add scripts/build_catalogue.py scripts/validate_catalogue.py data/catalogue.json data/catalogue.schema.json
+          git commit -m "Build deep verified Greatest Hits catalogue"
           git pull --rebase origin main
           git push
