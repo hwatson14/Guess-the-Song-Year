@@ -42,9 +42,9 @@ _chart_cache = {}
 _year_cache = {}
 
 VERSION_MARKER = re.compile(
-    r'\b(?:karaoke|tribute|demo|live|remix|re[- ]?mix|mix|edit|version|acoustic|unplugged|'
-    r'a cappella|acapella|backing(?: track)?|instrumental|bootleg|mashup|refix|rework|'
-    r'preview|playback|deluxe|bonus|voice note|alternate|alternative|'
+    r'\b(?:karaoke|tribute|demo|live|remix|re[- ]?mix|mix|edit|version|recording|master|radio|single|album|vocal|acoustic|unplugged|'
+    r'a cappella|acapella|backing(?: track)?|instrumental|strumentale|base musicale|bootleg|mashup|refix|rework|'
+    r'preview|playback|deluxe|bonus|voice note|alternate|alternative|original|rehearsal|session|concert|'
     r'remaster(?:ed)?(?:\s*\d{4})?|radio edit|radio version|single edit|single version|'
     r'album version|extended(?: version| edit| mix)?|club mix|dance mix|original mix|'
     r'dub(?: version| mix)?|mono|stereo|sped up|slowed|re[- ]?record(?:ed)?|'
