@@ -2,8 +2,9 @@
 """Build the one-mode prebuilt Greatest Hits catalogue.
 
 Candidate ranking: full Billboard year-end singles table for each chart year.
+Canonical song identity: Billboard title + artist.
 Year truth: MusicBrainz first-release year from recording and/or release-group search.
-A chart-year candidate is admitted only when a MusicBrainz entity verifies the target release year.
+A chart candidate is admitted only when a MusicBrainz entity verifies the target release year.
 """
 import csv
 import io
@@ -12,7 +13,6 @@ import re
 import time
 import unicodedata
 from pathlib import Path
-from urllib.parse import quote
 
 import requests
 from bs4 import BeautifulSoup
@@ -105,7 +105,6 @@ def bimmuda_lookup():
 def wikipedia_page_title(year):
     if year >= 1960:
         return f'Billboard Year-End Hot 100 singles of {year}'
-    # Early Billboard year-end pages used several naming conventions.
     q = f'Billboard year-end singles {year}'
     data = get(WIKI_API, params={'action': 'query', 'list': 'search', 'srsearch': q, 'srlimit': 10, 'format': 'json', 'origin': '*'}).json()
     hits = data.get('query', {}).get('search', [])
@@ -129,19 +128,25 @@ def wikipedia_page_title(year):
     return ranked[0][1]
 
 
+def clean_chart_text(v):
+    v = clean(v)
+    v = re.sub(r'\s*\[[^\]]+\]\s*$', '', v).strip()
+    return v
+
+
 def billboard_year_rows(year):
-    title = wikipedia_page_title(year)
-    payload = get(WIKI_API, params={'action': 'parse', 'page': title, 'prop': 'text', 'format': 'json', 'origin': '*'}).json()
+    page_title = wikipedia_page_title(year)
+    payload = get(WIKI_API, params={'action': 'parse', 'page': page_title, 'prop': 'text', 'format': 'json', 'origin': '*'}).json()
     html = payload.get('parse', {}).get('text', {}).get('*', '')
     if not html:
-        raise RuntimeError(f'Wikipedia returned no chart table for {year}: {title}')
+        raise RuntimeError(f'Wikipedia returned no chart table for {year}: {page_title}')
     soup = BeautifulSoup(html, 'html.parser')
     best = []
     for table in soup.select('table.wikitable'):
         trs = table.find_all('tr')
         if not trs:
             continue
-        heads = [clean(x.get_text(' ', strip=True)).lower() for x in trs[0].find_all(['th', 'td'])]
+        heads = [clean_chart_text(x.get_text(' ', strip=True)).lower() for x in trs[0].find_all(['th', 'td'])]
         ti = next((i for i, h in enumerate(heads) if h == 'title' or 'title' in h or h == 'single'), None)
         ai = next((i for i, h in enumerate(heads) if 'artist' in h), None)
         ri = next((i for i, h in enumerate(heads) if h in ('no.', 'no', 'rank', 'position') or 'rank' in h), 0)
@@ -149,21 +154,32 @@ def billboard_year_rows(year):
             continue
         rows = []
         for tr in trs[1:]:
-            cells = [clean(x.get_text(' ', strip=True)) for x in tr.find_all(['th', 'td'])]
+            cells = [clean_chart_text(x.get_text(' ', strip=True)) for x in tr.find_all(['th', 'td'])]
             if len(cells) <= max(ti, ai, ri):
                 continue
             m = re.search(r'\d+', cells[ri])
             if not m:
                 continue
-            song_title = re.split(r'\s+/\s+', cells[ti], maxsplit=1)[0].strip('“”"')
-            artist = re.split(r';|\s+with\s+|\s+featuring\s+', cells[ai], maxsplit=1, flags=re.I)[0].strip()
-            if song_title and artist:
-                rows.append({'rank': int(m.group()), 'title': song_title, 'artist': artist, 'chartYear': year})
+            artist = cells[ai].strip()
+            # Early charts can list both sides of a hit single as "A / B". Treat each title as a
+            # separate candidate while preserving the shared chart rank.
+            titles = [x.strip('“”" ') for x in re.split(r'\s+/\s+', cells[ti]) if x.strip('“”" ')]
+            for song_title in titles:
+                if song_title and artist:
+                    rows.append({'rank': int(m.group()), 'title': song_title, 'artist': artist, 'chartYear': year})
         if len(rows) > len(best):
             best = rows
     if len(best) < MIN_POOL:
-        raise RuntimeError(f'Only parsed {len(best)} Billboard candidates for {year}: {title}')
-    return sorted(best, key=lambda x: x['rank'])
+        raise RuntimeError(f'Only parsed {len(best)} Billboard candidates for {year}: {page_title}')
+    # Deduplicate the canonical chart entries before verification.
+    deduped, seen = [], set()
+    for row in sorted(best, key=lambda x: x['rank']):
+        k = song_key(row['title'], row['artist'])
+        if k in seen:
+            continue
+        seen.add(k)
+        deduped.append(row)
+    return deduped
 
 
 def artist_credit(entity):
@@ -189,67 +205,60 @@ def collect_verified(endpoint, result_key, year, chunk):
         date = clean(entity.get('first-release-date'))
         if not date.startswith(str(year)):
             continue
-        title = clean(entity.get('title'))
-        artist = artist_credit(entity)
-        if not title or not artist:
+        matched_title = clean(entity.get('title'))
+        matched_artist = artist_credit(entity)
+        if not matched_title or not matched_artist:
             continue
-        if re.search(r'karaoke|tribute|demo|live|remix|instrumental|acoustic|backing track', title, re.I):
+        if re.search(r'karaoke|tribute|demo|live|remix|instrumental|acoustic|backing track', matched_title, re.I):
             continue
-        # Match the verified MB entity back to one of the known Billboard candidates.
         matches = []
         for row in chunk:
-            score = sim(title, row['title']) * 2 + sim(artist, row['artist'])
+            score = sim(matched_title, row['title']) * 2 + sim(matched_artist, row['artist'])
             matches.append((score, row))
         score, row = max(matches, key=lambda x: x[0])
         if score < 1.35:
             continue
+        # Billboard is the canonical display identity. The MusicBrainz match is evidence only.
         out.append((row, {
-            'title': title,
-            'artist': artist,
+            'title': row['title'],
+            'artist': row['artist'],
             'year': year,
             'mbScore': float(entity.get('score') or 0),
             'yearEvidence': 'MusicBrainz first-release-date',
             'musicbrainzId': clean(entity.get('id')),
+            'musicbrainzMatchedTitle': matched_title,
+            'musicbrainzMatchedArtist': matched_artist,
         }))
     return out
 
 
 def verified_pool(year, rows, playback):
     found = {}
-    # Work chart rank downward, stopping as soon as we have enough strong unique songs.
     for start in range(0, len(rows), 10):
         chunk = rows[start:start + 10]
         results = collect_verified(MB_RECORDING, 'recordings', year, chunk)
-        # Release-group first-release dates recover songs whose recording-level date is absent.
         if len(results) < len(chunk):
             results += collect_verified(MB_RELEASE_GROUP, 'release-groups', year, chunk)
         for row, song in results:
-            k = song_key(song['title'], song['artist'])
+            k = song_key(row['title'], row['artist'])
             current = found.get(k)
             rank_score = row['rank']
-            if current is None or rank_score < current[0]:
+            if current is None or song.get('mbScore', 0) > current[2].get('mbScore', 0):
                 found[k] = (rank_score, row, song)
         if len(found) >= TARGET_POOL * 2:
             break
 
     ranked = sorted(found.values(), key=lambda x: (x[0], -x[2].get('mbScore', 0)))
-    pool, seen = [], set()
-    for rank, row, song in ranked:
-        canonical = song_key(song['title'], song['artist'])
-        if canonical in seen:
-            continue
-        seen.add(canonical)
+    pool = []
+    for rank, row, song in ranked[:TARGET_POOL]:
         song['source'] = 'billboard-release-year-verified'
         song['sourceLabel'] = f'Billboard year-end #{rank} · release year verified'
-        # Attach a playback ID when BiMMuDa happens to contain the same title/artist.
-        ids = playback.get(song_key(row['title'], row['artist'])) or playback.get(canonical) or {}
+        ids = playback.get(song_key(row['title'], row['artist'])) or {}
         song['spotifyId'] = ids.get('spotifyId', '')
         song['youtubeId'] = ids.get('youtubeId', '')
         pool.append(song)
-        if len(pool) >= TARGET_POOL:
-            break
     if len(pool) < MIN_POOL:
-        raise RuntimeError(f'{year} produced only {len(pool)} verified Billboard songs; need {MIN_POOL}')
+        raise RuntimeError(f'{year} produced only {len(pool)} verified distinct Billboard songs; need {MIN_POOL}')
     return pool
 
 
@@ -262,7 +271,7 @@ def main():
         rows = billboard_year_rows(year)
         pool = verified_pool(year, rows, playback)
         greatest[str(year)] = pool
-        print(' ', len(pool), 'verified songs', flush=True)
+        print(' ', len(pool), 'verified distinct songs', flush=True)
 
     sizes = [len(v) for v in greatest.values()]
     data = {
@@ -272,7 +281,7 @@ def main():
         'modes': {'greatest': greatest},
         'coverage': {'greatest': len(greatest)},
         'sources': {
-            'greatest': 'Full Billboard year-end singles tables used for hit ranking; MusicBrainz first-release-date used for answer-year verification.'
+            'greatest': 'Full Billboard year-end singles tables provide canonical hit identity/ranking; MusicBrainz first-release-date verifies the answer year.'
         },
         'poolStats': {'targetPerYear': TARGET_POOL, 'minimumPerYear': min(sizes), 'maximumPerYear': max(sizes), 'totalSongs': sum(sizes)},
     }
