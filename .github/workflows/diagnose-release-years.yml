@@ -1,0 +1,62 @@
+name: Diagnose release year semantics
+
+on:
+  push:
+    branches: [feature/verified-playlists-v11]
+    paths: [.github/workflows/diagnose-release-years.yml]
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install requests beautifulsoup4
+      - name: Compare recording and release-group earliest dates
+        run: |
+          python - <<'PY'
+          import re,sys,time
+          sys.path.insert(0,'scripts')
+          import build_catalogue_v10 as b
+
+          RG='https://musicbrainz.org/ws/2/release-group/'
+          tests=[
+            ('Stand by Me','Ben E. King'),
+            ('Jailhouse Rock','Elvis Presley'),
+            ('The Twist','Chubby Checker'),
+            ("I'm a Believer",'The Monkees'),
+            ('Shout','The Isley Brothers'),
+            ('Heartbreak Hotel','Elvis Presley'),
+            ('I Want to Hold Your Hand','The Beatles'),
+            ('Old Town Road','Lil Nas X'),
+            ('Uptown Funk','Mark Ronson'),
+            ('Levitating','Dua Lipa'),
+            ('Heat Waves','Glass Animals'),
+          ]
+
+          def rg_artist(entity):
+              return ''.join(x if isinstance(x,str) else x.get('name') or (x.get('artist') or {}).get('name') or '' for x in entity.get('artist-credit',[])).strip()
+
+          def rg_year(title,artist):
+              q=f'releasegroup:"{b.lucene(b.base_title(title))}" AND artistname:"{b.lucene(b.primary_artist(artist))}"'
+              data=b.get(RG,params={'fmt':'json','limit':100,'query':q},headers={'Accept':'application/json','User-Agent':b.UA}).json()
+              valid=[]
+              for e in data.get('release-groups',[]):
+                  date=b.clean(e.get('first-release-date'))
+                  et=b.clean(e.get('title'));ea=rg_artist(e)
+                  if not re.match(r'^\d{4}',date) or not et or b.is_explicit_alternate_title(et):continue
+                  ts=b.sim(b.base_title(et),b.base_title(title))
+                  ars=max(b.sim(ea,artist),b.sim(b.primary_artist(ea),b.primary_artist(artist)))
+                  if ts<0.60 or ars<0.45 or ts*2+ars<1.70:continue
+                  valid.append((int(date[:4]),-ts*2-ars,-float(e.get('score') or 0),e.get('id'),et,ea))
+              return sorted(valid)[0] if valid else None
+
+          print('title\trecording_year\trelease_group_year\trelease_group_match')
+          for title,artist in tests:
+              rec=b.confirm_release_year({'title':title,'artist':artist})
+              rg=rg_year(title,artist)
+              print(f'{title}\t{rec and rec["year"]}\t{rg and rg[0]}\t{rg and (rg[4],rg[5])}')
+              time.sleep(0.2)
+          PY
