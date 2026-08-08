@@ -24,4 +24,6 @@ Music provider setup is separate from the game rules and opens as a lightweight 
 
 ## Catalogue
 
-The catalogue is prebuilt so runtime APIs resolve playback, rather than decide which song belongs to a deck. Modes are Greatest Hits, Australian, Unexpected Years, #1 US and #1 Australia.
+The catalogue is prebuilt so runtime APIs resolve playback, rather than decide which song belongs in a deck. Modes are Greatest Hits, Australian, Unexpected Years, #1 US and #1 Australia.
+
+The v6 app intentionally has one UI shell only. Legacy dashboard, v4 and experimental UX layers have been removed.
