@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - .github/workflows/no-repeat-results-hotfix.yml
+      - scripts/build_catalogue_v8.py
 
 permissions:
   contents: write
@@ -16,7 +17,7 @@ concurrency:
 jobs:
   build-validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
@@ -24,7 +25,7 @@ jobs:
           python-version: '3.12'
       - name: Install builder dependencies
         run: pip install requests beautifulsoup4
-      - name: Promote full-year catalogue builder
+      - name: Promote verified catalogue builder
         run: cp scripts/build_catalogue_v8.py scripts/build_catalogue.py
       - name: Rebuild prebuilt Greatest Hits catalogue
         run: python scripts/build_catalogue.py
@@ -36,9 +37,11 @@ jobs:
 
           p=Path('scripts/validate_catalogue.py')
           s=p.read_text()
-          s=s.replace('    warnings = []\n', '    warnings = []\n    min_unique_required = 8\n')
+          if 'min_unique_required = 8' not in s:
+              s=s.replace('    warnings = []\n', '    warnings = []\n    min_unique_required = 8\n')
           s=s.replace("        if unique < 1:\n            fail(f'{year} has no unique playable candidate')", "        if unique < min_unique_required:\n            fail(f'{year} has only {unique} unique songs; need at least {min_unique_required}')")
-          s=s.replace("    app = APP.read_text(encoding='utf-8')", "    if set(data.get('modes', {})) != {'greatest'}:\n        fail('catalogue must contain only the active Greatest Hits mode')\n\n    app = APP.read_text(encoding='utf-8')")
+          if "set(data.get('modes', {})) != {'greatest'}" not in s:
+              s=s.replace("    app = APP.read_text(encoding='utf-8')", "    if set(data.get('modes', {})) != {'greatest'}:\n        fail('catalogue must contain only the active Greatest Hits mode')\n\n    app = APP.read_text(encoding='utf-8')")
           p.write_text(s)
 
           p=Path('data/catalogue.schema.json')
@@ -47,8 +50,23 @@ jobs:
           year_schema['minItems']=8
           p.write_text(json.dumps(schema, ensure_ascii=False, indent=2)+'\n')
           PY
+      - name: Cache-bust rebuilt catalogue
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          p=Path('engine.js')
+          s=p.read_text().replace("./data/catalogue.json?v=6", "./data/catalogue.json?v=8")
+          p.write_text(s)
+          p=Path('index.html')
+          h=p.read_text()
+          for asset in ['app.css','engine.js','engine-v7.js','app.js']:
+              h=re.sub(rf'{re.escape(asset)}\?v=[^"\']+',f'{asset}?v=7.3.1',h)
+          p.write_text(h)
+          PY
       - name: Validate deep catalogue
         run: |
+          node --check engine.js
           node --check app.js
           node --check engine-v7.js
           node scripts/test_engine_v7.mjs
@@ -63,6 +81,7 @@ jobs:
           assert len(sizes)==73, len(sizes)
           assert min(sizes.values())>=8, min(sizes.values())
           assert sum(sizes.values())>=584, sum(sizes.values())
+          assert d.get('poolStats',{}).get('chartLookaheadYears')==2,d.get('poolStats')
           def norm(v):
               return re.sub(r'[^a-z0-9]+',' ',unicodedata.normalize('NFKD',str(v)).encode('ascii','ignore').decode().lower()).strip()
           global_seen={}
@@ -76,17 +95,20 @@ jobs:
                   assert int(s['year'])==int(year),(year,s)
                   assert s.get('yearEvidence')=='MusicBrainz first-release-date',(year,s)
                   assert not bad_variant.search(s['title']),s
+                  assert int(s.get('chartYear',year))>=int(year),(year,s)
+                  assert int(s.get('chartYear',year))<=int(year)+2,(year,s)
                   prior=global_seen.get(k)
                   assert prior in (None,year),(k,prior,year)
                   global_seen[k]=year
           print('pool stats', {'min':min(sizes.values()),'max':max(sizes.values()),'total':sum(sizes.values())})
           PY
+          grep -q "catalogue.json?v=8" engine.js
+          grep -q "v=7.3.1" index.html
       - name: Commit deep prebuilt catalogue
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git rm scripts/build_catalogue_v8.py
-          git add scripts/build_catalogue.py scripts/validate_catalogue.py data/catalogue.json data/catalogue.schema.json
+          git add scripts/build_catalogue.py scripts/build_catalogue_v8.py scripts/validate_catalogue.py data/catalogue.json data/catalogue.schema.json engine.js index.html
           git commit -m "Build deep canonical verified Greatest Hits catalogue"
           git pull --rebase origin main
           git push
