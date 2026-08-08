@@ -38,6 +38,8 @@ jobs:
           s=s.replace(old,new,1)
           p.write_text(s)
           PY
+      - name: Add verified Wikidata fallback for sparse years
+        run: python scripts/augment_builder_wikidata.py
       - name: Rebuild prebuilt Greatest Hits catalogue
         run: python scripts/build_catalogue.py
       - name: Validate app and deep catalogue
