@@ -1,0 +1,46 @@
+name: Dedupe same-title covers
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/dedupe-same-title-covers.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - run: pip install requests beautifulsoup4
+      - name: Require different underlying titles within each year
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('scripts/build_catalogue_v10.py')
+          s=p.read_text()
+          old="""    confirmed = {}\n    screened = set()\n\n    for row in rows:\n"""
+          new="""    confirmed = {}\n    confirmed_titles = set()\n    screened = set()\n\n    for row in rows:\n"""
+          if old not in s: raise SystemExit('verified_pool initialization point not found')
+          s=s.replace(old,new,1)
+          old="""        title, artist = canonical_display(row, evidence)\n        canonical = underlying_key(title, artist)\n        if canonical in confirmed or is_explicit_alternate_title(title):\n            continue\n\n        rank_score = int(row.get('rankScore', row['rank']))\n"""
+          new="""        title, artist = canonical_display(row, evidence)\n        canonical = underlying_key(title, artist)\n        title_key = norm(base_title(title))\n        # Two performers of the same chart song are still poor variety (common in 1950s).\n        # Keep the higher-ranked recording and continue until a different song replaces it.\n        if canonical in confirmed or title_key in confirmed_titles or is_explicit_alternate_title(title):\n            continue\n\n        rank_score = int(row.get('rankScore', row['rank']))\n"""
+          if old not in s: raise SystemExit('canonical acceptance point not found')
+          s=s.replace(old,new,1)
+          old="""        confirmed[canonical] = (rank_score, song)\n\n        if len(confirmed) >= target_pool:\n"""
+          new="""        confirmed[canonical] = (rank_score, song)\n        confirmed_titles.add(title_key)\n\n        if len(confirmed) >= target_pool:\n"""
+          if old not in s: raise SystemExit('confirmed insertion point not found')
+          s=s.replace(old,new,1)
+          p.write_text(s)
+          PY
+          python -m py_compile scripts/build_catalogue_v10.py
+      - name: Commit title dedupe
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/build_catalogue_v10.py
+          git commit -m "Replace same-title cover duplicates"
+          git pull --rebase origin main
+          git push
