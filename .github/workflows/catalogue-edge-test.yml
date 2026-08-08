@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install requests beautifulsoup4
-      # Final v10 preflight: exact year verification plus underlying-song/version identity.
+      # Final v10 preflight after expanding edit/version/rework detection.
       - name: Verify sparse years, canonical versions and chart-year traps
         run: |
           python - <<'PY'
@@ -62,10 +62,17 @@ jobs:
           assert 'shivers' not in titles(2022)
           assert 'bad habits' not in titles(2022)
 
+          alternate_examples=[
+              'Example (Live)','Example (Pop edit)','Example (LP version)','Example (dub version)',
+              'Example (solo vocal)','Example (Erol Alkan rework)','Example (Benny Royal ReFix)',
+              'Example (acoustic MTV unplugged)','Example (alternative version)',
+              'Example (voice note)','Example (full version)','Example (Deluxe Ultra edit)'
+          ]
+          for title in alternate_examples:
+              assert b.is_explicit_alternate_title(title),title
           assert b.underlying_key('Example - 2011 Remaster','Artist')==b.underlying_key('Example','Artist')
           assert b.underlying_key('Example (Radio Edit)','Artist feat. Guest')==b.underlying_key('Example','Artist')
           assert b.underlying_key('Example (feat. Guest)','Artist and Guest')==b.underlying_key('Example','Artist')
-          assert b.is_explicit_alternate_title('Example (Live)')
-          assert not b.is_explicit_alternate_title('Live and Let Die')
-          assert not b.is_explicit_alternate_title('I Want to Live')
+          for genuine in ['Live and Let Die','I Want to Live','Another Brick in the Wall (Part II)','Alone Again (Naturally)']:
+              assert not b.is_explicit_alternate_title(genuine),genuine
           PY
