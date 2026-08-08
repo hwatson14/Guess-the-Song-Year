@@ -28,6 +28,7 @@ jobs:
         run: pip install requests beautifulsoup4
       - name: Promote canonical single-mode builder
         run: cp scripts/build_catalogue_v10.py scripts/build_catalogue.py
+      # Exact per-candidate recording verification is deliberate: batch OR searches dropped valid old songs.
       - name: Rebuild prebuilt Greatest Hits catalogue
         run: python scripts/build_catalogue.py
       - name: Validate JavaScript and no-repeat identity
@@ -76,7 +77,6 @@ jobs:
                   assert int(s['chartYear'])>=year,(year,s)
                   assert int(s['chartYear'])<=year+2,(year,s)
 
-          # Known chart-year traps: these songs were released earlier and must not be relabelled.
           titles=lambda y:{b.norm(s['title']) for s in g[str(y)]}
           for title in ['blinding lights','levitating','save your tears']:
               assert title not in titles(2021),(title,2021)
