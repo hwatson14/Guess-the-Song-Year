@@ -1,0 +1,34 @@
+name: Assemble v6 source
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    if: ${{ hashFiles('.build/engine.js.gz') != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Assemble source
+        run: |
+          gzip -dc .build/engine.js.gz > engine.js
+          gzip -dc .build/app.js.gz > app.js
+          mkdir -p scripts
+          gzip -dc .build/build_catalogue.py.gz > scripts/build_catalogue.py
+          node --check engine.js
+          node --check app.js
+          python -m py_compile scripts/build_catalogue.py
+      - name: Commit source and remove staging files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add engine.js app.js scripts/build_catalogue.py
+          git rm -r .build
+          git rm .github/workflows/assemble-v6.yml
+          git commit -m "Complete consolidated v6 source"
+          git push

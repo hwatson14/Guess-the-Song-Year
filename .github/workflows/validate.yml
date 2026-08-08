@@ -1,0 +1,32 @@
+name: Validate app
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Validate JavaScript
+        run: |
+          node --check engine.js
+          node --check app.js
+      - name: Validate consolidated shell
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          html=Path('index.html').read_text()
+          assert 'engine.js' in html and 'app.js' in html and 'app.css' in html
+          for old in ['ux-hitster.js','ux-v4.js','modeGrid','choicePanel']:
+              assert old not in html, old
+          js=Path('app.js').read_text()
+          for token in ['Play style','Deck','Teams','Victory target','physical','virtual','lock-placement']:
+              assert token in js, token
+          print('consolidated app validated')
+          PY

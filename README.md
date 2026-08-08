@@ -1,17 +1,27 @@
 # Guess the Song Year
 
-Private music timeline game using either the existing physical QR cards or a fully virtual in-app timeline.
+Private music timeline game using the existing 308-card QR deck or a fully virtual deck.
 
-## Current app architecture
+## Architecture
 
-- **Game setup** chooses Real Cards vs Virtual, fixed deck vs choose every song, team count, and victory target.
-- **Real Cards** scans the existing QR deck and uses the physical timeline.
-- **Virtual** generates a shuffled card order from the same 308-card year distribution and requires players to place each song into the correct in-app timeline slot.
-- **Decks** currently include Greatest Hits, Australian, Unexpected Years, #1 US, Rock & Anthems, Dancefloor, and Wildcard. #1 Australia is reserved for the curated Australian annual #1 manifest.
-- **Playback** supports Spotify PKCE and YouTube fallback.
-- Spotify Client ID is preconfigured in the browser app. Tokens are retained in browser storage and refreshed automatically while valid.
-- YouTube search uses the restricted shared API key.
+- `index.html` — minimal app shell
+- `app.css` — one consolidated visual system
+- `engine.js` — card map, static catalogue selection and resilient Spotify/YouTube playback
+- `app.js` — physical/virtual game state and UI
+- `data/catalogue.json` — generated static song catalogue
+- `scripts/build_catalogue.py` — catalogue builder
 
-## Live
+## Game setup
 
-https://hwatson14.github.io/Guess-the-Song-Year/
+Four game options live on one setup screen:
+
+1. Real cards or Virtual
+2. Fixed deck or choose a deck before every song
+3. 1–6 teams
+4. First to 10 cards or Unlimited
+
+Music provider setup is separate from the game rules and opens as a lightweight sheet.
+
+## Catalogue
+
+The catalogue is prebuilt so runtime APIs resolve playback, rather than decide which song belongs to a deck. Modes are Greatest Hits, Australian, Unexpected Years, #1 US and #1 Australia.
