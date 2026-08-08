@@ -486,20 +486,6 @@
     replay();
   }
 
-  async function playCurrent(){
-    if(!current||playing)return;
-    match.phase='playing';match.current=current;saveMatch();screen='playing';render();
-    try{
-      if(current.provider==='spotify'){await E.playSpotify(current.resolved.uri);playing=true;playNeedsTap=false}
-      else{const r=await E.playYouTube('youtubePlayer',current.resolved);playing=!!r.started;playNeedsTap=!!r.needsTap;if(playNeedsTap)toast('YouTube is ready. Tap the visible player to start audio.')}
-    }catch(err){
-      playing=false;
-      if(err?.code==='YOUTUBE_PLAY_FAILED'){toast('That upload would not play. Swapping in another song from the same year.');await replaceCurrentSong();return}
-      toast(errorText(err));
-      if(err?.code?.startsWith('SPOTIFY')){screen='resume';musicModal=true;render()}
-    }
-  }
-
   async function replaceCurrentSong(){
     if(!current)return;
     const seq=++prepareSeq;
