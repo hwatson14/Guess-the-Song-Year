@@ -26,6 +26,7 @@ jobs:
       - name: Validate JavaScript
         run: |
           node --check engine.js
+          node --check engine-v7.js
           node --check app.js
       - name: Validate prebuilt catalogue
         run: |
