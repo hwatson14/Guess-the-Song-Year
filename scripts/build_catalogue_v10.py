@@ -42,13 +42,14 @@ _chart_cache = {}
 _year_cache = {}
 
 VERSION_MARKER = re.compile(
-    r'\b(?:karaoke|tribute|demo|live|remix|re[- ]?mix|mix|acoustic|a cappella|acapella|'
-    r'backing(?: track)?|instrumental|bootleg|mashup|preview|playback|deluxe|'
+    r'\b(?:karaoke|tribute|demo|live|remix|re[- ]?mix|mix|edit|version|acoustic|unplugged|'
+    r'a cappella|acapella|backing(?: track)?|instrumental|bootleg|mashup|refix|rework|'
+    r'preview|playback|deluxe|bonus|voice note|alternate|alternative|'
     r'remaster(?:ed)?(?:\s*\d{4})?|radio edit|radio version|single edit|single version|'
-    r'album version|extended(?: version| mix)?|club mix|dance mix|original mix|'
-    r'mono|stereo|sped up|slowed|re[- ]?record(?:ed)?|music video|video version|'
-    r'take\s*\d+|pt\.?\s*\d+|part\s*\d+|special disco version|clean version)\b',
-    re.I,
+    r'album version|extended(?: version| edit| mix)?|club mix|dance mix|original mix|'
+    r'dub(?: version| mix)?|mono|stereo|sped up|slowed|re[- ]?record(?:ed)?|'
+    r'music video|video version|solo vocal|take\s*\d+|pt\.?\s*\d+|part\s*\d+|'
+    r'special disco version|clean version)\b', re.I,
 )
 FEATURE_MARKER = re.compile(r'\b(?:feat\.?|ft\.?|featuring|with)\b', re.I)
 
@@ -116,11 +117,12 @@ def underlying_key(title, artist):
 
 STRONG_TRAILING_VERSION = re.compile(
     r'\b(?:remix|re[- ]?mix|remaster(?:ed)?(?:\s*\d{4})?|radio edit|radio version|'
-    r'single edit|single version|album version|extended version|club mix|dance mix|'
-    r'original mix|acoustic version|live version|instrumental version|sped up|slowed|'
-    r're[- ]?record(?:ed)?|clean version)\s*$', re.I,
+    r'single edit|single version|album version|extended(?: version| edit| mix)?|club mix|'
+    r'dance mix|original mix|dub(?: version| mix)?|acoustic(?: version)?|unplugged|'
+    r'live version|instrumental(?: version)?|a cappella|acapella|sped up|slowed|'
+    r're[- ]?record(?:ed)?|refix|rework|voice note|alternate version|alternative version|'
+    r'clean version)\s*$', re.I,
 )
-
 
 def is_explicit_alternate_title(title):
     """Detect metadata version annotations without rejecting genuine song titles.
