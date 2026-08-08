@@ -1,0 +1,66 @@
+name: Add Guess now control
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/guess-now-hotfix.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Patch YouTube listening controls
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          p=Path('app.js')
+          s=p.read_text()
+          old="""  function youtubeListeningScreen(){
+    return `${topLine(false,false)}${matchHeader()}${scoreStrip()}<div class=\"youtube-listening\"><div class=\"kicker\">NOW PLAYING · PHONE DOWN</div><h1>Listen, then lift the phone</h1><p>Listen for as long as you want. Lift the phone whenever you are ready to guess.</p><div class=\"youtube-player\"><div id=\"youtubePlayer\"></div></div><button class=\"btn primary yt-start-fallback hidden\" id=\"ytStartFallback\" data-action=\"yt-start\">Tap to start YouTube</button><small class=\"provider-warning\">If your browser blocks autoplay, tap the button above and put the phone face-down again.</small></div>`;
+  }"""
+          new="""  function youtubeListeningScreen(){
+    return `${topLine(false,false)}${matchHeader()}${scoreStrip()}<div class=\"youtube-listening\"><div class=\"kicker\">NOW PLAYING · PHONE DOWN</div><h1>Listen, then guess</h1><p>Listen for as long as you want. Lift the phone or tap Guess now whenever you are ready.</p><div class=\"youtube-guess-actions\"><button class=\"btn primary\" data-action=\"guess-now\">Guess now</button></div><div class=\"youtube-player\"><div id=\"youtubePlayer\"></div></div><button class=\"btn primary yt-start-fallback hidden\" id=\"ytStartFallback\" data-action=\"yt-start\">Tap to start YouTube</button><small class=\"provider-warning\">If your browser blocks autoplay, tap the button above and put the phone face-down again.</small></div>`;
+  }"""
+          if old not in s:
+              raise SystemExit('youtubeListeningScreen block not found')
+          s=s.replace(old,new,1)
+          old_bind="      if(a==='yt-start')b.onclick=startYouTubeFromTap;"
+          new_bind="      if(a==='yt-start')b.onclick=startYouTubeFromTap;\n      if(a==='guess-now')b.onclick=finishYouTubeListening;"
+          if old_bind not in s:
+              raise SystemExit('yt-start binding not found')
+          s=s.replace(old_bind,new_bind,1)
+          p.write_text(s)
+
+          p=Path('app.css')
+          c=p.read_text()
+          if '.youtube-guess-actions{' not in c:
+              c += "\n/* v7.2.3 explicit YouTube guess control */\n.youtube-guess-actions{margin:18px auto 14px;width:min(100%,520px)}.youtube-guess-actions .btn{width:100%;min-height:62px;font-size:18px}\n"
+          p.write_text(c)
+
+          p=Path('index.html')
+          h=p.read_text()
+          h=re.sub(r'app\.css\?v=[^\"\']+','app.css?v=7.2.3',h)
+          h=re.sub(r'engine\.js\?v=[^\"\']+','engine.js?v=7.2.3',h)
+          h=re.sub(r'engine-v7\.js\?v=[^\"\']+','engine-v7.js?v=7.2.3',h)
+          h=re.sub(r'app\.js\?v=[^\"\']+','app.js?v=7.2.3',h)
+          p.write_text(h)
+          PY
+          node --check app.js
+          grep -q 'data-action="guess-now"' app.js
+          grep -q "guess-now')b.onclick=finishYouTubeListening" app.js
+          grep -q 'v=7.2.3' index.html
+      - name: Commit Guess now control
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app.js app.css index.html
+          git commit -m "Add explicit Guess now button during YouTube playback"
+          git pull --rebase origin main
+          git push
