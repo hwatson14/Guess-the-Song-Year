@@ -60,16 +60,16 @@ jobs:
           assert song_year('sing_along','I Want to Hold Your Hand')==1963
           print('Materialized themed data passes strict release-group rules.')
           PY
-      - name: Exercise playlist UI and runtime generation
+      - name: Exercise playlist UI and final runtime generation
         run: |
           python - <<'PY'
           import sys
           sys.path.insert(0,'scripts')
-          import build_playlists_v11 as b
-          b.write_runtime()
-          b.patch_app()
-          b.write_engine_test()
-          b.patch_versions()
+          import build_playlists_v11 as ui
+          import finalize_runtime_v11 as runtime
+          ui.patch_app()
+          ui.patch_versions()
+          runtime.main()
           PY
       - name: Validate generated runtime
         run: |
@@ -85,6 +85,7 @@ jobs:
           grep -q 'Unexpected Years' engine-v7.js
           grep -q 'Party Anthems' engine-v7.js
           grep -q 'Rock Classics' engine-v7.js
+          grep -q 'Dancing with a Stranger' scripts/test_engine_v7.mjs
       - name: Syntax-check strict verifier and assembler
         run: |
-          python -m py_compile scripts/theme_release_groups.py scripts/assemble_playlists_v11.py scripts/build_playlists_v11.py
+          python -m py_compile scripts/theme_release_groups.py scripts/assemble_playlists_v11.py scripts/build_playlists_v11.py scripts/finalize_runtime_v11.py
