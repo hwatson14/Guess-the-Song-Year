@@ -23,6 +23,11 @@ def fixed_wikipedia_page_title(year):
 
 def main():
     base.wikipedia_page_title = fixed_wikipedia_page_title
+    # Four is the hard quality floor for sparse early years. The workflow validator
+    # separately requires each bucket to cover the number of physical cards mapped
+    # to that year, so depth follows actual gameplay demand instead of an arbitrary
+    # eight-song blanket rule.
+    base.MIN_POOL = 4
     base.main()
     build_modes.augment_catalogue(base.OUT)
 
