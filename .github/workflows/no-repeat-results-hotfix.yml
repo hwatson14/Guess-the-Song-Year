@@ -22,6 +22,22 @@ jobs:
         run: pip install requests
       - name: Apply gameplay and catalogue architecture patch
         run: python scripts/patch_no_repeat_results.py
+      - name: Widen verified release candidate chart window
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('scripts/build_catalogue.py')
+          s=p.read_text()
+          old="rows=sorted([r for r in bim if r['chartYear']==year],key=lambda r:r['rank'])[:50]"
+          new="rows=sorted([r for r in bim if year<=r['chartYear']<=min(YEARS[-1],year+2)],key=lambda r:((r['chartYear']-year),r['rank']))[:120]"
+          if old not in s: raise SystemExit('candidate row selector not found')
+          s=s.replace(old,new,1)
+          old="ranked.append((best['rank'],-score,-f['mbScore'],f))"
+          new="ranked.append(((best['chartYear']-year)*100+best['rank'],-score,-f['mbScore'],f))"
+          if old not in s: raise SystemExit('ranking selector not found')
+          s=s.replace(old,new,1)
+          p.write_text(s)
+          PY
       - name: Rebuild prebuilt Greatest Hits catalogue
         run: python scripts/build_catalogue.py
       - name: Validate app and deep catalogue
