@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install requests beautifulsoup4
-      - name: Validate materialized themes against current canonical rules
+      - name: Validate materialized strict themed data
         run: |
           python - <<'PY'
           import json,sys
@@ -32,6 +32,10 @@ jobs:
           d=json.loads(p.read_text())
           expected={'sing_along','australian','unexpected','party','rock'}
           assert set(d['modes'])==expected,set(d['modes'])
+          def song_year(mode,title):
+              target=c.norm(title)
+              hits=[int(y) for y,pool in d['modes'][mode].items() for s in pool if c.norm(s['title'])==target]
+              return hits[0] if len(hits)==1 else None
           for mode,pools in d['modes'].items():
               assert len(pools)>=15,(mode,len(pools))
               assert sum(map(len,pools.values()))>=20,(mode,sum(map(len,pools.values())))
@@ -40,33 +44,32 @@ jobs:
                   title_keys=set()
                   for s in pool:
                       assert int(s['year'])==int(year),(mode,year,s)
-                      assert s['yearEvidence']=='MusicBrainz recording earliest first-release-date',(mode,year,s)
+                      assert s['yearEvidence']=='MusicBrainz release-group earliest first-release-date',(mode,year,s)
                       assert not c.is_explicit_alternate_title(s['title']),(mode,year,s)
                       key=c.underlying_key(s['title'],s['artist'])
                       assert s['canonicalKey']==key,(mode,year,s)
                       assert key not in song_keys,(mode,key)
                       song_keys.add(key)
-                      title=c.base_title(s['title'])
+                      title=c.norm(c.base_title(s['title']))
                       assert title not in title_keys,(mode,year,'same-title duplicate',title)
                       title_keys.add(title)
-          print('Materialized themed data passes current canonical rules.')
+          assert song_year('sing_along','Stand by Me')==1961
+          assert song_year('sing_along','Jailhouse Rock')==1957
+          assert song_year('sing_along','The Twist')==1960
+          assert song_year('sing_along','Shout')==1959
+          assert song_year('sing_along','I Want to Hold Your Hand')==1963
+          print('Materialized themed data passes strict release-group rules.')
           PY
-      - name: Exercise v11 builder deterministically
+      - name: Exercise playlist UI and runtime generation
         run: |
           python - <<'PY'
-          import json,sys
-          from pathlib import Path
+          import sys
           sys.path.insert(0,'scripts')
           import build_playlists_v11 as b
-          p=Path('data/catalogue.json')
-          d=json.loads(p.read_text())
-          d['version']=10
-          d['modes']={'greatest':d['modes']['greatest']}
-          p.write_text(json.dumps(d,separators=(',',':')))
-          b.canonical.bimmuda_lookup=lambda: ({},{})
-          b.canonical.confirm_release_year=lambda row:{'year':2000,'musicbrainzId':'fixture','musicbrainzMatchedTitle':row['title'],'musicbrainzMatchedArtist':row['artist'],'mbScore':100.0,'titleSimilarity':1.0,'artistSimilarity':1.0}
-          b.canonical.canonical_display=lambda row,e:(row['title'],row['artist'])
-          b.main()
+          b.write_runtime()
+          b.patch_app()
+          b.write_engine_test()
+          b.patch_versions()
           PY
       - name: Validate generated runtime
         run: |
@@ -82,3 +85,6 @@ jobs:
           grep -q 'Unexpected Years' engine-v7.js
           grep -q 'Party Anthems' engine-v7.js
           grep -q 'Rock Classics' engine-v7.js
+      - name: Syntax-check strict verifier and assembler
+        run: |
+          python -m py_compile scripts/theme_release_groups.py scripts/assemble_playlists_v11.py scripts/build_playlists_v11.py
