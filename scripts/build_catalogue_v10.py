@@ -52,6 +52,14 @@ VERSION_MARKER = re.compile(
     r'special disco version|clean version)\b', re.I,
 )
 FEATURE_MARKER = re.compile(r'\b(?:feat\.?|ft\.?|featuring|with)\b', re.I)
+STRONG_TRAILING_VERSION = re.compile(
+    r'\b(?:remix|re[- ]?mix|remaster(?:ed)?(?:\s*\d{4})?|radio edit|radio version|'
+    r'single edit|single version|album version|extended(?: version| edit| mix)?|club mix|'
+    r'dance mix|original mix|dub(?: version| mix)?|acoustic(?: version)?|unplugged|'
+    r'live version|instrumental(?: version)?|a cappella|acapella|sped up|slowed|'
+    r're[- ]?record(?:ed)?|refix|rework|voice note|alternate version|alternative version|'
+    r'clean version)\s*$', re.I,
+)
 
 
 def clean(v):
@@ -79,7 +87,12 @@ def lucene(v):
 
 
 def base_title(v):
-    """Strip version/feature annotations while retaining real title parentheses."""
+    """Strip metadata annotations without shortening genuine song titles.
+
+    Bare words like "with" are meaningful title text (e.g. "Dancing with a Stranger").
+    Feature credits are stripped only when explicitly marked as feat./ft./featuring, or when
+    they occur inside a bracketed annotation such as "(with Guest)".
+    """
     s = clean(v)
 
     def strip_bracket(match):
@@ -93,8 +106,9 @@ def base_title(v):
     m = re.search(r'\s[-–—:]\s(.+)$', s)
     if m and VERSION_MARKER.search(m.group(1)):
         s = s[:m.start()]
-    s = re.sub(r'\s+(?:feat\.?|ft\.?|featuring|with)\s+.+$', '', s, flags=re.I)
-    s = STRONG_TRAILING_VERSION.sub(' ', s) if 'STRONG_TRAILING_VERSION' in globals() else s
+    # Do not include bare "with" here: it corrupts genuine titles.
+    s = re.sub(r'\s+(?:feat\.?|ft\.?|featuring)\s+.+$', '', s, flags=re.I)
+    s = STRONG_TRAILING_VERSION.sub(' ', s)
     return clean(s)
 
 
@@ -115,27 +129,13 @@ def underlying_key(title, artist):
     return f'{norm(base_title(title))}|{norm(primary_artist(artist)).removeprefix("the ")}'
 
 
-STRONG_TRAILING_VERSION = re.compile(
-    r'\b(?:remix|re[- ]?mix|remaster(?:ed)?(?:\s*\d{4})?|radio edit|radio version|'
-    r'single edit|single version|album version|extended(?: version| edit| mix)?|club mix|'
-    r'dance mix|original mix|dub(?: version| mix)?|acoustic(?: version)?|unplugged|'
-    r'live version|instrumental(?: version)?|a cappella|acapella|sped up|slowed|'
-    r're[- ]?record(?:ed)?|refix|rework|voice note|alternate version|alternative version|'
-    r'clean version)\s*$', re.I,
-)
-
 def is_explicit_alternate_title(title):
-    """Detect metadata version annotations without rejecting genuine song titles.
-
-    For example, "Live and Let Die" is a real title, while "Song (Live)" and
-    "Song - Live" are alternate versions.
-    """
+    """Detect metadata version annotations without rejecting genuine song titles."""
     s = clean(title)
     if not s:
         return False
-    for inside in re.findall(r'\(([^)]*)\)|\[([^]]*)\]', s):
-        text = inside[0] or inside[1]
-        if VERSION_MARKER.search(text):
+    for left, right in re.findall(r'\(([^)]*)\)|\[([^]]*)\]', s):
+        if VERSION_MARKER.search(left or right):
             return True
     suffix = re.search(r'\s[-–—:]\s(.+)$', s)
     if suffix and VERSION_MARKER.search(suffix.group(1)):
@@ -201,7 +201,6 @@ def bimmuda_lookup():
 
 
 def wikipedia_page_title(year):
-    # Use stable page names where Wikipedia has them.
     if 1950 <= year <= 1955:
         return f'Billboard year-end top 30 singles of {year}'
     if 1956 <= year <= 1958:
@@ -286,7 +285,6 @@ def candidate_chart_rows(release_year):
             candidate['rankScore'] = offset * 1000 + int(row['rank'])
             k = underlying_key(row['title'], row['artist'])
             complexity = len(toks(row['artist'])) + (5 if FEATURE_MARKER.search(row['artist']) else 0)
-            # Simpler/canonical billing wins; chart proximity/rank breaks ties.
             score = (complexity, candidate['rankScore'])
             old = candidates.get(k)
             if old is None or score < old[0]:
@@ -409,9 +407,7 @@ def canonical_display(row, evidence):
 def verified_pool(year, rows, playback_exact, playback_underlying, target_pool):
     """Fill with distinct songs; every candidate gets exact recording-year verification.
 
-    This intentionally avoids the old multi-song batch pre-screen because MusicBrainz can
-    truncate/fuzzily rank OR queries, which caused genuine early recordings to disappear.
-    If a remix/edit/duplicate is rejected we simply continue down the popularity list until
+    If a remix/edit/duplicate is rejected we continue down the popularity list until
     a different underlying song replaces it.
     """
     confirmed = {}
@@ -431,8 +427,6 @@ def verified_pool(year, rows, playback_exact, playback_underlying, target_pool):
         title, artist = canonical_display(row, evidence)
         canonical = underlying_key(title, artist)
         title_key = norm(base_title(title))
-        # Two performers of the same chart song are still poor variety (common in 1950s).
-        # Keep the higher-ranked recording and continue until a different song replaces it.
         if canonical in confirmed or title_key in confirmed_titles or is_explicit_alternate_title(title):
             continue
 
@@ -476,7 +470,6 @@ def main():
     greatest = {}
 
     for year in YEARS:
-        # At least 12 per year, and never fewer than the number of physical cards mapped to that year.
         target_pool = max(DEFAULT_TARGET_POOL, card_counts.get(year, 0))
         print('Release year', year, 'target', target_pool, flush=True)
         rows = candidate_chart_rows(year)
