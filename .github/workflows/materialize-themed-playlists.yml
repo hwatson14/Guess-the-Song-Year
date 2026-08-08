@@ -5,7 +5,7 @@ on:
     branches: [feature/verified-playlists-v11]
     paths:
       - .github/workflows/materialize-themed-playlists.yml
-      - scripts/build_playlists_v11.py
+      - scripts/theme_release_groups.py
       - scripts/build_modes.py
       - scripts/build_catalogue_v10.py
 
@@ -31,19 +31,29 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install requests beautifulsoup4
-      - name: Verify every curated themed song independently
+      - name: Verify every curated themed song from strict release groups
         run: |
           python - <<'PY'
           import json,time,sys
           from pathlib import Path
           sys.path.insert(0,'scripts')
-          import build_playlists_v11 as b
-          modes,rejected=b.build_themed_modes({})
-          out={'version':11,'generatedAt':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'yearSemantics':'MusicBrainz recording earliest first-release-date','modes':modes,'modeMeta':{m:b.MODE_META[m] for m in b.ACTIVE if m!='greatest'},'fallback':'greatest-same-year','stats':{m:{'years':len(v),'songs':sum(len(p) for p in v.values()),'rejectedSeeds':len(rejected[m])} for m,v in modes.items()},'rejectedSeeds':rejected}
+          import theme_release_groups as t
+          from build_modes import MODE_META
+          modes,rejected=t.build_themed_modes()
+          out={
+            'version':11,
+            'generatedAt':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),
+            'yearSemantics':'MusicBrainz release-group earliest first-release-date; exact underlying title + matching artist required',
+            'modes':modes,
+            'modeMeta':{m:MODE_META[m] for m in modes},
+            'fallback':'greatest-same-year',
+            'stats':{m:{'years':len(v),'songs':sum(len(p) for p in v.values()),'rejectedSeeds':len(rejected[m])} for m,v in modes.items()},
+            'rejectedSeeds':rejected,
+          }
           Path('data/themed_playlists_v11.json').write_text(json.dumps(out,ensure_ascii=False,separators=(',',':')))
           print('Verified themed playlist stats',out['stats'])
           PY
-      - name: Validate themed data
+      - name: Validate themed data and calibration years
         run: |
           python - <<'PY'
           import json,sys
@@ -53,20 +63,36 @@ jobs:
           d=json.loads(Path('data/themed_playlists_v11.json').read_text())
           expected={'sing_along','australian','unexpected','party','rock'}
           assert set(d['modes'])==expected,set(d['modes'])
+          def song_year(mode,title):
+              target=c.norm(title)
+              hits=[int(y) for y,pool in d['modes'][mode].items() for s in pool if c.norm(s['title'])==target]
+              return hits[0] if len(hits)==1 else None
           for mode,pools in d['modes'].items():
               assert len(pools)>=15,(mode,len(pools))
               assert sum(map(len,pools.values()))>=20,(mode,sum(map(len,pools.values())))
               seen=set()
               for year,pool in pools.items():
+                  title_keys=set()
                   for s in pool:
                       assert int(s['year'])==int(year),(mode,year,s)
-                      assert s['yearEvidence']=='MusicBrainz recording earliest first-release-date',(mode,year,s)
+                      assert s['yearEvidence']=='MusicBrainz release-group earliest first-release-date',(mode,year,s)
                       assert not c.is_explicit_alternate_title(s['title']),(mode,year,s)
                       key=c.underlying_key(s['title'],s['artist'])
                       assert s['canonicalKey']==key,(mode,year,s)
-                      assert (int(year),key) not in seen,(mode,year,key)
-                      seen.add((int(year),key))
-          print('Themed data validation passed')
+                      assert key not in seen,(mode,key)
+                      seen.add(key)
+                      title=c.norm(c.base_title(s['title']))
+                      assert title not in title_keys,(mode,year,'same-title duplicate',title)
+                      title_keys.add(title)
+          # Regression anchors that exposed the recording-first-release bug.
+          assert song_year('sing_along','Stand by Me')==1961
+          assert song_year('sing_along','Jailhouse Rock')==1957
+          assert song_year('sing_along','The Twist')==1960
+          assert song_year('sing_along','Shout')==1959
+          assert song_year('sing_along','I Want to Hold Your Hand')==1963
+          assert song_year('unexpected','Levitating')==2020
+          assert song_year('party','Old Town Road')==2018
+          print('Themed release-group validation passed',d['stats'])
           PY
           python -m json.tool data/themed_playlists_v11.json >/dev/null
       - name: Commit verified themed data
@@ -75,6 +101,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/themed_playlists_v11.json
           if git diff --cached --quiet; then echo 'No themed data changes.'; exit 0; fi
-          git commit -m "Materialize verified themed playlists"
+          git commit -m "Rebuild themed playlists with strict release-group years"
           git pull --rebase origin feature/verified-playlists-v11
           git push origin feature/verified-playlists-v11
