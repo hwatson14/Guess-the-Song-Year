@@ -1,0 +1,55 @@
+name: Expand recording alternate labels
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/expand-recording-labels.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - run: pip install requests beautifulsoup4
+      - name: Treat recording/master/radio/vocal labels as version annotations
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('scripts/build_catalogue_v10.py')
+          s=p.read_text()
+          old="r'\\b(?:karaoke|tribute|demo|live|remix|re[- ]?mix|mix|edit|version|acoustic|unplugged|'"
+          new="r'\\b(?:karaoke|tribute|demo|live|remix|re[- ]?mix|mix|edit|version|recording|master|radio|single|album|vocal|acoustic|unplugged|'"
+          if old not in s: raise SystemExit('VERSION_MARKER opening not found')
+          s=s.replace(old,new,1)
+          old="r'a cappella|acapella|backing(?: track)?|instrumental|bootleg|mashup|refix|rework|'"
+          new="r'a cappella|acapella|backing(?: track)?|instrumental|strumentale|base musicale|bootleg|mashup|refix|rework|'"
+          if old not in s: raise SystemExit('instrumental marker row not found')
+          s=s.replace(old,new,1)
+          old="r'preview|playback|deluxe|bonus|voice note|alternate|alternative|'"
+          new="r'preview|playback|deluxe|bonus|voice note|alternate|alternative|original|rehearsal|session|concert|'"
+          if old not in s: raise SystemExit('metadata marker row not found')
+          s=s.replace(old,new,1)
+          p.write_text(s)
+          PY
+          python -m py_compile scripts/build_catalogue_v10.py
+          python - <<'PY'
+          import sys
+          sys.path.insert(0,'scripts')
+          import build_catalogue_v10 as b
+          for title in ['Song (Third Recording)','Song (master)','Song (radio)','Song (solo vocal)','Song (strumentale)','Song (base musicale)','Song (original)','Song (rehearsal)']:
+              assert b.is_explicit_alternate_title(title),title
+          for title in ['Radio Ga Ga','Master Blaster (Jammin\' )','Live and Let Die']:
+              assert not b.is_explicit_alternate_title(title),title
+          PY
+      - name: Commit alternate-label expansion
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/build_catalogue_v10.py
+          git commit -m "Reject alternate recording and master labels"
+          git pull --rebase origin main
+          git push
