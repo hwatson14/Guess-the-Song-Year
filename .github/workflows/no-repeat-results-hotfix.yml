@@ -29,6 +29,7 @@ jobs:
       - name: Promote canonical single-mode builder
         run: cp scripts/build_catalogue_v10.py scripts/build_catalogue.py
       # Exact per-candidate recording verification is deliberate: batch OR searches dropped valid old songs.
+      # This workflow change intentionally retriggers the build against the current canonical version rules.
       - name: Rebuild prebuilt Greatest Hits catalogue
         run: python scripts/build_catalogue.py
       - name: Validate JavaScript and no-repeat identity
@@ -83,7 +84,6 @@ jobs:
           for title in ['heat waves','shivers','bad habits']:
               assert title not in titles(2022),(title,2022)
 
-          # Version identity must collapse edits/remasters while preserving genuine titles.
           assert b.underlying_key('Example - 2011 Remaster','Artist')==b.underlying_key('Example','Artist')
           assert b.underlying_key('Example (Radio Edit)','Artist feat. Guest')==b.underlying_key('Example','Artist')
           assert b.is_explicit_alternate_title('Example (Live)')
