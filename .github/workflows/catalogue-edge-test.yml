@@ -24,6 +24,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install requests beautifulsoup4
+      # Protect both sparse early years and known later-charting release-year traps.
       - name: Verify canonical edge-year pools
         run: |
           python - <<'PY'
@@ -52,7 +53,6 @@ jobs:
               assert len(pool)>=8,(year,len(pool))
               assert len(keys)==len(set(keys)),(year,keys)
 
-          # Regression checks for songs whose chart peak/year-end presence is later than release.
           def titles(year): return {b.norm(s['title']) for s in pools[year]}
           assert 'blinding lights' not in titles(2021)
           assert 'levitating' not in titles(2021)
