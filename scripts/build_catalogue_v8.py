@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Build the one-mode prebuilt Greatest Hits catalogue.
 
-Candidate ranking: full Billboard year-end singles table for each chart year.
+Candidate ranking: full Billboard year-end singles tables from the release year
+and, when needed, the following two chart years. This catches songs released late
+in a calendar year that became major hits the next year.
 Canonical song identity: Billboard title + artist.
 Year truth: MusicBrainz first-release year from recording and/or release-group search.
 A chart candidate is admitted only when a MusicBrainz entity verifies the target release year.
@@ -22,14 +24,16 @@ OUT = ROOT / 'data' / 'catalogue.json'
 YEARS = list(range(1950, 2023))
 TARGET_POOL = 12
 MIN_POOL = 8
+CHART_LOOKAHEAD = 2
 BIMMUDA = 'https://raw.githubusercontent.com/madelinehamilton/BiMMuDa/main/metadata/bimmuda_per_song_metadata.csv'
 MB_RECORDING = 'https://musicbrainz.org/ws/2/recording/'
 MB_RELEASE_GROUP = 'https://musicbrainz.org/ws/2/release-group/'
 WIKI_API = 'https://en.wikipedia.org/w/api.php'
-UA = 'Guess-the-Song-Year/2.0 (private-use catalogue builder; https://github.com/hwatson14/Guess-the-Song-Year)'
+UA = 'Guess-the-Song-Year/2.1 (private-use catalogue builder; https://github.com/hwatson14/Guess-the-Song-Year)'
 S = requests.Session()
 S.headers.update({'User-Agent': UA})
 _last_mb = 0.0
+_chart_cache = {}
 
 
 def clean(v):
@@ -135,6 +139,9 @@ def clean_chart_text(v):
 
 
 def billboard_year_rows(year):
+    if year in _chart_cache:
+        return [dict(r) for r in _chart_cache[year]]
+
     page_title = wikipedia_page_title(year)
     payload = get(WIKI_API, params={'action': 'parse', 'page': page_title, 'prop': 'text', 'format': 'json', 'origin': '*'}).json()
     html = payload.get('parse', {}).get('text', {}).get('*', '')
@@ -161,8 +168,7 @@ def billboard_year_rows(year):
             if not m:
                 continue
             artist = cells[ai].strip()
-            # Early charts can list both sides of a hit single as "A / B". Treat each title as a
-            # separate candidate while preserving the shared chart rank.
+            # Early charts can list both sides of a hit single as "A / B".
             titles = [x.strip('“”" ') for x in re.split(r'\s+/\s+', cells[ti]) if x.strip('“”" ')]
             for song_title in titles:
                 if song_title and artist:
@@ -171,7 +177,7 @@ def billboard_year_rows(year):
             best = rows
     if len(best) < MIN_POOL:
         raise RuntimeError(f'Only parsed {len(best)} Billboard candidates for {year}: {page_title}')
-    # Deduplicate the canonical chart entries before verification.
+
     deduped, seen = [], set()
     for row in sorted(best, key=lambda x: x['rank']):
         k = song_key(row['title'], row['artist'])
@@ -179,7 +185,30 @@ def billboard_year_rows(year):
             continue
         seen.add(k)
         deduped.append(row)
-    return deduped
+    _chart_cache[year] = [dict(r) for r in deduped]
+    return [dict(r) for r in deduped]
+
+
+def candidate_chart_rows(release_year):
+    """Return recognisable chart candidates while keeping release year hidden/truthful.
+
+    The target year's chart is ranked first. Following-year charts only provide extra
+    candidate songs; MusicBrainz must still verify first release in `release_year`.
+    """
+    rows, seen = [], set()
+    last_chart_year = min(YEARS[-1], release_year + CHART_LOOKAHEAD)
+    for chart_year in range(release_year, last_chart_year + 1):
+        offset = chart_year - release_year
+        for row in billboard_year_rows(chart_year):
+            k = song_key(row['title'], row['artist'])
+            if k in seen:
+                continue
+            seen.add(k)
+            candidate = dict(row)
+            candidate['chartOffset'] = offset
+            candidate['rankScore'] = offset * 1000 + int(row['rank'])
+            rows.append(candidate)
+    return sorted(rows, key=lambda r: (r['rankScore'], r['title'].lower(), r['artist'].lower()))
 
 
 def artist_credit(entity):
@@ -218,7 +247,6 @@ def collect_verified(endpoint, result_key, year, chunk):
         score, row = max(matches, key=lambda x: x[0])
         if score < 1.35:
             continue
-        # Billboard is the canonical display identity. The MusicBrainz match is evidence only.
         out.append((row, {
             'title': row['title'],
             'artist': row['artist'],
@@ -228,6 +256,8 @@ def collect_verified(endpoint, result_key, year, chunk):
             'musicbrainzId': clean(entity.get('id')),
             'musicbrainzMatchedTitle': matched_title,
             'musicbrainzMatchedArtist': matched_artist,
+            'chartYear': int(row['chartYear']),
+            'chartRank': int(row['rank']),
         }))
     return out
 
@@ -241,18 +271,18 @@ def verified_pool(year, rows, playback):
             results += collect_verified(MB_RELEASE_GROUP, 'release-groups', year, chunk)
         for row, song in results:
             k = song_key(row['title'], row['artist'])
+            rank_score = int(row.get('rankScore', row['rank']))
             current = found.get(k)
-            rank_score = row['rank']
-            if current is None or song.get('mbScore', 0) > current[2].get('mbScore', 0):
+            if current is None or rank_score < current[0] or (rank_score == current[0] and song.get('mbScore', 0) > current[2].get('mbScore', 0)):
                 found[k] = (rank_score, row, song)
         if len(found) >= TARGET_POOL * 2:
             break
 
     ranked = sorted(found.values(), key=lambda x: (x[0], -x[2].get('mbScore', 0)))
     pool = []
-    for rank, row, song in ranked[:TARGET_POOL]:
+    for _, row, song in ranked[:TARGET_POOL]:
         song['source'] = 'billboard-release-year-verified'
-        song['sourceLabel'] = f'Billboard year-end #{rank} · release year verified'
+        song['sourceLabel'] = f'Billboard {row["chartYear"]} year-end #{row["rank"]} · {year} release verified'
         ids = playback.get(song_key(row['title'], row['artist'])) or {}
         song['spotifyId'] = ids.get('spotifyId', '')
         song['youtubeId'] = ids.get('youtubeId', '')
@@ -267,11 +297,12 @@ def main():
     playback = bimmuda_lookup()
     greatest = {}
     for year in YEARS:
-        print('Billboard', year, flush=True)
-        rows = billboard_year_rows(year)
+        print('Release year', year, flush=True)
+        rows = candidate_chart_rows(year)
         pool = verified_pool(year, rows, playback)
         greatest[str(year)] = pool
-        print(' ', len(pool), 'verified distinct songs', flush=True)
+        chart_years = sorted(set(int(s.get('chartYear', year)) for s in pool))
+        print(' ', len(pool), 'verified distinct songs from chart years', chart_years, flush=True)
 
     sizes = [len(v) for v in greatest.values()]
     data = {
@@ -281,9 +312,16 @@ def main():
         'modes': {'greatest': greatest},
         'coverage': {'greatest': len(greatest)},
         'sources': {
-            'greatest': 'Full Billboard year-end singles tables provide canonical hit identity/ranking; MusicBrainz first-release-date verifies the answer year.'
+            'greatest': 'Full Billboard year-end singles tables from release year and up to two following chart years provide canonical hit identity/ranking; MusicBrainz first-release-date verifies the answer year.'
         },
-        'poolStats': {'targetPerYear': TARGET_POOL, 'minimumPerYear': min(sizes), 'maximumPerYear': max(sizes), 'totalSongs': sum(sizes)},
+        'poolStats': {
+            'targetPerYear': TARGET_POOL,
+            'minimumRequiredPerYear': MIN_POOL,
+            'chartLookaheadYears': CHART_LOOKAHEAD,
+            'minimumPerYear': min(sizes),
+            'maximumPerYear': max(sizes),
+            'totalSongs': sum(sizes),
+        },
     }
     OUT.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')))
     print('Wrote', OUT, data['poolStats'], flush=True)
