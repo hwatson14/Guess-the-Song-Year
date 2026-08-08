@@ -168,7 +168,6 @@ def billboard_year_rows(year):
             if not m:
                 continue
             artist = cells[ai].strip()
-            # Early charts can list both sides of a hit single as "A / B".
             titles = [x.strip('“”" ') for x in re.split(r'\s+/\s+', cells[ti]) if x.strip('“”" ')]
             for song_title in titles:
                 if song_title and artist:
@@ -190,7 +189,7 @@ def billboard_year_rows(year):
 
 
 def candidate_chart_rows(release_year):
-    """Return recognisable chart candidates while keeping release year hidden/truthful.
+    """Return recognisable chart candidates while keeping release year truthful.
 
     The target year's chart is ranked first. Following-year charts only provide extra
     candidate songs; MusicBrainz must still verify first release in `release_year`.
@@ -275,7 +274,7 @@ def verified_pool(year, rows, playback):
             current = found.get(k)
             if current is None or rank_score < current[0] or (rank_score == current[0] and song.get('mbScore', 0) > current[2].get('mbScore', 0)):
                 found[k] = (rank_score, row, song)
-        if len(found) >= TARGET_POOL * 2:
+        if len(found) >= TARGET_POOL:
             break
 
     ranked = sorted(found.values(), key=lambda x: (x[0], -x[2].get('mbScore', 0)))
