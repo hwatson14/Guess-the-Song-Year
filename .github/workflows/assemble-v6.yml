@@ -16,7 +16,7 @@ jobs:
       - name: Check staging files
         id: staging
         run: |
-          if [ -f .build/engine.js.gz ] && [ -f .build/app.js.gz ] && [ -f .build/build_catalogue.py.gz ]; then
+          if [ -f .build/engine.js.gz ] && [ -f .build/app.js.gz ]; then
             echo "ready=true" >> "$GITHUB_OUTPUT"
           else
             echo "ready=false" >> "$GITHUB_OUTPUT"
@@ -26,8 +26,6 @@ jobs:
         run: |
           gzip -dc .build/engine.js.gz > engine.js
           gzip -dc .build/app.js.gz > app.js
-          mkdir -p scripts
-          gzip -dc .build/build_catalogue.py.gz > scripts/build_catalogue.py
           node --check engine.js
           node --check app.js
           python -m py_compile scripts/build_catalogue.py
