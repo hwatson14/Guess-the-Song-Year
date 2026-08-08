@@ -415,6 +415,7 @@ def verified_pool(year, rows, playback_exact, playback_underlying, target_pool):
     a different underlying song replaces it.
     """
     confirmed = {}
+    confirmed_titles = set()
     screened = set()
 
     for row in rows:
@@ -429,7 +430,10 @@ def verified_pool(year, rows, playback_exact, playback_underlying, target_pool):
 
         title, artist = canonical_display(row, evidence)
         canonical = underlying_key(title, artist)
-        if canonical in confirmed or is_explicit_alternate_title(title):
+        title_key = norm(base_title(title))
+        # Two performers of the same chart song are still poor variety (common in 1950s).
+        # Keep the higher-ranked recording and continue until a different song replaces it.
+        if canonical in confirmed or title_key in confirmed_titles or is_explicit_alternate_title(title):
             continue
 
         rank_score = int(row.get('rankScore', row['rank']))
@@ -454,6 +458,7 @@ def verified_pool(year, rows, playback_exact, playback_underlying, target_pool):
         song['spotifyId'] = ids.get('spotifyId', '')
         song['youtubeId'] = ids.get('youtubeId', '')
         confirmed[canonical] = (rank_score, song)
+        confirmed_titles.add(title_key)
 
         if len(confirmed) >= target_pool:
             break
