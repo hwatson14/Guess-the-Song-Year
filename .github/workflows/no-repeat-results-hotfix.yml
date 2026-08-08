@@ -1,0 +1,44 @@
+name: No-repeat gameplay and deep catalogue
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/no-repeat-results-hotfix.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch-build-validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install builder dependencies
+        run: pip install requests
+      - name: Apply gameplay and catalogue architecture patch
+        run: python scripts/patch_no_repeat_results.py
+      - name: Rebuild prebuilt Greatest Hits catalogue
+        run: python scripts/build_catalogue.py
+      - name: Validate app and deep catalogue
+        run: |
+          node --check app.js
+          node --check engine-v7.js
+          python scripts/validate_catalogue.py
+          python -m json.tool data/catalogue.schema.json >/dev/null
+          grep -q 'data-action="new-card"' app.js
+          grep -q 'Wrong answer' app.js
+          grep -q 'NO_UNUSED_SONG' engine-v7.js
+          grep -q 'v=7.3.0' index.html
+      - name: Commit completed gameplay and catalogue rebuild
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app.js engine-v7.js index.html scripts/build_catalogue.py scripts/validate_catalogue.py data/catalogue.json data/catalogue.schema.json
+          git commit -m "Add explicit wrong answers, new-card replacement, and deep no-repeat catalogue"
+          git pull --rebase origin main
+          git push
