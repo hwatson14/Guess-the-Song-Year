@@ -43,8 +43,17 @@ for(const title of [
 ]){
   if(!E.isAlternateSongTitle(title))throw new Error(`alternate-version label not recognised: ${title}`);
 }
-for(const title of ['Live and Let Die','I Want to Live','Radio Ga Ga','Another Brick in the Wall (Part II)','Alone Again (Naturally)']){
+for(const title of [
+  'Live and Let Die','I Want to Live','Radio Ga Ga','Another Brick in the Wall (Part II)',
+  'Alone Again (Naturally)','Dancing with a Stranger',"Break Up with Your Girlfriend, I'm Bored",'With or Without You'
+]){
   if(E.isAlternateSongTitle(title))throw new Error(`genuine title incorrectly treated as alternate: ${title}`);
+}
+if(E.songUseKey({title:'Dancing with a Stranger',artist:'Sam Smith'})!=='dancing with a stranger|sam smith'){
+  throw new Error('bare "with" inside a genuine title must be preserved in underlying identity');
+}
+if(E.songUseKey({title:"Break Up with Your Girlfriend, I'm Bored",artist:'Ariana Grande'})!=="break up with your girlfriend i m bored|ariana grande"){
+  throw new Error('genuine title text after "with" must not be truncated');
 }
 
 for(let i=0;i<40;i++){
