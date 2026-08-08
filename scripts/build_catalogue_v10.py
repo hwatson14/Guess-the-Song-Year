@@ -381,49 +381,53 @@ def canonical_display(row, evidence):
 
 
 def verified_pool(year, rows, playback_exact, playback_underlying, target_pool):
-    """Fill with distinct songs; filtered variants are replaced by later candidates."""
+    """Fill with distinct songs; every candidate gets exact recording-year verification.
+
+    This intentionally avoids the old multi-song batch pre-screen because MusicBrainz can
+    truncate/fuzzily rank OR queries, which caused genuine early recordings to disappear.
+    If a remix/edit/duplicate is rejected we simply continue down the popularity list until
+    a different underlying song replaces it.
+    """
     confirmed = {}
     screened = set()
 
-    for start in range(0, len(rows), 10):
-        chunk = rows[start:start + 10]
-        prelim = batch_candidates_for_year(year, chunk)
-        for row in prelim:
-            k = underlying_key(row['title'], row['artist'])
-            if k in screened:
-                continue
-            screened.add(k)
-            evidence = confirm_release_year(row)
-            if not evidence or int(evidence['year']) != year:
-                continue
+    for row in rows:
+        k = underlying_key(row['title'], row['artist'])
+        if k in screened:
+            continue
+        screened.add(k)
 
-            title, artist = canonical_display(row, evidence)
-            canonical = underlying_key(title, artist)
-            if canonical in confirmed or is_explicit_alternate_title(title):
-                continue
+        evidence = confirm_release_year(row)
+        if not evidence or int(evidence['year']) != year:
+            continue
 
-            rank_score = int(row.get('rankScore', row['rank']))
-            song = {
-                'title': title,
-                'artist': artist,
-                'year': year,
-                'canonicalKey': canonical,
-                'yearEvidence': 'MusicBrainz recording earliest first-release-date',
-                'musicbrainzId': evidence['musicbrainzId'],
-                'musicbrainzMatchedTitle': evidence['musicbrainzMatchedTitle'],
-                'musicbrainzMatchedArtist': evidence['musicbrainzMatchedArtist'],
-                'mbScore': evidence['mbScore'],
-                'titleSimilarity': evidence['titleSimilarity'],
-                'artistSimilarity': evidence['artistSimilarity'],
-                'chartYear': int(row['chartYear']),
-                'chartRank': int(row['rank']),
-                'source': 'billboard-underlying-song-recording-year-verified',
-                'sourceLabel': f'Billboard {row["chartYear"]} year-end #{row["rank"]} · earliest recording release {year} verified',
-            }
-            ids = playback_exact.get(song_key(title, artist)) or playback_underlying.get(canonical) or {}
-            song['spotifyId'] = ids.get('spotifyId', '')
-            song['youtubeId'] = ids.get('youtubeId', '')
-            confirmed[canonical] = (rank_score, song)
+        title, artist = canonical_display(row, evidence)
+        canonical = underlying_key(title, artist)
+        if canonical in confirmed or is_explicit_alternate_title(title):
+            continue
+
+        rank_score = int(row.get('rankScore', row['rank']))
+        song = {
+            'title': title,
+            'artist': artist,
+            'year': year,
+            'canonicalKey': canonical,
+            'yearEvidence': 'MusicBrainz recording earliest first-release-date',
+            'musicbrainzId': evidence['musicbrainzId'],
+            'musicbrainzMatchedTitle': evidence['musicbrainzMatchedTitle'],
+            'musicbrainzMatchedArtist': evidence['musicbrainzMatchedArtist'],
+            'mbScore': evidence['mbScore'],
+            'titleSimilarity': evidence['titleSimilarity'],
+            'artistSimilarity': evidence['artistSimilarity'],
+            'chartYear': int(row['chartYear']),
+            'chartRank': int(row['rank']),
+            'source': 'billboard-underlying-song-recording-year-verified',
+            'sourceLabel': f'Billboard {row["chartYear"]} year-end #{row["rank"]} · earliest recording release {year} verified',
+        }
+        ids = playback_exact.get(song_key(title, artist)) or playback_underlying.get(canonical) or {}
+        song['spotifyId'] = ids.get('spotifyId', '')
+        song['youtubeId'] = ids.get('youtubeId', '')
+        confirmed[canonical] = (rank_score, song)
 
         if len(confirmed) >= target_pool:
             break
