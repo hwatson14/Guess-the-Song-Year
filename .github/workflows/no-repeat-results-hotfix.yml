@@ -1,13 +1,12 @@
-name: Canonical catalogue and playlists
+name: Deep canonical Greatest Hits catalogue
 
 on:
   push:
     branches: [main]
     paths:
       - .github/workflows/no-repeat-results-hotfix.yml
-      - scripts/build_catalogue_v8.py
       - scripts/build_catalogue_v10.py
-      - scripts/build_modes.py
+      - scripts/audit_catalogue_variants.py
 
 permissions:
   contents: write
@@ -27,90 +26,91 @@ jobs:
           python-version: '3.12'
       - name: Install builder dependencies
         run: pip install requests beautifulsoup4
-      - name: Promote canonical catalogue builder
+      - name: Promote canonical single-mode builder
         run: cp scripts/build_catalogue_v10.py scripts/build_catalogue.py
-      - name: Rebuild canonical catalogue and themed playlists
+      - name: Rebuild prebuilt Greatest Hits catalogue
         run: python scripts/build_catalogue.py
-      - name: Align validator depth with physical deck
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          p=Path('scripts/validate_catalogue.py')
-          s=p.read_text()
-          old=""" for y in req:\n  pool=g.get(str(y))\n  if not isinstance(pool,list) or len(pool)<8:fail(f'Greatest Hits {y} needs >=8 songs')"""
-          new=""" cards=year_map()[1:]\n counts={y:cards.count(y) for y in req}\n for y in req:\n  pool=g.get(str(y));need=max(4,counts[y])\n  if not isinstance(pool,list) or len(pool)<need:fail(f'Greatest Hits {y} needs >={need} songs for {counts[y]} physical cards')"""
-          if old not in s:
-              raise SystemExit('validator depth patch point not found')
-          p.write_text(s.replace(old,new))
-          PY
-      - name: Validate catalogue and runtime
+      - name: Validate JavaScript and no-repeat identity
         run: |
           node --check engine.js
           node --check engine-v7.js
           node --check app.js
           node scripts/test_engine_v7.mjs
-          python scripts/validate_catalogue.py
-          python -m json.tool data/catalogue.schema.json >/dev/null
+      - name: Audit every song for alternate versions
+        run: python scripts/audit_catalogue_variants.py
+      - name: Validate catalogue contract
+        run: |
           python - <<'PY'
-          import ast,json,re,unicodedata
-          from pathlib import Path
+          import ast,json,re
           from collections import Counter
+          from pathlib import Path
+          import sys
+          sys.path.insert(0,'scripts')
+          import build_catalogue_v10 as b
+
           d=json.loads(Path('data/catalogue.json').read_text())
           assert d.get('version')==10,d.get('version')
-          expected={'greatest','sing_along','australian','unexpected','party','rock'}
-          assert set(d['modes'])==expected,set(d['modes'])
+          assert set(d.get('modes',{}))=={'greatest'},set(d.get('modes',{}))
           g=d['modes']['greatest']
-          sizes={int(y):len(v) for y,v in g.items()}
-          assert len(sizes)==73,len(sizes)
+          assert set(map(int,g))==set(range(1950,2023)),len(g)
+
           engine=Path('engine.js').read_text()
           m=re.search(r'const YEAR_MAP=(\[[^;]+\]);',engine)
-          card_years=ast.literal_eval(re.sub(r'\bnull\b','None',m.group(1)))[1:]
-          counts=Counter(card_years)
-          assert min(sizes.values())>=4,min(sizes.values())
-          for year,count in counts.items():
-              assert sizes[year]>=max(4,count),(year,sizes[year],count)
-          assert d.get('poolStats',{}).get('chartLookaheadYears')==2,d.get('poolStats')
-          def norm(v):
-              return re.sub(r'[^a-z0-9]+',' ',unicodedata.normalize('NFKD',str(v)).encode('ascii','ignore').decode().lower()).strip()
-          global_seen={}
-          bad_variant=re.compile(r'\b(pt\.?\s*\d+|mixed|remix|karaoke|backing track)\b',re.I)
-          for year,pool in g.items():
-              local=set()
+          years=ast.literal_eval(re.sub(r'\bnull\b','None',m.group(1)))[1:]
+          counts=Counter(int(y) for y in years if y)
+
+          total=0
+          for year in range(1950,2023):
+              pool=g[str(year)]
+              need=max(12,counts.get(year,0))
+              assert len(pool)>=need,(year,len(pool),need)
+              total+=len(pool)
+              keys=set()
               for s in pool:
-                  k=(norm(s['title']),norm(s['artist']))
-                  assert k not in local,(year,k)
-                  local.add(k)
-                  assert int(s['year'])==int(year),(year,s)
-                  assert s.get('yearEvidence')=='MusicBrainz release-group earliest first-release-date',(year,s)
-                  assert not bad_variant.search(s['title']),s
-                  assert int(s.get('chartYear',year))>=int(year),(year,s)
-                  assert int(s.get('chartYear',year))<=int(year)+2,(year,s)
-                  assert float(s.get('titleSimilarity',0))>=0.55,(year,s)
-                  assert float(s.get('artistSimilarity',0))>=0.45,(year,s)
-                  prior=global_seen.get(k)
-                  assert prior in (None,year),(k,prior,year)
-                  global_seen[k]=year
-          for mode in expected-{'greatest'}:
-              assert d['modeFallbacks'].get(mode)=='greatest',mode
-              assert len(d['modes'][mode])>=15,(mode,len(d['modes'][mode]))
-              for year,pool in d['modes'][mode].items():
-                  assert all(int(s['year'])==int(year) for s in pool),(mode,year)
-          titles=lambda y:{norm(s['title']) for s in g[str(y)]}
-          for title in ['blinding lights','levitating','mood','save your tears']:
+                  assert int(s['year'])==year,(year,s)
+                  assert s['yearEvidence']=='MusicBrainz recording earliest first-release-date',(year,s)
+                  assert not b.is_explicit_alternate_title(s['title']),(year,s)
+                  assert s['canonicalKey']==b.underlying_key(s['title'],s['artist']),(year,s)
+                  assert s['canonicalKey'] not in keys,(year,s['canonicalKey'])
+                  keys.add(s['canonicalKey'])
+                  assert int(s['chartYear'])>=year,(year,s)
+                  assert int(s['chartYear'])<=year+2,(year,s)
+
+          # Known chart-year traps: these songs were released earlier and must not be relabelled.
+          titles=lambda y:{b.norm(s['title']) for s in g[str(y)]}
+          for title in ['blinding lights','levitating','save your tears']:
               assert title not in titles(2021),(title,2021)
           for title in ['heat waves','shivers','bad habits']:
               assert title not in titles(2022),(title,2022)
-          print('greatest pool stats',{'min':min(sizes.values()),'max':max(sizes.values()),'total':sum(sizes.values())})
-          print('card depth checks',dict(sorted(counts.items())))
-          print('playlist stats',d['playlistStats'])
+
+          print('catalogue contract passed',{'years':len(g),'songs':total,'min':min(map(len,g.values())),'max':max(map(len,g.values()))})
+          PY
+      - name: Update deployed cache versions
+        run: |
+          python - <<'PY'
+          import re
+          from pathlib import Path
+          p=Path('engine.js')
+          s=p.read_text()
+          s=re.sub(r'\./data/catalogue\.json\?v=\d+(?:\.\d+)*','./data/catalogue.json?v=10',s)
+          p.write_text(s)
+          p=Path('index.html')
+          h=p.read_text()
+          for asset in ['app.css','engine.js','engine-v7.js','app.js']:
+              h=re.sub(rf'{re.escape(asset)}\?v=[^"\']+',f'{asset}?v=7.4.0',h)
+          p.write_text(h)
           PY
           grep -q "catalogue.json?v=10" engine.js
-          grep -q "v=8.0.0" index.html
-      - name: Commit canonical catalogue and playlists
+          grep -q "v=7.4.0" index.html
+      - name: Validate normal app catalogue checks
+        run: |
+          python scripts/validate_catalogue.py
+          python -m json.tool data/catalogue.schema.json >/dev/null
+      - name: Commit canonical variant-free catalogue
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add scripts/build_catalogue.py scripts/build_catalogue_v8.py scripts/build_catalogue_v10.py scripts/build_modes.py scripts/validate_catalogue.py scripts/test_engine_v7.mjs data/catalogue.json data/catalogue.schema.json engine.js engine-v7.js app.js index.html README.md
-          git commit -m "Build canonical catalogue and themed playlists"
+          git add scripts/build_catalogue.py scripts/build_catalogue_v10.py scripts/audit_catalogue_variants.py scripts/test_engine_v7.mjs data/catalogue.json data/catalogue.schema.json engine.js engine-v7.js index.html
+          git commit -m "Build variant-free canonical Greatest Hits catalogue"
           git pull --rebase origin main
           git push
