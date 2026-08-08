@@ -2,22 +2,36 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://hwatson14.github.io/Guess-the-Song-Year/data/catalogue.schema.json",
   "title": "Guess the Song Year prebuilt catalogue",
-  "description": "Contract for the static catalogue used by the game. Greatest Hits is the only active mode in v7. Song year must equal the year bucket used by the card map.",
+  "description": "Static one-mode Greatest Hits catalogue. Every playable item is a distinct underlying song, not an edit/remix/remaster duplicate, and its canonical release year must equal its year bucket.",
   "type": "object",
   "required": ["version", "modes"],
   "properties": {
-    "version": {"type": "integer", "minimum": 1},
+    "version": {"type": "integer", "minimum": 10},
     "generatedAt": {"type": "string"},
+    "years": {
+      "type": "array",
+      "minItems": 73,
+      "maxItems": 73,
+      "items": {"type": "integer", "minimum": 1950, "maximum": 2022},
+      "uniqueItems": true
+    },
+    "coverage": {"type": "object"},
+    "poolStats": {"type": "object"},
+    "sources": {"type": "object"},
     "modes": {
       "type": "object",
       "required": ["greatest"],
+      "additionalProperties": false,
       "properties": {
         "greatest": {
           "type": "object",
+          "minProperties": 73,
+          "maxProperties": 73,
+          "additionalProperties": false,
           "patternProperties": {
-            "^(19[5-9][0-9]|20[0-2][0-9])$": {
+            "^(19[5-9][0-9]|20[0-1][0-9]|202[0-2])$": {
               "type": "array",
-              "minItems": 1,
+              "minItems": 12,
               "items": {"$ref": "#/$defs/song"}
             }
           }
@@ -25,14 +39,45 @@
       }
     }
   },
+  "additionalProperties": true,
   "$defs": {
     "song": {
       "type": "object",
-      "required": ["title", "artist", "year"],
+      "required": [
+        "title",
+        "artist",
+        "year",
+        "canonicalKey",
+        "yearEvidence",
+        "musicbrainzId",
+        "chartYear",
+        "chartRank"
+      ],
       "properties": {
         "title": {"type": "string", "minLength": 1},
         "artist": {"type": "string", "minLength": 1},
-        "year": {"type": "integer", "minimum": 1950, "maximum": 2022, "description": "Canonical game/release year. This must match the containing year bucket."},
+        "year": {
+          "type": "integer",
+          "minimum": 1950,
+          "maximum": 2022,
+          "description": "Earliest verified release year of the canonical recording; must match the containing year bucket."
+        },
+        "canonicalKey": {
+          "type": "string",
+          "minLength": 3,
+          "description": "Stable underlying-song identity used to collapse edits, remixes, remasters and alternate billings."
+        },
+        "yearEvidence": {
+          "const": "MusicBrainz recording earliest first-release-date"
+        },
+        "musicbrainzId": {"type": "string", "minLength": 1},
+        "musicbrainzMatchedTitle": {"type": "string"},
+        "musicbrainzMatchedArtist": {"type": "string"},
+        "mbScore": {"type": "number"},
+        "titleSimilarity": {"type": "number"},
+        "artistSimilarity": {"type": "number"},
+        "chartYear": {"type": "integer", "minimum": 1950, "maximum": 2022},
+        "chartRank": {"type": "integer", "minimum": 1},
         "spotifyId": {"type": "string"},
         "youtubeId": {"type": "string"},
         "source": {"type": "string"},
