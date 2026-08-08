@@ -1,0 +1,63 @@
+name: Recording release-year diagnostic
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/recording-year-diagnostic.yml
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install requests beautifulsoup4
+      - name: Compare canonical recording dates
+        run: |
+          python - <<'PY'
+          import importlib.util,re,time,requests
+          from pathlib import Path
+          p=Path('scripts/build_catalogue_v8.py')
+          spec=importlib.util.spec_from_file_location('b',p)
+          b=importlib.util.module_from_spec(spec);spec.loader.exec_module(b)
+          endpoint='https://musicbrainz.org/ws/2/recording/'
+          last=0.0
+          def rec_year(row):
+              global last
+              wait=max(0,1.1-(time.time()-last))
+              if wait: time.sleep(wait)
+              q=f'recording:"{b.lucene(row["title"])}" AND artistname:"{b.lucene(b.main_artist(row["artist"]))}"'
+              r=requests.get(endpoint,params={'fmt':'json','limit':100,'query':q},headers={'User-Agent':b.UA,'Accept':'application/json'},timeout=45)
+              last=time.time();r.raise_for_status()
+              valid=[]
+              for e in r.json().get('recordings',[]):
+                  date=b.clean(e.get('first-release-date'))
+                  if not re.match(r'^\d{4}',date): continue
+                  if not b.plausible_match(e,row): continue
+                  ts,ars,total=b.match_scores(e,row)
+                  valid.append((int(date[:4]),-total,-float(e.get('score') or 0),b.clean(e.get('title')),b.artist_credit(e),ts,ars))
+              return sorted(valid)[0] if valid else None
+          rows=b.candidate_chart_rows(1950)
+          good=0
+          for row in rows[:30]:
+              ev=rec_year(row)
+              print('1950',row['rank'],row['title'],'—',row['artist'],'=>',ev)
+              if ev and ev[0]==1950: good+=1
+          print('1950 exact recording matches:',good)
+          assert good>=8,good
+          traps=[
+              (2021,'Blinding Lights','The Weeknd'),(2021,'Levitating','Dua Lipa'),(2021,'Mood','24kGoldn featuring Iann Dior'),
+              (2021,'Save Your Tears','The Weeknd and Ariana Grande'),(2022,'Heat Waves','Glass Animals'),(2022,'Shivers','Ed Sheeran'),(2022,'Bad Habits','Ed Sheeran')]
+          for claimed,title,artist in traps:
+              row={'title':title,'artist':artist}
+              ev=rec_year(row)
+              print('TRAP',claimed,title,'=>',ev)
+              assert not ev or ev[0]!=claimed,(claimed,title,ev)
+          PY
