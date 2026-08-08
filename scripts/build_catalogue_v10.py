@@ -93,6 +93,7 @@ def base_title(v):
     if m and VERSION_MARKER.search(m.group(1)):
         s = s[:m.start()]
     s = re.sub(r'\s+(?:feat\.?|ft\.?|featuring|with)\s+.+$', '', s, flags=re.I)
+    s = STRONG_TRAILING_VERSION.sub(' ', s) if 'STRONG_TRAILING_VERSION' in globals() else s
     return clean(s)
 
 
@@ -113,8 +114,31 @@ def underlying_key(title, artist):
     return f'{norm(base_title(title))}|{norm(primary_artist(artist)).removeprefix("the ")}'
 
 
+STRONG_TRAILING_VERSION = re.compile(
+    r'\b(?:remix|re[- ]?mix|remaster(?:ed)?(?:\s*\d{4})?|radio edit|radio version|'
+    r'single edit|single version|album version|extended version|club mix|dance mix|'
+    r'original mix|acoustic version|live version|instrumental version|sped up|slowed|'
+    r're[- ]?record(?:ed)?|clean version)\s*$', re.I,
+)
+
+
 def is_explicit_alternate_title(title):
-    return bool(VERSION_MARKER.search(clean(title)))
+    """Detect metadata version annotations without rejecting genuine song titles.
+
+    For example, "Live and Let Die" is a real title, while "Song (Live)" and
+    "Song - Live" are alternate versions.
+    """
+    s = clean(title)
+    if not s:
+        return False
+    for inside in re.findall(r'\(([^)]*)\)|\[([^]]*)\]', s):
+        text = inside[0] or inside[1]
+        if VERSION_MARKER.search(text):
+            return True
+    suffix = re.search(r'\s[-–—:]\s(.+)$', s)
+    if suffix and VERSION_MARKER.search(suffix.group(1)):
+        return True
+    return bool(STRONG_TRAILING_VERSION.search(s))
 
 
 def get(url, **kw):
