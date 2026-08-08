@@ -29,8 +29,8 @@ def main():
     for year in sorted(pools, key=int):
         seen_keys = {}
         pool = pools[year]
-        if len(pool) < 8:
-            fail(f'{year} has only {len(pool)} songs; need at least 8 distinct underlying songs')
+        if len(pool) < 12:
+            fail(f'{year} has only {len(pool)} songs; need at least 12 distinct underlying songs')
 
         for i, song in enumerate(pool):
             total += 1
@@ -60,8 +60,8 @@ def main():
                 fail(f'underlying song {stored!r} appears in both {prior_year} and {year}')
             global_seen[stored] = year
 
-            # Strong second-line identity checks. If the same verified recording or playback
-            # target is reused under another label, that is still the same song/version family.
+            # If the same verified recording or playback target is reused under another label,
+            # it is still the same underlying song/version family and the later entry must be replaced.
             mb = str(song.get('musicbrainzId') or '')
             sp = str(song.get('spotifyId') or '')
             yt = str(song.get('youtubeId') or '')
@@ -76,8 +76,7 @@ def main():
                     fail(f'{kind} {value} reused by {registry[value]} and {label}')
                 registry[value] = label
 
-            # If the verified original recording has a materially simpler artist credit,
-            # a remix/guest billing should already have been replaced by canonical_display().
+            # Verification itself must point at a clean canonical recording, not a hidden edit.
             mb_title = str(song.get('musicbrainzMatchedTitle') or '').strip()
             mb_artist = str(song.get('musicbrainzMatchedArtist') or '').strip()
             if mb_title and identity.is_explicit_alternate_title(mb_title):
