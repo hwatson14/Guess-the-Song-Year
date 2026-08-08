@@ -49,3 +49,5 @@ jobs:
           git add data/catalogue.json
           git commit -m "Build static song catalogue"
           git push
+
+# v6 consolidated catalogue build
