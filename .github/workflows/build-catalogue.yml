@@ -33,6 +33,10 @@ jobs:
           p=Path('scripts/build_catalogue.py')
           s=p.read_text()
           s=s.replace("List_of_top_25_singles_for_{yeary_in_Australia", "List_of_top_25_singles_for_{year}_in_Australia")
+          old="urls=[WIKI.format(year=year),f'https://en.wikipedia.org/wiki/List_of_top_100_singles_for_{year}_in_Australia']"
+          new="urls=[WIKI.format(year=year),f'https://en.wikipedia.org/wiki/List_of_Top_25_singles_for_{year}_in_Australia',f'https://en.wikipedia.org/wiki/List_of_top_100_singles_for_{year}_in_Australia',f'https://en.wikipedia.org/wiki/List_of_Top_100_singles_for_{year}_in_Australia']"
+          if old in s:
+              s=s.replace(old,new,1)
           p.write_text(s)
           PY
           python -m py_compile scripts/build_catalogue.py
@@ -41,9 +45,8 @@ jobs:
           python - <<'PY'
           import scripts.build_catalogue as b
 
-          # Australian Chart Book/KMR-era fallback for years before the
-          # Wikipedia annual Top 25 pages begin. These are the Australian
-          # annual leaders used only for #1 Australia in 1950-1954.
+          # Pre-1955 annual pages are not published. Use the historical
+          # Australian number-one leaders for those five years.
           early = {
               1950: {'rank':1,'title':'Quicksilver','artist':'Bing Crosby & The Andrews Sisters'},
               1951: {'rank':1,'title':'Too Young','artist':'Nat King Cole'},
