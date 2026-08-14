@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "status": "provisional",
+  "generatedAt": "2026-08-14",
+  "purpose": "Canonical master song universe. Years and playlists are metadata/overlays; physical card years do not define song identity.",
+  "selectionPolicy": {
+    "targetSize": 1000,
+    "principle": "Popularity-first candidate selection with canonical identity dedupe. Historical canon and high-confidence Hitster songs are inclusion locks; no exact per-year quotas.",
+    "artistSoftCap": 6,
+    "rollingStoneLockThroughRank": 200,
+    "hitsterLockTiers": [
+      "A",
+      "B"
+    ],
+    "runtimeActive": false
+  },
+  "stats": {
+    "songs": 1000,
+    "eras": {
+      "2010s": 258,
+      "2000s": 226,
+      "2020s": 69,
+      "1990s": 192,
+      "1980s": 72,
+      "Pre-1960": 32,
+      "1960s": 91,
+      "1970s": 60
+    },
+    "yearConfidence": {
+      "High": 124,
+      "Medium": 789,
+      "Proxy": 79,
+      "Low": 8
+    },
+    "needsYearReview": 144,
+    "spotifyIds": 911,
+    "maxSongsPerPrimaryArtist": 6,
+    "rollingStoneTop200Included": 167,
+    "hitsterTierABIncluded": 124,
+    "sourceCoverage": {
+      "ARIA": 787,
+      "HITSTER": 231,
+      "UK": 919,
+      "JJJ": 70,
+      "RS500": 194
+    }
+  },
+  "format": "csv",
+  "songsFile": "song-universe.csv",
+  "runtimeActive": false,
+  "architecture": "song universe -> overlays -> deck policy -> runtime selection"
+}
