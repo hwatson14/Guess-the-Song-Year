@@ -1,0 +1,35 @@
+name: Validate canonical song universe
+
+on:
+  push:
+    branches:
+      - 'catalogue/**'
+    paths:
+      - data/song-universe.csv
+      - data/song-universe-manifest.json
+      - scripts/validate_song_universe.py
+      - docs/song-universe-audit.md
+      - .github/workflows/song-universe-validate.yml
+  pull_request:
+    paths:
+      - data/song-universe.csv
+      - data/song-universe-manifest.json
+      - scripts/validate_song_universe.py
+      - docs/song-universe-audit.md
+      - .github/workflows/song-universe-validate.yml
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Validate song universe contract
+        run: python scripts/validate_song_universe.py
+      - name: Validate manifest JSON syntax
+        run: python -m json.tool data/song-universe-manifest.json >/dev/null
