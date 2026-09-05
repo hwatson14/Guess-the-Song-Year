@@ -81,7 +81,7 @@ def is_alternate_title(title):
     return bool(STRONG_TRAILING_VERSION.search(s))
 
 
-def main():
+def _legacy_main():
     if not CATALOGUE.exists():
         fail('data/catalogue.json is missing')
     if not SCHEMA.exists():
@@ -208,6 +208,14 @@ def main():
         'Canonical Greatest Hits catalogue validated:',
         {'years': len(required_years), 'cards': 308, 'songs': total, 'underlyingSongs': len(global_keys)},
     )
+
+
+def main():
+    try:
+        from .validate_modes import main as validate_modes
+    except ImportError:
+        from validate_modes import main as validate_modes
+    validate_modes()
 
 
 if __name__ == '__main__':

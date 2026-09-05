@@ -1,0 +1,68 @@
+[
+  {
+    "songId": "song_4d7689f9d07e8e588c37",
+    "provider": "spotify",
+    "id": "0VwNdo84DaVYLIkbVO86ND",
+    "reviewedAt": "2026-09-05T06:28:58.004141+00:00",
+    "reviewBasis": "Root review: matching master, MusicBrainz recording and Spotify titles/artists; direct URL relation; non-video recording with no version disambiguation; release year agrees. Metadata/source verification, no audio audition.",
+    "recordingEvidence": {
+      "metadataTitle": "We Are Never Ever Getting Back Together",
+      "metadataArtists": [
+        "Taylor Swift"
+      ],
+      "titleMatches": true,
+      "artistMatches": true,
+      "playable": true,
+      "musicBrainzTitle": "We Are Never Ever Getting Back Together",
+      "disambiguation": "",
+      "video": false,
+      "firstReleaseDate": "2012-08-10",
+      "lengthMs": 191880,
+      "sameRecordingSourceClaim": "MusicBrainz recording has a free-streaming relation to this exact Spotify URL"
+    }
+  },
+  {
+    "songId": "song_438cff43a2df49bfe3a1",
+    "provider": "spotify",
+    "id": "0BThmcV5jOQywT3aEX84zA",
+    "reviewedAt": "2026-09-05T06:28:58.004358+00:00",
+    "reviewBasis": "Root review: matching master, MusicBrainz recording and Spotify titles/artists; direct URL relation; non-video recording with no version disambiguation; release year agrees. Metadata/source verification, no audio audition.",
+    "recordingEvidence": {
+      "metadataTitle": "Bad Blood",
+      "metadataArtists": [
+        "Taylor Swift"
+      ],
+      "titleMatches": true,
+      "artistMatches": true,
+      "playable": true,
+      "musicBrainzTitle": "Bad Blood",
+      "disambiguation": "",
+      "video": false,
+      "firstReleaseDate": "2014-10-24",
+      "lengthMs": 211933,
+      "sameRecordingSourceClaim": "MusicBrainz recording has a free-streaming relation to this exact Spotify URL"
+    }
+  },
+  {
+    "songId": "song_82cae2899bece06a17d4",
+    "provider": "spotify",
+    "id": "5a7NdkF09AfD0H607eiOkX",
+    "reviewedAt": "2026-09-05T06:28:58.004477+00:00",
+    "reviewBasis": "Root review: matching master, MusicBrainz recording and Spotify titles/artists; direct URL relation; non-video recording with no version disambiguation; release year agrees. Metadata/source verification, no audio audition.",
+    "recordingEvidence": {
+      "metadataTitle": "On My Mind",
+      "metadataArtists": [
+        "Ellie Goulding"
+      ],
+      "titleMatches": true,
+      "artistMatches": true,
+      "playable": true,
+      "musicBrainzTitle": "On My Mind",
+      "disambiguation": "",
+      "video": false,
+      "firstReleaseDate": "2015-09-17",
+      "lengthMs": 213413,
+      "sameRecordingSourceClaim": "MusicBrainz recording has a free-streaming relation to this exact Spotify URL"
+    }
+  }
+]

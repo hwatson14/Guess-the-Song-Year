@@ -21,60 +21,30 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-      - name: Validate JavaScript and no-repeat engine
-        run: |
-          node --check engine.js
-          node --check engine-v7.js
-          node --check app.js
-          node scripts/test_engine_v7.mjs
-      - name: Validate prebuilt catalogue
-        run: |
-          python scripts/validate_catalogue.py
-          python -m json.tool data/catalogue.schema.json >/dev/null
-      - name: Enforce current one-mode canonical catalogue
-        run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          data=json.loads(Path('data/catalogue.json').read_text())
-          assert data.get('version')==10,f"Only canonical one-mode v10 may deploy right now, got {data.get('version')}"
-          assert set(data.get('modes',{}))=={'greatest'},f"Only Greatest Hits may deploy right now: {sorted(data.get('modes',{}))}"
-          greatest=data['modes']['greatest']
-          assert set(map(int,greatest))==set(range(1950,2023)),len(greatest)
-          for year,pool in greatest.items():
-              keys=set()
-              for song in pool:
-                  assert int(song.get('year',0))==int(year),(year,song)
-                  key=str(song.get('canonicalKey') or '')
-                  assert key,(year,song)
-                  assert key not in keys,(year,key)
-                  keys.add(key)
-          print('one-mode canonical deployment gate passed')
-          PY
-      - name: Validate gameplay contract
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          js=Path('app.js').read_text()
-          guard=Path('engine-v7.js').read_text()
-          for token in ['ensureVirtualStarters','starterYear','match.pendingSlot=slot','Starter year:','Listen Again','Listen for as long as you want','data-action="new-card"','Wrong answer','Correct answer','repeat-replaced']:
-              assert token in js, token
-          for forbidden in ['setTimeout(()=>finishYouTubeListening(),30000)','match.assign[','data-mode=','function modeId()']:
-              assert forbidden not in js, forbidden
-          for token in ['E.MODES={greatest}','NO_UNUSED_SONG','E.songUseKey=underlyingKey','E.isAlternateSongTitle=isAlternateTitle','Only Greatest Hits is enabled']:
-              assert token in guard, token
-          assert "const MODE='greatest'" in js
-          assert 'sing_along' not in guard
-          assert 'modeFallbacks' not in guard
-          PY
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-      - name: Upload static site
-        uses: actions/upload-pages-artifact@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
         with:
-          path: '.'
+          node-version: '22'
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install validation dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements-dev.txt
+      - name: Validate runtime and catalogue before publishing
+        run: node scripts/check.mjs
+      - name: Report physical-card evidence status
+        continue-on-error: true
+        run: python scripts/require_verified_card_years.py
+      - name: Stage public application files
+        run: |
+          mkdir -p _site/data
+          cp index.html app.css app.js app-policy.js engine.js engine-v7.js robots.txt THIRD_PARTY_NOTICES.md _site/
+          cp data/catalogue.json data/modes.json _site/data/
+          cp -R assets vendor _site/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

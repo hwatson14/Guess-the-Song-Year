@@ -1,0 +1,68 @@
+[
+  {
+    "songId": "song_523db646e8e9b2c17a27",
+    "originalMembership": {
+      "songId": "song_523db646e8e9b2c17a27",
+      "mode": "greatest",
+      "year": 2001,
+      "metadata": {
+        "releaseYear": 2001,
+        "canonicalKey": "jenny from the block|jennifer lopez",
+        "musicbrainzId": "842b6dbf-27c4-4ce0-ac99-6f86b9b54dba",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date",
+        "source": "catalogue-expansion-recording-audit",
+        "sourceLabel": "MusicBrainz recording release evidence",
+        "sourceUrl": "https://musicbrainz.org/recording/842b6dbf-27c4-4ce0-ac99-6f86b9b54dba",
+        "sourceProvider": "MusicBrainz recording database",
+        "sourceRetrievalDate": "2026-09-05",
+        "releaseYearEvidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded.",
+        "releaseDateEvidence": "2001-01-01",
+        "evidenceState": "externally_observed"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "canonicalKey",
+        "musicbrainzId",
+        "yearEvidence",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "sourceRetrievalDate",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "spotifyId",
+        "youtubeId"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    "correctedYear": 2002,
+    "evidence": [
+      {
+        "sourceUrl": "https://www.officialcharts.com/songs/jennifer-lopez-jenny-from-the-block/",
+        "source": "Official Charts",
+        "dateEvidence": "First Chart Date 30/11/2002",
+        "reason": "The official UK chart page dates the single's first chart appearance to 30 November 2002."
+      },
+      {
+        "sourceUrl": "https://music.apple.com/us/album/this-is-me-then/190849068",
+        "source": "Apple Music",
+        "dateEvidence": "Album release November 25, 2002",
+        "reason": "The label catalogue page identifies the parent album This Is Me...Then as released November 25, 2002."
+      },
+      {
+        "sourceUrl": "https://musicbrainz.org/release/297c3e43-ea14-4a16-a1d1-9b8969b8d37f",
+        "source": "MusicBrainz release catalogue",
+        "dateEvidence": "Official maxi-single release is 2002",
+        "reason": "The cached/linked MusicBrainz release is a 2002 Epic maxi-single; the master row's 2001-01-01 date is an erroneous recording-date fallback for this title."
+      }
+    ]
+  }
+]
