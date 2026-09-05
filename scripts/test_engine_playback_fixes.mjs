@@ -29,6 +29,29 @@ const ok=data=>({ok:true,json:async()=>data});
 }
 
 {
+  const h=make({cache:{['youtube:'+key]:{ids:['wrong'],cachedAt:Date.now()}},fetchImpl:async(url)=>url.pathname.endsWith('/videos')?ok({items:[{id:'wrong',status:{embeddable:true,privacyStatus:'public',uploadStatus:'processed'},snippet:{title:'You Got Nothing I Want (2011 Remastered)',channelTitle:'Cold Chisel'}}]}):ok({items:[{id:{videoId:'wrong'},snippet:{title:'You Got Nothing I Want (2011 Remastered)',channelTitle:'Cold Chisel'}}]})});
+  await assert.rejects(()=>h.E.resolveSong(song,'youtube'),err=>err.code==='YOUTUBE_VIDEO_NOT_FOUND');
+}
+
+{
+  const cold={title:"I'm Gonna Roll Ya",artist:'Cold Chisel',youtubeId:'Q5uzeROl9Sk'},coldKey='im gonna roll ya|cold chisel';
+  const h=make({cache:{['youtube:'+coldKey]:{ids:['good'],cachedAt:Date.now()}},fetchImpl:async(url)=>url.pathname.endsWith('/videos')?ok({items:[{id:'good',status:{embeddable:true,privacyStatus:'public',uploadStatus:'processed'},snippet:{title:"I'm Gonna Roll Ya (2011 Remastered) (Official Video)",channelTitle:'Cold Chisel'}}]}):ok({items:[]})});
+  assert.equal((await h.E.resolveSong(cold,'youtube')).videoId,'good','remastered official video with matching identity remains playable');
+}
+
+{
+  const songWithEntity={title:'Rock & Roll',artist:"Guns N' Roses",youtubeId:'entity'};
+  const h=make({fetchImpl:async(url)=>url.pathname.endsWith('/videos')?ok({items:[{id:'entity',status:{embeddable:true,privacyStatus:'public',uploadStatus:'processed'},snippet:{title:'Rock &amp; Roll (Official Audio)',channelTitle:"Guns N' Roses"}}]}):ok({items:[]})});
+  assert.equal((await h.E.resolveSong(songWithEntity,'youtube')).videoId,'entity','HTML entities and apostrophes normalize for valid identity');
+}
+
+{
+  const live={title:'Live and Let Die',artist:"Guns N' Roses",youtubeId:'live'};
+  const h=make({fetchImpl:async(url)=>url.pathname.endsWith('/videos')?ok({items:[{id:'live',status:{embeddable:true,privacyStatus:'public',uploadStatus:'processed'},snippet:{title:'Live and Let Die (Official Audio)',channelTitle:"Guns N' Roses"}}]}):ok({items:[]})});
+  assert.equal((await h.E.resolveSong(live,'youtube')).videoId,'live','literal live title remains playable');
+}
+
+{
   let videoCalls=0;
   const h=make({cache:{['youtube:'+key]:{ids:['dead'],cachedAt:Date.now()}},fetchImpl:async(url)=>url.pathname.endsWith('/videos')?(videoCalls++===0?ok({items:[]}):ok({items:[{id:'replacement',status:{embeddable:true,privacyStatus:'public',uploadStatus:'processed'},snippet:{title:'Example Song',channelTitle:'Example Artist'}}]})):ok({items:[{id:{videoId:'replacement'},snippet:{title:'Example Song',channelTitle:'Example Artist'}}]})});
   const result=await h.E.resolveSong(song,'youtube');
@@ -58,3 +81,16 @@ const ok=data=>({ok:true,json:async()=>data});
 }
 
 console.log('engine playback fixes passed: YouTube cache expiry/revalidation, Spotify match floor, serialized device commands');
+
+for(const fixture of [
+ {song:{title:'Music',artist:'Madonna'},title:'Madonna - Vogue (Official Music Video)',channel:'Madonna',allowed:false},
+ {song:{title:'One',artist:'Artist'},title:'Someone',channel:'Artist',allowed:false},
+ {song:{title:'Live and Let Die',artist:'Wings'},title:'Live and Let Die (Remix)',channel:'Wings',allowed:false},
+ {song:{title:'More Than This',artist:'Roxy Music'},title:'More Than This (Official Video)',channel:'Roxy Music',allowed:true},
+ {song:{title:'Music',artist:'Madonna'},title:'Madonna - Music (Official Music Video)',channel:'Madonna',allowed:true},
+]){
+ const item={id:'candidate',status:{embeddable:true,privacyStatus:'public',uploadStatus:'processed'},snippet:{title:fixture.title,channelTitle:fixture.channel}};
+ const h=make({fetchImpl:async url=>ok({items:url.pathname.endsWith('/videos')?[item]:[{...item,id:{videoId:'candidate'}}]})});
+ if(fixture.allowed)assert.equal((await h.E.resolveSong(fixture.song,'youtube')).videoId,'candidate');
+ else await assert.rejects(()=>h.E.resolveSong(fixture.song,'youtube'),error=>error.code==='YOUTUBE_VIDEO_NOT_FOUND',fixture.title);
+}

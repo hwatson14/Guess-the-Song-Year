@@ -18,6 +18,7 @@
   const LS={provider:'gsy.provider.v6',token:'gsy.spotifyToken.v6',device:'gsy.spotifyDevice.v6',cache:'gsy.resolveCache.v6',cardYears:'gsy.cardYearOverrides.v1'};
   const SCOPES='user-read-playback-state user-modify-playback-state';
   const YOUTUBE_CACHE_TTL_MS=7*24*60*60*1000;
+  const YOUTUBE_MATCH_POLICY='title-artist-v1';
 
   let provider=localStorage.getItem(LS.provider)||'youtube';
   let spotifyToken=loadJSON(LS.token,null);
@@ -100,7 +101,7 @@
   async function loadCatalogue(){
     if(catalogue)return catalogue;
     if(cataloguePromise)return cataloguePromise;
-    cataloguePromise=fetch('./data/catalogue.json?v=7.5.18',{cache:'no-store'}).then(async r=>{
+    cataloguePromise=fetch('./data/catalogue.json?v=7.5.19',{cache:'no-store'}).then(async r=>{
       if(!r.ok)throw new AppError('CATALOGUE_UNAVAILABLE','The song catalogue is unavailable. Reload the app in a moment.',r.status);
       const data=await r.json();
       if(!data?.modes)throw new AppError('CATALOGUE_INVALID','The song catalogue is invalid.');
@@ -133,6 +134,30 @@
     const entry=cacheGet('youtube',song);if(!entry?.ids?.length)return;
     const ids=entry.ids.filter(candidate=>candidate!==id);
     if(ids.length)cachePut('youtube',song,{...entry,ids,cachedAt:entry.cachedAt});else cacheDrop('youtube',song);
+  }
+  function decodeHtml(value){return String(value??'').replace(/&(#x?[0-9a-f]+|amp|apos|quot|lt|gt);/gi,(m,code)=>{const named={amp:'&',apos:"'",quot:'"',lt:'<',gt:'>'};if(named[code.toLowerCase()])return named[code.toLowerCase()];const lower=code.toLowerCase();const n=lower[0]==='#'?(lower[1]==='x'?parseInt(lower.slice(2),16):parseInt(lower.slice(1),10)):NaN;return Number.isFinite(n)?String.fromCodePoint(n):m})}
+  function normalizedProviderText(value){return norm(decodeHtml(value).replace(/[’']/g,''))}
+  function providerTokens(value){return normalizedProviderText(value).split(' ').filter(Boolean)}
+  function artistTokens(value){return providerTokens(value).filter(token=>!['official','audio','video','music','topic','vevo','records','recordings','channel'].includes(token))}
+  function youtubeCandidateAllowed(video,song){
+    if(!video||!song)return false;
+    const metadataFreeTitle=decodeHtml(video.title).replace(/\bofficial\s+(?:music\s+)?(?:video|audio|lyrics)\b/gi,' ');
+    const title=normalizedProviderText(metadataFreeTitle),expectedTitle=normalizedProviderText(song.title);
+    if(!expectedTitle||!(` ${title} `).includes(` ${expectedTitle} `))return false;
+    const expectedArtist=providerTokens(mainArtist(song.artist)).filter(token=>token!=='the');
+    const actualArtist=providerTokens(`${metadataFreeTitle} ${String(video.channel||'').replace(/vevo\b/gi,'')}`);
+    const compactChannel=artistTokens(video.channel).join('').replace(/vevo$/,'');
+    if(!expectedArtist.length||(!expectedArtist.every(token=>actualArtist.includes(token))&&compactChannel!==expectedArtist.join('')))return false;
+    const alternate=/\b(karaoke|reaction|cover|tribute|sped up|slowed|nightcore|remix|re[- ]?mix|live)\b/i;
+    const sourceText=`${video.title||''} ${video.channel||''}`;
+    const expectedText=String(song.title||'');
+    if(alternate.test(sourceText)){
+      for(const marker of ['karaoke','reaction','cover','tribute','sped up','slowed','nightcore','remix','re-mix','live']){
+        const pattern=new RegExp(`\\b${marker.replace('-','[- ]?')}\\b`,'i');
+        if(pattern.test(sourceText)&&!pattern.test(expectedText))return false;
+      }
+    }
+    return true;
   }
   function clearResolveCache(){resolveCache={};localStorage.removeItem(LS.cache)}
 
@@ -179,28 +204,28 @@
       // current cache format so deleted/private uploads do not stick indefinitely.
       const hasTimestamp=Number(cached.cachedAt)>0,age=hasTimestamp?Date.now()-Number(cached.cachedAt):0;
       if(!hasTimestamp||age<=YOUTUBE_CACHE_TTL_MS){
-        const valid=await validateYouTubeIds(cached.ids);const ids=valid.map(x=>x.id);
-        if(ids.length){cachePut('youtube',song,{...cached,ids});return {provider:'youtube',videoId:ids[0],candidateIds:[...ids],url:`https://www.youtube.com/watch?v=${ids[0]}`,title:song.title,artist:song.artist,song};}
+        const valid=(await validateYouTubeIds(cached.ids)).filter(video=>youtubeCandidateAllowed(video,song));const ids=valid.map(x=>x.id);
+        if(ids.length){cachePut('youtube',song,{...cached,ids});return {provider:'youtube',matchPolicy:YOUTUBE_MATCH_POLICY,videoId:ids[0],candidateIds:[...ids],url:`https://www.youtube.com/watch?v=${ids[0]}`,title:song.title,artist:song.artist,song};}
         cacheDrop('youtube',song);
       }else cacheDrop('youtube',song);
     }
     let ids=[];
     if(song.youtubeId)ids.push(song.youtubeId);
-    if(ids.length){const valid=await validateYouTubeIds(ids);ids=valid.map(x=>x.id)}
+    if(ids.length){const valid=(await validateYouTubeIds(ids)).filter(video=>youtubeCandidateAllowed(video,song));ids=valid.map(x=>x.id)}
     if(!ids.length){
       const q=`${song.title} ${mainArtist(song.artist)} official audio`;
       const url=`https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&videoEmbeddable=true&videoSyndicated=true&maxResults=8&safeSearch=none&regionCode=AU&q=${encodeURIComponent(q)}&key=${encodeURIComponent(YOUTUBE_API_KEY)}`;
       const r=await fetch(url);const payload=await r.json().catch(()=>({}));
       if(!r.ok){const quota=/quota/i.test(payload?.error?.message||'');throw new AppError(quota?'YOUTUBE_QUOTA':'YOUTUBE_SEARCH_FAILED',quota?'YouTube search quota is temporarily exhausted. Use Spotify or try again later.':`YouTube search failed (${r.status}).`,r.status)}
       const raw=(payload.items||[]).map(x=>({id:x.id?.videoId,title:x.snippet?.title||'',channel:x.snippet?.channelTitle||''})).filter(x=>x.id);
-      const valid=await validateYouTubeIds(raw.map(x=>x.id));
-      const byId=new Map(raw.map(x=>[x.id,x]));
+      const valid=(await validateYouTubeIds(raw.map(x=>x.id))).filter(video=>youtubeCandidateAllowed(video,song));
+      const byId=new Map(valid.map(x=>[x.id,x]));
       valid.sort((a,b)=>youtubeScore(byId.get(b.id),song)-youtubeScore(byId.get(a.id),song));
       ids=valid.map(x=>x.id);
     }
     if(!ids.length)throw new AppError('YOUTUBE_VIDEO_NOT_FOUND',`YouTube could not find an embeddable version of “${song.title}”.`);
     cachePut('youtube',song,{ids});
-    return {provider:'youtube',videoId:ids[0],candidateIds:[...ids],url:`https://www.youtube.com/watch?v=${ids[0]}`,title:song.title,artist:song.artist,song};
+    return {provider:'youtube',matchPolicy:YOUTUBE_MATCH_POLICY,videoId:ids[0],candidateIds:[...ids],url:`https://www.youtube.com/watch?v=${ids[0]}`,title:song.title,artist:song.artist,song};
   }
 
   async function validateYouTubeIds(ids){
