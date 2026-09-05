@@ -216,8 +216,8 @@
     const n=Number(team?.bonusPoints);return Number.isFinite(n)?Math.max(0,Math.floor(n)):0;
   }
   function timelineBoard(interactive=false){
-    const teams=(match?.teams||[]).map((team,index)=>({team,index})).sort((a,b)=>(b.index===match.turn)-(a.index===match.turn));
-    return `<div class="timeline-board" aria-label="Team timelines">${teams.map(({team,index})=>{
+    const teams=(match?.teams||[]).map((team,index)=>({team,index}));
+    return `<div class="timeline-board" aria-label="Team timelines" data-team-count="${teams.length}">${teams.map(({team,index})=>{
       const active=index===match.turn,years=[...(team.timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b);
       const slot=i=>{const label=i===0?`Before ${years[0]??'timeline'}`:i===years.length?`After ${years.at(-1)??'timeline'}`:`Between ${years[i-1]} and ${years[i]}`;return `<button class="timeline-slot ${pendingSlot===i?'on':''}" data-slot="${i}" aria-label="${esc(label)}" aria-pressed="${pendingSlot===i}" ${bonusBusy?'disabled':''}>+</button>`};
       const choosing=interactive&&active&&cfg.playMode==='virtual';

@@ -24,7 +24,7 @@ See [AGENTS.md](AGENTS.md), [current status and roadmap](docs/STATUS_AND_ROADMAP
 
 ### Timelines and bonus points
 
-Both teams' timelines stay on the main game screen. Year tiles wrap instead of disappearing off the side; larger team counts and long Unlimited games scroll within the board.
+Both teams' timelines stay on the main game screen. Team 1 stays on the left and Team 2 on the right, with years ordered oldest to newest down each column. Larger team counts and long Unlimited games scroll within the board.
 
 After placement is marked, the active team can claim **Bonus point +1** only if it named both the song title and artist correctly. This is an optional, manually judged award, once per card. Bonus points are separate from the card score and persist with Resume.
 

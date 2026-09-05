@@ -16,7 +16,7 @@ This file is the integration contract for the playable app. Candidate generators
 
 ## Timeline and bonus rules
 
-- Both teams' collected timelines are the primary gameplay view, with wrapping readable year tiles and internal scrolling for larger games.
+- Both teams' collected timelines are the primary gameplay view, in fixed left/right columns, with years ascending from top to bottom and internal scrolling for larger games.
 - Each team owns a persisted non-negative bonus balance, separate from card score.
 - The optional Reveal award is exactly one point for both correct title and artist, once per completed placement, whether the placement was right or wrong.
 - A voluntary skip costs one point and keeps the same team/turn. Provider recovery is not charged.
