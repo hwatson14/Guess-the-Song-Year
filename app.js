@@ -12,7 +12,7 @@
   let scanner=null,scanning=false,scanBusy=false,motionReady=false,faceDown=false,playing=false,playNeedsTap=false,toastTimer=null;
   let musicModal=false,deviceList=[],backGuardReady=false,prepareSeq=0,playbackSeq=0,countdownTimer=null,youtubeListenTimer=null,youtubeDownAt=0;
   let lastRenderedScreen=null,lastModalOpen=false;
-  let modeReports={};
+  let modeReports={},bonusBusy=false;
 
   const esc=s=>String(s??'').replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));
   function load(k,f){try{return JSON.parse(localStorage.getItem(k))??f}catch{return f}}
@@ -99,7 +99,12 @@
     match.error=match.error&&typeof match.error==='object'?match.error:null;
     match.used=Array.isArray(match.used)?match.used:[];
     match.history=Array.isArray(match.history)?match.history:[];
-    for(const team of match.teams||[]){team.correct=Number(team.correct)||Number(team.score)||0;team.wrong=Number(team.wrong)||0;team.timeline=Array.isArray(team.timeline)?team.timeline:[]}
+    for(const team of match.teams||[]){team.bonusPoints=bonusBalance(team);team.bonusYears=Math.max(0,Number(team.bonusYears)||0);team.correct=Number(team.correct)||Number(team.score)||0;team.wrong=Number(team.wrong)||0;team.timeline=Array.isArray(team.timeline)?team.timeline:[]}
+    match.bonusAwarded=match.bonusAwarded===true;
+    // Older physical matches recorded outcomes but did not populate their timeline.
+    if(cfg.playMode==='physical')for(const [i,team] of (match.teams||[]).entries()){
+      if(!team.timeline.length)team.timeline=(match.history||[]).filter(h=>h.team===i&&['correct','bonus-year'].includes(h.outcome)).map(h=>Number(h.year)).filter(Number.isFinite).sort((a,b)=>a-b);
+    }
     delete match.assign;
     if(match.settings.playMode==='virtual')ensureVirtualStarters();
     saveMatch();
@@ -107,12 +112,14 @@
 
   function render(){
     const screenChanged=screen!==lastRenderedScreen,modalWasOpen=lastModalOpen,modalChanged=musicModal!==modalWasOpen;
+    const boardScroll=root.querySelector('.timeline-board')?.scrollTop||0;
     const active=document.activeElement;
     const focusAttr=['action','play','victory','provider','slot','modePicker','range'].find(key=>active?.dataset?.[key]!==undefined);
     const focusSelector=focusAttr?`[data-${focusAttr.replace(/[A-Z]/g,c=>'-'+c.toLowerCase())}="${active.dataset[focusAttr]}"]`:null;
     const content=screen==='setup'?setupScreen():screen==='resume'?resumeScreen():screen==='scanner'?scannerScreen():screen==='loading'?loadingScreen():screen==='error'?errorScreen():screen==='ready'?readyScreen():screen==='countdown'?countdownScreen():screen==='youtube'?youtubeListeningScreen():screen==='playing'?playingScreen():screen==='guess'?guessScreen():screen==='reveal'?revealScreen():screen==='gameover'?gameOverScreen():setupScreen();
     root.innerHTML=`<main class="app screen-${esc(screen)}" id="mainContent" ${musicModal?'inert aria-hidden="true"':''}>${content}</main>${musicSheet()}`;
     bind();
+    if(!screenChanged){const board=root.querySelector('.timeline-board');if(board)board.scrollTop=boardScroll;}
     requestAnimationFrame(()=>{
       if(musicModal){if(modalChanged)root.querySelector('[data-action="close-music"]')?.focus();return}
       if(modalWasOpen){root.querySelector('[data-action="music"]')?.focus();return}
@@ -181,8 +188,7 @@
 
   function readyScreen(){
     const isYt=current?.provider==='youtube';
-    const copy=isYt?'Tap Start music, then you get 3 seconds to put the phone face-down before YouTube starts.':'Flip the phone face-down, or tap Start music.';
-    return `${topLine(true,false)}${matchHeader()}${scoreStrip()}<div class="kicker">✦ ${cfg.playMode==='physical'?'CARD SCANNED':'CARD DEALT'}</div><h1 class="ready-title">Ready to play</h1><div class="ready-visual" aria-hidden="true"><div class="ready-glow"></div><div class="ready-phone"><div class="ready-phone-screen"><span>?</span></div><i></i></div></div><div class="ready-copy"><h2>${isYt?'Phone down in 3':'Flip your phone'}</h2><p>${copy}</p><div class="locked">▣ Song locked · year hidden</div><div class="ready-actions"><button class="btn primary" data-action="play-current">Start music</button>${!isYt?'<button class="btn ghost" data-action="motion">Enable flip-to-start</button>':''}</div></div>`;
+    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>Ready to play</h1><p>${isYt?'Tap Start music, then put the phone face-down during the countdown.':'Flip the phone face-down or tap Start music.'} Song and year stay hidden.</p></div>${timelineBoard()}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn primary" data-action="play-current" ${bonusBusy?'disabled':''}>Start music</button>${!isYt?'<button class="btn ghost" data-action="motion">Enable flip-to-start</button>':''}</div>`;
   }
 
   function countdownScreen(){
@@ -190,49 +196,49 @@
   }
 
   function youtubeListeningScreen(){
-    const virtual=cfg.playMode==='virtual',replaceLabel=virtual?'Deal new card':'Scan new card';
-    const copy=virtual?'Listen for as long as you want. Tap Guess now when you are ready to place the song.':'Listen for as long as you want. Tap Guess now when you are ready to reveal.';
-    return `${topLine(false,false)}${matchHeader()}${scoreStrip()}<div class="youtube-listening"><div class="kicker">NOW PLAYING · PHONE DOWN</div><h1>Listen, then guess</h1><p>${copy}</p><div class="youtube-guess-actions"><button class="btn primary" data-action="guess-now">Guess now</button><button class="btn ghost" data-action="new-card">↻ ${replaceLabel}</button></div><div class="youtube-player"><div id="youtubePlayer"></div></div><button class="btn primary yt-start-fallback hidden" id="ytStartFallback" data-action="yt-start">Tap to start YouTube</button><small class="provider-warning">Recognised a recent repeat? Use ${replaceLabel}; the current team keeps its turn and the hidden year changes.</small></div>`;
+    return `${matchHeader()}<div class="turn-toolbar"><h1>Listen, then guess</h1><p>Keep the phone face-down while the visible YouTube player plays.</p></div>${timelineBoard()}<div class="youtube-player"><div id="youtubePlayer"></div></div><button class="btn primary yt-start-fallback hidden" id="ytStartFallback" data-action="yt-start">Tap to start YouTube</button><div class="board-actionbar"><button class="btn primary" data-action="guess-now">Guess now</button><button class="btn ghost" data-action="new-card" ${bonusBalance()<1?'disabled':''}>Skip · 1 bonus</button></div>`;
   }
 
   function playingScreen(){
     const virtual=cfg.playMode==='virtual';
-    return `${topLine(true,false)}${matchHeader()}${scoreStrip()}<div class="kicker">NOW PLAYING</div><div class="wave-card"><button class="play-core" data-action="toggle-play">Ⅱ</button><div class="wave"></div></div>
-      <div class="playing-instruction"><h2>${virtual?'Place it on your timeline':'Place the physical card on your timeline'}</h2><p>${virtual?'Choose the gap where you think this song belongs.':'Use the cards already on the table. No example years are shown here so the app cannot influence your guess.'}</p></div>
-      ${virtual?virtualTimeline():`<div class="play-actions"><button class="btn ghost" data-action="replay">↻ Replay</button><button class="btn ghost" data-action="new-card">↻ Scan new card</button><button class="btn primary" data-action="guess-now">Guess now</button></div>`}`;
+    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>${virtual?'Place the song':'Your timelines'}</h1><p>${virtual?'Choose a + on your timeline.':'Place the physical card on the table, then reveal.'}</p></div>${virtual?virtualTimeline():`${timelineBoard()}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="toggle-play">Pause music</button><button class="btn primary" data-action="guess-now">Guess now</button></div>`}`;
   }
 
   function guessScreen(){
     const virtual=cfg.playMode==='virtual';
-    return `${topLine(true,false)}${matchHeader()}${scoreStrip()}<div class="kicker">MUSIC STOPPED</div><div class="guess-stage"><div class="guess-disc" aria-hidden="true"></div><h1>${virtual?'Place the song':'Make your guess'}</h1><p>${virtual?'Choose where the song belongs on your timeline.':'Place the physical card on your timeline, then reveal the answer.'}</p></div>
-      ${virtual?virtualTimeline():`<div class="play-actions"><button class="btn ghost" data-action="listen-again">↻ Listen again</button><button class="btn ghost" data-action="new-card">↻ Scan new card</button><button class="btn primary" data-action="reveal">Reveal Answer</button></div>`}`;
+    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>${virtual?'Place the song':'Make your guess'}</h1><p>${virtual?'Choose a + on your timeline, then lock your placement.':'Place the physical card on the table, then reveal.'}</p></div>${virtual?virtualTimeline():`${timelineBoard()}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="listen-again">Listen again</button><button class="btn primary" data-action="reveal">Reveal Answer</button></div>`}`;
   }
 
   function virtualTimeline(){
-    const team=activeTeam(),years=[...(team.timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b);let html='';
-    for(let i=0;i<=years.length;i++){
-      const label=i===0?`Before ${years[0]??'timeline'}`:i===years.length?`After ${years[years.length-1]??'timeline'}`:`Between ${years[i-1]} and ${years[i]}`;
-      html+=`<button class="slot ${pendingSlot===i?'on':''}" data-slot="${i}" aria-label="${label}" aria-pressed="${pendingSlot===i?'true':'false'}"></button>`;
-      if(i<years.length)html+=`<div class="year-card">${years[i]}</div>`;
-    }
-    const starter=Number(team.starterYear);
-    return `<div class="card"><div class="timeline">${html}</div><div class="timeline-note">Starter year: <b>${Number.isFinite(starter)?starter:years[0]}</b> · Tap a + before, between or after the years.</div></div><div class="virtual-actions"><button class="btn ghost" data-action="listen-again">↻ Listen Again</button><button class="btn ghost" data-action="new-card">↻ Deal new card</button><button class="btn primary" data-action="lock-placement" ${pendingSlot===null?'disabled':''}>Lock Placement</button></div>`;
+    return `${timelineBoard(true)}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="listen-again" ${bonusBusy?'disabled':''}>Listen again</button><button class="btn primary" data-action="lock-placement" ${pendingSlot===null||bonusBusy?'disabled':''}>Lock Placement</button></div>`;
+  }
+  function bonusBalance(team=activeTeam()){
+    const n=Number(team?.bonusPoints);return Number.isFinite(n)?Math.max(0,Math.floor(n)):0;
+  }
+  function timelineBoard(interactive=false){
+    const teams=(match?.teams||[]).map((team,index)=>({team,index})).sort((a,b)=>(b.index===match.turn)-(a.index===match.turn));
+    return `<div class="timeline-board" aria-label="Team timelines">${teams.map(({team,index})=>{
+      const active=index===match.turn,years=[...(team.timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b);
+      const slot=i=>{const label=i===0?`Before ${years[0]??'timeline'}`:i===years.length?`After ${years.at(-1)??'timeline'}`:`Between ${years[i-1]} and ${years[i]}`;return `<button class="timeline-slot ${pendingSlot===i?'on':''}" data-slot="${i}" aria-label="${esc(label)}" aria-pressed="${pendingSlot===i}" ${bonusBusy?'disabled':''}>+</button>`};
+      const choosing=interactive&&active&&cfg.playMode==='virtual';
+      const cards=years.map((year,i)=>`<span class="timeline-step">${choosing?slot(i):''}<span class="timeline-year">${year}</span></span>`).join('')+(choosing?slot(years.length):'');
+      return `<section class="team-timeline ${active?'active-team':''}" aria-label="${esc(team.name)} timeline"><div class="team-timeline-header"><h2>${esc(team.name)}${active?' <small>Your turn</small>':''}</h2><div class="team-timeline-totals"><b>${team.score}${cfg.victory==='10'?'/10':''} cards</b><span>${bonusBalance(team)} bonus</span></div></div><div class="timeline-years">${cards||'<span class="timeline-empty">No cards collected yet</span>'}</div></section>`;
+    }).join('')}</div>`;
+  }
+  function bonusActions(award=false){
+    const balance=bonusBalance(),canSkip=!!current&&['ready','guess','playing','youtube'].includes(screen),canBuy=['ready','guess','reveal','playing'].includes(screen);
+    return `<div class="bonus-actions" aria-label="Bonus points">${award?`<button class="btn ghost" data-action="bonus-point" ${match.bonusAwarded||bonusBusy?'disabled':''}>${match.bonusAwarded?'✓ Bonus point added':'Bonus point +1'}</button>`:''}${canSkip?`<button class="btn ghost" data-action="new-card" ${balance<1||bonusBusy?'disabled':''}>Skip · 1 bonus</button>`:''}${canBuy?`<button class="btn ghost" data-action="bonus-year" ${balance<5||bonusBusy||winner()?'disabled':''}>${bonusBusy?'Drawing year…':'Free year · 5 bonus'}</button>`:''}</div>${award?'<small class="bonus-hint">Claim 1 point only if both title and artist were correct.</small>':''}`;
+  }
+
+  function bonusCardNotice(){
+    const card=match?.lastBonusYear;if(!card||card.team!==match.turn)return '';
+    return `<div class="bonus-panel" role="status"><strong>Bonus card: ${card.year}</strong> ${esc(card.title)} · ${esc(card.artist)}. Added to your timeline; still your turn.</div>`;
   }
 
   function revealScreen(){
-    const virtual=cfg.playMode==='virtual';
-    const reference=!virtual&&current?.cardId?E.cardYearReference(current.cardId):null;
-    const cardLabel=reference?String(reference.cardId).padStart(5,'0'):'';
-    const physicalResult=!reference?'Mark the answer':reference.year===Number(current?.year)
-      ?`Card ${cardLabel} - ${reference.overridden?'corrected on this device':'built-in reference'}`
-      :`Card ${cardLabel} - future scans use ${reference.year}`;
-    const result=virtual?(placementResult?.correct?'Correct placement':'Wrong position'):physicalResult;
-    const resultClass=virtual?(placementResult?.correct?'ok':'bad'):'';
-    const source=current?.song?.sourceLabel||current?.song?.source||`${modeInfo().name} catalogue`;
-    return `${topLine(true,false)}${matchHeader()}${scoreStrip()}<h1 class="reveal-heading">Reveal</h1><div class="reveal-sub">${esc(modeInfo().name)} · ${esc(activeTeam().name)}</div>
-      <section class="card answer-card"><div class="answer-top"><div class="answer-art"></div><div><div class="answer-song">${esc(current?.song?.title||'Unknown')}</div><div class="answer-artist">${esc(current?.song?.artist||'')}</div></div></div><div class="answer-year">${current?.year||'----'}</div><div class="result-badge ${resultClass}">${esc(result)}</div></section>
-      <div class="card reveal-help">${virtual?(placementResult?.correct?`It fits at that point in ${esc(activeTeam().name)}’s timeline. The card has been added.`:`It does not fit between those neighbouring years, so the card is discarded.`):`Did ${esc(activeTeam().name)} place the card correctly? Mark the result below.`}</div>
-      <div class="reveal-actions">${virtual?'':`<button class="btn ghost mark-answer" data-action="wrong-answer">✕ Wrong answer</button><button class="btn primary mark-answer" data-action="correct-answer">✓ Correct answer</button><button class="btn ghost year-reference-action" data-action="update-card-year">Update card year reference</button>`}${virtual?'<button class="btn primary" data-action="next-turn">Next Team</button>':''}<button class="btn text" data-action="open-track">Open song in ${current?.provider==='spotify'?'Spotify':'YouTube'}</button></div><div class="source-note">Catalogue source: ${esc(source)}</div>`;
+    const virtual=cfg.playMode==='virtual',marked=!!placementResult;
+    const result=marked?(placementResult.correct?'Correct placement':'Wrong position'):'Mark your placement';
+    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>Reveal</h1></div><section class="card answer-card"><div class="answer-top"><div><div class="answer-song">${esc(current?.song?.title||'Unknown')}</div><div class="answer-artist">${esc(current?.song?.artist||'')}</div></div><div class="answer-year">${current?.year||'----'}</div></div><div class="result-badge ${marked?(placementResult.correct?'ok':'bad'):''}">${result}</div></section>${timelineBoard()}${bonusCardNotice()}${marked?`${bonusActions(true)}<div class="board-actionbar"><button class="btn primary" data-action="next-turn" ${bonusBusy?'disabled':''}>${winner()?'See results':'Next Team'}</button></div>`:`<div class="board-actionbar"><button class="btn ghost" data-action="wrong-answer">Wrong placement</button><button class="btn primary" data-action="correct-answer">Correct placement</button></div>`}${!virtual?'<button class="btn text" data-action="update-card-year">Update card year reference</button>':''}`;
   }
 
   function gameOverScreen(){
@@ -286,6 +292,8 @@
       if(a==='correct-answer')b.onclick=()=>finishPhysical(true);
       if(a==='wrong-answer')b.onclick=()=>finishPhysical(false);
       if(a==='next-turn')b.onclick=finishVirtualTurn;
+      if(a==='bonus-point')b.onclick=addBonusPoint;
+      if(a==='bonus-year')b.onclick=buyBonusYear;
       if(a==='open-track')b.onclick=openTrack;
       if(a==='connect-spotify')b.onclick=()=>E.spotifyConnect();
       if(a==='disconnect-spotify')b.onclick=()=>{E.spotifyDisconnect();deviceList=[];toast('Spotify disconnected.');render()};
@@ -370,7 +378,7 @@
     const settings={...cfg},virtualDeck=shuffle(virtualCardsForMode(cfg.mode));
     if(!rangeStats(cfg.mode).years.length){toast('No usable songs exist in the selected year range.');return}
     if(cfg.playMode==='virtual'&&!virtualDeck.length){toast(`${modeInfo(cfg.mode).name} has no playable card years in this range.`);return}
-    match={active:true,id:`g${Date.now()}`,mode:cfg.mode,settings,phase:'between',round:0,turn:0,teams:Array.from({length:cfg.teams},(_,i)=>({name:`Team ${i+1}`,score:0,correct:0,wrong:0,timeline:[],starterYear:null,starterCardId:null})),used:[],history:[],virtualDeck,virtualPos:0,current:null,placementResult:null,pendingSlot:null,error:null};
+    match={active:true,id:`g${Date.now()}`,mode:cfg.mode,settings,phase:'between',round:0,turn:0,teams:Array.from({length:cfg.teams},(_,i)=>({name:`Team ${i+1}`,score:0,correct:0,wrong:0,bonusPoints:0,bonusYears:0,timeline:[],starterYear:null,starterCardId:null})),used:[],history:[],virtualDeck,virtualPos:0,current:null,placementResult:null,pendingSlot:null,error:null};
     if(cfg.playMode==='virtual')ensureVirtualStarters();
     current=null;placementResult=null;pendingSlot=null;
     saveCfg();saveMatch();
@@ -411,7 +419,7 @@
     cancelCountdown();cancelYoutubeListening();prepareSeq++;
     current=null;pendingSlot=null;placementResult=null;runtimeError=null;playing=false;playNeedsTap=false;youtubeDownAt=0;
     E.destroyYouTube();
-    if(match){match.current=null;match.placementResult=null;match.pendingSlot=null;match.error=null;match.phase='between'}
+    if(match){match.bonusAwarded=false;match.lastBonusYear=null;match.current=null;match.placementResult=null;match.pendingSlot=null;match.error=null;match.phase='between'}
   }
 
   function showRoundError(err,context={}){
@@ -586,7 +594,7 @@
   }
 
   async function playCurrent(){
-    if(!current||playing)return;
+    if(!current||playing||bonusBusy)return;
     if(current.provider==='spotify'){await startSpotifyListening();return}
     beginMusicCountdown();
   }
@@ -760,11 +768,42 @@
   function recordSongUsed(){if(!current?.song||!match)return;const key=E.songUseKey?.(current.song)||E.songKey(current.song);if(!match.used.includes(key)){match.used.push(key);saveMatch()}}
   function logOutcome(outcome,extra={}){if(!match)return;match.history=Array.isArray(match.history)?match.history:[];match.history.push({round:match.round,team:match.turn,teamName:activeTeam().name,cardId:current?.cardId||null,year:current?.year||null,songKey:current?.song?(E.songUseKey?.(current.song)||E.songKey(current.song)):null,outcome,...extra});saveMatch()}
   function newCardForRepeat(){
-    if(!match||!current)return;
-    recordSongUsed();logOutcome('repeat-replaced');
+    if(!match||!current||bonusBusy||!['ready','guess','playing','youtube'].includes(screen)||bonusBalance()<1)return;
+    activeTeam().bonusPoints=bonusBalance()-1;
+    recordSongUsed();logOutcome('bonus-skip',{bonusSpent:1});
     stopPlayback();E.destroyYouTube();playing=false;playNeedsTap=false;
     nextRound();
   }
+  function addBonusPoint(){
+    if(screen!=='reveal'||!match||!placementResult||match.bonusAwarded||bonusBusy)return;
+    activeTeam().bonusPoints=bonusBalance()+1;match.bonusAwarded=true;
+    logOutcome('bonus-earned',{bonusEarned:1});saveMatch();render();
+  }
+  async function buyBonusYear(){
+    if(!match||!current||bonusBusy||bonusBalance()<5||winner()||!['ready','guess','reveal','playing'].includes(screen))return;
+    const owner=match,team=activeTeam(),turn=match.turn,seq=prepareSeq;
+    const keyOf=s=>E.songUseKey?.(s)||E.songKey(s),excluded=[...(match.used||[]),keyOf(current.song)];
+    bonusBusy=true;render();
+    try{
+      let drawn=null;const tried=new Set();
+      for(const cardId of shuffle(virtualCardsForMode(modeId()))){
+        const year=E.cardYear(cardId);if(tried.has(year))continue;tried.add(year);
+        try{const song=await E.chooseSong(year,modeId(),excluded);if(!excluded.includes(keyOf(song))){drawn={cardId,year,song};break}}
+        catch(err){if(!['NO_UNUSED_SONG','NO_SONG','MODE_YEAR_UNAVAILABLE'].includes(err?.code))throw err}
+      }
+      if(match!==owner||match.turn!==turn||prepareSeq!==seq)return;
+      if(!drawn){toast('No unused bonus card is available in this range. Your points are unchanged.');return}
+      team.bonusPoints=bonusBalance(team)-5;team.bonusYears=(Number(team.bonusYears)||0)+1;team.score++;
+      team.timeline=[...(team.timeline||[]),drawn.year].sort((a,b)=>a-b);
+      match.used=[...new Set([...(match.used||[]),keyOf(drawn.song)])];
+      match.lastBonusYear={team:turn,year:drawn.year,title:drawn.song.title,artist:drawn.song.artist,cardId:drawn.cardId};
+      pendingSlot=null;match.pendingSlot=null;
+      logOutcome('bonus-year',{cardId:drawn.cardId,year:drawn.year,songKey:keyOf(drawn.song),bonusSpent:5});saveMatch();
+      if(winner())endGame('target');
+    }catch(err){if(match===owner&&prepareSeq===seq)toast(errorText(err))}
+    finally{bonusBusy=false;if(match===owner)render()}
+  }
+
   function revealPhysical(){if(!current)return;recordSongUsed();stopPlayback();placementResult=null;match.placementResult=null;match.phase='reveal';syncCurrent();screen='reveal';render()}
   function updateCardYearReference(){
     if(cfg.playMode!=='physical'||screen!=='reveal'||!current?.cardId)return;
@@ -782,7 +821,7 @@
     }
   }
   function lockPlacement(){
-    if(pendingSlot===null||!current||cfg.playMode!=='virtual'||!['playing','guess'].includes(screen))return;
+    if(bonusBusy||pendingSlot===null||!current||cfg.playMode!=='virtual'||!['playing','guess'].includes(screen))return;
     const team=activeTeam(),years=[...(team.timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b),slot=pendingSlot;
     if(!Number.isInteger(slot)||slot<0||slot>years.length){toast('Choose a valid placement first.');pendingSlot=null;match.pendingSlot=null;saveMatch();render();return}
     const left=slot>0?years[slot-1]:null,right=slot<years.length?years[slot]:null;
@@ -793,12 +832,14 @@
     pendingSlot=null;match.pendingSlot=null;match.placementResult=placementResult;match.phase='reveal';syncCurrent();screen='reveal';render();resetScroll();
   }
   function finishPhysical(correct){
-    if(screen!=='reveal'||!match)return;
+    if(screen!=='reveal'||!match||!current||placementResult||bonusBusy)return;
     const team=activeTeam();
-    if(correct){team.score++;team.correct=(team.correct||0)+1}else team.wrong=(team.wrong||0)+1;
-    logOutcome(correct?'correct':'wrong');advanceTurn();
+    if(correct){team.score++;team.correct=(team.correct||0)+1;team.timeline=[...(team.timeline||[]),current.year].sort((a,b)=>a-b)}else team.wrong=(team.wrong||0)+1;
+    placementResult={correct};match.placementResult=placementResult;
+    logOutcome(correct?'correct':'wrong');saveMatch();render();
   }
-  function finishVirtualTurn(){if(screen!=='reveal'||!match)return;advanceTurn()}
+
+  function finishVirtualTurn(){if(screen!=='reveal'||!match||!placementResult||bonusBusy)return;if(winner()){endGame('target');return}advanceTurn()}
   function advanceTurn(){if(!match)return;match.turn=(match.turn+1)%match.teams.length;match.round++;saveMatch();nextRound()}
   function endGame(reason){if(!match)return;cancelCountdown();cancelYoutubeListening();prepareSeq++;stopScanner();stopPlayback();E.destroyYouTube();match.endReason=reason;match.phase='gameover';match.current=current;saveMatch();screen='gameover';render();resetScroll()}
   function openTrack(){const url=current?.resolved?.url;if(url)window.open(url,'_blank','noopener')}

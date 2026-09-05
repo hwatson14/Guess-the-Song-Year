@@ -22,6 +22,17 @@ See [AGENTS.md](AGENTS.md), [current status and roadmap](docs/STATUS_AND_ROADMAP
 - Physical Reveal can save a corrected card year in this browser so future scans use it
 - Match phase, current card/song and reveal state are persisted so Resume restores the current turn
 
+### Timelines and bonus points
+
+Both teams' timelines stay on the main game screen. Year tiles wrap instead of disappearing off the side; larger team counts and long Unlimited games scroll within the board.
+
+After placement is marked, the active team can claim **Bonus point +1** only if it named both the song title and artist correctly. This is an optional, manually judged award, once per card. Bonus points are separate from the card score and persist with Resume.
+
+- **1 bonus point:** skip the current card and keep the same team's turn.
+- **5 bonus points:** reveal and add a separate unused year card, earning one card toward victory without spending the turn. The current hidden card stays unchanged.
+- A failed bonus draw costs nothing. Provider-error recovery remains free.
+- Physical placement now stays on Reveal for bonus claiming before Next Team. Collected physical years are retained in the app; physical starter cards not recorded in the app remain on the table.
+
 ### Mode status
 
 | Mode | Status | Coverage | Meaning |
