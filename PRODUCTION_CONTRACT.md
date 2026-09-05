@@ -14,6 +14,17 @@ This file is the integration contract for the playable app. Candidate generators
 - Provider-wide failures stop on a recoverable error screen. They must not silently deal or scan additional cards.
 - A failed playback candidate may be replaced only by a different unused song from the same year.
 
+## Timeline and bonus rules
+
+- Both teams' collected timelines are the primary gameplay view, in fixed left/right columns, with years ascending from top to bottom and internal scrolling for larger games.
+- Each team owns a persisted non-negative bonus balance, separate from card score.
+- The optional Reveal award is exactly one point for both correct title and artist, once per completed placement, whether the placement was right or wrong.
+- A voluntary skip costs one point and keeps the same team/turn. Provider recovery is not charged.
+- Five points buy a separate unused card within the chosen mode/range: add its year and one card score without advancing the turn or altering the current hidden card.
+- Failed or superseded purchases must not charge points. A bonus card cannot reuse the current song or an already-used song.
+- All point, card, history and placement changes persist together; repeated clicks or Resume cannot duplicate an award.
+- Physical placement is marked once, then stays on Reveal for the optional bonus before Next Team.
+
 ## Physical cards
 
 - Valid card IDs are the integers 1–308.
