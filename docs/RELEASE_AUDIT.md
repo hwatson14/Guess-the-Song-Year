@@ -1,6 +1,6 @@
 # Release audit — 2026-09-05
 
-Release candidate: catalogue v17, application assets 7.5.18. This audit covers the accumulated catalogue/database migration and gameplay cleanup, plus a focused release review using three small agents and primary-agent browser verification.
+Release candidate: catalogue v17, application assets 7.5.19. This audit covers the accumulated catalogue/database migration and gameplay cleanup, plus a focused release review using three small agents and primary-agent browser verification.
 
 ## Findings resolved
 
@@ -10,6 +10,7 @@ Release candidate: catalogue v17, application assets 7.5.18. This audit covers t
 | Cached YouTube uploads could remain stale indefinitely | Seven-day expiry, validation of legacy and current caches, removal of failed candidates | `test_engine_playback_fixes.mjs`, `test_preferred_link_cache.mjs` |
 | Video validation accepted candidates when the API failed | Validation now fails with a recoverable provider error | Playback regression suite |
 | Delayed Spotify commands could leave the wrong final playback state | Play/pause commands are serialized | Delayed-command regression |
+| Live YouTube smoke test accepted a different song by the correct artist | Title/artist identity gate applies to search, static and cached candidates; older saved candidates are rechecked before playback | Cold Chisel wrong-title regression, genuine-title fixtures and live follow-up |
 | Spotify search could accept an exact title by the wrong artist | Independent title/artist confidence floors and aggregate match threshold | Wrong-artist rejection regression |
 | CI and Pages depended on untracked local files | Compiler, source database, ledgers, tests, dependencies, assets and scanner are included in the release | Shared gate and clean-checkout verification |
 | Main's documentation described an obsolete v6/v10 mismatch | Preserved the six remote commits and reconciled documentation with the current implementation | Merge history and updated handoff |
@@ -37,5 +38,7 @@ Provider candidates remain separate from reviewed preferred playback IDs. Three 
 - Spotify requires Premium and an available Connect device. Unit/VM tests cover authentication recovery and command ordering; this audit did not use a real authenticated Premium account.
 - Physical QR identities and parser behavior are tested. The printed-year reconciliation ledger remains non-blocking under the private-app contract; browser-local Reveal corrections are not promoted as independent evidence. A real phone camera/deck scan is not claimed by the desktop fixture tests.
 - Spotify playlist import and an optional SQLite query workspace remain future work. They are not required by the current static deployment.
+
+The initial 7.5.18 deployment succeeded, but its fresh live playback test exposed the YouTube identity mismatch described above. The 7.5.19 follow-up closes that gate; the audit does not treat a PLAYING state alone as evidence that the correct song was selected.
 
 Deployment evidence is recorded in the release task and GitHub Actions. Publication must use the tested revision and verify the live asset version and catalogue after Pages completes.

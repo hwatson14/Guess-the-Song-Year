@@ -6,7 +6,7 @@ function harness(cache){
  const context=vm.createContext({window:{},localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,String(v)),removeItem:k=>storage.delete(k)},URL,URLSearchParams,location:{search:''},console,
   fetch:async raw=>{const url=new URL(raw,'https://example.test');calls.push(url.pathname);let data={};
    if(url.pathname.startsWith('/v1/tracks/')){const id=url.pathname.split('/').at(-1);data={id,uri:'spotify:track:'+id,name:'Example',artists:[{name:'Artist'}]}}
-   else if(url.pathname.endsWith('/videos'))data={items:[{id:url.searchParams.get('id'),status:{embeddable:true}}]};
+   else if(url.pathname.endsWith('/videos'))data={items:[{id:url.searchParams.get('id'),status:{embeddable:true,privacyStatus:'public',uploadStatus:'processed'},snippet:{title:'Example',channelTitle:'Artist'}}]};
    else throw Error('Unexpected network path '+url.pathname);
    return {ok:true,json:async()=>data};
   }});

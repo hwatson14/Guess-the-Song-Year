@@ -612,6 +612,11 @@
     match.phase='youtube';match.current=current;saveMatch();
     screen='youtube';render();resetScroll();
     try{
+      if(current.resolved?.matchPolicy!=='title-artist-v1'){
+        const resolved=await E.resolveSong(current.song,'youtube');
+        if(seq!==playbackSeq||screen!=='youtube'||!current)return;
+        current={...current,resolved};match.current=current;saveMatch();
+      }
       const r=await E.playYouTube('youtubePlayer',current.resolved);
       // A stale startup must never tear down a newer attempt's global player.
       // The newer attempt owns cleanup once playbackSeq has advanced.
