@@ -1,0 +1,4326 @@
+{
+  "fetchedAt": "2026-08-08T23:12:42Z",
+  "authority": "Tiered ordered identity evidence for HITSTER UK",
+  "faqUrl": "https://hitstergame.com/en-gb/faq/",
+  "playlistUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+  "playlistId": "0Mpj1KwRmY2pHzmj7mfbdh",
+  "market": "AU",
+  "fullOrderCrossCheckUrl": "https://bopster.app/en/playlist?id=4450",
+  "officialDirectRows": 100,
+  "communityOnlyRows": 208,
+  "importantLimitation": "Rows 1..100 match Spotify's official public embed directly. Rows 101..308 come from the numbered Bopster import because Spotify's February 2026 API restrictions hide another owner's remaining playlist items. Playlist position -> physical card ID is not explicitly documented by Jumbo and is not a physical-card observation.",
+  "tracks": [
+    {
+      "position": 1,
+      "spotifyTrackId": "0KMGxYKeUzK9wc5DZCt3HT",
+      "spotifyUri": "spotify:track:0KMGxYKeUzK9wc5DZCt3HT",
+      "title": "If You Leave Me Now",
+      "artists": [
+        "Chicago"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0KMGxYKeUzK9wc5DZCt3HT",
+      "bopsterDisplayedYear": 1976,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 2,
+      "spotifyTrackId": "2tUBqZG2AbRi7Q0BIrVrEj",
+      "spotifyUri": "spotify:track:2tUBqZG2AbRi7Q0BIrVrEj",
+      "title": "I Wanna Dance with Somebody (Who Loves Me)",
+      "artists": [
+        "Whitney Houston"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2tUBqZG2AbRi7Q0BIrVrEj",
+      "bopsterDisplayedYear": 1987,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 3,
+      "spotifyTrackId": "2dCmGcEOQrMQhMMS8Vj7Ca",
+      "spotifyUri": "spotify:track:2dCmGcEOQrMQhMMS8Vj7Ca",
+      "title": "Super Freak",
+      "artists": [
+        "Rick James"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2dCmGcEOQrMQhMMS8Vj7Ca",
+      "bopsterDisplayedYear": 1981,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 4,
+      "spotifyTrackId": "2G0GextMwZJLkNxcSZ7ZJ3",
+      "spotifyUri": "spotify:track:2G0GextMwZJLkNxcSZ7ZJ3",
+      "title": "(What A) Wonderful World - Mono",
+      "artists": [
+        "Sam Cooke"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2G0GextMwZJLkNxcSZ7ZJ3",
+      "bopsterDisplayedYear": 1960,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 5,
+      "spotifyTrackId": "27SdWb2rFzO6GWiYDBTD9j",
+      "spotifyUri": "spotify:track:27SdWb2rFzO6GWiYDBTD9j",
+      "title": "Cheap Thrills",
+      "artists": [
+        "Sia"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/27SdWb2rFzO6GWiYDBTD9j",
+      "bopsterDisplayedYear": 2016,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 6,
+      "spotifyTrackId": "2vwlzO0Qp8kfEtzTsCXfyE",
+      "spotifyUri": "spotify:track:2vwlzO0Qp8kfEtzTsCXfyE",
+      "title": "Wrecking Ball",
+      "artists": [
+        "Miley Cyrus"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2vwlzO0Qp8kfEtzTsCXfyE",
+      "bopsterDisplayedYear": 2013,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 7,
+      "spotifyTrackId": "5pWRdriPCFhfz0JSswkdHo",
+      "spotifyUri": "spotify:track:5pWRdriPCFhfz0JSswkdHo",
+      "title": "Year 3000",
+      "artists": [
+        "Busted"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5pWRdriPCFhfz0JSswkdHo",
+      "bopsterDisplayedYear": 2002,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 8,
+      "spotifyTrackId": "4gAU0cHQJFxj1n2ZDiEIzG",
+      "spotifyUri": "spotify:track:4gAU0cHQJFxj1n2ZDiEIzG",
+      "title": "Step On - 2007 Remaster",
+      "artists": [
+        "Happy Mondays"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4gAU0cHQJFxj1n2ZDiEIzG",
+      "bopsterDisplayedYear": 1990,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 9,
+      "spotifyTrackId": "2He3NOyqtLNE3RQPpeDdSb",
+      "spotifyUri": "spotify:track:2He3NOyqtLNE3RQPpeDdSb",
+      "title": "Groove Is in the Heart",
+      "artists": [
+        "Deee-Lite"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2He3NOyqtLNE3RQPpeDdSb",
+      "bopsterDisplayedYear": 1990,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 10,
+      "spotifyTrackId": "1pBAsoHy7eN9aeVCTAiKua",
+      "spotifyUri": "spotify:track:1pBAsoHy7eN9aeVCTAiKua",
+      "title": "Afternoon Delight",
+      "artists": [
+        "Starland Vocal Band"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1pBAsoHy7eN9aeVCTAiKua",
+      "bopsterDisplayedYear": 1976,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 11,
+      "spotifyTrackId": "4MLBqAEzNN89o2M9h92Z26",
+      "spotifyUri": "spotify:track:4MLBqAEzNN89o2M9h92Z26",
+      "title": "Get Back - Remastered 2009",
+      "artists": [
+        "The Beatles"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4MLBqAEzNN89o2M9h92Z26",
+      "bopsterDisplayedYear": 1970,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 12,
+      "spotifyTrackId": "1NCuYqMc8hKMb4cpNTcJbD",
+      "spotifyUri": "spotify:track:1NCuYqMc8hKMb4cpNTcJbD",
+      "title": "Another Day in Paradise - 2016 Remaster",
+      "artists": [
+        "Phil Collins"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1NCuYqMc8hKMb4cpNTcJbD",
+      "bopsterDisplayedYear": 1989,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 13,
+      "spotifyTrackId": "1FvDJ9KGxcqwv1utyPL3JZ",
+      "spotifyUri": "spotify:track:1FvDJ9KGxcqwv1utyPL3JZ",
+      "title": "This Charming Man - 2011 Remaster",
+      "artists": [
+        "The Smiths"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1FvDJ9KGxcqwv1utyPL3JZ",
+      "bopsterDisplayedYear": 1984,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 14,
+      "spotifyTrackId": "1ZPlNanZsJSPK5h9YZZFbZ",
+      "spotifyUri": "spotify:track:1ZPlNanZsJSPK5h9YZZFbZ",
+      "title": "Like a Virgin",
+      "artists": [
+        "Madonna"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1ZPlNanZsJSPK5h9YZZFbZ",
+      "bopsterDisplayedYear": 1984,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 15,
+      "spotifyTrackId": "2EoIt9vdgFRNW03u5IvFsQ",
+      "spotifyUri": "spotify:track:2EoIt9vdgFRNW03u5IvFsQ",
+      "title": "Achy Breaky Heart",
+      "artists": [
+        "Billy Ray Cyrus"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2EoIt9vdgFRNW03u5IvFsQ",
+      "bopsterDisplayedYear": 1992,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 16,
+      "spotifyTrackId": "0Gsj2iZerDbXbU0G1IHuB2",
+      "spotifyUri": "spotify:track:0Gsj2iZerDbXbU0G1IHuB2",
+      "title": "Gold Digger",
+      "artists": [
+        "Kanye West"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0Gsj2iZerDbXbU0G1IHuB2",
+      "bopsterDisplayedYear": 2005,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 17,
+      "spotifyTrackId": "6oWLiyRpo1ibp2vKNxHG0T",
+      "spotifyUri": "spotify:track:6oWLiyRpo1ibp2vKNxHG0T",
+      "title": "Sweet Dreams (Are Made of This) - 2005 Remaster",
+      "artists": [
+        "Eurythmics"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6oWLiyRpo1ibp2vKNxHG0T",
+      "bopsterDisplayedYear": 1983,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 18,
+      "spotifyTrackId": "2M9ro2krNb7nr7HSprkEgo",
+      "spotifyUri": "spotify:track:2M9ro2krNb7nr7HSprkEgo",
+      "title": "Fast Car",
+      "artists": [
+        "Tracy Chapman"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2M9ro2krNb7nr7HSprkEgo",
+      "bopsterDisplayedYear": 1988,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 19,
+      "spotifyTrackId": "58zsLZPvfflaiIbNWoA22O",
+      "spotifyUri": "spotify:track:58zsLZPvfflaiIbNWoA22O",
+      "title": "Human",
+      "artists": [
+        "Rag'n'Bone Man"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/58zsLZPvfflaiIbNWoA22O",
+      "bopsterDisplayedYear": 2017,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 20,
+      "spotifyTrackId": "4aTCNddtjztjuK2EOgz7ZZ",
+      "spotifyUri": "spotify:track:4aTCNddtjztjuK2EOgz7ZZ",
+      "title": "Itsy Bitsy Teenie Weenie Yellow Polka Dot Bikini",
+      "artists": [
+        "Brian Hyland"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4aTCNddtjztjuK2EOgz7ZZ",
+      "bopsterDisplayedYear": 1961,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 21,
+      "spotifyTrackId": "2LPUvD5DDOO4UYGkWgjI2C",
+      "spotifyUri": "spotify:track:2LPUvD5DDOO4UYGkWgjI2C",
+      "title": "Shut Up",
+      "artists": [
+        "Stormzy"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2LPUvD5DDOO4UYGkWgjI2C",
+      "bopsterDisplayedYear": 2017,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 22,
+      "spotifyTrackId": "2pgbGOb00WrlXY3ZRFKn7v",
+      "spotifyUri": "spotify:track:2pgbGOb00WrlXY3ZRFKn7v",
+      "title": "Blurred Lines",
+      "artists": [
+        "Robin Thicke"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2pgbGOb00WrlXY3ZRFKn7v",
+      "bopsterDisplayedYear": 2020,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 23,
+      "spotifyTrackId": "5xzdDMhFYiuUONB0Mha9VS",
+      "spotifyUri": "spotify:track:5xzdDMhFYiuUONB0Mha9VS",
+      "title": "The Locomotion",
+      "artists": [
+        "Little Eva"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5xzdDMhFYiuUONB0Mha9VS",
+      "bopsterDisplayedYear": 1962,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 24,
+      "spotifyTrackId": "1QesQ27kCWYTYuXJi8SApS",
+      "spotifyUri": "spotify:track:1QesQ27kCWYTYuXJi8SApS",
+      "title": "Wait so Long",
+      "artists": [
+        "Trampled by Turtles"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1QesQ27kCWYTYuXJi8SApS",
+      "bopsterDisplayedYear": 2010,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 25,
+      "spotifyTrackId": "3nK2qGHdVAEOuVAmMSWQPW",
+      "spotifyUri": "spotify:track:3nK2qGHdVAEOuVAmMSWQPW",
+      "title": "Cigarettes & Alcohol",
+      "artists": [
+        "Oasis"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3nK2qGHdVAEOuVAmMSWQPW",
+      "bopsterDisplayedYear": 1994,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 26,
+      "spotifyTrackId": "6vcdzohhBSbNdsZBh5IRpQ",
+      "spotifyUri": "spotify:track:6vcdzohhBSbNdsZBh5IRpQ",
+      "title": "Back for Good - Radio Mix",
+      "artists": [
+        "Take That"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6vcdzohhBSbNdsZBh5IRpQ",
+      "bopsterDisplayedYear": 1995,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 27,
+      "spotifyTrackId": "6fujklziTHa8uoM5OQSfIo",
+      "spotifyUri": "spotify:track:6fujklziTHa8uoM5OQSfIo",
+      "title": "Black Beatles",
+      "artists": [
+        "Rae Sremmurd"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6fujklziTHa8uoM5OQSfIo",
+      "bopsterDisplayedYear": 2016,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 28,
+      "spotifyTrackId": "3L7RtEcu1Hw3OXrpnthngx",
+      "spotifyUri": "spotify:track:3L7RtEcu1Hw3OXrpnthngx",
+      "title": "Don't You Want Me",
+      "artists": [
+        "The Human League"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3L7RtEcu1Hw3OXrpnthngx",
+      "bopsterDisplayedYear": 1981,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 29,
+      "spotifyTrackId": "3dPQuX8Gs42Y7b454ybpMR",
+      "spotifyUri": "spotify:track:3dPQuX8Gs42Y7b454ybpMR",
+      "title": "Seven Nation Army",
+      "artists": [
+        "The White Stripes"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3dPQuX8Gs42Y7b454ybpMR",
+      "bopsterDisplayedYear": 2003,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 30,
+      "spotifyTrackId": "1QEEqeFIZktqIpPI4jSVSF",
+      "spotifyUri": "spotify:track:1QEEqeFIZktqIpPI4jSVSF",
+      "title": "More Than a Feeling",
+      "artists": [
+        "Boston"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1QEEqeFIZktqIpPI4jSVSF",
+      "bopsterDisplayedYear": 1976,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 31,
+      "spotifyTrackId": "66TRwr5uJwPt15mfFkzhbi",
+      "spotifyUri": "spotify:track:66TRwr5uJwPt15mfFkzhbi",
+      "title": "Crank That (Soulja Boy)",
+      "artists": [
+        "Soulja Boy"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/66TRwr5uJwPt15mfFkzhbi",
+      "bopsterDisplayedYear": 2007,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 32,
+      "spotifyTrackId": "4H1iMlEWKZmpKTHCZzDhju",
+      "spotifyUri": "spotify:track:4H1iMlEWKZmpKTHCZzDhju",
+      "title": "You Can't Hurry Love",
+      "artists": [
+        "The Supremes"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4H1iMlEWKZmpKTHCZzDhju",
+      "bopsterDisplayedYear": 1966,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 33,
+      "spotifyTrackId": "6ALPLbDJ9eWVij9ep3Cgf4",
+      "spotifyUri": "spotify:track:6ALPLbDJ9eWVij9ep3Cgf4",
+      "title": "Going Underground",
+      "artists": [
+        "The Jam"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6ALPLbDJ9eWVij9ep3Cgf4",
+      "bopsterDisplayedYear": 1979,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 34,
+      "spotifyTrackId": "3Pu3IChaAoa5EjgUBv5F6x",
+      "spotifyUri": "spotify:track:3Pu3IChaAoa5EjgUBv5F6x",
+      "title": "Ballroom Blitz",
+      "artists": [
+        "Sweet"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3Pu3IChaAoa5EjgUBv5F6x",
+      "bopsterDisplayedYear": 1974,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 35,
+      "spotifyTrackId": "4TOMI010Sd4ZAX4aZ5TS85",
+      "spotifyUri": "spotify:track:4TOMI010Sd4ZAX4aZ5TS85",
+      "title": "Perfect Day",
+      "artists": [
+        "Lou Reed"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4TOMI010Sd4ZAX4aZ5TS85",
+      "bopsterDisplayedYear": 1972,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 36,
+      "spotifyTrackId": "1QFh8OH1e78dGd3VyJZCAC",
+      "spotifyUri": "spotify:track:1QFh8OH1e78dGd3VyJZCAC",
+      "title": "Boys Don't Cry",
+      "artists": [
+        "The Cure"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1QFh8OH1e78dGd3VyJZCAC",
+      "bopsterDisplayedYear": 1979,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 37,
+      "spotifyTrackId": "4cOdK2wGLETKBW3PvgPWqT",
+      "spotifyUri": "spotify:track:4cOdK2wGLETKBW3PvgPWqT",
+      "title": "Never Gonna Give You Up",
+      "artists": [
+        "Rick Astley"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4cOdK2wGLETKBW3PvgPWqT",
+      "bopsterDisplayedYear": 1987,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 38,
+      "spotifyTrackId": "37yIrMPeJYRm7zJ8rr3Uvv",
+      "spotifyUri": "spotify:track:37yIrMPeJYRm7zJ8rr3Uvv",
+      "title": "Funkytown",
+      "artists": [
+        "Lipps Inc."
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/37yIrMPeJYRm7zJ8rr3Uvv",
+      "bopsterDisplayedYear": 2018,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 39,
+      "spotifyTrackId": "2co8fDyaVmxv8xruQWORnC",
+      "spotifyUri": "spotify:track:2co8fDyaVmxv8xruQWORnC",
+      "title": "Road to Nowhere - 2005 Remaster",
+      "artists": [
+        "Talking Heads"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2co8fDyaVmxv8xruQWORnC",
+      "bopsterDisplayedYear": 1985,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 40,
+      "spotifyTrackId": "1d2eMMrAuIsw85u3YklKoc",
+      "spotifyUri": "spotify:track:1d2eMMrAuIsw85u3YklKoc",
+      "title": "Toosie Slide",
+      "artists": [
+        "Drake"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1d2eMMrAuIsw85u3YklKoc",
+      "bopsterDisplayedYear": 2020,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 41,
+      "spotifyTrackId": "2rTYgHxgcndkUrRoU7x0Sv",
+      "spotifyUri": "spotify:track:2rTYgHxgcndkUrRoU7x0Sv",
+      "title": "Mr. Vain",
+      "artists": [
+        "Culture Beat"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2rTYgHxgcndkUrRoU7x0Sv",
+      "bopsterDisplayedYear": 1993,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 42,
+      "spotifyTrackId": "7o2CTH4ctstm8TNelqjb51",
+      "spotifyUri": "spotify:track:7o2CTH4ctstm8TNelqjb51",
+      "title": "Sweet Child O' Mine",
+      "artists": [
+        "Guns N' Roses"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/7o2CTH4ctstm8TNelqjb51",
+      "bopsterDisplayedYear": 1987,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 43,
+      "spotifyTrackId": "4bHsxqR3GMrXTxEPLuK5ue",
+      "spotifyUri": "spotify:track:4bHsxqR3GMrXTxEPLuK5ue",
+      "title": "Don't Stop Believin'",
+      "artists": [
+        "Journey"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4bHsxqR3GMrXTxEPLuK5ue",
+      "bopsterDisplayedYear": 1981,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 44,
+      "spotifyTrackId": "11mwFrKvLXCbcVGNxffGyP",
+      "spotifyUri": "spotify:track:11mwFrKvLXCbcVGNxffGyP",
+      "title": "Genie In a Bottle",
+      "artists": [
+        "Christina Aguilera"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/11mwFrKvLXCbcVGNxffGyP",
+      "bopsterDisplayedYear": 1999,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 45,
+      "spotifyTrackId": "7s25THrKz86DM225dOYwnr",
+      "spotifyUri": "spotify:track:7s25THrKz86DM225dOYwnr",
+      "title": "Respect",
+      "artists": [
+        "Aretha Franklin"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/7s25THrKz86DM225dOYwnr",
+      "bopsterDisplayedYear": 1967,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 46,
+      "spotifyTrackId": "20I8RduZC2PWMWTDCZuuAN",
+      "spotifyUri": "spotify:track:20I8RduZC2PWMWTDCZuuAN",
+      "title": "Take Me Out",
+      "artists": [
+        "Franz Ferdinand"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/20I8RduZC2PWMWTDCZuuAN",
+      "bopsterDisplayedYear": 2004,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 47,
+      "spotifyTrackId": "1O0xeZrBDbq7HPREdmYUYK",
+      "spotifyUri": "spotify:track:1O0xeZrBDbq7HPREdmYUYK",
+      "title": "Bad, Bad Leroy Brown",
+      "artists": [
+        "Jim Croce"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1O0xeZrBDbq7HPREdmYUYK",
+      "bopsterDisplayedYear": 1973,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 48,
+      "spotifyTrackId": "1OxcIUqVmVYxT6427tbhDW",
+      "spotifyUri": "spotify:track:1OxcIUqVmVYxT6427tbhDW",
+      "title": "Fly Away",
+      "artists": [
+        "Lenny Kravitz"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1OxcIUqVmVYxT6427tbhDW",
+      "bopsterDisplayedYear": 1998,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 49,
+      "spotifyTrackId": "0HEmnAUT8PHznIAAmVXqFJ",
+      "spotifyUri": "spotify:track:0HEmnAUT8PHznIAAmVXqFJ",
+      "title": "Faith - Remastered",
+      "artists": [
+        "George Michael"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0HEmnAUT8PHznIAAmVXqFJ",
+      "bopsterDisplayedYear": 1987,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 50,
+      "spotifyTrackId": "0vg4WnUWvze6pBOJDTq99k",
+      "spotifyUri": "spotify:track:0vg4WnUWvze6pBOJDTq99k",
+      "title": "You're Beautiful",
+      "artists": [
+        "James Blunt"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0vg4WnUWvze6pBOJDTq99k",
+      "bopsterDisplayedYear": 2005,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 51,
+      "spotifyTrackId": "1xsY8IFXUrxeet1Fcmk4oC",
+      "spotifyUri": "spotify:track:1xsY8IFXUrxeet1Fcmk4oC",
+      "title": "In the Mood",
+      "artists": [
+        "Glenn Miller"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1xsY8IFXUrxeet1Fcmk4oC",
+      "bopsterDisplayedYear": 2010,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 52,
+      "spotifyTrackId": "2Fxmhks0bxGSBdJ92vM42m",
+      "spotifyUri": "spotify:track:2Fxmhks0bxGSBdJ92vM42m",
+      "title": "bad guy",
+      "artists": [
+        "Billie Eilish"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2Fxmhks0bxGSBdJ92vM42m",
+      "bopsterDisplayedYear": 2019,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 53,
+      "spotifyTrackId": "3DamFFqW32WihKkTVlwTYQ",
+      "spotifyUri": "spotify:track:3DamFFqW32WihKkTVlwTYQ",
+      "title": "Fireflies",
+      "artists": [
+        "Owl City"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3DamFFqW32WihKkTVlwTYQ",
+      "bopsterDisplayedYear": 2009,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 54,
+      "spotifyTrackId": "4UDmDIqJIbrW0hMBQMFOsM",
+      "spotifyUri": "spotify:track:4UDmDIqJIbrW0hMBQMFOsM",
+      "title": "Stayin' Alive",
+      "artists": [
+        "Bee Gees"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4UDmDIqJIbrW0hMBQMFOsM",
+      "bopsterDisplayedYear": 1977,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 55,
+      "spotifyTrackId": "63OFKbMaZSDZ4wtesuuq6f",
+      "spotifyUri": "spotify:track:63OFKbMaZSDZ4wtesuuq6f",
+      "title": "Born To Be Wild",
+      "artists": [
+        "Steppenwolf"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/63OFKbMaZSDZ4wtesuuq6f",
+      "bopsterDisplayedYear": 1968,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 56,
+      "spotifyTrackId": "2EtZFeLn9msgg4qJzT9Vql",
+      "spotifyUri": "spotify:track:2EtZFeLn9msgg4qJzT9Vql",
+      "title": "Can't Stand Me Now",
+      "artists": [
+        "The Libertines"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2EtZFeLn9msgg4qJzT9Vql",
+      "bopsterDisplayedYear": 2004,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 57,
+      "spotifyTrackId": "7FSzJQV6thyoQptFCUTV9c",
+      "spotifyUri": "spotify:track:7FSzJQV6thyoQptFCUTV9c",
+      "title": "Parklife - 2012 Remaster",
+      "artists": [
+        "Blur"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/7FSzJQV6thyoQptFCUTV9c",
+      "bopsterDisplayedYear": 1994,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 58,
+      "spotifyTrackId": "4SDWMFvYJKtK1QPhIOeZhd",
+      "spotifyUri": "spotify:track:4SDWMFvYJKtK1QPhIOeZhd",
+      "title": "Royals",
+      "artists": [
+        "Lorde"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4SDWMFvYJKtK1QPhIOeZhd",
+      "bopsterDisplayedYear": 2013,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 59,
+      "spotifyTrackId": "57iDDD9N9tTWe75x6qhStw",
+      "spotifyUri": "spotify:track:57iDDD9N9tTWe75x6qhStw",
+      "title": "Bitter Sweet Symphony - Remastered 2016",
+      "artists": [
+        "The Verve"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/57iDDD9N9tTWe75x6qhStw",
+      "bopsterDisplayedYear": 1997,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 60,
+      "spotifyTrackId": "3cHyrEgdyYRjgJKSOiOtcS",
+      "spotifyUri": "spotify:track:3cHyrEgdyYRjgJKSOiOtcS",
+      "title": "Timber",
+      "artists": [
+        "Pitbull"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3cHyrEgdyYRjgJKSOiOtcS",
+      "bopsterDisplayedYear": 2012,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 61,
+      "spotifyTrackId": "28285KFbyCq8sJofn58qlD",
+      "spotifyUri": "spotify:track:28285KFbyCq8sJofn58qlD",
+      "title": "Love Train",
+      "artists": [
+        "The O'Jays"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/28285KFbyCq8sJofn58qlD",
+      "bopsterDisplayedYear": 1972,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 62,
+      "spotifyTrackId": "3G7tRC24Uh09Hmp1KZ7LQ2",
+      "spotifyUri": "spotify:track:3G7tRC24Uh09Hmp1KZ7LQ2",
+      "title": "I'm a Believer - 2006 Remaster",
+      "artists": [
+        "The Monkees"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3G7tRC24Uh09Hmp1KZ7LQ2",
+      "bopsterDisplayedYear": 1967,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 63,
+      "spotifyTrackId": "7Kszjzps0xbQXyo1pO4KfE",
+      "spotifyUri": "spotify:track:7Kszjzps0xbQXyo1pO4KfE",
+      "title": "Le Freak - 2018 Remaster",
+      "artists": [
+        "CHIC"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/7Kszjzps0xbQXyo1pO4KfE",
+      "bopsterDisplayedYear": 1978,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 64,
+      "spotifyTrackId": "5moTxUGPZXgGmosl4rIELm",
+      "spotifyUri": "spotify:track:5moTxUGPZXgGmosl4rIELm",
+      "title": "Anarchy In The UK",
+      "artists": [
+        "Sex Pistols"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5moTxUGPZXgGmosl4rIELm",
+      "bopsterDisplayedYear": 1977,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 65,
+      "spotifyTrackId": "1mKXFLRA179hdOWQBwUk9e",
+      "spotifyUri": "spotify:track:1mKXFLRA179hdOWQBwUk9e",
+      "title": "Just Give Me a Reason (feat. Nate Ruess)",
+      "artists": [
+        "P!nk"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1mKXFLRA179hdOWQBwUk9e",
+      "bopsterDisplayedYear": 2012,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 66,
+      "spotifyTrackId": "1OZSVl0JJ1MBzibpuhmmXb",
+      "spotifyUri": "spotify:track:1OZSVl0JJ1MBzibpuhmmXb",
+      "title": "One Day Like This",
+      "artists": [
+        "Elbow"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1OZSVl0JJ1MBzibpuhmmXb",
+      "bopsterDisplayedYear": 2008,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 67,
+      "spotifyTrackId": "10yY7i70r9wtllofw0GIpx",
+      "spotifyUri": "spotify:track:10yY7i70r9wtllofw0GIpx",
+      "title": "Praise You",
+      "artists": [
+        "Fatboy Slim"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/10yY7i70r9wtllofw0GIpx",
+      "bopsterDisplayedYear": 1998,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 68,
+      "spotifyTrackId": "57bgtoPSgt236HzfBOd8kj",
+      "spotifyUri": "spotify:track:57bgtoPSgt236HzfBOd8kj",
+      "title": "Thunderstruck",
+      "artists": [
+        "AC/DC"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/57bgtoPSgt236HzfBOd8kj",
+      "bopsterDisplayedYear": 1990,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 69,
+      "spotifyTrackId": "4I7DV3MIgxJGlObiy9s6nx",
+      "spotifyUri": "spotify:track:4I7DV3MIgxJGlObiy9s6nx",
+      "title": "That Don't Impress Me Much",
+      "artists": [
+        "Shania Twain"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4I7DV3MIgxJGlObiy9s6nx",
+      "bopsterDisplayedYear": 1999,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 70,
+      "spotifyTrackId": "4YOJFyjqh8eAcbKFfv88mV",
+      "spotifyUri": "spotify:track:4YOJFyjqh8eAcbKFfv88mV",
+      "title": "Y.M.C.A.",
+      "artists": [
+        "Village People"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4YOJFyjqh8eAcbKFfv88mV",
+      "bopsterDisplayedYear": 1978,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 71,
+      "spotifyTrackId": "2H1047e0oMSj10dgp7p2VG",
+      "spotifyUri": "spotify:track:2H1047e0oMSj10dgp7p2VG",
+      "title": "I Gotta Feeling",
+      "artists": [
+        "Black Eyed Peas"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2H1047e0oMSj10dgp7p2VG",
+      "bopsterDisplayedYear": 2009,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 72,
+      "spotifyTrackId": "7xkQdy0cy5ymoWT7nedvLz",
+      "spotifyUri": "spotify:track:7xkQdy0cy5ymoWT7nedvLz",
+      "title": "Whatcha Say",
+      "artists": [
+        "Jason Derulo"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/7xkQdy0cy5ymoWT7nedvLz",
+      "bopsterDisplayedYear": 2010,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 73,
+      "spotifyTrackId": "41AE8ODX2JETBCa6muhSLY",
+      "spotifyUri": "spotify:track:41AE8ODX2JETBCa6muhSLY",
+      "title": "Heart Of Glass",
+      "artists": [
+        "Blondie"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/41AE8ODX2JETBCa6muhSLY",
+      "bopsterDisplayedYear": 2006,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 74,
+      "spotifyTrackId": "2aEeghgUcnu75tzcolFMfs",
+      "spotifyUri": "spotify:track:2aEeghgUcnu75tzcolFMfs",
+      "title": "La Bamba - Single Version",
+      "artists": [
+        "Ritchie Valens"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2aEeghgUcnu75tzcolFMfs",
+      "bopsterDisplayedYear": 1959,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 75,
+      "spotifyTrackId": "3cbV252akVZInSvJk7jAYX",
+      "spotifyUri": "spotify:track:3cbV252akVZInSvJk7jAYX",
+      "title": "Flashdance...What a Feeling - Radio Edit",
+      "artists": [
+        "Irene Cara"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3cbV252akVZInSvJk7jAYX",
+      "bopsterDisplayedYear": 1983,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 76,
+      "spotifyTrackId": "3vbJPtXl5luZNy8XEyR5fF",
+      "spotifyUri": "spotify:track:3vbJPtXl5luZNy8XEyR5fF",
+      "title": "Second Hand Rose",
+      "artists": [
+        "Fanny Brice"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3vbJPtXl5luZNy8XEyR5fF",
+      "bopsterDisplayedYear": 2012,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 77,
+      "spotifyTrackId": "2BgEsaKNfHUdlh97KmvFyo",
+      "spotifyUri": "spotify:track:2BgEsaKNfHUdlh97KmvFyo",
+      "title": "2002",
+      "artists": [
+        "Anne-Marie"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2BgEsaKNfHUdlh97KmvFyo",
+      "bopsterDisplayedYear": 2018,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 78,
+      "spotifyTrackId": "4CeeEOM32jQcH3eN9Q2dGj",
+      "spotifyUri": "spotify:track:4CeeEOM32jQcH3eN9Q2dGj",
+      "title": "Smells Like Teen Spirit",
+      "artists": [
+        "Nirvana"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4CeeEOM32jQcH3eN9Q2dGj",
+      "bopsterDisplayedYear": 1991,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 79,
+      "spotifyTrackId": "3EYOJ48Et32uATr9ZmLnAo",
+      "spotifyUri": "spotify:track:3EYOJ48Et32uATr9ZmLnAo",
+      "title": "Roxanne",
+      "artists": [
+        "The Police"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3EYOJ48Et32uATr9ZmLnAo",
+      "bopsterDisplayedYear": 1978,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 80,
+      "spotifyTrackId": "4QQEzkxcONBthDLfzqIh9S",
+      "spotifyUri": "spotify:track:4QQEzkxcONBthDLfzqIh9S",
+      "title": "Cars",
+      "artists": [
+        "Gary Numan"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4QQEzkxcONBthDLfzqIh9S",
+      "bopsterDisplayedYear": 1979,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 81,
+      "spotifyTrackId": "4N0TP4Rmj6QQezWV88ARNJ",
+      "spotifyUri": "spotify:track:4N0TP4Rmj6QQezWV88ARNJ",
+      "title": "Superstition",
+      "artists": [
+        "Stevie Wonder"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4N0TP4Rmj6QQezWV88ARNJ",
+      "bopsterDisplayedYear": 1972,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 82,
+      "spotifyTrackId": "0LzrhCZFXW94Y8nwtTuRlw",
+      "spotifyUri": "spotify:track:0LzrhCZFXW94Y8nwtTuRlw",
+      "title": "Hollaback Girl",
+      "artists": [
+        "Gwen Stefani"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0LzrhCZFXW94Y8nwtTuRlw",
+      "bopsterDisplayedYear": 2004,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 83,
+      "spotifyTrackId": "5dae01pKNjRQtgOeAkFzPY",
+      "spotifyUri": "spotify:track:5dae01pKNjRQtgOeAkFzPY",
+      "title": "Mona Lisa",
+      "artists": [
+        "Nat King Cole"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5dae01pKNjRQtgOeAkFzPY",
+      "bopsterDisplayedYear": 1954,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 84,
+      "spotifyTrackId": "2WfaOiMkCvy7F5fcp2zZ8L",
+      "spotifyUri": "spotify:track:2WfaOiMkCvy7F5fcp2zZ8L",
+      "title": "Take on Me",
+      "artists": [
+        "a-ha"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2WfaOiMkCvy7F5fcp2zZ8L",
+      "bopsterDisplayedYear": 1985,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 85,
+      "spotifyTrackId": "6Pgkp4qUoTmJIPn7ReaGxL",
+      "spotifyUri": "spotify:track:6Pgkp4qUoTmJIPn7ReaGxL",
+      "title": "Without You (feat. Sandro Cavazza)",
+      "artists": [
+        "Avicii"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6Pgkp4qUoTmJIPn7ReaGxL",
+      "bopsterDisplayedYear": 2017,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 86,
+      "spotifyTrackId": "3N4DI1vuTSX1tz7fa2NQZw",
+      "spotifyUri": "spotify:track:3N4DI1vuTSX1tz7fa2NQZw",
+      "title": "Rehab",
+      "artists": [
+        "Amy Winehouse"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3N4DI1vuTSX1tz7fa2NQZw",
+      "bopsterDisplayedYear": 2006,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 87,
+      "spotifyTrackId": "1DIXPcTDzTj8ZMHt3PDt8p",
+      "spotifyUri": "spotify:track:1DIXPcTDzTj8ZMHt3PDt8p",
+      "title": "Gangsta's Paradise",
+      "artists": [
+        "Coolio"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1DIXPcTDzTj8ZMHt3PDt8p",
+      "bopsterDisplayedYear": 1995,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 88,
+      "spotifyTrackId": "5kqIPrATaCc2LqxVWzQGbk",
+      "spotifyUri": "spotify:track:5kqIPrATaCc2LqxVWzQGbk",
+      "title": "7 Years",
+      "artists": [
+        "Lukas Graham"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5kqIPrATaCc2LqxVWzQGbk",
+      "bopsterDisplayedYear": 2016,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 89,
+      "spotifyTrackId": "6dHTkQYY3zdR9i9Nj0IGVW",
+      "spotifyUri": "spotify:track:6dHTkQYY3zdR9i9Nj0IGVW",
+      "title": "I Like To Move It (feat. The Mad Stuntman) - Erick \"More\" Album Mix",
+      "artists": [
+        "Reel 2 Real"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6dHTkQYY3zdR9i9Nj0IGVW",
+      "bopsterDisplayedYear": 1994,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 90,
+      "spotifyTrackId": "6GYqOflskcZxPj8rkTZkOy",
+      "spotifyUri": "spotify:track:6GYqOflskcZxPj8rkTZkOy",
+      "title": "That's Amore",
+      "artists": [
+        "Dean Martin"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6GYqOflskcZxPj8rkTZkOy",
+      "bopsterDisplayedYear": 2009,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 91,
+      "spotifyTrackId": "1pydT12pGHLgfj3JLxWIUB",
+      "spotifyUri": "spotify:track:1pydT12pGHLgfj3JLxWIUB",
+      "title": "White Wedding – Part 1",
+      "artists": [
+        "Billy Idol"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1pydT12pGHLgfj3JLxWIUB",
+      "bopsterDisplayedYear": 2009,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 92,
+      "spotifyTrackId": "3YRCqOhFifThpSRFJ1VWFM",
+      "spotifyUri": "spotify:track:3YRCqOhFifThpSRFJ1VWFM",
+      "title": "November Rain",
+      "artists": [
+        "Guns N' Roses"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3YRCqOhFifThpSRFJ1VWFM",
+      "bopsterDisplayedYear": 1991,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 93,
+      "spotifyTrackId": "2K22nUTdyr48JDwI5t906t",
+      "spotifyUri": "spotify:track:2K22nUTdyr48JDwI5t906t",
+      "title": "Relax (Come Fighting)",
+      "artists": [
+        "Frankie Goes To Hollywood"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2K22nUTdyr48JDwI5t906t",
+      "bopsterDisplayedYear": 1984,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 94,
+      "spotifyTrackId": "1fDsrQ23eTAVFElUMaf38X",
+      "spotifyUri": "spotify:track:1fDsrQ23eTAVFElUMaf38X",
+      "title": "American Pie",
+      "artists": [
+        "Don McLean"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1fDsrQ23eTAVFElUMaf38X",
+      "bopsterDisplayedYear": 1971,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 95,
+      "spotifyTrackId": "7DFawVSjI88xR9mjnWwURg",
+      "spotifyUri": "spotify:track:7DFawVSjI88xR9mjnWwURg",
+      "title": "If You Don't Know Me by Now - 2008 Remaster",
+      "artists": [
+        "Simply Red"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/7DFawVSjI88xR9mjnWwURg",
+      "bopsterDisplayedYear": 1989,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 96,
+      "spotifyTrackId": "0weAUscowxeqDtpCgtbpgp",
+      "spotifyUri": "spotify:track:0weAUscowxeqDtpCgtbpgp",
+      "title": "Gettin' Jiggy Wit It",
+      "artists": [
+        "Will Smith"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0weAUscowxeqDtpCgtbpgp",
+      "bopsterDisplayedYear": 1997,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 97,
+      "spotifyTrackId": "06hsdMbBxWGqBO0TV0Zrkf",
+      "spotifyUri": "spotify:track:06hsdMbBxWGqBO0TV0Zrkf",
+      "title": "Cotton Eye Joe",
+      "artists": [
+        "Rednex"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/06hsdMbBxWGqBO0TV0Zrkf",
+      "bopsterDisplayedYear": 1994,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 98,
+      "spotifyTrackId": "5xTtaWoae3wi06K5WfVUUH",
+      "spotifyUri": "spotify:track:5xTtaWoae3wi06K5WfVUUH",
+      "title": "Shake It Off",
+      "artists": [
+        "Taylor Swift"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5xTtaWoae3wi06K5WfVUUH",
+      "bopsterDisplayedYear": 2014,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 99,
+      "spotifyTrackId": "28O4QR1TELuXdcnVw9Q6Kt",
+      "spotifyUri": "spotify:track:28O4QR1TELuXdcnVw9Q6Kt",
+      "title": "Tubthumping - Radio Edit",
+      "artists": [
+        "Chumbawamba"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/28O4QR1TELuXdcnVw9Q6Kt",
+      "bopsterDisplayedYear": 2019,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 100,
+      "spotifyTrackId": "6sPOmDulFtLzfX25zICNrC",
+      "spotifyUri": "spotify:track:6sPOmDulFtLzfX25zICNrC",
+      "title": "Build Me Up Buttercup",
+      "artists": [
+        "The Foundations"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6sPOmDulFtLzfX25zICNrC",
+      "bopsterDisplayedYear": 1968,
+      "orderedIdentityEvidence": "official_spotify_embed_direct_and_bopster_match"
+    },
+    {
+      "position": 101,
+      "spotifyTrackId": "6IwKcFdiRQZOWeYNhUiWIv",
+      "spotifyUri": "spotify:track:6IwKcFdiRQZOWeYNhUiWIv",
+      "title": "No One",
+      "artists": [
+        "Alicia Keys"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6IwKcFdiRQZOWeYNhUiWIv",
+      "bopsterDisplayedYear": 2007,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 102,
+      "spotifyTrackId": "1JSTJqkT5qHq8MDJnJbRE1",
+      "spotifyUri": "spotify:track:1JSTJqkT5qHq8MDJnJbRE1",
+      "title": "Every Breath You Take",
+      "artists": [
+        "The Police"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1JSTJqkT5qHq8MDJnJbRE1",
+      "bopsterDisplayedYear": 1983,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 103,
+      "spotifyTrackId": "5IVuqXILoxVWvWEPm82Jxr",
+      "spotifyUri": "spotify:track:5IVuqXILoxVWvWEPm82Jxr",
+      "title": "Crazy In Love (feat. JAY-Z)",
+      "artists": [
+        "Beyoncé"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5IVuqXILoxVWvWEPm82Jxr",
+      "bopsterDisplayedYear": 2003,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 104,
+      "spotifyTrackId": "1JekRMGQ8iN4G1AAdh0SBa",
+      "spotifyUri": "spotify:track:1JekRMGQ8iN4G1AAdh0SBa",
+      "title": "Enjoy the Silence",
+      "artists": [
+        "Depeche Mode"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1JekRMGQ8iN4G1AAdh0SBa",
+      "bopsterDisplayedYear": 1990,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 105,
+      "spotifyTrackId": "4ZfQwNx3FlCN07cnUvekh3",
+      "spotifyUri": "spotify:track:4ZfQwNx3FlCN07cnUvekh3",
+      "title": "Ain't That A Shame",
+      "artists": [
+        "Fats Domino"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4ZfQwNx3FlCN07cnUvekh3",
+      "bopsterDisplayedYear": 1959,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 106,
+      "spotifyTrackId": "5IMtdHjJ1OtkxbGe4zfUxQ",
+      "spotifyUri": "spotify:track:5IMtdHjJ1OtkxbGe4zfUxQ",
+      "title": "Escape (The Pina Colada Song)",
+      "artists": [
+        "Rupert Holmes"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5IMtdHjJ1OtkxbGe4zfUxQ",
+      "bopsterDisplayedYear": 1979,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 107,
+      "spotifyTrackId": "3h5zik31hTTat9jmpCZZNC",
+      "spotifyUri": "spotify:track:3h5zik31hTTat9jmpCZZNC",
+      "title": "1979",
+      "artists": [
+        "The Smashing Pumpkins"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3h5zik31hTTat9jmpCZZNC",
+      "bopsterDisplayedYear": 2001,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 108,
+      "spotifyTrackId": "29YcYtqUNLWaYvGVGdYtZy",
+      "spotifyUri": "spotify:track:29YcYtqUNLWaYvGVGdYtZy",
+      "title": "Devil Woman - 2001 Remaster",
+      "artists": [
+        "Cliff Richard"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/29YcYtqUNLWaYvGVGdYtZy",
+      "bopsterDisplayedYear": 1976,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 109,
+      "spotifyTrackId": "2A6yzRGMgSQCUapR2ptm6A",
+      "spotifyUri": "spotify:track:2A6yzRGMgSQCUapR2ptm6A",
+      "title": "True Colors",
+      "artists": [
+        "Cyndi Lauper"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2A6yzRGMgSQCUapR2ptm6A",
+      "bopsterDisplayedYear": 1986,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 110,
+      "spotifyTrackId": "6oRHRkQigTzJ3KwpO3XOV6",
+      "spotifyUri": "spotify:track:6oRHRkQigTzJ3KwpO3XOV6",
+      "title": "Bye Bye Love",
+      "artists": [
+        "The Everly Brothers"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6oRHRkQigTzJ3KwpO3XOV6",
+      "bopsterDisplayedYear": 1964,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 111,
+      "spotifyTrackId": "4j2W1eM03mz5MVN5LvR7VH",
+      "spotifyUri": "spotify:track:4j2W1eM03mz5MVN5LvR7VH",
+      "title": "These Boots Are Made for Walkin'",
+      "artists": [
+        "Nancy Sinatra"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4j2W1eM03mz5MVN5LvR7VH",
+      "bopsterDisplayedYear": 1987,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 112,
+      "spotifyTrackId": "27NovPIUIRrOZoCHxABJwK",
+      "spotifyUri": "spotify:track:27NovPIUIRrOZoCHxABJwK",
+      "title": "INDUSTRY BABY (feat. Jack Harlow)",
+      "artists": [
+        "Lil Nas X"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/27NovPIUIRrOZoCHxABJwK",
+      "bopsterDisplayedYear": 2021,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 113,
+      "spotifyTrackId": "6eT7xZZlB2mwyzJ2sUKG6w",
+      "spotifyUri": "spotify:track:6eT7xZZlB2mwyzJ2sUKG6w",
+      "title": "White Iverson",
+      "artists": [
+        "Post Malone"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6eT7xZZlB2mwyzJ2sUKG6w",
+      "bopsterDisplayedYear": 2016,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 114,
+      "spotifyTrackId": "4gphxUgq0JSFv2BCLhNDiE",
+      "spotifyUri": "spotify:track:4gphxUgq0JSFv2BCLhNDiE",
+      "title": "Jailhouse Rock",
+      "artists": [
+        "Elvis Presley"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4gphxUgq0JSFv2BCLhNDiE",
+      "bopsterDisplayedYear": 1958,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 115,
+      "spotifyTrackId": "0VjIjW4GlUZAMYd2vXMi3b",
+      "spotifyUri": "spotify:track:0VjIjW4GlUZAMYd2vXMi3b",
+      "title": "Blinding Lights",
+      "artists": [
+        "The Weeknd"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b",
+      "bopsterDisplayedYear": 2020,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 116,
+      "spotifyTrackId": "1KLpjQFgubHI3GkAICCNH3",
+      "spotifyUri": "spotify:track:1KLpjQFgubHI3GkAICCNH3",
+      "title": "Dream Lover",
+      "artists": [
+        "Bobby Darin"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1KLpjQFgubHI3GkAICCNH3",
+      "bopsterDisplayedYear": 2004,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 117,
+      "spotifyTrackId": "312A8WfROSLvZbMDHBUPDp",
+      "spotifyUri": "spotify:track:312A8WfROSLvZbMDHBUPDp",
+      "title": "Fit but You Know It",
+      "artists": [
+        "The Streets"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/312A8WfROSLvZbMDHBUPDp",
+      "bopsterDisplayedYear": 2004,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 118,
+      "spotifyTrackId": "1zusIxNqJu8i4g6P6hJ2Qa",
+      "spotifyUri": "spotify:track:1zusIxNqJu8i4g6P6hJ2Qa",
+      "title": "Mercy",
+      "artists": [
+        "Duffy"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1zusIxNqJu8i4g6P6hJ2Qa",
+      "bopsterDisplayedYear": 2008,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 119,
+      "spotifyTrackId": "3iSws76HjaU7k49EqJVTfF",
+      "spotifyUri": "spotify:track:3iSws76HjaU7k49EqJVTfF",
+      "title": "Sugar, Sugar",
+      "artists": [
+        "The Archies"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3iSws76HjaU7k49EqJVTfF",
+      "bopsterDisplayedYear": 2007,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 120,
+      "spotifyTrackId": "2PzU4IB8Dr6mxV3lHuaG34",
+      "spotifyUri": "spotify:track:2PzU4IB8Dr6mxV3lHuaG34",
+      "title": "(I Can't Get No) Satisfaction - Mono",
+      "artists": [
+        "The Rolling Stones"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2PzU4IB8Dr6mxV3lHuaG34",
+      "bopsterDisplayedYear": 1965,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 121,
+      "spotifyTrackId": "68Dni7IE4VyPkTOH9mRWHr",
+      "spotifyUri": "spotify:track:68Dni7IE4VyPkTOH9mRWHr",
+      "title": "No Role Modelz",
+      "artists": [
+        "J. Cole"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/68Dni7IE4VyPkTOH9mRWHr",
+      "bopsterDisplayedYear": 2014,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 122,
+      "spotifyTrackId": "6kopmMZiyLmw7h66uXcXR7",
+      "spotifyUri": "spotify:track:6kopmMZiyLmw7h66uXcXR7",
+      "title": "Valerie (feat. Amy Winehouse) - Version Revisited",
+      "artists": [
+        "Mark Ronson"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6kopmMZiyLmw7h66uXcXR7",
+      "bopsterDisplayedYear": 2007,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 123,
+      "spotifyTrackId": "0UAJH0k4k3slcE83a9UGCe",
+      "spotifyUri": "spotify:track:0UAJH0k4k3slcE83a9UGCe",
+      "title": "Lola",
+      "artists": [
+        "The Kinks"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0UAJH0k4k3slcE83a9UGCe",
+      "bopsterDisplayedYear": 1970,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 124,
+      "spotifyTrackId": "3oUphdZVPyrsprZ8FgbmQS",
+      "spotifyUri": "spotify:track:3oUphdZVPyrsprZ8FgbmQS",
+      "title": "I Need A Dollar",
+      "artists": [
+        "Aloe Blacc"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3oUphdZVPyrsprZ8FgbmQS",
+      "bopsterDisplayedYear": 2010,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 125,
+      "spotifyTrackId": "6DSvUZQdqtNfkJI4cAiUsM",
+      "spotifyUri": "spotify:track:6DSvUZQdqtNfkJI4cAiUsM",
+      "title": "The Twist",
+      "artists": [
+        "Chubby Checker"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6DSvUZQdqtNfkJI4cAiUsM",
+      "bopsterDisplayedYear": 1962,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 126,
+      "spotifyTrackId": "56GbZVwxMdf1DENCluYS8A",
+      "spotifyUri": "spotify:track:56GbZVwxMdf1DENCluYS8A",
+      "title": "Don't Dream It's Over",
+      "artists": [
+        "Crowded House"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/56GbZVwxMdf1DENCluYS8A",
+      "bopsterDisplayedYear": 1986,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 127,
+      "spotifyTrackId": "2Uy6EhQXAYkXA6MohPgjpV",
+      "spotifyUri": "spotify:track:2Uy6EhQXAYkXA6MohPgjpV",
+      "title": "One More Time - Radio Edit",
+      "artists": [
+        "Daft Punk"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2Uy6EhQXAYkXA6MohPgjpV",
+      "bopsterDisplayedYear": 2000,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 128,
+      "spotifyTrackId": "2DnJjbjNTV9Nd5NOa1KGba",
+      "spotifyUri": "spotify:track:2DnJjbjNTV9Nd5NOa1KGba",
+      "title": "You're So Vain",
+      "artists": [
+        "Carly Simon"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2DnJjbjNTV9Nd5NOa1KGba",
+      "bopsterDisplayedYear": 1972,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 129,
+      "spotifyTrackId": "6naxalmIoLFWR0siv8dnQQ",
+      "spotifyUri": "spotify:track:6naxalmIoLFWR0siv8dnQQ",
+      "title": "Oops!...I Did It Again",
+      "artists": [
+        "Britney Spears"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6naxalmIoLFWR0siv8dnQQ",
+      "bopsterDisplayedYear": 2000,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 130,
+      "spotifyTrackId": "6hHc7Pks7wtBIW8Z6A0iFq",
+      "spotifyUri": "spotify:track:6hHc7Pks7wtBIW8Z6A0iFq",
+      "title": "Blue Monday",
+      "artists": [
+        "New Order"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6hHc7Pks7wtBIW8Z6A0iFq",
+      "bopsterDisplayedYear": 1987,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 131,
+      "spotifyTrackId": "66N7JHuGc205BK90l9gSlb",
+      "spotifyUri": "spotify:track:66N7JHuGc205BK90l9gSlb",
+      "title": "House of Fun",
+      "artists": [
+        "Madness"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/66N7JHuGc205BK90l9gSlb",
+      "bopsterDisplayedYear": 1982,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 132,
+      "spotifyTrackId": "5rb9QrpfcKFHM1EUbSIurX",
+      "spotifyUri": "spotify:track:5rb9QrpfcKFHM1EUbSIurX",
+      "title": "Yeah! (feat. Lil Jon & Ludacris)",
+      "artists": [
+        "USHER"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5rb9QrpfcKFHM1EUbSIurX",
+      "bopsterDisplayedYear": 2004,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 133,
+      "spotifyTrackId": "2PpruBYCo4H7WOBJ7Q2EwM",
+      "spotifyUri": "spotify:track:2PpruBYCo4H7WOBJ7Q2EwM",
+      "title": "Hey Ya!",
+      "artists": [
+        "Outkast"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2PpruBYCo4H7WOBJ7Q2EwM",
+      "bopsterDisplayedYear": 2003,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 134,
+      "spotifyTrackId": "2oWMI54r0qT4N8Xb4C76vq",
+      "spotifyUri": "spotify:track:2oWMI54r0qT4N8Xb4C76vq",
+      "title": "The Look",
+      "artists": [
+        "Roxette"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2oWMI54r0qT4N8Xb4C76vq",
+      "bopsterDisplayedYear": 1988,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 135,
+      "spotifyTrackId": "1SAkL1mYNJlaqnBQxVZrRl",
+      "spotifyUri": "spotify:track:1SAkL1mYNJlaqnBQxVZrRl",
+      "title": "Baby Got Back",
+      "artists": [
+        "Sir Mix-A-Lot"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1SAkL1mYNJlaqnBQxVZrRl",
+      "bopsterDisplayedYear": 1992,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 136,
+      "spotifyTrackId": "6JGQ98So2ik5GVI9ydQ2Yh",
+      "spotifyUri": "spotify:track:6JGQ98So2ik5GVI9ydQ2Yh",
+      "title": "Don't Speak",
+      "artists": [
+        "No Doubt"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6JGQ98So2ik5GVI9ydQ2Yh",
+      "bopsterDisplayedYear": 2003,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 137,
+      "spotifyTrackId": "5JOVSWohrjXW0BFTboh8XO",
+      "spotifyUri": "spotify:track:5JOVSWohrjXW0BFTboh8XO",
+      "title": "Don't Go",
+      "artists": [
+        "Yazoo"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5JOVSWohrjXW0BFTboh8XO",
+      "bopsterDisplayedYear": 1982,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 138,
+      "spotifyTrackId": "4LRPiXqCikLlN15c3yImP7",
+      "spotifyUri": "spotify:track:4LRPiXqCikLlN15c3yImP7",
+      "title": "As It Was",
+      "artists": [
+        "Harry Styles"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4LRPiXqCikLlN15c3yImP7",
+      "bopsterDisplayedYear": 2022,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 139,
+      "spotifyTrackId": "6pPWRBubXOBAHnjl5ZIujB",
+      "spotifyUri": "spotify:track:6pPWRBubXOBAHnjl5ZIujB",
+      "title": "The Best",
+      "artists": [
+        "Tina Turner"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6pPWRBubXOBAHnjl5ZIujB",
+      "bopsterDisplayedYear": 1989,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 140,
+      "spotifyTrackId": "7FwBtcecmlpc1sLySPXeGE",
+      "spotifyUri": "spotify:track:7FwBtcecmlpc1sLySPXeGE",
+      "title": "Dancing In the Dark",
+      "artists": [
+        "Bruce Springsteen"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/7FwBtcecmlpc1sLySPXeGE",
+      "bopsterDisplayedYear": 1984,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 141,
+      "spotifyTrackId": "3Yqk2pdNJUtI7VOtweASV8",
+      "spotifyUri": "spotify:track:3Yqk2pdNJUtI7VOtweASV8",
+      "title": "Tragedy",
+      "artists": [
+        "Steps"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3Yqk2pdNJUtI7VOtweASV8",
+      "bopsterDisplayedYear": 1999,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 142,
+      "spotifyTrackId": "3WkibOpDF7cQ5xntM1epyf",
+      "spotifyUri": "spotify:track:3WkibOpDF7cQ5xntM1epyf",
+      "title": "It Wasn't Me",
+      "artists": [
+        "Shaggy"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3WkibOpDF7cQ5xntM1epyf",
+      "bopsterDisplayedYear": 2000,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 143,
+      "spotifyTrackId": "47BBI51FKFwOMlIiX6m8ya",
+      "spotifyUri": "spotify:track:47BBI51FKFwOMlIiX6m8ya",
+      "title": "I Want It That Way",
+      "artists": [
+        "Backstreet Boys"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/47BBI51FKFwOMlIiX6m8ya",
+      "bopsterDisplayedYear": 1999,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 144,
+      "spotifyTrackId": "0deAIqyKFFw55JDMGWTcdA",
+      "spotifyUri": "spotify:track:0deAIqyKFFw55JDMGWTcdA",
+      "title": "Hey, Good Lookin'",
+      "artists": [
+        "Hank Williams"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0deAIqyKFFw55JDMGWTcdA",
+      "bopsterDisplayedYear": 1953,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 145,
+      "spotifyTrackId": "1hEh8Hc9lBAFWUghHBsCel",
+      "spotifyUri": "spotify:track:1hEh8Hc9lBAFWUghHBsCel",
+      "title": "Porcelain",
+      "artists": [
+        "Moby"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1hEh8Hc9lBAFWUghHBsCel",
+      "bopsterDisplayedYear": 1999,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 146,
+      "spotifyTrackId": "6YffUZJ2R06kyxyK6onezL",
+      "spotifyUri": "spotify:track:6YffUZJ2R06kyxyK6onezL",
+      "title": "Ring of Fire",
+      "artists": [
+        "Johnny Cash"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6YffUZJ2R06kyxyK6onezL",
+      "bopsterDisplayedYear": 1963,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 147,
+      "spotifyTrackId": "2QfiRTz5Yc8DdShCxG1tB2",
+      "spotifyUri": "spotify:track:2QfiRTz5Yc8DdShCxG1tB2",
+      "title": "Johnny B. Goode",
+      "artists": [
+        "Chuck Berry"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2QfiRTz5Yc8DdShCxG1tB2",
+      "bopsterDisplayedYear": 1959,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 148,
+      "spotifyTrackId": "6VVqPBFZIbcmv14zNfOc13",
+      "spotifyUri": "spotify:track:6VVqPBFZIbcmv14zNfOc13",
+      "title": "She Likes It (feat. Jake Scott)",
+      "artists": [
+        "Russell Dickerson"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6VVqPBFZIbcmv14zNfOc13",
+      "bopsterDisplayedYear": 2021,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 149,
+      "spotifyTrackId": "5CM4UuQ9Gnd6K2YyKGPMoK",
+      "spotifyUri": "spotify:track:5CM4UuQ9Gnd6K2YyKGPMoK",
+      "title": "Bad Habit",
+      "artists": [
+        "Steve Lacy"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5CM4UuQ9Gnd6K2YyKGPMoK",
+      "bopsterDisplayedYear": 2022,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 150,
+      "spotifyTrackId": "2U8NXPTXZWG2O0ye2sYRiH",
+      "spotifyUri": "spotify:track:2U8NXPTXZWG2O0ye2sYRiH",
+      "title": "I Love It (feat. Charli XCX)",
+      "artists": [
+        "Icona Pop"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2U8NXPTXZWG2O0ye2sYRiH",
+      "bopsterDisplayedYear": 2013,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 151,
+      "spotifyTrackId": "7BKLCZ1jbUBVqRi2FVlTVw",
+      "spotifyUri": "spotify:track:7BKLCZ1jbUBVqRi2FVlTVw",
+      "title": "Closer",
+      "artists": [
+        "The Chainsmokers"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/7BKLCZ1jbUBVqRi2FVlTVw",
+      "bopsterDisplayedYear": 2016,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 152,
+      "spotifyTrackId": "0gPQTLaqHDgdupKEok7J2x",
+      "spotifyUri": "spotify:track:0gPQTLaqHDgdupKEok7J2x",
+      "title": "7 Days",
+      "artists": [
+        "Craig David"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0gPQTLaqHDgdupKEok7J2x",
+      "bopsterDisplayedYear": 2000,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 153,
+      "spotifyTrackId": "0gmbgwZ8iqyMPmXefof8Yf",
+      "spotifyUri": "spotify:track:0gmbgwZ8iqyMPmXefof8Yf",
+      "title": "How You Remind Me",
+      "artists": [
+        "Nickelback"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0gmbgwZ8iqyMPmXefof8Yf",
+      "bopsterDisplayedYear": 2001,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 154,
+      "spotifyTrackId": "6XUHsYE38CEbYunT983O9G",
+      "spotifyUri": "spotify:track:6XUHsYE38CEbYunT983O9G",
+      "title": "Give A Little Bit",
+      "artists": [
+        "Supertramp"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6XUHsYE38CEbYunT983O9G",
+      "bopsterDisplayedYear": 1977,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 155,
+      "spotifyTrackId": "40riOy7x9W7GXjyGp4pjAv",
+      "spotifyUri": "spotify:track:40riOy7x9W7GXjyGp4pjAv",
+      "title": "Hotel California - 2013 Remaster",
+      "artists": [
+        "Eagles"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/40riOy7x9W7GXjyGp4pjAv",
+      "bopsterDisplayedYear": 1976,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 156,
+      "spotifyTrackId": "0TK2YIli7K1leLovkQiNik",
+      "spotifyUri": "spotify:track:0TK2YIli7K1leLovkQiNik",
+      "title": "Señorita",
+      "artists": [
+        "Shawn Mendes"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0TK2YIli7K1leLovkQiNik",
+      "bopsterDisplayedYear": 2019,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 157,
+      "spotifyTrackId": "0SLtqCrXBRrnkxSOMA3X4W",
+      "spotifyUri": "spotify:track:0SLtqCrXBRrnkxSOMA3X4W",
+      "title": "Let Me Entertain You",
+      "artists": [
+        "Robbie Williams"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0SLtqCrXBRrnkxSOMA3X4W",
+      "bopsterDisplayedYear": 1997,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 158,
+      "spotifyTrackId": "5eU8qMd0TpaLqTGDZJaLDs",
+      "spotifyUri": "spotify:track:5eU8qMd0TpaLqTGDZJaLDs",
+      "title": "Need You Tonight",
+      "artists": [
+        "INXS"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5eU8qMd0TpaLqTGDZJaLDs",
+      "bopsterDisplayedYear": 1987,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 159,
+      "spotifyTrackId": "1agVrzicFWExgEiAtk8lmr",
+      "spotifyUri": "spotify:track:1agVrzicFWExgEiAtk8lmr",
+      "title": "Cum on Feel the Noize",
+      "artists": [
+        "Slade"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1agVrzicFWExgEiAtk8lmr",
+      "bopsterDisplayedYear": 1973,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 160,
+      "spotifyTrackId": "1YYhDizHx7PnDhAhko6cDS",
+      "spotifyUri": "spotify:track:1YYhDizHx7PnDhAhko6cDS",
+      "title": "Take Me Home, Country Roads - Original Version",
+      "artists": [
+        "John Denver"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1YYhDizHx7PnDhAhko6cDS",
+      "bopsterDisplayedYear": 1971,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 161,
+      "spotifyTrackId": "7e89621JPkKaeDSTQ3avtg",
+      "spotifyUri": "spotify:track:7e89621JPkKaeDSTQ3avtg",
+      "title": "Sweet Home Alabama",
+      "artists": [
+        "Lynyrd Skynyrd"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/7e89621JPkKaeDSTQ3avtg",
+      "bopsterDisplayedYear": 1974,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 162,
+      "spotifyTrackId": "0RnCUYXa7jhgTXtiMXF2PQ",
+      "spotifyUri": "spotify:track:0RnCUYXa7jhgTXtiMXF2PQ",
+      "title": "You Make Me Feel (Mighty Real)",
+      "artists": [
+        "Sylvester"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0RnCUYXa7jhgTXtiMXF2PQ",
+      "bopsterDisplayedYear": 1978,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 163,
+      "spotifyTrackId": "15mZo1Kah03g8CTLbSsWrr",
+      "spotifyUri": "spotify:track:15mZo1Kah03g8CTLbSsWrr",
+      "title": "The Whole of the Moon - 2004 Remaster",
+      "artists": [
+        "The Waterboys"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/15mZo1Kah03g8CTLbSsWrr",
+      "bopsterDisplayedYear": 1985,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 164,
+      "spotifyTrackId": "4mVW9vi2QnLzlbK5SoacK6",
+      "spotifyUri": "spotify:track:4mVW9vi2QnLzlbK5SoacK6",
+      "title": "Little Red Corvette - 2019 Remaster",
+      "artists": [
+        "Prince"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4mVW9vi2QnLzlbK5SoacK6",
+      "bopsterDisplayedYear": 1982,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 165,
+      "spotifyTrackId": "798fUF6UnRn27xiVuKyJCi",
+      "spotifyUri": "spotify:track:798fUF6UnRn27xiVuKyJCi",
+      "title": "Manic Monday",
+      "artists": [
+        "The Bangles"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/798fUF6UnRn27xiVuKyJCi",
+      "bopsterDisplayedYear": 1985,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 166,
+      "spotifyTrackId": "1BmVQ5RGqqtF5cnsv6cQYu",
+      "spotifyUri": "spotify:track:1BmVQ5RGqqtF5cnsv6cQYu",
+      "title": "Girl, You'll Be A Woman Soon",
+      "artists": [
+        "Neil Diamond"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1BmVQ5RGqqtF5cnsv6cQYu",
+      "bopsterDisplayedYear": 1968,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 167,
+      "spotifyTrackId": "22UDw8rSfLbUsaAGTXQ4Z8",
+      "spotifyUri": "spotify:track:22UDw8rSfLbUsaAGTXQ4Z8",
+      "title": "American Boy",
+      "artists": [
+        "Estelle"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/22UDw8rSfLbUsaAGTXQ4Z8",
+      "bopsterDisplayedYear": 2008,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 168,
+      "spotifyTrackId": "3fKDSSIgOngs8YYzFJO6eD",
+      "spotifyUri": "spotify:track:3fKDSSIgOngs8YYzFJO6eD",
+      "title": "Belfast Child - Remastered 2002",
+      "artists": [
+        "Simple Minds"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3fKDSSIgOngs8YYzFJO6eD",
+      "bopsterDisplayedYear": 1989,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 169,
+      "spotifyTrackId": "6qspW4YKycviDFjHBOaqUY",
+      "spotifyUri": "spotify:track:6qspW4YKycviDFjHBOaqUY",
+      "title": "Waterfalls",
+      "artists": [
+        "TLC"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6qspW4YKycviDFjHBOaqUY",
+      "bopsterDisplayedYear": 1994,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 170,
+      "spotifyTrackId": "62oaDoBveZxvZb94ziiMXi",
+      "spotifyUri": "spotify:track:62oaDoBveZxvZb94ziiMXi",
+      "title": "Somebody That I Used to Know",
+      "artists": [
+        "Gotye"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/62oaDoBveZxvZb94ziiMXi",
+      "bopsterDisplayedYear": 2011,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 171,
+      "spotifyTrackId": "5R8dQOPq8haW94K7mgERlO",
+      "spotifyUri": "spotify:track:5R8dQOPq8haW94K7mgERlO",
+      "title": "Poker Face",
+      "artists": [
+        "Lady Gaga"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5R8dQOPq8haW94K7mgERlO",
+      "bopsterDisplayedYear": 2008,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 172,
+      "spotifyTrackId": "41CMr8zZ7cMcjL0U4En6gZ",
+      "spotifyUri": "spotify:track:41CMr8zZ7cMcjL0U4En6gZ",
+      "title": "Girl You Know It's True",
+      "artists": [
+        "Milli Vanilli"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/41CMr8zZ7cMcjL0U4En6gZ",
+      "bopsterDisplayedYear": 2010,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 173,
+      "spotifyTrackId": "5jUA1njy3h6ynHLvPdEVHt",
+      "spotifyUri": "spotify:track:5jUA1njy3h6ynHLvPdEVHt",
+      "title": "Disco Inferno",
+      "artists": [
+        "The Trammps"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5jUA1njy3h6ynHLvPdEVHt",
+      "bopsterDisplayedYear": 1976,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 174,
+      "spotifyTrackId": "4iMdiQO0YJwEkWf8eI2wff",
+      "spotifyUri": "spotify:track:4iMdiQO0YJwEkWf8eI2wff",
+      "title": "Haven't Met You Yet",
+      "artists": [
+        "Michael Bublé"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4iMdiQO0YJwEkWf8eI2wff",
+      "bopsterDisplayedYear": 2009,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 175,
+      "spotifyTrackId": "3jAG0kb7gg0vGeFFZj6bBt",
+      "spotifyUri": "spotify:track:3jAG0kb7gg0vGeFFZj6bBt",
+      "title": "You Sexy Thing - Single Version",
+      "artists": [
+        "Hot Chocolate"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3jAG0kb7gg0vGeFFZj6bBt",
+      "bopsterDisplayedYear": 2007,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 176,
+      "spotifyTrackId": "3PQLYVskjUeRmRIfECsL0X",
+      "spotifyUri": "spotify:track:3PQLYVskjUeRmRIfECsL0X",
+      "title": "No Woman No Cry",
+      "artists": [
+        "Bob Marley & The Wailers"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3PQLYVskjUeRmRIfECsL0X",
+      "bopsterDisplayedYear": 1974,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 177,
+      "spotifyTrackId": "55CHeLEfn5iJ0IIkgaa4si",
+      "spotifyUri": "spotify:track:55CHeLEfn5iJ0IIkgaa4si",
+      "title": "Savage",
+      "artists": [
+        "Megan Thee Stallion"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/55CHeLEfn5iJ0IIkgaa4si",
+      "bopsterDisplayedYear": 2020,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 178,
+      "spotifyTrackId": "3FteycP8CaXS1MhjcXekVT",
+      "spotifyUri": "spotify:track:3FteycP8CaXS1MhjcXekVT",
+      "title": "Stop",
+      "artists": [
+        "Spice Girls"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3FteycP8CaXS1MhjcXekVT",
+      "bopsterDisplayedYear": 1997,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 179,
+      "spotifyTrackId": "0xmjwnQ3FNE6HuWCt2nHdZ",
+      "spotifyUri": "spotify:track:0xmjwnQ3FNE6HuWCt2nHdZ",
+      "title": "Where Is The Love?",
+      "artists": [
+        "Black Eyed Peas"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0xmjwnQ3FNE6HuWCt2nHdZ",
+      "bopsterDisplayedYear": 2003,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 180,
+      "spotifyTrackId": "0hm8rgOY17z7kQJlqGKbu7",
+      "spotifyUri": "spotify:track:0hm8rgOY17z7kQJlqGKbu7",
+      "title": "I Will Wait",
+      "artists": [
+        "Mumford & Sons"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0hm8rgOY17z7kQJlqGKbu7",
+      "bopsterDisplayedYear": 2012,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 181,
+      "spotifyTrackId": "1mXuMM6zjPgjL4asbBsgnt",
+      "spotifyUri": "spotify:track:1mXuMM6zjPgjL4asbBsgnt",
+      "title": "Firework",
+      "artists": [
+        "Katy Perry"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1mXuMM6zjPgjL4asbBsgnt",
+      "bopsterDisplayedYear": 2010,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 182,
+      "spotifyTrackId": "5ZrDlcxIDZyjOzHdYW1ydr",
+      "spotifyUri": "spotify:track:5ZrDlcxIDZyjOzHdYW1ydr",
+      "title": "Barbie Girl",
+      "artists": [
+        "Aqua"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5ZrDlcxIDZyjOzHdYW1ydr",
+      "bopsterDisplayedYear": 1997,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 183,
+      "spotifyTrackId": "2T3jgoAMbBXiMMD8pSc6QL",
+      "spotifyUri": "spotify:track:2T3jgoAMbBXiMMD8pSc6QL",
+      "title": "This Is The Life",
+      "artists": [
+        "Amy Macdonald"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2T3jgoAMbBXiMMD8pSc6QL",
+      "bopsterDisplayedYear": 2007,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 184,
+      "spotifyTrackId": "69kOkLUCkxIZYexIgSG8rq",
+      "spotifyUri": "spotify:track:69kOkLUCkxIZYexIgSG8rq",
+      "title": "Get Lucky (feat. Pharrell Williams and Nile Rodgers)",
+      "artists": [
+        "Daft Punk"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/69kOkLUCkxIZYexIgSG8rq",
+      "bopsterDisplayedYear": 2013,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 185,
+      "spotifyTrackId": "11d9oUiwHuYt216EFA2tiz",
+      "spotifyUri": "spotify:track:11d9oUiwHuYt216EFA2tiz",
+      "title": "Ice Ice Baby",
+      "artists": [
+        "Vanilla Ice"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/11d9oUiwHuYt216EFA2tiz",
+      "bopsterDisplayedYear": 1990,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 186,
+      "spotifyTrackId": "1YnVYHXoak0syv4xBRHQRb",
+      "spotifyUri": "spotify:track:1YnVYHXoak0syv4xBRHQRb",
+      "title": "Kingston Town",
+      "artists": [
+        "UB40"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1YnVYHXoak0syv4xBRHQRb",
+      "bopsterDisplayedYear": 1989,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 187,
+      "spotifyTrackId": "5D2mYZuzcgjpchVY1pmTPh",
+      "spotifyUri": "spotify:track:5D2mYZuzcgjpchVY1pmTPh",
+      "title": "Candy Shop",
+      "artists": [
+        "50 Cent"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5D2mYZuzcgjpchVY1pmTPh",
+      "bopsterDisplayedYear": 2005,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 188,
+      "spotifyTrackId": "3unsLiH5FXmaDWtT5Imolu",
+      "spotifyUri": "spotify:track:3unsLiH5FXmaDWtT5Imolu",
+      "title": "Fallin'",
+      "artists": [
+        "Alicia Keys"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3unsLiH5FXmaDWtT5Imolu",
+      "bopsterDisplayedYear": 2001,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 189,
+      "spotifyTrackId": "7iN1s7xHE4ifF5povM6A48",
+      "spotifyUri": "spotify:track:7iN1s7xHE4ifF5povM6A48",
+      "title": "Let It Be - Remastered 2009",
+      "artists": [
+        "The Beatles"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/7iN1s7xHE4ifF5povM6A48",
+      "bopsterDisplayedYear": 1970,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 190,
+      "spotifyTrackId": "6b6IMqP565TbtFFZg9iFf3",
+      "spotifyUri": "spotify:track:6b6IMqP565TbtFFZg9iFf3",
+      "title": "I Can't Help Myself (Sugar Pie, Honey Bunch)",
+      "artists": [
+        "Four Tops"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6b6IMqP565TbtFFZg9iFf3",
+      "bopsterDisplayedYear": 1965,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 191,
+      "spotifyTrackId": "4fxF8ljwryMZX5c9EKrLFE",
+      "spotifyUri": "spotify:track:4fxF8ljwryMZX5c9EKrLFE",
+      "title": "Boombastic",
+      "artists": [
+        "Shaggy"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4fxF8ljwryMZX5c9EKrLFE",
+      "bopsterDisplayedYear": 1995,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 192,
+      "spotifyTrackId": "31AOj9sFz2gM0O3hMARRBx",
+      "spotifyUri": "spotify:track:31AOj9sFz2gM0O3hMARRBx",
+      "title": "Losing My Religion",
+      "artists": [
+        "R.E.M."
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/31AOj9sFz2gM0O3hMARRBx",
+      "bopsterDisplayedYear": 1991,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 193,
+      "spotifyTrackId": "0HqeTDZMGlYDmgGGVFQrSg",
+      "spotifyUri": "spotify:track:0HqeTDZMGlYDmgGGVFQrSg",
+      "title": "Moves Like Jagger - Studio Recording From \"The Voice\" Performance",
+      "artists": [
+        "Maroon 5"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0HqeTDZMGlYDmgGGVFQrSg",
+      "bopsterDisplayedYear": 2011,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 194,
+      "spotifyTrackId": "5jE48hhRu8E6zBDPRSkEq7",
+      "spotifyUri": "spotify:track:5jE48hhRu8E6zBDPRSkEq7",
+      "title": "All About That Bass",
+      "artists": [
+        "Meghan Trainor"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5jE48hhRu8E6zBDPRSkEq7",
+      "bopsterDisplayedYear": 2015,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 195,
+      "spotifyTrackId": "6I9VzXrHxO9rA9A5euc8Ak",
+      "spotifyUri": "spotify:track:6I9VzXrHxO9rA9A5euc8Ak",
+      "title": "Toxic",
+      "artists": [
+        "Britney Spears"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6I9VzXrHxO9rA9A5euc8Ak",
+      "bopsterDisplayedYear": 2003,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 196,
+      "spotifyTrackId": "3LUWWox8YYykohBbHUrrxd",
+      "spotifyUri": "spotify:track:3LUWWox8YYykohBbHUrrxd",
+      "title": "We R Who We R",
+      "artists": [
+        "Kesha"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3LUWWox8YYykohBbHUrrxd",
+      "bopsterDisplayedYear": 2010,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 197,
+      "spotifyTrackId": "3jagJCUbdqhDSPuxP8cAqF",
+      "spotifyUri": "spotify:track:3jagJCUbdqhDSPuxP8cAqF",
+      "title": "Work It",
+      "artists": [
+        "Missy Elliott"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3jagJCUbdqhDSPuxP8cAqF",
+      "bopsterDisplayedYear": 2002,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 198,
+      "spotifyTrackId": "6YUTL4dYpB9xZO5qExPf05",
+      "spotifyUri": "spotify:track:6YUTL4dYpB9xZO5qExPf05",
+      "title": "Summer",
+      "artists": [
+        "Calvin Harris"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6YUTL4dYpB9xZO5qExPf05",
+      "bopsterDisplayedYear": 2014,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 199,
+      "spotifyTrackId": "5muHy7Z0bHM4uqExt081ue",
+      "spotifyUri": "spotify:track:5muHy7Z0bHM4uqExt081ue",
+      "title": "Karma Chameleon - Remastered 2002",
+      "artists": [
+        "Culture Club"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5muHy7Z0bHM4uqExt081ue",
+      "bopsterDisplayedYear": 2022,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 200,
+      "spotifyTrackId": "57yz5oqMytzbwdewSG28L9",
+      "spotifyUri": "spotify:track:57yz5oqMytzbwdewSG28L9",
+      "title": "Smoke Gets In Your Eyes",
+      "artists": [
+        "The Platters"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/57yz5oqMytzbwdewSG28L9",
+      "bopsterDisplayedYear": 1986,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 201,
+      "spotifyTrackId": "1qPbGZqppFwLwcBC1JQ6Vr",
+      "spotifyUri": "spotify:track:1qPbGZqppFwLwcBC1JQ6Vr",
+      "title": "Wonderwall",
+      "artists": [
+        "Oasis"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1qPbGZqppFwLwcBC1JQ6Vr",
+      "bopsterDisplayedYear": 1995,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 202,
+      "spotifyTrackId": "54X78diSLoUDI3joC2bjMz",
+      "spotifyUri": "spotify:track:54X78diSLoUDI3joC2bjMz",
+      "title": "Purple Rain",
+      "artists": [
+        "Prince"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/54X78diSLoUDI3joC2bjMz",
+      "bopsterDisplayedYear": 1984,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 203,
+      "spotifyTrackId": "72TFWvU3wUYdUuxejTTIzt",
+      "spotifyUri": "spotify:track:72TFWvU3wUYdUuxejTTIzt",
+      "title": "Work",
+      "artists": [
+        "Rihanna"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/72TFWvU3wUYdUuxejTTIzt",
+      "bopsterDisplayedYear": 2016,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 204,
+      "spotifyTrackId": "0Fyj9w0HVfjoxm9S8nGClt",
+      "spotifyUri": "spotify:track:0Fyj9w0HVfjoxm9S8nGClt",
+      "title": "Orinoco Flow",
+      "artists": [
+        "Enya"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0Fyj9w0HVfjoxm9S8nGClt",
+      "bopsterDisplayedYear": 2001,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 205,
+      "spotifyTrackId": "6HMFtoMvv6n6Q2eOyPFyne",
+      "spotifyUri": "spotify:track:6HMFtoMvv6n6Q2eOyPFyne",
+      "title": "Walk Of Life",
+      "artists": [
+        "Dire Straits"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6HMFtoMvv6n6Q2eOyPFyne",
+      "bopsterDisplayedYear": 1985,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 206,
+      "spotifyTrackId": "6Awg3vdlBZnLnVWBcyG0vW",
+      "spotifyUri": "spotify:track:6Awg3vdlBZnLnVWBcyG0vW",
+      "title": "Runaway (U & I)",
+      "artists": [
+        "Galantis"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6Awg3vdlBZnLnVWBcyG0vW",
+      "bopsterDisplayedYear": 2015,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 207,
+      "spotifyTrackId": "49fzPkBb3aOUWYRKaTWVhm",
+      "spotifyUri": "spotify:track:49fzPkBb3aOUWYRKaTWVhm",
+      "title": "Hit the Road Jack",
+      "artists": [
+        "Ray Charles"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/49fzPkBb3aOUWYRKaTWVhm",
+      "bopsterDisplayedYear": 2012,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 208,
+      "spotifyTrackId": "1Je1IMUlBXcx1Fz0WE7oPT",
+      "spotifyUri": "spotify:track:1Je1IMUlBXcx1Fz0WE7oPT",
+      "title": "Wannabe",
+      "artists": [
+        "Spice Girls"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1Je1IMUlBXcx1Fz0WE7oPT",
+      "bopsterDisplayedYear": 1996,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 209,
+      "spotifyTrackId": "2HNZxbvFvasRtlOJ9M6DgR",
+      "spotifyUri": "spotify:track:2HNZxbvFvasRtlOJ9M6DgR",
+      "title": "MMMBop - Single Version",
+      "artists": [
+        "Hanson"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2HNZxbvFvasRtlOJ9M6DgR",
+      "bopsterDisplayedYear": 2006,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 210,
+      "spotifyTrackId": "1TKPfF2fvn6gVLVfp3iG4j",
+      "spotifyUri": "spotify:track:1TKPfF2fvn6gVLVfp3iG4j",
+      "title": "I Walk The Line - Single Version",
+      "artists": [
+        "Johnny Cash"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1TKPfF2fvn6gVLVfp3iG4j",
+      "bopsterDisplayedYear": 1958,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 211,
+      "spotifyTrackId": "0PCGfA36HrVPmsBZJ57zOU",
+      "spotifyUri": "spotify:track:0PCGfA36HrVPmsBZJ57zOU",
+      "title": "Love Is All Around - From \"Four Weddings And A Funeral\"",
+      "artists": [
+        "Wet Wet Wet"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0PCGfA36HrVPmsBZJ57zOU",
+      "bopsterDisplayedYear": 1995,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 212,
+      "spotifyTrackId": "3d9DChrdc6BOeFsbrZ3Is0",
+      "spotifyUri": "spotify:track:3d9DChrdc6BOeFsbrZ3Is0",
+      "title": "Under the Bridge",
+      "artists": [
+        "Red Hot Chili Peppers"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3d9DChrdc6BOeFsbrZ3Is0",
+      "bopsterDisplayedYear": 1991,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 213,
+      "spotifyTrackId": "3x4yV0hW5Ve3TKhFkXSqFn",
+      "spotifyUri": "spotify:track:3x4yV0hW5Ve3TKhFkXSqFn",
+      "title": "If You Had My Love",
+      "artists": [
+        "Jennifer Lopez"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3x4yV0hW5Ve3TKhFkXSqFn",
+      "bopsterDisplayedYear": 1999,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 214,
+      "spotifyTrackId": "3DQVgcqaP3iSMbaKsd57l5",
+      "spotifyUri": "spotify:track:3DQVgcqaP3iSMbaKsd57l5",
+      "title": "I Bet You Look Good On The Dancefloor",
+      "artists": [
+        "Arctic Monkeys"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3DQVgcqaP3iSMbaKsd57l5",
+      "bopsterDisplayedYear": 2006,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 215,
+      "spotifyTrackId": "00Mb3DuaIH1kjrwOku9CGU",
+      "spotifyUri": "spotify:track:00Mb3DuaIH1kjrwOku9CGU",
+      "title": "Sk8er Boi",
+      "artists": [
+        "Avril Lavigne"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/00Mb3DuaIH1kjrwOku9CGU",
+      "bopsterDisplayedYear": 2002,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 216,
+      "spotifyTrackId": "2lwnmAQ7VLWmdHA17MHf9G",
+      "spotifyUri": "spotify:track:2lwnmAQ7VLWmdHA17MHf9G",
+      "title": "West End Girls - 2018 Remaster",
+      "artists": [
+        "Pet Shop Boys"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2lwnmAQ7VLWmdHA17MHf9G",
+      "bopsterDisplayedYear": 1986,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 217,
+      "spotifyTrackId": "1UvTPXlImVd4jcucK4qJwb",
+      "spotifyUri": "spotify:track:1UvTPXlImVd4jcucK4qJwb",
+      "title": "(I've Had) The Time of My Life - From \"Dirty Dancing\" Soundtrack",
+      "artists": [
+        "Bill Medley"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1UvTPXlImVd4jcucK4qJwb",
+      "bopsterDisplayedYear": 2009,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 218,
+      "spotifyTrackId": "1d6KS9GH06JAd19uiBy9IE",
+      "spotifyUri": "spotify:track:1d6KS9GH06JAd19uiBy9IE",
+      "title": "Ironic - 2015 Remaster",
+      "artists": [
+        "Alanis Morissette"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1d6KS9GH06JAd19uiBy9IE",
+      "bopsterDisplayedYear": 1995,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 219,
+      "spotifyTrackId": "3jDdpx9PMlfMBS5tOBHFm9",
+      "spotifyUri": "spotify:track:3jDdpx9PMlfMBS5tOBHFm9",
+      "title": "Return of the Mack",
+      "artists": [
+        "Mark Morrison"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3jDdpx9PMlfMBS5tOBHFm9",
+      "bopsterDisplayedYear": 1996,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 220,
+      "spotifyTrackId": "6hYT9vkr0xMjhBlaLsYq9T",
+      "spotifyUri": "spotify:track:6hYT9vkr0xMjhBlaLsYq9T",
+      "title": "The Hustle - Original Mix",
+      "artists": [
+        "Van McCoy"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6hYT9vkr0xMjhBlaLsYq9T",
+      "bopsterDisplayedYear": 1975,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 221,
+      "spotifyTrackId": "2gQaQUhDCNGfBVXTvxAmXQ",
+      "spotifyUri": "spotify:track:2gQaQUhDCNGfBVXTvxAmXQ",
+      "title": "Shout",
+      "artists": [
+        "Tears For Fears"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2gQaQUhDCNGfBVXTvxAmXQ",
+      "bopsterDisplayedYear": 1985,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 222,
+      "spotifyTrackId": "3Fcfwhm8oRrBvBZ8KGhtea",
+      "spotifyUri": "spotify:track:3Fcfwhm8oRrBvBZ8KGhtea",
+      "title": "Viva La Vida",
+      "artists": [
+        "Coldplay"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3Fcfwhm8oRrBvBZ8KGhtea",
+      "bopsterDisplayedYear": 2008,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 223,
+      "spotifyTrackId": "48i055G1OT5KxGGftwFxWy",
+      "spotifyUri": "spotify:track:48i055G1OT5KxGGftwFxWy",
+      "title": "Oh, Pretty Woman",
+      "artists": [
+        "Roy Orbison"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/48i055G1OT5KxGGftwFxWy",
+      "bopsterDisplayedYear": 1962,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 224,
+      "spotifyTrackId": "2IHaGyfxNoFPLJnaEg4GTs",
+      "spotifyUri": "spotify:track:2IHaGyfxNoFPLJnaEg4GTs",
+      "title": "What Is Love - 7\" Mix",
+      "artists": [
+        "Haddaway"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2IHaGyfxNoFPLJnaEg4GTs",
+      "bopsterDisplayedYear": 1993,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 225,
+      "spotifyTrackId": "3Fzlg5r1IjhLk2qRw667od",
+      "spotifyUri": "spotify:track:3Fzlg5r1IjhLk2qRw667od",
+      "title": "Dancing in the Moonlight",
+      "artists": [
+        "Toploader"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3Fzlg5r1IjhLk2qRw667od",
+      "bopsterDisplayedYear": 2000,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 226,
+      "spotifyTrackId": "0qxYx4F3vm1AOnfux6dDxP",
+      "spotifyUri": "spotify:track:0qxYx4F3vm1AOnfux6dDxP",
+      "title": "You Can Call Me Al",
+      "artists": [
+        "Paul Simon"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0qxYx4F3vm1AOnfux6dDxP",
+      "bopsterDisplayedYear": 1986,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 227,
+      "spotifyTrackId": "5haXbSJqjjM0TCJ5XkfEaC",
+      "spotifyUri": "spotify:track:5haXbSJqjjM0TCJ5XkfEaC",
+      "title": "I Got You (I Feel Good)",
+      "artists": [
+        "James Brown & The Famous Flames"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5haXbSJqjjM0TCJ5XkfEaC",
+      "bopsterDisplayedYear": 1966,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 228,
+      "spotifyTrackId": "1tqT6DhmsrtQgyCKUwotiw",
+      "spotifyUri": "spotify:track:1tqT6DhmsrtQgyCKUwotiw",
+      "title": "I Heard It Through The Grapevine",
+      "artists": [
+        "Marvin Gaye"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1tqT6DhmsrtQgyCKUwotiw",
+      "bopsterDisplayedYear": 1968,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 229,
+      "spotifyTrackId": "3bNv3VuUOKgrf5hu3YcuRo",
+      "spotifyUri": "spotify:track:3bNv3VuUOKgrf5hu3YcuRo",
+      "title": "Someone Like You",
+      "artists": [
+        "Adele"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3bNv3VuUOKgrf5hu3YcuRo",
+      "bopsterDisplayedYear": 2011,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 230,
+      "spotifyTrackId": "7iFdUmdqT9XrsJdSGf9KrX",
+      "spotifyUri": "spotify:track:7iFdUmdqT9XrsJdSGf9KrX",
+      "title": "Twist And Shout",
+      "artists": [
+        "The Isley Brothers"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/7iFdUmdqT9XrsJdSGf9KrX",
+      "bopsterDisplayedYear": 2005,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 231,
+      "spotifyTrackId": "1FkoVC85Ds3mFoK0fVqEqP",
+      "spotifyUri": "spotify:track:1FkoVC85Ds3mFoK0fVqEqP",
+      "title": "Self Esteem",
+      "artists": [
+        "The Offspring"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1FkoVC85Ds3mFoK0fVqEqP",
+      "bopsterDisplayedYear": 1994,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 232,
+      "spotifyTrackId": "0j2T0R9dR9qdJYsB7ciXhf",
+      "spotifyUri": "spotify:track:0j2T0R9dR9qdJYsB7ciXhf",
+      "title": "Stronger",
+      "artists": [
+        "Kanye West"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0j2T0R9dR9qdJYsB7ciXhf",
+      "bopsterDisplayedYear": 2007,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 233,
+      "spotifyTrackId": "2fuCquhmrzHpu5xcA1ci9x",
+      "spotifyUri": "spotify:track:2fuCquhmrzHpu5xcA1ci9x",
+      "title": "Under Pressure - Remastered 2011",
+      "artists": [
+        "Queen"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2fuCquhmrzHpu5xcA1ci9x",
+      "bopsterDisplayedYear": 1982,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 234,
+      "spotifyTrackId": "2Mpj1Ul5OFPyyP4wB62Rvi",
+      "spotifyUri": "spotify:track:2Mpj1Ul5OFPyyP4wB62Rvi",
+      "title": "Survivor",
+      "artists": [
+        "Destiny's Child"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2Mpj1Ul5OFPyyP4wB62Rvi",
+      "bopsterDisplayedYear": 2001,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 235,
+      "spotifyTrackId": "3K7Q9PHUWPTaknlbFPThn2",
+      "spotifyUri": "spotify:track:3K7Q9PHUWPTaknlbFPThn2",
+      "title": "Celebration",
+      "artists": [
+        "Kool & The Gang"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3K7Q9PHUWPTaknlbFPThn2",
+      "bopsterDisplayedYear": 1980,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 236,
+      "spotifyTrackId": "4HlFJV71xXKIGcU3kRyttv",
+      "spotifyUri": "spotify:track:4HlFJV71xXKIGcU3kRyttv",
+      "title": "Hey, Soul Sister",
+      "artists": [
+        "Train"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4HlFJV71xXKIGcU3kRyttv",
+      "bopsterDisplayedYear": 2010,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 237,
+      "spotifyTrackId": "5j4RaTG3kjLlreau6KjLrf",
+      "spotifyUri": "spotify:track:5j4RaTG3kjLlreau6KjLrf",
+      "title": "Baggy Trousers - 2010 Remaster",
+      "artists": [
+        "Madness"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5j4RaTG3kjLlreau6KjLrf",
+      "bopsterDisplayedYear": 1980,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 238,
+      "spotifyTrackId": "2SpEHTbUuebeLkgs9QB7Ue",
+      "spotifyUri": "spotify:track:2SpEHTbUuebeLkgs9QB7Ue",
+      "title": "Jolene",
+      "artists": [
+        "Dolly Parton"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2SpEHTbUuebeLkgs9QB7Ue",
+      "bopsterDisplayedYear": 1974,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 239,
+      "spotifyTrackId": "79CUrU5o2KAVDTNm4x3eGU",
+      "spotifyUri": "spotify:track:79CUrU5o2KAVDTNm4x3eGU",
+      "title": "Firestarter",
+      "artists": [
+        "The Prodigy"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/79CUrU5o2KAVDTNm4x3eGU",
+      "bopsterDisplayedYear": 1997,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 240,
+      "spotifyTrackId": "2dbaIpJoAk2hhrrX2ljKJo",
+      "spotifyUri": "spotify:track:2dbaIpJoAk2hhrrX2ljKJo",
+      "title": "Surfin' U.S.A. (Mono)",
+      "artists": [
+        "The Beach Boys"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2dbaIpJoAk2hhrrX2ljKJo",
+      "bopsterDisplayedYear": 1963,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 241,
+      "spotifyTrackId": "10tdqQKFhddpkjzxllTVRj",
+      "spotifyUri": "spotify:track:10tdqQKFhddpkjzxllTVRj",
+      "title": "Crazy",
+      "artists": [
+        "Seal"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/10tdqQKFhddpkjzxllTVRj",
+      "bopsterDisplayedYear": 1991,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 242,
+      "spotifyTrackId": "4aR9bPMAOFySBuQSbVWF3d",
+      "spotifyUri": "spotify:track:4aR9bPMAOFySBuQSbVWF3d",
+      "title": "Smile",
+      "artists": [
+        "Lily Allen"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4aR9bPMAOFySBuQSbVWF3d",
+      "bopsterDisplayedYear": 2006,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 243,
+      "spotifyTrackId": "39shmbIHICJ2Wxnk1fPSdz",
+      "spotifyUri": "spotify:track:39shmbIHICJ2Wxnk1fPSdz",
+      "title": "Should I Stay or Should I Go - Remastered",
+      "artists": [
+        "The Clash"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/39shmbIHICJ2Wxnk1fPSdz",
+      "bopsterDisplayedYear": 1982,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 244,
+      "spotifyTrackId": "14MgTooapmJdLlEMAr2zAM",
+      "spotifyUri": "spotify:track:14MgTooapmJdLlEMAr2zAM",
+      "title": "Dilemma (feat. Kelly Rowland)",
+      "artists": [
+        "Nelly"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/14MgTooapmJdLlEMAr2zAM",
+      "bopsterDisplayedYear": 2002,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 245,
+      "spotifyTrackId": "1uRKT2LRANv4baowBWHfDS",
+      "spotifyUri": "spotify:track:1uRKT2LRANv4baowBWHfDS",
+      "title": "(We're Gonna) Rock Around The Clock",
+      "artists": [
+        "Bill Haley & His Comets"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1uRKT2LRANv4baowBWHfDS",
+      "bopsterDisplayedYear": 1955,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 246,
+      "spotifyTrackId": "3ZFTkvIE7kyPt6Nu3PEa7V",
+      "spotifyUri": "spotify:track:3ZFTkvIE7kyPt6Nu3PEa7V",
+      "title": "Hips Don't Lie (feat. Wyclef Jean)",
+      "artists": [
+        "Shakira"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3ZFTkvIE7kyPt6Nu3PEa7V",
+      "bopsterDisplayedYear": 2005,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 247,
+      "spotifyTrackId": "3rmo8F54jFF8OgYsqTxm5d",
+      "spotifyUri": "spotify:track:3rmo8F54jFF8OgYsqTxm5d",
+      "title": "Bad Habits",
+      "artists": [
+        "Ed Sheeran"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3rmo8F54jFF8OgYsqTxm5d",
+      "bopsterDisplayedYear": 2021,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 248,
+      "spotifyTrackId": "1UwriLz98ILbRhrtohTca1",
+      "spotifyUri": "spotify:track:1UwriLz98ILbRhrtohTca1",
+      "title": "The Wanderer",
+      "artists": [
+        "Dion"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1UwriLz98ILbRhrtohTca1",
+      "bopsterDisplayedYear": 2001,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 249,
+      "spotifyTrackId": "6iNBM60VQtPUUhkKfwa5KV",
+      "spotifyUri": "spotify:track:6iNBM60VQtPUUhkKfwa5KV",
+      "title": "It's My Life",
+      "artists": [
+        "Bon Jovi"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6iNBM60VQtPUUhkKfwa5KV",
+      "bopsterDisplayedYear": 2010,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 250,
+      "spotifyTrackId": "4k5FeWIdUaBx5OZdvrSYP1",
+      "spotifyUri": "spotify:track:4k5FeWIdUaBx5OZdvrSYP1",
+      "title": "Everywhere - 2017 Remaster",
+      "artists": [
+        "Fleetwood Mac"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4k5FeWIdUaBx5OZdvrSYP1",
+      "bopsterDisplayedYear": 1987,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 251,
+      "spotifyTrackId": "3SrZbaN4gjObKVSgq5QkpS",
+      "spotifyUri": "spotify:track:3SrZbaN4gjObKVSgq5QkpS",
+      "title": "Family Affair",
+      "artists": [
+        "Mary J. Blige"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3SrZbaN4gjObKVSgq5QkpS",
+      "bopsterDisplayedYear": 2001,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 252,
+      "spotifyTrackId": "7Ewz6bJ97vUqk5HdkvguFQ",
+      "spotifyUri": "spotify:track:7Ewz6bJ97vUqk5HdkvguFQ",
+      "title": "Heaven",
+      "artists": [
+        "Bryan Adams"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/7Ewz6bJ97vUqk5HdkvguFQ",
+      "bopsterDisplayedYear": 1984,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 253,
+      "spotifyTrackId": "5HCyWlXZPP0y6Gqq8TgA20",
+      "spotifyUri": "spotify:track:5HCyWlXZPP0y6Gqq8TgA20",
+      "title": "STAY (with Justin Bieber)",
+      "artists": [
+        "The Kid LAROI"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5HCyWlXZPP0y6Gqq8TgA20",
+      "bopsterDisplayedYear": 2021,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 254,
+      "spotifyTrackId": "6cx06DFPPHchuUAcTxznu9",
+      "spotifyUri": "spotify:track:6cx06DFPPHchuUAcTxznu9",
+      "title": "Head & Heart (feat. MNEK)",
+      "artists": [
+        "Joel Corry"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6cx06DFPPHchuUAcTxznu9",
+      "bopsterDisplayedYear": 2020,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 255,
+      "spotifyTrackId": "5nrmGFJ87crVoJF5xdRqwn",
+      "spotifyUri": "spotify:track:5nrmGFJ87crVoJF5xdRqwn",
+      "title": "Waterloo Sunset",
+      "artists": [
+        "The Kinks"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5nrmGFJ87crVoJF5xdRqwn",
+      "bopsterDisplayedYear": 1967,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 256,
+      "spotifyTrackId": "7EZC6E7UjZe63f1jRmkWxt",
+      "spotifyUri": "spotify:track:7EZC6E7UjZe63f1jRmkWxt",
+      "title": "Zombie",
+      "artists": [
+        "The Cranberries"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/7EZC6E7UjZe63f1jRmkWxt",
+      "bopsterDisplayedYear": 1994,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 257,
+      "spotifyTrackId": "2TIlqbIneP0ZY1O0EzYLlc",
+      "spotifyUri": "spotify:track:2TIlqbIneP0ZY1O0EzYLlc",
+      "title": "Someone You Loved",
+      "artists": [
+        "Lewis Capaldi"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2TIlqbIneP0ZY1O0EzYLlc",
+      "bopsterDisplayedYear": 2018,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 258,
+      "spotifyTrackId": "2374M0fQpWi3dLnB54qaLX",
+      "spotifyUri": "spotify:track:2374M0fQpWi3dLnB54qaLX",
+      "title": "Africa",
+      "artists": [
+        "TOTO"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2374M0fQpWi3dLnB54qaLX",
+      "bopsterDisplayedYear": 1982,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 259,
+      "spotifyTrackId": "2N5zMZX7YeL1tico8oQxa9",
+      "spotifyUri": "spotify:track:2N5zMZX7YeL1tico8oQxa9",
+      "title": "Crazy",
+      "artists": [
+        "Gnarls Barkley"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2N5zMZX7YeL1tico8oQxa9",
+      "bopsterDisplayedYear": 2006,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 260,
+      "spotifyTrackId": "2eF8pWbiivYsYRpbntYsnc",
+      "spotifyUri": "spotify:track:2eF8pWbiivYsYRpbntYsnc",
+      "title": "Signed, Sealed, Delivered (I'm Yours)",
+      "artists": [
+        "Stevie Wonder"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2eF8pWbiivYsYRpbntYsnc",
+      "bopsterDisplayedYear": 1970,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 261,
+      "spotifyTrackId": "4qKlYv1B1XhJ7Q114Thv6m",
+      "spotifyUri": "spotify:track:4qKlYv1B1XhJ7Q114Thv6m",
+      "title": "I've Got a Woman",
+      "artists": [
+        "Ray Charles"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4qKlYv1B1XhJ7Q114Thv6m",
+      "bopsterDisplayedYear": 1994,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 262,
+      "spotifyTrackId": "5BHfKRD3LTxFz1tX8AH0DN",
+      "spotifyUri": "spotify:track:5BHfKRD3LTxFz1tX8AH0DN",
+      "title": "Black Hole Sun",
+      "artists": [
+        "Soundgarden"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5BHfKRD3LTxFz1tX8AH0DN",
+      "bopsterDisplayedYear": 2010,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 263,
+      "spotifyTrackId": "6MnWfOgKRkQtY1pRgoTwB1",
+      "spotifyUri": "spotify:track:6MnWfOgKRkQtY1pRgoTwB1",
+      "title": "Reach",
+      "artists": [
+        "S Club"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6MnWfOgKRkQtY1pRgoTwB1",
+      "bopsterDisplayedYear": 2000,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 264,
+      "spotifyTrackId": "2Ms33RTRCT6gArrpcrPxmo",
+      "spotifyUri": "spotify:track:2Ms33RTRCT6gArrpcrPxmo",
+      "title": "Feel",
+      "artists": [
+        "Robbie Williams"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2Ms33RTRCT6gArrpcrPxmo",
+      "bopsterDisplayedYear": 2002,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 265,
+      "spotifyTrackId": "3ix6K4wZY29bCujrSznwFZ",
+      "spotifyUri": "spotify:track:3ix6K4wZY29bCujrSznwFZ",
+      "title": "Let's Dance - 2018 Remaster",
+      "artists": [
+        "David Bowie"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3ix6K4wZY29bCujrSznwFZ",
+      "bopsterDisplayedYear": 1983,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 266,
+      "spotifyTrackId": "0gJvqi9QyASOCtJu99tytc",
+      "spotifyUri": "spotify:track:0gJvqi9QyASOCtJu99tytc",
+      "title": "Because of You",
+      "artists": [
+        "Kelly Clarkson"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0gJvqi9QyASOCtJu99tytc",
+      "bopsterDisplayedYear": 2004,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 267,
+      "spotifyTrackId": "7iL6o9tox1zgHpKUfh9vuC",
+      "spotifyUri": "spotify:track:7iL6o9tox1zgHpKUfh9vuC",
+      "title": "In Da Club",
+      "artists": [
+        "50 Cent"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/7iL6o9tox1zgHpKUfh9vuC",
+      "bopsterDisplayedYear": 2003,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 268,
+      "spotifyTrackId": "6UelLqGlWMcVH1E5c4H7lY",
+      "spotifyUri": "spotify:track:6UelLqGlWMcVH1E5c4H7lY",
+      "title": "Watermelon Sugar",
+      "artists": [
+        "Harry Styles"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6UelLqGlWMcVH1E5c4H7lY",
+      "bopsterDisplayedYear": 2019,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 269,
+      "spotifyTrackId": "74VR3AkGPhbYXnxcOYa16x",
+      "spotifyUri": "spotify:track:74VR3AkGPhbYXnxcOYa16x",
+      "title": "Strangers In The Night",
+      "artists": [
+        "Frank Sinatra"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/74VR3AkGPhbYXnxcOYa16x",
+      "bopsterDisplayedYear": 1966,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 270,
+      "spotifyTrackId": "5uvosCdMlFdTXhoazkTI5R",
+      "spotifyUri": "spotify:track:5uvosCdMlFdTXhoazkTI5R",
+      "title": "Light My Fire",
+      "artists": [
+        "The Doors"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5uvosCdMlFdTXhoazkTI5R",
+      "bopsterDisplayedYear": 1967,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 271,
+      "spotifyTrackId": "3k7pyCzQMKwaStsAbdHHWx",
+      "spotifyUri": "spotify:track:3k7pyCzQMKwaStsAbdHHWx",
+      "title": "Star Girl",
+      "artists": [
+        "McFly"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3k7pyCzQMKwaStsAbdHHWx",
+      "bopsterDisplayedYear": 2006,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 272,
+      "spotifyTrackId": "7HKez549fwJQDzx3zLjHKC",
+      "spotifyUri": "spotify:track:7HKez549fwJQDzx3zLjHKC",
+      "title": "Start Me Up - Remastered 2009",
+      "artists": [
+        "The Rolling Stones"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/7HKez549fwJQDzx3zLjHKC",
+      "bopsterDisplayedYear": 1981,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 273,
+      "spotifyTrackId": "7MpQOaVorMfoNHOJ80YxhY",
+      "spotifyUri": "spotify:track:7MpQOaVorMfoNHOJ80YxhY",
+      "title": "Life on Mars? - 1999 Remaster",
+      "artists": [
+        "David Bowie"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/7MpQOaVorMfoNHOJ80YxhY",
+      "bopsterDisplayedYear": 2002,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 274,
+      "spotifyTrackId": "62AuGbAkt8Ox2IrFFb8GKV",
+      "spotifyUri": "spotify:track:62AuGbAkt8Ox2IrFFb8GKV",
+      "title": "Sweet Caroline",
+      "artists": [
+        "Neil Diamond"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/62AuGbAkt8Ox2IrFFb8GKV",
+      "bopsterDisplayedYear": 1969,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 275,
+      "spotifyTrackId": "5gOd6zDC8vhlYjqbQdJVWP",
+      "spotifyUri": "spotify:track:5gOd6zDC8vhlYjqbQdJVWP",
+      "title": "Baker Street",
+      "artists": [
+        "Gerry Rafferty"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5gOd6zDC8vhlYjqbQdJVWP",
+      "bopsterDisplayedYear": 1978,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 276,
+      "spotifyTrackId": "5SZ6zX4rOrEQferfFC2MfP",
+      "spotifyUri": "spotify:track:5SZ6zX4rOrEQferfFC2MfP",
+      "title": "Walk This Way",
+      "artists": [
+        "Aerosmith"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5SZ6zX4rOrEQferfFC2MfP",
+      "bopsterDisplayedYear": 1975,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 277,
+      "spotifyTrackId": "6C0xucNj75wRdlejwWIEW1",
+      "spotifyUri": "spotify:track:6C0xucNj75wRdlejwWIEW1",
+      "title": "Club Foot",
+      "artists": [
+        "Kasabian"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6C0xucNj75wRdlejwWIEW1",
+      "bopsterDisplayedYear": 2004,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 278,
+      "spotifyTrackId": "2gCQe48O4GMJz6oFBqnN9e",
+      "spotifyUri": "spotify:track:2gCQe48O4GMJz6oFBqnN9e",
+      "title": "Wheel Of Fortune",
+      "artists": [
+        "Kay Starr"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2gCQe48O4GMJz6oFBqnN9e",
+      "bopsterDisplayedYear": 1991,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 279,
+      "spotifyTrackId": "1bp2IO61zbQrbWNmKKxg3f",
+      "spotifyUri": "spotify:track:1bp2IO61zbQrbWNmKKxg3f",
+      "title": "The Joker",
+      "artists": [
+        "Steve Miller Band"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1bp2IO61zbQrbWNmKKxg3f",
+      "bopsterDisplayedYear": 1973,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 280,
+      "spotifyTrackId": "1hQFF33xi8ruavZNyovtUN",
+      "spotifyUri": "spotify:track:1hQFF33xi8ruavZNyovtUN",
+      "title": "December, 1963 (Oh What a Night!)",
+      "artists": [
+        "The Four Seasons"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1hQFF33xi8ruavZNyovtUN",
+      "bopsterDisplayedYear": 1975,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 281,
+      "spotifyTrackId": "78WVLOP9pN0G3gRLFy1rAa",
+      "spotifyUri": "spotify:track:78WVLOP9pN0G3gRLFy1rAa",
+      "title": "Piano Man",
+      "artists": [
+        "Billy Joel"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/78WVLOP9pN0G3gRLFy1rAa",
+      "bopsterDisplayedYear": 1973,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 282,
+      "spotifyTrackId": "0O6u0VJ46W86TxN9wgyqDj",
+      "spotifyUri": "spotify:track:0O6u0VJ46W86TxN9wgyqDj",
+      "title": "I Like You (A Happier Song) (with Doja Cat)",
+      "artists": [
+        "Post Malone"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0O6u0VJ46W86TxN9wgyqDj",
+      "bopsterDisplayedYear": 2022,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 283,
+      "spotifyTrackId": "7KXjTSCq5nL1LoYtL7XAwS",
+      "spotifyUri": "spotify:track:7KXjTSCq5nL1LoYtL7XAwS",
+      "title": "HUMBLE.",
+      "artists": [
+        "Kendrick Lamar"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/7KXjTSCq5nL1LoYtL7XAwS",
+      "bopsterDisplayedYear": 2017,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 284,
+      "spotifyTrackId": "3gdewACMIVMEWVbyb8O9sY",
+      "spotifyUri": "spotify:track:3gdewACMIVMEWVbyb8O9sY",
+      "title": "Rocket Man (I Think It's Going To Be A Long, Long Time)",
+      "artists": [
+        "Elton John"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3gdewACMIVMEWVbyb8O9sY",
+      "bopsterDisplayedYear": 1972,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 285,
+      "spotifyTrackId": "2fTsFCKRFQ5M0igJgabnLA",
+      "spotifyUri": "spotify:track:2fTsFCKRFQ5M0igJgabnLA",
+      "title": "Price Tag",
+      "artists": [
+        "Jessie J"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2fTsFCKRFQ5M0igJgabnLA",
+      "bopsterDisplayedYear": 2011,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 286,
+      "spotifyTrackId": "21YxK0klhpfLW8budkJaMF",
+      "spotifyUri": "spotify:track:21YxK0klhpfLW8budkJaMF",
+      "title": "Lust For Life",
+      "artists": [
+        "Iggy Pop"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/21YxK0klhpfLW8budkJaMF",
+      "bopsterDisplayedYear": 1977,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 287,
+      "spotifyTrackId": "2yPoXCs7BSIUrucMdK5PzV",
+      "spotifyUri": "spotify:track:2yPoXCs7BSIUrucMdK5PzV",
+      "title": "Umbrella",
+      "artists": [
+        "Rihanna"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2yPoXCs7BSIUrucMdK5PzV",
+      "bopsterDisplayedYear": 2007,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 288,
+      "spotifyTrackId": "6JymsaWDHk2Yj4e0yNBIFH",
+      "spotifyUri": "spotify:track:6JymsaWDHk2Yj4e0yNBIFH",
+      "title": "Jump Around",
+      "artists": [
+        "House Of Pain"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6JymsaWDHk2Yj4e0yNBIFH",
+      "bopsterDisplayedYear": 1992,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 289,
+      "spotifyTrackId": "5BckPAYcKEJuYs1eV1BHHe",
+      "spotifyUri": "spotify:track:5BckPAYcKEJuYs1eV1BHHe",
+      "title": "Take A Chance On Me",
+      "artists": [
+        "ABBA"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5BckPAYcKEJuYs1eV1BHHe",
+      "bopsterDisplayedYear": 1977,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 290,
+      "spotifyTrackId": "1dI77VhaLcQSgQLSnIs03D",
+      "spotifyUri": "spotify:track:1dI77VhaLcQSgQLSnIs03D",
+      "title": "Levitating",
+      "artists": [
+        "Dua Lipa"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1dI77VhaLcQSgQLSnIs03D",
+      "bopsterDisplayedYear": 2020,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 291,
+      "spotifyTrackId": "72gv4zhNvRVdQA0eOenCal",
+      "spotifyUri": "spotify:track:72gv4zhNvRVdQA0eOenCal",
+      "title": "Symphony (feat. Zara Larsson)",
+      "artists": [
+        "Clean Bandit"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/72gv4zhNvRVdQA0eOenCal",
+      "bopsterDisplayedYear": 2018,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 292,
+      "spotifyTrackId": "4ofwffwvvnbSkrMSCKQDaC",
+      "spotifyUri": "spotify:track:4ofwffwvvnbSkrMSCKQDaC",
+      "title": "Shotgun",
+      "artists": [
+        "George Ezra"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4ofwffwvvnbSkrMSCKQDaC",
+      "bopsterDisplayedYear": 2018,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 293,
+      "spotifyTrackId": "5A1FmxbYVRZKy4nc16MAue",
+      "spotifyUri": "spotify:track:5A1FmxbYVRZKy4nc16MAue",
+      "title": "Sex on Fire",
+      "artists": [
+        "Kings of Leon"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5A1FmxbYVRZKy4nc16MAue",
+      "bopsterDisplayedYear": 2008,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 294,
+      "spotifyTrackId": "2Cd9iWfcOpGDHLz6tVA3G4",
+      "spotifyUri": "spotify:track:2Cd9iWfcOpGDHLz6tVA3G4",
+      "title": "Waka Waka (This Time for Africa) [The Official 2010 FIFA World Cup (TM) Song] (feat. Freshlyground)",
+      "artists": [
+        "Shakira"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/2Cd9iWfcOpGDHLz6tVA3G4",
+      "bopsterDisplayedYear": 2010,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 295,
+      "spotifyTrackId": "24QrU0S6w0XvlE3m7kgSsW",
+      "spotifyUri": "spotify:track:24QrU0S6w0XvlE3m7kgSsW",
+      "title": "Surf City (Rerecorded)",
+      "artists": [
+        "Jan & Dean"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/24QrU0S6w0XvlE3m7kgSsW",
+      "bopsterDisplayedYear": 2010,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 296,
+      "spotifyTrackId": "0O45fw2L5vsWpdsOdXwNAR",
+      "spotifyUri": "spotify:track:0O45fw2L5vsWpdsOdXwNAR",
+      "title": "SexyBack (feat. Timbaland)",
+      "artists": [
+        "Justin Timberlake"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/0O45fw2L5vsWpdsOdXwNAR",
+      "bopsterDisplayedYear": 2006,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 297,
+      "spotifyTrackId": "1IqFh00G2kvvMm8pRMpehA",
+      "spotifyUri": "spotify:track:1IqFh00G2kvvMm8pRMpehA",
+      "title": "Me and Bobby McGee",
+      "artists": [
+        "Janis Joplin"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1IqFh00G2kvvMm8pRMpehA",
+      "bopsterDisplayedYear": 1971,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 298,
+      "spotifyTrackId": "1JQ6Xm1JrvHfvAqhl5pwaA",
+      "spotifyUri": "spotify:track:1JQ6Xm1JrvHfvAqhl5pwaA",
+      "title": "Easy",
+      "artists": [
+        "Commodores"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/1JQ6Xm1JrvHfvAqhl5pwaA",
+      "bopsterDisplayedYear": 1977,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 299,
+      "spotifyTrackId": "5KZ8y0RROfoYbB5lwCk3EJ",
+      "spotifyUri": "spotify:track:5KZ8y0RROfoYbB5lwCk3EJ",
+      "title": "21 Seconds",
+      "artists": [
+        "So Solid Crew"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5KZ8y0RROfoYbB5lwCk3EJ",
+      "bopsterDisplayedYear": 2001,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 300,
+      "spotifyTrackId": "4gMgiXfqyzZLMhsksGmbQV",
+      "spotifyUri": "spotify:track:4gMgiXfqyzZLMhsksGmbQV",
+      "title": "Another Brick in the Wall, Pt. 2",
+      "artists": [
+        "Pink Floyd"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4gMgiXfqyzZLMhsksGmbQV",
+      "bopsterDisplayedYear": 1979,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 301,
+      "spotifyTrackId": "4r1CoAATVuxag55Ct3Y1aX",
+      "spotifyUri": "spotify:track:4r1CoAATVuxag55Ct3Y1aX",
+      "title": "I'll Be There",
+      "artists": [
+        "Jess Glynne"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4r1CoAATVuxag55Ct3Y1aX",
+      "bopsterDisplayedYear": 2018,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 302,
+      "spotifyTrackId": "3EFb1qDgIqf9MegIryKtDj",
+      "spotifyUri": "spotify:track:3EFb1qDgIqf9MegIryKtDj",
+      "title": "Monday, Monday - Single Version",
+      "artists": [
+        "The Mamas & The Papas"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3EFb1qDgIqf9MegIryKtDj",
+      "bopsterDisplayedYear": 1966,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 303,
+      "spotifyTrackId": "5gJKsGij5oGt5H5RSFYXPa",
+      "spotifyUri": "spotify:track:5gJKsGij5oGt5H5RSFYXPa",
+      "title": "Tequila",
+      "artists": [
+        "The Champs"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/5gJKsGij5oGt5H5RSFYXPa",
+      "bopsterDisplayedYear": 1994,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 304,
+      "spotifyTrackId": "4u7EnebtmKWzUH433cf5Qv",
+      "spotifyUri": "spotify:track:4u7EnebtmKWzUH433cf5Qv",
+      "title": "Bohemian Rhapsody - Remastered 2011",
+      "artists": [
+        "Queen"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/4u7EnebtmKWzUH433cf5Qv",
+      "bopsterDisplayedYear": 1975,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 305,
+      "spotifyTrackId": "6l8EbYRtQMgKOyc1gcDHF9",
+      "spotifyUri": "spotify:track:6l8EbYRtQMgKOyc1gcDHF9",
+      "title": "Bridge Over Troubled Water",
+      "artists": [
+        "Simon & Garfunkel"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6l8EbYRtQMgKOyc1gcDHF9",
+      "bopsterDisplayedYear": 1970,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 306,
+      "spotifyTrackId": "3Dy4REq8O09IlgiwuHQ3sk",
+      "spotifyUri": "spotify:track:3Dy4REq8O09IlgiwuHQ3sk",
+      "title": "Waterloo",
+      "artists": [
+        "ABBA"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3Dy4REq8O09IlgiwuHQ3sk",
+      "bopsterDisplayedYear": 1974,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 307,
+      "spotifyTrackId": "3Xls4cNOwy01dtrNXb1inG",
+      "spotifyUri": "spotify:track:3Xls4cNOwy01dtrNXb1inG",
+      "title": "White Room",
+      "artists": [
+        "Cream"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/3Xls4cNOwy01dtrNXb1inG",
+      "bopsterDisplayedYear": 1968,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    },
+    {
+      "position": 308,
+      "spotifyTrackId": "6epn3r7S14KUqlReYr77hA",
+      "spotifyUri": "spotify:track:6epn3r7S14KUqlReYr77hA",
+      "title": "Baby",
+      "artists": [
+        "Justin Bieber"
+      ],
+      "album": "",
+      "spotifyAlbumReleaseDate": "",
+      "spotifyUrl": "https://open.spotify.com/track/6epn3r7S14KUqlReYr77hA",
+      "bopsterDisplayedYear": 2010,
+      "orderedIdentityEvidence": "community_bopster_numbered_import"
+    }
+  ]
+}

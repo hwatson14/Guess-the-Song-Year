@@ -1,0 +1,10 @@
+# Local research caches and browser audit artifacts (durable evidence is in verification/).
+/output/
+/.playwright-cli/
+/_site/
+__pycache__/
+*.py[cod]
+node_modules/
+.env
+.env.*
+!.env.example

@@ -1,0 +1,22 @@
+﻿input,expected_result,actual_result,passes_exact_port,observation
+1,1,1,True,manual unpadded ID
+00001,1,1,True,manual padded ID
+00308,308,308,True,upper boundary
+00000,reject,reject,True,zero rejected
+00309,reject,reject,True,out-of-range rejected
+https://hitstergame.com/uk/aaaa0005/00001,1,1,True,resolver-compatible UK candidate shape
+https://hitstergame.com/au/aaah0001/00001,1,1,True,resolver-compatible AU candidate shape
+https://hitstergame.com/uk/aaaa0016/00001,1,1,True,different UK deck silently collides
+https://hitstergame.com/de/aaaa0002/00001,1,1,True,foreign deck silently collides
+https://evil.example/not-a-deck/00001,1,1,True,untrusted host is accepted
+junk/00001,1,1,True,non-URL suffix is accepted
+https://hitstergame.com/uk/aaaa0005/00001?x=1,1,1,True,query suffix accepted
+https://hitstergame.com/uk/aaaa0005/00001/,reject,reject,True,trailing slash rejected
+https://hitstergame.com/uk/aaaa0005/1,reject,reject,True,unpadded URL card rejected
+https://hitstergame.com/uk/aaaa0005/00001#x,reject,reject,True,bare fragment rejected
+https://hitstergame.com/uk/aaaa0005/00001?x=1#frag,1,1,True,fragment after query accepted
+https://hitstergame.com/uk/aaaa0005/?id=00001,reject,reject,True,query-parameter card rejected
+000001,reject,reject,True,six digits rejected
+ 00001 ,1,1,True,outer whitespace trimmed
++1,reject,reject,True,signed number rejected
+1.0,reject,reject,True,decimal rejected

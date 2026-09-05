@@ -1,0 +1,6366 @@
+{
+  "songs": 1118,
+  "memberships": 1299,
+  "providers": {
+    "spotify": {
+      "linked": 609,
+      "missing": 509,
+      "metadataChecked": 609,
+      "verified": 3
+    },
+    "youtube": {
+      "linked": 430,
+      "missing": 688,
+      "metadataChecked": 415,
+      "verified": 0
+    }
+  },
+  "releaseEvidence": {
+    "unresolved": 310,
+    "externally_observed": 808
+  },
+  "greatestDepth": {
+    "1950": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1951": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1952": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1953": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1954": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1955": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1956": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1957": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1958": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1959": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1960": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1961": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1962": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1963": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1964": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1965": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1966": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1967": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1968": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1969": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1970": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1971": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1972": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1973": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1974": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1975": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1976": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1977": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1978": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1979": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1980": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1981": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1982": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1983": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1984": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1985": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1986": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1987": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1988": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1989": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1990": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1991": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1992": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1993": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1994": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1995": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1996": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1997": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1998": {
+      "songs": 12,
+      "needed": 0
+    },
+    "1999": {
+      "songs": 12,
+      "needed": 0
+    },
+    "2000": {
+      "songs": 12,
+      "needed": 0
+    },
+    "2001": {
+      "songs": 12,
+      "needed": 0
+    },
+    "2002": {
+      "songs": 13,
+      "needed": 0
+    },
+    "2003": {
+      "songs": 12,
+      "needed": 0
+    },
+    "2004": {
+      "songs": 12,
+      "needed": 0
+    },
+    "2005": {
+      "songs": 12,
+      "needed": 0
+    },
+    "2006": {
+      "songs": 12,
+      "needed": 0
+    },
+    "2007": {
+      "songs": 12,
+      "needed": 0
+    },
+    "2008": {
+      "songs": 12,
+      "needed": 0
+    },
+    "2009": {
+      "songs": 12,
+      "needed": 0
+    },
+    "2010": {
+      "songs": 12,
+      "needed": 0
+    },
+    "2011": {
+      "songs": 12,
+      "needed": 0
+    },
+    "2012": {
+      "songs": 12,
+      "needed": 0
+    },
+    "2013": {
+      "songs": 12,
+      "needed": 0
+    },
+    "2014": {
+      "songs": 12,
+      "needed": 0
+    },
+    "2015": {
+      "songs": 12,
+      "needed": 0
+    },
+    "2016": {
+      "songs": 12,
+      "needed": 0
+    },
+    "2017": {
+      "songs": 12,
+      "needed": 0
+    },
+    "2018": {
+      "songs": 12,
+      "needed": 0
+    },
+    "2019": {
+      "songs": 12,
+      "needed": 0
+    },
+    "2020": {
+      "songs": 12,
+      "needed": 0
+    },
+    "2021": {
+      "songs": 12,
+      "needed": 0
+    },
+    "2022": {
+      "songs": 12,
+      "needed": 0
+    }
+  },
+  "pendingLinks": [
+    {
+      "songId": "song_70ea432d902895721de1",
+      "title": "Mona Lisa",
+      "artist": "Nat King Cole",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4ddf685559a8036f4c5d",
+      "title": "Goodnight Irene",
+      "artist": "Gordon Jenkins and His Orchestra and The Weavers",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a8481150c4a4a2cc9712",
+      "title": "Because of You",
+      "artist": "Tony Bennett",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3ff4867dada89fc0378c",
+      "title": "Come On-A My House",
+      "artist": "Rosemary Clooney",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_22c877c2b5848f713e6d",
+      "title": "How High the Moon",
+      "artist": "Les Paul and Mary Ford",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_19e336ff7107fd3329b4",
+      "title": "Too Young",
+      "artist": "Nat King Cole",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_eb95e78050fcbb2cfc80",
+      "title": "Cry",
+      "artist": "Johnnie Ray and The Four Lads",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3e577c1f92cf18db181e",
+      "title": "Blue Tango",
+      "artist": "Leroy Anderson “Pops” Concert Orchestra",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_113b0eeb61634be0e276",
+      "title": "Wheel of Fortune",
+      "artist": "Kay Starr",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8e95968e11dd59275e78",
+      "title": "You Belong to Me",
+      "artist": "Jo Stafford with Paul Weston and His Orchestra",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b99ca5f823843d4d2a24",
+      "title": "(How Much Is) That Doggie in the Window",
+      "artist": "Patti Page",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e007fb5b528d73f57ebc",
+      "title": "Vaya con Dios",
+      "artist": "Les Paul & Mary Ford",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_0d7a6fa38e57bc3fe13e",
+      "title": "The Song From Moulin Rouge (Where Is Your Heart)",
+      "artist": "Percy Faith and His Orchestra with Felicia Sanders",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_23146fb9887779f83262",
+      "title": "Little Things Mean a Lot",
+      "artist": "Kitty Kallen",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b87dd923c8ded33a0799",
+      "title": "Wanted",
+      "artist": "Perry Como",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_40c9c6aedb57f4530b82",
+      "title": "Hey There",
+      "artist": "Rosemary Clooney with Buddy Cole and His Orchestra",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a030dc6616018ab0788f",
+      "title": "Cherry Pink and Apple Blossom White",
+      "artist": "Pérez Prado",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_861cb60c1c56ae2a71b6",
+      "title": "Cherry Pink And Apple Blossom White (Cerezo Rosa)",
+      "artist": "Pérez Prado and His Orchestra",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_14b87616dfb2a38ff279",
+      "title": "Rock Around the Clock",
+      "artist": "Bill Haley",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_bb024f513d41a4d3f2a6",
+      "title": "Don’t Be Cruel",
+      "artist": "Elvis Presley",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ef35e9cdeb9d5cfffd7e",
+      "title": "Heartbreak Hotel",
+      "artist": "Elvis Presley",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_43b771a28441c080c7f0",
+      "title": "Lisbon Antigua",
+      "artist": "Nelson Riddle",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_424450598d009f20210d",
+      "title": "My Prayer",
+      "artist": "The Platters",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c183f6abed0e20e72ca6",
+      "title": "All Shook Up",
+      "artist": "Elvis Presley",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9cedbebcc1b9deb89036",
+      "title": "Love Letters in the Sand",
+      "artist": "Pat Boone",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_1cf728f233885ff806f7",
+      "title": "All I Have to Do Is Dream",
+      "artist": "The Everly Brothers",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_5257918ae490b98fffd6",
+      "title": "Claudette",
+      "artist": "The Everly Brothers",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_6af6e454916ceee79c32",
+      "title": "Don't",
+      "artist": "Elvis Presley",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_05758b1305326ab3cba4",
+      "title": "I Beg of You",
+      "artist": "Elvis Presley",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_71dbc924b057cbf3f98c",
+      "title": "Mack the Knife",
+      "artist": "Bobby Darin",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_5ee198af7187303ccd15",
+      "title": "Personality",
+      "artist": "Lloyd Price",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_7957767867324a45ee46",
+      "title": "Running Bear",
+      "artist": "Johnny Preston",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_76809d10b1d311bd6857",
+      "title": "Teen Angel",
+      "artist": "Mark Dinning",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_efed0f73706927007bd5",
+      "title": "The Battle of New Orleans",
+      "artist": "Johnny Horton",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_7f87f2a00859d470d618",
+      "title": "Venus",
+      "artist": "Frankie Avalon",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_5f8c261838b4b855c3a4",
+      "title": "Cathy’s Clown",
+      "artist": "The Everly Brothers",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f70ab64380cfce227248",
+      "title": "He’ll Have to Go",
+      "artist": "Jim Reeves",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3ae775c1ae82be05e259",
+      "title": "I Fall to Pieces",
+      "artist": "Patsy Cline",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c223ab5e9e385520ad45",
+      "title": "Tossin' & Turnin'",
+      "artist": "Bobby Lewis",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_11381b6461d062c383c3",
+      "title": "Tossin' and Turnin'",
+      "artist": "Bobby Lewis",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_24fa826af25c7be1673f",
+      "title": "Stranger on the Shore",
+      "artist": "Acker Bilk with The Leon Young String Chorale",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_312deec0429727519d77",
+      "title": "Mashed Potato Time",
+      "artist": "Dee Dee Sharp",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_54e5980b198b50b085d4",
+      "title": "Blue Velvet",
+      "artist": "Bobby Vinton",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ec6bf8fdfe29b56042be",
+      "title": "He’s So Fine",
+      "artist": "The Chiffons",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8afa00dd6d05b96b8960",
+      "title": "I Want to Hold Your Hand",
+      "artist": "The Beatles",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_2e6112af037b8c8c4d94",
+      "title": "Surfin’ U.S.A.",
+      "artist": "The Beach Boys",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_10cf777b3d15abccbb4e",
+      "title": "A Hard Day's Night",
+      "artist": "The Beatles",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_81c98d23b1d1378f452b",
+      "title": "I Should Have Known Better",
+      "artist": "The Beatles",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_24b7f735c2cae85174a5",
+      "title": "(I Can’t Get No) Satisfaction",
+      "artist": "The Rolling Stones",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_aa965cbad5ad3d48ae86",
+      "title": "Wooly Bully",
+      "artist": "Sam the Sham & the Pharaohs",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c845b88f18874cf23496",
+      "title": "96 Tears",
+      "artist": "The Fire Escape",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_166046e8b863d2dd019e",
+      "title": "96 Tears",
+      "artist": "Big Maybelle",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_96e4da64a4fbd31b38d4",
+      "title": "96 Tears",
+      "artist": "The Music Machine",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_80d28f973790c8098a2a",
+      "title": "96 Tears",
+      "artist": "? (Question Mark) & the Mysterians",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_24b595292ac39fe7b742",
+      "title": "Ode to Billie Joe",
+      "artist": "Bobbie Gentry",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f9e6945d4b16ddb8a676",
+      "title": "The Letter",
+      "artist": "The Box Tops",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9519a8131a81e035c4e9",
+      "title": "To Sir With Love",
+      "artist": "Lulu",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_6288cf763de4b323b2ef",
+      "title": "Hey Jude",
+      "artist": "The Beatles",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a6c776273464fb7c4827",
+      "title": "Honey",
+      "artist": "Bobby Goldsboro",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_95318738e2be8963d7c7",
+      "title": "Love Is Blue",
+      "artist": "Paul Mauriat",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_840838cfc291e018a363",
+      "title": "People Got to Be Free",
+      "artist": "The Young Rascals",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c6c0bca9d2a672cba1e3",
+      "title": "Honky Tonk Women",
+      "artist": "The Rolling Stones",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_59dc078ea4e90bdc7547",
+      "title": "Sugar, Sugar",
+      "artist": "The Archies",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f6c1a468b0eca846dbd3",
+      "title": "The First Time Ever I Saw Your Face",
+      "artist": "Roberta Flack",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b057a163ada43a4bda8d",
+      "title": "American Woman",
+      "artist": "The Guess Who",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_6aa735aa2d3dabc63b58",
+      "title": "Bridge Over Troubled Water",
+      "artist": "Simon and Garfunkel",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_d459f0ef7cbae277cb6f",
+      "title": "I Feel the Earth Move",
+      "artist": "Carole King",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_63e9740597b9c36cd4b4",
+      "title": "Joy to the World",
+      "artist": "Three Dog Night",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_0232577548d7cbc7dbbb",
+      "title": "Reason to Believe",
+      "artist": "Rod Stewart",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_fd8e346c688d5e68bf5f",
+      "title": "Alone Again (Naturally)",
+      "artist": "Gilbert O’Sullivan",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3a1bef47e8636bb62121",
+      "title": "The Candy Man",
+      "artist": "Sammy Davis Jr.",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b8580a10f3de260e9149",
+      "title": "Killing Me Softly With His Song",
+      "artist": "Roberta Flack",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9c74ae61fbe892076766",
+      "title": "Love's Theme",
+      "artist": "Love Unlimited Orchestra",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_7825677a785672c119cd",
+      "title": "Tie a Yellow Ribbon ’Round the Ole Oak Tree",
+      "artist": "Dawn featuring Tony Orlando",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8511fc340a058cf745b9",
+      "title": "Tie a Yellow Ribbon Round the Ole Oak Tree",
+      "artist": "Tony Orlando & Dawn",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c2ab7dff4dd095cb3271",
+      "title": "Seasons in the Sun",
+      "artist": "Terry Jacks",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_80a821ab6f49e409ccc1",
+      "title": "Love Will Keep Us Together",
+      "artist": "Captain & Tennille",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_6659fdfb42ec51f4ec8f",
+      "title": "Philadelphia Freedom",
+      "artist": "Elton John",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b2d2f42d1eaf359dcbcb",
+      "title": "Rhinestone Cowboy",
+      "artist": "Glen Campbell",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9f71da864aec493cef91",
+      "title": "Disco Lady",
+      "artist": "Johnnie Taylor",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_999d4ac50e7958bf3a98",
+      "title": "Silly Love Songs",
+      "artist": "Wings",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f2ef44421347efe32b54",
+      "title": "Angel in Your Arms",
+      "artist": "Hot",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ec4237d42d029a9674ec",
+      "title": "Best of My Love",
+      "artist": "Emotions",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_14be94b0660d950ac5f6",
+      "title": "I Just Want to Be Your Everything",
+      "artist": "Andy Gibb",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b74fa8ddb7aa46bb7560",
+      "title": "Kiss You All Over",
+      "artist": "Exile",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_95f374e7a4b8958fdf07",
+      "title": "Le Freak",
+      "artist": "Chic",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a03a2e02e86558170f4a",
+      "title": "Night Fever",
+      "artist": "Bee Gees",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_bd24d3e43b74487585b5",
+      "title": "Shadow Dancing",
+      "artist": "Andy Gibb",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b6dfd0f3550738a8dc89",
+      "title": "My Sharona",
+      "artist": "The Knack",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_d50cb481086d48b11b72",
+      "title": "Reunited",
+      "artist": "Peaches & Herb",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_cd748f4b77479a92472f",
+      "title": "Another Brick in the Wall (Part II)",
+      "artist": "Pink Floyd",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_158b472733e64a44aaa9",
+      "title": "Magic",
+      "artist": "Olivia Newton‐John",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_43f838b57455f29192da",
+      "title": "Bette Davis Eyes",
+      "artist": "Kim Carnes",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f58bbe85fc8de0099d04",
+      "title": "Centerfold",
+      "artist": "The J. Geils Band",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a8ca9d9644ca94d0682b",
+      "title": "Endless Love",
+      "artist": "Diana Ross",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c998852156878890966d",
+      "title": "Jessie's Girl",
+      "artist": "Rick Springfield",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_be6ca32b43a75d90b9a0",
+      "title": "Ebony and Ivory",
+      "artist": "Paul McCartney feat. Stevie Wonder",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_02ef333b4fd2a224b8eb",
+      "title": "That's What Friends Are For",
+      "artist": "Dionne Warwick with Elton John, Gladys Knight & Stevie Wonder",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_0c5cdaeca620ec5106ce",
+      "title": "Broken Wings",
+      "artist": "Mr. Mister",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ddc768c55f40140852ba",
+      "title": "On My Own",
+      "artist": "Patti LaBelle & Michael McDonald",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c5aef0dc987135ed9bac",
+      "title": "It Must Have Been Love",
+      "artist": "Roxette",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_de08c6fd86b35835e9e7",
+      "title": "Shake You Down",
+      "artist": "Gregory Abbott",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_cfe22c132d48f988fd3a",
+      "title": "Every Rose Has Its Thorn",
+      "artist": "Poison",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_5f4d96c6e64bb96c9a3e",
+      "title": "Look Away",
+      "artist": "Chicago",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_644307742a3624865a49",
+      "title": "My Prerogative",
+      "artist": "Bobby Brown",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_5c4eae23076802f39fab",
+      "title": "Straight Up",
+      "artist": "Paula Abdul",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_440db95ffd4d96c4d4e8",
+      "title": "Hold On",
+      "artist": "Wilson Phillips",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_acf2eb8680fbd195c10c",
+      "title": "Nothing Compares 2 U",
+      "artist": "Sinéad O’Connor",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_14036dfe4fe0015c1a60",
+      "title": "I Wanna Sex You Up",
+      "artist": "Color Me Badd",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_798f6ce537f0d5ef063a",
+      "title": "I Wanna Sex You Up",
+      "artist": "Colour Me Badd",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_66d46918f675a9bf6c8a",
+      "title": "Whoomp! (There It Is)",
+      "artist": "Tag Team",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_499bc2521036bbf80a17",
+      "title": "Live Forever",
+      "artist": "Oasis",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_970462ea83d3926eac3d",
+      "title": "One Sweet Day",
+      "artist": "Mariah Carey & Boyz II Men",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_137a5f41e9e73e6aa30e",
+      "title": "Because You Loved Me",
+      "artist": "Céline Dion",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b770e2066084fdc0295a",
+      "title": "Candle in the Wind",
+      "artist": "Elton John",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ca8fed89b1a2d1a65793",
+      "title": "Candle in the Wind ’97",
+      "artist": "Elton John",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_880d7be193b2a10f1250",
+      "title": "Something About the Way You Look Tonight",
+      "artist": "Elton John",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b1275576a85079ddf837",
+      "title": "Too Close",
+      "artist": "Next",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_52be22fc81cc76cca879",
+      "title": "Believe",
+      "artist": "Cher-esque",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_7f901f99003b647e1bcb",
+      "title": "I Believe",
+      "artist": "Cher",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e7d9eb8dce33d5701d4a",
+      "title": "Who You Gonna Believe",
+      "artist": "Cher",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_09c24c50eddd79da4285",
+      "title": "Smooth",
+      "artist": "Carlos Santana",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_7965b5f2492cfc4ee475",
+      "title": "Up in da Club",
+      "artist": "50 Cent",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_687ea4322628b43e827b",
+      "title": "Bad Day",
+      "artist": "Daniel Powter",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8987164d65ab66e0c1f9",
+      "title": "Irreplaceable",
+      "artist": "Beyoncé",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a668a7fc0f33de0081f6",
+      "title": "Bleeding Love, Part 1",
+      "artist": "Leona Lewis",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e8e62b733b5faf52e71a",
+      "title": "Tik Tok",
+      "artist": "Ke$ha",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a1568f889a8c46afe4a6",
+      "title": "Happy",
+      "artist": "Pharrell Williams",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_33ae932ea6cef090f70f",
+      "title": "Stay Away From Me",
+      "artist": "Slim Dusty",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3922d164a86076e7c7cd",
+      "title": "I Can’t Stand Sitting in a Cell",
+      "artist": "Buddy Williams",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_12a4c3db21737a65d1e9",
+      "title": "Beyond the Setting Sun",
+      "artist": "Buddy Williams",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_fec860843f6aba2c2f66",
+      "title": "I’m Gonna Tear Down the Mailbox",
+      "artist": "Buddy Williams",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_1dfe1a17884fbef67ffb",
+      "title": "Gambling Polka Dot Blues",
+      "artist": "Buddy Williams",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a7c0a04cb645b507f67c",
+      "title": "Smoky (That Wild Stallion Grand)",
+      "artist": "Smoky Dawson",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4f865a124c1a1a0ea3c8",
+      "title": "The Man From Never Never",
+      "artist": "Smoky Dawson",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9ff184dc1931da97a9a6",
+      "title": "The Wild Colonial Boy",
+      "artist": "Smoky Dawson",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a039de58b24a8680b187",
+      "title": "New Wabash Cannon Ball",
+      "artist": "Smoky Dawson",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_5bb61393710eed9c1250",
+      "title": "The Death of Hank Williams",
+      "artist": "Buddy Williams",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_18b51df07a3a4a1f1d50",
+      "title": "Missing in Action",
+      "artist": "Buddy Williams",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_0f54412cb7f46a621688",
+      "title": "Castaway",
+      "artist": "Johnny Ashcroft",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4cd72073992e490adc25",
+      "title": "The Farmer’s Song",
+      "artist": "Johnny Ashcroft",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4ecf612ebf0c08d2d22a",
+      "title": "The Spirit of Progress",
+      "artist": "Buddy Williams",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_70b1dcd28680442edd5d",
+      "title": "Pentridge Jail",
+      "artist": "Buddy Williams",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_55beffae8399b1d2b400",
+      "title": "Rock Around the Clock",
+      "artist": "Vic Sabrino",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9f2ce187dcbb3c143417",
+      "title": "Train Whistle Blues",
+      "artist": "Johnny Ashcroft",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_670b1ef0abc20571819f",
+      "title": "Highway 31",
+      "artist": "Johnny Ashcroft",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_7791d80368aea2b25f50",
+      "title": "Put Your Cards on the Table",
+      "artist": "Johnny Ashcroft",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_aa457e5b8b824d7cd51d",
+      "title": "Tell Me",
+      "artist": "Johnny Ashcroft",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_81e28f2b530786ddfc68",
+      "title": "Once When I Was Mustering",
+      "artist": "Slim Dusty",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_835e72c9ec23961c1fa6",
+      "title": "A Pub With No Beer",
+      "artist": "Slim Dusty",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_2bfd00adf043794104c7",
+      "title": "Buzz, Buzz, Buzz",
+      "artist": "Johnny Ashcroft",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3c30b1c1af3d63c062b4",
+      "title": "Real Wild Child",
+      "artist": "Johnny O’Keefe",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_89e59c94b691a1b00dfe",
+      "title": "Don’t Forget Me, Little Darlin’",
+      "artist": "Buddy Williams",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3e2f46c41fb7488066a6",
+      "title": "My Sleepy Valley Home",
+      "artist": "Buddy Williams",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_d71c0cbdeeee97be8563",
+      "title": "I’ll Stroll Down Memory Lane With You",
+      "artist": "Buddy Williams",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_647017e0c628ae8ee793",
+      "title": "When the Cactus Is in Bloom",
+      "artist": "Buddy Williams",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8b83fb1f3cd658a5edb7",
+      "title": "She's My Baby",
+      "artist": "Johnny O'Keefe",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8dfba1719130e1e52956",
+      "title": "I'm Counting on You",
+      "artist": "Johnny O'Keefe",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c313b670d0d656be1b70",
+      "title": "I Remember You",
+      "artist": "Frank Ifield",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_df572cac87958a8e06af",
+      "title": "The Three Kisses of Love",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_bbc2e0b65be8cb1fcfb3",
+      "title": "The Battle of the Blue and the Grey",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_04370e0f51b4edbfe82b",
+      "title": "Wild Rover",
+      "artist": "The Seekers",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_809a05b717e6a83fb5ee",
+      "title": "Dese Bones G'Wine Rise Again",
+      "artist": "The Seekers",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f66d940e14fccd3d8e74",
+      "title": "Turn Around, Look at Me",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_2e15a897e1ffa48c08a7",
+      "title": "Theme from Jaimie McPheeters",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_09f06b915733c92fbb09",
+      "title": "The Battle of the Blue and Grey",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_466e7362bc3e6c87ba37",
+      "title": "Timber",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_56c5fc9a5692f79d22c2",
+      "title": "Don’t Say Goodbye",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8bf7e525810e48ce8513",
+      "title": "Everyday I Have to Cry",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_92f872704e9b4679eb60",
+      "title": "Peace of Mind",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_be228b46343c98b0d90c",
+      "title": "To Be or Not to Be",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_01a65b877493daef6e85",
+      "title": "If It Don't Work Out",
+      "artist": "Normie Rowe",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b5856cd07867b43e5d14",
+      "title": "The Night",
+      "artist": "Normie Rowe",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_0d11c08a99bebeea526c",
+      "title": "Stormy Weather",
+      "artist": "Normie Rowe",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a7f9ff52e963869a49f3",
+      "title": "Rat Race",
+      "artist": "Normie Rowe",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a187fd8b43c2b97633cb",
+      "title": "Ooh La La",
+      "artist": "Normie Rowe",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3270fc6ca8fa3d260dc4",
+      "title": "Hot Gully Wind",
+      "artist": "The Masters Apprentices",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c07e1e8c72263038282e",
+      "title": "Buried and Dead",
+      "artist": "The Masters Apprentices",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3ca83456ce38cd43f09d",
+      "title": "My Girl",
+      "artist": "The Masters Apprentices",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_81fb648cf920d8063239",
+      "title": "Down to Earth",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_1f83de7ce9566c5874d7",
+      "title": "Jumbo",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_bfaf41ff6e6a99eaf8af",
+      "title": "Let There Be Love",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_430c52b30464c3491889",
+      "title": "Edison",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8896c2990f155dd3f7df",
+      "title": "One Million Years",
+      "artist": "Robin Gibb",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ceffefbb8b50854c4cd0",
+      "title": "Sound of Love",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c11e9432a986762f5e72",
+      "title": "Tomorrow Tomorrow",
+      "artist": "The Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_af7fc0b952b65a8b35d9",
+      "title": "You’ll Never See My Face Again",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_16e3667916421e907d30",
+      "title": "Could It Be",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_443797ae9cae6abe28ef",
+      "title": "Every Second, Every Minute",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_18d6f627e4a11d0eea80",
+      "title": "I Lay Down and Die",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_552441429db99e3d9a1f",
+      "title": "Lonely Days",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a50df6ce8f40b4dbfb33",
+      "title": "Paperback Writer",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_fedaa46f3a9ec08499a4",
+      "title": "Turning Tide",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ec28aad59673b09c0446",
+      "title": "You’re Nobody Till Somebody Loves You",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e56c4b3b7b79444375c1",
+      "title": "All by Myself",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_df7a06dad8c433887cea",
+      "title": "You’re the Reason",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_34391991dee7ca366926",
+      "title": "Please Don’t Turn Out the Lights",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_fb420daaf57b17cabd96",
+      "title": "Bad Bad Dreams",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3164e82a91839c31cb42",
+      "title": "I Held a Party",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_552d10ffa1829a080379",
+      "title": "Road to Alaska",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_13f5abfcf4c3edd3247c",
+      "title": "Wouldn't I Be Someone",
+      "artist": "The Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_86e1cfbcb2c93bf3c7be",
+      "title": "Cherry Red",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_976410c9c5939af8bdc1",
+      "title": "Take Me Home Country Roads",
+      "artist": "Olivia Newton-John",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_bdb8ce22ef6655181cf4",
+      "title": "It Doesn’t Matter Much to Me",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c765858cd6a6e7ee8b02",
+      "title": "Throw a Penny",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_54ef714bf079a5d879d8",
+      "title": "New York Mining Disaster 1941",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3b78303218f94c414d7b",
+      "title": "Melody Fair",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b7cb90736e82bd2d9e0c",
+      "title": "Baby as You Turn Away",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_d7f9694c20211fee4a41",
+      "title": "Golden Slumbers / Carry That Weight",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_841143bd3994ae09299a",
+      "title": "Fanny (Be Tender With My Love)",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_6839e23ac44229e21be7",
+      "title": "Children of the World",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3d33a43312b8b2e62bef",
+      "title": "Can’t Keep a Good Man Down",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_575488c1330646f54095",
+      "title": "Jive Talkin’",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a0c25b1221ddd9b1bd0c",
+      "title": "More Than a Woman",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_6545ba5866c5d2e744c7",
+      "title": "You Should Be Dancing",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_6b800adff8c865758899",
+      "title": "One Long Day",
+      "artist": "Cold Chisel",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9fba172a8cbb32d6e1c1",
+      "title": "Mona and the Preacher",
+      "artist": "Cold Chisel",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_2bb8645a46a54f925a83",
+      "title": "Khe Sanh",
+      "artist": "Cold Chisel",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_7376844e1e72b83bd9cf",
+      "title": "Home and Broken Hearted",
+      "artist": "Cold Chisel",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_5bf77632c94020e6aa90",
+      "title": "A Little More Love",
+      "artist": "Olivia Newton-John",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_94a4d092e7fd8958e9ca",
+      "title": "Conversations",
+      "artist": "Cold Chisel",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_5276e48ba8d4aea089b9",
+      "title": "I’m Gonna Roll Ya",
+      "artist": "Cold Chisel",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_eb73ca92e69d55e2e6cd",
+      "title": "The Door",
+      "artist": "Cold Chisel",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9e9aacc86b116fd2070d",
+      "title": "Keypunch Operator",
+      "artist": "Men at Work",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8b75051914f4ef45a5ed",
+      "title": "No Time for Games",
+      "artist": "Midnight Oil",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a685064aa2e4d9af4b65",
+      "title": "Knife’s Edge",
+      "artist": "Midnight Oil",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_de69650c1d45a0f78eea",
+      "title": "Anyone for Tennis?",
+      "artist": "Men at Work",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_09079de581a8cfd465e5",
+      "title": "Catch a Star",
+      "artist": "Men at Work",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_66aafe47648357c158f2",
+      "title": "People Just Love to Play With Words",
+      "artist": "Men at Work",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_44d8ef8af009440a1eaa",
+      "title": "Outside World",
+      "artist": "Midnight Oil",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_26c7acdc070a54fc122c",
+      "title": "Read About It",
+      "artist": "Midnight Oil",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_d55215efaff72ed3b68b",
+      "title": "Scream in Blue",
+      "artist": "Midnight Oil",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_5f91bc22665483c370e7",
+      "title": "My Girl",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_aeda4196553f2489a388",
+      "title": "Leilani",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_637d3bcc6341dadf6781",
+      "title": "Be My Guru",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_0ddba2c020c535ffa1cf",
+      "title": "Arthur",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_84ef03203301ce053173",
+      "title": "Death Ship",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_5c8247039688fec76097",
+      "title": "Dig It Up",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_1fc8b626cc3762f2c17e",
+      "title": "Tomorrow That Was Yesterday",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_61da0c09d0023cba4801",
+      "title": "Mars Needs Guitars!",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_5ca1a60f1cc5b702a5de",
+      "title": "Turkey Dinner",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_6924a04548905901823d",
+      "title": "Like Wow-Wipeout",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_381d4a0a82711d64c817",
+      "title": "Poison Pen",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_007b690d834629735f30",
+      "title": "Shintaro",
+      "artist": "Men at Work",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_29a9406dc683447ee8fc",
+      "title": "The Longest Night",
+      "artist": "Men at Work",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_aa224b2ffbacf2143ffa",
+      "title": "Party Machine",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_73b68f4074a4a0ce7ff4",
+      "title": "In the Middle of the Land",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_2bf3f1e3456652a9b11e",
+      "title": "Good Times",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f7af73a850c2eb464146",
+      "title": "What’s My Scene?",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_2e010d0c1147e1ff6dd9",
+      "title": "Hypocrite Blues",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_be98bceb87dfb6aa1aa1",
+      "title": "Gene Hackman",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_131aa9c65652ba57b179",
+      "title": "Where’s the Action?",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_0860c7be3562e8f2aca7",
+      "title": "The Right Time",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e71153c5de30453b06ba",
+      "title": "I Don’t Know Anything",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_1efc41d620e85b50beea",
+      "title": "Another World",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_42f7f2c70253649fff16",
+      "title": "I Want You Back",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9e47b09e1ebd2f64e86f",
+      "title": "Where’s That Hit?",
+      "artist": "Hoodoo Gurus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e659e99a3632dda646f3",
+      "title": "The Machine’s Breaking Down",
+      "artist": "Tina Arena",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_de4ccad6681a617b3f03",
+      "title": "Woman’s Work",
+      "artist": "Tina Arena",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a7efb46e60c03e0b4063",
+      "title": "Word Is Out",
+      "artist": "Kylie Minogue",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a6f4e8d263ef4ac528a4",
+      "title": "Shocked",
+      "artist": "Kylie Minogue",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a5a2e92b043b88c8e345",
+      "title": "Where in the World?",
+      "artist": "Kylie Minogue",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_1f169e871ea9ebfde9c7",
+      "title": "Give Me Just a Little More Time",
+      "artist": "Kylie Minogue",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_302bee6a26a0db18e5bf",
+      "title": "Always Find the Time",
+      "artist": "Kylie Minogue",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e213f8c81f979a7b71a4",
+      "title": "Turn It Into Love",
+      "artist": "Kylie Minogue",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a390f45bb60de26a964d",
+      "title": "Celebration",
+      "artist": "Kylie Minogue",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_47f34feffffea58101e6",
+      "title": "Greatest Gift",
+      "artist": "Tina Arena",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_0c392f5f4f013c4f1796",
+      "title": "Love Is the Answer",
+      "artist": "Tina Arena",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_dcfd697adedc5422a404",
+      "title": "That’s the Way a Woman Feels",
+      "artist": "Tina Arena",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_49cdc6f5737af88f1a4d",
+      "title": "Show Me Heaven",
+      "artist": "Tina Arena",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_1b993146235d836edd2f",
+      "title": "Sorrento Moon (I Remember)",
+      "artist": "Tina Arena",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3fb33c1a605ada905436",
+      "title": "Love’s Funny That Way",
+      "artist": "Tina Arena",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_af2082666ae7a9d8ed30",
+      "title": "On the Line",
+      "artist": "Tina Arena",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_78beb1480b11f0b693a3",
+      "title": "Best for You",
+      "artist": "Tina Arena",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_dcf0d999820b3a8db1b4",
+      "title": "Diving in the Deep End",
+      "artist": "Natalie Imbruglia",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ce4e4885477c44a97e5e",
+      "title": "Smoke",
+      "artist": "Natalie Imbruglia",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_890067e19786ef69405f",
+      "title": "Something Better",
+      "artist": "Natalie Imbruglia",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ac9a83675c3db8a0cadb",
+      "title": "Torn",
+      "artist": "Natalie Imbruglia",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e7f758e479f5da0d6122",
+      "title": "Left of the Middle",
+      "artist": "Natalie Imbruglia",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a7f6350a7ab4e6b5d24e",
+      "title": "Why",
+      "artist": "Natalie Imbruglia",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_967101a38cec2e6b43ca",
+      "title": "Identify",
+      "artist": "Natalie Imbruglia",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_cffa3868448b1e19af7d",
+      "title": "Did It Again",
+      "artist": "Kylie Minogue",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ab32419f50a143159d73",
+      "title": "The Soul of the Beat",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_bdb243fbadd923cdfe28",
+      "title": "Don’t Stop",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_2233f28d2096a2f0aac9",
+      "title": "Sojourn",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_6b9faf8f44c0303e958d",
+      "title": "Running From the Storm",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_62d05ad7fc76a90773ee",
+      "title": "Fever",
+      "artist": "Kylie Minogue",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_cad44b3107d046973b52",
+      "title": "Full Tilt Boogie",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4f5c9b47c1e1309b8789",
+      "title": "Riding Under One Banner",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_1a0fcd209ee9d67e22df",
+      "title": "The Sentinel",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a3745163c1c6ab010b60",
+      "title": "Dumb Enough",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9fb76460d5debfc793ec",
+      "title": "Mic Felon",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_cb1aef68e523bb94d67c",
+      "title": "Simmy and the Gravyspitter",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ebdff6de8e14128a44cc",
+      "title": "The Calling",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c435af01c39b7e540c5e",
+      "title": "Tomorrow Will Do",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9413c9a8b81a34be8e83",
+      "title": "Back Once Again",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_878f213b38f47b44a17d",
+      "title": "Nosebleed Section",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_5a847b89c2ad5b7eceb2",
+      "title": "Scar",
+      "artist": "Missy Higgins",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_eacba52cfb00d10e3275",
+      "title": "Laying Blame",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_03f1644606810e9a6b13",
+      "title": "Testimonial Year",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a639620e7fb697945636",
+      "title": "Cactus Garden Special",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a3c0babdb85e0aecf219",
+      "title": "What a Great Night",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e38bb893cf8aad905b05",
+      "title": "Circuit Breaker",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_76e48686525c897cb2a5",
+      "title": "The Hard Road",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8d37bfff1524ee7b7f1d",
+      "title": "The Stopping All Stations Tour",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_5c23aa2d1b434e90efcd",
+      "title": "The Complete Hard Road Restrung Launch Concert",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8a9aac86c91e4eb63f98",
+      "title": "Restrung",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_6d9eac767d3a5a7a6369",
+      "title": "Clown Prince",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ad88de3653324e3dbf8b",
+      "title": "Peachy",
+      "artist": "Missy Higgins",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8defb7d277400bd75773",
+      "title": "Ten Days",
+      "artist": "Missy Higgins",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_2f4ddaec3d01c88d3bc2",
+      "title": "Roll on Up Restrung",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_55ebae53bde5963c3c8e",
+      "title": "Last Confession",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_0e30ce0db0fdc0953728",
+      "title": "Super Official",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_feda42c4c298f683cc90",
+      "title": "The Return",
+      "artist": "Hilltop Hoods",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b3336c713f7cd4659198",
+      "title": "Desire Be, Desire Go Jam",
+      "artist": "Tame Impala",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3c393279477abf015fab",
+      "title": "She’s Not the Only One I Love",
+      "artist": "Tame Impala",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_89c23a41e1da272311e7",
+      "title": "Skeleton Tiger",
+      "artist": "Tame Impala",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_27cb21787d437ace3663",
+      "title": "Good Night",
+      "artist": "Reece Mastin",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_58abc2881f5cfbf41a99",
+      "title": "Beside You",
+      "artist": "5 Seconds of Summer",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_7223c4dca7c2e0dc6b26",
+      "title": "Out of My Limit",
+      "artist": "5 Seconds of Summer",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_d1dc46fb5401e4fddaff",
+      "title": "Too Late",
+      "artist": "5 Seconds of Summer",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_d53eda6e84a487884004",
+      "title": "Unpredictable",
+      "artist": "5 Seconds of Summer",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_0e319abf2c311da08e0d",
+      "title": "I’ve Got This Friend",
+      "artist": "5 Seconds of Summer",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ad890bbe6a5e3810c913",
+      "title": "We are Young",
+      "artist": "5 Seconds of Summer",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c752e71cce60fa1b385c",
+      "title": "Wherever You Are",
+      "artist": "5 Seconds of Summer",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_d7ed69bbc2136c77130d",
+      "title": "Long Way Home",
+      "artist": "5 Seconds of Summer",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f4b98896d2bedf75f010",
+      "title": "American Idiot",
+      "artist": "5 Seconds of Summer",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_0f7d8a5f4f36d8e90b5f",
+      "title": "Tomorrow Never Dies",
+      "artist": "5 Seconds of Summer",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4a378def80210b0b0022",
+      "title": "Money",
+      "artist": "5 Seconds of Summer",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_94ca6e59b64d654bce38",
+      "title": "Safety Pin",
+      "artist": "5 Seconds of Summer",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f2b42092010b5ad50926",
+      "title": "Hey Everybody!",
+      "artist": "5 Seconds of Summer",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e461fe68080645c9303e",
+      "title": "Amnesia",
+      "artist": "5 Seconds of Summer",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_563ba3870f8923fb0aff",
+      "title": "The Greatest",
+      "artist": "Sia feat. Kendrick Lamar",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_1b659cb93b00dc50a0c7",
+      "title": "Girls Talk Boys",
+      "artist": "5 Seconds of Summer",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_185985f9761444e88c7f",
+      "title": "Love/Paranoia",
+      "artist": "Tame Impala",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_551a18706aaf5a1245c5",
+      "title": "Powerlines",
+      "artist": "Tame Impala",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_85cbf3c2b6e2635e5e82",
+      "title": "List of People (to Try and Forget About)",
+      "artist": "Tame Impala",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_2ae288626f715b9d20d7",
+      "title": "No Roots",
+      "artist": "5 Seconds of Summer",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_cae8b2cd2859658546b2",
+      "title": "Why Won’t You Love Me",
+      "artist": "5 Seconds of Summer",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_6687b37fbbb56ef21557",
+      "title": "Don't Stop",
+      "artist": "5 Seconds of Summer",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_1f01d55e08f600f1954d",
+      "title": "Rager teenager!",
+      "artist": "Troye Sivan",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_2e8efda4ae96b10af911",
+      "title": "Bye Bye",
+      "artist": "Genesis Owusu",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b348502c61671643acd9",
+      "title": "Bloom",
+      "artist": "Troye Sivan",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_7244bd6ca062dc6a0c23",
+      "title": "What a Heavenly Way to Die",
+      "artist": "Troye Sivan",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_49bd8a58aecdcecb868b",
+      "title": "Rumble",
+      "artist": "Link Wray",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c364be92b3e40400461f",
+      "title": "Telstar",
+      "artist": "The Tornados",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e7c50a49bdda114d2d68",
+      "title": "Tomorrow Never Knows",
+      "artist": "The Beatles",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8bc9c368f64a13ad8056",
+      "title": "White Rabbit",
+      "artist": "Jefferson Airplane",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_fef01e46369d5bd24f65",
+      "title": "Space Oddity",
+      "artist": "David Bowie",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_09f821ac61e507f339a6",
+      "title": "Superstition",
+      "artist": "Stevie Wonder",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9c00f8c047cb5d2c74ed",
+      "title": "Autobahn",
+      "artist": "Kraftwerk",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a38d29a974ae7bfeb35a",
+      "title": "Bohemian Rhapsody",
+      "artist": "Queen",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_143dac4cf9386942f570",
+      "title": "Cars",
+      "artist": "Gary Numan",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_cfeb8c3e4e81231c3045",
+      "title": "Running Up That Hill",
+      "artist": "Kate Bush",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_fbe918f110870c9f1e1d",
+      "title": "Personal Jesus",
+      "artist": "Depeche Mode",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_d484922a70616a316d57",
+      "title": "Groove Is in the Heart",
+      "artist": "Deee-Lite",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_1c89af98e1951abb93f4",
+      "title": "Unfinished Sympathy",
+      "artist": "Massive Attack",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_0d6bbdb13030d3bc48a4",
+      "title": "Common People",
+      "artist": "Pulp",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_d3d902c7defe7ae8013e",
+      "title": "Virtual Insanity",
+      "artist": "Jamiroquai",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_36a4bb88103ff1cdfc9c",
+      "title": "Song 2",
+      "artist": "Blur",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_1a5b64b571faa3fc91a5",
+      "title": "Music Sounds Better with You",
+      "artist": "Stardust",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_6fccd7951213cb182674",
+      "title": "Are You Gonna Be My Girl",
+      "artist": "Jet",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_5499afe854245b718bf4",
+      "title": "Crazy",
+      "artist": "Gnarls Barkley",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_093bbcc1c5c41eb8f0be",
+      "title": "Bulletproof",
+      "artist": "La Roux",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f507e5edc0337d76928c",
+      "title": "Feel It Still",
+      "artist": "Portugal. The Man",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_96d7887a27dd86497ac3",
+      "title": "Blue Tango",
+      "artist": "Leroy Anderson",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_bf27dbfb2d5582bc5391",
+      "title": "The Song from Moulin Rouge",
+      "artist": "Percy Faith",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8c0121f9d8521b0f1cdb",
+      "title": "Cherry Pink and Apple Blossom White",
+      "artist": "Perez Prado",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3b02011f022be9bf35f4",
+      "title": "Volare (Nel blu dipinto di blu)",
+      "artist": "Domenico Modugno",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a3db7be4cbe9a625e87a",
+      "title": "The Theme from \"A Summer Place",
+      "artist": "Percy Faith",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_275b119114c4ec21bdd7",
+      "title": "Surfin' USA",
+      "artist": "The Beach Boys",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8d3c8aa6b9cbaca8e8f8",
+      "title": "California Dreamin'",
+      "artist": "The Mamas & The Papas",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_16b8b3360e376a3392c7",
+      "title": "The Way We Were",
+      "artist": "Barbara Streisand",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_1c53175decd1314cdd8e",
+      "title": "Tonight's the Night (Gonna Be Alright)",
+      "artist": "Rod Stewart",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a44dc1f1a3a5307292f0",
+      "title": "Physical",
+      "artist": "Olivia Newton-John",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e460fb216655c321089b",
+      "title": "That's What Friends Are For",
+      "artist": "Dionne and Friends",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_68a4379c076f79dcc7f3",
+      "title": "Walk Like an Egyptian",
+      "artist": "The Bangles",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_d9f06353da86dd3fbda2",
+      "title": "Faith",
+      "artist": "George Michael",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_2c4717878b5bd5401715",
+      "title": "Macarena (Bayside Boys Remix)",
+      "artist": "Los del Rio",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f9cda4ad099b9289ee7b",
+      "title": "Boom Boom Pow",
+      "artist": "The Black Eyed Peas",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_127791227b21e2d6b3be",
+      "title": "Quicksilver",
+      "artist": "Bing Crosby & The Andrews Sisters",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e5713003afcc310c967a",
+      "title": "Auf Wiederseh'n Sweetheart",
+      "artist": "Vera Lynn",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b57bf60da5d2fb584a4e",
+      "title": "The Happy Wanderer",
+      "artist": "Frank Weir",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4e5a6b130e262dfea7dc",
+      "title": "Hold My Hand",
+      "artist": "Don Cornell",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_591bbe16f12159ba4ee6",
+      "title": "Just Walking in the Rain",
+      "artist": "Johnnie Ray",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_d2781a45a027a6dda789",
+      "title": "Around the World",
+      "artist": "Bing Crosby",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_93cc268b266679faace9",
+      "title": "Tom Dooley",
+      "artist": "The Kingston Trio",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8cf2d03b9e45674ec96b",
+      "title": "Smoke Gets in Your Eyes",
+      "artist": "The Platters",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_bfeacf988c3b584dc473",
+      "title": "It's Now or Never",
+      "artist": "Elvis Presley",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4132400b7edfa87362b8",
+      "title": "I'm Gonna Knock on Your Door",
+      "artist": "Eddie Hodges",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c4551284e26421dacaef",
+      "title": "Working for the Man",
+      "artist": "Roy Orbison",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c453f3ef474e20379d7c",
+      "title": "I Saw Her Standing There",
+      "artist": "The Beatles",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_6da2b42a091c21b3044c",
+      "title": "Que Sera, Sera",
+      "artist": "Normie Rowe",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f970b0905f97aa35fbcf",
+      "title": "These Boots Are Made for Walkin'",
+      "artist": "Nancy Sinatra",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9ec78ab3a51ae229be5f",
+      "title": "The Last Waltz",
+      "artist": "Engelbert Humperdinck",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4e06f53c537e94553687",
+      "title": "Something",
+      "artist": "The Beatles",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_6b8732cd8a652d7364ba",
+      "title": "Let It Be",
+      "artist": "The Beatles",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_57c40e39925003e06729",
+      "title": "Eagle Rock",
+      "artist": "Daddy Cool",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_5392f2786b1fe951955a",
+      "title": "Puppy Love",
+      "artist": "Donny Osmond",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_fbe5ee45e04704b41048",
+      "title": "My Coo Ca Choo",
+      "artist": "Alvin Stardust",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a4f762e1b0fcf55683e2",
+      "title": "Fox on the Run",
+      "artist": "Sweet",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9148f3ec2a1a04612d5e",
+      "title": "Fernando",
+      "artist": "ABBA",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9dcb9ecddbb783034e58",
+      "title": "Don't Cry for Me Argentina",
+      "artist": "Julie Covington",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_be673830a42402ca08ec",
+      "title": "You're the One that I Want",
+      "artist": "Olivia Newton-John & John Travolta",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4e03cebfb275121134eb",
+      "title": "Lay Your Love on Me",
+      "artist": "Racey",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_814ed7d08d19ee701b77",
+      "title": "I Got You",
+      "artist": "Split Enz",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_019fd2b864e9a73b3a31",
+      "title": "Counting the Beat",
+      "artist": "The Swingers",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_7e56705f8c6aaa72988e",
+      "title": "Australiana",
+      "artist": "Austen Tayshus",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_82f7249172c10f505d7e",
+      "title": "We Are the World",
+      "artist": "USA for Africa",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3d3dbe86e0ae1efb0ae8",
+      "title": "Locomotion",
+      "artist": "Kylie Minogue",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ce2bafe599f5e2e24418",
+      "title": "(I've Had) The Time of My Life",
+      "artist": "Bill Medley and Jennifer Warnes",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a6383540da31be7f4e73",
+      "title": "Love Is All Around",
+      "artist": "Wet Wet Wet",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a99e74e4debf210d1a8c",
+      "title": "Macarena",
+      "artist": "Los del Río",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_116456e15d49e88cb6fa",
+      "title": "Candle in the Wind 1997",
+      "artist": "Elton John",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_2dc398ddbf81790cd5de",
+      "title": "Maria",
+      "artist": "Ricky Martin",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a6db35a6947aaa1857e3",
+      "title": "Mambo No. 5",
+      "artist": "Lou Bega",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9b58ef1218eaa766ded4",
+      "title": "I'm Outta Love",
+      "artist": "Anastacia",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_80fb9a79f806cbed54fa",
+      "title": "Can't Fight the Moonlight",
+      "artist": "LeAnn Rimes",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_0673e845dee5ef4c6951",
+      "title": "Angels Brought Me Here",
+      "artist": "Guy Sebastian",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9512cb14687b015e01c6",
+      "title": "What About Me",
+      "artist": "Shannon Noll",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ca442f121d2bc70f3828",
+      "title": "The Prayer",
+      "artist": "Anthony Callea",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8b3840c2b0cc3052cd10",
+      "title": "I Wish I Was a Punk Rocker (With Flowers in My Hair)",
+      "artist": "Sandi Thom",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ff97f98d2af60869c0f9",
+      "title": "Big Girls Don't Cry",
+      "artist": "Fergie",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8ec90cdfcd926860c347",
+      "title": "Cat’s in the Cradle",
+      "artist": "Harry Chapin",
+      "missing": [
+        "spotify"
+      ]
+    },
+    {
+      "songId": "song_c487037af5e8f8f06405",
+      "title": "Kung Fu Fighting",
+      "artist": "Carl Douglas",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c4a533112ca5aae03d07",
+      "title": "Rock Your Baby",
+      "artist": "George McCrae",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c092e445a17aecae74e2",
+      "title": "The Bitch Is Back",
+      "artist": "Elton John",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f08b15cb1a092d938b8f",
+      "title": "The Lamb Lies Down on Broadway",
+      "artist": "Genesis",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_fa480440b67cf00c9f7e",
+      "title": "The Loco Motion",
+      "artist": "Grand Funk Railroad",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_68caeb137240edcfa348",
+      "title": "The Show Must Go On",
+      "artist": "Leo Sayer",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f5d6de3b93625921a9d9",
+      "title": "A Thousand Miles",
+      "artist": "Vanessa Carlton",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_30747041720f260a8df6",
+      "title": "Hero",
+      "artist": "Chad Kroeger",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_523db646e8e9b2c17a27",
+      "title": "Jenny from the Block",
+      "artist": "Jennifer Lopez",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b91ddb96e9013c3c47b2",
+      "title": "Lose Yourself",
+      "artist": "Eminem",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_345a8c9b4a6d4a6e2367",
+      "title": "Speed of Sound",
+      "artist": "Coldplay",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_bca95bfb3a30c19a681f",
+      "title": "Diamonds",
+      "artist": "Rihanna",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4d7689f9d07e8e588c37",
+      "title": "We Are Never Ever Getting Back Together",
+      "artist": "Taylor Swift",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_59bea1e45836c0d21201",
+      "title": "Adventure of a Lifetime",
+      "artist": "Coldplay",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_438cff43a2df49bfe3a1",
+      "title": "Bad Blood",
+      "artist": "Taylor Swift",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ea5811a8178b26bcdfcf",
+      "title": "Can't Feel My Face",
+      "artist": "The Weeknd",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a20c01752781a70d5864",
+      "title": "Hello",
+      "artist": "Adele",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_129f18878023a3a24701",
+      "title": "Hotline Bling",
+      "artist": "Drake",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_82cae2899bece06a17d4",
+      "title": "On My Mind",
+      "artist": "Ellie Goulding",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4436bbbaef42e0c463db",
+      "title": "Side to Side",
+      "artist": "Ariana Grande",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_6e06ce4f5548a1d823e2",
+      "title": "Work",
+      "artist": "Rihanna",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_efc5dc1275d149d80a98",
+      "title": "Girls Like You",
+      "artist": "Maroon 5",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_327ded757c63c21135de",
+      "title": "In My Feelings",
+      "artist": "Drake",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a12bc483559326cd20e2",
+      "title": "Foggy Mountain Breakdown",
+      "artist": "Lester Flatt And Earl Scruggs",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_d009db70d9907210f761",
+      "title": "If You'Ve Got The Money, I'Ve Got The Time",
+      "artist": "Lefty Frizzell",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_57d8f0e7263e342dd587",
+      "title": "Please Send Me Someone To Love",
+      "artist": "Percy Mayfield",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ed26be51eb76ce43fe80",
+      "title": "Rollin' Stone",
+      "artist": "Muddy Waters",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_7e5069a4dec536b58465",
+      "title": "The Tennessee Waltz",
+      "artist": "Patti Page",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ffcfe76fc0e08bbe41b2",
+      "title": "Bye Bye Love",
+      "artist": "The Everly Brothers",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_525e2aa375b5f2fd04a4",
+      "title": "Chances Are",
+      "artist": "Johnny Mathis",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_73151fd950d67d469905",
+      "title": "Diana",
+      "artist": "Paul Anka",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_6111e5e4ac68cf09c2b4",
+      "title": "Got My Mojo Working",
+      "artist": "Muddy Waters",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_451cabf70075c1c04a26",
+      "title": "Great Balls of Fire",
+      "artist": "Jerry Lee Lewis",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_49f73e65b9991f7b8183",
+      "title": "Love Is Strange",
+      "artist": "Mickey And Sylvia",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f4936f6f8fd5dd21ce4c",
+      "title": "Lucille",
+      "artist": "Little Richard",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_88e3884b6732080b1a0c",
+      "title": "Raunchy",
+      "artist": "Bill Justis And His Orchestra",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_fefe72ba6844e4966236",
+      "title": "School Days",
+      "artist": "Chuck Berry",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ea3a020ed90e93ac04d7",
+      "title": "Tammy",
+      "artist": "Debbie Reynolds",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_baac0b47b78b0c67d025",
+      "title": "A Fool in Love",
+      "artist": "Ike & Tina Turner",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_850ccc9e88089cd175e4",
+      "title": "Are You Lonesome Tonight?",
+      "artist": "Elvis Presley",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_446313bee5b6e0a5f652",
+      "title": "Last Date",
+      "artist": "Floyd Cramer",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_cbc941c87ce38916f5c2",
+      "title": "Let'S Have A Party",
+      "artist": "Wanda Jackson",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b4def9bf4f848d0207b2",
+      "title": "Save the Last Dance for Me",
+      "artist": "The Drifters",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9f0d12fdab9d639615e4",
+      "title": "Shop Around",
+      "artist": "The Miracles",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9491bbebba2578de1cda",
+      "title": "Stuck on You",
+      "artist": "Elvis Presley",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3b029bb0d64115dcf537",
+      "title": "The Twist",
+      "artist": "Chubby Checker",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_143fc16ffce4ad6b3ccc",
+      "title": "Boom Boom",
+      "artist": "John Lee Hooker",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ed09378f1dce16aa871c",
+      "title": "Breaking Up Is Hard to Do",
+      "artist": "Neil Sedaka",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b115137ade3c297185c1",
+      "title": "Crazy",
+      "artist": "Patsy Cline",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_5cba79dd2eca82a8e2fb",
+      "title": "Duke of Earl",
+      "artist": "Gene Chandler",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_7c75d7b8c4bc42455ac7",
+      "title": "He’s a Rebel",
+      "artist": "The Crystals",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f064e7118afdfa491410",
+      "title": "She Thinks I Still Care",
+      "artist": "George Jones",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_2ec90ca3eb8dbce008f5",
+      "title": "Twist And Shout",
+      "artist": "The Isley Brothers",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_2da2438a97ef343d2322",
+      "title": "What Kind Of Fool Am I?",
+      "artist": "Sammy Davis Jr.",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_56eafd37f77fd6bd1d70",
+      "title": "Black Mountain Rag",
+      "artist": "Doc Watson",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e8b157c6ca2bd81b2454",
+      "title": "Dang Me",
+      "artist": "Roger Miller",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_221a2dad0945643f1276",
+      "title": "Downtown",
+      "artist": "Petula Clark",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_1976b9d1c3c5f66d23c1",
+      "title": "I Get Around",
+      "artist": "The Beach Boys",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_13f53cd4a8a3c8f21437",
+      "title": "My Guy",
+      "artist": "Mary Wells",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_222c945118bdb600097f",
+      "title": "People",
+      "artist": "Barbra Streisand",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_d27a7e4e3a4ea6c63095",
+      "title": "Where Have All The Flowers Gone",
+      "artist": "Pete Seeger",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ef7b86a2f514639de9a8",
+      "title": "A Song For You",
+      "artist": "Leon Russell",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_948448f846aefb38038a",
+      "title": "All Right Now",
+      "artist": "Free",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f0a97c3478679ef9d3fe",
+      "title": "Black Magic Woman",
+      "artist": "Santana",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f8d08baa89ef364cd87f",
+      "title": "Hello Darlin'",
+      "artist": "Conway Twitty",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f87a032314d0a34c7a9f",
+      "title": "Lola",
+      "artist": "The Kinks",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b7da8298f04ffcc2c911",
+      "title": "Mr. Bojangles",
+      "artist": "Nitty Gritty Dirt Band",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_d3c0d495e732daaec136",
+      "title": "Ohio",
+      "artist": "Crosby Stills Nash and Young",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_42f8952aa79b2c95a1bf",
+      "title": "War",
+      "artist": "Edwin Starr",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a35d2b4f68f5e4839a06",
+      "title": "Changes",
+      "artist": "David Bowie",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_0fbabde6b115690b6f6a",
+      "title": "I'Ll Take You There",
+      "artist": "The Staple Singers",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e5ac5398504a17ba3333",
+      "title": "Long Cool Woman in a Black Dress",
+      "artist": "The Hollies",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_29af00e062e8d3ba2f2e",
+      "title": "Me And Mrs. Jones",
+      "artist": "Billy Paul",
+      "missing": [
+        "spotify"
+      ]
+    },
+    {
+      "songId": "song_31edeb20952da6a65fec",
+      "title": "Papa Was a Rollin Stone",
+      "artist": "The Temptations",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_09a0f334a52f02e07f03",
+      "title": "Take It Easy",
+      "artist": "Eagles",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ecb8daffbe4f6168040d",
+      "title": "The City Of New Orleans",
+      "artist": "Arlo Guthrie",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b04c72adb5a66275bfb1",
+      "title": "Walk On The Wild Side",
+      "artist": "Lou Reed",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_939037d1bc22b6f2fa9c",
+      "title": "Live to Tell",
+      "artist": "Madonna",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_838cee4ac45c235f8e46",
+      "title": "True Blue",
+      "artist": "Madonna",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_82f3bc1fa6be70714e71",
+      "title": "Ain't It Funny",
+      "artist": "Jennifer Lopez",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_489618221856624eb3dd",
+      "title": "Drops of Jupiter",
+      "artist": "Train",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_d8f9d61cbe4deb3a3dd7",
+      "title": "I'm Real",
+      "artist": "Jennifer Lopez",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_16ab047b2ac9021a4b3f",
+      "title": "Whenever, Wherever",
+      "artist": "Shakira",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8199d1f94c9d9f42c49b",
+      "title": "Baby Boy",
+      "artist": "Beyonce",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f6ed16c3e9765da370ef",
+      "title": "Milkshake",
+      "artist": "Kelis",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_1fe231f69a91b8c22304",
+      "title": "Makes Me Wonder",
+      "artist": "Maroon 5",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4d6e522cb58fc2f381b8",
+      "title": "The Edge of Glory",
+      "artist": "Lady Gaga",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c16dd374dda90f08948f",
+      "title": "Video Games",
+      "artist": "Lana Del Rey",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_2cd18f411d7a8180758b",
+      "title": "Look What You Made Me Do",
+      "artist": "Taylor Swift",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_dd12366811b1073a1cdc",
+      "title": "Here in My Heart",
+      "artist": "Al Martino",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3315bef93451a653f32f",
+      "title": "Jambalaya (On The Bayou)",
+      "artist": "Hank Williams",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_704b4aa9b46a03985b1d",
+      "title": "Juke",
+      "artist": "Little Walter",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c4536fec98d05bebefe3",
+      "title": "Kiss of Fire",
+      "artist": "Georgia Gibbs",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_484bdc6ade2a8b98e809",
+      "title": "Night Train",
+      "artist": "Jimmy Forrest",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8f60f05204f83309b9b0",
+      "title": "The Wild Side Of Life",
+      "artist": "Hank Thompson And His Brazos Valley Boys",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e8c86626a85a1eecaaa4",
+      "title": "Crying In The Chapel",
+      "artist": "The Orioles",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_525460bc0c0c7935baae",
+      "title": "I'Ve Got The World On A String",
+      "artist": "Frank Sinatra",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ade872ed8c3a98904ce2",
+      "title": "No Other Love",
+      "artist": "Perry Como",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_5c5d32488c0cdb653da8",
+      "title": "Pretend",
+      "artist": "Nat King Cole",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ba9396b7bd6cde7ea750",
+      "title": "Rags to Riches",
+      "artist": "Tony Bennett",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_2cdd589526c169b87a1c",
+      "title": "Tipitina",
+      "artist": "Professor Longhair And His Blues Scholars",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_12075452657a65107246",
+      "title": "Your Cheatin Heart",
+      "artist": "Hank Williams",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_0cb5f327cae9eea18bc3",
+      "title": "Earth Angel",
+      "artist": "The Penguins",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4f1bdf56e0b297892570",
+      "title": "Secret Love",
+      "artist": "Doris Day",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_355f5f21dacb7d404a3b",
+      "title": "Sh-Boom",
+      "artist": "The Chords",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_047cd1a7e15fe25ff2e8",
+      "title": "Teach Me Tonight",
+      "artist": "Dinah Washington",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_57493ffbdfb92f57a82a",
+      "title": "This Ole House",
+      "artist": "Rosemary Clooney",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_051b3ee0dbf54b07e0d2",
+      "title": "Three Coins in the Fountain",
+      "artist": "The Four Aces",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_22910f5065d96395ad09",
+      "title": "Ain’t That a Shame",
+      "artist": "Fats Domino",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_1126480839a4b64d5b46",
+      "title": "Bo Diddley",
+      "artist": "Bo Diddley",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_39da0267ab9d4a73a664",
+      "title": "Cry Me A River",
+      "artist": "Julie London",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_6d2b81f728ed98865e4f",
+      "title": "Love Is a Many Splendored Thing",
+      "artist": "The Four Aces",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ccdba17da4097b2260d1",
+      "title": "Only You",
+      "artist": "The Platters",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_aca4e75424b0ce401ffd",
+      "title": "Sincerely",
+      "artist": "The Moonglows",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3e13bfe52bdb89f9a4b5",
+      "title": "Sixteen Tons",
+      "artist": "Tennessee Ernie Ford",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ae2b449fc4de1afc8d79",
+      "title": "Do You Believe In Magic",
+      "artist": "The Lovin' Spoonful",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4b79a537911b5567ff27",
+      "title": "Help",
+      "artist": "The Beatles",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_0daf59beb5df454a95f2",
+      "title": "I Fought The Law",
+      "artist": "Bobby Fuller Four",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4bb9b3f6a5b26e45203e",
+      "title": "I Got You (I Feel Good)",
+      "artist": "James Brown",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_bc54e5e4a1983e9cc7d7",
+      "title": "I Got You Babe",
+      "artist": "Sonny & Cher",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_71f6d3e104744a04a7a3",
+      "title": "In the Midnight Hour",
+      "artist": "Wilson Pickett",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3f7ed13f9cc2689e320e",
+      "title": "King Of The Road",
+      "artist": "Roger Miller",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ad964901dcd6de428150",
+      "title": "(Your Love Keeps Lifting Me) Higher And Higher",
+      "artist": "Jackie Wilson",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8d8c76f6ac3b29215455",
+      "title": "A Whiter Shade Of Pale",
+      "artist": "Procol Harum",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_06018c45af32f1fc7ba8",
+      "title": "Alfie",
+      "artist": "Dionne Warwick",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_d7abefc18238e3d22d8a",
+      "title": "By The Time I Get To Phoenix",
+      "artist": "Glen Campbell",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_aa44cf55452e4610aec4",
+      "title": "Gentle On My Mind",
+      "artist": "Glen Campbell",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f210f87660a544157a1b",
+      "title": "Happy Together",
+      "artist": "The Turtles",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_671cf9f058edd4e98d87",
+      "title": "I Heard It Through The Grapevine",
+      "artist": "Gladys Knight & The Pips",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_80cbc1923a573acb0dbe",
+      "title": "Mustang Sally",
+      "artist": "Wilson Pickett",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_54e7e4580f16b7e85875",
+      "title": "Pata Pata",
+      "artist": "Miriam Makeba",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9f89a866084fe0bcb86a",
+      "title": "At Seventeen",
+      "artist": "Janis Ian",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_88fa83662043b9e39224",
+      "title": "Low Rider",
+      "artist": "War",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_08945409225c2a598462",
+      "title": "Birdland",
+      "artist": "Weather Report",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ba2f8d0154df68e87793",
+      "title": "Hotel California",
+      "artist": "Eagles",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_0691b41c4c52e181abd8",
+      "title": "Rapper'S Delight",
+      "artist": "Sugarhill Gang",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4bbeca521ee7daec21da",
+      "title": "We Are Family",
+      "artist": "Sister Sledge",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8052c4600c5d190caa8b",
+      "title": "He Stopped Loving Her Today",
+      "artist": "George Jones",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8ae121fac3a9d13d0157",
+      "title": "Vogue",
+      "artist": "Madonna",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4dc450244d670c2b1970",
+      "title": "I Can'T Make You Love Me",
+      "artist": "Bonnie Raitt",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_d49d482a19fcdd6545f9",
+      "title": "My Heart Will Go On",
+      "artist": "Celine Dion",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_7f4480ae8ad4a467b5c4",
+      "title": "I Try",
+      "artist": "Macy Gray",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_faaf3539b3a83dceb61e",
+      "title": "Music",
+      "artist": "Madonna",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_aaefc66af032a876c18b",
+      "title": "Who Let the Dogs Out",
+      "artist": "Baha Men",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b3b9266bd053117b8709",
+      "title": "Disturbia",
+      "artist": "Rihanna",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a23b9401ca4af87bf317",
+      "title": "I Kissed a Girl",
+      "artist": "Katy Perry",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_0e68d36736238c75055d",
+      "title": "Love Story",
+      "artist": "Taylor Swift",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e1353bed6ebd2484d3b2",
+      "title": "Rude",
+      "artist": "Magic!",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_5e678118eb1855c8e79d",
+      "title": "Shake It Off",
+      "artist": "Taylor Swift",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_2b50dacdd331555a3cf7",
+      "title": "Dance Monkey",
+      "artist": "Tones and I",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_12f51c9c80377757994e",
+      "title": "Be-Bop-A-Lula",
+      "artist": "Gene Vincent And His Blue Caps",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a208ca6226b6cd341636",
+      "title": "Blue Suede Shoes",
+      "artist": "Carl Perkins",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_49ca8480f246e3940802",
+      "title": "Blueberry Hill",
+      "artist": "Fats Domino",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_668f8d1a60bcdfafbd41",
+      "title": "Candy",
+      "artist": "Big Maybelle",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_adfdeba7d155256eb637",
+      "title": "Crazy Arms",
+      "artist": "Ray Price",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_dede133529ca1c3fc4f7",
+      "title": "Diminuendo And Crescendo In Blue",
+      "artist": "Duke Ellington & His Orchestra",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_73c4680f02ad1f7ca9e0",
+      "title": "Hound Dog",
+      "artist": "Elvis Presley",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e7630f093837ab1b9df0",
+      "title": "I Walk The Line",
+      "artist": "Johnny Cash",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_d2d00689e570655216a7",
+      "title": "Freight Train",
+      "artist": "Elizabeth Cotten",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_16061b19bed75f411735",
+      "title": "I Wonder Why",
+      "artist": "Dion And The Belmonts",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9f1aecd68fb0990782b4",
+      "title": "La Bamba",
+      "artist": "Ritchie Valens",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_fbf1b914ae1665b710cf",
+      "title": "Lonely Teardrops",
+      "artist": "Jackie Wilson",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9db8751ec5bca458b5e5",
+      "title": "Moanin'",
+      "artist": "Art Blakey & The Jazz Messengers",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_450f22d1c0aa3d19102c",
+      "title": "Bad to Me",
+      "artist": "Billy J Kramer",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ffe3ad4d79678bc3abb0",
+      "title": "Blowin in the Wind",
+      "artist": "Peter Paul and Mary",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3410b07c0e7d8be9e27e",
+      "title": "Days Of Wine And Roses",
+      "artist": "Henry Mancini",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c7d326233f2ad81aa6c2",
+      "title": "In My Room",
+      "artist": "The Beach Boys",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_7429386bf1d0a371cccb",
+      "title": "Louie Louie",
+      "artist": "The Kingsmen",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_1fe54af389970a7096de",
+      "title": "On Broadway",
+      "artist": "The Drifters",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_7c8f5b414a419e02650c",
+      "title": "East-West",
+      "artist": "The Paul Butterfield Blues Band",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4b5a1ba9aaeb64516223",
+      "title": "Eight Miles High",
+      "artist": "The Byrds",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b6973f011bb2a2fe136d",
+      "title": "Knock On Wood",
+      "artist": "Eddie Floyd",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3ad95f3d83bc76a4fe90",
+      "title": "Last Train to Clarksville",
+      "artist": "The Monkees",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_1330f87f5fe3522674cf",
+      "title": "All Along the Watchtower",
+      "artist": "The Jimi Hendrix Experience",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e39c647dc63b9f92a773",
+      "title": "Born to Be Wild",
+      "artist": "Steppenwolf",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_2fc5c3af4fa2093e4c25",
+      "title": "Grazing In The Grass",
+      "artist": "Hugh Masekela",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4e78c51a92094ce9d66b",
+      "title": "Harper Valley P.T.A.",
+      "artist": "Jeannie C. Riley",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_7b5dabd7c170ef0c5975",
+      "title": "Jumpin Jack Flash",
+      "artist": "The Rolling Stones",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e5695089759e080a171e",
+      "title": "Magic Carpet Ride",
+      "artist": "Steppenwolf",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_74cdcc8187c13479cf41",
+      "title": "Mama Tried",
+      "artist": "Merle Haggard",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_1cc79993b503ab28517a",
+      "title": "Cissy Strut",
+      "artist": "The Meters",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_35e17cb413f3d2ae09a9",
+      "title": "Clean Up Woman",
+      "artist": "Betty Wright",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b4c02e9a271d02baf010",
+      "title": "It'S Too Late",
+      "artist": "Carole King",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_bc98fbde5de418b28c78",
+      "title": "Kiss An Angel Good Mornin'",
+      "artist": "Charley Pride",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_57c69d8c3335e6354a13",
+      "title": "Layla",
+      "artist": "Derek And The Dominos",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_cae1621b426c432431a0",
+      "title": "Flash Light",
+      "artist": "Parliament",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_90ad4aaaf6bc2ca92469",
+      "title": "Man in the Mirror",
+      "artist": "Michael Jackson",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_da89b722d6e2458a883e",
+      "title": "Cold Cold Heart",
+      "artist": "Tony Bennett",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_60bba420b0da7cb813a5",
+      "title": "Hey Good Lookin'",
+      "artist": "Hank Williams",
+      "missing": [
+        "spotify"
+      ]
+    },
+    {
+      "songId": "song_90e8fd7a965d6a648c1d",
+      "title": "Jesus Gave Me Water",
+      "artist": "The Soul Stirrers",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9155acfcf2f06357589f",
+      "title": "Jezebel",
+      "artist": "Frankie Laine",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_dd58c533f5457ed3a5cf",
+      "title": "Mockin Bird Hill",
+      "artist": "Patti Page",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ade91295af9134c643ee",
+      "title": "My Heart Cries for You",
+      "artist": "Guy Mitchell",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c7ffdbd63eb83a8500b0",
+      "title": "Rocket \"88\"",
+      "artist": "Jackie Brenston & His Delta Cats",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_98c6008652c1356343d8",
+      "title": "The World Is Waiting for the Sunrise",
+      "artist": "Les Paul",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_fd26e6a421b92a296704",
+      "title": "Blue Moon",
+      "artist": "The Marcels",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_41066aafa4013381cb77",
+      "title": "Hello Walls",
+      "artist": "Faron Young",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_37174b5512b8c0fb05f7",
+      "title": "Moon River",
+      "artist": "Henry Mancini",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4f2c83c1347e52b041d8",
+      "title": "Please Mr Postman",
+      "artist": "The Marvelettes",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_588980db5e3a5a115563",
+      "title": "Behind Closed Doors",
+      "artist": "Charlie Rich",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9d4d1763bf4e0d2d4d9e",
+      "title": "Get Up, Stand Up",
+      "artist": "Bob Marley & The Wailers",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_51363bfdec6b8ab34968",
+      "title": "With or Without You",
+      "artist": "U2",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_3007486feac0855b02d3",
+      "title": "Dream Lover",
+      "artist": "Bobby Darin",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4783d49ebe9ce32740ce",
+      "title": "Sea of Love",
+      "artist": "Phil Phillips",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f081e1eadbdf96fa616b",
+      "title": "There Goes My Baby",
+      "artist": "The Drifters",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_cf9a68b57cc81c2a163f",
+      "title": "What A Diff'Rence A Day Makes",
+      "artist": "Dinah Washington",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9f105720ad6147bd176d",
+      "title": "Addicted to Love",
+      "artist": "Robert Palmer",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e353c44609d70d1c8e19",
+      "title": "Invisible Touch",
+      "artist": "Genesis",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_84961d899efc680565d2",
+      "title": "Sledgehammer",
+      "artist": "Peter Gabriel",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_f8cb4c3fa105fae1fe0a",
+      "title": "Take My Breath Away",
+      "artist": "Berlin",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_fa2bebb56fdfdec71e03",
+      "title": "The Way It Is",
+      "artist": "Bruce Hornsby",
+      "missing": [
+        "spotify"
+      ]
+    },
+    {
+      "songId": "song_a93d6d3846b27f71b1ad",
+      "title": "Ice Ice Baby",
+      "artist": "Vanilla Ice",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_5cf289d017e693c5cedf",
+      "title": "Show Me Heaven",
+      "artist": "Maria McKee",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_5f2e76d413472d186124",
+      "title": "The Power",
+      "artist": "Snap!",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_7b67fe6714e6067e9358",
+      "title": "Vision of Love",
+      "artist": "Mariah Carey",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_60edb26694afe34bc573",
+      "title": "I Love Music",
+      "artist": "The O’Jays",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_49a572be49206375d67b",
+      "title": "Misty Blue",
+      "artist": "Dorothy Moore",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_5324857076ca96e936b4",
+      "title": "New Kid in Town",
+      "artist": "Eagles",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b0e69780e6e9f45aff64",
+      "title": "Play That Funky Music",
+      "artist": "Wild Cherry",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_391228da15e59935d40b",
+      "title": "Show Me the Way",
+      "artist": "Peter Frampton",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_c22b17773da2961d6f27",
+      "title": "Another Day in Paradise",
+      "artist": "Phil Collins",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_41ba25ac2033efbd4805",
+      "title": "Buffalo Stance",
+      "artist": "Neneh Cherry",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8c7380d10ebe5fb529db",
+      "title": "Eternal Flame",
+      "artist": "The Bangles",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e2d62255a32538318d2f",
+      "title": "Lambada",
+      "artist": "Kaoma",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_089e1c31b5387cc4eaff",
+      "title": "Poison",
+      "artist": "Bell Biv DeVoe",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e65e1ab8c3935c8c0707",
+      "title": "Pump Up the Jam",
+      "artist": "Technotronic",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_51c758de6d7bdaa175a0",
+      "title": "1999",
+      "artist": "Prince",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_db737420ffde8c915426",
+      "title": "Come On Eileen",
+      "artist": "Dexys Midnight Runners",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_8a1400a3427f7e1af7a7",
+      "title": "Hungry Like the Wolf",
+      "artist": "Duran Duran",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_ec96beaae5327524baca",
+      "title": "Rhythm Is a Dancer",
+      "artist": "Snap!",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e30659660c076e889ca0",
+      "title": "The One",
+      "artist": "Elton John",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_b20dd97f6ad56d63527d",
+      "title": "Killing Me Softly",
+      "artist": "Fugees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a8fe6d7e64cc758b0f78",
+      "title": "Where Do You Go",
+      "artist": "No Mercy",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_23d5d7286ff6aa85a5ae",
+      "title": "Closing Time",
+      "artist": "Semisonic",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_19a4ffe246e2032f1f84",
+      "title": "My Way",
+      "artist": "Usher",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_bbcc5c141cd2c99b9fa5",
+      "title": "Ray of Light",
+      "artist": "Madonna",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_edbd5976057f2eeddfa3",
+      "title": "Right Thurr",
+      "artist": "Chingy",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a2cdc8793c480b68610c",
+      "title": "A Guy Is a Guy",
+      "artist": "Doris Day",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_d3476e5c55012091ec2c",
+      "title": "Crazy Little Thing Called Love",
+      "artist": "Queen",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_fd3e6d7449487b449a08",
+      "title": "Fame",
+      "artist": "Irene Cara",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_1bac1d8ff74c4750d93f",
+      "title": "Master Blaster (Jammin')",
+      "artist": "Stevie Wonder",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_dfcbd8f3d0301655986e",
+      "title": "99 Luftballons",
+      "artist": "Nena",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_38baac2b0cac6a80f497",
+      "title": "All Night Long (All Night)",
+      "artist": "Lionel Richie",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_2aa3410fdc18322056c6",
+      "title": "Everywhere",
+      "artist": "Fleetwood Mac",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_4842bb101d0d1d22a665",
+      "title": "Heaven Is a Place on Earth",
+      "artist": "Belinda Carlisle",
+      "missing": [
+        "spotify"
+      ]
+    },
+    {
+      "songId": "song_cf5ff482d9a2aa8fa8cf",
+      "title": "This Ole House",
+      "artist": "Stuart Hamblen",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_464d6e09f09cfdba786f",
+      "title": "A Big Hunk o’ Love",
+      "artist": "Elvis Presley",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_6a800a3c78800548dea1",
+      "title": "Kansas City",
+      "artist": "Wilbert Harrison",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_653ac4dfa54bdd0343e1",
+      "title": "Barbie Girl",
+      "artist": "Aqua",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_fdc6bb5b7e031fb94555",
+      "title": "MMMBop",
+      "artist": "Hanson",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_91f84a15ddd0ff72549c",
+      "title": "Sweet Dreams",
+      "artist": "Beyonce",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_bc611b6e3442dc772b08",
+      "title": "Dreams",
+      "artist": "Fleetwood Mac",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_06b358cbb08ce748c003",
+      "title": "How Deep Is Your Love",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_81a77f61e46459684976",
+      "title": "Tragedy",
+      "artist": "Bee Gees",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_9171a0c44e3e0f757a01",
+      "title": "Lucky",
+      "artist": "Britney Spears",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_5c5b5dcd4f5a708c284b",
+      "title": "Leave (Get Out)",
+      "artist": "JoJo",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_82b56da51d65839fe5f2",
+      "title": "Over and Over",
+      "artist": "Nelly",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_a425b561ccb02665e7e0",
+      "title": "Delicado",
+      "artist": "Percy Faith",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_75c77fca78f49ec243a3",
+      "title": "Mambo Italiano",
+      "artist": "Rosemary Clooney",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_cf8457e5c3e81a9e41e2",
+      "title": "The Naughty Lady of Shady Lane",
+      "artist": "The Ames Brothers",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_90717e95279613207543",
+      "title": "Till I Waltz Again with You",
+      "artist": "Teresa Brewer",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_64ded9033d6169d1056e",
+      "title": "Unchained Melody",
+      "artist": "Les Baxter",
+      "missing": [
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_0b3fbe1381c795d69509",
+      "title": "Tequila",
+      "artist": "The Champs",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_956525967840124e69c9",
+      "title": "All My Love",
+      "artist": "Patti Page",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_6ecda69e31522d6da2c4",
+      "title": "Bonaparte's Retreat",
+      "artist": "Kay Starr",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_969b0c8ad7768eb76bb2",
+      "title": "I Wanna Be Loved",
+      "artist": "The Andrews Sisters",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_54bae55500c306a81e73",
+      "title": "I'm Moving On",
+      "artist": "Hank Snow",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_af3b33e0772fbc75b926",
+      "title": "Goin' Home",
+      "artist": "Fats Domino",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e2812bde48480217fc1a",
+      "title": "Apache",
+      "artist": "The Shadows",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    }
+  ]
+}

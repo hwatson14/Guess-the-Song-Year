@@ -1,0 +1,4667 @@
+{
+  "version": 14,
+  "coverage": {
+    "greatest": 73,
+    "australian": 73,
+    "unexpected": 40,
+    "number1_us": 73,
+    "number1_au": 73
+  },
+  "rows": [
+    {
+      "mode": "greatest",
+      "year": 1950,
+      "key": "mona lisa|nat king cole",
+      "wasPlayable": true,
+      "fingerprint": "ebb8a6f8dfe2f59c256b224636be59ad3a4d2cabbca0662de0af1979bb32227f"
+    },
+    {
+      "mode": "greatest",
+      "year": 1951,
+      "key": "because of you|tony bennett",
+      "wasPlayable": true,
+      "fingerprint": "a1e73c66bca8b6525ff2da385c5c83dc7e62d47ea7353870fccf86e8be521065"
+    },
+    {
+      "mode": "greatest",
+      "year": 1951,
+      "key": "come on a my house|rosemary clooney",
+      "wasPlayable": true,
+      "fingerprint": "a7285bae705edb056eccf4d203f656e90b103586cb9532e82aed11ad7c87ea5d"
+    },
+    {
+      "mode": "greatest",
+      "year": 1951,
+      "key": "how high the moon|les paul",
+      "wasPlayable": true,
+      "fingerprint": "1328b901e8b80f87e0689da8d75b25d45b74e555fd81520a801c099beea64af1"
+    },
+    {
+      "mode": "greatest",
+      "year": 1951,
+      "key": "too young|nat king cole",
+      "wasPlayable": true,
+      "fingerprint": "878f3541679a132916b47256d6417ed9e8996486ad26f72f9dd6320fb62d8464"
+    },
+    {
+      "mode": "greatest",
+      "year": 1952,
+      "key": "blue tango|leroy anderson pops concert orchestra",
+      "wasPlayable": true,
+      "fingerprint": "77a3ad7da85ae5539c17ff8e5daafaf8a14b03cc33fc0f32d33646b3763dfb02"
+    },
+    {
+      "mode": "greatest",
+      "year": 1952,
+      "key": "wheel of fortune|kay starr",
+      "wasPlayable": true,
+      "fingerprint": "a24787f620643b18ab1d1bbaf0f3bfa01caaa1b89ddd4bc42b81e3aef6de1a32"
+    },
+    {
+      "mode": "greatest",
+      "year": 1953,
+      "key": "how much is that doggie in the window|patti page",
+      "wasPlayable": true,
+      "fingerprint": "185e4d171b9ecf006046193e1acf5eef2399915a8e78a822a8ff2a57483e3dc2"
+    },
+    {
+      "mode": "greatest",
+      "year": 1953,
+      "key": "vaya con dios|les paul",
+      "wasPlayable": true,
+      "fingerprint": "e75d6accaee3cae79273fc4b04fcc66d792d19d6fce869e218f3a15b2776e51d"
+    },
+    {
+      "mode": "greatest",
+      "year": 1954,
+      "key": "little things mean a lot|kitty kallen",
+      "wasPlayable": true,
+      "fingerprint": "06f41f650fe86574f9f6702f594ad63c126ef85f6e8a581f52a4057e52d675d1"
+    },
+    {
+      "mode": "greatest",
+      "year": 1954,
+      "key": "wanted|perry como",
+      "wasPlayable": true,
+      "fingerprint": "75c23bbf2f3e650aafe3c5a61486e570dcc666164dc08e40c39c464c0e986907"
+    },
+    {
+      "mode": "greatest",
+      "year": 1955,
+      "key": "cherry pink and apple blossom white|pe rez prado",
+      "wasPlayable": true,
+      "fingerprint": "a614a21b6acd3cb2dc812e0af4af8c3912230e144fdcfed80313ee387d512035"
+    },
+    {
+      "mode": "greatest",
+      "year": 1955,
+      "key": "cherry pink and apple blossom white cerezo rosa|pe rez prado",
+      "wasPlayable": true,
+      "fingerprint": "681f7909741800ea4cfb88dfe743393d3ef4ba403a23d1d1db18b7b292da6c82"
+    },
+    {
+      "mode": "greatest",
+      "year": 1955,
+      "key": "rock around the clock|bill haley",
+      "wasPlayable": true,
+      "fingerprint": "d7ca4e28e9357276aabdc7831a7100b6e31b3810a2225f62b4c4e9d2a2172eaf"
+    },
+    {
+      "mode": "greatest",
+      "year": 1956,
+      "key": "don t be cruel|elvis presley",
+      "wasPlayable": true,
+      "fingerprint": "80b1818fd913f7440ff9bc4adb61735eddd457f94c50ece0c6d63b06341756ab"
+    },
+    {
+      "mode": "greatest",
+      "year": 1956,
+      "key": "heartbreak hotel|elvis presley",
+      "wasPlayable": true,
+      "fingerprint": "060cfac5ee56cac4d7755f8045d61bd75f38aa46768bf54311d3bf280a22bacc"
+    },
+    {
+      "mode": "greatest",
+      "year": 1956,
+      "key": "lisbon antigua|nelson riddle",
+      "wasPlayable": true,
+      "fingerprint": "9841af47fa14bce3c1d16fdddff0928edd67a2435ff8eff168f3fbd3643a3d2e"
+    },
+    {
+      "mode": "greatest",
+      "year": 1956,
+      "key": "my prayer|platters",
+      "wasPlayable": true,
+      "fingerprint": "cfa6c4d8e37c7b50dd3d7c0a80e30c0df7b24e6327ae83f5bdf928ffad953225"
+    },
+    {
+      "mode": "greatest",
+      "year": 1957,
+      "key": "all shook up|elvis presley",
+      "wasPlayable": true,
+      "fingerprint": "9aaadfa99589feaacd244f1a228877041a1b4922e6dde2590f4d38bbd36a622d"
+    },
+    {
+      "mode": "greatest",
+      "year": 1957,
+      "key": "love letters in the sand|pat boone",
+      "wasPlayable": true,
+      "fingerprint": "c1ff2e412601328035fcf326464df0e8ca74a416671a911754e3cacf3f7dd832"
+    },
+    {
+      "mode": "greatest",
+      "year": 1958,
+      "key": "all i have to do is dream|everly brothers",
+      "wasPlayable": true,
+      "fingerprint": "ce5e460606dd353edfd66c92a317c2c23c3ff363a0f960cd3647e09e2a2b36f1"
+    },
+    {
+      "mode": "greatest",
+      "year": 1958,
+      "key": "claudette|everly brothers",
+      "wasPlayable": true,
+      "fingerprint": "f8b6cc8905e34137b70c12c77622cccc716bc4681e312ee3d59ea2eba4f79291"
+    },
+    {
+      "mode": "greatest",
+      "year": 1958,
+      "key": "don t|elvis presley",
+      "wasPlayable": true,
+      "fingerprint": "4ea64de9f8687d8d9fa26252a9c42ac965a648acce62b71740553e3bb03cc6cf"
+    },
+    {
+      "mode": "greatest",
+      "year": 1958,
+      "key": "i beg of you|elvis presley",
+      "wasPlayable": true,
+      "fingerprint": "8010ba623292c7d2a41ccf4279ab5f8e07df9007202a078b0d3a0a8cf9b0fc68"
+    },
+    {
+      "mode": "greatest",
+      "year": 1959,
+      "key": "mack the knife|bobby darin",
+      "wasPlayable": true,
+      "fingerprint": "0e1732c21715fed0e727501fccfdf8164bc56d08653e57d0384975658c471f12"
+    },
+    {
+      "mode": "greatest",
+      "year": 1959,
+      "key": "personality|lloyd price",
+      "wasPlayable": true,
+      "fingerprint": "f89a5e9872e97cc062a53fdc059cfe7bb3b5695a97f36b970d78a6da901e8d54"
+    },
+    {
+      "mode": "greatest",
+      "year": 1959,
+      "key": "running bear|johnny preston",
+      "wasPlayable": true,
+      "fingerprint": "6b71eff431a689e83dd99837e6a4f7c9416583767dbc2a664099ea5e224d1362"
+    },
+    {
+      "mode": "greatest",
+      "year": 1959,
+      "key": "teen angel|mark dinning",
+      "wasPlayable": true,
+      "fingerprint": "c8367475c7e4ebf172d35d1e180d6545652c1d2b9b6a9274b10a811e467f89ec"
+    },
+    {
+      "mode": "greatest",
+      "year": 1959,
+      "key": "the battle of new orleans|johnny horton",
+      "wasPlayable": true,
+      "fingerprint": "4ec5fcb7ace01111e76e3dd9e1b2f905f2ce8652ad90c67437ad916204ad0587"
+    },
+    {
+      "mode": "greatest",
+      "year": 1959,
+      "key": "venus|frankie avalon",
+      "wasPlayable": true,
+      "fingerprint": "8955e1b5afda975f6e0caede12371dd88a1d846ef73a431309eac55d2192601c"
+    },
+    {
+      "mode": "greatest",
+      "year": 1960,
+      "key": "cathy s clown|everly brothers",
+      "wasPlayable": true,
+      "fingerprint": "5d37137c87601cc076c2db49c4207bb2c8b71e846f8dd84dd506c087ceb68d7f"
+    },
+    {
+      "mode": "greatest",
+      "year": 1960,
+      "key": "he ll have to go|jim reeves",
+      "wasPlayable": true,
+      "fingerprint": "e9a190188f05f11fe01104a782d0d8044ce8a6ef4aa38cd4725c775dd04cc3d2"
+    },
+    {
+      "mode": "greatest",
+      "year": 1961,
+      "key": "crying|roy orbison",
+      "wasPlayable": true,
+      "fingerprint": "5f8818e32d4118eec432470f9313d8080f0e7749c67e43bd8e6d2c52ee7bf98d"
+    },
+    {
+      "mode": "greatest",
+      "year": 1961,
+      "key": "i fall to pieces|patsy cline",
+      "wasPlayable": true,
+      "fingerprint": "c05e360c7e504c1c9a7e3e5a09bc478b3179628677b62b140fe84b82b992b663"
+    },
+    {
+      "mode": "greatest",
+      "year": 1961,
+      "key": "tossin turnin|bobby lewis",
+      "wasPlayable": true,
+      "fingerprint": "abedc1b48b6a148c24344eb90071764c1d09e2843d5955316c24b01f5e8f9da2"
+    },
+    {
+      "mode": "greatest",
+      "year": 1961,
+      "key": "tossin and turnin|bobby lewis",
+      "wasPlayable": true,
+      "fingerprint": "105fb2bf943bfba5b86152991ebf5220695bbf4d06de093786621c935af271aa"
+    },
+    {
+      "mode": "greatest",
+      "year": 1962,
+      "key": "i can t stop loving you|ray charles",
+      "wasPlayable": true,
+      "fingerprint": "118ac28fd61545809d49731a30d4b95bc2e66fc5eed0709f98f71c651d5e34d6"
+    },
+    {
+      "mode": "greatest",
+      "year": 1962,
+      "key": "mashed potato time|dee dee sharp",
+      "wasPlayable": true,
+      "fingerprint": "6af8735bdaa9856f3d16e19f73f845887a0a0fb77e48a028cf3f7fa47efe3260"
+    },
+    {
+      "mode": "greatest",
+      "year": 1963,
+      "key": "blue velvet|bobby vinton",
+      "wasPlayable": true,
+      "fingerprint": "53aead18b0e1bed86b01ffbdc61175eafee32cd79dace48131aba43b1bbd394c"
+    },
+    {
+      "mode": "greatest",
+      "year": 1963,
+      "key": "he s so fine|chiffons",
+      "wasPlayable": true,
+      "fingerprint": "205304794b547908d369d8c07c00ec3dfa4935d1dd1f90624edb37c391901a87"
+    },
+    {
+      "mode": "greatest",
+      "year": 1963,
+      "key": "i want to hold your hand|beatles",
+      "wasPlayable": true,
+      "fingerprint": "16b1fdb0c320f0f456fe34a30c9c04beba2c0572e0499076d7ada523920da45c"
+    },
+    {
+      "mode": "greatest",
+      "year": 1963,
+      "key": "surfin u s a|beach boys",
+      "wasPlayable": true,
+      "fingerprint": "9187c8abb169f6b0e70a52fa4fc78f82a9be587bcaaf11bca086916b6543be2a"
+    },
+    {
+      "mode": "greatest",
+      "year": 1964,
+      "key": "a hard day s night|beatles",
+      "wasPlayable": true,
+      "fingerprint": "963b598dedbc23f78b1a8e4b8263fa443afa99854030ec3cf97ca90e6f9320f4"
+    },
+    {
+      "mode": "greatest",
+      "year": 1964,
+      "key": "i should have known better|beatles",
+      "wasPlayable": true,
+      "fingerprint": "8799d0ff8a93ebb7f941e09ad7d0f66c7f6a74cab71ebfb082cb13aa4df9342b"
+    },
+    {
+      "mode": "greatest",
+      "year": 1965,
+      "key": "i can t get no satisfaction|rolling stones",
+      "wasPlayable": true,
+      "fingerprint": "d2a97b2d3f89a32c7552e191f855cf990315848e2f61d2e856b1edf87e0ff15d"
+    },
+    {
+      "mode": "greatest",
+      "year": 1965,
+      "key": "i can t help myself sugar pie honey bunch|four tops",
+      "wasPlayable": true,
+      "fingerprint": "256b4186d8e8aac2aad0836e89c10907f36ea16ed4fd4109ab644c8e58abd376"
+    },
+    {
+      "mode": "greatest",
+      "year": 1965,
+      "key": "wooly bully|sam the sham",
+      "wasPlayable": true,
+      "fingerprint": "20b2c19b54be152141c9bdba6d7cf1da5dd8a20c14586a14339fc27a534a141a"
+    },
+    {
+      "mode": "greatest",
+      "year": 1966,
+      "key": "96 tears|fire escape",
+      "wasPlayable": true,
+      "fingerprint": "9bf14e8ee0742d54cf5c57eb67939f2f6a62747ba0013e8fb9b58f715e79adf4"
+    },
+    {
+      "mode": "greatest",
+      "year": 1966,
+      "key": "96 tears|big maybelle",
+      "wasPlayable": true,
+      "fingerprint": "3eb854b6cc241d2f71cd56376ded8057499dd893f7296fb19d61ea8858ab3737"
+    },
+    {
+      "mode": "greatest",
+      "year": 1966,
+      "key": "96 tears|music machine",
+      "wasPlayable": true,
+      "fingerprint": "05dc457b5c464cd4adbfac2cbb5d8644f6493ed32c778ba8c642842610028b4c"
+    },
+    {
+      "mode": "greatest",
+      "year": 1966,
+      "key": "96 tears|question mark",
+      "wasPlayable": true,
+      "fingerprint": "23c21527c53a39e1451fda2eca53bd86e59d68d6ccaa08e9e3e1f86ba9c24b29"
+    },
+    {
+      "mode": "greatest",
+      "year": 1967,
+      "key": "ode to billie joe|bobbie gentry",
+      "wasPlayable": true,
+      "fingerprint": "593bcf7a0b92b7827dbf26b29fc9326fd74c24894804831ac8ca444c4d806b87"
+    },
+    {
+      "mode": "greatest",
+      "year": 1967,
+      "key": "the letter|box tops",
+      "wasPlayable": true,
+      "fingerprint": "6461efd17626a6acb58f5fa4f14d6c973ff6bc61dd7660add5e3b5acc6fccee3"
+    },
+    {
+      "mode": "greatest",
+      "year": 1967,
+      "key": "to sir with love|lulu",
+      "wasPlayable": true,
+      "fingerprint": "a45c9491d131de756a7a6564c7cc765941fc0380727efec46cdcd107fcbc5d73"
+    },
+    {
+      "mode": "greatest",
+      "year": 1968,
+      "key": "hey jude|beatles",
+      "wasPlayable": true,
+      "fingerprint": "9814d42de70d4bc33542bed401cc1e4be02e9750546095826b1c0effa69f0ecf"
+    },
+    {
+      "mode": "greatest",
+      "year": 1968,
+      "key": "honey|bobby goldsboro",
+      "wasPlayable": true,
+      "fingerprint": "313236b8a386b0b0c271d8f238a4488d773524e19d38150a6f4213df1dfb33a5"
+    },
+    {
+      "mode": "greatest",
+      "year": 1968,
+      "key": "love is blue|paul mauriat",
+      "wasPlayable": true,
+      "fingerprint": "dbacfe518ee8c81b2ae6e035a78e0392c201e25e719050b456d99df4e415ad06"
+    },
+    {
+      "mode": "greatest",
+      "year": 1968,
+      "key": "people got to be free|young rascals",
+      "wasPlayable": true,
+      "fingerprint": "8fc68aa27179da3a7ba0097267bb8600900225a231a1e47a171c1905621323be"
+    },
+    {
+      "mode": "greatest",
+      "year": 1969,
+      "key": "honky tonk women|rolling stones",
+      "wasPlayable": true,
+      "fingerprint": "5e56e9c102721c18577996e20f9a89c7d76305acae6aab79262c5976aaf3ddf0"
+    },
+    {
+      "mode": "greatest",
+      "year": 1969,
+      "key": "i can t get next to you|temptations",
+      "wasPlayable": true,
+      "fingerprint": "b7c5f7c5156e1b2f471f5baae0584cc540d7161e80743617c0d8b4e136adfb1c"
+    },
+    {
+      "mode": "greatest",
+      "year": 1969,
+      "key": "sugar sugar|archies",
+      "wasPlayable": true,
+      "fingerprint": "bd9e8d78b43d1a41261da6d6a8265b39fa8a5db26d1d2b4d5ca3410a1b69a4b9"
+    },
+    {
+      "mode": "greatest",
+      "year": 1970,
+      "key": "american woman|guess who",
+      "wasPlayable": true,
+      "fingerprint": "ce7c33283cbd0669c7877f28b88568ee1c22ac570a3a2f34700c3d248e13c9b6"
+    },
+    {
+      "mode": "greatest",
+      "year": 1970,
+      "key": "bridge over troubled water|simon",
+      "wasPlayable": true,
+      "fingerprint": "e17e32aa4d3cc0ebd529918c9c34c2c0912f956d926ff607bd059c44de4c7f5e"
+    },
+    {
+      "mode": "greatest",
+      "year": 1970,
+      "key": "puente sobre aguas turbulentas bridge over troubled water|simon",
+      "wasPlayable": true,
+      "fingerprint": "bcfdbafd59a14c7ff9fdd77e7baa48485d9a0f71ae947a3b42d995d47cf4cb2c"
+    },
+    {
+      "mode": "greatest",
+      "year": 1971,
+      "key": "i feel the earth move|carole king",
+      "wasPlayable": true,
+      "fingerprint": "02787ec22a871498ab5f02452f287a928ae8f50dde17d66803e43e9a93b25aef"
+    },
+    {
+      "mode": "greatest",
+      "year": 1971,
+      "key": "joy to the world|three dog night",
+      "wasPlayable": true,
+      "fingerprint": "de6c11e29fa23e21ea69a2da80bad2c487864f8f1b82093c7c121f31c98a6881"
+    },
+    {
+      "mode": "greatest",
+      "year": 1971,
+      "key": "maggie may|rod stewart",
+      "wasPlayable": true,
+      "fingerprint": "e69738b8110eb5c01df326e6882f5ce75705143edb82d49585b6cc0587890595"
+    },
+    {
+      "mode": "greatest",
+      "year": 1971,
+      "key": "reason to believe|rod stewart",
+      "wasPlayable": true,
+      "fingerprint": "2b74b121e20ec23823a29e8f536545f1a2564d4f43279754e3ee31ce27018fd8"
+    },
+    {
+      "mode": "greatest",
+      "year": 1972,
+      "key": "alone again naturally|gilbert o sullivan",
+      "wasPlayable": true,
+      "fingerprint": "43df5a0110baf8a424c4d996bd8866309d8679f5c02dacd8e7e13072569168af"
+    },
+    {
+      "mode": "greatest",
+      "year": 1972,
+      "key": "the candy man|sammy davis jr",
+      "wasPlayable": true,
+      "fingerprint": "8f1432e459a89215b6d805cf5a3d48f826b93bbab52d10d62b1dae2c6f70dbab"
+    },
+    {
+      "mode": "greatest",
+      "year": 1973,
+      "key": "bad bad leroy brown|jim croce",
+      "wasPlayable": true,
+      "fingerprint": "c115f2669c51ef58faa957358780bdbe8ecac1b1de7679beb5487b50f374a875"
+    },
+    {
+      "mode": "greatest",
+      "year": 1973,
+      "key": "killing me softly with his song|roberta flack",
+      "wasPlayable": true,
+      "fingerprint": "8f5cb03c394c31596f87c0c997539d0f4bc8e649e47f1fdaaadf000b0c3cd20c"
+    },
+    {
+      "mode": "greatest",
+      "year": 1973,
+      "key": "love s theme|love unlimited orchestra",
+      "wasPlayable": true,
+      "fingerprint": "592e52a7876fa61f41c924f208ac118c13588f44dfc9c8dcd1e86ec1b4a964d9"
+    },
+    {
+      "mode": "greatest",
+      "year": 1973,
+      "key": "tie a yellow ribbon round the ole oak tree|dawn",
+      "wasPlayable": true,
+      "fingerprint": "ed357ab2f33e0f58cf0d64195348668335b52dfdfda24049e1c552bc276ab64e"
+    },
+    {
+      "mode": "greatest",
+      "year": 1973,
+      "key": "tie a yellow ribbon round the ole oak tree|tony orlando",
+      "wasPlayable": true,
+      "fingerprint": "22dbb25ba71b8bbe45af37cbd313d60e4615781e032a9625de232826927ab875"
+    },
+    {
+      "mode": "greatest",
+      "year": 1974,
+      "key": "in den ga rten der zeit seasons in the sun|terry jacks",
+      "wasPlayable": true,
+      "fingerprint": "06b8c0fa87c8206a2b6931f26e757d2d3e39127d44186e06a8e335c05586b42f"
+    },
+    {
+      "mode": "greatest",
+      "year": 1974,
+      "key": "seasons in the sun|terry jacks",
+      "wasPlayable": true,
+      "fingerprint": "66df6677740c9b0d8d88aa511ca9d331b92fbb7330b6a4ecd994b8759a2d15ea"
+    },
+    {
+      "mode": "greatest",
+      "year": 1975,
+      "key": "love will keep us together|captain",
+      "wasPlayable": true,
+      "fingerprint": "f91a0d3f8bb1c83d2cf78aff5bedb6e00cc490f153f131182556c637ce30bc80"
+    },
+    {
+      "mode": "greatest",
+      "year": 1975,
+      "key": "philadelphia freedom|elton john",
+      "wasPlayable": true,
+      "fingerprint": "72e5759ad863c2b7a69b2708aba6121d260a576cd1855b40caf18904a594df8f"
+    },
+    {
+      "mode": "greatest",
+      "year": 1975,
+      "key": "rhinestone cowboy|glen campbell",
+      "wasPlayable": true,
+      "fingerprint": "6480a2f533ef3cdf2b7c0184c3bb7a6573be4f262c5bb26cae993b9b1e00c295"
+    },
+    {
+      "mode": "greatest",
+      "year": 1976,
+      "key": "disco lady|johnnie taylor",
+      "wasPlayable": true,
+      "fingerprint": "37852653efc2b9a2e0243c6132fcd8e4eff33c931e184a76bf7b14470e50abcb"
+    },
+    {
+      "mode": "greatest",
+      "year": 1976,
+      "key": "silly love songs|wings",
+      "wasPlayable": true,
+      "fingerprint": "ddf7b1dca4308d942cba102e433459f138260b9ddc6f0bf736ed41a4da2e818d"
+    },
+    {
+      "mode": "greatest",
+      "year": 1977,
+      "key": "angel in your arms|hot",
+      "wasPlayable": true,
+      "fingerprint": "a0e560fbf4c99b9aef04bcf7f0d65da20c8ecd8cfdc900f6135448901100e12a"
+    },
+    {
+      "mode": "greatest",
+      "year": 1977,
+      "key": "best of my love|emotions",
+      "wasPlayable": true,
+      "fingerprint": "3c4357f1e70f12411d7a7ba9d89f60cf829dc5f3e274a273eaa8d9a01aacf2e0"
+    },
+    {
+      "mode": "greatest",
+      "year": 1977,
+      "key": "i just want to be your everything|andy gibb",
+      "wasPlayable": true,
+      "fingerprint": "aabfbe737a7c5c7bd23782aa6bf753068ca1a11d5eb89a037ee9f6f9fe80e44d"
+    },
+    {
+      "mode": "greatest",
+      "year": 1978,
+      "key": "kiss you all over|exile",
+      "wasPlayable": true,
+      "fingerprint": "fa6ef57cbcc594ce7308dd89a7840cf3f86ed65a5e3c199a27454eb77f74fefe"
+    },
+    {
+      "mode": "greatest",
+      "year": 1978,
+      "key": "le freak|chic",
+      "wasPlayable": true,
+      "fingerprint": "1791f8ab29c89f34a20f8534b77ad963dfd9760267ec6ddd9e9d7b6faccc9a0a"
+    },
+    {
+      "mode": "greatest",
+      "year": 1978,
+      "key": "night fever|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "1195ee0ba3e96dabff74adaf94f9544199a37731b7afde4c82e009cd45a1eac2"
+    },
+    {
+      "mode": "greatest",
+      "year": 1978,
+      "key": "shadow dancing|andy gibb",
+      "wasPlayable": true,
+      "fingerprint": "8ad3dcc790bdd152b97708e157b55eaf53f7ec90aa69334bd02b60c93048096e"
+    },
+    {
+      "mode": "greatest",
+      "year": 1979,
+      "key": "bad girls|donna summer",
+      "wasPlayable": true,
+      "fingerprint": "8eafd62cf4842a77f21394bc0bbc8e4625b267bf6d9dc967fdf0915a642a0970"
+    },
+    {
+      "mode": "greatest",
+      "year": 1979,
+      "key": "my sharona|knack",
+      "wasPlayable": true,
+      "fingerprint": "fbe8350399f801e8373058551ac6e67f26bc36e2a5110386f76f34a852bfedc6"
+    },
+    {
+      "mode": "greatest",
+      "year": 1979,
+      "key": "reunited|peaches",
+      "wasPlayable": true,
+      "fingerprint": "3ef17a8ff641d218090d19263ccb234c29db7df8503f0ccc506e89636e7a67b8"
+    },
+    {
+      "mode": "greatest",
+      "year": 1980,
+      "key": "another brick in the wall part ii|pink floyd",
+      "wasPlayable": true,
+      "fingerprint": "e4b1e4caa3217a92c7df4deefd8c807a70f6ef735b44241834e8f5a3b3d6d2c3"
+    },
+    {
+      "mode": "greatest",
+      "year": 1980,
+      "key": "call me|blondie",
+      "wasPlayable": true,
+      "fingerprint": "0427c328b708c917805d39eb64755c937516feb543a2ca5cc42628989cb49629"
+    },
+    {
+      "mode": "greatest",
+      "year": 1980,
+      "key": "magic|olivia newton john",
+      "wasPlayable": true,
+      "fingerprint": "f9fecaa5d91144ab97ca7ac25adcb48cb4e0f39cc82022293dc5a5789fe44a1b"
+    },
+    {
+      "mode": "greatest",
+      "year": 1981,
+      "key": "bette davis eyes|kim carnes",
+      "wasPlayable": true,
+      "fingerprint": "f1ac6a1ce4905ef57c46b727895fc0e656c0b62a0ed162fab2ba8795aecf7e92"
+    },
+    {
+      "mode": "greatest",
+      "year": 1981,
+      "key": "centerfold|j geils band",
+      "wasPlayable": true,
+      "fingerprint": "ed4fc0d53c19d91d439a5608c7668c1b7b9fddcc288f5529c3287c648c59e9e2"
+    },
+    {
+      "mode": "greatest",
+      "year": 1981,
+      "key": "endless love|diana ross",
+      "wasPlayable": true,
+      "fingerprint": "0e8f4187b991406cd722d44928a0e8cf0cc78723600f455d01480d5843875ef2"
+    },
+    {
+      "mode": "greatest",
+      "year": 1981,
+      "key": "jessie s girl|rick springfield",
+      "wasPlayable": true,
+      "fingerprint": "2f17b4a4f80f541bf01d47623f9a2096d35a77814eaaca71f4bf172f97a7face"
+    },
+    {
+      "mode": "greatest",
+      "year": 1982,
+      "key": "eye of the tiger|survivor",
+      "wasPlayable": true,
+      "fingerprint": "0f5e144aa70be01b90feeed2b059608f3e379607c83815379d2aab853af409e9"
+    },
+    {
+      "mode": "greatest",
+      "year": 1983,
+      "key": "billie jean|michael jackson",
+      "wasPlayable": true,
+      "fingerprint": "be9f0942b40e9298187e80efe5bd360b48b1d049eb6a82816693efcddddab430"
+    },
+    {
+      "mode": "greatest",
+      "year": 1983,
+      "key": "every breath you take|police",
+      "wasPlayable": true,
+      "fingerprint": "9d0f2f64ca27b3ae6e93ca6cc6182ec0ccd6e2d10d7afe4f9dc1b0fe95b080f2"
+    },
+    {
+      "mode": "greatest",
+      "year": 1984,
+      "key": "footloose|kenny loggins",
+      "wasPlayable": true,
+      "fingerprint": "f55b4eed0d4e132bf9f922063a39548c9ca8d5ecf5a083ef05504f1375bcf830"
+    },
+    {
+      "mode": "greatest",
+      "year": 1984,
+      "key": "like a virgin|madonna",
+      "wasPlayable": true,
+      "fingerprint": "437491c33edb28bb71f8ad20860584b3da423252783b9f2d3d4bdfe9e13823c5"
+    },
+    {
+      "mode": "greatest",
+      "year": 1984,
+      "key": "what s love got to do with it|tina turner",
+      "wasPlayable": true,
+      "fingerprint": "df1208670ea08bbc9b505a16d2c4bcda1e723a2c829a5752faa51bfaee3991a1"
+    },
+    {
+      "mode": "greatest",
+      "year": 1984,
+      "key": "when doves cry|prince",
+      "wasPlayable": true,
+      "fingerprint": "71d2c649d5a67ad7422943c44eebf90587d966c38b702c3d16a3484c13541652"
+    },
+    {
+      "mode": "greatest",
+      "year": 1985,
+      "key": "careless whisper|george michael",
+      "wasPlayable": true,
+      "fingerprint": "573e5a410c50667431fc25919b659b3e1029762198171408ffbc46158ee9e9c9"
+    },
+    {
+      "mode": "greatest",
+      "year": 1986,
+      "key": "broken wings|mr mister",
+      "wasPlayable": true,
+      "fingerprint": "1bc6e27b8c2835bccdc5c1bc6de383017e9e23a45b3ace9458328578d35bead7"
+    },
+    {
+      "mode": "greatest",
+      "year": 1986,
+      "key": "that s what friends are for|dionne warwick",
+      "wasPlayable": true,
+      "fingerprint": "7617d96d2a4540cb5b5ad1a2651a8a00ce9db2b1f0824d0c99c3ed7904548a54"
+    },
+    {
+      "mode": "greatest",
+      "year": 1987,
+      "key": "alone|heart",
+      "wasPlayable": true,
+      "fingerprint": "7e43288f7e64d2edc8ed5f841fb2fd81e1ef551e9045d666be43272b5ffcbf75"
+    },
+    {
+      "mode": "greatest",
+      "year": 1987,
+      "key": "i wanna dance with somebody who loves me|whitney houston",
+      "wasPlayable": true,
+      "fingerprint": "c74c6880872f4d46e93ca1df28b1d628884ebcee66bd1dd83d1ed0fcdba0cfc8"
+    },
+    {
+      "mode": "greatest",
+      "year": 1987,
+      "key": "it must have been love|roxette",
+      "wasPlayable": true,
+      "fingerprint": "01e35d69784b9dd69c390a4319c1aa667291f8874ef720d1c9047238e544a5c4"
+    },
+    {
+      "mode": "greatest",
+      "year": 1987,
+      "key": "need you tonight|inxs",
+      "wasPlayable": true,
+      "fingerprint": "fa1b4c092f7a3750d06c75f5f87494aea806882a13e4b538dc5b1aa104c8c9ab"
+    },
+    {
+      "mode": "greatest",
+      "year": 1987,
+      "key": "shake you down|gregory abbott",
+      "wasPlayable": true,
+      "fingerprint": "86d86c391dff4163e29c5829a50c802bd1cd7352e3790213c82da240c1826d64"
+    },
+    {
+      "mode": "greatest",
+      "year": 1988,
+      "key": "every rose has its thorn|poison",
+      "wasPlayable": true,
+      "fingerprint": "c83d2ee9019fd6ba8d7728c320e51a1d2f394c99953e9ee5558c009b11e832f0"
+    },
+    {
+      "mode": "greatest",
+      "year": 1988,
+      "key": "look away|chicago",
+      "wasPlayable": true,
+      "fingerprint": "bad0719cebed71057c6fe0da81db6f7ee0183f7a8843552b2b01cdad7a400469"
+    },
+    {
+      "mode": "greatest",
+      "year": 1988,
+      "key": "my prerogative|bobby brown",
+      "wasPlayable": true,
+      "fingerprint": "ddb520eb514519b1eec3a701aaca65ef69f33ab213df2e15a929f33a3089f03c"
+    },
+    {
+      "mode": "greatest",
+      "year": 1988,
+      "key": "never gonna give you up|rick astley",
+      "wasPlayable": true,
+      "fingerprint": "4d09a0c2c7e5f325a0ea262574120d52bdc0438e1d98f84c9985baf9b1b260a9"
+    },
+    {
+      "mode": "greatest",
+      "year": 1989,
+      "key": "straight up|paula abdul",
+      "wasPlayable": true,
+      "fingerprint": "45e38f66fc2e7e52ee2939fc296b5e084391b74b98eee4070c768a9cc2c838c0"
+    },
+    {
+      "mode": "greatest",
+      "year": 1990,
+      "key": "hold on|wilson phillips",
+      "wasPlayable": true,
+      "fingerprint": "4195ed548ed2c6b296c91324d896ea58550cf5bc59bd6622820fd742efcfe46a"
+    },
+    {
+      "mode": "greatest",
+      "year": 1990,
+      "key": "it must have been love from the film pretty woman|roxette",
+      "wasPlayable": true,
+      "fingerprint": "998ffc30e78446360d58e15741e1663a2389d0304e04b31d4db3c906eb2335fd"
+    },
+    {
+      "mode": "greatest",
+      "year": 1990,
+      "key": "nothing compares 2 u|sine ad o connor",
+      "wasPlayable": true,
+      "fingerprint": "6d92c0c0cb9643933d67dea16391cdd393d1b4dc71a6af4d62843ddff2d3bd28"
+    },
+    {
+      "mode": "greatest",
+      "year": 1991,
+      "key": "everything i do i do it for you|bryan adams",
+      "wasPlayable": true,
+      "fingerprint": "cd33e186e2aaacb102e836d2a4690019fb80bd64f5c93bb5acbb0cf0538b0169"
+    },
+    {
+      "mode": "greatest",
+      "year": 1991,
+      "key": "i wanna sex you up|color me badd",
+      "wasPlayable": true,
+      "fingerprint": "ac82e6e82d39893a5aacbac369390582e94e975c855fd7c5d6ac8f81a404f7f8"
+    },
+    {
+      "mode": "greatest",
+      "year": 1991,
+      "key": "i wanna sex you up|colour me badd",
+      "wasPlayable": true,
+      "fingerprint": "bbfc7cad53c72aaef46af22a5071bb7a4824632c42fac73af95c0cbae5242ada"
+    },
+    {
+      "mode": "greatest",
+      "year": 1991,
+      "key": "todo lo que hago lo hago por ti everything i do i do it for you|bryan adams",
+      "wasPlayable": true,
+      "fingerprint": "14f48d1cf5dbab9f7806fd65ae9fc3936b63cef4cf711013492dc8528c5ef5cb"
+    },
+    {
+      "mode": "greatest",
+      "year": 1992,
+      "key": "end of the road|boyz ii men",
+      "wasPlayable": true,
+      "fingerprint": "f6dd890c9d1a2154fe103e87a5960641d80fbb53f9dfe14c593dc5dca51bdb37"
+    },
+    {
+      "mode": "greatest",
+      "year": 1993,
+      "key": "the sign|ace of base",
+      "wasPlayable": true,
+      "fingerprint": "7d25cbd459a4f8d72773d6bff3d09023eb3d598b0a0df28d4d6aacb484aae881"
+    },
+    {
+      "mode": "greatest",
+      "year": 1993,
+      "key": "whoomp there it is|tag team",
+      "wasPlayable": true,
+      "fingerprint": "43b7d58b62563ce4930a8dafb47a2a10529ae7d61e3598735a3cfa1a6ebc3564"
+    },
+    {
+      "mode": "greatest",
+      "year": 1994,
+      "key": "live forever|oasis",
+      "wasPlayable": true,
+      "fingerprint": "6b7faf54da6644fc66d7cd72a166acc1e56456494a100768d2745ddd3aba40c1"
+    },
+    {
+      "mode": "greatest",
+      "year": 1994,
+      "key": "basket case|green day",
+      "wasPlayable": true,
+      "fingerprint": "ac32c7a5a900b3ae21e6973cb885d026ff7384e28174158c10ee5844d20bc7cd"
+    },
+    {
+      "mode": "greatest",
+      "year": 1995,
+      "key": "waterfalls|tlc",
+      "wasPlayable": true,
+      "fingerprint": "80f886d659951a9d168a4fbe7f9beda0d19b5380e85bd847dfdd1a92febb57a6"
+    },
+    {
+      "mode": "greatest",
+      "year": 1996,
+      "key": "because you loved me|ce line dion",
+      "wasPlayable": true,
+      "fingerprint": "4399b711d6fec4cb44436283821ef6cfeefbbeb880e36f066058756fda8d3006"
+    },
+    {
+      "mode": "greatest",
+      "year": 1996,
+      "key": "because you loved me theme from up close and personal|ce line dion",
+      "wasPlayable": true,
+      "fingerprint": "136837ad0fdb668ec807969c5cb8420fb3abd54e4d6410424929482b7ce91a29"
+    },
+    {
+      "mode": "greatest",
+      "year": 1997,
+      "key": "candle in the wind|elton john",
+      "wasPlayable": true,
+      "fingerprint": "198673b4aac0d549dc4b9d1b1edf441eb0633da81012bef76e0c860a5cc45b74"
+    },
+    {
+      "mode": "greatest",
+      "year": 1997,
+      "key": "candle in the wind 97|elton john",
+      "wasPlayable": true,
+      "fingerprint": "6e08ad6ac8786f55848a814e55b166783decfff7309b83859790a8900b7e8a83"
+    },
+    {
+      "mode": "greatest",
+      "year": 1997,
+      "key": "something about the way you look tonight|elton john",
+      "wasPlayable": true,
+      "fingerprint": "539bf949679f07062d506beba3ab1aba255c308f73d6432fbc5a7f3e3fd5cf14"
+    },
+    {
+      "mode": "greatest",
+      "year": 1998,
+      "key": "the boy is mine|brandy",
+      "wasPlayable": true,
+      "fingerprint": "2a801a95a095c3bc5ff0f531aa56e8a230587ad087e2b5ce23360611ea340a8b"
+    },
+    {
+      "mode": "greatest",
+      "year": 1998,
+      "key": "too close|next",
+      "wasPlayable": true,
+      "fingerprint": "9daa70b4e146d62016fd447bf94d07ac27ffdf6b166b269dc1ef7a9751af46c7"
+    },
+    {
+      "mode": "greatest",
+      "year": 1999,
+      "key": "believe|cher",
+      "wasPlayable": true,
+      "fingerprint": "5a6c005826258c3fe4a1f85c030ce635f001b3ca8946f3c4928234b9f2c9db43"
+    },
+    {
+      "mode": "greatest",
+      "year": 1999,
+      "key": "believe|cher esque",
+      "wasPlayable": true,
+      "fingerprint": "2d887d879bd9ee7567f825e16464e8c9434d7fa211cf1cfabfb395079fd76fc4"
+    },
+    {
+      "mode": "greatest",
+      "year": 1999,
+      "key": "i believe|cher",
+      "wasPlayable": true,
+      "fingerprint": "a0f463c2effa2044664a625733fcf9925b5548b75649c4553ae3f9ce84b82f56"
+    },
+    {
+      "mode": "greatest",
+      "year": 1999,
+      "key": "who you gonna believe|cher",
+      "wasPlayable": true,
+      "fingerprint": "d50492371fcc4224c37651af686b0501ff84fb24147ef2c24dd8e920058c5f25"
+    },
+    {
+      "mode": "greatest",
+      "year": 2000,
+      "key": "hanging by a moment|lifehouse",
+      "wasPlayable": true,
+      "fingerprint": "e4646d81be43102b4e2958e3973ee06b1078268d3d864777e2c68f0f8527f482"
+    },
+    {
+      "mode": "greatest",
+      "year": 2000,
+      "key": "smooth|santana",
+      "wasPlayable": true,
+      "fingerprint": "bb91ce50299621725e374247620071ed4723de64df990444f73b6e794f2b8c1c"
+    },
+    {
+      "mode": "greatest",
+      "year": 2000,
+      "key": "smooth|carlos santana",
+      "wasPlayable": true,
+      "fingerprint": "e7f0c023e54c9ef04bd3472fe6db596d617a14d01819583296b6e171f8fb8f41"
+    },
+    {
+      "mode": "greatest",
+      "year": 2001,
+      "key": "fallin|alicia keys",
+      "wasPlayable": true,
+      "fingerprint": "d8490f1b01a711479e6bedfba0fcb11ba2609338b7c6c9a79ab76530a1548431"
+    },
+    {
+      "mode": "greatest",
+      "year": 2001,
+      "key": "how you remind me|nickelback",
+      "wasPlayable": true,
+      "fingerprint": "e27c1f37b1fc0d86882ffdbcc8ef059ec0e0b1ddc717510db617a4557426159f"
+    },
+    {
+      "mode": "greatest",
+      "year": 2002,
+      "key": "foolish|ashanti",
+      "wasPlayable": true,
+      "fingerprint": "c00be5bbd27b47e0e4ba52fc278823ef58bd6c59e28e8191c0d78288413ab421"
+    },
+    {
+      "mode": "greatest",
+      "year": 2002,
+      "key": "foolish video|ashanti",
+      "wasPlayable": true,
+      "fingerprint": "90579be4d0917269e30aa4fb9c143ccb3a3a6d45caf3ffca593dd8b54a1ba5ff"
+    },
+    {
+      "mode": "greatest",
+      "year": 2003,
+      "key": "in da club|50 cent",
+      "wasPlayable": true,
+      "fingerprint": "a1b7c9a22bc5ccecb361766f6bb1c8bb27e059d560df355f74a6a8a00fa067b1"
+    },
+    {
+      "mode": "greatest",
+      "year": 2003,
+      "key": "up in da club|50 cent",
+      "wasPlayable": true,
+      "fingerprint": "7744ccde0d98c68d73b122794925e2079852d70ad670d05f7b542e08d684c362"
+    },
+    {
+      "mode": "greatest",
+      "year": 2004,
+      "key": "burn|usher",
+      "wasPlayable": true,
+      "fingerprint": "07cff51cc4bec60b0a31ff207cc2d4bddd8def0800aa2e79bdd01f1e2b38e776"
+    },
+    {
+      "mode": "greatest",
+      "year": 2004,
+      "key": "yeah|usher",
+      "wasPlayable": true,
+      "fingerprint": "ef4df67bf0337482cd13d91fe8444b803cad7bf88a8a2517ca69ccd4085e463a"
+    },
+    {
+      "mode": "greatest",
+      "year": 2005,
+      "key": "we belong together|mariah carey",
+      "wasPlayable": true,
+      "fingerprint": "4415f93f8a1d6b73a4d5d9238cc732a26ceb2eb7ea62a77b702ff59972bcf2d0"
+    },
+    {
+      "mode": "greatest",
+      "year": 2005,
+      "key": "we belong together call out 1|mariah carey",
+      "wasPlayable": true,
+      "fingerprint": "dae57f4155c89b008b51bf8ef8b8870fd18b08ee2c2bd16f35728f937599a5c2"
+    },
+    {
+      "mode": "greatest",
+      "year": 2005,
+      "key": "we belong together video|mariah carey",
+      "wasPlayable": true,
+      "fingerprint": "06bf2fc56602206f25d114ec324daa9f1ee8c98c6851e51261bac0c52a339961"
+    },
+    {
+      "mode": "greatest",
+      "year": 2006,
+      "key": "bad day|daniel powter",
+      "wasPlayable": true,
+      "fingerprint": "dc600afdc9e49543be663c491696e6fa15927c2fd1bcf5c1838cd396b0d4e8c3"
+    },
+    {
+      "mode": "greatest",
+      "year": 2006,
+      "key": "irreplaceable|beyonce",
+      "wasPlayable": true,
+      "fingerprint": "6f7fc2fe2332333242ffeec7b2d9cff4877bde301a734e05fc7b8726a1c22a7f"
+    },
+    {
+      "mode": "greatest",
+      "year": 2007,
+      "key": "bleeding love|leona lewis",
+      "wasPlayable": true,
+      "fingerprint": "b982c9306f84d9b1b2dcbeac4d0229a805e54ec78b9438fa59c2a162270294a0"
+    },
+    {
+      "mode": "greatest",
+      "year": 2007,
+      "key": "irreplaceable irreemplazable|beyonce",
+      "wasPlayable": true,
+      "fingerprint": "d2abf51fbdded75ffd2ab50febd559f4156b2b42c9e35ced1a70c4ea83a6c1cb"
+    },
+    {
+      "mode": "greatest",
+      "year": 2007,
+      "key": "umbrella|rihanna",
+      "wasPlayable": true,
+      "fingerprint": "ea0351b2f75e373bbeaef835458adfa1dd5cfadd866c7128a8d2aae94ebddaf8"
+    },
+    {
+      "mode": "greatest",
+      "year": 2008,
+      "key": "bleeding love part 1|leona lewis",
+      "wasPlayable": true,
+      "fingerprint": "d43c8f212cfa5dcf90b615aa39b56b87a91cf29c7e03d42bc45d329040439f95"
+    },
+    {
+      "mode": "greatest",
+      "year": 2008,
+      "key": "low|flo rida",
+      "wasPlayable": true,
+      "fingerprint": "ea778517e0d61faca6afb57880bd8fb1ec9352672a4de2c73f8b591a6c348368"
+    },
+    {
+      "mode": "greatest",
+      "year": 2008,
+      "key": "poker face|lady gaga",
+      "wasPlayable": true,
+      "fingerprint": "12430eeed11a8a0297ee7899fe9f6d40085dd9070f688ae74a3d5453796c7f24"
+    },
+    {
+      "mode": "greatest",
+      "year": 2009,
+      "key": "tik tok|kesha",
+      "wasPlayable": true,
+      "fingerprint": "22252a2a20a4d8ce40f64466d7ffb410ebd900baf7827ac1c3618cf592dbc83e"
+    },
+    {
+      "mode": "greatest",
+      "year": 2010,
+      "key": "rolling in the deep|adele",
+      "wasPlayable": true,
+      "fingerprint": "ed4de67b2ac58e70b2d052de597e79f09f575f18c98f3eb573119536d19dc352"
+    },
+    {
+      "mode": "greatest",
+      "year": 2010,
+      "key": "tik tok|ke ha",
+      "wasPlayable": true,
+      "fingerprint": "1fd095bdf85e34476f470402ced9321f54a2a4ef5f66ad54c9ab3abedb70ba33"
+    },
+    {
+      "mode": "greatest",
+      "year": 2011,
+      "key": "call me maybe|carly rae jepsen",
+      "wasPlayable": true,
+      "fingerprint": "955ab658046ff3b2c02e9ba0d50ad86e7114bf3426ad8fe223fcc9d39c336a49"
+    },
+    {
+      "mode": "greatest",
+      "year": 2011,
+      "key": "rolling in the deep jamie xx shuffle|adele",
+      "wasPlayable": true,
+      "fingerprint": "9614126b4e0175ee7d50281c1af977038390f6496552fae81970b5b5d7cecff1"
+    },
+    {
+      "mode": "greatest",
+      "year": 2012,
+      "key": "somebody that i used to know gdp and space jesus|gotye",
+      "wasPlayable": true,
+      "fingerprint": "09ad0c5eea4a490110f4e053ee608238ef32d6eada781f69fde912326e17a3a3"
+    },
+    {
+      "mode": "greatest",
+      "year": 2013,
+      "key": "blurred lines|robin thicke",
+      "wasPlayable": true,
+      "fingerprint": "298fa21b903d85bf78b404541755a98c4290f877b0636f63e29e0fbf2563e300"
+    },
+    {
+      "mode": "greatest",
+      "year": 2014,
+      "key": "happy|pharrell williams",
+      "wasPlayable": true,
+      "fingerprint": "5ccfdfb9712327cec1ed5126670dd61e6e63571a19f4a23dd4d2287167d13bce"
+    },
+    {
+      "mode": "greatest",
+      "year": 2014,
+      "key": "thinking out loud|ed sheeran",
+      "wasPlayable": true,
+      "fingerprint": "542a1344e7437c85b27a4ffc0a1f7672f2d478061ed607ffde7cf3408fdcf91d"
+    },
+    {
+      "mode": "greatest",
+      "year": 2015,
+      "key": "love yourself|justin bieber",
+      "wasPlayable": true,
+      "fingerprint": "4250628413b0f23087643501b33c16db1d9f8650d737ecb168f35844e219213b"
+    },
+    {
+      "mode": "greatest",
+      "year": 2016,
+      "key": "sorry|justin bieber",
+      "wasPlayable": true,
+      "fingerprint": "b1268bc6414b7a32d25e4bc07639dc74b970cd4e7fd90bcc016fd651a554002b"
+    },
+    {
+      "mode": "greatest",
+      "year": 2017,
+      "key": "shape of you|ed sheeran",
+      "wasPlayable": true,
+      "fingerprint": "2974c7dbd748a1174e810ddf907dc3dc27740d65a2e493b7164159fc2365fc8a"
+    },
+    {
+      "mode": "greatest",
+      "year": 2017,
+      "key": "that s what i like vs happy that s what i like happy|bruno mars",
+      "wasPlayable": true,
+      "fingerprint": "9c82a1ceeb6d2b732d86601f861fc422877dbef7e425da65efc349c52b8112ce"
+    },
+    {
+      "mode": "greatest",
+      "year": 2018,
+      "key": "meant to be|bebe rexhaflorida georgia line",
+      "wasPlayable": true,
+      "fingerprint": "b8149f29e905982a138b9fe29200e8b9f04b8a5c56ca19add63c951c924b72cf"
+    },
+    {
+      "mode": "greatest",
+      "year": 2019,
+      "key": "bad guy|billie eilish",
+      "wasPlayable": true,
+      "fingerprint": "3821be24031ddb45f17e9ccadab7485fb375f76f39dd82e6e0540313d9809483"
+    },
+    {
+      "mode": "greatest",
+      "year": 2019,
+      "key": "blinding lights|weeknd",
+      "wasPlayable": true,
+      "fingerprint": "2c455c788c035fe07c79f8864cd77051ea8369afd7ff7d0f5af2af78e926c4b2"
+    },
+    {
+      "mode": "greatest",
+      "year": 2019,
+      "key": "without me|halsey",
+      "wasPlayable": true,
+      "fingerprint": "a3bc5358130d4288fa9aa7d7b233296c668a2cadc4eb61553b8c93444253fbb4"
+    },
+    {
+      "mode": "greatest",
+      "year": 2020,
+      "key": "heat waves|glass animals",
+      "wasPlayable": true,
+      "fingerprint": "98abef1f31413e90fa037613906ecd86883f953c36665ff6bb7b949249d09419"
+    },
+    {
+      "mode": "greatest",
+      "year": 2020,
+      "key": "levitating|dua lipa",
+      "wasPlayable": true,
+      "fingerprint": "37ab145f8ee354dade6ad0091f303e5d2472967f73c5672beb652666f5dfc0cc"
+    },
+    {
+      "mode": "greatest",
+      "year": 2020,
+      "key": "save your tears|weeknd",
+      "wasPlayable": true,
+      "fingerprint": "c2addeda44ae1c72e6e62a7637e221b7e44c30b638b2cf1032b16d7fce15ccdb"
+    },
+    {
+      "mode": "greatest",
+      "year": 2021,
+      "key": "levitating mixed|dua lipa",
+      "wasPlayable": true,
+      "fingerprint": "96e6b41c08f23bc2f397c412770166e2ec2b0ef7d9abf1e78e793272cf185905"
+    },
+    {
+      "mode": "greatest",
+      "year": 2022,
+      "key": "as it was|harry styles",
+      "wasPlayable": true,
+      "fingerprint": "38a7ca981f2bddcf6b3e02443b8c4f774d0978e8ff878893a7d7ce0b28b7c503"
+    },
+    {
+      "mode": "greatest",
+      "year": 2022,
+      "key": "about damn time|lizzo",
+      "wasPlayable": true,
+      "fingerprint": "e0a1d0a410c4457ad8409119485fcb9070f51d0fcdbff6d269ead0cb9dd6b766"
+    },
+    {
+      "mode": "australian",
+      "year": 1950,
+      "key": "stay away from me|slim dusty",
+      "wasPlayable": true,
+      "fingerprint": "19e9b9d9219e60600c3d2b6eca400619c413191a8e0fb5f7410a2acc2a778f38"
+    },
+    {
+      "mode": "australian",
+      "year": 1951,
+      "key": "i can t stand sitting in a cell|buddy williams",
+      "wasPlayable": true,
+      "fingerprint": "7c8f0d7edc5532605f9a8a29388c4f851b60aef572dcb293f3ef13efb4cf75f0"
+    },
+    {
+      "mode": "australian",
+      "year": 1951,
+      "key": "beyond the setting sun|buddy williams",
+      "wasPlayable": true,
+      "fingerprint": "c5cb495b6c47de432e0baea5cadec3612eadfb1a1b0a5f293cea29d34a3eafc6"
+    },
+    {
+      "mode": "australian",
+      "year": 1951,
+      "key": "i m gonna tear down the mailbox|buddy williams",
+      "wasPlayable": true,
+      "fingerprint": "f0b38b53ec22dc11313c2295e003d05e1d8f4f27b8d28aaf6a7422535acec9ca"
+    },
+    {
+      "mode": "australian",
+      "year": 1951,
+      "key": "gambling polka dot blues|buddy williams",
+      "wasPlayable": true,
+      "fingerprint": "482dd49f995a94aa802a7e395db2a38a4496bc5d5d924e97b0e4a6fa04d157cc"
+    },
+    {
+      "mode": "australian",
+      "year": 1952,
+      "key": "smoky that wild stallion grand|smoky dawson",
+      "wasPlayable": true,
+      "fingerprint": "7197c9947e74d8bbfdd61d41197e12e74264921ce33138ac7c1e0ccfb992ba5d"
+    },
+    {
+      "mode": "australian",
+      "year": 1952,
+      "key": "the man from never never|smoky dawson",
+      "wasPlayable": true,
+      "fingerprint": "1406eadb95d7c36ec98457093ed7f39b584f92143fd2fbe39ff224ca1aa187e8"
+    },
+    {
+      "mode": "australian",
+      "year": 1952,
+      "key": "the wild colonial boy|smoky dawson",
+      "wasPlayable": true,
+      "fingerprint": "fbf38bc9d2c13c0f9b9e64d76b5ff29e66a9c50be876dc56bf52e2b0b5b78980"
+    },
+    {
+      "mode": "australian",
+      "year": 1952,
+      "key": "new wabash cannon ball|smoky dawson",
+      "wasPlayable": true,
+      "fingerprint": "cf02203a32c68771081774ab2a907f1259ba91c92e6e7a6b651d18b51214cd0a"
+    },
+    {
+      "mode": "australian",
+      "year": 1953,
+      "key": "the death of hank williams|buddy williams",
+      "wasPlayable": true,
+      "fingerprint": "df3ba32c90cdd51f9eefbc834f01cb8f6c6cd986d481b3e60468f2e0385795ad"
+    },
+    {
+      "mode": "australian",
+      "year": 1953,
+      "key": "missing in action|buddy williams",
+      "wasPlayable": true,
+      "fingerprint": "ac4be9fa8d712f4a5836865fafb9388546be7ead619f54269249ce2f41c420ff"
+    },
+    {
+      "mode": "australian",
+      "year": 1954,
+      "key": "castaway|johnny ashcroft",
+      "wasPlayable": true,
+      "fingerprint": "9f931ea8a19d90e841fe26cf8cbf163a14bb4fc4e58fd4f311648f658c98d698"
+    },
+    {
+      "mode": "australian",
+      "year": 1954,
+      "key": "the farmer s song|johnny ashcroft",
+      "wasPlayable": true,
+      "fingerprint": "1a26b86669d571d6bcb269303c68ebe8121281a25502d07c89c32a4080dc04f0"
+    },
+    {
+      "mode": "australian",
+      "year": 1954,
+      "key": "the spirit of progress|buddy williams",
+      "wasPlayable": true,
+      "fingerprint": "b87993e498989d86e7edbed8d8db07256cfaeba984ee6cbb631118019617fb22"
+    },
+    {
+      "mode": "australian",
+      "year": 1954,
+      "key": "pentridge jail|buddy williams",
+      "wasPlayable": true,
+      "fingerprint": "374195f4ba81997a296c0da01eab4faeec13cf776a36bde9a97b416fc196e5be"
+    },
+    {
+      "mode": "australian",
+      "year": 1955,
+      "key": "rock around the clock|vic sabrino",
+      "wasPlayable": true,
+      "fingerprint": "a8c690d073cb24f12fbca06d5845c35b3792b39f40b089cda65bf612c674e69c"
+    },
+    {
+      "mode": "australian",
+      "year": 1956,
+      "key": "train whistle blues|johnny ashcroft",
+      "wasPlayable": true,
+      "fingerprint": "127c255547cd16ccf59292a9d25a2bf57d19f1cd43f904eb43cc9e5e2abd5b10"
+    },
+    {
+      "mode": "australian",
+      "year": 1956,
+      "key": "highway 31|johnny ashcroft",
+      "wasPlayable": true,
+      "fingerprint": "5451b2aace3eac320b6b1fd42915077685853b06a1b04f8b1d6882696283f088"
+    },
+    {
+      "mode": "australian",
+      "year": 1956,
+      "key": "put your cards on the table|johnny ashcroft",
+      "wasPlayable": true,
+      "fingerprint": "5ea5120b62a225ec008ae7bf9dbb51216b65ed00da28077768eec0268a9fcc7b"
+    },
+    {
+      "mode": "australian",
+      "year": 1956,
+      "key": "tell me|johnny ashcroft",
+      "wasPlayable": true,
+      "fingerprint": "81ac8ce5b05b46dd03bbf28da1e92ad7a70763a24b60eb0d4aed2bca911aae12"
+    },
+    {
+      "mode": "australian",
+      "year": 1957,
+      "key": "once when i was mustering|slim dusty",
+      "wasPlayable": true,
+      "fingerprint": "e8641775abf1f016e4613e219ec4337c02da82ba0f553ad102a51fba90200872"
+    },
+    {
+      "mode": "australian",
+      "year": 1957,
+      "key": "a pub with no beer|slim dusty",
+      "wasPlayable": true,
+      "fingerprint": "0c17b4b9bb469ea51d195f2b5fea9c5a6643e1089fde8e3343884a613b9968b5"
+    },
+    {
+      "mode": "australian",
+      "year": 1958,
+      "key": "buzz buzz buzz|johnny ashcroft",
+      "wasPlayable": true,
+      "fingerprint": "4bf0aed54c2180bc722d207282f5d63c10c84a22ab5a75c03a1b398472e7ea26"
+    },
+    {
+      "mode": "australian",
+      "year": 1958,
+      "key": "real wild child|johnny o keefe",
+      "wasPlayable": true,
+      "fingerprint": "5760f01c2ad9852009a005e71c3e1c2ecb2d39f2fd4feb9beb948b680f39230f"
+    },
+    {
+      "mode": "australian",
+      "year": 1959,
+      "key": "don t forget me little darlin|buddy williams",
+      "wasPlayable": true,
+      "fingerprint": "9aa62ac1035b62d114448b87bbe27e630953c0abc8fbf69bf20558e40d73aed4"
+    },
+    {
+      "mode": "australian",
+      "year": 1959,
+      "key": "my sleepy valley home|buddy williams",
+      "wasPlayable": true,
+      "fingerprint": "0f7b5e1729e8cf78c6aa293cc33e34cb057c3e1774f0a5304bf0debc0e86fa42"
+    },
+    {
+      "mode": "australian",
+      "year": 1959,
+      "key": "i ll stroll down memory lane with you|buddy williams",
+      "wasPlayable": true,
+      "fingerprint": "b3bab098507fa44aaa3b5104bc2cef340ebcc23bdf498de8bba8ba64c9951b15"
+    },
+    {
+      "mode": "australian",
+      "year": 1959,
+      "key": "when the cactus is in bloom|buddy williams",
+      "wasPlayable": true,
+      "fingerprint": "9bea6165a6baddd691aabe9a8da427d50301671658e143598715f95185ab5607"
+    },
+    {
+      "mode": "australian",
+      "year": 1960,
+      "key": "she s my baby|johnny o keefe",
+      "wasPlayable": true,
+      "fingerprint": "2aabf9efa7c83687d13752502604a2f66468eb34f6571b1223c679cc0d2233d6"
+    },
+    {
+      "mode": "australian",
+      "year": 1961,
+      "key": "i m counting on you|johnny o keefe",
+      "wasPlayable": true,
+      "fingerprint": "cb746edb3db0736e57c3fbef59fe5f16f66bd651be35160bfd65e46c39adf2ff"
+    },
+    {
+      "mode": "australian",
+      "year": 1962,
+      "key": "i remember you|frank ifield",
+      "wasPlayable": true,
+      "fingerprint": "fcee11cc3a0b6ee4d645fec7a5cb5e3c073d1fdc00baf345ff9fa0d4a834ebdd"
+    },
+    {
+      "mode": "australian",
+      "year": 1963,
+      "key": "the three kisses of love|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "45d2e1ae5399d378bb20e0a4db5269f57d6ba2059fe995151ff810b2d3d673e3"
+    },
+    {
+      "mode": "australian",
+      "year": 1963,
+      "key": "the battle of the blue and the grey|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "80089bda2ed84dae90ccfbdef0d7d7f3cee811fd28607d24efb149aff9f61d36"
+    },
+    {
+      "mode": "australian",
+      "year": 1963,
+      "key": "wild rover|seekers",
+      "wasPlayable": true,
+      "fingerprint": "0a39096c8c411fc90eea45711083283d9ac7649c95bb4f037b310f08c1ef4358"
+    },
+    {
+      "mode": "australian",
+      "year": 1963,
+      "key": "dese bones g wine rise again|seekers",
+      "wasPlayable": true,
+      "fingerprint": "027f5e92a383950175ea115b33150da82823ee47c127790ba1d173331a1b7260"
+    },
+    {
+      "mode": "australian",
+      "year": 1964,
+      "key": "turn around look at me|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "6a8567ac2a42b2013a270226c2988472b89d4bf5deaf5b3cd0d4e7d88d9fa07c"
+    },
+    {
+      "mode": "australian",
+      "year": 1964,
+      "key": "theme from jaimie mcpheeters|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "96c5e465b074cbf4abeb0f946b47cd66929bbc4443ad0342e942ef47620266be"
+    },
+    {
+      "mode": "australian",
+      "year": 1964,
+      "key": "the battle of the blue and grey|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "0a98bfc9806331d7b5ea1d0c6c2613def20c3cbd55f9b2986362a3b37572bbf1"
+    },
+    {
+      "mode": "australian",
+      "year": 1964,
+      "key": "timber|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "c9351314406dd1df0634e5da557e4b173c983e7b09c017e019b3b53c8e85169a"
+    },
+    {
+      "mode": "australian",
+      "year": 1965,
+      "key": "don t say goodbye|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "d7e16ee5c28ef0c1f738321bd817c6dddf364bf1de5b57f1ca68c82916977d1c"
+    },
+    {
+      "mode": "australian",
+      "year": 1965,
+      "key": "everyday i have to cry|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "0551b056f9959a890fca293d07504d5d7bfd24b5d18b5916f4216adcc4065dbd"
+    },
+    {
+      "mode": "australian",
+      "year": 1965,
+      "key": "peace of mind|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "e84c3d5bc67527a28346821db38ea3f09cf92a0fbd0da47268a3222c0a71b940"
+    },
+    {
+      "mode": "australian",
+      "year": 1965,
+      "key": "to be or not to be|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "969b11afe4093b346af1974dbfaefad3549b9fb0688dc36c1d08f61f7939c64d"
+    },
+    {
+      "mode": "australian",
+      "year": 1966,
+      "key": "if it don t work out|normie rowe",
+      "wasPlayable": true,
+      "fingerprint": "c10615847398118ab64f9db0e05e61d2c62459e42cad2a5148c715e79c9581f2"
+    },
+    {
+      "mode": "australian",
+      "year": 1966,
+      "key": "the night|normie rowe",
+      "wasPlayable": true,
+      "fingerprint": "0ffed3be9defad9f7f5346a03f6bb368777f4e92f069b93d5c64a0738c821f3f"
+    },
+    {
+      "mode": "australian",
+      "year": 1966,
+      "key": "stormy weather|normie rowe",
+      "wasPlayable": true,
+      "fingerprint": "4afc60daccc138db0a573485ffe0cc8fe1e9bada2c72a11a3d03b5df896d15d1"
+    },
+    {
+      "mode": "australian",
+      "year": 1966,
+      "key": "rat race|normie rowe",
+      "wasPlayable": true,
+      "fingerprint": "2906cfe204b6e23475f99c83fa0aba1e4455189099663f262a8f1a8e6995a1a1"
+    },
+    {
+      "mode": "australian",
+      "year": 1967,
+      "key": "ooh la la|normie rowe",
+      "wasPlayable": true,
+      "fingerprint": "24b22543bbec2001a3a6c98807853a3066c9947f314ea98e41d6f91f526f3e60"
+    },
+    {
+      "mode": "australian",
+      "year": 1967,
+      "key": "hot gully wind|masters apprentices",
+      "wasPlayable": true,
+      "fingerprint": "d4f0a05dee6588185c47dba999d3ce9ce8e42491181a1304187becfefa5b3962"
+    },
+    {
+      "mode": "australian",
+      "year": 1967,
+      "key": "buried and dead|masters apprentices",
+      "wasPlayable": true,
+      "fingerprint": "3ad1cd73dc8f92d0d620ae5c22c59a77bf465b683df02deda4e679e18b529833"
+    },
+    {
+      "mode": "australian",
+      "year": 1967,
+      "key": "my girl|masters apprentices",
+      "wasPlayable": true,
+      "fingerprint": "f389ee11aeb32398d697861ab15c7803082056a2e06e35ad38344679dba01c9d"
+    },
+    {
+      "mode": "australian",
+      "year": 1968,
+      "key": "i started a joke|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "43a2c817d676cd5b70b24da80f00ac75ca07d0478b7df88b2adbbcfeb1dc1985"
+    },
+    {
+      "mode": "australian",
+      "year": 1968,
+      "key": "down to earth|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "2314ae07149d7f6e55e4c413b86c7b1be5f062f3a361978bbac3bead4d17b24c"
+    },
+    {
+      "mode": "australian",
+      "year": 1968,
+      "key": "jumbo|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "6ee1d30f37f5d89e3cefd9cb5ade7d07151885932f6e881f317c0515be1510bf"
+    },
+    {
+      "mode": "australian",
+      "year": 1968,
+      "key": "let there be love|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "498406a8eb373bb8ae7b6a74026be843a2a715a3e1eee20e2da5369d655898fd"
+    },
+    {
+      "mode": "australian",
+      "year": 1969,
+      "key": "edison|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "e34315310292de8faaf4c5b36baab51fb8ae8138848f9ae1c4971b4419fb30c2"
+    },
+    {
+      "mode": "australian",
+      "year": 1969,
+      "key": "one million years|robin gibb",
+      "wasPlayable": true,
+      "fingerprint": "b00866e460777ca6eea801154c5f2b44b5225932de121ad2ef8ee7f1c8040260"
+    },
+    {
+      "mode": "australian",
+      "year": 1969,
+      "key": "sound of love|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "38014f26a36897ec280030871931b9532d24cca7a42e2218ab4118838db71bc4"
+    },
+    {
+      "mode": "australian",
+      "year": 1969,
+      "key": "tomorrow tomorrow|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "354e12923f677829918317ea316853512633ef4eb05f81db0037c6451b06d738"
+    },
+    {
+      "mode": "australian",
+      "year": 1969,
+      "key": "you ll never see my face again|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "6bf252029c3fcfd243296501d1514a14cd7299db1bbb4fb6addd49c56ebcbc3a"
+    },
+    {
+      "mode": "australian",
+      "year": 1970,
+      "key": "could it be|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "fab4f4b2421c3fb483bfdc2906628c6bb8c848991d7dc10ba76649c4cea7c854"
+    },
+    {
+      "mode": "australian",
+      "year": 1970,
+      "key": "every second every minute|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "f8f41a66df521ea960fb6035ec3a8edf41f2209131e12d310a41bc424d3af0ca"
+    },
+    {
+      "mode": "australian",
+      "year": 1970,
+      "key": "i lay down and die|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "fbd519765edd5482766bb5e7af3451794c7ff3080bddd1e9f4b19887ae97f06c"
+    },
+    {
+      "mode": "australian",
+      "year": 1970,
+      "key": "lonely days|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "ef3c31b391b075ae5930842960e76c6fcd0dbcd3a700ec70bc4e0984b06b1bc8"
+    },
+    {
+      "mode": "australian",
+      "year": 1970,
+      "key": "paperback writer|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "9946ae028ca31851f577aeb490e9d446c36306b9149ae1219d70b79288395d6d"
+    },
+    {
+      "mode": "australian",
+      "year": 1970,
+      "key": "turning tide|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "f1a520a37549e05954384499ec71c433af514259d725e3ded71a429a57109493"
+    },
+    {
+      "mode": "australian",
+      "year": 1971,
+      "key": "you re nobody till somebody loves you|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "f5b62b01dd75a5a6b591cb725dc9456005ccb995268ba0f2374dd6faa007984c"
+    },
+    {
+      "mode": "australian",
+      "year": 1971,
+      "key": "all by myself|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "29493958c187221e8591dee7a061ed86541d91f9913dc3503382430120f84ef9"
+    },
+    {
+      "mode": "australian",
+      "year": 1971,
+      "key": "you re the reason|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "b1afb1d8ede0b9a922ff8cdde859b36c13e4a67ac91b24ef789aeb5943c706c7"
+    },
+    {
+      "mode": "australian",
+      "year": 1972,
+      "key": "please don t turn out the lights|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "8e9098f0bdab1024b6a1822874c9cfffe1e7787270b50cbc8e643418ad0fefa9"
+    },
+    {
+      "mode": "australian",
+      "year": 1972,
+      "key": "bad bad dreams|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "c94e4012849b6f05c8041be68269f5423b364aebf3217c272c5b4c270fb707ed"
+    },
+    {
+      "mode": "australian",
+      "year": 1972,
+      "key": "i held a party|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "a708618d406fb2e80d975eac69e87e197b83669c084dd579f6e35152cdc3071c"
+    },
+    {
+      "mode": "australian",
+      "year": 1972,
+      "key": "road to alaska|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "7c35ea4c1c5549579511f8ca724611487fe7f75e045f98130400758830d26735"
+    },
+    {
+      "mode": "australian",
+      "year": 1973,
+      "key": "wouldn t i be someone|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "8a5830b469062a336a86a3669a60ff9dcd4565b8e40814ebf3ba5a76375af22d"
+    },
+    {
+      "mode": "australian",
+      "year": 1973,
+      "key": "cherry red|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "a97349f56c43989147d16cd75998dc68ec3ce17651cd74fbf77bd9846f56d2b0"
+    },
+    {
+      "mode": "australian",
+      "year": 1974,
+      "key": "take me home country roads|olivia newton john",
+      "wasPlayable": true,
+      "fingerprint": "546fa64f28775f634b378577b293067b444f27c9416b46e8e90e45352d729c06"
+    },
+    {
+      "mode": "australian",
+      "year": 1974,
+      "key": "it doesn t matter much to me|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "dba3925ff9264e7f1b93897d1e112e9051dbc33cf08882ba74df7d4316a779dd"
+    },
+    {
+      "mode": "australian",
+      "year": 1974,
+      "key": "throw a penny|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "61ba903aa6f0c0e54f55373fb85ff64f428380c0a0d609a23de352c382aa08d4"
+    },
+    {
+      "mode": "australian",
+      "year": 1975,
+      "key": "new york mining disaster 1941|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "a5284f29df7f663fb395fc2b24564a0454023be98dac83932c9c428cd2004bd3"
+    },
+    {
+      "mode": "australian",
+      "year": 1975,
+      "key": "melody fair|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "5038df3f201ed3cad6197ee689a76854b963eccc9f7ff6486ac0afea8d865e4f"
+    },
+    {
+      "mode": "australian",
+      "year": 1975,
+      "key": "baby as you turn away|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "3833a38d0c0074de841e8fffb10f89a92f7d995321e27b3752c1871e1c498623"
+    },
+    {
+      "mode": "australian",
+      "year": 1976,
+      "key": "golden slumbers carry that weight|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "c2cbe9287c700be15ac2caaccabb6cee41496f7c35ce97e03a5b6bf934ac32b3"
+    },
+    {
+      "mode": "australian",
+      "year": 1976,
+      "key": "fanny be tender with my love|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "558ac81b6de087b088c9b837930fec89c0ca2b311b7544c1f762976f8aca6fff"
+    },
+    {
+      "mode": "australian",
+      "year": 1976,
+      "key": "children of the world|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "31508ef1573e0489bf61bc43cb84bb81783513c20ca1ac24382a90d062d7a8b9"
+    },
+    {
+      "mode": "australian",
+      "year": 1976,
+      "key": "can t keep a good man down|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "685c07d2ad7ec973bf9ddd50c2bfe73bf38240b93fb903720e700166740a2975"
+    },
+    {
+      "mode": "australian",
+      "year": 1977,
+      "key": "jive talkin|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "aa576bf174d084d57d30b56db70cc399cdb5167cb57489bc878a28cade8ed130"
+    },
+    {
+      "mode": "australian",
+      "year": 1977,
+      "key": "more than a woman|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "5eb904a05d142b5659e0c1cc1a73b2a292325411d60e97e2ce592a6a138ec5ca"
+    },
+    {
+      "mode": "australian",
+      "year": 1977,
+      "key": "you should be dancing|bee gees",
+      "wasPlayable": true,
+      "fingerprint": "d12f27386bb21b80bd266fca7174f9cf2c76fc79916ad394703256cbbad8944e"
+    },
+    {
+      "mode": "australian",
+      "year": 1978,
+      "key": "one long day|cold chisel",
+      "wasPlayable": true,
+      "fingerprint": "290f6bff78ba7bcdea3364ff0fef959602a41f587f8ffffb262677c26724ffc9"
+    },
+    {
+      "mode": "australian",
+      "year": 1978,
+      "key": "mona and the preacher|cold chisel",
+      "wasPlayable": true,
+      "fingerprint": "808ad924759184d935718b44d27cf766a862b816b5ed7c29366b60222c9c9d3f"
+    },
+    {
+      "mode": "australian",
+      "year": 1978,
+      "key": "khe sanh|cold chisel",
+      "wasPlayable": true,
+      "fingerprint": "731bdaba9b919ae7eccffb260b48f48c06d558abce40005a4f6914f20c36d055"
+    },
+    {
+      "mode": "australian",
+      "year": 1978,
+      "key": "home and broken hearted|cold chisel",
+      "wasPlayable": true,
+      "fingerprint": "6153676b02630e6991111cc008bf97edb7c2bbade6cc9f68bd0adc5ce9cd1a56"
+    },
+    {
+      "mode": "australian",
+      "year": 1979,
+      "key": "a little more love|olivia newton john",
+      "wasPlayable": true,
+      "fingerprint": "1703a5ef6a400d0f78b28a64f78ad351290e2cb88be67f0aa1be26fb74c473d7"
+    },
+    {
+      "mode": "australian",
+      "year": 1979,
+      "key": "conversations|cold chisel",
+      "wasPlayable": true,
+      "fingerprint": "ee3637b6c196e48ebc65126b1946fe8a36fe49c68ebda66c26d7aac03072ab2a"
+    },
+    {
+      "mode": "australian",
+      "year": 1979,
+      "key": "i m gonna roll ya|cold chisel",
+      "wasPlayable": true,
+      "fingerprint": "ae36a6f387cc7539791f8e7b7c4116f4090b8db3b91d9f7d7e9db79769629239"
+    },
+    {
+      "mode": "australian",
+      "year": 1979,
+      "key": "the door|cold chisel",
+      "wasPlayable": true,
+      "fingerprint": "9624bef1ce95954e12ed2d7542a295bdbea4a94202ed1edd6f2dfb96a1ca73c4"
+    },
+    {
+      "mode": "australian",
+      "year": 1980,
+      "key": "keypunch operator|men at work",
+      "wasPlayable": true,
+      "fingerprint": "514537bed33b87087adc218ec8380a1b7821fbe59b1d05f9d8344249c33188c5"
+    },
+    {
+      "mode": "australian",
+      "year": 1980,
+      "key": "no time for games|midnight oil",
+      "wasPlayable": true,
+      "fingerprint": "4a9c1e0ce406d45d042c3b9c0e0f728aad58cbd9e58e661b4458c3bf10d7bae6"
+    },
+    {
+      "mode": "australian",
+      "year": 1980,
+      "key": "knife s edge|midnight oil",
+      "wasPlayable": true,
+      "fingerprint": "4f2c336e46218b3e70f9db1477fc10fed9e2fccdafbc85e76259dc5735f7702c"
+    },
+    {
+      "mode": "australian",
+      "year": 1981,
+      "key": "anyone for tennis|men at work",
+      "wasPlayable": true,
+      "fingerprint": "f9c34a9dd6adfbc97bcbae5be1cefbf2df46709001ec2b603d37e568b5c4761b"
+    },
+    {
+      "mode": "australian",
+      "year": 1981,
+      "key": "catch a star|men at work",
+      "wasPlayable": true,
+      "fingerprint": "b5dea2cb9b47edcc5048c7789e9dfcf10edeb047a67de0ffffd9dc7328d880c9"
+    },
+    {
+      "mode": "australian",
+      "year": 1981,
+      "key": "down under|men at work",
+      "wasPlayable": true,
+      "fingerprint": "7705aa57e813a552f70192b8c274f325d81ae4bed114a934308e83c737a87ca1"
+    },
+    {
+      "mode": "australian",
+      "year": 1981,
+      "key": "people just love to play with words|men at work",
+      "wasPlayable": true,
+      "fingerprint": "58b2ea47e9c9444be4ae5d0e1198cad4900d6d3dbc49eb605ae517c0bb88c1e7"
+    },
+    {
+      "mode": "australian",
+      "year": 1981,
+      "key": "who can it be now|men at work",
+      "wasPlayable": true,
+      "fingerprint": "492a09e82f70f996d91da15d24b8cd80e1da73a3787d77e83fe6a00898e75037"
+    },
+    {
+      "mode": "australian",
+      "year": 1982,
+      "key": "outside world|midnight oil",
+      "wasPlayable": true,
+      "fingerprint": "a2017e71e62c97e2e5d300429ee0c2eed734ada1a66d35052392d5248121a8a9"
+    },
+    {
+      "mode": "australian",
+      "year": 1982,
+      "key": "read about it|midnight oil",
+      "wasPlayable": true,
+      "fingerprint": "7f7aa59fd0fbf8a87e907968cad31ecd624f6cea4a76caa7fb53841b6b78e7f9"
+    },
+    {
+      "mode": "australian",
+      "year": 1982,
+      "key": "scream in blue|midnight oil",
+      "wasPlayable": true,
+      "fingerprint": "c3c2c77f2751bd79e7fe78e1fce9dcd6cd29bfa64171738ec52a333cc2e30e08"
+    },
+    {
+      "mode": "australian",
+      "year": 1983,
+      "key": "my girl|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "ebadce78dc93b6ae74336516e65abcfade479771bf7fbfd0f156473e4a8b03a2"
+    },
+    {
+      "mode": "australian",
+      "year": 1983,
+      "key": "leilani|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "6088ceafc0f0990a8c9350e18d9e5296b97791f6a4fc63639f0ed2df0fc36937"
+    },
+    {
+      "mode": "australian",
+      "year": 1983,
+      "key": "be my guru|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "09f21ea0d8ec1b63765683eab197267b764031d7b74c7c8e1f9b6d07998e6f88"
+    },
+    {
+      "mode": "australian",
+      "year": 1984,
+      "key": "arthur|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "31f55436c3a5228d33f614cc0c5e0b2edd29b06840c8eff911455d44aad4b696"
+    },
+    {
+      "mode": "australian",
+      "year": 1984,
+      "key": "death ship|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "b5527031c2a630a4a9e0da3e7775ae4a862c6050aff9b05f27028bc9085ae0eb"
+    },
+    {
+      "mode": "australian",
+      "year": 1984,
+      "key": "dig it up|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "b32db3ee442ac48cdfa0bfea3a97ee04ddd414d18e4c7f3d5140d3c4d4497298"
+    },
+    {
+      "mode": "australian",
+      "year": 1984,
+      "key": "tomorrow that was yesterday|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "33307941cc2eae2d8aacb67e3be25fdf82c04a470dfb80258315bc9dd531b065"
+    },
+    {
+      "mode": "australian",
+      "year": 1985,
+      "key": "mars needs guitars|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "f092c163bf39fbfe72b12543434d77e4ccd169e4088aa2f03fa22322419147c9"
+    },
+    {
+      "mode": "australian",
+      "year": 1985,
+      "key": "turkey dinner|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "388adf4590bcefc6a11ac7bb461731a46c6dbec57769dd362ef41a52a704fa3c"
+    },
+    {
+      "mode": "australian",
+      "year": 1985,
+      "key": "like wow wipeout|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "e590266c1d3cd0d82d9ab05a16104d882898a6bbf764e8275980b27f10877da4"
+    },
+    {
+      "mode": "australian",
+      "year": 1985,
+      "key": "poison pen|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "bedb6d137a0a59725574ce57df73f7bd6cb4bad16efa1f8ac5504534a7336288"
+    },
+    {
+      "mode": "australian",
+      "year": 1986,
+      "key": "shintaro|men at work",
+      "wasPlayable": true,
+      "fingerprint": "29149ea1f23127fadce7ba5c2f4e5158f70cfd8eaffaeeeb08fc3fc213be9cb9"
+    },
+    {
+      "mode": "australian",
+      "year": 1986,
+      "key": "dr heckyll mr jive|men at work",
+      "wasPlayable": true,
+      "fingerprint": "641e591adaf492bfe3ff426767d932ed9974b9ceb564c3585d84798053313204"
+    },
+    {
+      "mode": "australian",
+      "year": 1986,
+      "key": "the longest night|men at work",
+      "wasPlayable": true,
+      "fingerprint": "1f86abe31ca34fc27972005d190d9f3167578b473a62b8060d8ea3bf1659621d"
+    },
+    {
+      "mode": "australian",
+      "year": 1987,
+      "key": "party machine|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "9cba3ba26de8feed9902b40cb89d1017f2ef16f21c15f6c13d22f158155080e5"
+    },
+    {
+      "mode": "australian",
+      "year": 1987,
+      "key": "in the middle of the land|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "44394ba65a584b79a1272508b3628a5e231ed2ede00a8d1e875d711180664958"
+    },
+    {
+      "mode": "australian",
+      "year": 1987,
+      "key": "good times|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "47801d128eb5b2037d05238655cd00c198bcfbd95d0926f56b0a0712a2e1ea58"
+    },
+    {
+      "mode": "australian",
+      "year": 1987,
+      "key": "what s my scene|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "c80891aa26f50d35f5bcd4d0c7ca17a752ed41a09e3392c625fc6f8c3f01c0f2"
+    },
+    {
+      "mode": "australian",
+      "year": 1988,
+      "key": "hypocrite blues|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "a749d14dae16f6d9deefa6a3d78b7c4a7598fc024008f434aef1f2fe5254d6e9"
+    },
+    {
+      "mode": "australian",
+      "year": 1988,
+      "key": "gene hackman|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "3b181ac50c926fc79499d98fbd6e58ae4f816f9dbb30dd64653f061ee17e3363"
+    },
+    {
+      "mode": "australian",
+      "year": 1988,
+      "key": "where s the action|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "7b51d4b57384bf616c59a083b430a800daa2d268e06e4f296c94a810c203692a"
+    },
+    {
+      "mode": "australian",
+      "year": 1988,
+      "key": "the right time|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "27185fdcfd01feabeb881b38c92f9c47567eeaa3a4e8d0b757cdfa5665dceac3"
+    },
+    {
+      "mode": "australian",
+      "year": 1989,
+      "key": "i don t know anything|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "32f3c1797b6cc8dbb345e141a1f5c43d8bba9600d50d43bde760b1436b8f0d01"
+    },
+    {
+      "mode": "australian",
+      "year": 1989,
+      "key": "another world|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "d08055e7061d908fb41b2114bd8fb4e278d34abc4e01fe9dc37ca873c6a60945"
+    },
+    {
+      "mode": "australian",
+      "year": 1989,
+      "key": "i want you back|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "9ca85f2a668b2baf4305c56eb06b83edd3a43416361769f5066f9aa925781e28"
+    },
+    {
+      "mode": "australian",
+      "year": 1989,
+      "key": "where s that hit|hoodoo gurus",
+      "wasPlayable": true,
+      "fingerprint": "e88acfc2a2398689c480de20f675db83babee57c3d655cb93500c8bce80151bd"
+    },
+    {
+      "mode": "australian",
+      "year": 1990,
+      "key": "the machine s breaking down|tina arena",
+      "wasPlayable": true,
+      "fingerprint": "1c6aeccee7d55878c6b50578f69b7a1a4faea743ebe0cd4d49583c2c6fab0def"
+    },
+    {
+      "mode": "australian",
+      "year": 1991,
+      "key": "woman s work|tina arena",
+      "wasPlayable": true,
+      "fingerprint": "d05e703d398bf5622a31ded5fec00ff51edc68b3f941bac53a49da26090a53c2"
+    },
+    {
+      "mode": "australian",
+      "year": 1991,
+      "key": "word is out|kylie minogue",
+      "wasPlayable": true,
+      "fingerprint": "5a251bb45953568dcbcb0bca9ab3593a804aa182a1cb7794f3bebb27ad592aec"
+    },
+    {
+      "mode": "australian",
+      "year": 1992,
+      "key": "shocked|kylie minogue",
+      "wasPlayable": true,
+      "fingerprint": "2ba1263f018a7092f6e5028c4ef76ea023349e119f9530a7817e8e1dead6b1fa"
+    },
+    {
+      "mode": "australian",
+      "year": 1992,
+      "key": "where in the world|kylie minogue",
+      "wasPlayable": true,
+      "fingerprint": "8d4331bb8311df74fb748bcf402e02a21b31461fb7ecdfd6febd2b464b9a1e66"
+    },
+    {
+      "mode": "australian",
+      "year": 1992,
+      "key": "give me just a little more time|kylie minogue",
+      "wasPlayable": true,
+      "fingerprint": "7407b65f2c2c1ab16e4e985fcef826037931d3d977a40d98bd442b710f454e24"
+    },
+    {
+      "mode": "australian",
+      "year": 1993,
+      "key": "always find the time|kylie minogue",
+      "wasPlayable": true,
+      "fingerprint": "7b6fe088890a89c457d1d93074768d50083126980a80914d950d58787b42a137"
+    },
+    {
+      "mode": "australian",
+      "year": 1993,
+      "key": "turn it into love|kylie minogue",
+      "wasPlayable": true,
+      "fingerprint": "49a00a1e4745edd38a974dc74dffd57deec78cebe4357c1310125583c21610f0"
+    },
+    {
+      "mode": "australian",
+      "year": 1993,
+      "key": "celebration|kylie minogue",
+      "wasPlayable": true,
+      "fingerprint": "5b9de29bf9d413a442431c88fec8d67ccd236dfca7eb3e9653f6a98b97b512f3"
+    },
+    {
+      "mode": "australian",
+      "year": 1994,
+      "key": "greatest gift|tina arena",
+      "wasPlayable": true,
+      "fingerprint": "5ca65cb12288608a0db6a0af7779683939121c0d9d2abb8133e8cab253959ee3"
+    },
+    {
+      "mode": "australian",
+      "year": 1994,
+      "key": "love is the answer|tina arena",
+      "wasPlayable": true,
+      "fingerprint": "8ce3fb810fa05e4672c7361ae580931471650d6f28fa87c664edd055b434f26f"
+    },
+    {
+      "mode": "australian",
+      "year": 1994,
+      "key": "that s the way a woman feels|tina arena",
+      "wasPlayable": true,
+      "fingerprint": "d9df92aa87561f668577840bd5646c1c3f6a2cbd1c6396c599cebe98c1cbf7eb"
+    },
+    {
+      "mode": "australian",
+      "year": 1995,
+      "key": "show me heaven|tina arena",
+      "wasPlayable": true,
+      "fingerprint": "34b050e0b8d541f783c6f1cbf3ccae11b5f8de3e1368a309d14e3eb36a25367c"
+    },
+    {
+      "mode": "australian",
+      "year": 1995,
+      "key": "sorrento moon i remember|tina arena",
+      "wasPlayable": true,
+      "fingerprint": "6268eb0384e418dbc4135c6ada0c6fe6e70ab7aa4b63ca5c3a5649e277d70644"
+    },
+    {
+      "mode": "australian",
+      "year": 1996,
+      "key": "love s funny that way|tina arena",
+      "wasPlayable": true,
+      "fingerprint": "5a5949078dcab4f564e743f416dc9fbb60fd1ea51deed6929bb071e2ca939721"
+    },
+    {
+      "mode": "australian",
+      "year": 1996,
+      "key": "on the line|tina arena",
+      "wasPlayable": true,
+      "fingerprint": "c3336925c7bc2695718886c881f94363cba397a8b7a2d47aa0147e2b8d969845"
+    },
+    {
+      "mode": "australian",
+      "year": 1996,
+      "key": "best for you|tina arena",
+      "wasPlayable": true,
+      "fingerprint": "308d00b8763398c0346043d10af334c10a6daebf1a73995bb5be8389a0ceee36"
+    },
+    {
+      "mode": "australian",
+      "year": 1996,
+      "key": "surrento moon i remember|tina arena",
+      "wasPlayable": true,
+      "fingerprint": "ab323d9956335b16f930771174297792e6ec0005c31c4d5765e8383d447516c9"
+    },
+    {
+      "mode": "australian",
+      "year": 1997,
+      "key": "diving in the deep end|natalie imbruglia",
+      "wasPlayable": true,
+      "fingerprint": "d7e8fd742a70e67a5e5e649a39ce31bce1d392581dfc36d19c658a09479a71b3"
+    },
+    {
+      "mode": "australian",
+      "year": 1997,
+      "key": "smoke|natalie imbruglia",
+      "wasPlayable": true,
+      "fingerprint": "b9933dd02ef1cdac6bce09ea512d7902bf58bbbebf6b90d02292a126ba7d79f7"
+    },
+    {
+      "mode": "australian",
+      "year": 1997,
+      "key": "something better|natalie imbruglia",
+      "wasPlayable": true,
+      "fingerprint": "d3f150bb6098734ce151d1ae2fcb44dbfdac4ab3b5e447ed9bf2252e244c1f3d"
+    },
+    {
+      "mode": "australian",
+      "year": 1997,
+      "key": "torn|natalie imbruglia",
+      "wasPlayable": true,
+      "fingerprint": "9f95804dd7e08aaef0cc0a6044b1030b8ecf220c886d6e5213185ddc81721073"
+    },
+    {
+      "mode": "australian",
+      "year": 1998,
+      "key": "left of the middle|natalie imbruglia",
+      "wasPlayable": true,
+      "fingerprint": "4c8b9b971c2f1c3cb26f077eb410b5c613616de1f9f57091c70625fc83f1cdf2"
+    },
+    {
+      "mode": "australian",
+      "year": 1999,
+      "key": "why|natalie imbruglia",
+      "wasPlayable": true,
+      "fingerprint": "659dcfb054c587aaabbb148d65e9ed83b1e13db145628fbd0fd8ff21c41129b6"
+    },
+    {
+      "mode": "australian",
+      "year": 1999,
+      "key": "identify|natalie imbruglia",
+      "wasPlayable": true,
+      "fingerprint": "10c7b4e796a0bc9b96bfc6e783f98367925a162530ec73727b91532dbfa08892"
+    },
+    {
+      "mode": "australian",
+      "year": 2000,
+      "key": "did it again|kylie minogue",
+      "wasPlayable": true,
+      "fingerprint": "fef38274a8a603cdf7b3f2100d6b9f0358fad685075a33b857b3d4c18cc27af4"
+    },
+    {
+      "mode": "australian",
+      "year": 2001,
+      "key": "the soul of the beat|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "3b449315242d38b665243ab48a6001c238e42e475fef10a1ed803fa14e076e28"
+    },
+    {
+      "mode": "australian",
+      "year": 2001,
+      "key": "don t stop|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "06551fef3b4b5a479e84a0429c181ae242c8885654548065a6a08cec63dfb428"
+    },
+    {
+      "mode": "australian",
+      "year": 2001,
+      "key": "sojourn|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "7fffd26f5cc986c7f24d044cf608243fd188c8b87451e4ce7b7f132d795b542d"
+    },
+    {
+      "mode": "australian",
+      "year": 2001,
+      "key": "running from the storm|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "4a97a19073d08c2fe948ae6bd6e43bd98d0e97cc931235d69b02cc5cdc399879"
+    },
+    {
+      "mode": "australian",
+      "year": 2002,
+      "key": "fever|kylie minogue",
+      "wasPlayable": true,
+      "fingerprint": "1701f46b10790c1dcfc1585acf05ef73ddd752b2653278dab021fea9d0339ce6"
+    },
+    {
+      "mode": "australian",
+      "year": 2002,
+      "key": "full tilt boogie|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "b909f801e88988e6c2a6239f9f6375d2678901d63122da488832ae155cb34f9e"
+    },
+    {
+      "mode": "australian",
+      "year": 2002,
+      "key": "riding under one banner|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "3b086487608501034ea375d0b70a0134477b39d0b9d91075f947afb73390d6ef"
+    },
+    {
+      "mode": "australian",
+      "year": 2002,
+      "key": "the sentinel|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "c64ff01bcae42673b25d0c12310d90bc242b37fbc86c27d14e1170123f66ba20"
+    },
+    {
+      "mode": "australian",
+      "year": 2003,
+      "key": "dumb enough|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "6fb9385bcef64c9ce2fe32f00c6c14e68a93820044821e766b6f7038bc1e8ddd"
+    },
+    {
+      "mode": "australian",
+      "year": 2003,
+      "key": "mic felon|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "df398a55453fa4a734bb93fb47d943af2f0c8225c6c0e5d3a30715fae8c1f6ee"
+    },
+    {
+      "mode": "australian",
+      "year": 2003,
+      "key": "simmy and the gravyspitter|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "cee500d3ac1165bbbeb77994a00fb293d03eda11026190673cebb05f29616cbd"
+    },
+    {
+      "mode": "australian",
+      "year": 2003,
+      "key": "the calling|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "c21d3e4d8a187d81d3ac4a7a557cd0abb59a9bfee4fe1ddb5530cd802978fbf6"
+    },
+    {
+      "mode": "australian",
+      "year": 2003,
+      "key": "tomorrow will do|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "2ab707dec41adc59017ba1b17a09dfc25e4a4005901c3c9a45264ec7cf6bf1de"
+    },
+    {
+      "mode": "australian",
+      "year": 2004,
+      "key": "back once again|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "397d40a37b2b0cc3f28a01792df9e504dab3939099d306754bfc1f77c2433203"
+    },
+    {
+      "mode": "australian",
+      "year": 2004,
+      "key": "nosebleed section|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "80cc546e2281901d15fbe0262118bee9460f63d2ec24f1f1af468daf4e85f46e"
+    },
+    {
+      "mode": "australian",
+      "year": 2004,
+      "key": "scar|missy higgins",
+      "wasPlayable": true,
+      "fingerprint": "fb16f7ca4032de9e9f428faf52c7898b27e50d40fc29ee947faf7380e419bb5d"
+    },
+    {
+      "mode": "australian",
+      "year": 2005,
+      "key": "laying blame|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "0e63bc78a6fa581b83782eff2c60328d52a8100db4de7e0011109c9c2a24c415"
+    },
+    {
+      "mode": "australian",
+      "year": 2005,
+      "key": "testimonial year|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "a5a4175d704bc0f7704ce7482da93f9a5ba03bab949bed083d16dcbcb661f22d"
+    },
+    {
+      "mode": "australian",
+      "year": 2005,
+      "key": "cactus garden special|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "d74cc5dda61f75e88fed7d605101c558e7cc7f29ea4868ddffc96126ad1ffb4a"
+    },
+    {
+      "mode": "australian",
+      "year": 2006,
+      "key": "what a great night|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "810a5b01682a44f618b6daccda595fd4ab94e3b8fbe601cc35626e1e15da55e0"
+    },
+    {
+      "mode": "australian",
+      "year": 2006,
+      "key": "circuit breaker|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "927a5a4ee4a6f6b901e5a5f63153515035f4cd3b556e001af99750af1f8b108e"
+    },
+    {
+      "mode": "australian",
+      "year": 2006,
+      "key": "the hard road|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "3217bcc24c71ce9a7d14f99991063eed33678c01a51c496788498a3f20d9a57a"
+    },
+    {
+      "mode": "australian",
+      "year": 2007,
+      "key": "the stopping all stations tour|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "b407a740056a5fd25cd49eae765fd3451a060a6ba8800d02883b027b3fe8da5b"
+    },
+    {
+      "mode": "australian",
+      "year": 2007,
+      "key": "the complete hard road restrung launch concert|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "33f2b0c5b5d2271f76c7961f3efac0daa3a81f3bd2c9acf7b4308c7d52689f08"
+    },
+    {
+      "mode": "australian",
+      "year": 2007,
+      "key": "restrung|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "2aec007765ff023e9e6ed4e7dc8eafc7ea1ef8ba4e30f580a91940cefe2bc749"
+    },
+    {
+      "mode": "australian",
+      "year": 2008,
+      "key": "recapturing the vibe restrung|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "47e3f1770fe1b6524e05a3c0fb69d312dc99239593560a9fd1a4cc5ea436f532"
+    },
+    {
+      "mode": "australian",
+      "year": 2008,
+      "key": "clown prince|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "57c07d1d803e2459aba514d267a3c0a7c48e85335cd412ed51e7b4f8f2c68e94"
+    },
+    {
+      "mode": "australian",
+      "year": 2008,
+      "key": "peachy|missy higgins",
+      "wasPlayable": true,
+      "fingerprint": "5bd046f3126db1ba68079a1cfd6b2fb9e44c5d97f84dd85793df264aa7c788a4"
+    },
+    {
+      "mode": "australian",
+      "year": 2008,
+      "key": "ten days|missy higgins",
+      "wasPlayable": true,
+      "fingerprint": "a8661f8389c06826f504094e9bdab2bd88eb048472e9604cbf4121006de74e8d"
+    },
+    {
+      "mode": "australian",
+      "year": 2009,
+      "key": "roll on up restrung|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "3ebbc59608daeca75b2ff8f0c5261e72a4d79cf43a52d4f9b8482a51f2ada8c8"
+    },
+    {
+      "mode": "australian",
+      "year": 2009,
+      "key": "last confession|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "6042259abc414d2916928033cb190188de021eeaaef16dafd38d6201073cb3e5"
+    },
+    {
+      "mode": "australian",
+      "year": 2009,
+      "key": "super official|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "d3e39eb463f1707d434d6215557f96744c8e906c5792b7bfd3c39b9ec55d03e7"
+    },
+    {
+      "mode": "australian",
+      "year": 2009,
+      "key": "the return|hilltop hoods",
+      "wasPlayable": true,
+      "fingerprint": "ecdd22343c301c28a7dd1292bf0a47881d471e8e4dc0297cf6abea1c9edc1539"
+    },
+    {
+      "mode": "australian",
+      "year": 2010,
+      "key": "desire be desire go jam|tame impala",
+      "wasPlayable": true,
+      "fingerprint": "eed2c8665df7c0f1072c2baa4e3d83205d0d9cbecd1e8a65b98df29cfa1dcf2c"
+    },
+    {
+      "mode": "australian",
+      "year": 2010,
+      "key": "she s not the only one i love|tame impala",
+      "wasPlayable": true,
+      "fingerprint": "9891d5f29d6e2948ecb69c07d5e2aa00432ba42397dbbfacdf59fad899576c0e"
+    },
+    {
+      "mode": "australian",
+      "year": 2010,
+      "key": "skeleton tiger|tame impala",
+      "wasPlayable": true,
+      "fingerprint": "4e06487ef840e41a810d24ae54cf9c6d7e8c284c348e857f702aecb1bad39a40"
+    },
+    {
+      "mode": "australian",
+      "year": 2011,
+      "key": "somebody that i used to know|gotye",
+      "wasPlayable": true,
+      "fingerprint": "4d4b4c73723f138c7a96466b879f8db4d277378ecda0063fa31bab6836585103"
+    },
+    {
+      "mode": "australian",
+      "year": 2011,
+      "key": "good night|reece mastin",
+      "wasPlayable": true,
+      "fingerprint": "d31ee934e330ff9acc83f725e87eba782c8db46c664fe08f81232af69142a7c8"
+    },
+    {
+      "mode": "australian",
+      "year": 2012,
+      "key": "beside you|5 seconds of summer",
+      "wasPlayable": true,
+      "fingerprint": "17e8704c893375ed7f159e22450ecaece94300a972cc1b0b0f906fce6d2e2598"
+    },
+    {
+      "mode": "australian",
+      "year": 2012,
+      "key": "out of my limit|5 seconds of summer",
+      "wasPlayable": true,
+      "fingerprint": "377a624cb0f2f5607aab0803a6b091980c761ec98829671b6247a70e7c8d8d73"
+    },
+    {
+      "mode": "australian",
+      "year": 2012,
+      "key": "too late|5 seconds of summer",
+      "wasPlayable": true,
+      "fingerprint": "ba1e3798875556d624666dc47147ffc491dfe514302e10bd21dacdd4aa848e6a"
+    },
+    {
+      "mode": "australian",
+      "year": 2012,
+      "key": "unpredictable|5 seconds of summer",
+      "wasPlayable": true,
+      "fingerprint": "d564fd1648d6749cd38cd661ca8ad410a1e85556faaeae36c4521a0f845e8908"
+    },
+    {
+      "mode": "australian",
+      "year": 2013,
+      "key": "i ve got this friend|5 seconds of summer",
+      "wasPlayable": true,
+      "fingerprint": "1b817fc42eac95b6fa4ffaab80506696202dfaf070d1e50dff842576e3c50537"
+    },
+    {
+      "mode": "australian",
+      "year": 2013,
+      "key": "we are young|5 seconds of summer",
+      "wasPlayable": true,
+      "fingerprint": "29e289864fbcc401e58ed62582ddf984ccda34439d12a52312fe2ba95fdff88d"
+    },
+    {
+      "mode": "australian",
+      "year": 2013,
+      "key": "wherever you are|5 seconds of summer",
+      "wasPlayable": true,
+      "fingerprint": "1d45ffeaabe512c4f019521d7169ff417ae4db2f1ce7e8a7842f6371932eb268"
+    },
+    {
+      "mode": "australian",
+      "year": 2014,
+      "key": "long way home|5 seconds of summer",
+      "wasPlayable": true,
+      "fingerprint": "4ef43501d2bfd065da9f2eb8aa3a500360296433620f27b697ac3e01a4b69328"
+    },
+    {
+      "mode": "australian",
+      "year": 2014,
+      "key": "american idiot|5 seconds of summer",
+      "wasPlayable": true,
+      "fingerprint": "fa25cfc3e811607e571749c5f1c9d2877e1314da091f48429175fe19c9b91fee"
+    },
+    {
+      "mode": "australian",
+      "year": 2014,
+      "key": "tomorrow never dies|5 seconds of summer",
+      "wasPlayable": true,
+      "fingerprint": "9bab718a5bb14787ed14aaee9409787d205950ac238ea9ab68d115ea3fd3c97d"
+    },
+    {
+      "mode": "australian",
+      "year": 2015,
+      "key": "money|5 seconds of summer",
+      "wasPlayable": true,
+      "fingerprint": "04f91b946e1ddc42cf3b5b78e3e7db8346b500c6ed1675e972af0a90bf2cd0ff"
+    },
+    {
+      "mode": "australian",
+      "year": 2015,
+      "key": "safety pin|5 seconds of summer",
+      "wasPlayable": true,
+      "fingerprint": "17531cb4fe1c629a3b33d3381cd7a2e58b554b56aad6ce0ca73b57739a58b13a"
+    },
+    {
+      "mode": "australian",
+      "year": 2015,
+      "key": "hey everybody|5 seconds of summer",
+      "wasPlayable": true,
+      "fingerprint": "f895ecaf67545188e5f089b7ade6c0e7b09a3af75782ca5f55a7107aa0d1677e"
+    },
+    {
+      "mode": "australian",
+      "year": 2015,
+      "key": "amnesia|5 seconds of summer",
+      "wasPlayable": true,
+      "fingerprint": "79733c16d0f8c0be98cacf6c4fa006c7d92abb1da0c141b15a8269361e4bdadd"
+    },
+    {
+      "mode": "australian",
+      "year": 2016,
+      "key": "never be like you|flume",
+      "wasPlayable": true,
+      "fingerprint": "1cdc6184096fc16f57d5281964cbe77d2de9e9c2d217b5f79e7b8f56cfd0b1f8"
+    },
+    {
+      "mode": "australian",
+      "year": 2016,
+      "key": "the greatest|sia",
+      "wasPlayable": true,
+      "fingerprint": "be0dbe00985a13b7348c175b8c2ed3068f87896a71f3f7fff17a44d79cafa9e9"
+    },
+    {
+      "mode": "australian",
+      "year": 2017,
+      "key": "love paranoia|tame impala",
+      "wasPlayable": true,
+      "fingerprint": "89160fc8b3d1269fc70777a753fffa7daba5117110982952d72cf143ede8f626"
+    },
+    {
+      "mode": "australian",
+      "year": 2017,
+      "key": "powerlines|tame impala",
+      "wasPlayable": true,
+      "fingerprint": "cbaa4f3fe9956f4b3833f8f5317f3d585b96da3aa008f43013d4f24415f958d1"
+    },
+    {
+      "mode": "australian",
+      "year": 2017,
+      "key": "list of people to try and forget about|tame impala",
+      "wasPlayable": true,
+      "fingerprint": "9840bedf795b495151f10e90ef778c680b51c3c8cec118c02c1e42e19a079560"
+    },
+    {
+      "mode": "australian",
+      "year": 2017,
+      "key": "let it happen|tame impala",
+      "wasPlayable": true,
+      "fingerprint": "88457121a22ecb3b2add0d42cf18ce18155bc1a15d460cc22acedb9a609143b2"
+    },
+    {
+      "mode": "australian",
+      "year": 2018,
+      "key": "youngblood|5 seconds of summer",
+      "wasPlayable": true,
+      "fingerprint": "7aa204600f5603d6342bbea16d73e3006d600a4f015dfa15cdd97f6b263d5c97"
+    },
+    {
+      "mode": "australian",
+      "year": 2018,
+      "key": "no roots|5 seconds of summer",
+      "wasPlayable": true,
+      "fingerprint": "1ffef562a4e92c5808cfa13f8434e2f906bbef96991c03f9b88546793780d0b7"
+    },
+    {
+      "mode": "australian",
+      "year": 2018,
+      "key": "why won t you love me|5 seconds of summer",
+      "wasPlayable": true,
+      "fingerprint": "6b1316539045470b856f36cdfbaa541e743458caf014ebab1acfea9132ef15df"
+    },
+    {
+      "mode": "australian",
+      "year": 2019,
+      "key": "easier|5 seconds of summer",
+      "wasPlayable": true,
+      "fingerprint": "7a6d1e3dd656aedf843cbf775ae26ba5b46d3705cd9a010bd7ea868509fad744"
+    },
+    {
+      "mode": "australian",
+      "year": 2019,
+      "key": "don t stop|5 seconds of summer",
+      "wasPlayable": true,
+      "fingerprint": "2b46c5f9cb33e97e7f3394b4fa260b92ad67205b9856a0df431c8b27bb5dcf00"
+    },
+    {
+      "mode": "australian",
+      "year": 2019,
+      "key": "who do you love|5 seconds of summer",
+      "wasPlayable": true,
+      "fingerprint": "f9676f482173690be08ab350a02bce508e0adaa5a944c5454d5710ffe625464d"
+    },
+    {
+      "mode": "australian",
+      "year": 2020,
+      "key": "easy|troye sivan",
+      "wasPlayable": true,
+      "fingerprint": "466e3cfe5b69353a43f7ec704dc944b6653333071f0a7bcd872709e0f1759fba"
+    },
+    {
+      "mode": "australian",
+      "year": 2020,
+      "key": "rager teenager|troye sivan",
+      "wasPlayable": true,
+      "fingerprint": "0166eac656d0973d5f4f6b3abf0bdd400575c18508de9ae844180317b92cdab8"
+    },
+    {
+      "mode": "australian",
+      "year": 2021,
+      "key": "youth|troye sivan",
+      "wasPlayable": true,
+      "fingerprint": "d8ba8a9d60ebe5c91f6594d4a2b045124a7687842b643151e55aacbe1d5adc4c"
+    },
+    {
+      "mode": "australian",
+      "year": 2021,
+      "key": "angel baby|troye sivan",
+      "wasPlayable": true,
+      "fingerprint": "aae4162092ad9c617709134fa213dcfaf505bef695f6421f127073565e1484d3"
+    },
+    {
+      "mode": "australian",
+      "year": 2021,
+      "key": "bye bye|genesis owusu",
+      "wasPlayable": true,
+      "fingerprint": "90e7c013aea3ed878adfa777729886d20c21204d63774801ef6a7e008cfc6a57"
+    },
+    {
+      "mode": "australian",
+      "year": 2022,
+      "key": "bloom|troye sivan",
+      "wasPlayable": true,
+      "fingerprint": "2f0a8b67dfdf02f5f3ff1886bf4777a875b0228b09eb20a29dab748e12b7c682"
+    },
+    {
+      "mode": "australian",
+      "year": 2022,
+      "key": "what a heavenly way to die|troye sivan",
+      "wasPlayable": true,
+      "fingerprint": "bfa02fc3229a02c73202c07b7bfa03097db2c9e08c1ca3f5bd3945100d617262"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1958,
+      "key": "rumble|link wray",
+      "wasPlayable": true,
+      "fingerprint": "0d7ee24e7d828b7dac2b0dc291636ae4f0565da1b0248bfb14732ba9b1c8cbf7"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1962,
+      "key": "telstar|tornados",
+      "wasPlayable": true,
+      "fingerprint": "7aef34d1eb0b040a2469f2903176b2f45a9c983088aff4330c489097dfd6ca2c"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1964,
+      "key": "you really got me|kinks",
+      "wasPlayable": true,
+      "fingerprint": "e45369d1e5ffd122450e91314ed28b27bd162aad52f8f9dbbd883eaf5dd369c1"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1966,
+      "key": "tomorrow never knows|beatles",
+      "wasPlayable": true,
+      "fingerprint": "c7223dbfa6cda352427968f72af0ef4d54852c7fb61bcf98eecb6d45b07e6e2f"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1967,
+      "key": "white rabbit|jefferson airplane",
+      "wasPlayable": true,
+      "fingerprint": "bea8d5796e139473bd7e642f45b46ef7b073757ad1e7eb7e783dd75bb41ee5ca"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1969,
+      "key": "space oddity|david bowie",
+      "wasPlayable": true,
+      "fingerprint": "1570074d7b53e0d859546f35fe2ab2f04ad65c6b0ce53d88372dc8acf89b241c"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1971,
+      "key": "baba o riley|who",
+      "wasPlayable": true,
+      "fingerprint": "a354e130c55ee457f3fe46f45605a74e8584179da4e10be2d664ecbdb60f8985"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1972,
+      "key": "superstition|stevie wonder",
+      "wasPlayable": true,
+      "fingerprint": "0a5ca9c996f443e57faf5a12dcbc55175d869a0418216ebfd14c709f0b8e00e1"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1974,
+      "key": "autobahn|kraftwerk",
+      "wasPlayable": true,
+      "fingerprint": "5535318e23cddfdd4994e9f74f84d2faaa9bab65092158012ac468e73cb6baa0"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1975,
+      "key": "bohemian rhapsody|queen",
+      "wasPlayable": true,
+      "fingerprint": "086b29dbaee02a89eb2dfdf850465e35539a26402089758c5d58051eb3a672c1"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1977,
+      "key": "i feel love|donna summer",
+      "wasPlayable": true,
+      "fingerprint": "0ab8804dcf84ef90f4cb3e6f3278b086451fc1d0f8846307c302337081029509"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1979,
+      "key": "cars|gary numan",
+      "wasPlayable": true,
+      "fingerprint": "407d6efb7ec116c23113d9dd594194b104d2f2532b4f1ffac2e37bf8a1550ee9"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1980,
+      "key": "once in a lifetime|talking heads",
+      "wasPlayable": true,
+      "fingerprint": "a6af0bb3d1182b73fa5142d07d67761ea300bc94a5af4b5a77ae584d0e64c36e"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1981,
+      "key": "tainted love|soft cell",
+      "wasPlayable": true,
+      "fingerprint": "77481a1e74d05bf9710e7004cd2dd4cd68ce3206b10f598fd7a3efbb86cd23e0"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1983,
+      "key": "blue monday|new order",
+      "wasPlayable": true,
+      "fingerprint": "ee69fd95bef7b8bf5c15614c74c5aa63c56cd8a3a353b955572be5a776b7b12b"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1985,
+      "key": "running up that hill|kate bush",
+      "wasPlayable": true,
+      "fingerprint": "ce574e647c3ed6d4f45adf34801c951c7857d480c39e4b3c82a2ff9afec232b1"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1988,
+      "key": "fast car|tracy chapman",
+      "wasPlayable": true,
+      "fingerprint": "ef9be85f429f9559ae65005f9e5747353d89aca07fc8923712760a733060977f"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1989,
+      "key": "personal jesus|depeche mode",
+      "wasPlayable": true,
+      "fingerprint": "3b7efbb958f8fc25d3da0e3ae0f6c1bbfe4f32f922332f5e14fd5018f9e10fd0"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1990,
+      "key": "groove is in the heart|deee lite",
+      "wasPlayable": true,
+      "fingerprint": "020ec99fc791567363b10eb57b3c50822e7aaef33af9e92a20c1378acb344f4f"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1991,
+      "key": "unfinished sympathy|massive attack",
+      "wasPlayable": true,
+      "fingerprint": "a30a1e0f61c3825bdf2041c54143e9423090be79cdfaa1dc12ffe5793b22da85"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1995,
+      "key": "common people|pulp",
+      "wasPlayable": true,
+      "fingerprint": "19bdd1daade4eeb1c79f6862c367e81c82e9dae77aaa400cb33886430fb51191"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1996,
+      "key": "virtual insanity|jamiroquai",
+      "wasPlayable": true,
+      "fingerprint": "6fe6fea217a6ca8abbd6b88c44598c3237290099eef47bcc4382df5a3bbdd8fd"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1997,
+      "key": "song 2|blur",
+      "wasPlayable": true,
+      "fingerprint": "e80f8c59c7afdeeb8f401ccf788bdc9d57c009431df1f1ea596ca600186749e6"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1998,
+      "key": "music sounds better with you|stardust",
+      "wasPlayable": true,
+      "fingerprint": "9480f55263a16cc8b66ccf463a3ccb5f8317ec7d87d0c72f9cf2de4a12d0b19c"
+    },
+    {
+      "mode": "unexpected",
+      "year": 1999,
+      "key": "porcelain|moby",
+      "wasPlayable": true,
+      "fingerprint": "ce29d07243587dee69f3fd0bea367bf9d0f0076644348831db9e8a8c31c566fe"
+    },
+    {
+      "mode": "unexpected",
+      "year": 2000,
+      "key": "one more time|daft punk",
+      "wasPlayable": true,
+      "fingerprint": "26de3b46276b9adcd0314f942b248ee58651a5ca190809b1b02ab965761e5ea8"
+    },
+    {
+      "mode": "unexpected",
+      "year": 2001,
+      "key": "can t get you out of my head|kylie minogue",
+      "wasPlayable": true,
+      "fingerprint": "af00eebbfe460e873674f91cdff6e54efdd34c557251aee76270b50ff3d91cde"
+    },
+    {
+      "mode": "unexpected",
+      "year": 2003,
+      "key": "are you gonna be my girl|jet",
+      "wasPlayable": true,
+      "fingerprint": "735c3d6c73c09a66f0d147f2ed54589215146da79d08400bf448a766543ce765"
+    },
+    {
+      "mode": "unexpected",
+      "year": 2005,
+      "key": "feel good inc|gorillaz",
+      "wasPlayable": true,
+      "fingerprint": "63dbd9112ca8044787d21d1c61cc05af92472636768c86d35f13602a699c9d39"
+    },
+    {
+      "mode": "unexpected",
+      "year": 2006,
+      "key": "crazy|gnarls barkley",
+      "wasPlayable": true,
+      "fingerprint": "805c9d68153a56419c433a42e0df4063b0280057300b5744f95a565c725f3a01"
+    },
+    {
+      "mode": "unexpected",
+      "year": 2009,
+      "key": "bulletproof|la roux",
+      "wasPlayable": true,
+      "fingerprint": "ce67dbc38e22dd82ff221fa4ef8172a61f2abd71839966e722c942448604ae44"
+    },
+    {
+      "mode": "unexpected",
+      "year": 2011,
+      "key": "midnight city|m83",
+      "wasPlayable": true,
+      "fingerprint": "0f072a38e46512002d5cba35dd1a604085a1210d455f9dd2bf5aeef6442c06c9"
+    },
+    {
+      "mode": "unexpected",
+      "year": 2013,
+      "key": "get lucky|daft punk",
+      "wasPlayable": true,
+      "fingerprint": "d29a76466360a26dbbfeeb5b4ef97b1ffcf1662a0036d522702b970db74512f2"
+    },
+    {
+      "mode": "unexpected",
+      "year": 2014,
+      "key": "uptown funk|mark ronson",
+      "wasPlayable": true,
+      "fingerprint": "33b906c9b7afe7ffe9ad8a84c003b2a11a360442b62bcd7dc2a4a89b464c5f78"
+    },
+    {
+      "mode": "unexpected",
+      "year": 2016,
+      "key": "redbone|childish gambino",
+      "wasPlayable": true,
+      "fingerprint": "14c452d0370696a3491fdbf91de8e0ea474e149ae3efdb13ea36d054ae24a628"
+    },
+    {
+      "mode": "unexpected",
+      "year": 2017,
+      "key": "feel it still|portugal the man",
+      "wasPlayable": true,
+      "fingerprint": "d15b6eb6c81e62998df197acaaa1cb879721b3683ad22a1132e512e1d86e8639"
+    },
+    {
+      "mode": "unexpected",
+      "year": 2019,
+      "key": "bad guy|billie eilish",
+      "wasPlayable": true,
+      "fingerprint": "d236c7a3eb54f0318bd4e686b293197f223b44d60b95bc50b74352f503be90d3"
+    },
+    {
+      "mode": "unexpected",
+      "year": 2020,
+      "key": "levitating|dua lipa",
+      "wasPlayable": true,
+      "fingerprint": "5f782be151e40877f525824e84e1d51aaf557af6c5f070b1a4a4bc00cc60dac2"
+    },
+    {
+      "mode": "unexpected",
+      "year": 2021,
+      "key": "good 4 u|olivia rodrigo",
+      "wasPlayable": true,
+      "fingerprint": "4795756498838bf86533dc4e54e9820fd52b7be71022f6e47a675afee4908a29"
+    },
+    {
+      "mode": "unexpected",
+      "year": 2022,
+      "key": "about damn time|lizzo",
+      "wasPlayable": true,
+      "fingerprint": "84507aad679d0282b2ad63993583099b29d111b3ac78df4ace34664abc3f6876"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1950,
+      "key": "goodnight irene|gordon jenkins",
+      "wasPlayable": true,
+      "fingerprint": "263a99308821ed6f9b5cde519b630fecf2d747853815d8c8c464781c3c917c36"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1951,
+      "key": "too young|nat king cole",
+      "wasPlayable": true,
+      "fingerprint": "6e9eec5ab58914b3b95a0493d84b58c2b9838c011a7565ebdfe4da4c763c97ce"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1952,
+      "key": "blue tango|leroy anderson",
+      "wasPlayable": true,
+      "fingerprint": "54b7859ac4b671b6265fe20bc8523c32adb89f8923e3c884b4cb9db458839441"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1953,
+      "key": "the song from moulin rouge|percy faith",
+      "wasPlayable": true,
+      "fingerprint": "f7b8170bde14dccf3f4e30ce5ba04a2595d68b13e6257b91fcdb3d0f6d2411c6"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1954,
+      "key": "little things mean a lot|kitty kallen",
+      "wasPlayable": true,
+      "fingerprint": "d3b7923dcc42772151a58f69480a9ff9371991a698ac098765ff4d240232029d"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1955,
+      "key": "cherry pink and apple blossom white|perez prado",
+      "wasPlayable": true,
+      "fingerprint": "35e1ab85c6d8cd9853c08fdd7c88b6cb3b0763e56f291992d190e7eae4139bc6"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1956,
+      "key": "heartbreak hotel|elvis presley",
+      "wasPlayable": true,
+      "fingerprint": "5b140c114631457de3c7394563bd4bf5d6434bb777051663df2a565ce4583834"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1957,
+      "key": "all shook up|elvis presley",
+      "wasPlayable": true,
+      "fingerprint": "c66b3ad8118756df59ff0c3e8afe84114eed9ff8a5b984f7319a7768c0bc7239"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1958,
+      "key": "volare nel blu dipinto di blu|domenico modugno",
+      "wasPlayable": true,
+      "fingerprint": "8bd2e623cb59e8624e520e3cf01a5e1f7a19af5259c95bd95203386098ba4308"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1959,
+      "key": "the battle of new orleans|johnny horton",
+      "wasPlayable": true,
+      "fingerprint": "8847701a9f4d5b459d85bf3cf56f997953cd7b95982e1c381f528aac0477a803"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1960,
+      "key": "the theme from a summer place|percy faith",
+      "wasPlayable": true,
+      "fingerprint": "6513a89e39ceadbc9e2f7a1ae79cf48719b6c33dc0f5653b26a8a8798e976174"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1961,
+      "key": "tossin and turnin|bobby lewis",
+      "wasPlayable": true,
+      "fingerprint": "991c029251027080bda82d59f563327b3b1692ac9ccaadb1a208b97c8c8b18d6"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1962,
+      "key": "stranger on the shore|acker bilk",
+      "wasPlayable": true,
+      "fingerprint": "0f26057f91a282e8dd845edb18b232e504a66c0918ed461332416a5ef771a2a9"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1963,
+      "key": "surfin usa|beach boys",
+      "wasPlayable": true,
+      "fingerprint": "f820fc5f05ed80f0e2038d9c9ec5dd72e9d1a27c7bc6a64809f65dd29b578696"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1964,
+      "key": "i want to hold your hand|beatles",
+      "wasPlayable": true,
+      "fingerprint": "df1c4a3c087d2504071f15b686f72f90fe3bfe74ea3cafca9c3ecf816e2f55f7"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1965,
+      "key": "wooly bully|sam the sham",
+      "wasPlayable": true,
+      "fingerprint": "4d9e30bb4a31a44b6872b88b0beaaf6c46ceed2107c3e976cf87894cd784099a"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1966,
+      "key": "california dreamin|mamas",
+      "wasPlayable": true,
+      "fingerprint": "1863353f57de126659f17651581a59abf631ec4d1074a2497ec18bcf5f33d519"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1967,
+      "key": "to sir with love|lulu",
+      "wasPlayable": true,
+      "fingerprint": "31f8d585f36afc2ba72daa39e63dc9bcbfb6cc8961abe197126e0bee707a5945"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1968,
+      "key": "hey jude|beatles",
+      "wasPlayable": true,
+      "fingerprint": "5a243e7f52735b2ce55f1600f86e39fbf607bbb15cb775e0714671783df93f27"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1969,
+      "key": "sugar sugar|archies",
+      "wasPlayable": true,
+      "fingerprint": "ae5ee8491691e2fbaaad7c6607e793d0fbefb6b2ea52161f55c9142e6b58239d"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1970,
+      "key": "bridge over troubled water|simon",
+      "wasPlayable": true,
+      "fingerprint": "bf3d02111bc98204f3c3b67a61408e10751f5d828fe08384d1ae5cb0496294a2"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1971,
+      "key": "joy to the world|three dog night",
+      "wasPlayable": true,
+      "fingerprint": "9ff25464378ece97186238b8f6adcb94c0b4615cd316bbfe0a26e2b835eabc22"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1972,
+      "key": "the first time ever i saw your face|roberta flack",
+      "wasPlayable": true,
+      "fingerprint": "ea2a0df8cb9f858c8f8517ca9ed062b7764702964bc88022b0db068a9fe392c3"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1973,
+      "key": "tie a yellow ribbon round the ole oak tree|tony orlando",
+      "wasPlayable": true,
+      "fingerprint": "5bdfb95ecb08efcd6a09828f430cb6cb680ca1dd5637cdd1bb0d9f7b2ccea6ad"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1974,
+      "key": "the way we were|barbara streisand",
+      "wasPlayable": true,
+      "fingerprint": "ae3bfa1913726e11515d03880511c9654dccc67a86494b2786e7d4257c63fe0d"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1975,
+      "key": "love will keep us together|captain",
+      "wasPlayable": true,
+      "fingerprint": "eaa4117bdb374b63f755df6abc2f7b25162c390893d78aced4a07a6c9ebd36e5"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1976,
+      "key": "silly love songs|wings",
+      "wasPlayable": true,
+      "fingerprint": "fcc494c1f249e0c0c51955395230325bc7ac2670dcea5fbba52a37dcf4b07448"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1977,
+      "key": "tonight s the night gonna be alright|rod stewart",
+      "wasPlayable": true,
+      "fingerprint": "187f4daf8e713d476226c05b4fb9ab48bba41be77fb1c64630897fe5caa24992"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1978,
+      "key": "shadow dancing|andy gibb",
+      "wasPlayable": true,
+      "fingerprint": "1fa7e8306736bab6092255e897b8964e692dc269b7e9ee964180bb9cb190289d"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1979,
+      "key": "my sharona|knack",
+      "wasPlayable": true,
+      "fingerprint": "f61bef388a58756c999ea4f6d723db7c7e71b5aaac74ad0ec4045caa753b5a67"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1980,
+      "key": "call me|blondie",
+      "wasPlayable": true,
+      "fingerprint": "3d5408aef9617200f8296c641923687a58cf9283f5ec736ff17184314b457ef3"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1981,
+      "key": "bette davis eyes|kim carnes",
+      "wasPlayable": true,
+      "fingerprint": "2b0dfddc795cf8f93896741298e96f264f5b5a95ded4aef78fb351ca4dac03d7"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1982,
+      "key": "physical|olivia newton john",
+      "wasPlayable": true,
+      "fingerprint": "a0bf003d60cfbd34aff6c58de4c28ed736a042dc9fe6ce4702bf7d21cb055d9c"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1983,
+      "key": "every breath you take|police",
+      "wasPlayable": true,
+      "fingerprint": "9a5dd1cf92bad2a54614b86793d3ef62c84fa4948fd20b0782b966b2af2ab64e"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1984,
+      "key": "when doves cry|prince",
+      "wasPlayable": true,
+      "fingerprint": "aae8339bf32730857a43b1d5cb85bfac8f049486a7c53bcbd237c4aa498c64f6"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1985,
+      "key": "careless whisper|george michael",
+      "wasPlayable": true,
+      "fingerprint": "f558a32ca2877016e7e18cd70e727a427f5e8dafd0d862f3f0dd4e93de9c6550"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1986,
+      "key": "that s what friends are for|dionne",
+      "wasPlayable": true,
+      "fingerprint": "7458465e96c89f3ed4f7619ec47837df86d9bb3edc647846e628f9f252e94690"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1987,
+      "key": "walk like an egyptian|bangles",
+      "wasPlayable": true,
+      "fingerprint": "ef7ca6454132f238ed3ae21237af3a7579d927027199238526dbb77f4be29339"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1988,
+      "key": "faith|george michael",
+      "wasPlayable": true,
+      "fingerprint": "b542b1d4d2dfd3a884eda8015b2b1c556965a5bfcbb16fe7a5f7abd833e31b8e"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1989,
+      "key": "look away|chicago",
+      "wasPlayable": true,
+      "fingerprint": "e189c60a862832acad84fc3e2f607621d4022b2dd7c8a031386a1b15e985ffee"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1990,
+      "key": "hold on|wilson phillips",
+      "wasPlayable": true,
+      "fingerprint": "74c7064fe3d680a05db11b96f77e3affd7342c5eec986ce40fc4a5f9e3f2d123"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1991,
+      "key": "everything i do i do it for you|bryan adams",
+      "wasPlayable": true,
+      "fingerprint": "e0afedf9a45dd4b4f1a8d85ceafae8473e42a0be4e0190e5dba552a6b8ca0df0"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1992,
+      "key": "end of the road|boyz ii men",
+      "wasPlayable": true,
+      "fingerprint": "4f5ef79df6f84631d24c2747b3418cebd308648e4e1f330dc24b7e7e91979cf7"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1993,
+      "key": "i will always love you|whitney houston",
+      "wasPlayable": true,
+      "fingerprint": "5ad6f026c5c530787d741942d37c1a0d856c110361eb35806a114effa3ae2692"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1994,
+      "key": "the sign|ace of base",
+      "wasPlayable": true,
+      "fingerprint": "d09228563b41ce2cba00b81429044b188b43233d35147cbd6037818e25949089"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1995,
+      "key": "gangsta s paradise|coolio",
+      "wasPlayable": true,
+      "fingerprint": "d81068ddcbc64c728a38c6ce5dea35f2e887ea1ff73ce3950d4656b25ecb1aaf"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1996,
+      "key": "macarena|los del rio",
+      "wasPlayable": true,
+      "fingerprint": "26bb356ab15b7991a245210412f4947be27c86e0dea1f40eb05f25608a7ffbba"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1997,
+      "key": "something about the way you look tonight|elton john",
+      "wasPlayable": true,
+      "fingerprint": "0d7415a7df92983021f6ee324ec0aaa2f3cfa432349b8f26baa402a92e2e4816"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1998,
+      "key": "too close|next",
+      "wasPlayable": true,
+      "fingerprint": "f825e2479aa02e1b7b9d2216c47a15f6e9d483d2ccf42575030193b4b5f0e22d"
+    },
+    {
+      "mode": "number1_us",
+      "year": 1999,
+      "key": "believe|cher",
+      "wasPlayable": true,
+      "fingerprint": "38ab972599d3e8da60d2a028afcabaf77705f6107c5f6b043500333ab3ac4eff"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2000,
+      "key": "breathe|faith hill",
+      "wasPlayable": true,
+      "fingerprint": "21ff827a79908fe1b5827f2bae991438f0c3fd42d385be94ac1f482378ed6ff4"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2001,
+      "key": "hanging by a moment|lifehouse",
+      "wasPlayable": true,
+      "fingerprint": "b970081b87531be897e96bf4e3deb05aeb278bee0efbb0ae45e13df2de9012ac"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2002,
+      "key": "how you remind me|nickelback",
+      "wasPlayable": true,
+      "fingerprint": "58404239ccf6b386116d9c4db3dfccef68fac10f37eb462ef8e145d356d4efac"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2003,
+      "key": "in da club|50 cent",
+      "wasPlayable": true,
+      "fingerprint": "58a610d9d94d9bc9d1938442d27b80d3ba48b924c5959b3c9fbd63a58cea4368"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2004,
+      "key": "yeah|usher",
+      "wasPlayable": true,
+      "fingerprint": "716b50ccd0d700bef3cd085ca0ffe03dccb369d1215b4726da7805a12437616b"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2005,
+      "key": "we belong together|mariah carey",
+      "wasPlayable": true,
+      "fingerprint": "f9df401097184295f8308fce1ac20b1f2cc192d5e85755bafd71e5aabeafe19e"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2006,
+      "key": "bad day|daniel powter",
+      "wasPlayable": true,
+      "fingerprint": "fd4fe6d4bb0377aef14051b3e8b15ae0bf515949aa2c22828e017186b34a1aaf"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2007,
+      "key": "irreplaceable|beyonce",
+      "wasPlayable": true,
+      "fingerprint": "4bad092c44978e518da43908633e2a37652e9a00ec8a3cbde10caac71c3dd3fc"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2008,
+      "key": "low|flo rida",
+      "wasPlayable": true,
+      "fingerprint": "f89ec6099d4938867e8866eaecc8b7f4a05020b9093956b759006a7b15be91e3"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2009,
+      "key": "boom boom pow|black eyed peas",
+      "wasPlayable": true,
+      "fingerprint": "729a27f038981740e74a5052794ae75531ff10cfb55e2b1a5c61390e6447f877"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2010,
+      "key": "tik tok|kesha",
+      "wasPlayable": true,
+      "fingerprint": "26f912f3f4f30e97959392147ad3a48be9f85cfd32eed17db6f8cdc32f95be41"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2011,
+      "key": "rolling in the deep|adele",
+      "wasPlayable": true,
+      "fingerprint": "6a52b45c565adfdd9d41dc84059c03e72fd56e068d9074a085e2be5af61295d8"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2012,
+      "key": "somebody that i used to know|gotye",
+      "wasPlayable": true,
+      "fingerprint": "8eb7534aaa9e1bd092832250fdb6130b50e914338afa0724b3756a77351c79cf"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2013,
+      "key": "thrift shop|macklemore",
+      "wasPlayable": true,
+      "fingerprint": "233a4754267cc40c426ed29398fdbed07976b050c96852c60d0851f2c8230fe1"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2014,
+      "key": "happy|pharrell williams",
+      "wasPlayable": true,
+      "fingerprint": "7ca0b4006a3ef8c5d369725f400d2bd101994d3809266ec42af0ba7589c50a90"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2015,
+      "key": "uptown funk|mark ronson",
+      "wasPlayable": true,
+      "fingerprint": "4af24952ad5370b88e0df4bb17ba791773a5aa6922288d6d13b853fa5f7b6ea4"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2016,
+      "key": "love yourself|justin bieber",
+      "wasPlayable": true,
+      "fingerprint": "0555d0c1b834aaff319714dcbbe9208650f57713d2349a11ff7697520aca53af"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2017,
+      "key": "shape of you|ed sheeran",
+      "wasPlayable": true,
+      "fingerprint": "aa047c11f26d5fb3fa7d916a178d39e069268cda0225879e46881759291c94fa"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2018,
+      "key": "god s plan|drake",
+      "wasPlayable": true,
+      "fingerprint": "11929751b7b37537bef2caf8796298c82701bc590fd78f3132cd9f64bd7c2609"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2019,
+      "key": "old town road|lil nas x",
+      "wasPlayable": true,
+      "fingerprint": "8651c69c056caa21860b42c117ee588528325551700b7f0317691e0a2ffe5aee"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2020,
+      "key": "blinding lights|weeknd",
+      "wasPlayable": true,
+      "fingerprint": "f95d98daad545ef9e9ff0a4330ed582de5644e23c4fc66d8af2d166889fa735a"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2021,
+      "key": "levitating|dua lipa",
+      "wasPlayable": true,
+      "fingerprint": "5f1775a86fff45f7a50ad2a2cf096979f15ba9bdc97dee06707904582b1d0d13"
+    },
+    {
+      "mode": "number1_us",
+      "year": 2022,
+      "key": "heat waves|glass animals",
+      "wasPlayable": true,
+      "fingerprint": "1d0beacd1a80f6761e7ba89f8b874b6eb0e104721a1f5947de28801dcd3ca09f"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1950,
+      "key": "quicksilver|bing crosby",
+      "wasPlayable": true,
+      "fingerprint": "c96a99670e58f18b099e51d8a8586191e0dd7814d1823c8556fae1449dee1131"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1951,
+      "key": "too young|nat king cole",
+      "wasPlayable": true,
+      "fingerprint": "7354128d1092e207c72724677efcdbbbbc22cf5bc64bc6018eb9a2273101f694"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1952,
+      "key": "auf wiederseh n sweetheart|vera lynn",
+      "wasPlayable": true,
+      "fingerprint": "834d17ab4bc134dfa1360f0f66c2d3b9d4c046e3e75309ddb37458e485be0629"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1953,
+      "key": "the song from moulin rouge where is your heart|percy faith",
+      "wasPlayable": true,
+      "fingerprint": "69853c3e2dc5e0b1d6aca496fea6dd65bb343fea72c7eaf650037a43c1b13000"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1954,
+      "key": "the happy wanderer|frank weir",
+      "wasPlayable": true,
+      "fingerprint": "bf722fa14cfacde9f823785d6be3a9b055d67d5c905061a83d6c1ab99bac10f4"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1955,
+      "key": "hold my hand|don cornell",
+      "wasPlayable": true,
+      "fingerprint": "42a28e356cc5ac1b82c7cb9d667a2282396f41ff9dfbb945b58c4d85b35a3bd7"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1956,
+      "key": "just walking in the rain|johnnie ray",
+      "wasPlayable": true,
+      "fingerprint": "82ab6184e6299b4e1d99ade94f7da42abb89c94415bc02f00115a45e02a8406c"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1957,
+      "key": "around the world|bing crosby",
+      "wasPlayable": true,
+      "fingerprint": "5a9ecd5fca09585d33b71a6ce50d4539feb68d606f4cadd434bca77f1c0d6019"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1958,
+      "key": "tom dooley|kingston trio",
+      "wasPlayable": true,
+      "fingerprint": "289065e46fbf924f6cc457857e4f208216d4c42e016685a77362dc533e48e8b8"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1959,
+      "key": "smoke gets in your eyes|platters",
+      "wasPlayable": true,
+      "fingerprint": "7c2da5b9f2c19e83ec13778e18b711b2965b69fdccd243e72d59f9f5ece71983"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1960,
+      "key": "it s now or never|elvis presley",
+      "wasPlayable": true,
+      "fingerprint": "7091fa7b12f07aec0ad36e7cfe1420cfff81edfc836a270f8d1a0c866fee7893"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1961,
+      "key": "i m gonna knock on your door|eddie hodges",
+      "wasPlayable": true,
+      "fingerprint": "0edc1127c0fd0c78ae819bdc3d6d4d68acb02c9c03f7d7b79525699648ebc211"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1962,
+      "key": "working for the man|roy orbison",
+      "wasPlayable": true,
+      "fingerprint": "cd9197ce07114e64f6d891ab56d5e8b274d86be8d76bb1be1932aad44a2b2cec"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1963,
+      "key": "i want to hold your hand|beatles",
+      "wasPlayable": true,
+      "fingerprint": "fe8410316afab50c6ed4623ee87dc9ff172368aba23e281c821f7e39ad5a337a"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1964,
+      "key": "i saw her standing there|beatles",
+      "wasPlayable": true,
+      "fingerprint": "9272cfd1af317b968100b4b1d826293f86f9e369e8e3e2718bc9b0a0f95b5ac9"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1965,
+      "key": "que sera sera|normie rowe",
+      "wasPlayable": true,
+      "fingerprint": "787b53bb386cd748477a953fee88f3825b803321186855e554790e882eb39027"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1966,
+      "key": "these boots are made for walkin|nancy sinatra",
+      "wasPlayable": true,
+      "fingerprint": "c05d86e9e818f137fbaef57c5b591a8463f419e35bc54becfd5dbf5cc6fc8a44"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1967,
+      "key": "the last waltz|engelbert humperdinck",
+      "wasPlayable": true,
+      "fingerprint": "265a397c0eebd6f7e16ab853cf3deb8db70f18248a6cd1ec2f5a17b1c1c03643"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1968,
+      "key": "hey jude|beatles",
+      "wasPlayable": true,
+      "fingerprint": "b1a9584acfc6ff65f3b1b74b263979d8d9b2145faa965786ab9d7a5dda913587"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1969,
+      "key": "something|beatles",
+      "wasPlayable": true,
+      "fingerprint": "e3a6e5c9cd1f9f8f1d2c39b5847bdf66e1a44d8a83151cb43b7a7c1004600fd7"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1970,
+      "key": "let it be|beatles",
+      "wasPlayable": true,
+      "fingerprint": "377df7e675d8bae74dc77bb76b01ebd65d71469c5f994ff1b0b14f1904a7e40d"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1971,
+      "key": "eagle rock|daddy cool",
+      "wasPlayable": true,
+      "fingerprint": "1e6f140e25e3c0f423e478e5ced81fe51ecfa0c2c28f73973734d19b2c662904"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1972,
+      "key": "puppy love|donny osmond",
+      "wasPlayable": true,
+      "fingerprint": "7dee592d68d99c5a40382f4dfb87e2f2e43016ce0c1d16b46a07ef7cadf6ca66"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1973,
+      "key": "tie a yellow ribbon round the ole oak tree|tony orlando",
+      "wasPlayable": true,
+      "fingerprint": "024fbc1bc1a3b5b1c2c6a5cd173109ecba3ec9c1b96fafe357209ed4b6bf870c"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1974,
+      "key": "my coo ca choo|alvin stardust",
+      "wasPlayable": true,
+      "fingerprint": "d4f9771151b9faf1d640c8862140637beb709ba1dc6ab06299a27fe0d7f03cde"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1975,
+      "key": "fox on the run|sweet",
+      "wasPlayable": true,
+      "fingerprint": "952d60e86adb9b889ec9d5c12d31b4e00cd487c247be6c7925fe63bb0d80f61e"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1976,
+      "key": "fernando|abba",
+      "wasPlayable": true,
+      "fingerprint": "cc193de14fa945f55abe187ee6ae14f120ba36c7e49c88bfe454412c6c7e419a"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1977,
+      "key": "don t cry for me argentina|julie covington",
+      "wasPlayable": true,
+      "fingerprint": "5ff3a07ce1a21a584695310aac2020f0da6e7fca9c0db1d666f609cbc39b2691"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1978,
+      "key": "you re the one that i want|olivia newton john",
+      "wasPlayable": true,
+      "fingerprint": "fb31f9e2e51fdf70fed7ba4df79af5f4f621b612b7499be0b3001710276088d5"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1979,
+      "key": "lay your love on me|racey",
+      "wasPlayable": true,
+      "fingerprint": "bdd2baa77144de4e38a1e7260b69894853ec7b19379391a8c542570837853549"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1980,
+      "key": "i got you|split enz",
+      "wasPlayable": true,
+      "fingerprint": "137020f65de0b4e644bb2c96028381c3cbba3758eb33bad6828fd36519297207"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1981,
+      "key": "counting the beat|swingers",
+      "wasPlayable": true,
+      "fingerprint": "1bf8af0d2315ae413bd94a12e930f7ff749a9520faca223db24292f56b76a893"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1982,
+      "key": "eye of the tiger|survivor",
+      "wasPlayable": true,
+      "fingerprint": "038f12ff6392fca49f40a1bf9de3b8b74b0a3d767e0a8117311695082a1e4c51"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1983,
+      "key": "australiana|austen tayshus",
+      "wasPlayable": true,
+      "fingerprint": "8667bf939f3c327caa06045a14e2ae2787cf84688aa6f4bf04317b2c18f677f6"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1984,
+      "key": "dancing in the dark|bruce springsteen",
+      "wasPlayable": true,
+      "fingerprint": "1c91c5d774974f5e83c03020aa1af90bf2f9f2a5f2e3b2d03746efa683cddcfe"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1985,
+      "key": "we are the world|usa for africa",
+      "wasPlayable": true,
+      "fingerprint": "8e6fd65c204cd7bd7aa6cdc8cf9ee8307e01305806fd2f745b96e2d90959ea2e"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1986,
+      "key": "chain reaction|diana ross",
+      "wasPlayable": true,
+      "fingerprint": "bc14b7547f2c5bc0d2eb37071aa4719c226a85ecac574a4707de8766b29588dd"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1987,
+      "key": "locomotion|kylie minogue",
+      "wasPlayable": true,
+      "fingerprint": "6636b0b60b2454abb7f986f558c0b42cdb10c6c93c4dcbd7d40063057ab27e9c"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1988,
+      "key": "i ve had the time of my life|bill medley",
+      "wasPlayable": true,
+      "fingerprint": "25ffcecea6c5d75ad13f78ddb5ad8312b519136aaf3095c44231c10812b4029b"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1989,
+      "key": "like a prayer|madonna",
+      "wasPlayable": true,
+      "fingerprint": "b7bc02d34be639526ed04571a8e8b34b28f36dc2dd39e500765dca3c3d2325f1"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1990,
+      "key": "nothing compares 2 u|sine ad o connor",
+      "wasPlayable": true,
+      "fingerprint": "3131f51d2a08f3a5b4a61c5dd2d9fc7e14391575f42fee2dc2d83188217a52fa"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1991,
+      "key": "everything i do i do it for you|bryan adams",
+      "wasPlayable": true,
+      "fingerprint": "d3b7e89bf551f0f485878127c42d995ed01db68900f6dbfa52ed5bb94885f346"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1992,
+      "key": "achy breaky heart|billy ray cyrus",
+      "wasPlayable": true,
+      "fingerprint": "994265ca2163b9aa1a270a8829b20d12d978e2920d709eeaf4cc10bd2deb719c"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1993,
+      "key": "i d do anything for love but i won t do that|meat loaf",
+      "wasPlayable": true,
+      "fingerprint": "4dd5dcc330ea1baf5d60afbb33ffb20d0c34ab05cd72d60ea3631d200de57802"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1994,
+      "key": "love is all around|wet wet wet",
+      "wasPlayable": true,
+      "fingerprint": "52bcc31905dda5583fdd0bf3fd43c7b5738875e4c0f8b905b6cdb3829acde3c5"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1995,
+      "key": "gangsta s paradise|coolio",
+      "wasPlayable": true,
+      "fingerprint": "8c288e8e857bca165b09e1dd76e8017b90c7e9093b2a89ee8832c1e245725365"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1996,
+      "key": "macarena|los del ri o",
+      "wasPlayable": true,
+      "fingerprint": "c40076836d818fc0d5e6d1ad81cf5923592d6d3359c43ecb5a26d69030d170ce"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1997,
+      "key": "candle in the wind 1997|elton john",
+      "wasPlayable": true,
+      "fingerprint": "6178c0282b2ddb1f3561ee841522c42e8c7fec42e144398a8bf7474a53615d42"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1998,
+      "key": "maria|ricky martin",
+      "wasPlayable": true,
+      "fingerprint": "b012d4f1aad03b8c267122b96d94e3465a223dc33e180c142ee330ca9b477098"
+    },
+    {
+      "mode": "number1_au",
+      "year": 1999,
+      "key": "mambo no 5|lou bega",
+      "wasPlayable": true,
+      "fingerprint": "aff60c8582dd75b6e6d59f45654e168abfcaafd1eca0d3b336320039a769eeeb"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2000,
+      "key": "i m outta love|anastacia",
+      "wasPlayable": true,
+      "fingerprint": "07572977f526b20b666800a17b48a9f6ff5bb85ea4753154f5991a2b6e623492"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2001,
+      "key": "can t fight the moonlight|leann rimes",
+      "wasPlayable": true,
+      "fingerprint": "c4034d62c0c4a9db4a9f08b43749557e151cde5d268e5ddefa94c3b6ad4b9768"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2002,
+      "key": "without me|eminem",
+      "wasPlayable": true,
+      "fingerprint": "862755fbb5dcc951d9c66d77de06b8aa8893cc0c51441ef3f39afa0d0820e014"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2003,
+      "key": "angels brought me here|guy sebastian",
+      "wasPlayable": true,
+      "fingerprint": "2033153dacf70dbcd5546645e6be60cfbc1e56f89ffbd05fc5dc004a48b08cb9"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2004,
+      "key": "what about me|shannon noll",
+      "wasPlayable": true,
+      "fingerprint": "4d9fced2e913976c02cc7a407108bcf322187afbf3e594ab661389a6dcacab54"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2005,
+      "key": "the prayer|anthony callea",
+      "wasPlayable": true,
+      "fingerprint": "d2396be2b97a302c400cf1f9dcebf9bb3e12b2bf70922283008135d67c0a2bdd"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2006,
+      "key": "i wish i was a punk rocker|sandi thom",
+      "wasPlayable": true,
+      "fingerprint": "d26400c95c27880c4ab015850c395491d110138467426781b7c81904ff54c1e7"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2007,
+      "key": "big girls don t cry|fergie",
+      "wasPlayable": true,
+      "fingerprint": "fca9911b492fbe867d462cc0b7939b6a30ed121388b5a74de292231f0b81f760"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2008,
+      "key": "low|flo rida",
+      "wasPlayable": true,
+      "fingerprint": "336ef4d25285d3b5c6b100256476a85ef6ac3b1a35d5754fcc48d8a0f23aade5"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2009,
+      "key": "i gotta feeling|black eyed peas",
+      "wasPlayable": true,
+      "fingerprint": "98a314eb299fd0c6bf580eafb97e2968b99579c1aedd9440dea1018c66a022b7"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2010,
+      "key": "love the way you lie|eminem",
+      "wasPlayable": true,
+      "fingerprint": "6863759d888b56129fbc8a41d41cf2dc224ad6f11ca803657969d525a5996311"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2011,
+      "key": "party rock anthem|lmfao",
+      "wasPlayable": true,
+      "fingerprint": "3d0047d43b4de158587f5b8b9b9159b8126cdb3841b67e13310acaf13b4e9751"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2012,
+      "key": "call me maybe|carly rae jepsen",
+      "wasPlayable": true,
+      "fingerprint": "d1aa85c4ad84fd70c7bf7132109fe7d724258acbf76ed106f4dac0c64dae831a"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2013,
+      "key": "roar|katy perry",
+      "wasPlayable": true,
+      "fingerprint": "94c050a961a89fed35ba2ab64888537b2a820104aeda43e6dde6de2ee9cfae57"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2014,
+      "key": "happy|pharrell williams",
+      "wasPlayable": true,
+      "fingerprint": "5e28c49b1f3925e2984fd961628d3dfb35cbb5a9d56a459adec9270558ccc890"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2015,
+      "key": "uptown funk|mark ronson",
+      "wasPlayable": true,
+      "fingerprint": "40094dc562fac9acaef28ec40491b5f8157ae38e10a838ea5f198e8986887d70"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2016,
+      "key": "closer|chainsmokers",
+      "wasPlayable": true,
+      "fingerprint": "132f8c005886ca12bb0f44ee521cd2f7feb16bf7705763c526b137f7d4103034"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2017,
+      "key": "shape of you|ed sheeran",
+      "wasPlayable": true,
+      "fingerprint": "307535cb7a1d783c5d91bd23e4699fd09ed2549883796f6608db1a1b4b9737f0"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2018,
+      "key": "youngblood|5 seconds of summer",
+      "wasPlayable": true,
+      "fingerprint": "5cef31ce9ef084b9b91a8a8fac38c0227bcfed4d14f8a47d5abedfc86650f28e"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2019,
+      "key": "old town road|lil nas x",
+      "wasPlayable": true,
+      "fingerprint": "34a9b08e747217c8332655110088ca6792d52ced37a4458f3f2efd8c273857c3"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2020,
+      "key": "blinding lights|weeknd",
+      "wasPlayable": true,
+      "fingerprint": "2d11396ecec5e0190f5724cb0297b81d9edcfb790edb95f6089ff6fb31607600"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2021,
+      "key": "heat waves|glass animals",
+      "wasPlayable": true,
+      "fingerprint": "15083ac2364c80e51a112d2c44320627f43c22b3c1b3c74ad699d38f3ec82d7d"
+    },
+    {
+      "mode": "number1_au",
+      "year": 2022,
+      "key": "as it was|harry styles",
+      "wasPlayable": true,
+      "fingerprint": "55aa5c81b5a1360d6293a912af7c5cd6918a0cfa3c8701bf89bfe9eff25a9f5a"
+    },
+    {
+      "mode": "greatest",
+      "year": 1950,
+      "key": "goodnight irene|gordon jenkins",
+      "wasPlayable": false,
+      "fingerprint": "6093da38b3b1e67a88eba6937570f669edfc4b71d331573df79ae0daf633b553"
+    },
+    {
+      "mode": "greatest",
+      "year": 1952,
+      "key": "cry|johnnie raythe four lads",
+      "wasPlayable": false,
+      "fingerprint": "fa56b91b9853b1a6e821b72e06aec8e9b05beb603fc9d4c1e97217292a76fa0d"
+    },
+    {
+      "mode": "greatest",
+      "year": 1952,
+      "key": "you belong to me|jo staffordpaul weston",
+      "wasPlayable": false,
+      "fingerprint": "917d5e15064c48981cc66f86feffe5278d311c2cf26bf635dfab97bedde7cf0b"
+    },
+    {
+      "mode": "greatest",
+      "year": 1953,
+      "key": "the song from moulin rouge where is your heart|percy faith",
+      "wasPlayable": false,
+      "fingerprint": "2633d20af453b02d7b0cac9f70ab86411dc94c9e77cca20b857c64c0a58cb64c"
+    },
+    {
+      "mode": "greatest",
+      "year": 1954,
+      "key": "hey there|rosemary clooneybuddy cole",
+      "wasPlayable": false,
+      "fingerprint": "2830bedb09ebf36d5852978846a9b614bdb118e07e07b9a102630eb4a33e90a0"
+    },
+    {
+      "mode": "greatest",
+      "year": 1957,
+      "key": "all shook up take 10|elvis presley",
+      "wasPlayable": false,
+      "fingerprint": "103c04e50e726e37b666928e677575a1efd72cccff55b391dea0a35eea30dc3e"
+    },
+    {
+      "mode": "greatest",
+      "year": 1962,
+      "key": "stranger on the shore|acker bilkthe leon young string chorale",
+      "wasPlayable": false,
+      "fingerprint": "0b6b98994b439c730ba13d85f03d87d9bea9739ce9f5da6c19807697421ef89f"
+    },
+    {
+      "mode": "greatest",
+      "year": 1962,
+      "key": "stranger on the shore|mr acker bilkthe leon young string chorale",
+      "wasPlayable": false,
+      "fingerprint": "3fb173b6231135f5dd1cfa2f26234bbd25dd8ad2c6291e2a3dae2b737a09786c"
+    },
+    {
+      "mode": "greatest",
+      "year": 1972,
+      "key": "the first time ever i saw your face|roberta flack",
+      "wasPlayable": false,
+      "fingerprint": "37544935343d55ed0c8bf463eebe5ea5bea68e6e78bd94724534459506414f1a"
+    },
+    {
+      "mode": "greatest",
+      "year": 1976,
+      "key": "don t go breaking my heart|elton johnkiki dee",
+      "wasPlayable": false,
+      "fingerprint": "4d205488266f7c77dae9052d09fff10e5a70f94afd27498c8fd790449c2902f5"
+    },
+    {
+      "mode": "greatest",
+      "year": 1981,
+      "key": "endless love|diana rosslionel richie",
+      "wasPlayable": false,
+      "fingerprint": "a4f3cd45fe0f6889e94f4fabf3d415f432b35be998a70eeea3146f439d9c0c79"
+    },
+    {
+      "mode": "greatest",
+      "year": 1982,
+      "key": "ebony and ivory|paul mccartneystevie wonder",
+      "wasPlayable": false,
+      "fingerprint": "9bc73bf60450e83a54be02b997bfe4ecd95d24dc93e0f98373ae86629a49fb03"
+    },
+    {
+      "mode": "greatest",
+      "year": 1982,
+      "key": "ebony and ivory|paul mccartney",
+      "wasPlayable": false,
+      "fingerprint": "b375cfe5cd0381653055c3c0b3b159df796c82760bc322b599d78fa7db024055"
+    },
+    {
+      "mode": "greatest",
+      "year": 1984,
+      "key": "when doves cry|princethe revolution",
+      "wasPlayable": false,
+      "fingerprint": "99540d2af1485e25d5f000e13da27c47451d59dced5989c7ba528ee9c47b75cd"
+    },
+    {
+      "mode": "greatest",
+      "year": 1985,
+      "key": "i feel for you|chaka khan",
+      "wasPlayable": false,
+      "fingerprint": "27a2908980f5ce0a2279dcee4ea690cc7ea621974bfcc2024fb3453460da7f56"
+    },
+    {
+      "mode": "greatest",
+      "year": 1986,
+      "key": "on my own|patti labellemichael mcdonald",
+      "wasPlayable": false,
+      "fingerprint": "238523663036e1d6c58ed61bda0facde2f32c446087562f1a9e09e7dfdbe1aa1"
+    },
+    {
+      "mode": "greatest",
+      "year": 1986,
+      "key": "that s what friends are for|dionne warwickelton johngladys knightstevie wonder",
+      "wasPlayable": false,
+      "fingerprint": "11452b6f46bab729cbc22059f280fb9eebd09f78707b152e938393e8ba2ececb"
+    },
+    {
+      "mode": "greatest",
+      "year": 1995,
+      "key": "gangsta s paradise|cooliol v",
+      "wasPlayable": false,
+      "fingerprint": "85c59d028ce5db2bf4b98360f73b0af1885de87b5da264089e1913f0693bfbce"
+    },
+    {
+      "mode": "greatest",
+      "year": 1996,
+      "key": "one sweet day|mariah careyboyz ii men",
+      "wasPlayable": false,
+      "fingerprint": "5a0d1ce9aac517aed82e195b475e1f1ddc52b8f0524a44ef23fb8f6e7daecaa9"
+    },
+    {
+      "mode": "greatest",
+      "year": 1998,
+      "key": "the boy is mine|brandymonica",
+      "wasPlayable": false,
+      "fingerprint": "2022f4ba589d285863ce747d4ea184a82548ad82ae5307ff1eee84f26fe720e6"
+    },
+    {
+      "mode": "greatest",
+      "year": 1998,
+      "key": "the boy is mine|monicabrandy",
+      "wasPlayable": false,
+      "fingerprint": "f32aff9234ad155adabcfa8e3e91e3553efa64a7aec1b1247cf61617fdf389e7"
+    },
+    {
+      "mode": "greatest",
+      "year": 2000,
+      "key": "breathe|faith hill",
+      "wasPlayable": false,
+      "fingerprint": "75a50ae71c5c1a12138775cd0e9f0fa2e7b77f3003b9ca732432d5b464a7a5c7"
+    },
+    {
+      "mode": "greatest",
+      "year": 2000,
+      "key": "smooth|santanarob thomas",
+      "wasPlayable": false,
+      "fingerprint": "d0b76257dab7c7cd3092f454ab49bd9fec46d6bf997feedfd83b80ba7634dd12"
+    },
+    {
+      "mode": "greatest",
+      "year": 2004,
+      "key": "yeah|usherlil jon",
+      "wasPlayable": false,
+      "fingerprint": "2e96259b84c0e94b48ee7f355ce84609ddc878323e70fecda5ed898823879c23"
+    },
+    {
+      "mode": "greatest",
+      "year": 2004,
+      "key": "yeah|usherlil jonludacris",
+      "wasPlayable": false,
+      "fingerprint": "e7892c24ca74f9cf0cca352a89b1274ccd630b166ffc857937b9fbc230e55781"
+    },
+    {
+      "mode": "greatest",
+      "year": 2006,
+      "key": "bad day|agent zeddaniel powter",
+      "wasPlayable": false,
+      "fingerprint": "42adf95725f13f72c0005d0f8e4985b82f3568aae5b00f7ef5ea84a2bbd0e58e"
+    },
+    {
+      "mode": "greatest",
+      "year": 2008,
+      "key": "low|flo ridat pain",
+      "wasPlayable": false,
+      "fingerprint": "6cf0042d9b51d641c6809a28afba0b0d5242debaff999c5bea36be173ab271dc"
+    },
+    {
+      "mode": "greatest",
+      "year": 2010,
+      "key": "tik tok|pitbullke ha",
+      "wasPlayable": false,
+      "fingerprint": "39145074788a835870d023ecfd9b884d77c223a149d166ed4d832b8a1bd8d241"
+    },
+    {
+      "mode": "greatest",
+      "year": 2012,
+      "key": "somebody that i used to know|gotyekimbra",
+      "wasPlayable": false,
+      "fingerprint": "98266d96286378c0ed0890f996e9528dc9af75d224c0499445c2d44ed7b8f631"
+    },
+    {
+      "mode": "greatest",
+      "year": 2012,
+      "key": "somebody that i used to know|antoine delviggotyedj ice",
+      "wasPlayable": false,
+      "fingerprint": "a66833dc4027a1f911736c6c02055e11540c3cf195a4edf2de421f48f38d6671"
+    },
+    {
+      "mode": "greatest",
+      "year": 2013,
+      "key": "blurred lines|robin thickepharrell",
+      "wasPlayable": false,
+      "fingerprint": "7f6ff3e78c103c8def9d05d46bc1948e38a45cfd89e7957de408588792150f7c"
+    },
+    {
+      "mode": "greatest",
+      "year": 2013,
+      "key": "blurred lines|robin thickepharrell williams",
+      "wasPlayable": false,
+      "fingerprint": "9c9a9db474c4c8a3fda8fda7b69d543a4f975ab3205767a43a42d02fde1aeccf"
+    },
+    {
+      "mode": "greatest",
+      "year": 2013,
+      "key": "blurred lines|robin thicket i pharrell williams",
+      "wasPlayable": false,
+      "fingerprint": "732da4c252c066dd5e16cf54065f42890c983a691ffdc7fc8e897eae5a649fcd"
+    },
+    {
+      "mode": "greatest",
+      "year": 2014,
+      "key": "dark horse|katy perryjuicy j",
+      "wasPlayable": false,
+      "fingerprint": "1debeaba61bc51063d4f958b803a8cc7784e16aabc9f3a55f97aed64f1f6d865"
+    },
+    {
+      "mode": "greatest",
+      "year": 2014,
+      "key": "dark horse|katy perry",
+      "wasPlayable": false,
+      "fingerprint": "aa43b6f52f2e800e41852ea83ff24cc0635da5cd9b63ec1bb3ae08e4bcbf100f"
+    },
+    {
+      "mode": "greatest",
+      "year": 2015,
+      "key": "thinking out loud rumba 22|ed sheerandj ice",
+      "wasPlayable": false,
+      "fingerprint": "e74b920f4e110225a053f30b157575c9d37835431145acb374c55ca5041f31d8"
+    },
+    {
+      "mode": "greatest",
+      "year": 2015,
+      "key": "uptown funk|mark ronsonbruno mars",
+      "wasPlayable": false,
+      "fingerprint": "a5e08572de5f72a729bc2f0093d1ec1ea48b9f10861eb6f6c8732f6aa8ba0a47"
+    },
+    {
+      "mode": "greatest",
+      "year": 2018,
+      "key": "god s plan|drake",
+      "wasPlayable": false,
+      "fingerprint": "52587d005e44ea0bb54ccc39b6a6d1dc4c31daa09b9f4c5e236630aa9b10e1f1"
+    },
+    {
+      "mode": "greatest",
+      "year": 2018,
+      "key": "meant to be|bebe rexha",
+      "wasPlayable": false,
+      "fingerprint": "de920760d65c90b8b963e3604af0ad01d4522dc3fda746506d4153ca4b8d7aa0"
+    },
+    {
+      "mode": "greatest",
+      "year": 2019,
+      "key": "without me|halseyjuice wrld",
+      "wasPlayable": false,
+      "fingerprint": "91597e0b9863cbfd5b452c19d5535dbd2ee0fb10ae3cdd800e62350208237110"
+    },
+    {
+      "mode": "greatest",
+      "year": 2020,
+      "key": "someone else blinding lights|rezzgrabbitzthe weeknd",
+      "wasPlayable": false,
+      "fingerprint": "1bbe749f81aa426891c907cecefa38e8817d9422aa58551570d2d9a968edc636"
+    },
+    {
+      "mode": "greatest",
+      "year": 2021,
+      "key": "levitating|dua lipadababy",
+      "wasPlayable": false,
+      "fingerprint": "3789bace2f5be80d35aabc2303f5f66d6d7d01ad15ea29bca999033d79cc4c80"
+    },
+    {
+      "mode": "australian",
+      "year": 1986,
+      "key": "sail to you|men at work",
+      "wasPlayable": false,
+      "fingerprint": "cc28734dc518ae859a45b9fe682a574d345788dc8e2f1e6249e5362d2b0460c2"
+    },
+    {
+      "mode": "australian",
+      "year": 1990,
+      "key": "i need your body|tina arena",
+      "wasPlayable": false,
+      "fingerprint": "2445947de7498a0bda4e5abdffab0e71fc865e7edaefb8f0e8b742c6c7c672d6"
+    },
+    {
+      "mode": "australian",
+      "year": 1991,
+      "key": "better the devil you know|kylie minogue",
+      "wasPlayable": false,
+      "fingerprint": "5df01fff03769632f61ec38846d5dfc1fabbb23d9e671c88d485664c62ff058b"
+    },
+    {
+      "mode": "australian",
+      "year": 1993,
+      "key": "closer|kylie minogue",
+      "wasPlayable": false,
+      "fingerprint": "bc6428d763fd60d28245a29abbc9bb58c7b7ea6fb7e14534f17a6dd942f1de89"
+    },
+    {
+      "mode": "australian",
+      "year": 1994,
+      "key": "chains|tina arena",
+      "wasPlayable": false,
+      "fingerprint": "c8d40dba4601e1db6d17a52692a08ae95ffdeb75e15aefd86df6665aa1a807ff"
+    },
+    {
+      "mode": "australian",
+      "year": 1995,
+      "key": "heaven help my heart|tina arena",
+      "wasPlayable": false,
+      "fingerprint": "b2663cfc0b320891203eb63c84f0df14546d51a33829d4aa14400eeb754761ab"
+    },
+    {
+      "mode": "australian",
+      "year": 2000,
+      "key": "please stay|kylie minogue",
+      "wasPlayable": false,
+      "fingerprint": "cbab895941e4044e656e4f3887915991996c44a2c096260ad1d443ee11726ac8"
+    },
+    {
+      "mode": "australian",
+      "year": 2000,
+      "key": "on a night like this|kylie minogue",
+      "wasPlayable": false,
+      "fingerprint": "1d8e3956aad510523a6447b6123c706a1dc2f8d72805f50deb7e6a4580a3f0c0"
+    },
+    {
+      "mode": "australian",
+      "year": 2010,
+      "key": "desire be desire go|tame impala",
+      "wasPlayable": false,
+      "fingerprint": "c7dafdeadfa31f169b18b4e9a759000f39b38421c485fdd8235c7b4c83e12ec1"
+    },
+    {
+      "mode": "australian",
+      "year": 2011,
+      "key": "why won t you make up your mind|tame impala",
+      "wasPlayable": false,
+      "fingerprint": "22640678fec8fc0ec02a2481560b235f96d510d95039cf3e5f2072d3bc3b9855"
+    },
+    {
+      "mode": "australian",
+      "year": 2011,
+      "key": "lucidity|tame impala",
+      "wasPlayable": false,
+      "fingerprint": "70d6b606ce1e9ad369f025c5f5f1d961cdd56a4690fbf2faa415087bb289eb1b"
+    },
+    {
+      "mode": "australian",
+      "year": 2011,
+      "key": "solitude is bliss|tame impala",
+      "wasPlayable": false,
+      "fingerprint": "bb422c807151898e590a585409eebd476963369710ab07b45ffd4695b7d81df8"
+    },
+    {
+      "mode": "australian",
+      "year": 2016,
+      "key": "girls talk boys|5 seconds of summer",
+      "wasPlayable": false,
+      "fingerprint": "a3f3ed01a8f8888aa35fe31caf78c29fc4720e8fb19a4ddd7963f11cbc641d3b"
+    },
+    {
+      "mode": "australian",
+      "year": 2016,
+      "key": "good girls|5 seconds of summer",
+      "wasPlayable": false,
+      "fingerprint": "7e2404aee3a8fb586eafd5920a7670d195fff62513330e756274412446308d3c"
+    },
+    {
+      "mode": "australian",
+      "year": 2016,
+      "key": "jet black heart|5 seconds of summer",
+      "wasPlayable": false,
+      "fingerprint": "528464e10711a88d70d597b0c2a08a0cbd71e9a4977c9c1300c44d03df32b806"
+    },
+    {
+      "mode": "australian",
+      "year": 2018,
+      "key": "she s kinda hot|5 seconds of summer",
+      "wasPlayable": false,
+      "fingerprint": "f29bdadd7481654e561f85d6278c997610d2fc44eedc2c0d8625b5787d6f50e4"
+    },
+    {
+      "mode": "australian",
+      "year": 2019,
+      "key": "lie to me|5 seconds of summer",
+      "wasPlayable": false,
+      "fingerprint": "593a04b05fc85416dfd5cb5d49dd968f5511d520bd9911b3b2ffe0804e943151"
+    },
+    {
+      "mode": "australian",
+      "year": 2020,
+      "key": "take yourself home|troye sivan",
+      "wasPlayable": false,
+      "fingerprint": "64608cf9698f0906d92af3264e5be23526083965079d5c0d6fc9f46e22e1a36d"
+    },
+    {
+      "mode": "australian",
+      "year": 2021,
+      "key": "could cry just thinkin about you|troye sivan",
+      "wasPlayable": false,
+      "fingerprint": "1228120fc4663947e11e4960a8fa6e3e7dbabdc3aeb798938ae66fb16eef9242"
+    }
+  ]
+}

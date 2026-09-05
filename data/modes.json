@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "modes": {
+    "greatest": {
+      "name": "Greatest Hits",
+      "short": "Hits",
+      "desc": "Big recognisable songs released in the card year.",
+      "status": "beta",
+      "statusLabel": "Beta",
+      "statusNote": "All years covered after sourced gap additions; legacy release-year and pool-depth curation continues.",
+      "yearBasis": "release",
+      "repeatPolicy": "unique"
+    },
+    "australian": {
+      "name": "Australian",
+      "short": "Australian",
+      "desc": "Australian artists and homegrown favourites released in the card year.",
+      "status": "beta",
+      "statusLabel": "Beta",
+      "statusNote": "All years covered after sourced gap additions; some pools are shallow and legacy recording checks continue.",
+      "yearBasis": "release",
+      "repeatPolicy": "unique"
+    },
+    "unexpected": {
+      "name": "Unexpected Years",
+      "short": "Unexpected",
+      "desc": "Songs whose real release year is surprisingly early or late.",
+      "status": "preview",
+      "statusLabel": "Preview",
+      "statusNote": "Sparse curated preview; virtual play deals only supported years.",
+      "yearBasis": "release",
+      "repeatPolicy": "unique"
+    },
+    "number1_us": {
+      "name": "#1 US",
+      "short": "#1 US",
+      "desc": "The US year-end chart leader for the card year.",
+      "status": "beta",
+      "statusLabel": "Beta",
+      "statusNote": "Complete chart-year list; one fixed leader per year may repeat.",
+      "yearBasis": "chart",
+      "repeatPolicy": "fixed"
+    },
+    "number1_au": {
+      "name": "#1 Australia",
+      "short": "#1 AU",
+      "desc": "The Australian year-end chart leader for the card year.",
+      "status": "beta",
+      "statusLabel": "Beta",
+      "statusNote": "Complete chart-year list; one fixed leader per year may repeat.",
+      "yearBasis": "chart",
+      "repeatPolicy": "fixed"
+    }
+  }
+}

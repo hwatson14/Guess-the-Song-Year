@@ -19,11 +19,16 @@ const songs=[
   {title:'Live and Let Die',artist:'Artist E',year:2000,canonicalKey:'live and let die|artist e'},
 ];
 
+const unexpectedSong={title:'Preview Song',artist:'Preview Artist',year:2000,canonicalKey:'preview song|preview artist'};
+const chartSong={title:'Chart Remix',artist:'Chart Artist',year:2000,chartYear:2000,canonicalKey:'chart remix|chart artist'};
+const australianSong={title:'Australian Song',artist:'Australian Artist',year:2000,canonicalKey:'australian song|australian artist'};
+const usChartSong={title:'US Chart Song',artist:'US Chart Artist',year:2000,chartYear:2000,canonicalKey:'us chart song|us chart artist'};
 globalThis.window={GSYEngine:{
-  MODES:{greatest:{name:'Greatest Hits'}},
+  MODES:{greatest:{name:'Greatest Hits',status:'beta',yearBasis:'release',repeatPolicy:'unique'},australian:{name:'Australian',status:'beta',yearBasis:'release',repeatPolicy:'unique'},unexpected:{name:'Unexpected Years',status:'preview',yearBasis:'release',repeatPolicy:'unique'},number1_us:{name:'#1 US',status:'beta',yearBasis:'chart',repeatPolicy:'fixed'},number1_au:{name:'#1 Australia',status:'beta',yearBasis:'chart',repeatPolicy:'fixed'}},
   AppError,
   songKey,
-  loadCatalogue:async()=>({modes:{greatest:{'2000':songs}}}),
+  baseCardYear:()=>2000,
+  loadCatalogue:async()=>({version:6,modes:{greatest:{'2000':songs},australian:{'2000':[australianSong]},unexpected:{'2000':[unexpectedSong]},number1_us:{'2000':[usChartSong]},number1_au:{'2000':[chartSong]}}}),
 }};
 
 await import(`${pathToFileURL(path.resolve('engine-v7.js')).href}?test=${Date.now()}`);
@@ -66,8 +71,34 @@ let exhausted=false;
 try{await E.chooseSong(2000,'greatest',allUsed)}catch(err){exhausted=err?.code==='NO_UNUSED_SONG'}
 if(!exhausted)throw new Error('depleted year must throw NO_UNUSED_SONG rather than recycle an alternate version');
 
+const preview=await E.chooseSong(2000,'unexpected',[]);
+if(preview.title!==unexpectedSong.title)throw new Error('preview mode must use its direct pool');
+let unsupported=false;
+try{await E.chooseSong(2001,'unexpected',[])}catch(err){unsupported=err?.code==='MODE_YEAR_UNAVAILABLE'}
+if(!unsupported)throw new Error('sparse modes must report unsupported years without silent fallback');
+const fixed=await E.chooseSong(2000,'number1_au',[E.songUseKey(chartSong)]);
+if(fixed.title!==chartSong.title)throw new Error('fixed chart modes may repeat their one leader for a repeated card year');
+const reports=await E.modeReports();
+if(new Set(Object.keys(reports)).size!==5||!['greatest','australian','unexpected','number1_us','number1_au'].every(id=>reports[id])){
+  throw new Error('all five declared modes must have readiness reports');
+}
+if(reports.greatest.coverage!==1||reports.unexpected.status!=='preview'||reports.number1_au.yearBasis!=='chart'){
+  throw new Error('mode readiness report does not reflect coverage and status');
+}
+E.MODES.greatest.status='ready';
+const downgraded=(await E.modeReports()).greatest;
+if(downgraded.status!=='beta'||downgraded.statusLabel!=='Beta'||downgraded.readyEligible!==false){
+  throw new Error('failed Ready gates must produce a visible Beta downgrade');
+}
+E.MODES.greatest.status='beta';
+E.MODES.australian.status='building';
+if((await E.modeReports()).australian.selectable!==false)throw new Error('Building modes must not be selectable');
+let buildingDisabled=false;
+try{await E.chooseSong(2000,'australian',[])}catch(err){buildingDisabled=err?.code==='MODE_DISABLED'}
+if(!buildingDisabled)throw new Error('Building modes must remain disabled at the engine boundary');
+E.MODES.australian.status='beta';
 let disabled=false;
-try{await E.chooseSong(2000,'unexpected',[])}catch(err){disabled=err?.code==='MODE_DISABLED'}
-if(!disabled)throw new Error('inactive modes must remain disabled');
+try{await E.chooseSong(2000,'not_a_mode',[])}catch(err){disabled=err?.code==='MODE_DISABLED'}
+if(!disabled)throw new Error('unknown modes must remain disabled');
 
-console.log('engine-v7 underlying-song / alternate-version regression tests passed');
+console.log('engine-v7 multi-mode status and underlying-song regression tests passed');

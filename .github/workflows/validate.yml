@@ -3,6 +3,8 @@ name: Validate app
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -13,39 +15,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Validate JavaScript
-        run: |
-          node --check engine.js
-          node --check engine-v7.js
-          node --check app.js
-          node scripts/test_engine_v7.mjs
-      - name: Validate canonical prebuilt catalogue
-        run: |
-          python scripts/validate_catalogue.py
-          python -m json.tool data/catalogue.schema.json >/dev/null
-      - name: Validate one-mode gameplay contract
-        run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-
-          html=Path('index.html').read_text()
-          js=Path('app.js').read_text()
-          guard=Path('engine-v7.js').read_text()
-          data=json.loads(Path('data/catalogue.json').read_text())
-
-          for asset in ['engine.js','engine-v7.js','app.js','app.css']:
-              assert asset in html, asset
-          for token in ['Play style','Teams','Victory target','physical','virtual','lock-placement','popstate','end-game','ensureVirtualStarters','starterYear','match.pendingSlot=slot','Starter year:','Listen Again','Listen for as long as you want','data-action="new-card"','Wrong answer','Correct answer','repeat-replaced']:
-              assert token in js, token
-          for forbidden in ['data-policy=','data-round-deck=','data-mode=','function modeId()','setTimeout(()=>finishYouTubeListening(),30000)','match.assign[']:
-              assert forbidden not in js, forbidden
-          assert data.get('version')==10,data.get('version')
-          assert set(data.get('modes',{}))=={'greatest'},set(data.get('modes',{}))
-          assert "const MODE='greatest'" in js
-          for token in ['E.MODES={greatest}','NO_UNUSED_SONG','E.songUseKey=underlyingKey','E.isAlternateSongTitle=isAlternateTitle','Only Greatest Hits is enabled']:
-              assert token in guard, token
-          assert 'sing_along' not in guard
-          assert 'modeFallbacks' not in guard
-          print('single-mode canonical gameplay contract validated')
-          PY
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install validation dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements-dev.txt
+      - name: Validate runtime and catalogue
+        run: node scripts/check.mjs

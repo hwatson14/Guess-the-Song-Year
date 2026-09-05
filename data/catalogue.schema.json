@@ -2,65 +2,86 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://hwatson14.github.io/Guess-the-Song-Year/data/catalogue.schema.json",
   "title": "Guess the Song Year prebuilt catalogue",
-  "description": "Static one-mode Greatest Hits catalogue. Every playable item is a distinct underlying song, not an edit/remix/remaster duplicate, and its canonical release year must equal its year bucket.",
+  "description": "Static multi-mode song-year catalogue. data/modes.json declares whether each mode is Ready, Beta, Preview, or in development.",
   "type": "object",
-  "required": ["version", "modes"],
+  "required": [
+    "version",
+    "modes"
+  ],
   "properties": {
-    "version": {"type": "integer", "minimum": 10},
-    "generatedAt": {"type": "string"},
+    "version": {
+      "type": "integer",
+      "minimum": 6
+    },
+    "generatedAt": {
+      "type": "string"
+    },
     "years": {
       "type": "array",
       "minItems": 73,
       "maxItems": 73,
-      "items": {"type": "integer", "minimum": 1950, "maximum": 2022},
+      "items": {
+        "type": "integer",
+        "minimum": 1950,
+        "maximum": 2022
+      },
       "uniqueItems": true
     },
-    "coverage": {"type": "object"},
-    "poolStats": {"type": "object"},
-    "sources": {"type": "object"},
+    "coverage": {
+      "type": "object"
+    },
+    "poolStats": {
+      "type": "object"
+    },
+    "sources": {
+      "type": "object"
+    },
     "modes": {
       "type": "object",
-      "required": ["greatest"],
-      "additionalProperties": false,
-      "properties": {
-        "greatest": {
-          "type": "object",
-          "minProperties": 73,
-          "maxProperties": 73,
-          "additionalProperties": false,
-          "patternProperties": {
-            "^(19[5-9][0-9]|20[0-1][0-9]|202[0-2])$": {
-              "type": "array",
-              "minItems": 12,
-              "items": {"$ref": "#/$defs/song"}
-            }
-          }
-        }
+      "required": [
+        "greatest"
+      ],
+      "additionalProperties": {
+        "$ref": "#/$defs/mode"
       }
     }
   },
   "additionalProperties": true,
   "$defs": {
+    "mode": {
+      "type": "object",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(19[5-9][0-9]|20[0-1][0-9]|202[0-2])$": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/song"
+          }
+        }
+      }
+    },
     "song": {
       "type": "object",
       "required": [
         "title",
         "artist",
-        "year",
-        "canonicalKey",
-        "yearEvidence",
-        "musicbrainzId",
-        "chartYear",
-        "chartRank"
+        "year"
       ],
       "properties": {
-        "title": {"type": "string", "minLength": 1},
-        "artist": {"type": "string", "minLength": 1},
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "artist": {
+          "type": "string",
+          "minLength": 1
+        },
         "year": {
           "type": "integer",
           "minimum": 1950,
           "maximum": 2022,
-          "description": "Earliest verified release year of the canonical recording; must match the containing year bucket."
+          "description": "The mode year and containing bucket; release-year modes use canonical first release, chart modes use chart year."
         },
         "canonicalKey": {
           "type": "string",
@@ -70,18 +91,144 @@
         "yearEvidence": {
           "const": "MusicBrainz recording earliest first-release-date"
         },
-        "musicbrainzId": {"type": "string", "minLength": 1},
-        "musicbrainzMatchedTitle": {"type": "string"},
-        "musicbrainzMatchedArtist": {"type": "string"},
-        "mbScore": {"type": "number"},
-        "titleSimilarity": {"type": "number"},
-        "artistSimilarity": {"type": "number"},
-        "chartYear": {"type": "integer", "minimum": 1950, "maximum": 2022},
-        "chartRank": {"type": "integer", "minimum": 1},
-        "spotifyId": {"type": "string"},
-        "youtubeId": {"type": "string"},
-        "source": {"type": "string"},
-        "sourceLabel": {"type": "string"}
+        "musicbrainzId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "musicbrainzMatchedTitle": {
+          "type": "string"
+        },
+        "musicbrainzMatchedArtist": {
+          "type": "string"
+        },
+        "mbScore": {
+          "type": "number"
+        },
+        "titleSimilarity": {
+          "type": "number"
+        },
+        "artistSimilarity": {
+          "type": "number"
+        },
+        "chartYear": {
+          "type": "integer",
+          "minimum": 1950,
+          "maximum": 2022
+        },
+        "chartRank": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "spotifyId": {
+          "type": "string"
+        },
+        "youtubeId": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "sourceLabel": {
+          "type": "string"
+        },
+        "evidenceState": {
+          "enum": [
+            "bootstrap_only",
+            "externally_observed",
+            "ambiguous"
+          ]
+        },
+        "evidenceDisposition": {
+          "enum": [
+            "exact",
+            "normalized_equivalent",
+            "expanded_credit_double_sided",
+            "substantive_correction",
+            "expanded_double_sided"
+          ]
+        },
+        "sourceProvider": {
+          "type": "string"
+        },
+        "sourceUrl": {
+          "type": "string",
+          "pattern": "^https://"
+        },
+        "sourceTitle": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceArtist": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourcePageId": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sourceRevisionId": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sourceRevisionTimestamp": {
+          "type": "string"
+        },
+        "sourceRow": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "sourceRetrievalDate": {
+          "type": "string"
+        },
+        "evidenceLabel": {
+          "type": "string"
+        },
+        "playablePolicy": {
+          "type": "string"
+        },
+        "sourceSides": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object"
+          }
+        },
+        "playbackEvidenceState": {
+          "enum": [
+            "needs_reenrichment"
+          ]
+        },
+        "playbackIssue": {
+          "type": "string"
+        },
+        "releaseYear": {
+          "type": "integer",
+          "minimum": 1950,
+          "maximum": 2022
+        },
+        "releaseYearEvidence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "releaseDateEvidence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "releaseYearResolutionNote": {
+          "type": "string",
+          "minLength": 1
+        },
+        "legacyKeys": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 3
+          },
+          "description": "Previous saved-game identities for the same underlying song; preserve no-repeat after correcting credits or merging aliases."
+        }
       },
       "additionalProperties": true
     }

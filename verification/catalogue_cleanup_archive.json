@@ -1,0 +1,1937 @@
+{
+  "schemaVersion": 1,
+  "sourceCatalogueVersion": 14,
+  "entries": [
+    {
+      "id": "bc9c1987148e21d8a4a0",
+      "mode": "greatest",
+      "year": 1950,
+      "original": {
+        "title": "Goodnight Irene",
+        "artist": "Gordon Jenkins and His OrchestraThe Weavers",
+        "year": 1950,
+        "mbScore": 78,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "spotifyId": "3GtfeLBXe15nyEMN664ygs",
+        "youtubeId": ""
+      },
+      "originalKey": "goodnight irene|gordon jenkins",
+      "action": "repair",
+      "reason": "Correct joined performer credits and use the externally documented original release year. Unverified playback IDs are retained only in this archive.",
+      "replacement": {
+        "title": "Goodnight Irene",
+        "artist": "Gordon Jenkins and His Orchestra and The Weavers",
+        "year": 1950,
+        "releaseYear": 1950,
+        "spotifyId": "",
+        "youtubeId": "",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Goodnight%2C_Irene",
+        "sourceProvider": "Wikipedia",
+        "releaseYearEvidence": "The Weavers and Gordon Jenkins recording was issued on Decca in 1950 and entered the US singles chart on June 30, 1950.",
+        "source": "catalogue-cleanup-release-audit",
+        "sourceLabel": "Sourced original recording",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-09-05",
+        "canonicalKey": "goodnight irene|gordon jenkins"
+      }
+    },
+    {
+      "id": "6a3fa3806ea303de0697",
+      "mode": "greatest",
+      "year": 1952,
+      "original": {
+        "title": "Cry",
+        "artist": "Johnnie RayThe Four Lads",
+        "year": 1952,
+        "mbScore": 47,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "spotifyId": "6I3CrqLrSqSlGzs2dactg1",
+        "youtubeId": ""
+      },
+      "originalKey": "cry|johnnie raythe four lads",
+      "action": "repair",
+      "reason": "Correct joined performer credits and use the externally documented original release year. Unverified playback IDs are retained only in this archive.",
+      "replacement": {
+        "title": "Cry",
+        "artist": "Johnnie Ray and The Four Lads",
+        "year": 1951,
+        "releaseYear": 1951,
+        "spotifyId": "",
+        "youtubeId": "",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Cry_(Churchill_Kohlman_song)",
+        "sourceProvider": "Wikipedia",
+        "releaseYearEvidence": "The Johnnie Ray/Four Lads single infobox gives its release as October 1951, before the legacy 1952 chart-year placement.",
+        "source": "catalogue-cleanup-release-audit",
+        "sourceLabel": "Sourced original recording",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-09-05",
+        "canonicalKey": "cry|johnnie ray"
+      }
+    },
+    {
+      "id": "c9e03c9a9392814bb436",
+      "mode": "greatest",
+      "year": 1952,
+      "original": {
+        "title": "You Belong to Me",
+        "artist": "Jo StaffordPaul Weston & His Orchestra",
+        "year": 1952,
+        "mbScore": 63,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "spotifyId": "2NDMLabAjx4oL7ezx2PNxS",
+        "youtubeId": ""
+      },
+      "originalKey": "you belong to me|jo staffordpaul weston",
+      "action": "repair",
+      "reason": "Correct joined performer credits and use the externally documented original release year. Unverified playback IDs are retained only in this archive.",
+      "replacement": {
+        "title": "You Belong to Me",
+        "artist": "Jo Stafford with Paul Weston and His Orchestra",
+        "year": 1952,
+        "releaseYear": 1952,
+        "spotifyId": "",
+        "youtubeId": "",
+        "sourceUrl": "https://en.wikipedia.org/wiki/You_Belong_to_Me_%281952_song%29",
+        "sourceProvider": "Wikipedia",
+        "releaseYearEvidence": "Jo Stafford recorded the Paul Weston accompaniment in June 1952; Columbia issued 39811, which first charted in August 1952.",
+        "source": "catalogue-cleanup-release-audit",
+        "sourceLabel": "Sourced original recording",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-09-05",
+        "canonicalKey": "you belong to me|jo stafford"
+      }
+    },
+    {
+      "id": "41c52d6f5d726af2becd",
+      "mode": "greatest",
+      "year": 1953,
+      "original": {
+        "title": "The Song From Moulin Rouge (Where Is Your Heart)",
+        "artist": "Percy Faith & His OrchestraFelicia Sanders",
+        "year": 1953,
+        "mbScore": 59,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label"
+      },
+      "originalKey": "the song from moulin rouge where is your heart|percy faith",
+      "action": "repair",
+      "reason": "Correct joined performer credits and use the externally documented original release year. Unverified playback IDs are retained only in this archive.",
+      "replacement": {
+        "title": "The Song From Moulin Rouge (Where Is Your Heart)",
+        "artist": "Percy Faith and His Orchestra with Felicia Sanders",
+        "year": 1953,
+        "releaseYear": 1953,
+        "spotifyId": "",
+        "youtubeId": "",
+        "sourceUrl": "https://en.wikipedia.org/wiki/The_Song_from_Moulin_Rouge",
+        "sourceProvider": "Wikipedia",
+        "releaseYearEvidence": "Percy Faith and Felicia Sanders recorded this version in January 1953; Columbia issued it as 39944/4-39944 and it first charted in March 1953.",
+        "source": "catalogue-cleanup-release-audit",
+        "sourceLabel": "Sourced original recording",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-09-05",
+        "canonicalKey": "the song from moulin rouge where is your heart|percy faith"
+      }
+    },
+    {
+      "id": "6a92c05190b2971e1fc2",
+      "mode": "greatest",
+      "year": 1954,
+      "original": {
+        "title": "Hey There",
+        "artist": "Rosemary ClooneyBuddy Cole and His Orchestra",
+        "year": 1954,
+        "mbScore": 55,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "spotifyId": "0hNwfLcROljm0Wk9zWIQ6z",
+        "youtubeId": ""
+      },
+      "originalKey": "hey there|rosemary clooneybuddy cole",
+      "action": "repair",
+      "reason": "Correct joined performer credits and use the externally documented original release year. Unverified playback IDs are retained only in this archive.",
+      "replacement": {
+        "title": "Hey There",
+        "artist": "Rosemary Clooney with Buddy Cole and His Orchestra",
+        "year": 1954,
+        "releaseYear": 1954,
+        "spotifyId": "",
+        "youtubeId": "",
+        "sourceUrl": "https://www.grammy.com/awards/hall-of-fame-award/",
+        "sourceProvider": "Recording Academy / Columbia single discography",
+        "releaseYearEvidence": "The Recording Academy lists Rosemary Clooney's Hey There as a Columbia single from 1954. The Columbia 4-40266 discography credits Buddy Cole and his Orchestra.",
+        "corroboratingSourceUrl": "https://www.45cat.com/record/440266",
+        "source": "catalogue-cleanup-release-audit",
+        "sourceLabel": "Sourced original recording",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-09-05",
+        "canonicalKey": "hey there|rosemary clooney"
+      }
+    },
+    {
+      "id": "80ed877d3e9ee9b42696",
+      "mode": "greatest",
+      "year": 1962,
+      "original": {
+        "title": "Stranger on the Shore",
+        "artist": "Acker BilkThe Leon Young String Chorale",
+        "year": 1962,
+        "mbScore": 67,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "spotifyId": "6sZ8qBd2dO4QQq6B6FqVPn",
+        "youtubeId": ""
+      },
+      "originalKey": "stranger on the shore|acker bilkthe leon young string chorale",
+      "action": "repair",
+      "reason": "Correct joined performer credits and use the externally documented original release year. Unverified playback IDs are retained only in this archive.",
+      "replacement": {
+        "title": "Stranger on the Shore",
+        "artist": "Acker Bilk with The Leon Young String Chorale",
+        "year": 1961,
+        "releaseYear": 1961,
+        "spotifyId": "",
+        "youtubeId": "",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Stranger_on_the_Shore",
+        "sourceProvider": "Wikipedia",
+        "releaseYearEvidence": "The Acker Bilk single infobox gives October 1961; the text identifies the UK Columbia DB 4750 issue with the Leon Young String Chorale.",
+        "source": "catalogue-cleanup-release-audit",
+        "sourceLabel": "Sourced original recording",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-09-05",
+        "canonicalKey": "stranger on the shore|acker bilk"
+      }
+    },
+    {
+      "id": "d978c118db1e9bf253b2",
+      "mode": "greatest",
+      "year": 1976,
+      "original": {
+        "title": "Don’t Go Breaking My Heart",
+        "artist": "Elton JohnKiki Dee",
+        "year": 1976,
+        "mbScore": 83,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label"
+      },
+      "originalKey": "don t go breaking my heart|elton johnkiki dee",
+      "action": "repair",
+      "reason": "Restore the correctly credited original recording using artist or national archive release evidence.",
+      "replacement": {
+        "title": "Don't Go Breaking My Heart",
+        "artist": "Elton John and Kiki Dee",
+        "year": 1976,
+        "releaseYear": 1976,
+        "releaseYearEvidence": "Elton John's official retrospective states that the duet with Kiki Dee was released in June 1976.",
+        "sourceUrl": "https://www.eltonjohn.com/stories/the-summer-of-76-dont-go-breaking-my-heart",
+        "sourceProvider": "Elton John official site",
+        "source": "catalogue-cleanup-release-audit",
+        "sourceLabel": "Sourced original recording",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-09-05",
+        "spotifyId": "",
+        "youtubeId": "",
+        "canonicalKey": "don t go breaking my heart|elton john"
+      }
+    },
+    {
+      "id": "505b754a7bcd88be5c4b",
+      "mode": "greatest",
+      "year": 1982,
+      "original": {
+        "title": "Ebony and Ivory",
+        "artist": "Paul McCartneyStevie Wonder",
+        "year": 1982,
+        "mbScore": 100,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "spotifyId": "3fVSMbeq8tY3G85yxcJwRU",
+        "youtubeId": ""
+      },
+      "originalKey": "ebony and ivory|paul mccartneystevie wonder",
+      "action": "repair",
+      "reason": "Restore the correctly credited original recording using artist or national archive release evidence.",
+      "replacement": {
+        "title": "Ebony and Ivory",
+        "artist": "Paul McCartney feat. Stevie Wonder",
+        "year": 1982,
+        "releaseYear": 1982,
+        "releaseYearEvidence": "Paul McCartney's official single page gives 29 March 1982; his official Paul and Stevie Wonder article identifies the duet.",
+        "sourceUrl": "https://www.paulmccartney.com/discography/singles/ebony-and-ivory",
+        "sourceProvider": "Paul McCartney official discography",
+        "corroboratingSourceUrl": "https://www.paulmccartney.com/news/paul-and-stevie-wonder",
+        "source": "catalogue-cleanup-release-audit",
+        "sourceLabel": "Sourced original recording",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-09-05",
+        "spotifyId": "",
+        "youtubeId": "",
+        "canonicalKey": "ebony and ivory|paul mccartney"
+      }
+    },
+    {
+      "id": "91e147425475dfb97eee",
+      "mode": "greatest",
+      "year": 2012,
+      "original": {
+        "title": "Somebody That I Used to Know",
+        "artist": "GotyeKimbra",
+        "year": 2012,
+        "mbScore": 84,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "spotifyId": "4wCmqSrbyCgxEXROQE6vtV",
+        "youtubeId": ""
+      },
+      "originalKey": "somebody that i used to know|gotyekimbra",
+      "action": "repair",
+      "reason": "Restore the correctly credited original recording using artist or national archive release evidence.",
+      "replacement": {
+        "title": "Somebody That I Used to Know",
+        "artist": "Gotye feat. Kimbra",
+        "year": 2011,
+        "releaseYear": 2011,
+        "releaseYearEvidence": "The NFSA record states that Gotye and Kimbra's single was released on 5 July 2011; the legacy 2012 bucket was a chart-year placement.",
+        "sourceUrl": "https://www.nfsa.gov.au/collection/item/somebody-i-used-know-gotye-ft-kimbra",
+        "sourceProvider": "National Film and Sound Archive of Australia",
+        "source": "catalogue-cleanup-release-audit",
+        "sourceLabel": "Sourced original recording",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-09-05",
+        "spotifyId": "",
+        "youtubeId": "",
+        "canonicalKey": "somebody that i used to know|gotye"
+      }
+    },
+    {
+      "id": "d5add56b453ff9711b6f",
+      "mode": "greatest",
+      "year": 1986,
+      "original": {
+        "title": "On My Own",
+        "artist": "Patti LaBelleMichael McDonald",
+        "year": 1986,
+        "mbScore": 91,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "spotifyId": "29UXndgjLVTUZ8b1Mhz9CR",
+        "youtubeId": ""
+      },
+      "originalKey": "on my own|patti labellemichael mcdonald",
+      "action": "repair",
+      "reason": "Use the independently sourced original studio recording and first release year; preserve the superseded row and playback IDs for review.",
+      "replacement": {
+        "title": "On My Own",
+        "artist": "Patti LaBelle & Michael McDonald",
+        "year": 1986,
+        "releaseYear": 1986,
+        "releaseYearEvidence": "Apple Music identifies the Patti LaBelle and Michael McDonald recording on Winner in You with a January 1, 1986 album date and a 1986 UMG phonogram credit.",
+        "sourceProvider": "Apple Music",
+        "sourceUrl": "https://music.apple.com/us/song/1467952238",
+        "sourceRetrievalDate": "2026-09-05",
+        "spotifyId": "",
+        "youtubeId": "",
+        "source": "catalogue-cleanup-release-audit",
+        "sourceLabel": "Sourced original recording",
+        "evidenceState": "externally_observed",
+        "canonicalKey": "on my own|patti labelle"
+      }
+    },
+    {
+      "id": "0754a3c45f985a691814",
+      "mode": "greatest",
+      "year": 1986,
+      "original": {
+        "title": "That’s What Friends Are For",
+        "artist": "Dionne Warwick",
+        "year": 1986,
+        "mbScore": 96,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label"
+      },
+      "originalKey": "that s what friends are for|dionne warwick",
+      "action": "repair",
+      "reason": "Use the independently sourced original studio recording and first release year; preserve the superseded row and playback IDs for review.",
+      "replacement": {
+        "title": "That's What Friends Are For",
+        "artist": "Dionne Warwick with Elton John, Gladys Knight & Stevie Wonder",
+        "year": 1985,
+        "releaseYear": 1985,
+        "releaseYearEvidence": "The label-provided Apple Music album page lists the recording on Friends, released November 25, 1985, and credits the guest performers in the track title.",
+        "sourceProvider": "Apple Music / Sony Music Entertainment",
+        "sourceUrl": "https://music.apple.com/us/album/friends/271836067",
+        "sourceRetrievalDate": "2026-09-05",
+        "spotifyId": "",
+        "youtubeId": "",
+        "source": "catalogue-cleanup-release-audit",
+        "sourceLabel": "Sourced original recording",
+        "evidenceState": "externally_observed",
+        "canonicalKey": "that s what friends are for|dionne warwick"
+      }
+    },
+    {
+      "id": "a3ba0250455082ec47fd",
+      "mode": "greatest",
+      "year": 1995,
+      "original": {
+        "title": "Gangsta's Paradise",
+        "artist": "CoolioL.V.",
+        "year": 1995,
+        "mbScore": 64,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "spotifyId": "7lQWRAjyhTpCWFC0jmclT4",
+        "youtubeId": ""
+      },
+      "originalKey": "gangsta s paradise|cooliol v",
+      "action": "repair",
+      "reason": "Use the independently sourced original studio recording and first release year; preserve the superseded row and playback IDs for review.",
+      "replacement": {
+        "title": "Gangsta's Paradise",
+        "artist": "Coolio feat. L.V.",
+        "year": 1995,
+        "releaseYear": 1995,
+        "releaseYearEvidence": "Tommy Boy Records' release page identifies Coolio's Gangsta's Paradise release and gives its release date as August 8, 1995.",
+        "sourceProvider": "Tommy Boy Records",
+        "sourceUrl": "https://tommyboy-records.com/us/products/292334-gangstas-paradise",
+        "sourceRetrievalDate": "2026-09-05",
+        "spotifyId": "",
+        "youtubeId": "",
+        "source": "catalogue-cleanup-release-audit",
+        "sourceLabel": "Sourced original recording",
+        "evidenceState": "externally_observed",
+        "canonicalKey": "gangsta s paradise|coolio"
+      }
+    },
+    {
+      "id": "1446fecbfee559944a28",
+      "mode": "greatest",
+      "year": 1996,
+      "original": {
+        "title": "One Sweet Day",
+        "artist": "Mariah CareyBoyz II Men",
+        "year": 1996,
+        "mbScore": 61,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "spotifyId": "7ySbfLwdCwl1EM0zNCJZ38",
+        "youtubeId": ""
+      },
+      "originalKey": "one sweet day|mariah careyboyz ii men",
+      "action": "repair",
+      "reason": "Use the independently sourced original studio recording and first release year; preserve the superseded row and playback IDs for review.",
+      "replacement": {
+        "title": "One Sweet Day",
+        "artist": "Mariah Carey & Boyz II Men",
+        "year": 1995,
+        "releaseYear": 1995,
+        "releaseYearEvidence": "Apple Music's Columbia Records EP page lists One Sweet Day by Mariah Carey with a November 14, 1995 release date and identifies the collaboration with Boyz II Men.",
+        "sourceProvider": "Apple Music / Columbia Records",
+        "sourceUrl": "https://music.apple.com/us/album/one-sweet-day-ep/1526896842",
+        "sourceRetrievalDate": "2026-09-05",
+        "spotifyId": "",
+        "youtubeId": "",
+        "source": "catalogue-cleanup-release-audit",
+        "sourceLabel": "Sourced original recording",
+        "evidenceState": "externally_observed",
+        "canonicalKey": "one sweet day|mariah carey"
+      }
+    },
+    {
+      "id": "465fc1fc54de4b2fee94",
+      "mode": "greatest",
+      "year": 2014,
+      "original": {
+        "title": "Dark Horse",
+        "artist": "Katy PerryJuicy J",
+        "year": 2014,
+        "mbScore": 89,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "spotifyId": "5jrdCoLpJSvHHorevXBATy",
+        "youtubeId": ""
+      },
+      "originalKey": "dark horse|katy perryjuicy j",
+      "action": "repair",
+      "reason": "Use the independently sourced original studio recording and first release year; preserve the superseded row and playback IDs for review.",
+      "replacement": {
+        "title": "Dark Horse",
+        "artist": "Katy Perry feat. Juicy J",
+        "year": 2013,
+        "releaseYear": 2013,
+        "releaseYearEvidence": "Apple Music identifies Dark Horse (feat. Juicy J) on Katy Perry's PRISM with an October 18, 2013 album date.",
+        "sourceProvider": "Apple Music / Capitol Records",
+        "sourceUrl": "https://music.apple.com/us/song/1440871474",
+        "sourceRetrievalDate": "2026-09-05",
+        "spotifyId": "",
+        "youtubeId": "",
+        "source": "catalogue-cleanup-release-audit",
+        "sourceLabel": "Sourced original recording",
+        "evidenceState": "externally_observed",
+        "canonicalKey": "dark horse|katy perry"
+      }
+    },
+    {
+      "id": "bbe0f122a46a3e9b2b7e",
+      "mode": "greatest",
+      "year": 2015,
+      "original": {
+        "title": "Uptown Funk",
+        "artist": "Mark RonsonBruno Mars",
+        "year": 2015,
+        "mbScore": 80,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "spotifyId": "32OlwWuMpZ6b0aN2RZOeMS",
+        "youtubeId": ""
+      },
+      "originalKey": "uptown funk|mark ronsonbruno mars",
+      "action": "repair",
+      "reason": "Use the independently sourced original studio recording and first release year; preserve the superseded row and playback IDs for review.",
+      "replacement": {
+        "title": "Uptown Funk",
+        "artist": "Mark Ronson feat. Bruno Mars",
+        "year": 2014,
+        "releaseYear": 2014,
+        "releaseYearEvidence": "Apple Music lists Uptown Funk (feat. Bruno Mars) as a Mark Ronson single released November 10, 2014, with a 2014 Mark Ronson/Sony phonogram credit.",
+        "sourceProvider": "Apple Music / Sony Music Entertainment UK",
+        "sourceUrl": "https://music.apple.com/us/album/uptown-funk-feat-bruno-mars-single/938032038",
+        "sourceRetrievalDate": "2026-09-05",
+        "spotifyId": "",
+        "youtubeId": "",
+        "source": "catalogue-cleanup-release-audit",
+        "sourceLabel": "Sourced original recording",
+        "evidenceState": "externally_observed",
+        "canonicalKey": "uptown funk|mark ronson"
+      }
+    },
+    {
+      "id": "7335e2f7ecd6575e0378",
+      "mode": "greatest",
+      "year": 2018,
+      "original": {
+        "title": "Meant to Be",
+        "artist": "Bebe RexhaFlorida Georgia Line",
+        "year": 2018,
+        "mbScore": 86,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "spotifyId": "7iDa6hUg2VgEL1o1HjmfBn",
+        "youtubeId": ""
+      },
+      "originalKey": "meant to be|bebe rexhaflorida georgia line",
+      "action": "repair",
+      "reason": "Use the independently sourced original studio recording and first release year; preserve the superseded row and playback IDs for review.",
+      "replacement": {
+        "title": "Meant to Be",
+        "artist": "Bebe Rexha feat. Florida Georgia Line",
+        "year": 2017,
+        "releaseYear": 2017,
+        "releaseYearEvidence": "Apple Music lists Meant to Be (feat. Florida Georgia Line) on Bebe Rexha's All Your Fault, Pt. 2, released August 11, 2017, with a 2017 Warner Records phonogram credit.",
+        "sourceProvider": "Apple Music / Warner Records",
+        "sourceUrl": "https://music.apple.com/us/album/all-your-fault-pt-2-ep/1251713683",
+        "sourceRetrievalDate": "2026-09-05",
+        "spotifyId": "",
+        "youtubeId": "",
+        "source": "catalogue-cleanup-release-audit",
+        "sourceLabel": "Sourced original recording",
+        "evidenceState": "externally_observed",
+        "canonicalKey": "meant to be|bebe rexha"
+      }
+    },
+    {
+      "id": "e9fb62e4abc29a91190a",
+      "mode": "greatest",
+      "year": 2018,
+      "original": {
+        "title": "God's Plan (Deluxe Ultra edit)",
+        "artist": "Drake",
+        "year": 2018,
+        "mbScore": 61,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "spotifyId": "6DCZcSspjsKoFjzjrWoCdn",
+        "youtubeId": ""
+      },
+      "originalKey": "god s plan|drake",
+      "action": "repair",
+      "reason": "Use the independently sourced original studio recording and first release year; preserve the superseded row and playback IDs for review.",
+      "replacement": {
+        "title": "God's Plan",
+        "artist": "Drake",
+        "year": 2018,
+        "releaseYear": 2018,
+        "releaseYearEvidence": "Spotify lists God's Plan on Drake's Scary Hours release dated January 19, 2018; this predates its later inclusion on Scorpion.",
+        "sourceProvider": "Spotify",
+        "sourceUrl": "https://open.spotify.com/album/1HQ8MxhSOftbV8nPhhvZnq",
+        "sourceRetrievalDate": "2026-09-05",
+        "spotifyId": "",
+        "youtubeId": "",
+        "source": "catalogue-cleanup-release-audit",
+        "sourceLabel": "Sourced original recording",
+        "evidenceState": "externally_observed",
+        "canonicalKey": "god s plan|drake"
+      }
+    },
+    {
+      "id": "cdc2c1836d005cbb32cf",
+      "mode": "greatest",
+      "year": 2000,
+      "original": {
+        "title": "Breathe (pop version)",
+        "artist": "Faith Hill",
+        "year": 2000,
+        "mbScore": 64,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label"
+      },
+      "originalKey": "breathe|faith hill",
+      "action": "repair",
+      "reason": "Use the independently sourced original studio recording and first release year; preserve the superseded row and playback IDs for review.",
+      "replacement": {
+        "title": "Breathe",
+        "artist": "Faith Hill",
+        "year": 1999,
+        "releaseYear": 1999,
+        "releaseYearEvidence": "Apple Music lists Breathe on Faith Hill's album Breathe, released November 9, 1999, with a 1999 Warner Records phonogram credit.",
+        "sourceProvider": "Apple Music / Warner Records",
+        "sourceUrl": "https://music.apple.com/us/album/breathe/321981503",
+        "sourceRetrievalDate": "2026-09-05",
+        "spotifyId": "",
+        "youtubeId": "",
+        "source": "catalogue-cleanup-release-audit",
+        "sourceLabel": "Sourced original recording",
+        "evidenceState": "externally_observed",
+        "canonicalKey": "breathe|faith hill"
+      }
+    },
+    {
+      "id": "4c8a44089f7636813d95",
+      "mode": "greatest",
+      "year": 1972,
+      "original": {
+        "title": "The First Time Ever I Saw Your Face (single edit)",
+        "artist": "Roberta Flack",
+        "year": 1972,
+        "mbScore": 100,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "spotifyId": "0SxFyA4FqmEQqZVuAlg8lf",
+        "youtubeId": ""
+      },
+      "originalKey": "the first time ever i saw your face|roberta flack",
+      "action": "repair",
+      "reason": "Use the independently sourced original studio recording and first release year; preserve the superseded row and playback IDs for review.",
+      "replacement": {
+        "title": "The First Time Ever I Saw Your Face",
+        "artist": "Roberta Flack",
+        "year": 1969,
+        "releaseYear": 1969,
+        "releaseYearEvidence": "Atlantic Records identifies the song as part of First Take, recorded in 1969; Apple Music dates the original First Take album release to June 20, 1969. This is the original album recording, before the shortened 1972 single edit.",
+        "sourceProvider": "Atlantic Records and Apple Music",
+        "sourceUrl": "https://store.atlanticrecords.com/products/first-take",
+        "corroboratingSourceUrl": "https://music.apple.com/us/album/first-take/355178034",
+        "sourceRetrievalDate": "2026-09-05",
+        "spotifyId": "",
+        "youtubeId": "",
+        "source": "catalogue-cleanup-release-audit",
+        "sourceLabel": "Sourced original recording",
+        "evidenceState": "externally_observed",
+        "canonicalKey": "the first time ever i saw your face|roberta flack"
+      }
+    },
+    {
+      "id": "9dc77990f48e1506d8ce",
+      "mode": "australian",
+      "year": 2016,
+      "original": {
+        "title": "Girls Talk Boys (from “Ghostbusters” original motion picture soundtrack)",
+        "artist": "5 Seconds of Summer",
+        "year": 2016,
+        "mbScore": 100,
+        "source": "australian-release",
+        "sourceLabel": "Australian artist · legacy release-year label"
+      },
+      "originalKey": "girls talk boys|5 seconds of summer",
+      "action": "repair",
+      "reason": "Normalize the soundtrack attribution; Apple Music identifies the same 2016 original recording.",
+      "replacement": {
+        "title": "Girls Talk Boys",
+        "artist": "5 Seconds of Summer",
+        "year": 2016,
+        "source": "catalogue-cleanup-release-audit",
+        "sourceLabel": "Sourced original recording",
+        "sourceUrl": "https://music.apple.com/us/song/1127014018",
+        "sourceProvider": "Apple Music soundtrack catalogue",
+        "sourceTitle": "Girls Talk Boys",
+        "sourceArtist": "5 Seconds of Summer",
+        "releaseYear": 2016,
+        "releaseYearEvidence": "Apple Music lists the song on Ghostbusters (Original Motion Picture Soundtrack), dated July 15, 2016.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-09-05",
+        "spotifyId": "",
+        "youtubeId": "",
+        "canonicalKey": "girls talk boys|5 seconds of summer"
+      }
+    },
+    {
+      "id": "34952374e8fbf7d9e817",
+      "mode": "greatest",
+      "year": 1957,
+      "original": {
+        "title": "All Shook Up, Take 10 (master)",
+        "artist": "Elvis Presley",
+        "year": 1957,
+        "mbScore": 76,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "all shook up take 10|elvis presley",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "all shook up|elvis presley",
+        "year": 1957,
+        "title": "All Shook Up",
+        "artist": "Elvis Presley"
+      }
+    },
+    {
+      "id": "23e22d2a8d6ab9a7403a",
+      "mode": "greatest",
+      "year": 1962,
+      "original": {
+        "title": "Stranger on the Shore",
+        "artist": "Mr. Acker BilkThe Leon Young String Chorale",
+        "year": 1962,
+        "mbScore": 67,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "stranger on the shore|mr acker bilkthe leon young string chorale",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "stranger on the shore|acker bilk",
+        "year": 1961,
+        "title": "Stranger on the Shore",
+        "artist": "Acker Bilk with The Leon Young String Chorale"
+      }
+    },
+    {
+      "id": "5e4882de35599ea9c725",
+      "mode": "greatest",
+      "year": 1981,
+      "original": {
+        "title": "Endless Love",
+        "artist": "Diana RossLionel Richie",
+        "year": 1981,
+        "mbScore": 56,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "endless love|diana rosslionel richie",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "endless love|diana ross",
+        "year": 1981,
+        "title": "Endless Love",
+        "artist": "Diana Ross"
+      }
+    },
+    {
+      "id": "8e0117d27bc33b322659",
+      "mode": "greatest",
+      "year": 1982,
+      "original": {
+        "title": "Ebony and Ivory (solo vocal)",
+        "artist": "Paul McCartney",
+        "year": 1982,
+        "mbScore": 96,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label"
+      },
+      "originalKey": "ebony and ivory|paul mccartney",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "ebony and ivory|paul mccartney",
+        "year": 1982,
+        "title": "Ebony and Ivory",
+        "artist": "Paul McCartney feat. Stevie Wonder"
+      }
+    },
+    {
+      "id": "4f59cb70a33db0368f5a",
+      "mode": "greatest",
+      "year": 1984,
+      "original": {
+        "title": "When Doves Cry",
+        "artist": "PrinceThe Revolution",
+        "year": 1984,
+        "mbScore": 64,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "when doves cry|princethe revolution",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "when doves cry|prince",
+        "year": 1984,
+        "title": "When Doves Cry",
+        "artist": "Prince"
+      }
+    },
+    {
+      "id": "66320f4580f2d3e7f95b",
+      "mode": "greatest",
+      "year": 1985,
+      "original": {
+        "title": "I Feel for You (extended edit)",
+        "artist": "Chaka Khan",
+        "year": 1985,
+        "mbScore": 96,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "spotifyId": "5yR9u8QiOt8hJaddv32oo7",
+        "youtubeId": ""
+      },
+      "originalKey": "i feel for you|chaka khan",
+      "action": "archive_unresolved",
+      "reason": "Original recording identity or release evidence remains unresolved. Preserve the full candidate outside the playable catalogue instead of guessing a replacement."
+    },
+    {
+      "id": "dd8d2b5d39e60dbfed1c",
+      "mode": "greatest",
+      "year": 1986,
+      "original": {
+        "title": "That’s What Friends Are For",
+        "artist": "Dionne WarwickElton JohnGladys KnightStevie Wonder",
+        "year": 1986,
+        "mbScore": 82,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label"
+      },
+      "originalKey": "that s what friends are for|dionne warwickelton johngladys knightstevie wonder",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "that s what friends are for|dionne warwick",
+        "year": 1985,
+        "title": "That's What Friends Are For",
+        "artist": "Dionne Warwick with Elton John, Gladys Knight & Stevie Wonder"
+      }
+    },
+    {
+      "id": "ebfaba07828aff396a0e",
+      "mode": "greatest",
+      "year": 1998,
+      "original": {
+        "title": "The Boy Is Mine",
+        "artist": "BrandyMonica",
+        "year": 1998,
+        "mbScore": 60,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "the boy is mine|brandymonica",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "the boy is mine|brandy",
+        "year": 1998,
+        "title": "The Boy Is Mine",
+        "artist": "Brandy"
+      }
+    },
+    {
+      "id": "162d27598fc19d83c8f3",
+      "mode": "greatest",
+      "year": 1998,
+      "original": {
+        "title": "The Boy Is Mine",
+        "artist": "MonicaBrandy",
+        "year": 1998,
+        "mbScore": 60,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "the boy is mine|monicabrandy",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "the boy is mine|brandy",
+        "year": 1998,
+        "title": "The Boy Is Mine",
+        "artist": "Brandy"
+      }
+    },
+    {
+      "id": "a3f4c33fd21f8181d63d",
+      "mode": "greatest",
+      "year": 2000,
+      "original": {
+        "title": "Smooth",
+        "artist": "SantanaRob Thomas",
+        "year": 2000,
+        "mbScore": 53,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "smooth|santanarob thomas",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "smooth|santana",
+        "year": 2000,
+        "title": "Smooth",
+        "artist": "Santana"
+      }
+    },
+    {
+      "id": "ce496109ef934cc93c01",
+      "mode": "greatest",
+      "year": 2004,
+      "original": {
+        "title": "Yeah",
+        "artist": "UsherLil Jon",
+        "year": 2004,
+        "mbScore": 52,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "yeah|usherlil jon",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "yeah|usher",
+        "year": 2004,
+        "title": "Yeah",
+        "artist": "Usher"
+      }
+    },
+    {
+      "id": "6ce00db5e94b3ca92ed6",
+      "mode": "greatest",
+      "year": 2004,
+      "original": {
+        "title": "Yeah!",
+        "artist": "UsherLil JonLudacris",
+        "year": 2004,
+        "mbScore": 49,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "yeah|usherlil jonludacris",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "yeah|usher",
+        "year": 2004,
+        "title": "Yeah",
+        "artist": "Usher"
+      }
+    },
+    {
+      "id": "44f4c920d2389b2027ec",
+      "mode": "greatest",
+      "year": 2006,
+      "original": {
+        "title": "Bad Day",
+        "artist": "Agent ZedDaniel Powter",
+        "year": 2006,
+        "mbScore": 78,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "bad day|agent zeddaniel powter",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "bad day|daniel powter",
+        "year": 2006,
+        "title": "Bad Day",
+        "artist": "Daniel Powter"
+      }
+    },
+    {
+      "id": "24cb2db6a53c16857019",
+      "mode": "greatest",
+      "year": 2008,
+      "original": {
+        "title": "Low",
+        "artist": "Flo RidaT‐Pain",
+        "year": 2008,
+        "mbScore": 75,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "low|flo ridat pain",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "low|flo rida",
+        "year": 2008,
+        "title": "Low",
+        "artist": "Flo Rida"
+      }
+    },
+    {
+      "id": "3790fbd4fc8172ae6756",
+      "mode": "greatest",
+      "year": 2010,
+      "original": {
+        "title": "TiK ToK",
+        "artist": "PitbullKe$ha",
+        "year": 2010,
+        "mbScore": 90,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "tik tok|pitbullke ha",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "tik tok|kesha",
+        "year": 2009,
+        "title": "Tik Tok",
+        "artist": "Kesha"
+      }
+    },
+    {
+      "id": "5db10a0314fe25098e58",
+      "mode": "greatest",
+      "year": 2012,
+      "original": {
+        "title": "Somebody That I Used to Know (Preview)",
+        "artist": "Antoine DelvigGotyeDJ ICE",
+        "year": 2012,
+        "mbScore": 70,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label"
+      },
+      "originalKey": "somebody that i used to know|antoine delviggotyedj ice",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "somebody that i used to know|gotye",
+        "year": 2011,
+        "title": "Somebody That I Used to Know",
+        "artist": "Gotye feat. Kimbra"
+      }
+    },
+    {
+      "id": "b047b25c8d4266a91d08",
+      "mode": "greatest",
+      "year": 2013,
+      "original": {
+        "title": "Blurred Lines",
+        "artist": "Robin ThickePharrell",
+        "year": 2013,
+        "mbScore": 88,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "blurred lines|robin thickepharrell",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "blurred lines|robin thicke",
+        "year": 2013,
+        "title": "Blurred Lines",
+        "artist": "Robin Thicke"
+      }
+    },
+    {
+      "id": "ad04eb8fe6d63cc77ac7",
+      "mode": "greatest",
+      "year": 2013,
+      "original": {
+        "title": "Blurred Lines",
+        "artist": "Robin ThickePharrell Williams",
+        "year": 2013,
+        "mbScore": 88,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "blurred lines|robin thickepharrell williams",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "blurred lines|robin thicke",
+        "year": 2013,
+        "title": "Blurred Lines",
+        "artist": "Robin Thicke"
+      }
+    },
+    {
+      "id": "1c489fcc1d58879afcf4",
+      "mode": "greatest",
+      "year": 2013,
+      "original": {
+        "title": "Blurred Lines",
+        "artist": "Robin ThickeT.I.Pharrell Williams",
+        "year": 2013,
+        "mbScore": 84,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "blurred lines|robin thicket i pharrell williams",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "blurred lines|robin thicke",
+        "year": 2013,
+        "title": "Blurred Lines",
+        "artist": "Robin Thicke"
+      }
+    },
+    {
+      "id": "303f529bcc18eb922685",
+      "mode": "greatest",
+      "year": 2014,
+      "original": {
+        "title": "Dark Horse (acoustic)",
+        "artist": "Katy Perry",
+        "year": 2014,
+        "mbScore": 96,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label"
+      },
+      "originalKey": "dark horse|katy perry",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "dark horse|katy perry",
+        "year": 2013,
+        "title": "Dark Horse",
+        "artist": "Katy Perry feat. Juicy J"
+      }
+    },
+    {
+      "id": "4c144021737aa530b93c",
+      "mode": "greatest",
+      "year": 2015,
+      "original": {
+        "title": "Thinking Out Loud (Rumba 22)",
+        "artist": "Ed SheeranDJ Ice",
+        "year": 2015,
+        "mbScore": 78,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label"
+      },
+      "originalKey": "thinking out loud rumba 22|ed sheerandj ice",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "thinking out loud|ed sheeran",
+        "year": 2014,
+        "title": "Thinking Out Loud",
+        "artist": "Ed Sheeran"
+      }
+    },
+    {
+      "id": "d32d1059ab524060ade1",
+      "mode": "greatest",
+      "year": 2018,
+      "original": {
+        "title": "Meant to Be (acoustic)",
+        "artist": "Bebe Rexha",
+        "year": 2018,
+        "mbScore": 100,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "meant to be|bebe rexha",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "meant to be|bebe rexha",
+        "year": 2017,
+        "title": "Meant to Be",
+        "artist": "Bebe Rexha feat. Florida Georgia Line"
+      }
+    },
+    {
+      "id": "4fe13b15d275fbf4a6d6",
+      "mode": "greatest",
+      "year": 2019,
+      "original": {
+        "title": "Without Me",
+        "artist": "HalseyJuice WRLD",
+        "year": 2019,
+        "mbScore": 63,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "without me|halseyjuice wrld",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "without me|halsey",
+        "year": 2019,
+        "title": "Without Me",
+        "artist": "Halsey"
+      }
+    },
+    {
+      "id": "6112ee105c956bae60c9",
+      "mode": "greatest",
+      "year": 2020,
+      "original": {
+        "title": "Someone Else / Blinding Lights",
+        "artist": "RezzGrabbitzThe Weeknd",
+        "year": 2020,
+        "mbScore": 62,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label"
+      },
+      "originalKey": "someone else blinding lights|rezzgrabbitzthe weeknd",
+      "action": "archive_unresolved",
+      "reason": "Original recording identity or release evidence remains unresolved. Preserve the full candidate outside the playable catalogue instead of guessing a replacement."
+    },
+    {
+      "id": "a1eea771c5c1d31dec99",
+      "mode": "greatest",
+      "year": 2021,
+      "original": {
+        "title": "Levitating",
+        "artist": "Dua LipaDaBaby",
+        "year": 2021,
+        "mbScore": 92,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "levitating|dua lipadababy",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "levitating|dua lipa",
+        "year": 2020,
+        "title": "Levitating",
+        "artist": "Dua Lipa"
+      }
+    },
+    {
+      "id": "448545499302a8c46955",
+      "mode": "australian",
+      "year": 1986,
+      "original": {
+        "title": "Sail to You (extended mix)",
+        "artist": "Men at Work",
+        "year": 1986,
+        "mbScore": 100,
+        "source": "australian-release",
+        "sourceLabel": "Australian artist · legacy release-year label"
+      },
+      "originalKey": "sail to you|men at work",
+      "action": "archive_unresolved",
+      "reason": "Original recording identity or release evidence remains unresolved. Preserve the full candidate outside the playable catalogue instead of guessing a replacement."
+    },
+    {
+      "id": "968c6c3961a7211013be",
+      "mode": "australian",
+      "year": 1990,
+      "original": {
+        "title": "I Need Your Body (mini mix)",
+        "artist": "Tina Arena",
+        "year": 1990,
+        "mbScore": 100,
+        "source": "australian-release",
+        "sourceLabel": "Australian artist · legacy release-year label"
+      },
+      "originalKey": "i need your body|tina arena",
+      "action": "archive_unresolved",
+      "reason": "Original recording identity or release evidence remains unresolved. Preserve the full candidate outside the playable catalogue instead of guessing a replacement."
+    },
+    {
+      "id": "78d9c8c6d42550cb29c8",
+      "mode": "australian",
+      "year": 1991,
+      "original": {
+        "title": "Better the Devil You Know (U.S. mix)",
+        "artist": "Kylie Minogue",
+        "year": 1991,
+        "mbScore": 99,
+        "source": "australian-release",
+        "sourceLabel": "Australian artist · legacy release-year label"
+      },
+      "originalKey": "better the devil you know|kylie minogue",
+      "action": "archive_unresolved",
+      "reason": "Original recording identity or release evidence remains unresolved. Preserve the full candidate outside the playable catalogue instead of guessing a replacement."
+    },
+    {
+      "id": "8d14ca803c571fd5fa06",
+      "mode": "australian",
+      "year": 1993,
+      "original": {
+        "title": "Closer (edit)",
+        "artist": "Kylie Minogue",
+        "year": 1993,
+        "mbScore": 100,
+        "source": "australian-release",
+        "sourceLabel": "Australian artist · legacy release-year label"
+      },
+      "originalKey": "closer|kylie minogue",
+      "action": "archive_unresolved",
+      "reason": "Original recording identity or release evidence remains unresolved. Preserve the full candidate outside the playable catalogue instead of guessing a replacement."
+    },
+    {
+      "id": "1dd280a86647882a8fe0",
+      "mode": "australian",
+      "year": 1994,
+      "original": {
+        "title": "Chains (World Jeep mix)",
+        "artist": "Tina Arena",
+        "year": 1994,
+        "mbScore": 100,
+        "source": "australian-release",
+        "sourceLabel": "Australian artist · legacy release-year label"
+      },
+      "originalKey": "chains|tina arena",
+      "action": "archive_unresolved",
+      "reason": "Original recording identity or release evidence remains unresolved. Preserve the full candidate outside the playable catalogue instead of guessing a replacement."
+    },
+    {
+      "id": "9dde9cf0199d5afac651",
+      "mode": "australian",
+      "year": 1995,
+      "original": {
+        "title": "Heaven Help My Heart (album version)",
+        "artist": "Tina Arena",
+        "year": 1995,
+        "mbScore": 100,
+        "source": "australian-release",
+        "sourceLabel": "Australian artist · legacy release-year label"
+      },
+      "originalKey": "heaven help my heart|tina arena",
+      "action": "archive_unresolved",
+      "reason": "Original recording identity or release evidence remains unresolved. Preserve the full candidate outside the playable catalogue instead of guessing a replacement."
+    },
+    {
+      "id": "ff79f69464ed7e52a1b7",
+      "mode": "australian",
+      "year": 2000,
+      "original": {
+        "title": "Please Stay (Hatiris Dream dub mix)",
+        "artist": "Kylie Minogue",
+        "year": 2000,
+        "mbScore": 81,
+        "source": "australian-release",
+        "sourceLabel": "Australian artist · legacy release-year label"
+      },
+      "originalKey": "please stay|kylie minogue",
+      "action": "archive_unresolved",
+      "reason": "Original recording identity or release evidence remains unresolved. Preserve the full candidate outside the playable catalogue instead of guessing a replacement."
+    },
+    {
+      "id": "44f367345929a14ea6f6",
+      "mode": "australian",
+      "year": 2000,
+      "original": {
+        "title": "On a Night Like This (Motiv 8 Nocturnal vocal mix)",
+        "artist": "Kylie Minogue",
+        "year": 2000,
+        "mbScore": 81,
+        "source": "australian-release",
+        "sourceLabel": "Australian artist · legacy release-year label"
+      },
+      "originalKey": "on a night like this|kylie minogue",
+      "action": "archive_unresolved",
+      "reason": "Original recording identity or release evidence remains unresolved. Preserve the full candidate outside the playable catalogue instead of guessing a replacement."
+    },
+    {
+      "id": "da194d0d4db90c911360",
+      "mode": "australian",
+      "year": 2010,
+      "original": {
+        "title": "Desire Be Desire Go (alternate)",
+        "artist": "Tame Impala",
+        "year": 2010,
+        "mbScore": 100,
+        "source": "australian-release",
+        "sourceLabel": "Australian artist · legacy release-year label"
+      },
+      "originalKey": "desire be desire go|tame impala",
+      "action": "archive_unresolved",
+      "reason": "Original recording identity or release evidence remains unresolved. Preserve the full candidate outside the playable catalogue instead of guessing a replacement."
+    },
+    {
+      "id": "3154bd749d27ff8f00f5",
+      "mode": "australian",
+      "year": 2011,
+      "original": {
+        "title": "Why Won’t You Make Up Your Mind (Erol Alkan rework)",
+        "artist": "Tame Impala",
+        "year": 2011,
+        "mbScore": 100,
+        "source": "australian-release",
+        "sourceLabel": "Australian artist · legacy release-year label"
+      },
+      "originalKey": "why won t you make up your mind|tame impala",
+      "action": "archive_unresolved",
+      "reason": "Original recording identity or release evidence remains unresolved. Preserve the full candidate outside the playable catalogue instead of guessing a replacement."
+    },
+    {
+      "id": "2a24c2e5fd7c52c2eae0",
+      "mode": "australian",
+      "year": 2011,
+      "original": {
+        "title": "Lucidity (radio edit)",
+        "artist": "Tame Impala",
+        "year": 2011,
+        "mbScore": 100,
+        "source": "australian-release",
+        "sourceLabel": "Australian artist · legacy release-year label"
+      },
+      "originalKey": "lucidity|tame impala",
+      "action": "archive_unresolved",
+      "reason": "Original recording identity or release evidence remains unresolved. Preserve the full candidate outside the playable catalogue instead of guessing a replacement."
+    },
+    {
+      "id": "60dac58b421dc4f5bc89",
+      "mode": "australian",
+      "year": 2011,
+      "original": {
+        "title": "Solitude Is Bliss (Bullion version)",
+        "artist": "Tame Impala",
+        "year": 2011,
+        "mbScore": 100,
+        "source": "australian-release",
+        "sourceLabel": "Australian artist · legacy release-year label"
+      },
+      "originalKey": "solitude is bliss|tame impala",
+      "action": "archive_unresolved",
+      "reason": "Original recording identity or release evidence remains unresolved. Preserve the full candidate outside the playable catalogue instead of guessing a replacement."
+    },
+    {
+      "id": "2c48b5bf2c675c5b1f76",
+      "mode": "australian",
+      "year": 2016,
+      "original": {
+        "title": "Good Girls (acoustic)",
+        "artist": "5 Seconds of Summer",
+        "year": 2016,
+        "mbScore": 100,
+        "source": "australian-release",
+        "sourceLabel": "Australian artist · legacy release-year label"
+      },
+      "originalKey": "good girls|5 seconds of summer",
+      "action": "archive_unresolved",
+      "reason": "Original recording identity or release evidence remains unresolved. Preserve the full candidate outside the playable catalogue instead of guessing a replacement."
+    },
+    {
+      "id": "b09ab45fb1581b1f4f09",
+      "mode": "australian",
+      "year": 2016,
+      "original": {
+        "title": "Jet Black Heart (Original Version)",
+        "artist": "5 Seconds of Summer",
+        "year": 2016,
+        "mbScore": 100,
+        "source": "australian-release",
+        "sourceLabel": "Australian artist · legacy release-year label"
+      },
+      "originalKey": "jet black heart|5 seconds of summer",
+      "action": "archive_unresolved",
+      "reason": "Original recording identity or release evidence remains unresolved. Preserve the full candidate outside the playable catalogue instead of guessing a replacement."
+    },
+    {
+      "id": "fbd2455a1d68ae353b3e",
+      "mode": "australian",
+      "year": 2018,
+      "original": {
+        "title": "She’s Kinda Hot (alternative version)",
+        "artist": "5 Seconds of Summer",
+        "year": 2018,
+        "mbScore": 100,
+        "source": "australian-release",
+        "sourceLabel": "Australian artist · legacy release-year label"
+      },
+      "originalKey": "she s kinda hot|5 seconds of summer",
+      "action": "archive_unresolved",
+      "reason": "Original recording identity or release evidence remains unresolved. Preserve the full candidate outside the playable catalogue instead of guessing a replacement."
+    },
+    {
+      "id": "88a1c5d25eececfdb83a",
+      "mode": "australian",
+      "year": 2019,
+      "original": {
+        "title": "Lie to Me (acoustic)",
+        "artist": "5 Seconds of Summer",
+        "year": 2019,
+        "mbScore": 100,
+        "source": "australian-release",
+        "sourceLabel": "Australian artist · legacy release-year label"
+      },
+      "originalKey": "lie to me|5 seconds of summer",
+      "action": "archive_unresolved",
+      "reason": "Original recording identity or release evidence remains unresolved. Preserve the full candidate outside the playable catalogue instead of guessing a replacement."
+    },
+    {
+      "id": "bfb1d16d8e22985e6b0f",
+      "mode": "australian",
+      "year": 2020,
+      "original": {
+        "title": "Take Yourself Home (acoustic)",
+        "artist": "Troye Sivan",
+        "year": 2020,
+        "mbScore": 100,
+        "source": "australian-release",
+        "sourceLabel": "Australian artist · legacy release-year label"
+      },
+      "originalKey": "take yourself home|troye sivan",
+      "action": "archive_unresolved",
+      "reason": "Original recording identity or release evidence remains unresolved. Preserve the full candidate outside the playable catalogue instead of guessing a replacement."
+    },
+    {
+      "id": "55495990269427cf2ac5",
+      "mode": "australian",
+      "year": 2021,
+      "original": {
+        "title": "could cry just thinkin about you (full version)",
+        "artist": "Troye Sivan",
+        "year": 2021,
+        "mbScore": 100,
+        "source": "australian-release",
+        "sourceLabel": "Australian artist · legacy release-year label"
+      },
+      "originalKey": "could cry just thinkin about you|troye sivan",
+      "action": "archive_unresolved",
+      "reason": "Original recording identity or release evidence remains unresolved. Preserve the full candidate outside the playable catalogue instead of guessing a replacement."
+    },
+    {
+      "id": "a4651af8346495881c03",
+      "mode": "greatest",
+      "year": 1970,
+      "original": {
+        "title": "Puente Sobre Aguas Turbulentas (Bridge Over Troubled Water)",
+        "artist": "Simon and Garfunkel",
+        "year": 1970,
+        "mbScore": 72,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "puente sobre aguas turbulentas bridge over troubled water|simon",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "bridge over troubled water|simon",
+        "year": 1970,
+        "title": "Bridge Over Troubled Water",
+        "artist": "Simon and Garfunkel"
+      }
+    },
+    {
+      "id": "fd15cf3dd982ba3c83a3",
+      "mode": "greatest",
+      "year": 1974,
+      "original": {
+        "title": "In den Gärten der Zeit (Seasons in the Sun)",
+        "artist": "Terry Jacks",
+        "year": 1974,
+        "mbScore": 83,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "in den ga rten der zeit seasons in the sun|terry jacks",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "seasons in the sun|terry jacks",
+        "year": 1974,
+        "title": "Seasons in the Sun",
+        "artist": "Terry Jacks"
+      }
+    },
+    {
+      "id": "ff19e4c0cd5abb40ed42",
+      "mode": "greatest",
+      "year": 1991,
+      "original": {
+        "title": "Todo lo que Hago, Lo Hago por Ti - (Everything I Do) I Do It for You",
+        "artist": "Bryan Adams",
+        "year": 1991,
+        "mbScore": 66,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "todo lo que hago lo hago por ti everything i do i do it for you|bryan adams",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "everything i do i do it for you|bryan adams",
+        "year": 1991,
+        "title": "(Everything I Do) I Do It for You",
+        "artist": "Bryan Adams"
+      }
+    },
+    {
+      "id": "da8d537a1f5457e71ed4",
+      "mode": "greatest",
+      "year": 1996,
+      "original": {
+        "title": "Because You Loved Me (theme from 'Up Close and Personal')",
+        "artist": "Céline Dion",
+        "year": 1996,
+        "mbScore": 64,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label"
+      },
+      "originalKey": "because you loved me theme from up close and personal|ce line dion",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "because you loved me|ce line dion",
+        "year": 1996,
+        "title": "Because You Loved Me",
+        "artist": "Céline Dion"
+      }
+    },
+    {
+      "id": "dbc09d9d4a1f6b13df11",
+      "mode": "greatest",
+      "year": 2002,
+      "original": {
+        "title": "Foolish (video)",
+        "artist": "Ashanti",
+        "year": 2002,
+        "mbScore": 67,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "foolish video|ashanti",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "foolish|ashanti",
+        "year": 2002,
+        "title": "Foolish",
+        "artist": "Ashanti"
+      }
+    },
+    {
+      "id": "40532181c961c2f3daf5",
+      "mode": "greatest",
+      "year": 2005,
+      "original": {
+        "title": "We Belong Together (Call Out #1)",
+        "artist": "Mariah Carey",
+        "year": 2005,
+        "mbScore": 79,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "we belong together call out 1|mariah carey",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "we belong together|mariah carey",
+        "year": 2005,
+        "title": "We Belong Together",
+        "artist": "Mariah Carey"
+      }
+    },
+    {
+      "id": "27428f9feaec50e3d6d3",
+      "mode": "greatest",
+      "year": 2005,
+      "original": {
+        "title": "We Belong Together (video)",
+        "artist": "Mariah Carey",
+        "year": 2005,
+        "mbScore": 86,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "we belong together video|mariah carey",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "we belong together|mariah carey",
+        "year": 2005,
+        "title": "We Belong Together",
+        "artist": "Mariah Carey"
+      }
+    },
+    {
+      "id": "949d45d9e47b787a7932",
+      "mode": "greatest",
+      "year": 2007,
+      "original": {
+        "title": "Irreplaceable (Irreemplazable)",
+        "artist": "Beyoncé",
+        "year": 2007,
+        "mbScore": 53,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "irreplaceable irreemplazable|beyonce",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "irreplaceable|beyonce",
+        "year": 2006,
+        "title": "Irreplaceable",
+        "artist": "Beyoncé"
+      }
+    },
+    {
+      "id": "4848586dde7c76327afb",
+      "mode": "greatest",
+      "year": 2011,
+      "original": {
+        "title": "Rolling in the Deep (Jamie XX Shuffle)",
+        "artist": "Adele",
+        "year": 2011,
+        "mbScore": 77,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "rolling in the deep jamie xx shuffle|adele",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "rolling in the deep|adele",
+        "year": 2010,
+        "title": "Rolling in the Deep",
+        "artist": "Adele"
+      }
+    },
+    {
+      "id": "2ab8a156b8075fb06e8f",
+      "mode": "greatest",
+      "year": 2012,
+      "original": {
+        "title": "Somebody That I Used to Know (GDP and Space Jesus)",
+        "artist": "Gotye",
+        "year": 2012,
+        "mbScore": 75,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label"
+      },
+      "originalKey": "somebody that i used to know gdp and space jesus|gotye",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "somebody that i used to know|gotye",
+        "year": 2011,
+        "title": "Somebody That I Used to Know",
+        "artist": "Gotye feat. Kimbra"
+      }
+    },
+    {
+      "id": "ff1a66f451287bf538b8",
+      "mode": "greatest",
+      "year": 2021,
+      "original": {
+        "title": "Levitating (Mixed)",
+        "artist": "Dua Lipa",
+        "year": 2021,
+        "mbScore": 94,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "youtubeId": "",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+      },
+      "originalKey": "levitating mixed|dua lipa",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "levitating|dua lipa",
+        "year": 2020,
+        "title": "Levitating",
+        "artist": "Dua Lipa"
+      }
+    },
+    {
+      "id": "cc7d4b6c30133959dd15",
+      "mode": "australian",
+      "year": 1996,
+      "original": {
+        "title": "Surrento Moon (I Remember)",
+        "artist": "Tina Arena",
+        "year": 1996,
+        "mbScore": 100,
+        "source": "australian-release",
+        "sourceLabel": "Australian artist · legacy release-year label"
+      },
+      "originalKey": "surrento moon i remember|tina arena",
+      "action": "archive_duplicate",
+      "reason": "Alternate credit, title, edit or mix of an underlying song already retained in this mode. Its previous saved-game key maps to that retained song.",
+      "retained": {
+        "key": "sorrento moon i remember|tina arena",
+        "year": 1995,
+        "title": "Sorrento Moon (I Remember)",
+        "artist": "Tina Arena"
+      }
+    },
+    {
+      "id": "30b7a5ad50d3996bb63a",
+      "mode": "greatest",
+      "year": 2017,
+      "original": {
+        "title": "That's What I Like Vs. Happy: That's What I Like / Happy",
+        "artist": "Bruno Mars",
+        "year": 2017,
+        "mbScore": 92,
+        "source": "release-year-verified",
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "spotifyId": "0KKkJNfGyhkQ5aFogxQAPU",
+        "youtubeId": ""
+      },
+      "originalKey": "that s what i like vs happy that s what i like happy|bruno mars",
+      "action": "archive_unresolved",
+      "reason": "Original recording identity or release evidence remains unresolved. Preserve the full candidate outside the playable catalogue instead of guessing a replacement."
+    },
+    {
+      "id": "29c9aa68c53ca56b8b82",
+      "mode": "australian",
+      "year": 2008,
+      "original": {
+        "title": "Recapturing The Vibe (Restrung)",
+        "artist": "Hilltop Hoods",
+        "year": 2008,
+        "mbScore": 100,
+        "source": "australian-release",
+        "sourceLabel": "Australian artist · legacy release-year label"
+      },
+      "originalKey": "recapturing the vibe restrung|hilltop hoods",
+      "action": "archive_unresolved",
+      "reason": "Original recording identity or release evidence remains unresolved. Preserve the full candidate outside the playable catalogue instead of guessing a replacement."
+    },
+    {
+      "id": "6086c3bebb344dd7a37f",
+      "mode": "greatest",
+      "year": 2012,
+      "original": null,
+      "action": "add",
+      "reason": "Preserve this year's coverage after archiving an alternate of a song whose original was released in an earlier year.",
+      "replacement": {
+        "title": "Skyfall",
+        "artist": "Adele",
+        "year": 2012,
+        "releaseYear": 2012,
+        "releaseYearEvidence": "Apple Music lists Adele's original Skyfall single as released October 5, 2012, with a 2012 Melted Stone/Columbia Records phonogram credit.",
+        "sourceProvider": "Apple Music / Columbia Records",
+        "sourceUrl": "https://music.apple.com/us/album/skyfall-single/566322358",
+        "sourceRetrievalDate": "2026-09-05",
+        "spotifyId": "",
+        "youtubeId": "",
+        "source": "catalogue-cleanup-release-audit",
+        "sourceLabel": "Sourced original recording",
+        "evidenceState": "externally_observed",
+        "canonicalKey": "skyfall|adele"
+      }
+    },
+    {
+      "id": "e10e0a07879a09e515f2",
+      "mode": "greatest",
+      "year": 2021,
+      "original": null,
+      "action": "add",
+      "reason": "Preserve this year's coverage after archiving an alternate of a song whose original was released in an earlier year.",
+      "replacement": {
+        "title": "Easy On Me",
+        "artist": "Adele",
+        "year": 2021,
+        "releaseYear": 2021,
+        "releaseYearEvidence": "Apple Music identifies Adele's original Easy On Me recording with an October 14, 2021 date; Sony Music confirms it was released as a Columbia Records single before the album 30.",
+        "sourceProvider": "Apple Music and Sony Music",
+        "sourceUrl": "https://music.apple.com/us/song/1590036021",
+        "corroboratingSourceUrl": "https://www.sonymusic.ca/press_release/12417",
+        "sourceRetrievalDate": "2026-09-05",
+        "spotifyId": "",
+        "youtubeId": "",
+        "source": "catalogue-cleanup-release-audit",
+        "sourceLabel": "Sourced original recording",
+        "evidenceState": "externally_observed",
+        "canonicalKey": "easy on me|adele"
+      }
+    }
+  ]
+}

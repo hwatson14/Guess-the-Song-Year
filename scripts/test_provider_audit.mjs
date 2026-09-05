@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {applyProviderAudit} from './provider_audit.mjs';
+const db={songs:{song:{providers:{youtube:{links:[{id:'video',state:'unverified'}]}}}}};
+const check={songId:'song',provider:'youtube',id:'video',state:'metadata_checked',title:'Actual title',checkedAt:'2026-09-05T01:00:00Z'};
+applyProviderAudit(db,'youtube',[check]);
+const asset=db.songs.song.providers.youtube.links[0];
+applyProviderAudit(db,'youtube',[{...check,state:'unverified',checkedAt:'2026-09-05T02:00:00Z',error:'Timeout'}]);
+assert.equal(asset.state,'metadata_checked');assert.equal(asset.metadataCheck.title,'Actual title');
+assert.equal(asset.lastAudit.error,'Timeout');
+applyProviderAudit(db,'youtube',[{...check,state:'unavailable',checkedAt:'2026-09-04'}]);
+assert.equal(asset.state,'metadata_checked','Old evidence cannot replace newer observations');
+assert.throws(()=>applyProviderAudit(db,'youtube',[{...check,state:'error'}]),/Invalid/);
+asset.state='verified';
+applyProviderAudit(db,'youtube',[{...check,state:'unavailable',checkedAt:'2026-09-06'}]);
+assert.equal(asset.state,'verified','Automated metadata audits cannot revoke reviewed recording evidence');
+console.log('Provider audit history, failure preservation and verification boundary checks passed.');
