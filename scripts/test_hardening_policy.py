@@ -12,7 +12,7 @@ provider=load('provider_hardening','scripts/harden_provider_links.py')
 release=load('release_hardening','scripts/harden_release_evidence.py')
 
 recording={
-    'id':'11111111-1111-1111-1111-111111111111','title':'Example Song','video':False,'disambiguation':'',
+    'id':'11111111-1111-1111-1111-111111111111','title':'Example Song','video':False,'disambiguation':'','score':100,
     'first-release-date':'2000-05-01','artist-credit':[{'name':'Example Artist','joinphrase':''}],
     'releases':[{'status':'Official'}],
     'relations':[
