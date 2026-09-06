@@ -6,7 +6,7 @@ const cwd=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const checks=[
   ...['engine.js','engine-v7.js','spotify-stability.js','app-policy.js','app.js','setup-playback.js'].map(file=>[process.execPath,'--check',file]),
   ...['test_engine_v7','test_runtime_catalogue','test_runtime_recovery','test_spotify_session','test_spotify_stability','test_spotify_background_playback','test_engine_playback_lifecycle','test_year_gap_evidence',
-    'test_year_range','test_catalogue_identity','test_song_database','test_global_song_identity','test_mode_expansion','test_provider_audit','test_preferred_link_cache','test_reviewed_provider_links','test_catalogue_corrections','test_catalogue_expansion','test_catalogue_cleanup','test_catalogue_bucket_uniqueness',
+    'test_year_range','test_catalogue_identity','test_song_database','test_global_song_identity','test_mode_expansion','test_provider_audit','test_preferred_link_cache','test_reviewed_provider_links','test_catalogue_corrections','test_catalogue_expansion','test_unexpected_years_200','test_catalogue_cleanup','test_catalogue_bucket_uniqueness',
     'test_same_year_playback_ids','test_greatest_release_provenance','test_australian_release_audit',
     'test_bonus_gameplay','test_physical_ready','test_engine_playback_fixes','test_spotify_static_identity','test_app_policy','test_card_year_overrides','test_security_contract','test_setup_playback_ui','test_mobile_setup_scroll','test_native_placement_ui','test_duplicate_year_timeline','test_release_integrity'].map(name=>[process.execPath,`scripts/${name}.mjs`]),
   ...['validate_catalogue','validate_catalogue_schema','test_number1_us_provenance','test_number1_au_provenance',

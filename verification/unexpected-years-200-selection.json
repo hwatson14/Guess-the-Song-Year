@@ -1,0 +1,3812 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-06T06:13:22.541Z",
+  "targetTotal": 200,
+  "previousTotal": 40,
+  "additions": 160,
+  "coverage": 65,
+  "selectionPolicy": [
+    "Prefer recognisable songs with a defensible year trap: ahead/behind-era sound, later breakthrough, revival, cover confusion, title misdirection or deliberate retro styling.",
+    "Reuse current canonical masters; never duplicate a song solely to add an Unexpected Years membership.",
+    "Require accepted externally observed release truth for every added master.",
+    "Preserve canonical identity and correct release truth even when the reviewed seed used a pre-dedupe song ID."
+  ],
+  "sourceIntegrity": {
+    "canonicalMasters": 1107,
+    "totalMemberships": 1460,
+    "unexpectedMemberships": 200,
+    "newMasterSongs": 0,
+    "remappedSeedIds": 0
+  },
+  "releaseCorrections": [
+    {
+      "songId": "song_5789f221c273cdaae0dd",
+      "title": "I Will Survive",
+      "previousYear": 1977,
+      "answerYear": 1978,
+      "sourceUrl": "https://www.gloriagaynor.com/videos/i-will-survive/",
+      "releaseMembershipsMoved": 1,
+      "legacyRowsUpdated": 1
+    },
+    {
+      "songId": "song_2305a63b8f720bd2d23a",
+      "title": "Sweet Dreams (Are Made Of This)",
+      "previousYear": 1982,
+      "answerYear": 1983,
+      "sourceUrl": "https://www.eurythmics.com/history/",
+      "releaseMembershipsMoved": 1,
+      "legacyRowsUpdated": 1
+    }
+  ],
+  "greatestBackfills": [
+    {
+      "year": 1977,
+      "songId": "song_089f87767974e67818d1",
+      "title": "Stayin' Alive",
+      "artist": "Bee Gees",
+      "sourceUrl": "https://musicbrainz.org/recording/ef6df59e-177b-4060-b6f6-7ff61a3a0fff"
+    }
+  ],
+  "selectedAdditions": [
+    {
+      "sourceSongId": "song_c7ffdbd63eb83a8500b0",
+      "songId": "song_c7ffdbd63eb83a8500b0",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Often cited as proto-rock; sounds later than 1951.",
+      "title": "Rocket \"88\"",
+      "artist": "Jackie Brenston & His Delta Cats",
+      "answerYear": 1951
+    },
+    {
+      "sourceSongId": "song_22910f5065d96395ad09",
+      "songId": "song_22910f5065d96395ad09",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Rock-era sound arrived earlier than many players expect.",
+      "title": "Ain’t That a Shame",
+      "artist": "Fats Domino",
+      "answerYear": 1955
+    },
+    {
+      "sourceSongId": "song_1126480839a4b64d5b46",
+      "songId": "song_1126480839a4b64d5b46",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "The beat and guitar language sound foundational to much later rock.",
+      "title": "Bo Diddley",
+      "artist": "Bo Diddley",
+      "answerYear": 1955
+    },
+    {
+      "sourceSongId": "song_00babb63f6224753877f",
+      "songId": "song_00babb63f6224753877f",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Early rock recording that can be placed later than 1955.",
+      "title": "Maybellene",
+      "artist": "Chuck Berry",
+      "answerYear": 1955
+    },
+    {
+      "sourceSongId": "song_12f51c9c80377757994e",
+      "songId": "song_12f51c9c80377757994e",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Canonical rockabilly sound is easy to place in the later 1950s.",
+      "title": "Be-Bop-A-Lula",
+      "artist": "Gene Vincent And His Blue Caps",
+      "answerYear": 1956
+    },
+    {
+      "sourceSongId": "song_a208ca6226b6cd341636",
+      "songId": "song_a208ca6226b6cd341636",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Still sounds like the archetypal rock-and-roll era rather than a specific year.",
+      "title": "Blue Suede Shoes",
+      "artist": "Carl Perkins",
+      "answerYear": 1956
+    },
+    {
+      "sourceSongId": "song_e7630f093837ab1b9df0",
+      "songId": "song_e7630f093837ab1b9df0",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Johnny Cash's signature sound can be mentally dated later.",
+      "title": "I Walk The Line",
+      "artist": "Johnny Cash",
+      "answerYear": 1956
+    },
+    {
+      "sourceSongId": "song_451cabf70075c1c04a26",
+      "songId": "song_451cabf70075c1c04a26",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "A durable rock-and-roll standard often remembered as generically late-1950s.",
+      "title": "Great Balls of Fire",
+      "artist": "Jerry Lee Lewis",
+      "answerYear": 1957
+    },
+    {
+      "sourceSongId": "song_d2d00689e570655216a7",
+      "songId": "song_d2d00689e570655216a7",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_older",
+      "reason": "Folk style can make its recorded release chronology counter-intuitive.",
+      "title": "Freight Train",
+      "artist": "Elizabeth Cotten",
+      "answerYear": 1958
+    },
+    {
+      "sourceSongId": "song_9f1aecd68fb0990782b4",
+      "songId": "song_9f1aecd68fb0990782b4",
+      "resolutionMethod": "stable_song_id",
+      "signal": "revival",
+      "reason": "Later cover and film associations blur the original recording's year.",
+      "title": "La Bamba",
+      "artist": "Ritchie Valens",
+      "answerYear": 1958
+    },
+    {
+      "sourceSongId": "song_0b3fbe1381c795d69509",
+      "songId": "song_0b3fbe1381c795d69509",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Instrumental has stayed culturally current well beyond 1958.",
+      "title": "Tequila",
+      "artist": "The Champs",
+      "answerYear": 1958
+    },
+    {
+      "sourceSongId": "song_f081e1eadbdf96fa616b",
+      "songId": "song_f081e1eadbdf96fa616b",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Production points toward the 1960s despite a 1959 release.",
+      "title": "There Goes My Baby",
+      "artist": "The Drifters",
+      "answerYear": 1959
+    },
+    {
+      "sourceSongId": "song_e2812bde48480217fc1a",
+      "songId": "song_e2812bde48480217fc1a",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Instrumental guitar sound is easily placed later in the surf era.",
+      "title": "Apache",
+      "artist": "The Shadows",
+      "answerYear": 1960
+    },
+    {
+      "sourceSongId": "song_9f0d12fdab9d639615e4",
+      "songId": "song_9f0d12fdab9d639615e4",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Motown sound can feel a few years later than 1960.",
+      "title": "Shop Around",
+      "artist": "The Miracles",
+      "answerYear": 1960
+    },
+    {
+      "sourceSongId": "song_3b029bb0d64115dcf537",
+      "songId": "song_3b029bb0d64115dcf537",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Dance-craze familiarity obscures its exact early-1960 release.",
+      "title": "The Twist",
+      "artist": "Chubby Checker",
+      "answerYear": 1960
+    },
+    {
+      "sourceSongId": "song_4f2c83c1347e52b041d8",
+      "songId": "song_4f2c83c1347e52b041d8",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Classic Motown production often reads mid-1960s.",
+      "title": "Please Mr Postman",
+      "artist": "The Marvelettes",
+      "answerYear": 1961
+    },
+    {
+      "sourceSongId": "song_143fc16ffce4ad6b3ccc",
+      "songId": "song_143fc16ffce4ad6b3ccc",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Blues-rock afterlife makes the original year easy to overestimate.",
+      "title": "Boom Boom",
+      "artist": "John Lee Hooker",
+      "answerYear": 1962
+    },
+    {
+      "sourceSongId": "song_76fb008a3837f92e8cba",
+      "songId": "song_76fb008a3837f92e8cba",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Decades of covers make the original chronology less obvious.",
+      "title": "Bring It On Home to Me",
+      "artist": "Sam Cooke",
+      "answerYear": 1962
+    },
+    {
+      "sourceSongId": "song_2ec90ca3eb8dbce008f5",
+      "songId": "song_2ec90ca3eb8dbce008f5",
+      "resolutionMethod": "stable_song_id",
+      "signal": "cover_confusion",
+      "reason": "The Beatles association can pull guesses toward 1963-64.",
+      "title": "Twist And Shout",
+      "artist": "The Isley Brothers",
+      "answerYear": 1962
+    },
+    {
+      "sourceSongId": "song_1225853feb7f377c8bcd",
+      "songId": "song_1225853feb7f377c8bcd",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Wall-of-sound production has remained unusually modern.",
+      "title": "Be My Baby",
+      "artist": "The Ronettes",
+      "answerYear": 1963
+    },
+    {
+      "sourceSongId": "song_8afa00dd6d05b96b8960",
+      "songId": "song_8afa00dd6d05b96b8960",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "US breakthrough association can pull guesses into 1964.",
+      "title": "I Want to Hold Your Hand",
+      "artist": "The Beatles",
+      "answerYear": 1963
+    },
+    {
+      "sourceSongId": "song_c7d326233f2ad81aa6c2",
+      "songId": "song_c7d326233f2ad81aa6c2",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Production and songwriting sophistication can sound later.",
+      "title": "In My Room",
+      "artist": "The Beach Boys",
+      "answerYear": 1963
+    },
+    {
+      "sourceSongId": "song_7429386bf1d0a371cccb",
+      "songId": "song_7429386bf1d0a371cccb",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Garage-rock template sounds detached from a single year.",
+      "title": "Louie Louie",
+      "artist": "The Kingsmen",
+      "answerYear": 1963
+    },
+    {
+      "sourceSongId": "song_221a2dad0945643f1276",
+      "songId": "song_221a2dad0945643f1276",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Polished pop sound and later cultural use blur its year.",
+      "title": "Downtown",
+      "artist": "Petula Clark",
+      "answerYear": 1964
+    },
+    {
+      "sourceSongId": "song_24b7f735c2cae85174a5",
+      "songId": "song_24b7f735c2cae85174a5",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Rock-standard status makes the exact year less obvious.",
+      "title": "(I Can’t Get No) Satisfaction",
+      "artist": "The Rolling Stones",
+      "answerYear": 1965
+    },
+    {
+      "sourceSongId": "song_ae2b449fc4de1afc8d79",
+      "songId": "song_ae2b449fc4de1afc8d79",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Bright folk-rock sound can be mentally placed later.",
+      "title": "Do You Believe In Magic",
+      "artist": "The Lovin' Spoonful",
+      "answerYear": 1965
+    },
+    {
+      "sourceSongId": "song_0daf59beb5df454a95f2",
+      "songId": "song_0daf59beb5df454a95f2",
+      "resolutionMethod": "stable_song_id",
+      "signal": "revival",
+      "reason": "Later punk covers can pull guesses toward the 1970s.",
+      "title": "I Fought The Law",
+      "artist": "Bobby Fuller Four",
+      "answerYear": 1965
+    },
+    {
+      "sourceSongId": "song_4bb9b3f6a5b26e45203e",
+      "songId": "song_4bb9b3f6a5b26e45203e",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Ubiquity obscures the exact mid-1960s date.",
+      "title": "I Got You (I Feel Good)",
+      "artist": "James Brown",
+      "answerYear": 1965
+    },
+    {
+      "sourceSongId": "song_71f6d3e104744a04a7a3",
+      "songId": "song_71f6d3e104744a04a7a3",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Soul standard has remained culturally evergreen.",
+      "title": "In the Midnight Hour",
+      "artist": "Wilson Pickett",
+      "answerYear": 1965
+    },
+    {
+      "sourceSongId": "song_a9c30a180c249a3d8b07",
+      "songId": "song_a9c30a180c249a3d8b07",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Long form and electric production still feel unusually modern for 1965.",
+      "title": "Like a Rolling Stone",
+      "artist": "Bob Dylan",
+      "answerYear": 1965
+    },
+    {
+      "sourceSongId": "song_80d28f973790c8098a2a",
+      "songId": "song_80d28f973790c8098a2a",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Organ-driven garage sound anticipates later punk/new-wave textures.",
+      "title": "96 Tears",
+      "artist": "? (Question Mark) & the Mysterians",
+      "answerYear": 1966
+    },
+    {
+      "sourceSongId": "song_4b5a1ba9aaeb64516223",
+      "songId": "song_4b5a1ba9aaeb64516223",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Psychedelic sound arrives earlier than many players expect.",
+      "title": "Eight Miles High",
+      "artist": "The Byrds",
+      "answerYear": 1966
+    },
+    {
+      "sourceSongId": "song_4ee50b8dc75e0d9bfc59",
+      "songId": "song_4ee50b8dc75e0d9bfc59",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Studio production sounds strikingly advanced for 1966.",
+      "title": "Good Vibrations",
+      "artist": "The Beach Boys",
+      "answerYear": 1966
+    },
+    {
+      "sourceSongId": "song_8d8c76f6ac3b29215455",
+      "songId": "song_8d8c76f6ac3b29215455",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Classic-rock afterlife blurs its exact 1967 origin.",
+      "title": "A Whiter Shade Of Pale",
+      "artist": "Procol Harum",
+      "answerYear": 1967
+    },
+    {
+      "sourceSongId": "song_88b4d8d0da528d0eafaa",
+      "songId": "song_88b4d8d0da528d0eafaa",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Long-lived classic-rock presence obscures exact year.",
+      "title": "Light My Fire",
+      "artist": "The Doors",
+      "answerYear": 1967
+    },
+    {
+      "sourceSongId": "song_54e7e4580f16b7e85875",
+      "songId": "song_54e7e4580f16b7e85875",
+      "resolutionMethod": "stable_song_id",
+      "signal": "revival",
+      "reason": "Later global dance revivals make the 1967 recording easy to place later.",
+      "title": "Pata Pata",
+      "artist": "Miriam Makeba",
+      "answerYear": 1967
+    },
+    {
+      "sourceSongId": "song_1330f87f5fe3522674cf",
+      "songId": "song_1330f87f5fe3522674cf",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Hendrix recording is commonly remembered without a precise year.",
+      "title": "All Along the Watchtower",
+      "artist": "The Jimi Hendrix Experience",
+      "answerYear": 1968
+    },
+    {
+      "sourceSongId": "song_e39c647dc63b9f92a773",
+      "songId": "song_e39c647dc63b9f92a773",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Biker-film associations and classic-rock longevity blur chronology.",
+      "title": "Born to Be Wild",
+      "artist": "Steppenwolf",
+      "answerYear": 1968
+    },
+    {
+      "sourceSongId": "song_e5695089759e080a171e",
+      "songId": "song_e5695089759e080a171e",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Heavy psychedelic production can sound early-1970s.",
+      "title": "Magic Carpet Ride",
+      "artist": "Steppenwolf",
+      "answerYear": 1968
+    },
+    {
+      "sourceSongId": "song_1cc79993b503ab28517a",
+      "songId": "song_1cc79993b503ab28517a",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Funk groove feels like a template for much later music.",
+      "title": "Cissy Strut",
+      "artist": "The Meters",
+      "answerYear": 1969
+    },
+    {
+      "sourceSongId": "song_0c8e881f62fd630c290b",
+      "songId": "song_0c8e881f62fd630c290b",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Persistent film/game usage keeps it detached from its original year.",
+      "title": "Fortunate Son",
+      "artist": "Creedence Clearwater Revival",
+      "answerYear": 1969
+    },
+    {
+      "sourceSongId": "song_f6c1a468b0eca846dbd3",
+      "songId": "song_f6c1a468b0eca846dbd3",
+      "resolutionMethod": "stable_song_id",
+      "signal": "later_breakthrough",
+      "reason": "Its major chart breakthrough came years after the recording's release era.",
+      "title": "The First Time Ever I Saw Your Face",
+      "artist": "Roberta Flack",
+      "answerYear": 1969
+    },
+    {
+      "sourceSongId": "song_ef7b86a2f514639de9a8",
+      "songId": "song_ef7b86a2f514639de9a8",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Later covers make the original Leon Russell year less obvious.",
+      "title": "A Song For You",
+      "artist": "Leon Russell",
+      "answerYear": 1970
+    },
+    {
+      "sourceSongId": "song_f0a97c3478679ef9d3fe",
+      "songId": "song_f0a97c3478679ef9d3fe",
+      "resolutionMethod": "stable_song_id",
+      "signal": "cover_confusion",
+      "reason": "Santana's version is often conflated with earlier/later versions and eras.",
+      "title": "Black Magic Woman",
+      "artist": "Santana",
+      "answerYear": 1970
+    },
+    {
+      "sourceSongId": "song_085ac98224a6a2223759",
+      "songId": "song_085ac98224a6a2223759",
+      "resolutionMethod": "stable_song_id",
+      "signal": "revival",
+      "reason": "Annual recurrence makes a 1970 release surprisingly early.",
+      "title": "Feliz Navidad",
+      "artist": "Jose Feliciano",
+      "answerYear": 1970
+    },
+    {
+      "sourceSongId": "song_a35d2b4f68f5e4839a06",
+      "songId": "song_a35d2b4f68f5e4839a06",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Bowie's later fame can pull guesses later than 1971.",
+      "title": "Changes",
+      "artist": "David Bowie",
+      "answerYear": 1971
+    },
+    {
+      "sourceSongId": "song_57c69d8c3335e6354a13",
+      "songId": "song_57c69d8c3335e6354a13",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Classic-rock longevity makes its exact early-1970s date fuzzy.",
+      "title": "Layla",
+      "artist": "Derek And The Dominos",
+      "answerYear": 1971
+    },
+    {
+      "sourceSongId": "song_fc61890780c6227af8df",
+      "songId": "song_fc61890780c6227af8df",
+      "resolutionMethod": "stable_song_id",
+      "signal": "revival",
+      "reason": "Later film and streaming revival strengthened its cultural presence decades later.",
+      "title": "Tiny Dancer",
+      "artist": "Elton John",
+      "answerYear": 1971
+    },
+    {
+      "sourceSongId": "song_0fbabde6b115690b6f6a",
+      "songId": "song_0fbabde6b115690b6f6a",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Groove and production remain unusually fresh.",
+      "title": "I'Ll Take You There",
+      "artist": "The Staple Singers",
+      "answerYear": 1972
+    },
+    {
+      "sourceSongId": "song_31edeb20952da6a65fec",
+      "songId": "song_31edeb20952da6a65fec",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Cinematic production can sound later than 1972.",
+      "title": "Papa Was a Rollin Stone",
+      "artist": "The Temptations",
+      "answerYear": 1972
+    },
+    {
+      "sourceSongId": "song_e650121972bb37ad7a72",
+      "songId": "song_e650121972bb37ad7a72",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Riff ubiquity detaches it from its exact year.",
+      "title": "Smoke on the Water",
+      "artist": "Deep Purple",
+      "answerYear": 1972
+    },
+    {
+      "sourceSongId": "song_b04c72adb5a66275bfb1",
+      "songId": "song_b04c72adb5a66275bfb1",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Production and subject matter can read later than 1972.",
+      "title": "Walk On The Wild Side",
+      "artist": "Lou Reed",
+      "answerYear": 1972
+    },
+    {
+      "sourceSongId": "song_8f3b290119e809f79318",
+      "songId": "song_8f3b290119e809f79318",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_later",
+      "reason": "Aerosmith's later peak can make this debut-era song seem younger.",
+      "title": "Dream On",
+      "artist": "Aerosmith",
+      "answerYear": 1973
+    },
+    {
+      "sourceSongId": "song_c3eee70750ee5be6fd3f",
+      "songId": "song_c3eee70750ee5be6fd3f",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Classic-rock status makes the exact year non-obvious.",
+      "title": "Free Bird",
+      "artist": "Lynyrd Skynyrd",
+      "answerYear": 1973
+    },
+    {
+      "sourceSongId": "song_9c74ae61fbe892076766",
+      "songId": "song_9c74ae61fbe892076766",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Disco-era sound arrives before the genre's commercial peak.",
+      "title": "Love's Theme",
+      "artist": "Love Unlimited Orchestra",
+      "answerYear": 1973
+    },
+    {
+      "sourceSongId": "song_0b9706606b8f3114580a",
+      "songId": "song_0b9706606b8f3114580a",
+      "resolutionMethod": "stable_song_id",
+      "signal": "cover_confusion",
+      "reason": "Whitney Houston's 1990s version dominates cultural memory.",
+      "title": "I Will Always Love You",
+      "artist": "Dolly Parton",
+      "answerYear": 1974
+    },
+    {
+      "sourceSongId": "song_c487037af5e8f8f06405",
+      "songId": "song_c487037af5e8f8f06405",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Novelty hit is usually remembered as generic disco-era rather than 1974.",
+      "title": "Kung Fu Fighting",
+      "artist": "Carl Douglas",
+      "answerYear": 1974
+    },
+    {
+      "sourceSongId": "song_c4a533112ca5aae03d07",
+      "songId": "song_c4a533112ca5aae03d07",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Disco sound appears strikingly early in the decade.",
+      "title": "Rock Your Baby",
+      "artist": "George McCrae",
+      "answerYear": 1974
+    },
+    {
+      "sourceSongId": "song_ebe56ea5ec62ce255057",
+      "songId": "song_ebe56ea5ec62ce255057",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Long-running cultural presence obscures the exact release year.",
+      "title": "Sweet Home Alabama",
+      "artist": "Lynyrd Skynyrd",
+      "answerYear": 1974
+    },
+    {
+      "sourceSongId": "song_3c59b3d6fa14e980dac9",
+      "songId": "song_3c59b3d6fa14e980dac9",
+      "resolutionMethod": "stable_song_id",
+      "signal": "revival",
+      "reason": "Run-D.M.C.'s 1986 remake can pull guesses a decade later.",
+      "title": "Walk This Way",
+      "artist": "Aerosmith",
+      "answerYear": 1975
+    },
+    {
+      "sourceSongId": "song_8b6b72e5b0360e370c1a",
+      "songId": "song_8b6b72e5b0360e370c1a",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "ABBA revival cycles make the precise year less obvious.",
+      "title": "Dancing Queen",
+      "artist": "ABBA",
+      "answerYear": 1976
+    },
+    {
+      "sourceSongId": "song_7db448335980dfc84d5c",
+      "songId": "song_7db448335980dfc84d5c",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_later",
+      "reason": "Polished arena-rock production can sound closer to the 1980s.",
+      "title": "More Than a Feeling",
+      "artist": "Boston",
+      "answerYear": 1976
+    },
+    {
+      "sourceSongId": "song_b0e69780e6e9f45aff64",
+      "songId": "song_b0e69780e6e9f45aff64",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Genre-standard status makes exact year difficult.",
+      "title": "Play That Funky Music",
+      "artist": "Wild Cherry",
+      "answerYear": 1976
+    },
+    {
+      "sourceSongId": "song_46a4455a31050c2726f6",
+      "songId": "song_46a4455a31050c2726f6",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Long sales life and theatrical sound blur the original year.",
+      "title": "Bat Out of Hell",
+      "artist": "Meat Loaf",
+      "answerYear": 1977
+    },
+    {
+      "sourceSongId": "song_bc611b6e3442dc772b08",
+      "songId": "song_bc611b6e3442dc772b08",
+      "resolutionMethod": "stable_song_id",
+      "signal": "revival",
+      "reason": "Major social-media revival decades later makes the original year easy to miss.",
+      "title": "Dreams",
+      "artist": "Fleetwood Mac",
+      "answerYear": 1977
+    },
+    {
+      "sourceSongId": "song_cae1621b426c432431a0",
+      "songId": "song_cae1621b426c432431a0",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Synth-funk production points toward later electronic music.",
+      "title": "Flash Light",
+      "artist": "Parliament",
+      "answerYear": 1977
+    },
+    {
+      "sourceSongId": "song_a0c25b1221ddd9b1bd0c",
+      "songId": "song_a0c25b1221ddd9b1bd0c",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Saturday Night Fever association often shifts guesses to the film/album cycle.",
+      "title": "More Than a Woman",
+      "artist": "Bee Gees",
+      "answerYear": 1977
+    },
+    {
+      "sourceSongId": "song_ed2db4bcb1d6b7a79cf6",
+      "songId": "song_ed2db4bcb1d6b7a79cf6",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "New-wave/disco blend can sound early-1980s.",
+      "title": "Heart Of Glass",
+      "artist": "Blondie",
+      "answerYear": 1978
+    },
+    {
+      "sourceSongId": "song_5789f221c273cdaae0dd",
+      "songId": "song_5789f221c273cdaae0dd",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Disco standard is often dated generically to the late 1970s.",
+      "title": "I Will Survive",
+      "artist": "Gloria Gaynor",
+      "answerYear": 1978
+    },
+    {
+      "sourceSongId": "song_95f374e7a4b8958fdf07",
+      "songId": "song_95f374e7a4b8958fdf07",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Production stayed influential well into later dance music.",
+      "title": "Le Freak",
+      "artist": "Chic",
+      "answerYear": 1978
+    },
+    {
+      "sourceSongId": "song_e5db56082791d672cb45",
+      "songId": "song_e5db56082791d672cb45",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_later",
+      "reason": "The Police's 1980s peak can pull guesses later.",
+      "title": "Roxanne",
+      "artist": "The Police",
+      "answerYear": 1978
+    },
+    {
+      "sourceSongId": "song_78b409a9c34b6d1d030c",
+      "songId": "song_78b409a9c34b6d1d030c",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_later",
+      "reason": "Yacht-rock associations often read as early 1980s.",
+      "title": "What A Fool Believes",
+      "artist": "The Doobie Brothers",
+      "answerYear": 1978
+    },
+    {
+      "sourceSongId": "song_d3476e5c55012091ec2c",
+      "songId": "song_d3476e5c55012091ec2c",
+      "resolutionMethod": "stable_song_id",
+      "signal": "retro_confusion",
+      "reason": "Deliberately 1950s-style rockabilly can pull guesses far earlier.",
+      "title": "Crazy Little Thing Called Love",
+      "artist": "Queen",
+      "answerYear": 1979
+    },
+    {
+      "sourceSongId": "song_b6dfd0f3550738a8dc89",
+      "songId": "song_b6dfd0f3550738a8dc89",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_later",
+      "reason": "Power-pop sound is easily placed in the early 1980s.",
+      "title": "My Sharona",
+      "artist": "The Knack",
+      "answerYear": 1979
+    },
+    {
+      "sourceSongId": "song_0691b41c4c52e181abd8",
+      "songId": "song_0691b41c4c52e181abd8",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Mainstream hip-hop landmark arrives earlier than many expect.",
+      "title": "Rapper'S Delight",
+      "artist": "Sugarhill Gang",
+      "answerYear": 1979
+    },
+    {
+      "sourceSongId": "song_4bbeca521ee7daec21da",
+      "songId": "song_4bbeca521ee7daec21da",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Disco standard has stayed culturally evergreen.",
+      "title": "We Are Family",
+      "artist": "Sister Sledge",
+      "answerYear": 1979
+    },
+    {
+      "sourceSongId": "song_209463a375023db29a97",
+      "songId": "song_209463a375023db29a97",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Event-play ubiquity makes the original year easy to overlook.",
+      "title": "Celebration",
+      "artist": "Kool & The Gang",
+      "answerYear": 1980
+    },
+    {
+      "sourceSongId": "song_fd3e6d7449487b449a08",
+      "songId": "song_fd3e6d7449487b449a08",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Film/TV associations blur the recording's exact year.",
+      "title": "Fame",
+      "artist": "Irene Cara",
+      "answerYear": 1980
+    },
+    {
+      "sourceSongId": "song_1bac1d8ff74c4750d93f",
+      "songId": "song_1bac1d8ff74c4750d93f",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Production has a durable modern feel for 1980.",
+      "title": "Master Blaster (Jammin')",
+      "artist": "Stevie Wonder",
+      "answerYear": 1980
+    },
+    {
+      "sourceSongId": "song_43f838b57455f29192da",
+      "songId": "song_43f838b57455f29192da",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Distinctive production can be placed anywhere in the early 1980s.",
+      "title": "Bette Davis Eyes",
+      "artist": "Kim Carnes",
+      "answerYear": 1981
+    },
+    {
+      "sourceSongId": "song_ddf494b0b12f28cbd570",
+      "songId": "song_ddf494b0b12f28cbd570",
+      "resolutionMethod": "stable_song_id",
+      "signal": "revival",
+      "reason": "Huge 2000s TV/streaming revival can make it feel much newer.",
+      "title": "Don'T Stop Believin'",
+      "artist": "Journey",
+      "answerYear": 1981
+    },
+    {
+      "sourceSongId": "song_40e1478a2bf623616a79",
+      "songId": "song_40e1478a2bf623616a79",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Rock-standard status obscures its exact release year.",
+      "title": "I Love Rock 'N Roll",
+      "artist": "Joan Jett & The Blackhearts",
+      "answerYear": 1981
+    },
+    {
+      "sourceSongId": "song_51c758de6d7bdaa175a0",
+      "songId": "song_51c758de6d7bdaa175a0",
+      "resolutionMethod": "stable_song_id",
+      "signal": "title_misdirection",
+      "reason": "The title itself strongly tempts a 1999 guess.",
+      "title": "1999",
+      "artist": "Prince",
+      "answerYear": 1982
+    },
+    {
+      "sourceSongId": "song_135d4bc10adbc158d432",
+      "songId": "song_135d4bc10adbc158d432",
+      "resolutionMethod": "stable_song_id",
+      "signal": "revival",
+      "reason": "Internet-era revival gives the track a much later cultural life.",
+      "title": "Africa",
+      "artist": "Toto",
+      "answerYear": 1982
+    },
+    {
+      "sourceSongId": "song_db737420ffde8c915426",
+      "songId": "song_db737420ffde8c915426",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Often remembered simply as an 80s hit without a precise year.",
+      "title": "Come On Eileen",
+      "artist": "Dexys Midnight Runners",
+      "answerYear": 1982
+    },
+    {
+      "sourceSongId": "song_dfcbd8f3d0301655986e",
+      "songId": "song_dfcbd8f3d0301655986e",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Cross-market release history can shift remembered year.",
+      "title": "99 Luftballons",
+      "artist": "Nena",
+      "answerYear": 1983
+    },
+    {
+      "sourceSongId": "song_1cb08a1925247ce1dc84",
+      "songId": "song_1cb08a1925247ce1dc84",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "1980s-icon status obscures precise year.",
+      "title": "Girls Just Want to Have Fun",
+      "artist": "Cyndi Lauper",
+      "answerYear": 1983
+    },
+    {
+      "sourceSongId": "song_28fb9a4553542eb96374",
+      "songId": "song_28fb9a4553542eb96374",
+      "resolutionMethod": "stable_song_id",
+      "signal": "later_breakthrough",
+      "reason": "Its later US chart peak can pull guesses toward 1988.",
+      "title": "Red Red Wine",
+      "artist": "UB40",
+      "answerYear": 1983
+    },
+    {
+      "sourceSongId": "song_2305a63b8f720bd2d23a",
+      "songId": "song_2305a63b8f720bd2d23a",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Synth-pop production feels like a defining later-80s sound.",
+      "title": "Sweet Dreams (Are Made Of This)",
+      "artist": "Eurythmics",
+      "answerYear": 1983
+    },
+    {
+      "sourceSongId": "song_c52b96038bf06df6cf6e",
+      "songId": "song_c52b96038bf06df6cf6e",
+      "resolutionMethod": "stable_song_id",
+      "signal": "revival",
+      "reason": "Later covers, especially 1990s onward, dominate cultural memory.",
+      "title": "Hallelujah",
+      "artist": "Leonard Cohen",
+      "answerYear": 1984
+    },
+    {
+      "sourceSongId": "song_10064369b4be9a8232a0",
+      "songId": "song_10064369b4be9a8232a0",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Production bridges mid- and late-1980s aesthetics.",
+      "title": "The Boys of Summer",
+      "artist": "Don Henley",
+      "answerYear": 1984
+    },
+    {
+      "sourceSongId": "song_9f105720ad6147bd176d",
+      "songId": "song_9f105720ad6147bd176d",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Iconic video-era association obscures exact year.",
+      "title": "Addicted to Love",
+      "artist": "Robert Palmer",
+      "answerYear": 1985
+    },
+    {
+      "sourceSongId": "song_dc01abdcad19ac705cdd",
+      "songId": "song_dc01abdcad19ac705cdd",
+      "resolutionMethod": "stable_song_id",
+      "signal": "revival",
+      "reason": "Repeated soundtrack and social-media reuse keeps it culturally current.",
+      "title": "Everybody Wants to Rule the World",
+      "artist": "Tears for Fears",
+      "answerYear": 1985
+    },
+    {
+      "sourceSongId": "song_84961d899efc680565d2",
+      "songId": "song_84961d899efc680565d2",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Production and video legacy can make it feel later.",
+      "title": "Sledgehammer",
+      "artist": "Peter Gabriel",
+      "answerYear": 1986
+    },
+    {
+      "sourceSongId": "song_fa2bebb56fdfdec71e03",
+      "songId": "song_fa2bebb56fdfdec71e03",
+      "resolutionMethod": "stable_song_id",
+      "signal": "revival",
+      "reason": "Later sampling and reinterpretation blur the original year.",
+      "title": "The Way It Is",
+      "artist": "Bruce Hornsby",
+      "answerYear": 1986
+    },
+    {
+      "sourceSongId": "song_2aa3410fdc18322056c6",
+      "songId": "song_2aa3410fdc18322056c6",
+      "resolutionMethod": "stable_song_id",
+      "signal": "revival",
+      "reason": "Recent advertising/social revival makes the track feel newer.",
+      "title": "Everywhere",
+      "artist": "Fleetwood Mac",
+      "answerYear": 1987
+    },
+    {
+      "sourceSongId": "song_d9f06353da86dd3fbda2",
+      "songId": "song_d9f06353da86dd3fbda2",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Era-defining status makes the exact year less obvious.",
+      "title": "Faith",
+      "artist": "George Michael",
+      "answerYear": 1987
+    },
+    {
+      "sourceSongId": "song_bc86813776d674c8f655",
+      "songId": "song_bc86813776d674c8f655",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Persistent popularity obscures precise year.",
+      "title": "I Wanna Dance With Somebody (Who Loves Me)",
+      "artist": "Whitney Houston",
+      "answerYear": 1987
+    },
+    {
+      "sourceSongId": "song_98275822caadba3e7ad8",
+      "songId": "song_98275822caadba3e7ad8",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Sparse production can sound more modern than 1987.",
+      "title": "Need You Tonight",
+      "artist": "INXS",
+      "answerYear": 1987
+    },
+    {
+      "sourceSongId": "song_41ba25ac2033efbd4805",
+      "songId": "song_41ba25ac2033efbd4805",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Hip-hop/pop production points toward the early 1990s.",
+      "title": "Buffalo Stance",
+      "artist": "Neneh Cherry",
+      "answerYear": 1988
+    },
+    {
+      "sourceSongId": "song_a71637b4069bb19a4e0b",
+      "songId": "song_a71637b4069bb19a4e0b",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_later",
+      "reason": "Nirvana's 1990s breakthrough pulls guesses later.",
+      "title": "About A Girl",
+      "artist": "Nirvana",
+      "answerYear": 1989
+    },
+    {
+      "sourceSongId": "song_e2d62255a32538318d2f",
+      "songId": "song_e2d62255a32538318d2f",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Global-dance association makes exact year difficult.",
+      "title": "Lambada",
+      "artist": "Kaoma",
+      "answerYear": 1989
+    },
+    {
+      "sourceSongId": "song_e89a9ff7ef98eb287ff2",
+      "songId": "song_e89a9ff7ef98eb287ff2",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Long-running pop prominence blurs its exact late-80s year.",
+      "title": "Like a Prayer",
+      "artist": "Madonna",
+      "answerYear": 1989
+    },
+    {
+      "sourceSongId": "song_e65e1ab8c3935c8c0707",
+      "songId": "song_e65e1ab8c3935c8c0707",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Club production is easy to place in the early 1990s.",
+      "title": "Pump Up the Jam",
+      "artist": "Technotronic",
+      "answerYear": 1989
+    },
+    {
+      "sourceSongId": "song_97e73ca4fda13a2f8b93",
+      "songId": "song_97e73ca4fda13a2f8b93",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Electronic production has aged unusually well.",
+      "title": "Enjoy the Silence",
+      "artist": "Depeche Mode",
+      "answerYear": 1990
+    },
+    {
+      "sourceSongId": "song_a93d6d3846b27f71b1ad",
+      "songId": "song_a93d6d3846b27f71b1ad",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Early mainstream rap hit is often remembered as generically early-90s.",
+      "title": "Ice Ice Baby",
+      "artist": "Vanilla Ice",
+      "answerYear": 1990
+    },
+    {
+      "sourceSongId": "song_5f2e76d413472d186124",
+      "songId": "song_5f2e76d413472d186124",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Eurodance sound anticipates the mid-1990s.",
+      "title": "The Power",
+      "artist": "Snap!",
+      "answerYear": 1990
+    },
+    {
+      "sourceSongId": "song_8b67630ded5413ca93ed",
+      "songId": "song_8b67630ded5413ca93ed",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_older",
+      "reason": "Classic hard-rock sound can easily be placed in the 1980s.",
+      "title": "Thunderstruck",
+      "artist": "AC/DC",
+      "answerYear": 1990
+    },
+    {
+      "sourceSongId": "song_8ae121fac3a9d13d0157",
+      "songId": "song_8ae121fac3a9d13d0157",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "House-influenced pop production points forward into the decade.",
+      "title": "Vogue",
+      "artist": "Madonna",
+      "answerYear": 1990
+    },
+    {
+      "sourceSongId": "song_196a99b848803ea52422",
+      "songId": "song_196a99b848803ea52422",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Alternative-funk sound remains unusually contemporary.",
+      "title": "Give It Away",
+      "artist": "Red Hot Chili Peppers",
+      "answerYear": 1991
+    },
+    {
+      "sourceSongId": "song_287476e6e56fe3e77db6",
+      "songId": "song_287476e6e56fe3e77db6",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Persistent airplay detaches it from its exact year.",
+      "title": "Losing My Religion",
+      "artist": "R.E.M.",
+      "answerYear": 1991
+    },
+    {
+      "sourceSongId": "song_befe80544a068d1c9fb8",
+      "songId": "song_befe80544a068d1c9fb8",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Grunge-era landmark often gets placed slightly later.",
+      "title": "Smells Like Teen Spirit",
+      "artist": "Nirvana",
+      "answerYear": 1991
+    },
+    {
+      "sourceSongId": "song_8372e80d6ef992aa4d15",
+      "songId": "song_8372e80d6ef992aa4d15",
+      "resolutionMethod": "stable_song_id",
+      "signal": "revival",
+      "reason": "2020s film/social revival strongly renewed the song.",
+      "title": "Something In The Way",
+      "artist": "Nirvana",
+      "answerYear": 1991
+    },
+    {
+      "sourceSongId": "song_072e76b7d8f9e86211a4",
+      "songId": "song_072e76b7d8f9e86211a4",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_later",
+      "reason": "Its long 1990s radio life can shift guesses later.",
+      "title": "Under the Bridge",
+      "artist": "Red Hot Chili Peppers",
+      "answerYear": 1991
+    },
+    {
+      "sourceSongId": "song_54b1c852e420e452c9b5",
+      "songId": "song_54b1c852e420e452c9b5",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Euro-pop production points toward mid-1990s pop.",
+      "title": "All That She Wants",
+      "artist": "Ace of Base",
+      "answerYear": 1992
+    },
+    {
+      "sourceSongId": "song_15185bb20a9e07de2d70",
+      "songId": "song_15185bb20a9e07de2d70",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_later",
+      "reason": "Aggressive alt-metal sound can be placed later in the 1990s.",
+      "title": "Killing in the Name",
+      "artist": "Rage Against the Machine",
+      "answerYear": 1992
+    },
+    {
+      "sourceSongId": "song_ec96beaae5327524baca",
+      "songId": "song_ec96beaae5327524baca",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Eurodance sound became even more characteristic later in the decade.",
+      "title": "Rhythm Is a Dancer",
+      "artist": "Snap!",
+      "answerYear": 1992
+    },
+    {
+      "sourceSongId": "song_4bccd3d282dd476f234e",
+      "songId": "song_4bccd3d282dd476f234e",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Nirvana's legacy makes precise release chronology non-obvious.",
+      "title": "All Apologies",
+      "artist": "Nirvana",
+      "answerYear": 1993
+    },
+    {
+      "sourceSongId": "song_2d80c186c70d1b45acb2",
+      "songId": "song_2d80c186c70d1b45acb2",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_later",
+      "reason": "Often mentally grouped with later-1990s alternative rock.",
+      "title": "Heart-Shaped Box",
+      "artist": "Nirvana",
+      "answerYear": 1993
+    },
+    {
+      "sourceSongId": "song_e7f7d5e0d1a383eb9e3b",
+      "songId": "song_e7f7d5e0d1a383eb9e3b",
+      "resolutionMethod": "stable_song_id",
+      "signal": "revival",
+      "reason": "Continued streaming and social revival can make it feel later.",
+      "title": "Linger",
+      "artist": "The Cranberries",
+      "answerYear": 1993
+    },
+    {
+      "sourceSongId": "song_5086d8cd63b075e5b3ba",
+      "songId": "song_5086d8cd63b075e5b3ba",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_later",
+      "reason": "Many listeners associate its peak with 1994.",
+      "title": "The Sign",
+      "artist": "Ace of Base",
+      "answerYear": 1993
+    },
+    {
+      "sourceSongId": "song_66d46918f675a9bf6c8a",
+      "songId": "song_66d46918f675a9bf6c8a",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Sports-arena afterlife obscures its original year.",
+      "title": "Whoomp! (There It Is)",
+      "artist": "Tag Team",
+      "answerYear": 1993
+    },
+    {
+      "sourceSongId": "song_5c67d8ce93ce2d3dd678",
+      "songId": "song_5c67d8ce93ce2d3dd678",
+      "resolutionMethod": "stable_song_id",
+      "signal": "revival",
+      "reason": "Annual chart returns make the mid-1990s origin surprising.",
+      "title": "All I Want for Christmas Is You",
+      "artist": "Mariah Carey",
+      "answerYear": 1994
+    },
+    {
+      "sourceSongId": "song_02679ef47f0c616f1736",
+      "songId": "song_02679ef47f0c616f1736",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Pop-punk longevity makes the exact year fuzzy.",
+      "title": "Basket Case",
+      "artist": "Green Day",
+      "answerYear": 1994
+    },
+    {
+      "sourceSongId": "song_9d86c293f72802d8b564",
+      "songId": "song_9d86c293f72802d8b564",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Trip-hop production still sounds strikingly modern.",
+      "title": "Protection",
+      "artist": "Massive Attack",
+      "answerYear": 1994
+    },
+    {
+      "sourceSongId": "song_12ffb9dc1e901f20a92b",
+      "songId": "song_12ffb9dc1e901f20a92b",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Long cultural afterlife obscures precise year.",
+      "title": "Gangsta's Paradise",
+      "artist": "Coolio feat. L.V.",
+      "answerYear": 1995
+    },
+    {
+      "sourceSongId": "song_c9dcfcddadaf52b322ca",
+      "songId": "song_c9dcfcddadaf52b322ca",
+      "resolutionMethod": "stable_song_id",
+      "signal": "revival",
+      "reason": "Later club and meme revival renewed its popularity.",
+      "title": "Return of the Mack",
+      "artist": "Mark Morrison",
+      "answerYear": 1995
+    },
+    {
+      "sourceSongId": "song_c03265ca4e233da8bee6",
+      "songId": "song_c03265ca4e233da8bee6",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Ubiquity makes exact mid-90s dating difficult.",
+      "title": "Wonderwall",
+      "artist": "Oasis",
+      "answerYear": 1995
+    },
+    {
+      "sourceSongId": "song_0316a88ab391b18d0094",
+      "songId": "song_0316a88ab391b18d0094",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Production can read as late-1990s/early-2000s.",
+      "title": "No Diggity",
+      "artist": "Blackstreet",
+      "answerYear": 1996
+    },
+    {
+      "sourceSongId": "song_ac9a83675c3db8a0cadb",
+      "songId": "song_ac9a83675c3db8a0cadb",
+      "resolutionMethod": "stable_song_id",
+      "signal": "cover_confusion",
+      "reason": "Natalie Imbruglia's version and later ubiquity make its chronology less obvious.",
+      "title": "Torn",
+      "artist": "Natalie Imbruglia",
+      "answerYear": 1997
+    },
+    {
+      "sourceSongId": "song_cddf0327c4c567a5fded",
+      "songId": "song_cddf0327c4c567a5fded",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "U2's long career can make this feel either 1990s or 2000s.",
+      "title": "Beautiful Day",
+      "artist": "U2",
+      "answerYear": 2000
+    },
+    {
+      "sourceSongId": "song_93c400cee06735fc034f",
+      "songId": "song_93c400cee06735fc034f",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_later",
+      "reason": "Coldplay's later dominance can pull guesses later.",
+      "title": "Yellow",
+      "artist": "Coldplay",
+      "answerYear": 2000
+    },
+    {
+      "sourceSongId": "song_861ece635d144ea42277",
+      "songId": "song_861ece635d144ea42277",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Genre-blending production still sounds modern.",
+      "title": "Clint Eastwood",
+      "artist": "Gorillaz",
+      "answerYear": 2001
+    },
+    {
+      "sourceSongId": "song_4b5326447a6898698d29",
+      "songId": "song_4b5326447a6898698d29",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_later",
+      "reason": "Pop-punk peak association can pull guesses toward 2002-04.",
+      "title": "The Middle",
+      "artist": "Jimmy Eat World",
+      "answerYear": 2001
+    },
+    {
+      "sourceSongId": "song_16ab047b2ac9021a4b3f",
+      "songId": "song_16ab047b2ac9021a4b3f",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_later",
+      "reason": "Its international peak is often associated with 2002.",
+      "title": "Whenever, Wherever",
+      "artist": "Shakira",
+      "answerYear": 2001
+    },
+    {
+      "sourceSongId": "song_f5d6de3b93625921a9d9",
+      "songId": "song_f5d6de3b93625921a9d9",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Meme/film afterlife keeps it culturally current.",
+      "title": "A Thousand Miles",
+      "artist": "Vanessa Carlton",
+      "answerYear": 2002
+    },
+    {
+      "sourceSongId": "song_961887ecb18450261996",
+      "songId": "song_961887ecb18450261996",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_later",
+      "reason": "Commercial breakthrough is strongly associated with 2003.",
+      "title": "Bring Me to Life",
+      "artist": "Evanescence",
+      "answerYear": 2002
+    },
+    {
+      "sourceSongId": "song_b91ddb96e9013c3c47b2",
+      "songId": "song_b91ddb96e9013c3c47b2",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Continued cultural use obscures exact year.",
+      "title": "Lose Yourself",
+      "artist": "Eminem",
+      "answerYear": 2002
+    },
+    {
+      "sourceSongId": "song_f2bd4d15cb08d676bc97",
+      "songId": "song_f2bd4d15cb08d676bc97",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Production remains unusually contemporary.",
+      "title": "Work It",
+      "artist": "Missy Elliott",
+      "answerYear": 2002
+    },
+    {
+      "sourceSongId": "song_a2178ab2d1564f166469",
+      "songId": "song_a2178ab2d1564f166469",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Retro styling and longevity make exact year harder.",
+      "title": "Hey Ya!",
+      "artist": "Outkast",
+      "answerYear": 2003
+    },
+    {
+      "sourceSongId": "song_fc534cb3268c8bc35cb3",
+      "songId": "song_fc534cb3268c8bc35cb3",
+      "resolutionMethod": "stable_song_id",
+      "signal": "revival",
+      "reason": "Long chart life, especially in the UK/Australia, makes the 2003 origin surprising.",
+      "title": "Mr. Brightside",
+      "artist": "The Killers",
+      "answerYear": 2003
+    },
+    {
+      "sourceSongId": "song_9457cfc37ead5b7278fb",
+      "songId": "song_9457cfc37ead5b7278fb",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Streaming-era longevity keeps it detached from its exact year.",
+      "title": "Numb",
+      "artist": "Linkin Park",
+      "answerYear": 2003
+    },
+    {
+      "sourceSongId": "song_ab127749b40c3ce9ad4f",
+      "songId": "song_ab127749b40c3ce9ad4f",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Stadium-chant afterlife obscures its origin year.",
+      "title": "Seven Nation Army",
+      "artist": "The White Stripes",
+      "answerYear": 2003
+    },
+    {
+      "sourceSongId": "song_7cbee0353b647cf2d29c",
+      "songId": "song_7cbee0353b647cf2d29c",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_later",
+      "reason": "Often associated with the 2004 indie-rock wave.",
+      "title": "Take Me Out",
+      "artist": "Franz Ferdinand",
+      "answerYear": 2003
+    },
+    {
+      "sourceSongId": "song_7a6cba12773a844de497",
+      "songId": "song_7a6cba12773a844de497",
+      "resolutionMethod": "stable_song_id",
+      "signal": "ahead",
+      "reason": "Production still sounds modern and is often dated to 2004.",
+      "title": "Toxic",
+      "artist": "Britney Spears",
+      "answerYear": 2003
+    },
+    {
+      "sourceSongId": "song_a63387ff4599f267970e",
+      "songId": "song_a63387ff4599f267970e",
+      "resolutionMethod": "stable_song_id",
+      "signal": "revival",
+      "reason": "Major 2020s revival gives it a much newer cultural footprint.",
+      "title": "Unwritten",
+      "artist": "Natasha Bedingfield",
+      "answerYear": 2004
+    },
+    {
+      "sourceSongId": "song_7220767bfa537f0ef992",
+      "songId": "song_7220767bfa537f0ef992",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_later",
+      "reason": "Amy Winehouse's 2007 global breakthrough can pull guesses later.",
+      "title": "Rehab",
+      "artist": "Amy Winehouse",
+      "answerYear": 2006
+    },
+    {
+      "sourceSongId": "song_d251c59a517dcaaa4865",
+      "songId": "song_d251c59a517dcaaa4865",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Internet nostalgia gives the track an era-blurred identity.",
+      "title": "Fireflies",
+      "artist": "Owl City",
+      "answerYear": 2009
+    },
+    {
+      "sourceSongId": "song_158d73d8bb3d7d6e77f7",
+      "songId": "song_158d73d8bb3d7d6e77f7",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_later",
+      "reason": "Its commercial peak came in 2011.",
+      "title": "Pumped Up Kicks",
+      "artist": "Foster the People",
+      "answerYear": 2010
+    },
+    {
+      "sourceSongId": "song_1201a3de0fc5cbf4cab4",
+      "songId": "song_1201a3de0fc5cbf4cab4",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_later",
+      "reason": "International breakout is commonly remembered as 2012.",
+      "title": "Somebody That I Used to Know",
+      "artist": "Gotye feat. Kimbra",
+      "answerYear": 2011
+    },
+    {
+      "sourceSongId": "song_c16dd374dda90f08948f",
+      "songId": "song_c16dd374dda90f08948f",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Lana Del Rey's long later career can pull guesses later.",
+      "title": "Video Games",
+      "artist": "Lana Del Rey",
+      "answerYear": 2011
+    },
+    {
+      "sourceSongId": "song_1e53acc392f1e77265c4",
+      "songId": "song_1e53acc392f1e77265c4",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "Internet landmark is often remembered by era more than exact year.",
+      "title": "Gangnam Style",
+      "artist": "PSY",
+      "answerYear": 2012
+    },
+    {
+      "sourceSongId": "song_7cef6a9a2cf69bacd46c",
+      "songId": "song_7cef6a9a2cf69bacd46c",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_later",
+      "reason": "Global chart success extended strongly into 2013-14.",
+      "title": "Let Her Go",
+      "artist": "Passenger",
+      "answerYear": 2012
+    },
+    {
+      "sourceSongId": "song_a6c681ac1dc43f135e0e",
+      "songId": "song_a6c681ac1dc43f135e0e",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_later",
+      "reason": "Peak chart association is commonly 2013.",
+      "title": "Thrift Shop",
+      "artist": "Macklemore and Ryan Lewis feat. Wanz",
+      "answerYear": 2012
+    },
+    {
+      "sourceSongId": "song_ae060b16f2a933561349",
+      "songId": "song_ae060b16f2a933561349",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_later",
+      "reason": "Long streaming life can pull guesses later.",
+      "title": "3005",
+      "artist": "Childish Gambino",
+      "answerYear": 2013
+    },
+    {
+      "sourceSongId": "song_d4f0fb6219eb00068bc0",
+      "songId": "song_d4f0fb6219eb00068bc0",
+      "resolutionMethod": "stable_song_id",
+      "signal": "timeless",
+      "reason": "EDM-pop crossover remains culturally durable.",
+      "title": "Wake Me Up",
+      "artist": "Avicii",
+      "answerYear": 2013
+    },
+    {
+      "sourceSongId": "song_4a2ce612552a4e66814d",
+      "songId": "song_4a2ce612552a4e66814d",
+      "resolutionMethod": "stable_song_id",
+      "signal": "later_breakthrough",
+      "reason": "Originally released years before its 2019 chart breakthrough.",
+      "title": "Good as Hell",
+      "artist": "Lizzo",
+      "answerYear": 2016
+    },
+    {
+      "sourceSongId": "song_96ab42cd9ddaf795c96b",
+      "songId": "song_96ab42cd9ddaf795c96b",
+      "resolutionMethod": "stable_song_id",
+      "signal": "retro_confusion",
+      "reason": "Deliberate 1970s-style psychedelic soul can pull guesses decades earlier.",
+      "title": "Me and Your Mama",
+      "artist": "Childish Gambino",
+      "answerYear": 2016
+    },
+    {
+      "sourceSongId": "song_9ae6f0c273315cddb4be",
+      "songId": "song_9ae6f0c273315cddb4be",
+      "resolutionMethod": "stable_song_id",
+      "signal": "later_breakthrough",
+      "reason": "Its biggest global chart run arrived in 2021-22.",
+      "title": "Heat Waves",
+      "artist": "Glass Animals",
+      "answerYear": 2020
+    },
+    {
+      "sourceSongId": "song_8d760a9edb56e68beeb9",
+      "songId": "song_8d760a9edb56e68beeb9",
+      "resolutionMethod": "stable_song_id",
+      "signal": "sounds_later",
+      "reason": "Its major chart breakthrough came in 2022.",
+      "title": "Sunroof",
+      "artist": "Nicky Youre",
+      "answerYear": 2021
+    }
+  ],
+  "finalMembers": [
+    {
+      "songId": "song_c7ffdbd63eb83a8500b0",
+      "title": "Rocket \"88\"",
+      "artist": "Jackie Brenston & His Delta Cats",
+      "answerYear": 1951,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/bfd745d0-4956-4bdd-afd3-85c5aa93afed",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_22910f5065d96395ad09",
+      "title": "Ain’t That a Shame",
+      "artist": "Fats Domino",
+      "answerYear": 1955,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/e8eb6084-b8be-462d-9d70-26d45354fc68",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_1126480839a4b64d5b46",
+      "title": "Bo Diddley",
+      "artist": "Bo Diddley",
+      "answerYear": 1955,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/8c2f557e-5dca-4c91-8a41-e40119eae19e",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_00babb63f6224753877f",
+      "title": "Maybellene",
+      "artist": "Chuck Berry",
+      "answerYear": 1955,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/00cc00aa-7859-43b3-9293-4766554eeb87",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_12f51c9c80377757994e",
+      "title": "Be-Bop-A-Lula",
+      "artist": "Gene Vincent And His Blue Caps",
+      "answerYear": 1956,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/80a7dda1-082b-4953-ad08-7c12f7478923",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_a208ca6226b6cd341636",
+      "title": "Blue Suede Shoes",
+      "artist": "Carl Perkins",
+      "answerYear": 1956,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/10ba9e37-682a-4472-b4ea-9243b1a30db2",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_e7630f093837ab1b9df0",
+      "title": "I Walk The Line",
+      "artist": "Johnny Cash",
+      "answerYear": 1956,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/b9e8436a-ef5d-4949-af67-f95ce1667f50",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_451cabf70075c1c04a26",
+      "title": "Great Balls of Fire",
+      "artist": "Jerry Lee Lewis",
+      "answerYear": 1957,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/584d321c-4eb8-431c-b865-30fb660d1c95",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_d2d00689e570655216a7",
+      "title": "Freight Train",
+      "artist": "Elizabeth Cotten",
+      "answerYear": 1958,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/41ce7f45-88e1-4f5b-a5fc-fd78d9e2a810",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_9f1aecd68fb0990782b4",
+      "title": "La Bamba",
+      "artist": "Ritchie Valens",
+      "answerYear": 1958,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/ca761827-c9d4-4a44-9dea-0eec9df14ed4",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_49bd8a58aecdcecb868b",
+      "title": "Rumble",
+      "artist": "Link Wray",
+      "answerYear": 1958,
+      "releaseState": "unresolved",
+      "releaseEvidence": null
+    },
+    {
+      "songId": "song_0b3fbe1381c795d69509",
+      "title": "Tequila",
+      "artist": "The Champs",
+      "answerYear": 1958,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/80527d8b-fd42-4cca-b552-45d4c94dbc99",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_f081e1eadbdf96fa616b",
+      "title": "There Goes My Baby",
+      "artist": "The Drifters",
+      "answerYear": 1959,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/631ac58d-84b0-45cb-b56b-2b0958931516",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_e2812bde48480217fc1a",
+      "title": "Apache",
+      "artist": "The Shadows",
+      "answerYear": 1960,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/39eaf634-1f98-4ce2-92c2-baf003715e24",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_9f0d12fdab9d639615e4",
+      "title": "Shop Around",
+      "artist": "The Miracles",
+      "answerYear": 1960,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/86e35456-1984-4218-b003-b57cc95c4f5a",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_3b029bb0d64115dcf537",
+      "title": "The Twist",
+      "artist": "Chubby Checker",
+      "answerYear": 1960,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/55e17d71-03a0-4df4-b381-7c5e421782a6",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_4f2c83c1347e52b041d8",
+      "title": "Please Mr Postman",
+      "artist": "The Marvelettes",
+      "answerYear": 1961,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/aad83213-1c4b-4bd3-a2a7-ecf2b68d4a26",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_143fc16ffce4ad6b3ccc",
+      "title": "Boom Boom",
+      "artist": "John Lee Hooker",
+      "answerYear": 1962,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/885566cc-a5de-48bb-85ac-b3b122db5590",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_76fb008a3837f92e8cba",
+      "title": "Bring It On Home to Me",
+      "artist": "Sam Cooke",
+      "answerYear": 1962,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/57dd9098-baab-4157-a27b-fbdcf94ad02e",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_c364be92b3e40400461f",
+      "title": "Telstar",
+      "artist": "The Tornados",
+      "answerYear": 1962,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/866b31df-5575-4e22-9119-48b1c007e258",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_2ec90ca3eb8dbce008f5",
+      "title": "Twist And Shout",
+      "artist": "The Isley Brothers",
+      "answerYear": 1962,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/a2076ec5-a0c0-477b-946e-2477dc6d60a8",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_1225853feb7f377c8bcd",
+      "title": "Be My Baby",
+      "artist": "The Ronettes",
+      "answerYear": 1963,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/10e84089-c1ff-47f0-8d50-26ed43f53f87",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_8afa00dd6d05b96b8960",
+      "title": "I Want to Hold Your Hand",
+      "artist": "The Beatles",
+      "answerYear": 1963,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://en.wikipedia.org/wiki/I_Want_to_Hold_Your_Hand",
+        "evidence": "Wikipedia song/single infobox release date"
+      }
+    },
+    {
+      "songId": "song_c7d326233f2ad81aa6c2",
+      "title": "In My Room",
+      "artist": "The Beach Boys",
+      "answerYear": 1963,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/32249ae1-03f0-4631-a5d9-6a348e2ad174",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_7429386bf1d0a371cccb",
+      "title": "Louie Louie",
+      "artist": "The Kingsmen",
+      "answerYear": 1963,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/1c1de963-6b5b-4abc-a929-42a435ed88af",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_221a2dad0945643f1276",
+      "title": "Downtown",
+      "artist": "Petula Clark",
+      "answerYear": 1964,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/baef394a-82e2-4632-96f8-845e162911e0",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_53e959c95c715c3e6ddd",
+      "title": "You Really Got Me",
+      "artist": "The Kinks",
+      "answerYear": 1964,
+      "releaseState": "unresolved",
+      "releaseEvidence": null
+    },
+    {
+      "songId": "song_24b7f735c2cae85174a5",
+      "title": "(I Can’t Get No) Satisfaction",
+      "artist": "The Rolling Stones",
+      "answerYear": 1965,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://en.wikipedia.org/wiki/(I_Can't_Get_No)_Satisfaction",
+        "evidence": "Wikipedia song/single infobox release date"
+      }
+    },
+    {
+      "songId": "song_ae2b449fc4de1afc8d79",
+      "title": "Do You Believe In Magic",
+      "artist": "The Lovin' Spoonful",
+      "answerYear": 1965,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/5cdf1afb-53c2-4746-84a8-f2fba55218ec",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_0daf59beb5df454a95f2",
+      "title": "I Fought The Law",
+      "artist": "Bobby Fuller Four",
+      "answerYear": 1965,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/e26f8431-fb69-46ed-bebf-80a1aa50a298",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_4bb9b3f6a5b26e45203e",
+      "title": "I Got You (I Feel Good)",
+      "artist": "James Brown",
+      "answerYear": 1965,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/c23ec4e2-f872-4eb5-822f-d6481163bec3",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_71f6d3e104744a04a7a3",
+      "title": "In the Midnight Hour",
+      "artist": "Wilson Pickett",
+      "answerYear": 1965,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/7a55e1f7-c6e8-4eab-8f67-ce213064bdd0",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_a9c30a180c249a3d8b07",
+      "title": "Like a Rolling Stone",
+      "artist": "Bob Dylan",
+      "answerYear": 1965,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/76494311-c180-46e1-9282-7c2fadbe359a",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_80d28f973790c8098a2a",
+      "title": "96 Tears",
+      "artist": "? (Question Mark) & the Mysterians",
+      "answerYear": 1966,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://en.wikipedia.org/wiki/96_Tears",
+        "evidence": "Wikipedia song/single infobox release date"
+      }
+    },
+    {
+      "songId": "song_4b5a1ba9aaeb64516223",
+      "title": "Eight Miles High",
+      "artist": "The Byrds",
+      "answerYear": 1966,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/a283463c-e516-43be-9edf-b544b023732c",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_4ee50b8dc75e0d9bfc59",
+      "title": "Good Vibrations",
+      "artist": "The Beach Boys",
+      "answerYear": 1966,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/3ad31947-ae54-4409-aeaa-8dbd16c3825f",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_e7c50a49bdda114d2d68",
+      "title": "Tomorrow Never Knows",
+      "artist": "The Beatles",
+      "answerYear": 1966,
+      "releaseState": "unresolved",
+      "releaseEvidence": null
+    },
+    {
+      "songId": "song_8d8c76f6ac3b29215455",
+      "title": "A Whiter Shade Of Pale",
+      "artist": "Procol Harum",
+      "answerYear": 1967,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/57d17884-4645-43b4-bd55-f2b8717e12b5",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_88b4d8d0da528d0eafaa",
+      "title": "Light My Fire",
+      "artist": "The Doors",
+      "answerYear": 1967,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/3a3570ff-5130-4b1d-80b6-33eca95a2908",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_54e7e4580f16b7e85875",
+      "title": "Pata Pata",
+      "artist": "Miriam Makeba",
+      "answerYear": 1967,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/6258a883-9b93-4cf5-9bba-a73886313060",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_8bc9c368f64a13ad8056",
+      "title": "White Rabbit",
+      "artist": "Jefferson Airplane",
+      "answerYear": 1967,
+      "releaseState": "unresolved",
+      "releaseEvidence": null
+    },
+    {
+      "songId": "song_1330f87f5fe3522674cf",
+      "title": "All Along the Watchtower",
+      "artist": "The Jimi Hendrix Experience",
+      "answerYear": 1968,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/44f896ea-fba6-4471-b85b-1f3206893c7d",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_e39c647dc63b9f92a773",
+      "title": "Born to Be Wild",
+      "artist": "Steppenwolf",
+      "answerYear": 1968,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/42d57332-5798-4171-83ce-c9c5ce759c3b",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_e5695089759e080a171e",
+      "title": "Magic Carpet Ride",
+      "artist": "Steppenwolf",
+      "answerYear": 1968,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/453ddc4d-f8c2-406b-a14a-43dab56da555",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_1cc79993b503ab28517a",
+      "title": "Cissy Strut",
+      "artist": "The Meters",
+      "answerYear": 1969,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/c9d07f49-ddd1-4139-953e-3f5bf9d206b0",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_0c8e881f62fd630c290b",
+      "title": "Fortunate Son",
+      "artist": "Creedence Clearwater Revival",
+      "answerYear": 1969,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/e5178630-952b-486e-bb67-559c62f1b3db",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_fef01e46369d5bd24f65",
+      "title": "Space Oddity",
+      "artist": "David Bowie",
+      "answerYear": 1969,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/d27db25c-f745-452a-89c1-9eebd60631ad",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_f6c1a468b0eca846dbd3",
+      "title": "The First Time Ever I Saw Your Face",
+      "artist": "Roberta Flack",
+      "answerYear": 1969,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://store.atlanticrecords.com/products/first-take",
+        "evidence": "Atlantic Records identifies the song as part of First Take, recorded in 1969; Apple Music dates the original First Take album release to June 20, 1969. This is the original album recording, before the shortened 1972 single edit."
+      }
+    },
+    {
+      "songId": "song_ef7b86a2f514639de9a8",
+      "title": "A Song For You",
+      "artist": "Leon Russell",
+      "answerYear": 1970,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/121f277a-4794-44ca-bd3e-9cb3b8af6b6a",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_f0a97c3478679ef9d3fe",
+      "title": "Black Magic Woman",
+      "artist": "Santana",
+      "answerYear": 1970,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/ba6b1a63-fac2-40af-8ccd-d2bcad39ae2c",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_085ac98224a6a2223759",
+      "title": "Feliz Navidad",
+      "artist": "Jose Feliciano",
+      "answerYear": 1970,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/0fd07598-5881-47ba-9eca-5a7378357c2b",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_9abd12e669860ef53cd1",
+      "title": "Baba O’Riley",
+      "artist": "The Who",
+      "answerYear": 1971,
+      "releaseState": "unresolved",
+      "releaseEvidence": null
+    },
+    {
+      "songId": "song_a35d2b4f68f5e4839a06",
+      "title": "Changes",
+      "artist": "David Bowie",
+      "answerYear": 1971,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/e7b022c5-bce7-4bee-8136-7889af2f4162",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_57c69d8c3335e6354a13",
+      "title": "Layla",
+      "artist": "Derek And The Dominos",
+      "answerYear": 1971,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/f0c23b2f-9c18-4754-a855-42ee6caa8c76",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_fc61890780c6227af8df",
+      "title": "Tiny Dancer",
+      "artist": "Elton John",
+      "answerYear": 1971,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/d63bf39f-ec30-4f9f-b5a1-1397756016a3",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_0fbabde6b115690b6f6a",
+      "title": "I'Ll Take You There",
+      "artist": "The Staple Singers",
+      "answerYear": 1972,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/2dfce7f2-e15d-4f10-b9ec-2ede21984f22",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_31edeb20952da6a65fec",
+      "title": "Papa Was a Rollin Stone",
+      "artist": "The Temptations",
+      "answerYear": 1972,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/d52dda20-8011-40d0-ac96-3b13c9864898",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_e650121972bb37ad7a72",
+      "title": "Smoke on the Water",
+      "artist": "Deep Purple",
+      "answerYear": 1972,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/db7836b8-1fd6-4ca5-9924-c87c3921f23e",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_09f821ac61e507f339a6",
+      "title": "Superstition",
+      "artist": "Stevie Wonder",
+      "answerYear": 1972,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/23ff17be-769c-4535-97b8-cb4d2ddfbf4f",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_b04c72adb5a66275bfb1",
+      "title": "Walk On The Wild Side",
+      "artist": "Lou Reed",
+      "answerYear": 1972,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/390945aa-e9a3-4dd8-bf8d-93b3d079f364",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_8f3b290119e809f79318",
+      "title": "Dream On",
+      "artist": "Aerosmith",
+      "answerYear": 1973,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/e135871f-0fed-4683-90e3-ebbe435fbe4e",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_c3eee70750ee5be6fd3f",
+      "title": "Free Bird",
+      "artist": "Lynyrd Skynyrd",
+      "answerYear": 1973,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/c072a4ae-7de3-41a6-b720-18e992e3351e",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_9c74ae61fbe892076766",
+      "title": "Love's Theme",
+      "artist": "Love Unlimited Orchestra",
+      "answerYear": 1973,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://en.wikipedia.org/wiki/Love's_Theme",
+        "evidence": "Wikipedia song/single infobox release date"
+      }
+    },
+    {
+      "songId": "song_9c00f8c047cb5d2c74ed",
+      "title": "Autobahn",
+      "artist": "Kraftwerk",
+      "answerYear": 1974,
+      "releaseState": "unresolved",
+      "releaseEvidence": null
+    },
+    {
+      "songId": "song_0b9706606b8f3114580a",
+      "title": "I Will Always Love You",
+      "artist": "Dolly Parton",
+      "answerYear": 1974,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/92f2ba50-8045-4fa9-a4a4-2235d8fca21e",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_c487037af5e8f8f06405",
+      "title": "Kung Fu Fighting",
+      "artist": "Carl Douglas",
+      "answerYear": 1974,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/99a02469-94b2-4dcb-8754-b790361216a2",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_c4a533112ca5aae03d07",
+      "title": "Rock Your Baby",
+      "artist": "George McCrae",
+      "answerYear": 1974,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/1e7063c1-a440-463e-9c1a-99febfead40a",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_ebe56ea5ec62ce255057",
+      "title": "Sweet Home Alabama",
+      "artist": "Lynyrd Skynyrd",
+      "answerYear": 1974,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/2b2f23a7-3ee0-4fc0-991c-c0e327ffbb1e",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_a38d29a974ae7bfeb35a",
+      "title": "Bohemian Rhapsody",
+      "artist": "Queen",
+      "answerYear": 1975,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/6374c7d3-35d1-4b9a-9d8d-d2b43502927c",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_3c59b3d6fa14e980dac9",
+      "title": "Walk This Way",
+      "artist": "Aerosmith",
+      "answerYear": 1975,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/d4133846-df0d-49cb-9b69-8704866cf5a0",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_8b6b72e5b0360e370c1a",
+      "title": "Dancing Queen",
+      "artist": "ABBA",
+      "answerYear": 1976,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/a502f559-f70c-4e0d-a5e5-e0cc319d0bd7",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_7db448335980dfc84d5c",
+      "title": "More Than a Feeling",
+      "artist": "Boston",
+      "answerYear": 1976,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/5698b33c-eada-493e-ba34-636acc149cf8",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_b0e69780e6e9f45aff64",
+      "title": "Play That Funky Music",
+      "artist": "Wild Cherry",
+      "answerYear": 1976,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/315b48c9-bbc0-488b-adc0-560eef066f83",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_46a4455a31050c2726f6",
+      "title": "Bat Out of Hell",
+      "artist": "Meat Loaf",
+      "answerYear": 1977,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/1c3141c7-f779-4fa1-9c82-4b63e28dad6b",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_bc611b6e3442dc772b08",
+      "title": "Dreams",
+      "artist": "Fleetwood Mac",
+      "answerYear": 1977,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/248cc9d1-97ea-493e-84d4-4c5ec718683b",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_cae1621b426c432431a0",
+      "title": "Flash Light",
+      "artist": "Parliament",
+      "answerYear": 1977,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/5cc7904e-2ac2-4e07-bc5d-f6febbf85145",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_3838f1f8f636f7fe0bfd",
+      "title": "I Feel Love",
+      "artist": "Donna Summer",
+      "answerYear": 1977,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/bc43f3eb-10af-4983-81c7-69fc67ef846a",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_a0c25b1221ddd9b1bd0c",
+      "title": "More Than a Woman",
+      "artist": "Bee Gees",
+      "answerYear": 1977,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/a7b12356-1693-4859-af89-078f565c9bec",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_ed2db4bcb1d6b7a79cf6",
+      "title": "Heart Of Glass",
+      "artist": "Blondie",
+      "answerYear": 1978,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/d1b01fed-cac8-456b-adfb-7ee3e71c2fa3",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_5789f221c273cdaae0dd",
+      "title": "I Will Survive",
+      "artist": "Gloria Gaynor",
+      "answerYear": 1978,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://www.gloriagaynor.com/videos/i-will-survive/",
+        "evidence": "Gloria Gaynor’s official site labels I Will Survive as 1978; UMG recording metadata also carries a 1978 phonographic copyright. The prior accepted 1977 claim was rejected during the Unexpected Years review."
+      }
+    },
+    {
+      "songId": "song_95f374e7a4b8958fdf07",
+      "title": "Le Freak",
+      "artist": "Chic",
+      "answerYear": 1978,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://en.wikipedia.org/wiki/Le_Freak",
+        "evidence": "Wikipedia song/single infobox release date"
+      }
+    },
+    {
+      "songId": "song_e5db56082791d672cb45",
+      "title": "Roxanne",
+      "artist": "The Police",
+      "answerYear": 1978,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/68aaa830-20c5-4e4a-bc5c-3bfcecc43fde",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_78b409a9c34b6d1d030c",
+      "title": "What A Fool Believes",
+      "artist": "The Doobie Brothers",
+      "answerYear": 1978,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/6764b741-fc9f-40d5-bbd5-d0ed0982ef07",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_143dac4cf9386942f570",
+      "title": "Cars",
+      "artist": "Gary Numan",
+      "answerYear": 1979,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/063964f7-35c3-467f-b30c-cb7303d866b9",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_d3476e5c55012091ec2c",
+      "title": "Crazy Little Thing Called Love",
+      "artist": "Queen",
+      "answerYear": 1979,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/fd125370-5ac9-45eb-86ad-ab99e258404b",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_b6dfd0f3550738a8dc89",
+      "title": "My Sharona",
+      "artist": "The Knack",
+      "answerYear": 1979,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://en.wikipedia.org/wiki/My_Sharona",
+        "evidence": "Wikipedia song/single infobox release date"
+      }
+    },
+    {
+      "songId": "song_0691b41c4c52e181abd8",
+      "title": "Rapper'S Delight",
+      "artist": "Sugarhill Gang",
+      "answerYear": 1979,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/14ddb101-e22f-4a6a-a3de-f73bf69f9006",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_4bbeca521ee7daec21da",
+      "title": "We Are Family",
+      "artist": "Sister Sledge",
+      "answerYear": 1979,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/6a07230b-ca59-42d9-8724-4aea35177638",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_209463a375023db29a97",
+      "title": "Celebration",
+      "artist": "Kool & The Gang",
+      "answerYear": 1980,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/ae6ab407-5bfb-4151-b822-1430de0b6eb1",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_fd3e6d7449487b449a08",
+      "title": "Fame",
+      "artist": "Irene Cara",
+      "answerYear": 1980,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/ef710a29-456d-41ac-877a-88f089aa096e",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_1bac1d8ff74c4750d93f",
+      "title": "Master Blaster (Jammin')",
+      "artist": "Stevie Wonder",
+      "answerYear": 1980,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/d0f9187e-3921-4216-acbd-044f361fd0a8",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_c124d87e95d00afcfd33",
+      "title": "Once in a Lifetime",
+      "artist": "Talking Heads",
+      "answerYear": 1980,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/7ce86631-ab98-4814-b2e0-ec13f8a4d658",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_43f838b57455f29192da",
+      "title": "Bette Davis Eyes",
+      "artist": "Kim Carnes",
+      "answerYear": 1981,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://en.wikipedia.org/wiki/Bette_Davis_Eyes",
+        "evidence": "Wikipedia song/single infobox release date"
+      }
+    },
+    {
+      "songId": "song_ddf494b0b12f28cbd570",
+      "title": "Don'T Stop Believin'",
+      "artist": "Journey",
+      "answerYear": 1981,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/5e390f77-3210-4e92-bd8b-fd6014e62b9c",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_40e1478a2bf623616a79",
+      "title": "I Love Rock 'N Roll",
+      "artist": "Joan Jett & The Blackhearts",
+      "answerYear": 1981,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/c02354ac-3656-455a-a89e-a4a7523f24e5",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_051e61aa849723da67d8",
+      "title": "Tainted Love",
+      "artist": "Soft Cell",
+      "answerYear": 1981,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/ef4c6855-949e-4e22-b41e-8e0a2d372d5f",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_51c758de6d7bdaa175a0",
+      "title": "1999",
+      "artist": "Prince",
+      "answerYear": 1982,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/d2c83920-6066-48f4-88d6-2ad6f469ecf4",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_135d4bc10adbc158d432",
+      "title": "Africa",
+      "artist": "Toto",
+      "answerYear": 1982,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/6fd7416a-b81b-4f9e-b4b2-674d358d26bb",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_db737420ffde8c915426",
+      "title": "Come On Eileen",
+      "artist": "Dexys Midnight Runners",
+      "answerYear": 1982,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/8564b0bc-df53-4e2a-9b07-f4a372bcc5a5",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_dfcbd8f3d0301655986e",
+      "title": "99 Luftballons",
+      "artist": "Nena",
+      "answerYear": 1983,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/b52ae908-7c6b-4c59-b745-0ed479f25935",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_04f7b786ee78ef0ae295",
+      "title": "Blue Monday",
+      "artist": "New Order",
+      "answerYear": 1983,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/9aa2be7b-8fb0-4187-bce4-9bb4e84815fc",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_1cb08a1925247ce1dc84",
+      "title": "Girls Just Want to Have Fun",
+      "artist": "Cyndi Lauper",
+      "answerYear": 1983,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/0e5f1add-c943-49a0-b824-169e7f7b82da",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_28fb9a4553542eb96374",
+      "title": "Red Red Wine",
+      "artist": "UB40",
+      "answerYear": 1983,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/fa7a5f63-2129-431e-8385-aa437d09bea2",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_2305a63b8f720bd2d23a",
+      "title": "Sweet Dreams (Are Made Of This)",
+      "artist": "Eurythmics",
+      "answerYear": 1983,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://www.eurythmics.com/history/",
+        "evidence": "Eurythmics’ official history dates the Sweet Dreams (Are Made of This) album to 4 January 1983 and documents the title single in the February 1983 UK chart cycle. The prior accepted 1982 claim was rejected during the Unexpected Years review."
+      }
+    },
+    {
+      "songId": "song_c52b96038bf06df6cf6e",
+      "title": "Hallelujah",
+      "artist": "Leonard Cohen",
+      "answerYear": 1984,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/0ef6d5e2-78e3-43e8-a32c-36e28fed4834",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_10064369b4be9a8232a0",
+      "title": "The Boys of Summer",
+      "artist": "Don Henley",
+      "answerYear": 1984,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/5067ae6b-1414-4702-933b-e6ad3c51a0e7",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_9f105720ad6147bd176d",
+      "title": "Addicted to Love",
+      "artist": "Robert Palmer",
+      "answerYear": 1985,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/09425ba2-27a1-4e79-b7f9-cb91454eb677",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_dc01abdcad19ac705cdd",
+      "title": "Everybody Wants to Rule the World",
+      "artist": "Tears for Fears",
+      "answerYear": 1985,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/e4b347be-ecb2-44ff-aaa8-3d4c517d7ea5",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_cfeb8c3e4e81231c3045",
+      "title": "Running Up That Hill",
+      "artist": "Kate Bush",
+      "answerYear": 1985,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/e87d0feb-abac-482d-b0b0-e5c65f2489ad",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_84961d899efc680565d2",
+      "title": "Sledgehammer",
+      "artist": "Peter Gabriel",
+      "answerYear": 1986,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/2fce1fed-9d55-4dcf-9902-0c83a7ea412e",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_fa2bebb56fdfdec71e03",
+      "title": "The Way It Is",
+      "artist": "Bruce Hornsby",
+      "answerYear": 1986,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/c1d2a2ff-e734-4696-9e7a-bc3e1b02eee2",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_2aa3410fdc18322056c6",
+      "title": "Everywhere",
+      "artist": "Fleetwood Mac",
+      "answerYear": 1987,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/e6067663-ec19-4909-a8a9-8ef8b137c664",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_d9f06353da86dd3fbda2",
+      "title": "Faith",
+      "artist": "George Michael",
+      "answerYear": 1987,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/5e996aa8-9cf9-450e-8423-a85aad6d8464",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_bc86813776d674c8f655",
+      "title": "I Wanna Dance With Somebody (Who Loves Me)",
+      "artist": "Whitney Houston",
+      "answerYear": 1987,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://en.wikipedia.org/wiki/I_Wanna_Dance_with_Somebody_(Who_Loves_Me)",
+        "evidence": "Wikipedia song/single infobox release date"
+      }
+    },
+    {
+      "songId": "song_98275822caadba3e7ad8",
+      "title": "Need You Tonight",
+      "artist": "INXS",
+      "answerYear": 1987,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://en.wikipedia.org/wiki/Need_You_Tonight",
+        "evidence": "Wikipedia song/single infobox release date"
+      }
+    },
+    {
+      "songId": "song_41ba25ac2033efbd4805",
+      "title": "Buffalo Stance",
+      "artist": "Neneh Cherry",
+      "answerYear": 1988,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/dd1756c6-0106-4a18-9f7c-06d8fea597bd",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_4700aa6ad83ca52becb0",
+      "title": "Fast Car",
+      "artist": "Tracy Chapman",
+      "answerYear": 1988,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/ff2e83cb-2a89-4655-af4e-cd99d42d9843",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_a71637b4069bb19a4e0b",
+      "title": "About A Girl",
+      "artist": "Nirvana",
+      "answerYear": 1989,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/b2851ed5-86f4-4b40-ba2f-db24aedca859",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_e2d62255a32538318d2f",
+      "title": "Lambada",
+      "artist": "Kaoma",
+      "answerYear": 1989,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/8ece45fe-d853-4334-a9a9-c2e909a7700b",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_e89a9ff7ef98eb287ff2",
+      "title": "Like a Prayer",
+      "artist": "Madonna",
+      "answerYear": 1989,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/3a6062b0-fdf6-4fef-ba83-0287cd229bf0",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_fbe918f110870c9f1e1d",
+      "title": "Personal Jesus",
+      "artist": "Depeche Mode",
+      "answerYear": 1989,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/72cbbcdd-4b3a-41b8-92d6-0fa13888f00d",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_e65e1ab8c3935c8c0707",
+      "title": "Pump Up the Jam",
+      "artist": "Technotronic",
+      "answerYear": 1989,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/c1854991-48b4-4f9f-951b-2cfd7c9e3218",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_97e73ca4fda13a2f8b93",
+      "title": "Enjoy the Silence",
+      "artist": "Depeche Mode",
+      "answerYear": 1990,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/fb0fe7d1-9a85-4be7-8515-a3367bab533a",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_d484922a70616a316d57",
+      "title": "Groove Is in the Heart",
+      "artist": "Deee-Lite",
+      "answerYear": 1990,
+      "releaseState": "unresolved",
+      "releaseEvidence": null
+    },
+    {
+      "songId": "song_a93d6d3846b27f71b1ad",
+      "title": "Ice Ice Baby",
+      "artist": "Vanilla Ice",
+      "answerYear": 1990,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/2eeb3da8-f363-4458-980f-88fc846beeee",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_5f2e76d413472d186124",
+      "title": "The Power",
+      "artist": "Snap!",
+      "answerYear": 1990,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/3df0e345-fb20-4c17-9e26-1c9c3bbf927f",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_8b67630ded5413ca93ed",
+      "title": "Thunderstruck",
+      "artist": "AC/DC",
+      "answerYear": 1990,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/6d19aaa7-1eb5-4488-a54d-fe07d0621a7f",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_8ae121fac3a9d13d0157",
+      "title": "Vogue",
+      "artist": "Madonna",
+      "answerYear": 1990,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/5a1e44ef-37d6-45fb-a39d-60fe1caf2e85",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_196a99b848803ea52422",
+      "title": "Give It Away",
+      "artist": "Red Hot Chili Peppers",
+      "answerYear": 1991,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/37ab16cb-ec9c-4d72-97ed-03962edd991f",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_287476e6e56fe3e77db6",
+      "title": "Losing My Religion",
+      "artist": "R.E.M.",
+      "answerYear": 1991,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/835b500f-fbd8-400c-9967-c9017a843b78",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_befe80544a068d1c9fb8",
+      "title": "Smells Like Teen Spirit",
+      "artist": "Nirvana",
+      "answerYear": 1991,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/0ef2f43e-51d4-4930-9052-3820358044d5",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_8372e80d6ef992aa4d15",
+      "title": "Something In The Way",
+      "artist": "Nirvana",
+      "answerYear": 1991,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/3589823f-b494-4b2d-aab3-c2e500f81175",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_072e76b7d8f9e86211a4",
+      "title": "Under the Bridge",
+      "artist": "Red Hot Chili Peppers",
+      "answerYear": 1991,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/10d1062a-7275-458f-ad0d-906eeaa22c57",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_1c89af98e1951abb93f4",
+      "title": "Unfinished Sympathy",
+      "artist": "Massive Attack",
+      "answerYear": 1991,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/505b2dec-19ba-43ab-ac8d-eb26223eac9f",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_54b1c852e420e452c9b5",
+      "title": "All That She Wants",
+      "artist": "Ace of Base",
+      "answerYear": 1992,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/f9e75b22-20d2-4cc3-bc3a-42d983059565",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_15185bb20a9e07de2d70",
+      "title": "Killing in the Name",
+      "artist": "Rage Against the Machine",
+      "answerYear": 1992,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/5f64bf87-a18e-4ac0-8a49-dc1d500a8ba5",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_ec96beaae5327524baca",
+      "title": "Rhythm Is a Dancer",
+      "artist": "Snap!",
+      "answerYear": 1992,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/54452ba5-975c-4a02-908d-4e3f728c131d",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_4bccd3d282dd476f234e",
+      "title": "All Apologies",
+      "artist": "Nirvana",
+      "answerYear": 1993,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/082a08b3-ef7f-42b5-a5d2-502f5b26efe3",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_2d80c186c70d1b45acb2",
+      "title": "Heart-Shaped Box",
+      "artist": "Nirvana",
+      "answerYear": 1993,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/7ac9d347-fcbe-48a1-83d1-2cfdc74670fd",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_e7f7d5e0d1a383eb9e3b",
+      "title": "Linger",
+      "artist": "The Cranberries",
+      "answerYear": 1993,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/c181fb92-5699-43ee-9f6e-c7ddc338aea3",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_5086d8cd63b075e5b3ba",
+      "title": "The Sign",
+      "artist": "Ace of Base",
+      "answerYear": 1993,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://en.wikipedia.org/wiki/The_Sign_(song)",
+        "evidence": "Wikipedia song/single infobox release date"
+      }
+    },
+    {
+      "songId": "song_66d46918f675a9bf6c8a",
+      "title": "Whoomp! (There It Is)",
+      "artist": "Tag Team",
+      "answerYear": 1993,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://en.wikipedia.org/wiki/Whoomp!_(There_It_Is)",
+        "evidence": "Wikipedia song/single infobox release date"
+      }
+    },
+    {
+      "songId": "song_5c67d8ce93ce2d3dd678",
+      "title": "All I Want for Christmas Is You",
+      "artist": "Mariah Carey",
+      "answerYear": 1994,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/a6fab057-cf3a-4456-950e-d3edaf219326",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_02679ef47f0c616f1736",
+      "title": "Basket Case",
+      "artist": "Green Day",
+      "answerYear": 1994,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://store.greenday.com/en-eu/products/dookie-30th-anniversary-4cd-1",
+        "evidence": "Green Day's official store describes Dookie as released in February 1994 and lists Basket Case on the original album tracklist."
+      }
+    },
+    {
+      "songId": "song_9d86c293f72802d8b564",
+      "title": "Protection",
+      "artist": "Massive Attack",
+      "answerYear": 1994,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/9e599661-19a1-4941-958b-5d66e0da5c79",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_0d6bbdb13030d3bc48a4",
+      "title": "Common People",
+      "artist": "Pulp",
+      "answerYear": 1995,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/04d41a03-ca39-4c27-9e55-fde5612366ab",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_12ffb9dc1e901f20a92b",
+      "title": "Gangsta's Paradise",
+      "artist": "Coolio feat. L.V.",
+      "answerYear": 1995,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://tommyboy-records.com/us/products/292334-gangstas-paradise",
+        "evidence": "Tommy Boy Records' release page identifies Coolio's Gangsta's Paradise release and gives its release date as August 8, 1995."
+      }
+    },
+    {
+      "songId": "song_c9dcfcddadaf52b322ca",
+      "title": "Return of the Mack",
+      "artist": "Mark Morrison",
+      "answerYear": 1995,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/9fe3f673-33d6-4cc8-8c07-25d7ef306665",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_c03265ca4e233da8bee6",
+      "title": "Wonderwall",
+      "artist": "Oasis",
+      "answerYear": 1995,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/580f4553-e29a-4d19-989c-1b097b76de48",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_0316a88ab391b18d0094",
+      "title": "No Diggity",
+      "artist": "Blackstreet",
+      "answerYear": 1996,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/178ea9f7-fd1f-48ec-9826-7cdfd8dd006a",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_d3d902c7defe7ae8013e",
+      "title": "Virtual Insanity",
+      "artist": "Jamiroquai",
+      "answerYear": 1996,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/540e156d-0ccf-4b50-989c-28d754e3f7ec",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_36a4bb88103ff1cdfc9c",
+      "title": "Song 2",
+      "artist": "Blur",
+      "answerYear": 1997,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/b39b7227-c271-4ab8-912b-cb1fe2fc0e5e",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_ac9a83675c3db8a0cadb",
+      "title": "Torn",
+      "artist": "Natalie Imbruglia",
+      "answerYear": 1997,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/release/57f6a5f8-c5c2-4809-9624-e67a77d6d91f",
+        "evidence": "First-release year supported by the cited external source."
+      }
+    },
+    {
+      "songId": "song_1a5b64b571faa3fc91a5",
+      "title": "Music Sounds Better with You",
+      "artist": "Stardust",
+      "answerYear": 1998,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/b43bec3d-3687-4b6a-b787-e47cddf7e554",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_011977284e2d9d4a0c15",
+      "title": "Porcelain",
+      "artist": "Moby",
+      "answerYear": 1999,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/8d5a51c3-f493-4cb7-89e6-f5d3de37be7e",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_cddf0327c4c567a5fded",
+      "title": "Beautiful Day",
+      "artist": "U2",
+      "answerYear": 2000,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/809e8321-9e38-4ebf-b467-1cb6d85f5076",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_da856af84fad3929ebee",
+      "title": "One More Time",
+      "artist": "Daft Punk",
+      "answerYear": 2000,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://www.rhino.com/article/november-2000-daft-punk-release-one-more-time",
+        "evidence": "Rhino: Daft Punk released One More Time on November 13, 2000."
+      }
+    },
+    {
+      "songId": "song_93c400cee06735fc034f",
+      "title": "Yellow",
+      "artist": "Coldplay",
+      "answerYear": 2000,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/d0001ec4-5502-47de-8d98-e5467ee72cba",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_9072f84fedc0377fab26",
+      "title": "Can’t Get You Out of My Head",
+      "artist": "Kylie Minogue",
+      "answerYear": 2001,
+      "releaseState": "unresolved",
+      "releaseEvidence": null
+    },
+    {
+      "songId": "song_861ece635d144ea42277",
+      "title": "Clint Eastwood",
+      "artist": "Gorillaz",
+      "answerYear": 2001,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/8afc33fa-23fb-4a54-b92e-6be1d7b5f220",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_4b5326447a6898698d29",
+      "title": "The Middle",
+      "artist": "Jimmy Eat World",
+      "answerYear": 2001,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/e3b7cd96-c41d-497a-b401-dc7494f638db",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_16ab047b2ac9021a4b3f",
+      "title": "Whenever, Wherever",
+      "artist": "Shakira",
+      "answerYear": 2001,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/ffeb79e8-ddcf-4298-b818-438a0aabbbac",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_f5d6de3b93625921a9d9",
+      "title": "A Thousand Miles",
+      "artist": "Vanessa Carlton",
+      "answerYear": 2002,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/3969800b-59ae-40dc-8cdd-84b31d212ff1",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_961887ecb18450261996",
+      "title": "Bring Me to Life",
+      "artist": "Evanescence",
+      "answerYear": 2002,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/c24eb26a-04d6-4f09-9449-9bc334f78ede",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_b91ddb96e9013c3c47b2",
+      "title": "Lose Yourself",
+      "artist": "Eminem",
+      "answerYear": 2002,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/8161a810-91d2-45fd-86d4-577c9c405705",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_f2bd4d15cb08d676bc97",
+      "title": "Work It",
+      "artist": "Missy Elliott",
+      "answerYear": 2002,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/bfb40db2-fffd-4979-85a7-7d27f1f466e4",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_6fccd7951213cb182674",
+      "title": "Are You Gonna Be My Girl",
+      "artist": "Jet",
+      "answerYear": 2003,
+      "releaseState": "unresolved",
+      "releaseEvidence": null
+    },
+    {
+      "songId": "song_a2178ab2d1564f166469",
+      "title": "Hey Ya!",
+      "artist": "Outkast",
+      "answerYear": 2003,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/7287aff2-f103-4602-b7c7-e96314e53461",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_fc534cb3268c8bc35cb3",
+      "title": "Mr. Brightside",
+      "artist": "The Killers",
+      "answerYear": 2003,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/560062d0-e122-46be-9d89-0f3b44077fdf",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_9457cfc37ead5b7278fb",
+      "title": "Numb",
+      "artist": "Linkin Park",
+      "answerYear": 2003,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/352dd518-23cd-4c5a-9551-ba02097b177b",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_ab127749b40c3ce9ad4f",
+      "title": "Seven Nation Army",
+      "artist": "The White Stripes",
+      "answerYear": 2003,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/24cc8311-98fd-423a-bed1-97728f5eabc5",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_7cbee0353b647cf2d29c",
+      "title": "Take Me Out",
+      "artist": "Franz Ferdinand",
+      "answerYear": 2003,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/a1818245-54db-4881-86be-7ff3180c3e06",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_7a6cba12773a844de497",
+      "title": "Toxic",
+      "artist": "Britney Spears",
+      "answerYear": 2003,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/ffb6e773-2d24-420c-90ce-36b6025f31e2",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_a63387ff4599f267970e",
+      "title": "Unwritten",
+      "artist": "Natasha Bedingfield",
+      "answerYear": 2004,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/42f7a9b1-38f2-4ca3-b5fd-4e45a7b9e91a",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_a03a803fd37407d174ff",
+      "title": "Feel Good Inc.",
+      "artist": "Gorillaz",
+      "answerYear": 2005,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/5081d9f7-f3f9-4f90-a0b1-b18bd320900c",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_5499afe854245b718bf4",
+      "title": "Crazy",
+      "artist": "Gnarls Barkley",
+      "answerYear": 2006,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/887a5d12-f9fd-499b-8424-61f28f00b393",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_7220767bfa537f0ef992",
+      "title": "Rehab",
+      "artist": "Amy Winehouse",
+      "answerYear": 2006,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/873eba85-b721-4728-be2e-96ce94cccb8b",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_093bbcc1c5c41eb8f0be",
+      "title": "Bulletproof",
+      "artist": "La Roux",
+      "answerYear": 2009,
+      "releaseState": "unresolved",
+      "releaseEvidence": null
+    },
+    {
+      "songId": "song_d251c59a517dcaaa4865",
+      "title": "Fireflies",
+      "artist": "Owl City",
+      "answerYear": 2009,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/4353c9e4-55c1-4877-816b-127ff00a5ae3",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_158d73d8bb3d7d6e77f7",
+      "title": "Pumped Up Kicks",
+      "artist": "Foster the People",
+      "answerYear": 2010,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/4d7879e0-8dc3-4efd-8879-2bb5f01a477a",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_cd3c395d640b3472d8a9",
+      "title": "Midnight City",
+      "artist": "M83",
+      "answerYear": 2011,
+      "releaseState": "unresolved",
+      "releaseEvidence": null
+    },
+    {
+      "songId": "song_1201a3de0fc5cbf4cab4",
+      "title": "Somebody That I Used to Know",
+      "artist": "Gotye feat. Kimbra",
+      "answerYear": 2011,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://www.nfsa.gov.au/collection/item/somebody-i-used-know-gotye-ft-kimbra",
+        "evidence": "The NFSA record states that Gotye and Kimbra's single was released on 5 July 2011; the legacy 2012 bucket was a chart-year placement."
+      }
+    },
+    {
+      "songId": "song_c16dd374dda90f08948f",
+      "title": "Video Games",
+      "artist": "Lana Del Rey",
+      "answerYear": 2011,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/b9d06b81-b582-46d4-ad41-be47a6961892",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_1e53acc392f1e77265c4",
+      "title": "Gangnam Style",
+      "artist": "PSY",
+      "answerYear": 2012,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/882ce25d-51b9-4fe5-bbdf-16e661df0822",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_7cef6a9a2cf69bacd46c",
+      "title": "Let Her Go",
+      "artist": "Passenger",
+      "answerYear": 2012,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/1682cf55-a9a6-429c-a7f0-ff756781570a",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_a6c681ac1dc43f135e0e",
+      "title": "Thrift Shop",
+      "artist": "Macklemore and Ryan Lewis feat. Wanz",
+      "answerYear": 2012,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/42f0b591-cf89-4e45-aaca-7b97a2d1d98a",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_ae060b16f2a933561349",
+      "title": "3005",
+      "artist": "Childish Gambino",
+      "answerYear": 2013,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/ee292c70-30b7-4093-b9b1-4cf19163fb3f",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_83374bc76727ffffeb99",
+      "title": "Get Lucky",
+      "artist": "Daft Punk",
+      "answerYear": 2013,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/833f00e1-781f-4edd-90e4-e52712618862",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_d4f0fb6219eb00068bc0",
+      "title": "Wake Me Up",
+      "artist": "Avicii",
+      "answerYear": 2013,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/88742878-fc88-40e5-a770-cdd923410359",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_e864f45b56254fcbff46",
+      "title": "Uptown Funk",
+      "artist": "Mark Ronson feat. Bruno Mars",
+      "answerYear": 2014,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://music.apple.com/us/album/uptown-funk-feat-bruno-mars-single/938032038",
+        "evidence": "Apple Music lists Uptown Funk (feat. Bruno Mars) as a Mark Ronson single released November 10, 2014, with a 2014 Mark Ronson/Sony phonogram credit."
+      }
+    },
+    {
+      "songId": "song_4a2ce612552a4e66814d",
+      "title": "Good as Hell",
+      "artist": "Lizzo",
+      "answerYear": 2016,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/7a57d87b-4df9-4171-ad0d-2f426046ebeb",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_96ab42cd9ddaf795c96b",
+      "title": "Me and Your Mama",
+      "artist": "Childish Gambino",
+      "answerYear": 2016,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/0d432f1e-60d7-40bd-b52a-2b89b1332d08",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_b0c43d91873af4bf6ee5",
+      "title": "Redbone",
+      "artist": "Childish Gambino",
+      "answerYear": 2016,
+      "releaseState": "unresolved",
+      "releaseEvidence": null
+    },
+    {
+      "songId": "song_f507e5edc0337d76928c",
+      "title": "Feel It Still",
+      "artist": "Portugal. The Man",
+      "answerYear": 2017,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/f14136fc-4505-4426-986c-29233addd483",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_b8a6f683987bec50f09e",
+      "title": "bad guy",
+      "artist": "Billie Eilish",
+      "answerYear": 2019,
+      "releaseState": "unresolved",
+      "releaseEvidence": null
+    },
+    {
+      "songId": "song_9ae6f0c273315cddb4be",
+      "title": "Heat Waves",
+      "artist": "Glass Animals",
+      "answerYear": 2020,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://en.wikipedia.org/wiki/Heat_Waves",
+        "evidence": "Wikipedia song/single infobox release date"
+      }
+    },
+    {
+      "songId": "song_1be209a117dfa33b15f8",
+      "title": "Levitating",
+      "artist": "Dua Lipa",
+      "answerYear": 2020,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://en.wikipedia.org/wiki/Levitating_(song)",
+        "evidence": "Wikipedia song/single infobox release date"
+      }
+    },
+    {
+      "songId": "song_78590bc6bd9d235d6067",
+      "title": "good 4 u",
+      "artist": "Olivia Rodrigo",
+      "answerYear": 2021,
+      "releaseState": "unresolved",
+      "releaseEvidence": null
+    },
+    {
+      "songId": "song_8d760a9edb56e68beeb9",
+      "title": "Sunroof",
+      "artist": "Nicky Youre",
+      "answerYear": 2021,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://musicbrainz.org/recording/1e1753ea-13aa-4bc2-b4c7-bfa4dcfeb58b",
+        "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+      }
+    },
+    {
+      "songId": "song_8b13050180fcf0079a76",
+      "title": "About Damn Time",
+      "artist": "Lizzo",
+      "answerYear": 2022,
+      "releaseState": "externally_observed",
+      "releaseEvidence": {
+        "sourceUrl": "https://wmg.jp/lizzo/news/87566/",
+        "evidence": "Warner Music Japan's official label notice dated April 18, 2022 says Lizzo released About Damn Time with its music video."
+      }
+    }
+  ]
+}

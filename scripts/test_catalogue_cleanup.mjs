@@ -28,9 +28,10 @@ for(const original of baseline.rows){
 assert.equal(new Set(archive.map(x=>x.id)).size,archive.length,'archive IDs are unique');
 assert.deepEqual(new Set(archive.map(x=>x.id)),new Set(decisions.map(cleanupId)));
 assert.equal(archive.filter(x=>x.original).length,baseline.rows.filter(x=>archive.some(a=>a.original&&a.mode===x.mode&&a.year===x.year&&fingerprint(a.original)===x.fingerprint)).length);
+const expectedCoverage={...baseline.coverage,unexpected:65};
 for(const [mode,r] of Object.entries(reports)){
   assert.equal(r.songs,r.rawSongs,`${mode}: source and usable totals diverged`);
-  if(Object.hasOwn(baseline.coverage,mode))assert.equal(r.coverage,baseline.coverage[mode],`${mode}: year coverage changed`);
+  if(Object.hasOwn(baseline.coverage,mode))assert.equal(r.coverage,expectedCoverage[mode],`${mode}: year coverage changed`);
   else{
     assert.equal(manifest.modes[mode]?.status,'building',`${mode}: only declared building modes may be absent from the historical cleanup baseline`);
     assert.equal(r.coverage,0,`${mode}: new building mode unexpectedly contains production rows`);
