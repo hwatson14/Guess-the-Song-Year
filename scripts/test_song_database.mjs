@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {compileDatabase,migrateCatalogue,songId} from './song_database.mjs';
+import {compileDatabase,migrateCatalogue} from './song_database.mjs';
 import {catalogueEngine,loadProductionCatalogue} from './catalogue_runtime.mjs';
 const db=JSON.parse(fs.readFileSync('data/song-database.json','utf8'));
 const {data,manifest}=loadProductionCatalogue(),E=catalogueEngine(data,manifest);
@@ -8,7 +8,7 @@ assert.deepEqual(compileDatabase(db),data,'Generated runtime view matches the au
 const used=new Set(db.memberships.map(m=>m.songId));
 assert.equal(used.size,Object.keys(db.songs).length,'No orphan master records');
 for(const [id,song] of Object.entries(db.songs)){
-  assert.equal(id,song.id);assert.equal(id,songId(song.canonicalKey));
+  assert.equal(id,song.id);assert.match(id,/^song_[0-9a-f]{20}$/);
   for(const [provider,p] of Object.entries(song.providers)){
     assert.equal(new Set(p.links.map(x=>x.id)).size,p.links.length);
     for(const asset of p.links){
@@ -30,6 +30,24 @@ const corrected=compileDatabase(migrated);
 assert.equal(corrected.modes.greatest[1999][0].title,'Corrected title');
 assert.equal(corrected.modes.number1_us[2000][0].title,'Corrected title');
 assert.equal(corrected.modes.number1_us[2000][0].chartYear,2000);
+// Release-mode answer years and master identity are authoritative on the song, not the membership mirror.
+const movedDb=structuredClone(migrated),movedSong=Object.values(movedDb.songs)[0],stableId=Object.values(movedDb.songs)[0].id;
+const legacyReleaseMembership=movedDb.memberships.find(m=>m.mode==='greatest');
+assert.equal(legacyReleaseMembership.year,1999);
+movedSong.canonicalKey='corrected example|artist';
+movedSong.release.answerYear=2000;
+const moved=compileDatabase(movedDb);
+assert.ok(!moved.modes.greatest[1999],'release-mode membership.year is no longer authoritative');
+assert.equal(moved.modes.greatest[2000][0].songId,stableId);
+assert.equal(moved.modes.greatest[2000][0].canonicalKey,'corrected example|artist');
+assert.equal(legacyReleaseMembership.year,1999,'changing the master does not require rewriting the legacy membership mirror');
+const evidenceConflict=structuredClone(movedDb),conflictSong=evidenceConflict.songs[stableId];
+conflictSong.release.state='externally_observed';conflictSong.release.year=1999;
+assert.throws(()=>compileDatabase(evidenceConflict),/conflicts with accepted release evidence/);
+// Presentation-only membership overrides cannot replace canonical identity or year fields.
+const invalidOverrideDb=structuredClone(migrated);
+invalidOverrideDb.memberships[0].displayOverrides={songId:'forged'};
+assert.throws(()=>compileDatabase(invalidOverrideDb),/Invalid membership display override/);
 // A verified centrally preferred provider is inherited by every membership,
 // including memberships that explicitly carry a null legacy reference.
 const preferredDb=structuredClone(migrated),preferredSong=Object.values(preferredDb.songs)[0];
@@ -45,6 +63,10 @@ const unverifiedDb=structuredClone(preferredDb);unverifiedDb.songs[preferredSong
 assert.throws(()=>compileDatabase(unverifiedDb),/verified recording evidence/);
 assert.throws(()=>compileDatabase({...migrated,memberships:[{...migrated.memberships[0],songId:'missing'}]}),/Dangling song/);
 assert.throws(()=>compileDatabase({...migrated,memberships:[...migrated.memberships,migrated.memberships[0]]}),/Duplicate membership/);
-for(const m of db.memberships)assert.ok(manifest.modes[m.mode]&&data.years.includes(m.year));
+for(const m of db.memberships){
+  const info=manifest.modes[m.mode],song=db.songs[m.songId];assert.ok(info&&song);
+  const answerYear=info.yearBasis==='release'?Number(song.release.answerYear):Number(m.year);
+  assert.ok(data.years.includes(answerYear));
+}
 assert.equal(new Set(Object.values(data.modes).flatMap(b=>Object.values(b).flat()).map(E.songUseKey)).size,Object.keys(db.songs).length);
 console.log(`Shared database checks passed: ${Object.keys(db.songs).length} master records and ${db.memberships.length} memberships; lossless generation and shared edits verified.`);

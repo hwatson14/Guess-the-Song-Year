@@ -10,13 +10,16 @@ const archive=JSON.parse(fs.readFileSync('verification/catalogue_cleanup_archive
 const baseline=JSON.parse(fs.readFileSync('verification/catalogue_cleanup_baseline.json','utf8'));
 const E=catalogueEngine(data,manifest),reports=await E.modeReports();
 const fingerprint=row=>createHash('sha256').update(JSON.stringify(row)).digest('hex');
-const originalHash=row=>{const clone=structuredClone(row);delete clone.legacyKeys;return fingerprint(clone)};
+const originalHash=row=>{const clone=structuredClone(row);delete clone.legacyKeys;delete clone.songId;return fingerprint(clone)};
+const reviewKey=row=>String(row?.canonicalKey||E.songUseKey({...row,songId:null}));
 
-// All baseline rows must survive verbatim either in the game or in the archive.
+// Historical cleanup accounting first preserves an exact archived original. If the
+// original was not archived, exactly one active canonical identity must remain. The
+// v1-to-v2 parity test separately proves that migration changes no non-identity fields.
 for(const original of baseline.rows){
-  const active=(data.modes[original.mode][original.year]||[]).some(row=>originalHash(row)===original.fingerprint);
-  const archived=archive.some(row=>row.mode===original.mode&&row.year===original.year&&row.original&&fingerprint(row.original)===original.fingerprint);
-  assert.equal(Number(active)+Number(archived),1,`Lost or duplicated baseline record: ${original.mode}/${original.year}/${original.key}`);
+  const archived=archive.some(row=>row.mode===original.mode&&row.year===original.year&&row.original&&fingerprint(row.original)===original.fingerprint)?1:0;
+  const active=archived?0:(data.modes[original.mode][original.year]||[]).filter(row=>reviewKey(row)===original.key).length;
+  assert.equal(active+archived,1,`Lost or duplicated baseline identity: ${original.mode}/${original.year}/${original.key}`);
 }
 assert.equal(new Set(archive.map(x=>x.id)).size,archive.length,'archive IDs are unique');
 assert.deepEqual(new Set(archive.map(x=>x.id)),new Set(decisions.map(cleanupId)));
@@ -33,17 +36,17 @@ for(const entry of archive){
     assert.ok(row.sourceUrl.startsWith('https://')&&row.releaseYearEvidence&&row.sourceProvider);
     assert.equal(row.spotifyId,'','Unverified playback IDs must not be promoted');
     assert.equal(row.youtubeId,'');
-    const active=data.modes[entry.mode][row.year].find(x=>E.songUseKey(x)===E.songUseKey(row));
+    const active=data.modes[entry.mode][row.year].find(x=>reviewKey(x)===reviewKey(row));
     assert.ok(active,'Sourced replacement missing');
     for(const [key,value] of Object.entries(row))assert.deepEqual(active[key],value);
   }
   if(entry.action==='archive_duplicate'||entry.action==='repair'){
-    const target=entry.retained||{year:entry.replacement.year,key:E.songUseKey(entry.replacement)};
-    const targetRow=data.modes[entry.mode][target.year].find(x=>E.songUseKey(x)===target.key);
+    const target=entry.retained||{year:entry.replacement.year,key:reviewKey(entry.replacement)};
+    const targetRow=data.modes[entry.mode][target.year].find(x=>reviewKey(x)===target.key);
     assert.ok(targetRow,'Duplicate/repair has no retained identity');
-    const oldKey=entry.originalKey;
+    const runtimeKey=E.songUseKey(targetRow),oldKey=entry.originalKey;
     if(oldKey!==target.key)assert.ok(targetRow.legacyKeys.includes(oldKey),'Saved-game alias was lost');
-    const used=[...reports[entry.mode].yearSongKeys[target.year].filter(x=>x!==target.key),oldKey];
+    const used=[...reports[entry.mode].yearSongKeys[target.year].filter(x=>x!==runtimeKey),oldKey];
     await assert.rejects(E.chooseSong(target.year,entry.mode,used),{code:'NO_UNUSED_SONG'});
   }
 }

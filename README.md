@@ -66,7 +66,7 @@ No mode is currently labelled **Ready**. `data/modes.json` is the product source
 - `scripts/validate_catalogue.py` / `scripts/validate_modes.py` — validate the status-aware catalogue contract
 - `scripts/build_catalogue.py` — legacy catalogue builder; catalogue generation is not part of runtime gameplay
 
-Each master song has a stable ID, title, artist, release evidence, and Spotify/YouTube links. Separate memberships tag it for Greatest Hits, Australian, Unexpected Years or chart modes, retaining chart-year semantics. A verified preferred provider link applies across all memberships. Imported links are candidates until reviewed; metadata availability alone does not prove the exact recording. Missing IDs continue to use the existing search flow.
+Each master song has an immutable ID, title, artist, a master `release.answerYear` for release-year gameplay, release evidence, and Spotify/YouTube links. Separate memberships tag it for Greatest Hits, Australian, Unexpected Years or chart modes, retaining chart-year semantics. A verified preferred provider link applies across all memberships. Imported links are candidates until reviewed; metadata availability alone does not prove the exact recording. Missing IDs continue to use the existing search flow.
 
 Provider maintenance commands:
 

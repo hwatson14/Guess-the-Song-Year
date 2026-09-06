@@ -12,8 +12,9 @@ export function integrateYearGaps(data,manifest,evidence){
        !data.years.includes(song.year)||!song.releaseYearEvidence||!song.sourceUrl?.startsWith('https://'))
       throw new Error('Invalid release-gap evidence: '+song.title);
     song.canonicalKey=E.songUseKey(song);
+    // Ingestion/reconciliation matches the reviewable canonicalKey. Runtime no-repeat uses immutable songId.
     const existing=Object.entries(data.modes[mode]).flatMap(([year,pool])=>pool
-      .filter(row=>E.songUseKey(row)===song.canonicalKey).map(row=>({year:Number(year),row})));
+      .filter(row=>String(row.canonicalKey||'')===song.canonicalKey).map(row=>({year:Number(year),row})));
     if(existing.length){
       if(existing.length!==1||existing[0].year!==song.year||existing[0].row.source!=='release-gap-audit')
         throw new Error('Existing identity needs explicit reconciliation: '+song.canonicalKey);

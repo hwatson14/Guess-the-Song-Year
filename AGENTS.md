@@ -22,8 +22,8 @@ Provider IDs are playback facts, not canonical song identity. Reviewed preferred
 
 ## Non-negotiable invariants
 
-1. `song.year` equals the containing card/year bucket and the answer year shown to players.
-2. Canonical identity is stable across modes; memberships reference one master song.
+1. Release-year modes take their answer year from the master song's `release.answerYear`; chart modes take it from chart membership. Generated `song.year`, bucket year, and the answer shown to players must agree.
+2. Canonical identity is stable across modes; memberships reference one master song. `song_id` is immutable after creation and must not be regenerated when `canonicalKey`, title, or artist metadata changes.
 3. Alternate recordings, remasters, edits, remixes, live/acoustic versions, and re-recordings collapse where appropriate, while genuine titles containing words such as “Live”, “Radio”, “With”, or “Part” remain valid.
 4. Covers by distinct artists remain distinct unless explicitly reviewed otherwise.
 5. Ambiguous evidence is reviewed or omitted; it is never assigned a guessed year.

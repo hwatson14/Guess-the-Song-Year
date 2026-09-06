@@ -54,8 +54,14 @@
   }
 
   function underlyingKey(song){
+    if(song?.songId)return String(song.songId);
     if(song?.canonicalKey)return String(song.canonicalKey);
     return `${baseTitle(song?.title)}|${primaryArtist(song?.artist)}`;
+  }
+
+  function legacyIdentityKeys(song){
+    const primary=underlyingKey(song);
+    return [...new Set([song?.canonicalKey,...(Array.isArray(song?.legacyKeys)?song.legacyKeys:[])].map(v=>String(v||'')).filter(Boolean))].filter(key=>key!==primary);
   }
 
   function quality(song){
@@ -107,7 +113,7 @@
       const songs=rawYears.flatMap(y=>buckets[String(y)]),usableSongs=years.flatMap(year=>pools[year]);
       const minPool=years.length?Math.min(...years.map(year=>pools[year].length)):0;
       const yearSongKeys=Object.fromEntries(years.map(year=>[year,pools[year].map(underlyingKey)]));
-      const songLegacyKeys=Object.fromEntries(years.map(year=>[year,Object.fromEntries(pools[year].filter(song=>Array.isArray(song.legacyKeys)&&song.legacyKeys.length).map(song=>[underlyingKey(song),song.legacyKeys.map(String)]))]));
+      const songLegacyKeys=Object.fromEntries(years.map(year=>[year,Object.fromEntries(pools[year].map(song=>[underlyingKey(song),legacyIdentityKeys(song)]).filter(([,keys])=>keys.length))]));
       const canonical=!!songs.length&&songs.every(song=>song?.canonicalKey&&song?.musicbrainzId&&song?.yearEvidence==='MusicBrainz recording earliest first-release-date');
       const alternateLabels=songs.filter(song=>isAlternateTitle(song?.title)).length;
       const duplicateCount=field=>{const seen=new Set();let duplicates=0;for(const song of songs){const value=String(song?.[field]||'').trim();if(!value)continue;if(seen.has(value))duplicates++;seen.add(value)}return duplicates};
@@ -135,7 +141,7 @@
     if(info.repeatPolicy==='fixed')return {...pool[0]};
     const used=new Set(usedKeys||[]),available=pool.filter(song=>{
       if(used.has(underlyingKey(song)))return false;
-      return !(Array.isArray(song.legacyKeys)&&song.legacyKeys.some(key=>used.has(String(key))));
+      return !legacyIdentityKeys(song).some(key=>used.has(key));
     });
     if(!available.length)throw new E.AppError('NO_UNUSED_SONG',`Every ${year} song in ${info.name} has already been used. Scan or deal a new card.`);
     return {...available[Math.floor(Math.random()*available.length)]};

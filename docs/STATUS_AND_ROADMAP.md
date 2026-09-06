@@ -24,7 +24,7 @@ All five modes are selectable, but none is labelled Ready. Beta/Preview status r
 
 ## Architecture facts to preserve
 
-The normalized JSON source separates master song facts from mode memberships and provider links. A correction is made once and flows through every membership when the deterministic compiler rebuilds the runtime catalogue. The runtime must continue to consume a static artifact suitable for GitHub Pages.
+The normalized JSON source separates master song facts from mode memberships and provider links. Release-mode answer years now come from the master song's `release.answerYear`, and runtime identity uses immutable `songId`; a correction is made once and flows through every membership when the deterministic compiler rebuilds the runtime catalogue. The runtime must continue to consume a static artifact suitable for GitHub Pages.
 
 The current YouTube fallback searches from the browser and validates candidates through the public API. It is dependent on a restricted public key and quota. Search quota/auth failures must remain visible provider errors; they must not be treated as evidence that a song or year changed. Spotify preferred links are reviewed separately from unverified imports.
 

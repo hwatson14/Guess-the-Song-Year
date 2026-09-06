@@ -8,8 +8,9 @@ export const cleanupId=entry=>createHash('sha256').update(JSON.stringify([entry.
 export function applyCatalogueCleanup(input,manifest,decisions,priorArchive=[]){
   const data=structuredClone(input),archive=structuredClone(priorArchive),E=catalogueEngine(data,manifest);
   const changes=[],known=new Set(archive.map(entry=>entry.id));
+  const reviewKey=row=>String(row?.canonicalKey||E.songUseKey({...row,songId:null}));
   const addAlias=(row,key)=>{
-    if(key&&key!==E.songUseKey(row))row.legacyKeys=[...new Set([...(row.legacyKeys||[]),key])].sort();
+    if(key&&key!==reviewKey(row))row.legacyKeys=[...new Set([...(row.legacyKeys||[]),key])].sort();
   };
   // Remove all reviewed originals before inserting replacements: an excluded alternate
   // may share the replacement's identity and is itself archived in this same transaction.
@@ -32,18 +33,18 @@ export function applyCatalogueCleanup(input,manifest,decisions,priorArchive=[]){
         !replacement.title||!replacement.artist||!replacement.releaseYearEvidence||!replacement.sourceUrl?.startsWith('https://')||
         !replacement.sourceProvider||replacement.evidenceState!=='externally_observed'||
         replacement.releaseYear!==replacement.year)throw new Error('Repair lacks release/identity evidence: '+(original?.title||replacement.title));
-      const identity=E.songUseKey(replacement);
-      if(Object.values(data.modes[mode]).flat().some(row=>E.songUseKey(row)===identity))
+      const identity=reviewKey(replacement);
+      if(Object.values(data.modes[mode]).flat().some(row=>reviewKey(row)===identity))
         throw new Error('Repair would duplicate retained identity: '+identity);
       const row=structuredClone(replacement);
-      if(action==='repair')addAlias(row,decision.originalKey||E.songUseKey(original));
+      if(action==='repair')addAlias(row,decision.originalKey||reviewKey(original));
       (data.modes[mode][replacement.year]??=[]).push(row);
     }else if(['repair','add'].includes(action))throw new Error('Repair/addition requires a replacement: '+id);
     if(action==='archive_duplicate'){
       const target=decision.retained;
-      const candidates=Object.values(data.modes[mode]).flat().filter(row=>E.songUseKey(row)===target?.key);
+      const candidates=Object.values(data.modes[mode]).flat().filter(row=>reviewKey(row)===target?.key);
       if(candidates.length!==1||candidates[0].year!==target.year)throw new Error('Duplicate must point to one retained identity: '+id);
-      addAlias(candidates[0],decision.originalKey||E.songUseKey(original));
+      addAlias(candidates[0],decision.originalKey||reviewKey(original));
     }
     archive.push({id,...structuredClone(decision)});
     known.add(id);changes.push({id,mode,year,action,title:original?.title||replacement?.title,replacementYear:replacement?.year});

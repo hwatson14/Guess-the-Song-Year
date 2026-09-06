@@ -66,7 +66,8 @@
       "required": [
         "title",
         "artist",
-        "year"
+        "year",
+        "songId"
       ],
       "properties": {
         "title": {
@@ -86,7 +87,7 @@
         "canonicalKey": {
           "type": "string",
           "minLength": 3,
-          "description": "Stable underlying-song identity used to collapse edits, remixes, remasters and alternate billings."
+          "description": "Reviewable title/artist matching and dedupe key. It may change when metadata is corrected and is not the primary song identity."
         },
         "yearEvidence": {
           "const": "MusicBrainz recording earliest first-release-date"
@@ -228,6 +229,11 @@
             "minLength": 3
           },
           "description": "Previous saved-game identities for the same underlying song; preserve no-repeat after correcting credits or merging aliases."
+        },
+        "songId": {
+          "type": "string",
+          "pattern": "^song_[0-9a-f]{20}$",
+          "description": "Immutable master-song identity. Runtime no-repeat and cross-mode identity use this field."
         }
       },
       "additionalProperties": true
