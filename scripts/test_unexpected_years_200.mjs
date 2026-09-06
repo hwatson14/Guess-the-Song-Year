@@ -13,9 +13,22 @@ assert.equal(compiled.coverage.unexpected,65,'Unexpected Years spans 65 release 
 for(const m of unexpected){
   const song=db.songs[m.songId];
   assert.ok(song,'Unexpected membership resolves to a canonical master');
-  assert.equal(song.release?.state,'externally_observed',`${song.title}: Unexpected Years requires accepted release evidence`);
-  assert.ok(Number.isInteger(Number(song.release?.answerYear)),`${song.title}: accepted answer year is integral`);
+  assert.ok(Number.isInteger(Number(song.release?.answerYear)),`${song.title}: answer year is integral`);
   assert.equal(Number(m.year),Number(song.release.answerYear),`${song.title}: membership mirror follows canonical release truth`);
+}
+
+assert.equal(audit.targetTotal,200);
+assert.equal(audit.previousTotal,40);
+assert.equal(audit.additions,160);
+assert.equal(audit.coverage,65);
+assert.equal(audit.selectedAdditions.length,160);
+assert.equal(new Set(audit.selectedAdditions.map(x=>x.songId)).size,160,'160 reviewed additions resolve to unique current masters');
+for(const row of audit.selectedAdditions){
+  const song=db.songs[row.songId];
+  assert.ok(song,`${row.title}: audited addition resolves to a current canonical master`);
+  assert.equal(song.release?.state,'externally_observed',`${song.title}: every new Unexpected addition requires accepted release evidence`);
+  assert.equal(Number(row.answerYear),Number(song.release.answerYear),`${song.title}: audited addition year follows canonical truth`);
+  assert.ok((song.release.claims||[]).some(c=>c.state==='externally_observed'&&Number(c.year)===Number(song.release.answerYear)&&c.sourceUrl&&c.evidence),`${song.title}: accepted release claim is retained`);
 }
 
 const corrected=[
@@ -37,9 +50,7 @@ assert.ok(db.memberships.some(m=>m.songId===pass.id&&m.mode==='greatest'&&Number
 assert.ok(pass.providers.spotify.links.some(x=>x.id==='1BkY0N8ChFk2mdLbAUu8ZK'&&x.state==='unverified'),'Spotify candidate retained without false verification');
 assert.ok(pass.providers.youtube.links.some(x=>x.id==='s7-B-JXmhOs'&&x.state==='unverified'),'YouTube candidate retained without false verification');
 
-assert.equal(audit.targetTotal,200);
-assert.equal(audit.coverage,65);
 assert.equal(audit.finalMembers.length,200);
 assert.equal(new Set(audit.finalMembers.map(x=>x.songId)).size,200);
 for(const year of db.catalogue.years)assert.ok((compiled.modes.greatest?.[year]||[]).length>=12,`Greatest Hits ${year} retains >=12 songs`);
-console.log('Unexpected Years 200 contract passed: 200 unique songs, 65 years, corrected release truth and Greatest depth preserved.');
+console.log('Unexpected Years 200 contract passed: 200 unique songs, 160 evidence-gated additions, 65 years, corrected release truth and Greatest depth preserved.');
