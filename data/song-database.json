@@ -73872,6 +73872,576 @@
           ]
         }
       }
+    },
+    "song_69a70f7e99d11e1f873f": {
+      "id": "song_69a70f7e99d11e1f873f",
+      "canonicalKey": "mrs robinson|simon",
+      "title": "Mrs. Robinson",
+      "artist": "Simon & Garfunkel",
+      "release": {
+        "answerYear": 1968,
+        "year": 1968,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1968,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Mrs._Robinson",
+            "evidence": "Full single released in 1968; The Graduate premiered in 1967.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_2d4cadd98c9fffde079a": {
+      "id": "song_2d4cadd98c9fffde079a",
+      "canonicalKey": "ghostbusters|ray parker jr",
+      "title": "Ghostbusters",
+      "artist": "Ray Parker Jr.",
+      "release": {
+        "answerYear": 1984,
+        "year": 1984,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1984,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Ghostbusters_(song)",
+            "evidence": "Title song released in 1984.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_fa859c02596f48574f19": {
+      "id": "song_fa859c02596f48574f19",
+      "canonicalKey": "don t you forget about me|simple minds",
+      "title": "Don't You (Forget About Me)",
+      "artist": "Simple Minds",
+      "release": {
+        "answerYear": 1985,
+        "year": 1985,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1985,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Don%27t_You_(Forget_About_Me)",
+            "evidence": "Single released in 1985.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_f594b163e33aa67f7ffc": {
+      "id": "song_f594b163e33aa67f7ffc",
+      "canonicalKey": "unchained melody|righteous brothers",
+      "title": "Unchained Melody",
+      "artist": "The Righteous Brothers",
+      "release": {
+        "answerYear": 1965,
+        "year": 1965,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1965,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Unchained_Melody",
+            "evidence": "Righteous Brothers recording released in 1965; later featured in Ghost (1990).",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_0b37893316ac49c7a8a2": {
+      "id": "song_0b37893316ac49c7a8a2",
+      "canonicalKey": "misirlou|dick dale",
+      "title": "Misirlou",
+      "artist": "Dick Dale",
+      "release": {
+        "answerYear": 1962,
+        "year": 1962,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1962,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Misirlou",
+            "evidence": "Dick Dale surf-rock recording released in 1962; later featured in Pulp Fiction (1994).",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_1c391c8befcee9b15337": {
+      "id": "song_1c391c8befcee9b15337",
+      "canonicalKey": "all star|smash mouth",
+      "title": "All Star",
+      "artist": "Smash Mouth",
+      "release": {
+        "answerYear": 1999,
+        "year": 1999,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1999,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/All_Star_(song)",
+            "evidence": "Single released in 1999; later strongly associated with Shrek (2001).",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_8ec1f6aa5f877d98d893": {
+      "id": "song_8ec1f6aa5f877d98d893",
+      "canonicalKey": "hooked on a feeling|blue swede",
+      "title": "Hooked on a Feeling",
+      "artist": "Blue Swede",
+      "release": {
+        "answerYear": 1973,
+        "year": 1973,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1973,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Hooked_on_a_Feeling",
+            "evidence": "Blue Swede recording first released in Sweden in 1973; later featured in Guardians of the Galaxy (2014).",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_1b09e1b07e55020c9ea0": {
+      "id": "song_1b09e1b07e55020c9ea0",
+      "canonicalKey": "no time to die|billie eilish",
+      "title": "No Time to Die",
+      "artist": "Billie Eilish",
+      "release": {
+        "answerYear": 2020,
+        "year": 2020,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2020,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/No_Time_to_Die_(song)",
+            "evidence": "Theme song released in 2020 before the film release in 2021.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_27c53bbeb7375d7f94ab": {
+      "id": "song_27c53bbeb7375d7f94ab",
+      "canonicalKey": "suicide is painless|johnny mandel",
+      "title": "Suicide Is Painless",
+      "artist": "Johnny Mandel",
+      "release": {
+        "answerYear": 1970,
+        "year": 1970,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1970,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Suicide_Is_Painless",
+            "evidence": "M*A*S*H theme composition/recording released with the 1970 film before the TV series premiered in 1972.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_c6427dc962d294830e60": {
+      "id": "song_c6427dc962d294830e60",
+      "canonicalKey": "i ll be there for you|rembrandts",
+      "title": "I'll Be There for You",
+      "artist": "The Rembrandts",
+      "release": {
+        "answerYear": 1995,
+        "year": 1995,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1995,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/I%27ll_Be_There_for_You_(The_Rembrandts_song)",
+            "evidence": "Full single released in 1995 after Friends premiered in 1994.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_91232c1b83395e848891": {
+      "id": "song_91232c1b83395e848891",
+      "canonicalKey": "i don t want to wait|paula cole",
+      "title": "I Don't Want to Wait",
+      "artist": "Paula Cole",
+      "release": {
+        "answerYear": 1997,
+        "year": 1997,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1997,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/I_Don%27t_Want_to_Wait",
+            "evidence": "Single released in 1997 before Dawson's Creek premiered in 1998.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_a81b713da0e4d88bc497": {
+      "id": "song_a81b713da0e4d88bc497",
+      "canonicalKey": "california|phantom planet",
+      "title": "California",
+      "artist": "Phantom Planet",
+      "release": {
+        "answerYear": 2002,
+        "year": 2002,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2002,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/California_(Phantom_Planet_song)",
+            "evidence": "Single released in 2002 before The O.C. premiered in 2003.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_87ab65224f99ee6ae053": {
+      "id": "song_87ab65224f99ee6ae053",
+      "canonicalKey": "cold little heart|michael kiwanuka",
+      "title": "Cold Little Heart",
+      "artist": "Michael Kiwanuka",
+      "release": {
+        "answerYear": 2016,
+        "year": 2016,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2016,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Love_%26_Hate_(Michael_Kiwanuka_album)",
+            "evidence": "Recording first released on Love & Hate in 2016 before Big Little Lies premiered in 2017.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_89565f0cccf8ff2d9f6c": {
+      "id": "song_89565f0cccf8ff2d9f6c",
+      "canonicalKey": "enemy|imagine dragons",
+      "title": "Enemy",
+      "artist": "Imagine Dragons & JID",
+      "release": {
+        "answerYear": 2021,
+        "year": 2021,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2021,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Enemy_(Imagine_Dragons_and_JID_song)",
+            "evidence": "Single released in 2021 as the Arcane theme.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_8920d628fd75d823daf4": {
+      "id": "song_8920d628fd75d823daf4",
+      "canonicalKey": "missing|everything but the girl",
+      "title": "Missing",
+      "artist": "Everything But The Girl",
+      "release": {
+        "answerYear": 1994,
+        "year": 1994,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1994,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Missing_(Everything_but_the_Girl_song)",
+            "evidence": "Original single released in 1994 before the Todd Terry remix became the hit version.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_4284bc71c2967b034751": {
+      "id": "song_4284bc71c2967b034751",
+      "canonicalKey": "heads will roll|yeah yeah yeahs",
+      "title": "Heads Will Roll",
+      "artist": "Yeah Yeah Yeahs",
+      "release": {
+        "answerYear": 2009,
+        "year": 2009,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2009,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Heads_Will_Roll_(song)",
+            "evidence": "Original single released in 2009 before the A-Trak remix became a long-lived club version.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_29b8bfbc61038e134875": {
+      "id": "song_29b8bfbc61038e134875",
+      "canonicalKey": "prayer in c|lilly wood",
+      "title": "Prayer in C",
+      "artist": "Lilly Wood and The Prick",
+      "release": {
+        "answerYear": 2010,
+        "year": 2010,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2010,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Prayer_in_C",
+            "evidence": "Original recording released in 2010 before the Robin Schulz remix.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_cc5a52991b165dd9ccfe": {
+      "id": "song_cc5a52991b165dd9ccfe",
+      "canonicalKey": "summertime sadness|lana del rey",
+      "title": "Summertime Sadness",
+      "artist": "Lana Del Rey",
+      "release": {
+        "answerYear": 2012,
+        "year": 2012,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2012,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Summertime_Sadness",
+            "evidence": "Original recording released in 2012 before the Cedric Gervais remix.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_25889cbf07453ed6ea45": {
+      "id": "song_25889cbf07453ed6ea45",
+      "canonicalKey": "i took a pill in ibiza|mike posner",
+      "title": "I Took a Pill in Ibiza",
+      "artist": "Mike Posner",
+      "release": {
+        "answerYear": 2015,
+        "year": 2015,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2015,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/I_Took_a_Pill_in_Ibiza",
+            "evidence": "Original version released in 2015 before the Seeb remix.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
     }
   },
   "memberships": [
@@ -121675,6 +122245,462 @@
         "spotify": null,
         "youtube": null
       }
+    },
+    {
+      "songId": "song_69a70f7e99d11e1f873f",
+      "mode": "unexpected",
+      "year": 1968,
+      "metadata": {
+        "source": "mode-expansion-canonical-addition",
+        "sourceLabel": "Full single released in 1968; The Graduate premiered in 1967.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mrs._Robinson",
+        "releaseYearEvidence": "Full single released in 1968; The Graduate premiered in 1967.",
+        "evidenceState": "externally_observed"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "evidenceState"
+      ]
+    },
+    {
+      "songId": "song_2d4cadd98c9fffde079a",
+      "mode": "greatest",
+      "year": 1984,
+      "metadata": {
+        "source": "mode-expansion-canonical-addition",
+        "sourceLabel": "Title song released in 1984.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ghostbusters_(song)",
+        "releaseYearEvidence": "Title song released in 1984.",
+        "evidenceState": "externally_observed"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "evidenceState"
+      ]
+    },
+    {
+      "songId": "song_fa859c02596f48574f19",
+      "mode": "greatest",
+      "year": 1985,
+      "metadata": {
+        "source": "mode-expansion-canonical-addition",
+        "sourceLabel": "Single released in 1985.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Don%27t_You_(Forget_About_Me)",
+        "releaseYearEvidence": "Single released in 1985.",
+        "evidenceState": "externally_observed"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "evidenceState"
+      ]
+    },
+    {
+      "songId": "song_f594b163e33aa67f7ffc",
+      "mode": "unexpected",
+      "year": 1965,
+      "metadata": {
+        "source": "mode-expansion-canonical-addition",
+        "sourceLabel": "Righteous Brothers recording released in 1965; later featured in Ghost (1990).",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Unchained_Melody",
+        "releaseYearEvidence": "Righteous Brothers recording released in 1965; later featured in Ghost (1990).",
+        "evidenceState": "externally_observed"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "evidenceState"
+      ]
+    },
+    {
+      "songId": "song_0b37893316ac49c7a8a2",
+      "mode": "unexpected",
+      "year": 1962,
+      "metadata": {
+        "source": "mode-expansion-canonical-addition",
+        "sourceLabel": "Dick Dale surf-rock recording released in 1962; later featured in Pulp Fiction (1994).",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Misirlou",
+        "releaseYearEvidence": "Dick Dale surf-rock recording released in 1962; later featured in Pulp Fiction (1994).",
+        "evidenceState": "externally_observed"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "evidenceState"
+      ]
+    },
+    {
+      "songId": "song_1c391c8befcee9b15337",
+      "mode": "unexpected",
+      "year": 1999,
+      "metadata": {
+        "source": "mode-expansion-canonical-addition",
+        "sourceLabel": "Single released in 1999; later strongly associated with Shrek (2001).",
+        "sourceUrl": "https://en.wikipedia.org/wiki/All_Star_(song)",
+        "releaseYearEvidence": "Single released in 1999; later strongly associated with Shrek (2001).",
+        "evidenceState": "externally_observed"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "evidenceState"
+      ]
+    },
+    {
+      "songId": "song_8ec1f6aa5f877d98d893",
+      "mode": "unexpected",
+      "year": 1973,
+      "metadata": {
+        "source": "mode-expansion-canonical-addition",
+        "sourceLabel": "Blue Swede recording first released in Sweden in 1973; later featured in Guardians of the Galaxy (2014).",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Hooked_on_a_Feeling",
+        "releaseYearEvidence": "Blue Swede recording first released in Sweden in 1973; later featured in Guardians of the Galaxy (2014).",
+        "evidenceState": "externally_observed"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "evidenceState"
+      ]
+    },
+    {
+      "songId": "song_1b09e1b07e55020c9ea0",
+      "mode": "unexpected",
+      "year": 2020,
+      "metadata": {
+        "source": "mode-expansion-canonical-addition",
+        "sourceLabel": "Theme song released in 2020 before the film release in 2021.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/No_Time_to_Die_(song)",
+        "releaseYearEvidence": "Theme song released in 2020 before the film release in 2021.",
+        "evidenceState": "externally_observed"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "evidenceState"
+      ]
+    },
+    {
+      "songId": "song_27c53bbeb7375d7f94ab",
+      "mode": "unexpected",
+      "year": 1970,
+      "metadata": {
+        "source": "mode-expansion-canonical-addition",
+        "sourceLabel": "M*A*S*H theme composition/recording released with the 1970 film before the TV series premiered in 1972.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Suicide_Is_Painless",
+        "releaseYearEvidence": "M*A*S*H theme composition/recording released with the 1970 film before the TV series premiered in 1972.",
+        "evidenceState": "externally_observed"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "evidenceState"
+      ]
+    },
+    {
+      "songId": "song_c6427dc962d294830e60",
+      "mode": "unexpected",
+      "year": 1995,
+      "metadata": {
+        "source": "mode-expansion-canonical-addition",
+        "sourceLabel": "Full single released in 1995 after Friends premiered in 1994.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/I%27ll_Be_There_for_You_(The_Rembrandts_song)",
+        "releaseYearEvidence": "Full single released in 1995 after Friends premiered in 1994.",
+        "evidenceState": "externally_observed"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "evidenceState"
+      ]
+    },
+    {
+      "songId": "song_91232c1b83395e848891",
+      "mode": "unexpected",
+      "year": 1997,
+      "metadata": {
+        "source": "mode-expansion-canonical-addition",
+        "sourceLabel": "Single released in 1997 before Dawson's Creek premiered in 1998.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/I_Don%27t_Want_to_Wait",
+        "releaseYearEvidence": "Single released in 1997 before Dawson's Creek premiered in 1998.",
+        "evidenceState": "externally_observed"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "evidenceState"
+      ]
+    },
+    {
+      "songId": "song_a81b713da0e4d88bc497",
+      "mode": "unexpected",
+      "year": 2002,
+      "metadata": {
+        "source": "mode-expansion-canonical-addition",
+        "sourceLabel": "Single released in 2002 before The O.C. premiered in 2003.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/California_(Phantom_Planet_song)",
+        "releaseYearEvidence": "Single released in 2002 before The O.C. premiered in 2003.",
+        "evidenceState": "externally_observed"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "evidenceState"
+      ]
+    },
+    {
+      "songId": "song_87ab65224f99ee6ae053",
+      "mode": "unexpected",
+      "year": 2016,
+      "metadata": {
+        "source": "mode-expansion-canonical-addition",
+        "sourceLabel": "Recording first released on Love & Hate in 2016 before Big Little Lies premiered in 2017.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Love_%26_Hate_(Michael_Kiwanuka_album)",
+        "releaseYearEvidence": "Recording first released on Love & Hate in 2016 before Big Little Lies premiered in 2017.",
+        "evidenceState": "externally_observed"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "evidenceState"
+      ]
+    },
+    {
+      "songId": "song_89565f0cccf8ff2d9f6c",
+      "mode": "greatest",
+      "year": 2021,
+      "metadata": {
+        "source": "mode-expansion-canonical-addition",
+        "sourceLabel": "Single released in 2021 as the Arcane theme.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Enemy_(Imagine_Dragons_and_JID_song)",
+        "releaseYearEvidence": "Single released in 2021 as the Arcane theme.",
+        "evidenceState": "externally_observed"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "evidenceState"
+      ]
+    },
+    {
+      "songId": "song_8920d628fd75d823daf4",
+      "mode": "unexpected",
+      "year": 1994,
+      "metadata": {
+        "source": "mode-expansion-canonical-addition",
+        "sourceLabel": "Original single released in 1994 before the Todd Terry remix became the hit version.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Missing_(Everything_but_the_Girl_song)",
+        "releaseYearEvidence": "Original single released in 1994 before the Todd Terry remix became the hit version.",
+        "evidenceState": "externally_observed"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "evidenceState"
+      ]
+    },
+    {
+      "songId": "song_4284bc71c2967b034751",
+      "mode": "unexpected",
+      "year": 2009,
+      "metadata": {
+        "source": "mode-expansion-canonical-addition",
+        "sourceLabel": "Original single released in 2009 before the A-Trak remix became a long-lived club version.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Heads_Will_Roll_(song)",
+        "releaseYearEvidence": "Original single released in 2009 before the A-Trak remix became a long-lived club version.",
+        "evidenceState": "externally_observed"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "evidenceState"
+      ]
+    },
+    {
+      "songId": "song_29b8bfbc61038e134875",
+      "mode": "unexpected",
+      "year": 2010,
+      "metadata": {
+        "source": "mode-expansion-canonical-addition",
+        "sourceLabel": "Original recording released in 2010 before the Robin Schulz remix.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Prayer_in_C",
+        "releaseYearEvidence": "Original recording released in 2010 before the Robin Schulz remix.",
+        "evidenceState": "externally_observed"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "evidenceState"
+      ]
+    },
+    {
+      "songId": "song_cc5a52991b165dd9ccfe",
+      "mode": "unexpected",
+      "year": 2012,
+      "metadata": {
+        "source": "mode-expansion-canonical-addition",
+        "sourceLabel": "Original recording released in 2012 before the Cedric Gervais remix.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Summertime_Sadness",
+        "releaseYearEvidence": "Original recording released in 2012 before the Cedric Gervais remix.",
+        "evidenceState": "externally_observed"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "evidenceState"
+      ]
+    },
+    {
+      "songId": "song_25889cbf07453ed6ea45",
+      "mode": "unexpected",
+      "year": 2015,
+      "metadata": {
+        "source": "mode-expansion-canonical-addition",
+        "sourceLabel": "Original version released in 2015 before the Seeb remix.",
+        "sourceUrl": "https://en.wikipedia.org/wiki/I_Took_a_Pill_in_Ibiza",
+        "releaseYearEvidence": "Original version released in 2015 before the Seeb remix.",
+        "evidenceState": "externally_observed"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "evidenceState"
+      ]
     }
   ],
   "aliases": {
