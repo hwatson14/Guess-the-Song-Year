@@ -14,7 +14,7 @@ for(const song of Object.values(db.songs)){
   if(missing.length)result.pendingLinks.push({songId:song.id,title:song.title,artist:song.artist,missing});
 }
 for(const year of db.catalogue.years){
-  const count=db.memberships.filter(m=>m.mode==='greatest'&&m.year===year).length;
+  const count=db.memberships.filter(m=>m.mode==='greatest'&&Number(db.songs[m.songId]?.release?.answerYear)===year).length;
   result.greatestDepth[year]={songs:count,needed:Math.max(0,12-count)};
 }
 if(process.argv.includes('--write'))fs.writeFileSync('verification/song-database-status.json',JSON.stringify(result,null,2)+'\n');
