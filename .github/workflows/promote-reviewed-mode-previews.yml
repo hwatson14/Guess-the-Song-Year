@@ -44,3 +44,5 @@ jobs:
           fi
           git commit -m "Promote reviewed Movie TV and Remix previews"
           git push
+
+# Rerun marker after canonical matcher correction.
