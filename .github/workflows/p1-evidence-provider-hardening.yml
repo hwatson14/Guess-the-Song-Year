@@ -5,7 +5,7 @@ on:
     branches: [chatgpt/p1-evidence-provider]
 
 concurrency:
-  group: p1-evidence-provider-hardening
+  group: p1-evidence-provider-final
   cancel-in-progress: true
 
 permissions:
@@ -14,7 +14,7 @@ permissions:
 jobs:
   harden:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v6
         with:
@@ -41,16 +41,11 @@ jobs:
           node scripts/migrations/2026-09-06-p1-cache-bump.mjs --write
       - name: Syntax-check hardening tools
         run: python -m py_compile scripts/harden_release_evidence.py scripts/harden_provider_links.py scripts/test_hardening_policy.py
-      - name: Confirm unresolved release years without changing answer years
-        shell: bash
+      - name: Confirm release evidence baseline is durable
         run: |
-          if [ ! -f verification/release-evidence-review-queue.json ]; then
-            python scripts/harden_release_evidence.py --write
-          else
-            echo "Release evidence baseline already materialized"
-          fi
-      - name: Discover and verify final recording-linked provider sample
-        run: python scripts/harden_provider_links.py --write --limit 10
+          test -f verification/release-evidence-review-queue.json
+          test -f verification/provider-recording-research.json
+          test -f verification/provider-hardening-review-queue.json
       - name: Rebuild generated catalogue and status
         run: |
           node scripts/song_database.mjs build
@@ -60,13 +55,13 @@ jobs:
         run: node scripts/check.mjs
       - name: Diff hygiene
         run: git diff --check
-      - name: Commit hardened evidence and provider data
+      - name: Commit final hardened runtime and evidence state
         shell: bash
         run: |
           git add -A
           if git diff --cached --quiet; then
-            echo "No hardening changes to commit"
+            echo "No final hardening changes to commit"
             exit 0
           fi
-          git commit -m "Materialize P1 evidence and provider hardening"
+          git commit -m "Finalize P1 evidence and provider hardening"
           git push origin HEAD:${GITHUB_REF_NAME}
