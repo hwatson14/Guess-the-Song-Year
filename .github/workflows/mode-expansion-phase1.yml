@@ -72,12 +72,27 @@ jobs:
             "valid.sort((a,b)=>youtubeScore(byId.get(b.id),song)-youtubeScore(byId.get(a.id),song));",
             "valid.sort((a,b)=>youtubeScore(byId.get(b.id),matchSong)-youtubeScore(byId.get(a.id),matchSong));")
           PY
-      - name: Run full validation suite
-        run: node scripts/check.mjs
-      - name: Commit validated runtime changes
+      - name: Run full validation suite and capture output
+        run: |
+          set +e
+          mkdir -p verification/mode-expansion
+          node scripts/check.mjs > verification/mode-expansion/phase1-validation.log 2>&1
+          code=$?
+          echo "$code" > verification/mode-expansion/phase1-validation-exit-code.txt
+          cat verification/mode-expansion/phase1-validation.log
+          exit 0
+      - name: Commit validation result
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add engine.js engine-v7.js app.js
-          git commit -m "Generalise runtime for manifest-driven modes" || exit 0
+          code="$(cat verification/mode-expansion/phase1-validation-exit-code.txt)"
+          git add verification/mode-expansion/phase1-validation.log verification/mode-expansion/phase1-validation-exit-code.txt
+          if [ "$code" = "0" ]; then
+            git add engine.js engine-v7.js app.js
+          fi
+          git commit -m "Record mode expansion phase 1 validation" || true
           git push
+      - name: Fail if validation failed
+        run: |
+          code="$(cat verification/mode-expansion/phase1-validation-exit-code.txt)"
+          if [ "$code" != "0" ]; then exit "$code"; fi
