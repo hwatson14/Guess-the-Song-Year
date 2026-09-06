@@ -1,0 +1,51 @@
+name: Live P1 production smoke verification
+
+on:
+  push:
+    branches: [chatgpt/p1-evidence-provider]
+
+permissions:
+  contents: read
+
+jobs:
+  live-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch deployed production assets
+        run: |
+          set -euo pipefail
+          base='https://hwatson14.github.io/Guess-the-Song-Year'
+          curl --fail --silent --show-error --retry 5 --retry-delay 2 "$base/" -o /tmp/live-index.html
+          curl --fail --silent --show-error --retry 5 --retry-delay 2 "$base/engine.js?v=7.6.6" -o /tmp/live-engine.js
+          curl --fail --silent --show-error --retry 5 --retry-delay 2 "$base/data/catalogue.json?v=7.6.6" -o /tmp/live-catalogue.json
+      - name: Verify live P1 runtime and catalogue
+        run: |
+          set -euo pipefail
+          grep -F './engine.js?v=7.6.6' /tmp/live-index.html
+          grep -F './data/catalogue.json?v=7.6.6' /tmp/live-engine.js
+          grep -F 'function spotifyCandidateAllowed(track,song)' /tmp/live-engine.js
+          grep -F 'artistSimilarity<0.75' /tmp/live-engine.js
+          grep -F 'if(err?.status!==404)throw err' /tmp/live-engine.js
+          node <<'NODE'
+          const fs=require('fs');
+          const data=JSON.parse(fs.readFileSync('/tmp/live-catalogue.json','utf8'));
+          let placements=0;
+          const ids=new Set();
+          const counts={};
+          for(const [mode,buckets] of Object.entries(data.modes||{})){
+            counts[mode]=0;
+            for(const [bucket,rows] of Object.entries(buckets||{})){
+              for(const row of rows||[]){
+                placements++;counts[mode]++;
+                if(!/^song_[0-9a-f]{20}$/.test(String(row.songId||'')))throw new Error(`invalid songId ${mode}/${bucket}`);
+                if(Number(row.year)!==Number(bucket))throw new Error(`bucket/year mismatch ${mode}/${bucket}/${row.title}`);
+                ids.add(row.songId);
+              }
+            }
+          }
+          if(placements!==1298)throw new Error(`expected 1298 placements, got ${placements}`);
+          if(ids.size!==1106)throw new Error(`expected 1106 unique master IDs, got ${ids.size}`);
+          const expected={greatest:877,australian:235,unexpected:40,number1_us:73,number1_au:73};
+          for(const [mode,n] of Object.entries(expected))if(counts[mode]!==n)throw new Error(`${mode} expected ${n}, got ${counts[mode]}`);
+          console.log(JSON.stringify({production:true,placements,uniqueSongIds:ids.size,counts}));
+          NODE
