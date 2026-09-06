@@ -1,0 +1,132 @@
+main.screen-playing .team-timeline.active-team.placement-timeline .timeline-years,
+main.screen-guess .team-timeline.active-team.placement-timeline .timeline-years{
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  gap:0;
+}
+
+main.screen-playing .team-timeline.active-team.placement-timeline .timeline-step,
+main.screen-guess .team-timeline.active-team.placement-timeline .timeline-step{
+  display:contents;
+}
+
+main.screen-playing .team-timeline.active-team.placement-timeline .timeline-year,
+main.screen-guess .team-timeline.active-team.placement-timeline .timeline-year{
+  width:100%;
+  min-width:0;
+  flex:none;
+  height:36px;
+  border-radius:9px;
+  transition:transform .16s ease,opacity .16s ease;
+}
+
+main.screen-playing .team-timeline.active-team.placement-timeline .timeline-slot,
+main.screen-guess .team-timeline.active-team.placement-timeline .timeline-slot{
+  position:relative;
+  width:100%;
+  height:26px;
+  min-height:26px;
+  flex:none;
+  margin:0;
+  padding:0;
+  border:0;
+  border-radius:10px;
+  background:transparent;
+  color:var(--mint);
+  font-size:0;
+  opacity:.9;
+  overflow:visible;
+  transition:height .16s ease,min-height .16s ease,margin .16s ease,opacity .16s ease,background .16s ease,box-shadow .16s ease,border-color .16s ease;
+}
+
+main.screen-playing .team-timeline.active-team.placement-timeline .timeline-slot::before,
+main.screen-guess .team-timeline.active-team.placement-timeline .timeline-slot::before{
+  content:"";
+  position:absolute;
+  left:8px;
+  right:8px;
+  top:50%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#55e4c155 18%,#55e4c155 82%,transparent);
+}
+
+main.screen-playing .team-timeline.active-team.placement-timeline .timeline-slot::after,
+main.screen-guess .team-timeline.active-team.placement-timeline .timeline-slot::after{
+  content:"+";
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:22px;
+  height:22px;
+  transform:translate(-50%,-50%);
+  display:grid;
+  place-items:center;
+  border:1px solid #55e4c177;
+  border-radius:50%;
+  background:#0b221c;
+  color:var(--mint);
+  font:700 17px/1 var(--sans);
+  box-shadow:0 0 0 4px var(--bg);
+}
+
+main.screen-playing .team-timeline.active-team.placement-timeline.has-placement .timeline-slot:not(.on),
+main.screen-guess .team-timeline.active-team.placement-timeline.has-placement .timeline-slot:not(.on){
+  opacity:.28;
+}
+
+main.screen-playing .team-timeline.active-team.placement-timeline .timeline-slot.on,
+main.screen-guess .team-timeline.active-team.placement-timeline .timeline-slot.on{
+  height:66px;
+  min-height:66px;
+  margin:6px 0;
+  border:1px solid #7df4d5b5;
+  background:linear-gradient(145deg,#123f35,#0a2823);
+  opacity:1;
+  box-shadow:0 0 0 2px #55e4c133,0 10px 26px #0005,inset 0 1px #ffffff12;
+}
+
+main.screen-playing .team-timeline.active-team.placement-timeline .timeline-slot.on::before,
+main.screen-guess .team-timeline.active-team.placement-timeline .timeline-slot.on::before{
+  content:"YOUR SONG";
+  left:0;
+  right:0;
+  top:auto;
+  bottom:10px;
+  height:auto;
+  background:none;
+  color:#a8f7e2;
+  text-align:center;
+  letter-spacing:.13em;
+  font:800 9px/1 var(--sans);
+}
+
+main.screen-playing .team-timeline.active-team.placement-timeline .timeline-slot.on::after,
+main.screen-guess .team-timeline.active-team.placement-timeline .timeline-slot.on::after{
+  content:"?";
+  top:9px;
+  width:auto;
+  height:auto;
+  transform:translateX(-50%);
+  border:0;
+  border-radius:0;
+  background:transparent;
+  color:var(--mint);
+  font:700 28px/1 var(--serif);
+  box-shadow:none;
+}
+
+main.screen-playing .team-timeline.active-team.placement-timeline .timeline-slot:focus-visible,
+main.screen-guess .team-timeline.active-team.placement-timeline .timeline-slot:focus-visible{
+  outline:2px solid var(--text);
+  outline-offset:2px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  main.screen-playing .team-timeline.active-team.placement-timeline .timeline-slot,
+  main.screen-guess .team-timeline.active-team.placement-timeline .timeline-slot,
+  main.screen-playing .team-timeline.active-team.placement-timeline .timeline-year,
+  main.screen-guess .team-timeline.active-team.placement-timeline .timeline-year{
+    transition:none;
+  }
+}
