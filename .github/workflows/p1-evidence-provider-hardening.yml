@@ -29,11 +29,11 @@ jobs:
         run: python scripts/harden_release_evidence.py --write
       - name: Discover and verify recording-linked provider assets
         run: python scripts/harden_provider_links.py --write
-      - name: Rebuild generated catalogue and review reports
+      - name: Rebuild generated catalogue and status
         run: |
           node scripts/song_database.mjs build
           node scripts/song_database_report.mjs --write
-          node scripts/provider_review_report.mjs --write
+          node scripts/provider_review_report.mjs
       - name: Full regression gate
         run: node scripts/check.mjs
       - name: Diff hygiene
