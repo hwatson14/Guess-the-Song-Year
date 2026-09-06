@@ -39,6 +39,18 @@ jobs:
             console.log(JSON.stringify({provider,collisions},null,2));
           }
           JS
+      - name: Add verified Roxette provider correction to migration
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('scripts/migrations/2026-09-06-song-identity-dedupe.mjs')
+          text=p.read_text()
+          anchor="const BAD_PROVIDER_LINKS=[\n"
+          addition="  {songId:'song_c5aef0dc987135ed9bac',provider:'spotify',id:'6kvoHl80mfCVTv7XnZkjQn',reason:'This Spotify track is the 1990 Pretty Woman recording, not the distinct 1987 Christmas recording.'},\n"
+          if addition not in text:
+              text=text.replace(anchor,anchor+addition)
+          p.write_text(text)
+          PY
       - name: Apply dedupe migration
         run: node scripts/migrations/2026-09-06-song-identity-dedupe.mjs --write
       - name: Rebuild generated catalogue and coverage report
