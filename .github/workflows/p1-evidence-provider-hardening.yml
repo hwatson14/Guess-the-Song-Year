@@ -37,8 +37,9 @@ jobs:
         run: |
           node scripts/migrations/2026-09-06-provider-incremental.mjs --write
           node scripts/migrations/2026-09-06-provider-policy-v2.mjs --write
+          node scripts/migrations/2026-09-06-spotify-static-identity.mjs --write
       - name: Syntax-check hardening tools
-        run: python -m py_compile scripts/harden_release_evidence.py scripts/harden_provider_links.py
+        run: python -m py_compile scripts/harden_release_evidence.py scripts/harden_provider_links.py scripts/test_hardening_policy.py
       - name: Confirm unresolved release years without changing answer years
         shell: bash
         run: |
@@ -48,7 +49,7 @@ jobs:
             echo "Release evidence baseline already materialized"
           fi
       - name: Discover and verify next recording-linked provider chunk
-        run: python scripts/harden_provider_links.py --write --limit 100
+        run: python scripts/harden_provider_links.py --write --limit 50
       - name: Rebuild generated catalogue and status
         run: |
           node scripts/song_database.mjs build
