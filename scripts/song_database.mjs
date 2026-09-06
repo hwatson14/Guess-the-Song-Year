@@ -56,8 +56,9 @@ export function compileDatabase(db){
     if(!data.years.includes(year))throw new Error('Invalid mode/year membership');
     if(releaseModes.has(m.mode)&&song.release?.state==='externally_observed'&&Number(song.release?.year)!==year)throw new Error('Canonical release answer year conflicts with accepted release evidence for '+m.songId);
     if(Object.keys(m.metadata||{}).some(k=>['title','artist','year','songId','canonicalKey','spotifyId','youtubeId','__proto__','constructor','prototype'].includes(k)))throw new Error('Reserved membership metadata');
+    if(Object.keys(m.displayOverrides||{}).some(k=>!['title','artist'].includes(k)))throw new Error('Invalid membership display override');
     const identity=`${m.mode}/${year}/${m.songId}`;if(seen.has(identity))throw new Error('Duplicate membership '+identity);seen.add(identity);
-    const values={...structuredClone(m.metadata),title:song.title,artist:song.artist,year,songId:song.id,canonicalKey:song.canonicalKey,...m.displayOverrides};
+    const values={...structuredClone(m.metadata),title:song.title,artist:song.artist,...structuredClone(m.displayOverrides),year,songId:song.id,canonicalKey:song.canonicalKey};
     for(const provider of providers){
       const explicit=Object.hasOwn(m.providerRefs||{},provider)?m.providerRefs[provider]:undefined;
       if(explicit&&!song.providers[provider].links.some(x=>x.id===explicit))throw new Error('Dangling playback reference '+explicit);
