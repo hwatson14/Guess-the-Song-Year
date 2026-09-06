@@ -1,17 +1,18 @@
 # Mode Expansion Spec
 
-_Added: 2026-09-06 from Harry's explicit product direction._
+_Added: 2026-09-06 from Harry's explicit product direction. Extended the same day with One Hit Wonders._
 
 ## Product requirement
 
-Add four selectable game modes:
+Add five selectable game modes:
 
 1. **Movie Themes**
 2. **TV Themes**
 3. **TV & Movie Themes** — a combined view of Movie Themes + TV Themes, not a separately curated duplicate catalogue
 4. **Remix: Original Year** — play a remix, but the player guesses the release year of the original song
+5. **One Hit Wonders** — recognisable songs from acts strongly identified with one breakout hit, with borderline market-dependent cases explicitly reviewed rather than inferred
 
-These are two new mode families: **screen themes** and **remix/original-year**.
+These are three new mode families: **screen themes**, **remix/original-year**, and **curated release-year membership**.
 
 ## Global invariants
 
@@ -23,6 +24,7 @@ These are two new mode families: **screen themes** and **remix/original-year**.
 - Provider failures must never redefine the answer year.
 - Physical-card mode and Virtual mode must use the same answer-year semantics.
 - Do not expose a mode as playable until it has at least one valid pool; initial lifecycle status may be `building` or `preview`.
+- Classification metadata such as “one-hit wonder” belongs to the mode membership/evidence layer. It must not mutate canonical song identity or release truth.
 
 ## Screen-theme year rule
 
@@ -156,9 +158,67 @@ The remix membership's explicit playback reference must override the normal pref
 
 No-repeat remains keyed to the canonical original `songId`, not the remix provider ID. Multiple remixes of one original must not masquerade as unrelated answer songs unless a future mode explicitly allows that behaviour.
 
+## 5. One Hit Wonders
+
+Proposed mode ID: `one_hit_wonders`.
+
+Purpose: play famous songs whose performing act is strongly identified with one breakout/mainstream hit.
+
+### Answer-year rule
+
+This is a normal **release-year** mode:
+
+- `yearBasis: "release"`
+- answer year = canonical song `release.answerYear`
+- year-range filtering uses that same canonical release year
+- no-repeat remains keyed to canonical `songId`
+- normal canonical/original playback rules apply
+
+The mode must not invent a separate “hit year” or chart year when the canonical song release year is already the game truth.
+
+### Qualification rule
+
+“One-hit wonder” is not a universal factual property. It changes by market, chart threshold, era and whether cultural recognition or strict chart arithmetic is used.
+
+Therefore:
+
+- do **not** derive membership automatically from one chart database;
+- do **not** store `oneHitWonder=true` as master-song truth;
+- store the qualification on the `one_hit_wonders` membership;
+- prefer acts that a broad Australian player base would reasonably experience as one-hit wonders;
+- a narrow US-only definition must not automatically include an artist with obvious second hits in Australia, the UK or internationally;
+- borderline cases belong in review, not the playable core;
+- currently active/recent artists should be held as `review_recent` until the classification is reasonably durable.
+
+Recommended membership metadata:
+
+- `qualificationState: "core" | "expansion" | "review" | "review_recent"`
+- `qualificationBasis`
+- optional `qualificationMarkets`
+- `qualificationEvidence[]`
+- optional `secondHitRiskNote`
+
+A practical core test is: **one overwhelmingly recognised breakout song, no obvious second mainstream hit that would make the category feel wrong to an Australian player, and enough independent evidence to defend the classification.**
+
+### Provider/playback rule
+
+Use the canonical original recording and normal provider selection. Do not intentionally play a remix, live version, cover or rerecording merely because that version was the charting hit unless the canonical recording model explicitly resolves that version as the intended song.
+
+### Initial seed
+
+The staged seed is `verification/mode-expansion/one-hit-wonders-seed.csv`:
+
+- 246 candidates total
+- 167 `core`
+- 23 `expansion`
+- 49 `review`
+- 7 `review_recent`
+
+The seed intentionally includes famous disputed examples such as `Take on Me`, `Come On Eileen`, `99 Luftballons`, `Somebody That I Used to Know`, `Video Killed the Radio Star` and `The Proclaimers` in `review`, rather than silently treating narrow-market chart definitions as product truth.
+
 ## Data and compiler direction
 
-The current compiler hard-codes release-mode IDs and supported mode IDs. Expansion should replace brittle mode-ID tests with declared mode semantics where possible.
+The current compiler/runtime hard-codes release-mode IDs and supported mode IDs. Expansion should replace brittle mode-ID tests with declared mode semantics where possible.
 
 Recommended manifest concepts:
 
@@ -173,27 +233,34 @@ Compiler semantics should be:
 - `chart` -> membership/chart year
 - `screen` -> verified screen-work `workAnswerYear`
 
+`one_hit_wonders` therefore needs **no fourth year-basis type**. It should exercise the same release-year path as Greatest Hits/Australian once arbitrary declared mode IDs are supported.
+
 Do not make `screen_themes` a third independently maintained membership set.
 
 ## Suggested delivery order
 
-1. Generalise mode/compiler validation so new declared modes are not hard-coded in multiple files.
+1. Generalise mode/compiler validation and runtime mode discovery so new declared modes are not hard-coded in multiple files.
 2. Add a screen-work relationship model and `screen` year basis.
 3. Add Movie Themes and TV Themes source memberships with verified work years.
 4. Derive TV & Movie Themes automatically.
 5. Add explicit alternate-recording/playback-reference support for Remix: Original Year.
-6. Curate reviewed seed catalogues and provider assets.
-7. Run the full `node scripts/check.mjs` suite before making any new mode selectable.
+6. Resolve One Hit Wonders seed rows to canonical masters and add reviewed qualification evidence.
+7. Curate/review provider assets for all new modes.
+8. Make each mode selectable only when its playable source pools exist.
+9. Run the full `node scripts/check.mjs` suite from a clean checkout before release.
 
 ## Acceptance criteria
 
-- All four mode names appear as first-class product modes once playable.
+- All five mode names appear as first-class product modes once playable.
 - Movie Themes reveals/scores the represented movie's release year, regardless of the song's release year.
 - TV Themes reveals/scores the represented show's Season 1 / series-premiere year, regardless of the theme recording's release year.
 - TV & Movie Themes exactly reflects the union of the two source theme modes without an independently curated third catalogue.
 - Screen-work answer years never overwrite canonical song release truth.
 - Remix mode always answers with original release year even when the played remix was released much later.
 - A remix provider ID never overwrites canonical song identity or release truth.
+- One Hit Wonders always answers with the canonical song release year.
+- One Hit Wonders membership is evidence-backed and market-aware; `review` and `review_recent` candidates are not auto-promoted.
+- One Hit Wonders reuses existing canonical song masters wherever they already exist.
 - Year filtering, no-repeat, Resume, scoring, physical cards, Virtual cards, Spotify, and YouTube semantics remain intact.
 - No mode silently substitutes another mode's catalogue.
 - Full validation suite passes from a clean checkout before release.
