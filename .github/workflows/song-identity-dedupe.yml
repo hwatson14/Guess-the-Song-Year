@@ -1,0 +1,45 @@
+name: Apply song identity dedupe
+
+on:
+  push:
+    branches:
+      - fix/song-identity-dedup-spotify
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install validation dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements-dev.txt
+      - name: Apply dedupe migration
+        run: node scripts/migrations/2026-09-06-song-identity-dedupe.mjs --write
+      - name: Rebuild generated catalogue and coverage report
+        run: |
+          node scripts/song_database.mjs build
+          node scripts/song_database_report.mjs --write
+      - name: Validate full application and catalogue
+        run: node scripts/check.mjs
+      - name: Check generated diff
+        run: git diff --check
+      - name: Commit migrated source and generated outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm .github/workflows/song-identity-dedupe.yml
+          rm scripts/migrations/2026-09-06-song-identity-dedupe.mjs
+          git add -A
+          git commit -m "Deduplicate master song identities and repair Spotify mappings"
+          git push origin HEAD:fix/song-identity-dedup-spotify
