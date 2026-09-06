@@ -29,7 +29,7 @@
   function modeReport(id=modeId()){return modeReports[id]||{id,status:'preview',statusLabel:'Loading',coverage:0,totalYears:73,coverageLabel:'Checking coverage',years:[],songs:0,selectable:true,statusNote:'Catalogue status is being checked.'}}
   function modeStatusClass(id=modeId()){return ['ready','beta','preview'].includes(modeReport(id).status)?modeReport(id).status:'building'}
   function songCountLabel(value){const n=Math.max(0,Number(value)||0);return `${n.toLocaleString()} ${n===1?'song':'songs'}`}
-  function yearBasisLabel(report=modeReport()){return report.yearBasis==='chart'?'chart year':report.yearBasis==='screen'?'movie/show year':report.yearBasis==='original'?'original song year':'release year'}
+  function yearBasisLabel(report=modeReport(),id=modeId()){return report.yearBasis==='chart'?'chart year':report.yearBasis==='screen'?'movie/show year':id==='remix_original_year'?'original song year':'release year'}
   function placementLabel(years,index){return index===0?`Before ${years[0]??'timeline'}`:index===years.length?`After ${years.at(-1)??'timeline'}`:`Between ${years[index-1]} and ${years[index]}`}
   function placementLockCopy(){if(pendingSlot===null)return 'Lock Placement';const years=[...(activeTeam().timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b),label=placementLabel(years,pendingSlot);return `Lock ${label.charAt(0).toLowerCase()}${label.slice(1)}`}
   function selectedRange(){const settings=match?.settings||cfg;return P.normalizeYearRange(settings.minYear,settings.maxYear)}
@@ -242,7 +242,7 @@
   function revealScreen(){
     const virtual=cfg.playMode==='virtual',marked=!!placementResult,song=current?.song||{};
     const result=marked?(placementResult.correct?'Correct placement':'Wrong position'):'Mark your placement';
-    const answerContext=song.screenWorkTitle?`${song.screenWorkType==='movie'?'Movie':'TV show'}: ${song.screenWorkTitle}`:song.playbackVariant==='remix'?`Played: ${song.remixTitle||song.title}${song.remixer?` · ${song.remixer} remix`:''}`:'';
+    const answerContext=song.workTitle?`${song.workType==='movie'?'Movie':'TV show'}: ${song.workTitle}`:song.playedVersion?`Played: ${song.playedVersion}${song.remixer?` · ${song.remixer} remix`:''}`:'';
     return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>Reveal</h1></div><section class="card answer-card"><div class="answer-top"><div><div class="answer-song">${esc(song.title||'Unknown')}</div><div class="answer-artist">${esc(song.artist||'')}</div>${answerContext?`<div class="answer-context">${esc(answerContext)}</div>`:''}</div><div class="answer-year">${current?.year||'----'}</div></div><div class="result-badge ${marked?(placementResult.correct?'ok':'bad'):''}">${result}</div></section>${timelineBoard()}${bonusCardNotice()}${marked?`${bonusActions(true)}<div class="board-actionbar"><button class="btn primary" data-action="next-turn" ${bonusBusy?'disabled':''}>${winner()?'See results':'Next Team'}</button></div>`:`<div class="board-actionbar"><button class="btn ghost" data-action="wrong-answer">Wrong placement</button><button class="btn primary" data-action="correct-answer">Correct placement</button></div>`}${!virtual?'<button class="btn text" data-action="update-card-year">Update card year reference</button>':''}`;
   }
 

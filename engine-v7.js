@@ -51,6 +51,7 @@
   }
 
   function underlyingKey(song){
+    if(song?.screenWorkId&&song?.songId)return `${song.songId}/${song.screenWorkId}`;
     if(song?.songId)return String(song.songId);
     if(song?.canonicalKey)return String(song.canonicalKey);
     return `${baseTitle(song?.title)}|${primaryArtist(song?.artist)}`;
