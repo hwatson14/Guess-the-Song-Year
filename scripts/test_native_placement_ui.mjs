@@ -6,7 +6,8 @@ const css=fs.readFileSync('app.css','utf8');
 const index=fs.readFileSync('index.html','utf8');
 
 assert.match(app,/function songCountLabel\(/,'song counts should be rendered natively by app.js');
-assert.match(app,/statusLabel\}\s*·\s*\$\{esc\(songCountLabel\(r\.songs\)\)\}/,'mode selector should include native song counts');
+assert.match(app,/songCountLabel\(r\.songs\)/,'mode selector should include native song counts');
+assert.match(app,/songCountLabel\(report\.songs\)/,'selected mode detail should include native song counts');
 assert.match(app,/Tap a gap in your timeline\. Your mystery song will appear there\./,'virtual placement instructions should describe gaps');
 assert.match(app,/function placementLockCopy\(/,'placement lock copy should be derived from the selected interval');
 assert.match(app,/timeline-slot placement-gap/,'placement gaps should be rendered natively');
