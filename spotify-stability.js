@@ -10,6 +10,7 @@
   const STATE_KEY='gsy.spotify.state';
   const PENDING_TTL_MS=15*60*1000;
   const RETRY_DELAY_MS=900;
+  let providerChain=Promise.resolve();
 
   const original={
     init:E.init,
@@ -81,6 +82,11 @@
       try{return await task()}catch(second){throw friendlyError(second)}
     }
   }
+  function enqueue(task){
+    const run=providerChain.then(task,task);
+    providerChain=run.catch(()=>{});
+    return run;
+  }
 
   E.spotifyConnect=async function(){
     clearPending();
@@ -112,11 +118,11 @@
     }
   };
 
-  E.spotifyDevices=(...args)=>retryTransient(()=>original.spotifyDevices.apply(E,args));
-  E.playSpotify=(...args)=>retryTransient(()=>original.playSpotify.apply(E,args));
-  E.pauseSpotify=(...args)=>retryTransient(()=>original.pauseSpotify.apply(E,args));
+  E.spotifyDevices=(...args)=>enqueue(()=>retryTransient(()=>original.spotifyDevices.apply(E,args)));
+  E.playSpotify=(...args)=>enqueue(()=>retryTransient(()=>original.playSpotify.apply(E,args)));
+  E.pauseSpotify=(...args)=>enqueue(()=>retryTransient(()=>original.pauseSpotify.apply(E,args)));
   E.resolveSong=(song,kind=E.getProvider?.())=>kind==='spotify'
-    ?retryTransient(()=>original.resolveSong.call(E,song,kind))
+    ?enqueue(()=>retryTransient(()=>original.resolveSong.call(E,song,kind)))
     :original.resolveSong.call(E,song,kind);
 
   E.spotifyStability={pendingKey:PENDING_KEY,pendingTtlMs:PENDING_TTL_MS};
