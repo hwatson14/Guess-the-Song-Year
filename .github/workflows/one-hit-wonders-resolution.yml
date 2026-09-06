@@ -4,10 +4,7 @@ on:
   push:
     branches: [mode-expansion-content]
     paths:
-      - .github/workflows/one-hit-wonders-resolution.yml
-      - scripts/resolve_one_hit_wonders_seed.py
-      - verification/mode-expansion/one-hit-wonders-seed.csv
-      - verification/mode-expansion/one-hit-wonders-match-report.csv
+      - verification/mode-expansion/one-hit-wonders-resolve-trigger.txt
 
 permissions:
   contents: write
@@ -15,7 +12,7 @@ permissions:
 jobs:
   resolve:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v6
         with:
