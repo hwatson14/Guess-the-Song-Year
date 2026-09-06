@@ -16,11 +16,13 @@ const identityKeys=row=>new Set([reviewKey(row),...(Array.isArray(row?.legacyKey
 
 // Historical cleanup accounting first preserves an exact archived original. If the
 // original was not archived, exactly one active canonical identity or preserved alias
-// must remain. Later canonical master merges deliberately collapse old identities, so
-// legacyKeys are part of the accounting contract rather than evidence of data loss.
+// must remain. Later canonical master merges deliberately collapse old identities, and
+// corrected release-year identities may move buckets; chart-year placements may not.
 for(const original of baseline.rows){
   const archived=archive.some(row=>row.mode===original.mode&&row.year===original.year&&row.original&&fingerprint(row.original)===original.fingerprint)?1:0;
-  const active=archived?0:(data.modes[original.mode][original.year]||[]).filter(row=>identityKeys(row).has(original.key)).length;
+  const buckets=data.modes[original.mode]||{};
+  const rows=manifest.modes?.[original.mode]?.yearBasis==='release'?Object.values(buckets).flat():(buckets[original.year]||[]);
+  const active=archived?0:rows.filter(row=>identityKeys(row).has(original.key)).length;
   assert.equal(active+archived,1,`Lost or duplicated baseline identity: ${original.mode}/${original.year}/${original.key}`);
 }
 assert.equal(new Set(archive.map(x=>x.id)).size,archive.length,'archive IDs are unique');
@@ -44,12 +46,15 @@ for(const entry of archive){
   }
   if(entry.action==='archive_duplicate'||entry.action==='repair'){
     const target=entry.retained||{year:entry.replacement.year,key:reviewKey(entry.replacement)};
-    const targetRow=data.modes[entry.mode][target.year].find(x=>reviewKey(x)===target.key||identityKeys(x).has(target.key));
+    const targetBuckets=data.modes[entry.mode]||{};
+    const targetRows=manifest.modes?.[entry.mode]?.yearBasis==='release'?Object.values(targetBuckets).flat():(targetBuckets[target.year]||[]);
+    const targetRow=targetRows.find(x=>reviewKey(x)===target.key||identityKeys(x).has(target.key));
     assert.ok(targetRow,'Duplicate/repair has no retained identity');
     const runtimeKey=E.songUseKey(targetRow),oldKey=entry.originalKey;
     if(oldKey!==reviewKey(targetRow))assert.ok(identityKeys(targetRow).has(oldKey),'Saved-game alias was lost');
-    const used=[...reports[entry.mode].yearSongKeys[target.year].filter(x=>x!==runtimeKey),oldKey];
-    await assert.rejects(E.chooseSong(target.year,entry.mode,used),{code:'NO_UNUSED_SONG'});
+    const runtimeYear=Number(targetRow.year);
+    const used=[...reports[entry.mode].yearSongKeys[runtimeYear].filter(x=>x!==runtimeKey),oldKey];
+    await assert.rejects(E.chooseSong(runtimeYear,entry.mode,used),{code:'NO_UNUSED_SONG'});
   }
 }
 const repeat=applyCatalogueCleanup(data,manifest,decisions,archive);
