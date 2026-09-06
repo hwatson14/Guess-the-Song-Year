@@ -35,6 +35,10 @@ for(const rejected of superseded){
     membership.metadata??={};
     membership.metadata.source='unexpected-years-release-correction';
     membership.metadata.sourceLabel='Reviewed release-year correction during Unexpected Years expansion';
+    // yearEvidence is schema-reserved for MusicBrainz rows. These corrected
+    // memberships now use reviewed official sources, so the legacy field must go.
+    delete membership.metadata.yearEvidence;
+    delete membership.metadata.musicbrainzId;
   }
 }
 const compiled=compileDatabase(db);
