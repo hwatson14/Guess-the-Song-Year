@@ -15,10 +15,10 @@ The v17 architecture is a working multi-mode product backed by normalized JSON s
 | Unexpected Years | Preview | 40/73 years; intentionally sparse |
 | #1 US | Beta | 73/73 fixed chart leaders |
 | #1 Australia | Beta | 73/73 fixed chart leaders |
-| Movie Themes | Planned | New screen-theme mode; source memberships still need curation |
-| TV Themes | Planned | New screen-theme mode; source memberships still need curation |
-| TV & Movie Themes | Planned | Must be a deterministic union of Movie Themes + TV Themes, not separately curated |
-| Remix: Original Year | Planned | New playback-variant mechanic: hear a reviewed remix, answer with original song release year |
+| Movie Themes | Planned | Answer year = represented movie release year; source memberships/work evidence still need curation |
+| TV Themes | Planned | Answer year = represented show's Season 1 / series-premiere year; source memberships/work evidence still need curation |
+| TV & Movie Themes | Planned | Deterministic union of Movie Themes + TV Themes, inheriting each source work's answer year |
+| Remix: Original Year | Planned | Hear a reviewed remix, answer with original song release year |
 | Canonical source | Working v17 | 1,118 masters, shared across memberships |
 | Compiler | Working | Offline deterministic JSON compiler from `data/song-database.json` |
 | Provider links | Partially reviewed | Three preferred Spotify links; no preferred YouTube links; remaining imports are candidates |
@@ -32,7 +32,7 @@ The normalized JSON source separates master song facts from mode memberships and
 
 The current YouTube fallback searches from the browser and validates candidates through the public API. It is dependent on a restricted public key and quota. Search quota/auth failures must remain visible provider errors; they must not be treated as evidence that a song or year changed. Spotify preferred links are reviewed separately from unverified imports.
 
-The new screen-theme modes should remain relationships/memberships over the same canonical song records. `TV & Movie Themes` must be derived from its two source modes and deduplicated by canonical identity. `Remix: Original Year` needs an explicit reviewed remix playback reference while preserving the original song's `songId` and `release.answerYear` as the gameplay identity and answer.
+The new screen-theme modes require a separate screen-work answer-year basis. A theme song remains canonical music data with its own `release.answerYear`, while its movie/show relationship supplies the gameplay year for theme modes. Movie Themes use the movie's release year. TV Themes use the show's Season 1 / series-premiere year. `TV & Movie Themes` must be derived from its two source modes while preserving song-to-screen-work relationship identity. `Remix: Original Year` needs an explicit reviewed remix playback reference while preserving the original song's `songId` and `release.answerYear` as gameplay identity and answer.
 
 ## Roadmap
 
@@ -45,11 +45,12 @@ The new screen-theme modes should remain relationships/memberships over the same
 ### Mode expansion
 
 1. Generalise compiler/runtime validation so supported modes are driven by declared semantics where practical rather than repeated hard-coded ID lists.
-2. Add `movie_themes` and `tv_themes` membership/data support with screen-work metadata.
-3. Add `screen_themes` as the deterministic union of those two modes, deduplicated by canonical `songId`.
-4. Extend provider/recording relationships so `remix_original_year` can intentionally play a reviewed remix without contaminating normal-mode canonical playback.
-5. Curate reviewed seed catalogues, evidence, and playback assets for the new modes.
-6. Only make each mode selectable after its catalogue/runtime checks pass; sparse Preview operation is acceptable, silent fallback is not.
+2. Add a stable screen-work relationship model with verified movie release year / TV Season 1 premiere year and an explicit `screen` year basis.
+3. Add `movie_themes` and `tv_themes` source memberships using screen-work answer years, without mutating canonical song release years.
+4. Add `screen_themes` as the deterministic union of those two modes, preserving work identity and avoiding ambiguous duplicate audio with different answers.
+5. Extend provider/recording relationships so `remix_original_year` can intentionally play a reviewed remix without contaminating normal-mode canonical playback.
+6. Curate reviewed seed catalogues, screen-work evidence, and playback assets for the new modes.
+7. Only make each mode selectable after its catalogue/runtime checks pass; sparse Preview operation is acceptable, silent fallback is not.
 
 See `docs/MODE_EXPANSION_SPEC.md` for the detailed product and data contract.
 
@@ -67,4 +68,4 @@ See `docs/MODE_EXPANSION_SPEC.md` for the detailed product and data contract.
 
 ## Definition of green
 
-A release is green when source and generated v17 data agree, schema and runtime checks pass, the compiler is deterministic/offline, every active mode obeys year and identity invariants, Pages stages the complete public asset set, and no credentials or session data are committed.
+A release is green when source and generated v17 data agree, schema and runtime checks pass, the compiler is deterministic/offline, every active mode obeys its declared year and identity invariants, Pages stages the complete public asset set, and no credentials or session data are committed.
