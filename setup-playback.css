@@ -11,4 +11,15 @@
 .setup-device-picker select{width:100%;min-height:50px;border:1px solid var(--line2);border-radius:15px;background:#061013;color:var(--text);padding:0 12px}
 .setup-device-picker .btn{width:100%;min-height:46px}
 .setup-device-picker small{color:var(--muted);line-height:1.35}
-@media(max-width:520px){.setup-device-top{align-items:flex-start}.setup-device-change{min-height:42px;padding:0 14px}}
+@media(max-width:520px){
+  .setup-device-top{align-items:flex-start}
+  .setup-device-change{min-height:42px;padding:0 14px}
+  .screen-setup .setup-grid{
+    align-content:start;
+    overflow-y:auto;
+    overflow-x:hidden;
+    overscroll-behavior-y:contain;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:8px;
+  }
+}
