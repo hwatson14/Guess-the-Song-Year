@@ -5,7 +5,7 @@ const index=fs.readFileSync('index.html','utf8');
 const js=fs.readFileSync('setup-playback.js','utf8');
 const css=fs.readFileSync('setup-playback.css','utf8');
 
-assert.match(index,/setup-playback\.css\?v=7\.6\.2/,'setup playback CSS must be loaded');
+assert.match(index,/setup-playback\.css\?v=\d+\.\d+\.\d+/,'setup playback CSS must be loaded with a cache-busting version');
 assert.match(index,/app\.js\?v=7\.6\.1[\s\S]*setup-playback\.js\?v=7\.6\.2/,'setup playback enhancement must load after app.js');
 assert.match(js,/Playback device/,'setup must label the playback device explicitly');
 assert.match(js,/spotifyDevices\(\)/,'setup must use Spotify Connect device discovery');
