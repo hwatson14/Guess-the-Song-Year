@@ -4,13 +4,14 @@
 
 This repository is a static Guess the Song Year web product. Preserve the narrow, playable loop while data correctness is completed:
 
-- v17 has five selectable modes: Greatest Hits, Australian, Unexpected Years, #1 US, and #1 Australia.
+- v17 has five currently playable/selectable modes: Greatest Hits, Australian, Unexpected Years, #1 US, and #1 Australia.
 - Greatest Hits, Australian, #1 US, and #1 Australia are Beta; Unexpected Years is Preview.
+- Four additional product modes are now explicitly planned: Movie Themes, TV Themes, TV & Movie Themes, and Remix: Original Year. Read `docs/MODE_EXPANSION_SPEC.md` before implementing them.
 - Real cards and Virtual play support 1–6 teams, First to 10 or Unlimited, Resume, and browser/device Back handling.
 - A generic minimum/maximum year range is implemented and persisted. Virtual deals only eligible years; physical scans outside the range are rejected.
 - Spotify Premium playback and YouTube fallback remain provider paths. Provider failures must not change the card year.
 
-Read `README.md`, `docs/STATUS_AND_ROADMAP.md`, `docs/DATA_ARCHITECTURE.md`, the relevant runtime/data files, and relevant workflow files before material catalogue or database work. Harry’s latest explicit instruction has highest authority.
+Read `README.md`, `docs/STATUS_AND_ROADMAP.md`, `docs/DATA_ARCHITECTURE.md`, `docs/MODE_EXPANSION_SPEC.md` when relevant, the relevant runtime/data files, and relevant workflow files before material catalogue or database work. Harry’s latest explicit instruction has highest authority.
 
 ## Source and generated data
 
@@ -24,21 +25,24 @@ Provider IDs are playback facts, not canonical song identity. Reviewed preferred
 
 1. Release-year modes take their answer year from the master song's `release.answerYear`; chart modes take it from chart membership. Generated `song.year`, bucket year, and the answer shown to players must agree.
 2. Canonical identity is stable across modes; memberships reference one master song. `song_id` is immutable after creation and must not be regenerated when `canonicalKey`, title, or artist metadata changes.
-3. Alternate recordings, remasters, edits, remixes, live/acoustic versions, and re-recordings collapse where appropriate, while genuine titles containing words such as “Live”, “Radio”, “With”, or “Part” remain valid.
+3. Alternate recordings, remasters, edits, remixes, live/acoustic versions, and re-recordings collapse where appropriate, while genuine titles containing words such as “Live”, “Radio”, “With”, or “Part” remain valid. The planned Remix: Original Year mode is an explicit exception only for reviewed playback variants: the answer and no-repeat identity still belong to the canonical original song.
 4. Covers by distinct artists remain distinct unless explicitly reviewed otherwise.
 5. Ambiguous evidence is reviewed or omitted; it is never assigned a guessed year.
 6. Provider IDs and chart years never redefine canonical song/year truth.
 7. No-repeat uses canonical identity, not arbitrary provider IDs.
 8. Networked ingestion creates reviewable candidates; deployment and compilation do not discover new truth.
 9. Never commit credentials, tokens, browser session data, or private keys.
+10. TV & Movie Themes must be a deterministic union of Movie Themes and TV Themes, deduplicated by canonical identity. Do not curate an independent third copy of the same memberships.
 
 ## Engineering direction
 
-Keep `data/song-database.json` and verification ledgers reviewable. SQLite is an optional future query/validation workspace, not a required live backend or sole source of history. A future schema may split songs, recordings, evidence, provider tracks, chart entries, playlists, memberships, and cards, but must preserve the current compiler contract until equivalence is proven.
+Keep `data/song-database.json` and verification ledgers reviewable. SQLite is an optional future query/validation workspace, not a required live backend or sole source of history. A future schema may split songs, recordings, evidence, provider tracks, chart entries, screen works, playlists, memberships, and cards, but must preserve the current compiler contract until equivalence is proven.
 
 Future Spotify playlist import must resolve provider tracks to existing canonical songs and add memberships; unresolved tracks go to review. Do not create an independent Spotify song database or infer answer years from album metadata alone.
 
 Networked candidate refreshes should be separate from offline validation. CI validates source, generated catalogue, runtime, and deployment staging. Builders must not rewrite unrelated app code, docs, tests, or schemas as side effects.
+
+For the planned theme/remix expansion, prefer declared mode semantics over adding more hard-coded mode-ID lists. Movie Themes and TV Themes should share canonical songs and carry screen-work context as relationship/membership metadata. TV & Movie Themes should be derived from those two source modes. Remix: Original Year must play an explicitly reviewed remix recording while retaining the canonical original song's `release.answerYear` and `songId` as gameplay truth.
 
 ## Backlog
 
@@ -46,6 +50,8 @@ Networked candidate refreshes should be separate from offline validation. CI val
 - Improve provider reliability, especially YouTube search quota and embeddability handling.
 - Add normalized schema/migrations and optional SQLite validation workspace without making SQLite the only reviewable history.
 - Add reviewed Spotify playlist import as playlist membership.
+- Implement the four planned modes in `docs/MODE_EXPANSION_SPEC.md`: Movie Themes, TV Themes, derived TV & Movie Themes, and Remix: Original Year.
+- Generalise compiler/runtime mode support so future declared modes do not require brittle edits to multiple hard-coded ID lists.
 - Keep themed modes as shared memberships over canonical songs; do not duplicate song facts.
 
 Run the narrowest relevant checks first; catalogue/runtime changes require the full `node scripts/check.mjs` suite before release claims.
