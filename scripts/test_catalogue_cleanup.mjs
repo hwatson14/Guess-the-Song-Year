@@ -26,7 +26,12 @@ assert.deepEqual(new Set(archive.map(x=>x.id)),new Set(decisions.map(cleanupId))
 assert.equal(archive.filter(x=>x.original).length,baseline.rows.filter(x=>archive.some(a=>a.original&&a.mode===x.mode&&a.year===x.year&&fingerprint(a.original)===x.fingerprint)).length);
 for(const [mode,r] of Object.entries(reports)){
   assert.equal(r.songs,r.rawSongs,`${mode}: source and usable totals diverged`);
-  assert.equal(r.coverage,baseline.coverage[mode],`${mode}: year coverage changed`);
+  if(Object.hasOwn(baseline.coverage,mode))assert.equal(r.coverage,baseline.coverage[mode],`${mode}: year coverage changed`);
+  else{
+    assert.equal(manifest.modes[mode]?.status,'building',`${mode}: only declared building modes may be absent from the historical cleanup baseline`);
+    assert.equal(r.coverage,0,`${mode}: new building mode unexpectedly contains production rows`);
+    assert.equal(r.songs,0,`${mode}: new building mode unexpectedly contains production songs`);
+  }
 }
 for(const entry of archive){
   if(entry.replacement){
