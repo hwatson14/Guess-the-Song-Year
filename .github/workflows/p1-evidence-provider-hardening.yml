@@ -4,6 +4,10 @@ on:
   push:
     branches: [chatgpt/p1-evidence-provider]
 
+concurrency:
+  group: p1-evidence-provider-hardening
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
