@@ -8,6 +8,7 @@ const baseSong={title:'Example Song',artist:'Example Artist'};
 const key='example song|example artist';
 const track=(id,name='Example Song',artist='Example Artist')=>({id,name,uri:`spotify:track:${id}`,artists:[{name:artist}],external_urls:{spotify:`https://open.spotify.com/track/${id}`}});
 const ok=(data,status=200)=>({ok:true,status,json:async()=>data});
+const fail=(status,message='provider failed')=>({ok:false,status,json:async()=>({error:{message}})});
 
 function make({cache={},fetchImpl}={}){
   const storage=new Map([
@@ -71,4 +72,14 @@ function make({cache={},fetchImpl}={}){
   assert.equal(h.calls.filter(x=>x.includes('/search')).length,0);
 }
 
-console.log('Spotify static/cached identity validation regressions passed');
+{
+  const song={...baseSong,spotifyId:'servererror'};
+  const h=make({fetchImpl:async url=>{
+    if(url.pathname.endsWith('/tracks/servererror'))return fail(500,'temporary upstream error');
+    throw new Error('500 lookup must propagate instead of searching');
+  }});
+  await assert.rejects(()=>h.E.resolveSong(song,'spotify'),error=>error.status===500&&error.code==='SPOTIFY_API','non-404 Spotify lookup failures propagate');
+  assert.equal(h.calls.filter(x=>x.includes('/search')).length,0);
+}
+
+console.log('Spotify static/cached identity validation and error propagation regressions passed');
