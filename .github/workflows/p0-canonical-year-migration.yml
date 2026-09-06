@@ -23,7 +23,9 @@ jobs:
       - name: Install validation dependencies
         run: python -m pip install --disable-pip-version-check -r requirements-dev.txt
       - name: Materialize schema v2 and patch canonical source ownership
-        run: node scripts/migrations/2026-09-06-canonical-year-v2.mjs --write
+        run: |
+          node scripts/migrations/2026-09-06-canonical-year-v2.mjs --write
+          node scripts/migrations/2026-09-06-canonical-year-v2-followup.mjs --write
       - name: Rebuild generated catalogue and status
         run: |
           node scripts/song_database.mjs build
