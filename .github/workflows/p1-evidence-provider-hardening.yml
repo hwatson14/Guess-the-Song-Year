@@ -38,6 +38,7 @@ jobs:
           node scripts/migrations/2026-09-06-provider-incremental.mjs --write
           node scripts/migrations/2026-09-06-provider-policy-v2.mjs --write
           node scripts/migrations/2026-09-06-spotify-static-identity.mjs --write
+          node scripts/migrations/2026-09-06-p1-cache-bump.mjs --write
       - name: Syntax-check hardening tools
         run: python -m py_compile scripts/harden_release_evidence.py scripts/harden_provider_links.py scripts/test_hardening_policy.py
       - name: Confirm unresolved release years without changing answer years
