@@ -48,8 +48,8 @@ jobs:
           else
             echo "Release evidence baseline already materialized"
           fi
-      - name: Discover and verify next recording-linked provider chunk
-        run: python scripts/harden_provider_links.py --write --limit 50
+      - name: Discover and verify final recording-linked provider sample
+        run: python scripts/harden_provider_links.py --write --limit 10
       - name: Rebuild generated catalogue and status
         run: |
           node scripts/song_database.mjs build
