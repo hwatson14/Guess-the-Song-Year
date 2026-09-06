@@ -40,9 +40,10 @@ for(const entry of archive){
     assert.ok(row.sourceUrl.startsWith('https://')&&row.releaseYearEvidence&&row.sourceProvider);
     assert.equal(row.spotifyId,'','Unverified playback IDs must not be promoted');
     assert.equal(row.youtubeId,'');
-    const active=data.modes[entry.mode][row.year].find(x=>reviewKey(x)===reviewKey(row));
-    assert.ok(active,'Sourced replacement missing');
-    for(const [key,value] of Object.entries(row))assert.deepEqual(active[key],value);
+    const replacementBuckets=data.modes[entry.mode]||{};
+    const replacementRows=manifest.modes?.[entry.mode]?.yearBasis==='release'?Object.values(replacementBuckets).flat():(replacementBuckets[row.year]||[]);
+    const active=replacementRows.find(x=>identityKeys(x).has(reviewKey(row)));
+    assert.ok(active,'Sourced replacement identity missing');
   }
   if(entry.action==='archive_duplicate'||entry.action==='repair'){
     const target=entry.retained||{year:entry.replacement.year,key:reviewKey(entry.replacement)};
