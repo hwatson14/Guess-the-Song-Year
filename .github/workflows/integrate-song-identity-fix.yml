@@ -26,16 +26,26 @@ jobs:
         run: python -m pip install --disable-pip-version-check -r requirements-dev.txt
       - name: Merge current main and resolve validation overlaps
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin main
           set +e
           git merge origin/main --no-ff --no-commit
           merge_status=$?
           set -e
+          if [ "$merge_status" -ne 0 ] && [ "$merge_status" -ne 1 ]; then
+            echo "git merge failed before conflict resolution with status $merge_status"
+            exit "$merge_status"
+          fi
           conflicts="$(git diff --name-only --diff-filter=U)"
           unexpected="$(printf '%s\n' "$conflicts" | grep -Ev '^(scripts/check\.mjs|scripts/test_catalogue_cleanup\.mjs)$' || true)"
           if [ -n "$unexpected" ]; then
             echo "Unexpected merge conflicts:"
             printf '%s\n' "$unexpected"
+            exit 1
+          fi
+          if [ "$merge_status" -eq 1 ] && [ -z "$conflicts" ]; then
+            echo "Merge reported conflict status but no resolvable conflicts were found"
             exit 1
           fi
           echo "Merge status: $merge_status"
@@ -162,8 +172,6 @@ jobs:
         run: git diff --check
       - name: Commit integrated branch
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           rm .github/workflows/integrate-song-identity-fix.yml
           git add -A
           git commit -m "Integrate song identity dedupe with current main"
