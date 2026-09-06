@@ -40,7 +40,7 @@
 
     const report=modeReports[select.value],detail=root.querySelector('.mode-card .mode-detail b');
     if(report&&detail){
-      const basis=report.yearBasis==='chart'?'chart year':'release year';
+      const basis=report.yearBasis==='chart'?'chart year':report.yearBasis==='screen'?'screen-work year':'release year';
       const next=`${songCountLabel(report.songs)} · ${report.coverageLabel} · ${basis}`;
       if(detail.textContent!==next)detail.textContent=next;
     }

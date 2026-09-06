@@ -42,50 +42,5 @@ catalogue schema and instance valid
 number1_us provenance checks passed (73/73)
 number1_au provenance checks passed (73/73)
 physical-card evidence boundary regression tests passed
-node:internal/modules/run_main:123
-    triggerUncaughtException(
-    ^
-
-AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
-+ actual - expected
-
-  [
-    'australian',
-    'greatest',
--   'movie_themes',
-    'number1_au',
-    'number1_us',
--   'one_hit_wonders',
--   'remix_original_year',
--   'screen_themes',
--   'tv_themes',
-    'unexpected'
-  ]
-
-    at file:///home/runner/work/Guess-the-Song-Year/Guess-the-Song-Year/scripts/audit_catalogue_runtime.mjs:5:8 {
-  generatedMessage: true,
-  code: 'ERR_ASSERTION',
-  actual: [
-    'australian',
-    'greatest',
-    'number1_au',
-    'number1_us',
-    'unexpected'
-  ],
-  expected: [
-    'australian',
-    'greatest',
-    'movie_themes',
-    'number1_au',
-    'number1_us',
-    'one_hit_wonders',
-    'remix_original_year',
-    'screen_themes',
-    'tv_themes',
-    'unexpected'
-  ],
-  operator: 'deepStrictEqual',
-  diff: 'simple'
-}
-
-Node.js v22.23.2
+status-aware runtime variant audit passed {"greatest":{"status":"Beta","usableYears":73,"usableIdentities":877,"excludedRows":0},"australian":{"status":"Beta","usableYears":73,"usableIdentities":236,"excludedRows":0},"unexpected":{"status":"Preview","usableYears":40,"usableIdentities":40,"excludedRows":0},"number1_us":{"status":"Beta","usableYears":73,"usableIdentities":73,"excludedRows":0},"number1_au":{"status":"Beta","usableYears":73,"usableIdentities":73,"excludedRows":0}}
+All 41 application and catalogue checks passed.

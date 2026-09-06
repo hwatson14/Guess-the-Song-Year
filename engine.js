@@ -91,7 +91,7 @@
       if(!r.ok)throw new Error('mode manifest unavailable');
       const data=await r.json();
       for(const [id,meta] of Object.entries(data?.modes||{})){
-        if(MODES[id]&&meta&&typeof meta==='object')Object.assign(MODES[id],meta);
+        if(meta&&typeof meta==='object')MODES[id]=Object.assign(MODES[id]||{},meta);
       }
       modeManifest=data;return data;
     }).catch(()=>{modeManifest={version:0,modes:MODES};return modeManifest}).finally(()=>modeManifestPromise=null);
@@ -168,6 +168,7 @@
 
   async function resolveSpotify(song){
     if(!isSpotifyConnected())throw new AppError('SPOTIFY_NOT_CONNECTED','Connect the Spotify Premium account first.');
+    if(song.playbackPolicy==='membership-explicit'&&!song.spotifyId)throw new AppError('SPOTIFY_TRACK_NOT_FOUND',`No reviewed Spotify alternate is available for “${song.title}”. Switch provider or choose another card.`);
     const cached=cacheGet('spotify',song);
     if(cached?.id){
       try{const t=await spotifyApi(`/tracks/${encodeURIComponent(cached.id)}`);return spotifyTrack(t)}
@@ -175,8 +176,9 @@
     }
     if(song.spotifyId){
       try{const t=await spotifyApi(`/tracks/${encodeURIComponent(song.spotifyId)}`);cachePut('spotify',song,{id:t.id});return spotifyTrack(t)}
-      catch(err){if(err?.status!==404)throw err}
+      catch(err){if(err?.status!==404)throw err;if(song.playbackPolicy==='membership-explicit')throw new AppError('SPOTIFY_TRACK_NOT_FOUND',`The reviewed Spotify alternate for “${song.title}” is unavailable.`)}
     }
+    if(song.playbackPolicy==='membership-explicit')throw new AppError('SPOTIFY_TRACK_NOT_FOUND',`No reviewed Spotify alternate is available for “${song.title}”.`);
     const queries=[`track:${song.title} artist:${mainArtist(song.artist)}`,`${song.title} ${mainArtist(song.artist)}`];
     let best=null,bestScore=-99;
     for(const q of queries){
@@ -197,30 +199,35 @@
 
   function spotifyTrack(t){return {provider:'spotify',id:t.id,uri:t.uri,url:t.external_urls?.spotify||`https://open.spotify.com/track/${t.id}`,title:t.name,artist:(t.artists||[]).map(a=>a.name).join(', ')}}
 
+  function providerMatchSong(song){return song?.playbackTitle||song?.playbackArtist?{...song,title:song.playbackTitle||song.title,artist:song.playbackArtist||song.artist}:song}
+
   async function resolveYouTube(song){
+    const matchSong=providerMatchSong(song);
+    if(song.playbackPolicy==='membership-explicit'&&!song.youtubeId)throw new AppError('YOUTUBE_VIDEO_NOT_FOUND',`No reviewed YouTube alternate is available for “${song.title}”. Switch provider or choose another card.`);
     const cached=cacheGet('youtube',song);
     if(cached?.ids?.length){
       // Legacy entries remain readable, but are validated once and stamped into the
       // current cache format so deleted/private uploads do not stick indefinitely.
       const hasTimestamp=Number(cached.cachedAt)>0,age=hasTimestamp?Date.now()-Number(cached.cachedAt):0;
       if(!hasTimestamp||age<=YOUTUBE_CACHE_TTL_MS){
-        const valid=(await validateYouTubeIds(cached.ids)).filter(video=>youtubeCandidateAllowed(video,song));const ids=valid.map(x=>x.id);
+        const valid=(await validateYouTubeIds(cached.ids)).filter(video=>youtubeCandidateAllowed(video,matchSong));const ids=valid.map(x=>x.id);
         if(ids.length){cachePut('youtube',song,{...cached,ids});return {provider:'youtube',matchPolicy:YOUTUBE_MATCH_POLICY,videoId:ids[0],candidateIds:[...ids],url:`https://www.youtube.com/watch?v=${ids[0]}`,title:song.title,artist:song.artist,song};}
         cacheDrop('youtube',song);
       }else cacheDrop('youtube',song);
     }
     let ids=[];
     if(song.youtubeId)ids.push(song.youtubeId);
-    if(ids.length){const valid=(await validateYouTubeIds(ids)).filter(video=>youtubeCandidateAllowed(video,song));ids=valid.map(x=>x.id)}
+    if(ids.length){const valid=(await validateYouTubeIds(ids)).filter(video=>youtubeCandidateAllowed(video,matchSong));ids=valid.map(x=>x.id)}
+    if(!ids.length&&song.playbackPolicy==='membership-explicit')throw new AppError('YOUTUBE_VIDEO_NOT_FOUND',`The reviewed YouTube alternate for “${song.title}” is unavailable.`);
     if(!ids.length){
-      const q=`${song.title} ${mainArtist(song.artist)} official audio`;
+      const q=`${matchSong.title} ${mainArtist(matchSong.artist)} official audio`;
       const url=`https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&videoEmbeddable=true&videoSyndicated=true&maxResults=8&safeSearch=none&regionCode=AU&q=${encodeURIComponent(q)}&key=${encodeURIComponent(YOUTUBE_API_KEY)}`;
       const r=await fetch(url);const payload=await r.json().catch(()=>({}));
       if(!r.ok){const quota=/quota/i.test(payload?.error?.message||'');throw new AppError(quota?'YOUTUBE_QUOTA':'YOUTUBE_SEARCH_FAILED',quota?'YouTube search quota is temporarily exhausted. Use Spotify or try again later.':`YouTube search failed (${r.status}).`,r.status)}
       const raw=(payload.items||[]).map(x=>({id:x.id?.videoId,title:x.snippet?.title||'',channel:x.snippet?.channelTitle||''})).filter(x=>x.id);
-      const valid=(await validateYouTubeIds(raw.map(x=>x.id))).filter(video=>youtubeCandidateAllowed(video,song));
+      const valid=(await validateYouTubeIds(raw.map(x=>x.id))).filter(video=>youtubeCandidateAllowed(video,matchSong));
       const byId=new Map(valid.map(x=>[x.id,x]));
-      valid.sort((a,b)=>youtubeScore(byId.get(b.id),song)-youtubeScore(byId.get(a.id),song));
+      valid.sort((a,b)=>youtubeScore(byId.get(b.id),matchSong)-youtubeScore(byId.get(a.id),matchSong));
       ids=valid.map(x=>x.id);
     }
     if(!ids.length)throw new AppError('YOUTUBE_VIDEO_NOT_FOUND',`YouTube could not find an embeddable version of “${song.title}”.`);

@@ -153,7 +153,7 @@
         <section class="card option-card mode-card">
           <div class="option-head"><h3>1. Music mode</h3><span class="mode-status ${modeStatusClass(cfg.mode)}">${esc(report.statusLabel)}</span></div>
           <select class="mode-select" data-mode-picker aria-label="Music mode">${modeOptions}</select>
-          <div class="mode-detail"><b>${esc(report.coverageLabel)} · ${report.yearBasis==='chart'?'chart year':'release year'}</b><span>${esc(info.desc)} ${esc(report.statusNote)}</span></div>
+          <div class="mode-detail"><b>${esc(report.coverageLabel)} · ${report.yearBasis==='chart'?'chart year':report.yearBasis==='screen'?'screen-work year':'release year'}</b><span>${esc(info.desc)} ${esc(report.statusNote)}</span></div>
         </section>
         <section class="card option-card">
           <div class="option-head"><h3>2. Play style</h3><span>${cfg.playMode==='physical'?'QR cards + camera':'Fully in-app timeline'}</span></div>
