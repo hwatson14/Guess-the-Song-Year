@@ -39,12 +39,19 @@ jobs:
             console.log(JSON.stringify({provider,collisions},null,2));
           }
           JS
-      - name: Add verified Roxette provider correction to migration
+      - name: Patch migration provider transfer and Roxette correction
         run: |
           python - <<'PY'
           from pathlib import Path
           p=Path('scripts/migrations/2026-09-06-song-identity-dedupe.mjs')
           text=p.read_text()
+
+          broken="for(const removed of existingRemoved)mergeProvider(keep.providers[provider],removed.providers?.[provider]);"
+          fixed="for(const removedId of existingRemoved)mergeProvider(keep.providers[provider],db.songs[removedId]?.providers?.[provider]);"
+          if broken not in text:
+              raise SystemExit('expected provider-transfer bug not found')
+          text=text.replace(broken,fixed)
+
           anchor="const BAD_PROVIDER_LINKS=[\n"
           addition="  {songId:'song_c5aef0dc987135ed9bac',provider:'spotify',id:'6kvoHl80mfCVTv7XnZkjQn',reason:'This Spotify track is the 1990 Pretty Woman recording, not the distinct 1987 Christmas recording.'},\n"
           if addition not in text:
@@ -53,7 +60,7 @@ jobs:
           PY
       - name: Apply dedupe migration
         run: node scripts/migrations/2026-09-06-song-identity-dedupe.mjs --write
-      - name: Diagnose post-merge provider references
+      - name: Assert post-merge provider references
         run: |
           node --input-type=module <<'JS'
           import fs from 'node:fs';
@@ -63,10 +70,11 @@ jobs:
             const song=db.songs[m.songId];
             for(const provider of ['spotify','youtube']){
               const ref=m.providerRefs?.[provider];
-              if(ref&&!song?.providers?.[provider]?.links?.some(x=>x.id===ref))dangling.push({songId:m.songId,title:song?.title,artist:song?.artist,mode:m.mode,year:m.year,provider,ref,masterLinks:(song?.providers?.[provider]?.links||[]).map(x=>x.id)});
+              if(ref&&!song?.providers?.[provider]?.links?.some(x=>x.id===ref))dangling.push({songId:m.songId,title:song?.title,artist:song?.artist,mode:m.mode,year:m.year,provider,ref});
             }
           }
-          console.log(JSON.stringify({dangling},null,2));
+          if(dangling.length)throw new Error(`Dangling provider refs after merge: ${JSON.stringify(dangling)}`);
+          console.log('No dangling provider refs after merge');
           JS
       - name: Rebuild generated catalogue and coverage report
         run: |
