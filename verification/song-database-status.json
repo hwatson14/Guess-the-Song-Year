@@ -5,13 +5,13 @@
     "spotify": {
       "linked": 604,
       "missing": 502,
-      "metadataChecked": 603,
+      "metadataChecked": 604,
       "verified": 4
     },
     "youtube": {
       "linked": 430,
       "missing": 676,
-      "metadataChecked": 415,
+      "metadataChecked": 416,
       "verified": 0
     }
   },

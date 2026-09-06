@@ -26,7 +26,7 @@ LEDGER_PATH = ROOT / "verification" / "provider-recording-research.json"
 QUEUE_PATH = ROOT / "verification" / "provider-hardening-review-queue.json"
 CACHE = ROOT / "output" / "provider-hardening" / "recordings"
 USER_AGENT = "Guess-the-Song-Year/1.0 (provider hardening; https://github.com/hwatson14/Guess-the-Song-Year)"
-POLICY = "musicbrainz-recording-provider-v1"
+POLICY = "musicbrainz-recording-provider-v2"
 MB_RE = re.compile(r"^https?://musicbrainz\.org/recording/([0-9a-f-]{36})(?:[/?#].*)?$", re.I)
 SPOTIFY_RE = re.compile(r"^https?://open\.spotify\.com/track/([A-Za-z0-9]{22})(?:\?.*)?$", re.I)
 YT_WATCH_RE = re.compile(r"^https?://(?:www\.)?youtube\.com/watch\?v=([A-Za-z0-9_-]{11})(?:[&#].*)?$", re.I)

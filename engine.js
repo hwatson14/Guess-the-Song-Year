@@ -101,7 +101,7 @@
   async function loadCatalogue(){
     if(catalogue)return catalogue;
     if(cataloguePromise)return cataloguePromise;
-    cataloguePromise=fetch('./data/catalogue.json?v=7.6.1',{cache:'no-store'}).then(async r=>{
+    cataloguePromise=fetch('./data/catalogue.json?v=7.6.6',{cache:'no-store'}).then(async r=>{
       if(!r.ok)throw new AppError('CATALOGUE_UNAVAILABLE','The song catalogue is unavailable. Reload the app in a moment.',r.status);
       const data=await r.json();
       if(!data?.modes)throw new AppError('CATALOGUE_INVALID','The song catalogue is invalid.');
@@ -166,29 +166,43 @@
     return resolveYouTube(song);
   }
 
+  function spotifyCandidateScore(track,song){
+    const title=track?.name||'',expectedArtist=norm(mainArtist(song?.artist||'')).replace(/^the\s+/, '');
+    const artistSimilarity=Math.max(0,...(track?.artists||[]).map(a=>similarity(norm(a?.name||'').replace(/^the\s+/, ''),expectedArtist)));
+    const titleSimilarity=similarity(title,song?.title||'');
+    if(titleSimilarity<0.75||artistSimilarity<0.75)return -99;
+    let score=titleSimilarity*2.5+artistSimilarity*1.5;
+    if(/karaoke|tribute|cover|sped up|slowed|remaster|live|remix/i.test(title)&&!/(live|remaster|remix)/i.test(song?.title||''))score-=1.2;
+    return score;
+  }
+  function spotifyCandidateAllowed(track,song){return spotifyCandidateScore(track,song)>=2.2}
+
   async function resolveSpotify(song){
     if(!isSpotifyConnected())throw new AppError('SPOTIFY_NOT_CONNECTED','Connect the Spotify Premium account first.');
+    const matchSong=providerMatchSong(song);
     if(song.playbackPolicy==='membership-explicit'&&!song.spotifyId)throw new AppError('SPOTIFY_TRACK_NOT_FOUND',`No reviewed Spotify alternate is available for “${song.title}”. Switch provider or choose another card.`);
     const cached=cacheGet('spotify',song);
     if(cached?.id){
-      try{const t=await spotifyApi(`/tracks/${encodeURIComponent(cached.id)}`);return spotifyTrack(t)}
-      catch(err){if(err?.status!==404)throw err}
+      try{
+        const t=await spotifyApi(`/tracks/${encodeURIComponent(cached.id)}`);
+        if(spotifyCandidateAllowed(t,matchSong))return spotifyTrack(t);
+        cacheDrop('spotify',song);
+      }catch(err){if(err?.status!==404)throw err;cacheDrop('spotify',song)}
     }
     if(song.spotifyId){
-      try{const t=await spotifyApi(`/tracks/${encodeURIComponent(song.spotifyId)}`);cachePut('spotify',song,{id:t.id});return spotifyTrack(t)}
-      catch(err){if(err?.status!==404)throw err;if(song.playbackPolicy==='membership-explicit')throw new AppError('SPOTIFY_TRACK_NOT_FOUND',`The reviewed Spotify alternate for “${song.title}” is unavailable.`)}
+      try{
+        const t=await spotifyApi(`/tracks/${encodeURIComponent(song.spotifyId)}`);
+        if(spotifyCandidateAllowed(t,matchSong)){cachePut('spotify',song,{id:t.id});return spotifyTrack(t)}
+        if(song.playbackPolicy==='membership-explicit')throw new AppError('SPOTIFY_TRACK_NOT_FOUND',`The reviewed Spotify alternate for “${song.title}” no longer matches its expected recording metadata.`);
+      }catch(err){if(err?.status!==404)throw err;if(song.playbackPolicy==='membership-explicit')throw new AppError('SPOTIFY_TRACK_NOT_FOUND',`The reviewed Spotify alternate for “${song.title}” is unavailable.`)}
     }
     if(song.playbackPolicy==='membership-explicit')throw new AppError('SPOTIFY_TRACK_NOT_FOUND',`No reviewed Spotify alternate is available for “${song.title}”.`);
-    const queries=[`track:${song.title} artist:${mainArtist(song.artist)}`,`${song.title} ${mainArtist(song.artist)}`];
+    const queries=[`track:${matchSong.title} artist:${mainArtist(matchSong.artist)}`,`${matchSong.title} ${mainArtist(matchSong.artist)}`];
     let best=null,bestScore=-99;
     for(const q of queries){
       const d=await spotifyApi(`/search?q=${encodeURIComponent(q)}&type=track&limit=10`);
       for(const t of d?.tracks?.items||[]){
-        const title=t.name||'',artist=(t.artists||[]).map(a=>a.name).join(' ');
-        const titleSimilarity=similarity(title,song.title),artistSimilarity=similarity(artist,song.artist);
-        if(titleSimilarity<0.75||artistSimilarity<0.45)continue;
-        let score=titleSimilarity*2.5+artistSimilarity*1.5;
-        if(/karaoke|tribute|cover|sped up|slowed|remaster|live/i.test(title)&&!/(live|remaster)/i.test(song.title||''))score-=1.2;
+        const score=spotifyCandidateScore(t,matchSong);
         if(score>bestScore){best=t;bestScore=score}
       }
       if(best&&bestScore>=2.2)break;
