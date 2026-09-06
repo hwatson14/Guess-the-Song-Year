@@ -31,7 +31,21 @@
   function songCountLabel(value){const n=Math.max(0,Number(value)||0);return `${n.toLocaleString()} ${n===1?'song':'songs'}`}
   function yearBasisLabel(report=modeReport()){return report.yearBasis==='chart'?'chart year':report.yearBasis==='screen'?'movie/show year':report.yearBasis==='original'?'original song year':'release year'}
   function placementLabel(years,index){return index===0?`Before ${years[0]??'timeline'}`:index===years.length?`After ${years.at(-1)??'timeline'}`:`Between ${years[index-1]} and ${years[index]}`}
-  function placementLockCopy(){if(pendingSlot===null)return 'Lock Placement';const years=[...(activeTeam().timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b),label=placementLabel(years,pendingSlot);return `Lock ${label.charAt(0).toLowerCase()}${label.slice(1)}`}
+  function timelineYearGroups(years){
+    const groups=[];
+    for(let i=0;i<years.length;i++){
+      const year=years[i],last=groups.at(-1);
+      if(last?.year===year)last.count++;
+      else groups.push({year,count:1,start:i});
+    }
+    return {groups,maxCount:Math.max(1,...groups.map(group=>group.count))};
+  }
+  function placementBoundarySlot(years,index){
+    let slot=Math.max(0,Math.min(years.length,Number(index)||0));
+    while(slot>0&&slot<years.length&&years[slot-1]===years[slot])slot++;
+    return slot;
+  }
+  function placementLockCopy(){if(pendingSlot===null)return 'Lock Placement';const years=[...(activeTeam().timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b),slot=placementBoundarySlot(years,pendingSlot),label=placementLabel(years,slot);return `Lock ${label.charAt(0).toLowerCase()}${label.slice(1)}`}
   function selectedRange(){const settings=match?.settings||cfg;return P.normalizeYearRange(settings.minYear,settings.maxYear)}
   function rangeStats(id=cfg.mode){const range=selectedRange();return {...P.rangeStats(modeReport(id),range.minYear,range.maxYear),eligibleCards:virtualCardsForMode(id).length}}
   function yearHasAvailableSong(year){const report=modeReport(modeId());if(!(report.years||[]).includes(Number(year)))return false;if(report.repeatPolicy==='fixed')return true;const keys=report.yearSongKeys?.[year]||report.yearSongKeys?.[String(year)]||[],legacy=report.songLegacyKeys?.[year]||report.songLegacyKeys?.[String(year)]||{};return keys.some(k=>!(match?.used||[]).includes(k)&&!(legacy[k]||[]).some(alias=>(match?.used||[]).includes(alias)))}
@@ -223,10 +237,14 @@
     const teams=(match?.teams||[]).map((team,index)=>({team,index}));
     return `<div class="timeline-board" aria-label="Team timelines" data-team-count="${teams.length}">${teams.map(({team,index})=>{
       const active=index===match.turn,years=[...(team.timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b);
-      const choosing=interactive&&active&&cfg.playMode==='virtual',hasPlacement=choosing&&pendingSlot!==null;
-      const slot=i=>{const label=placementLabel(years,i),selected=pendingSlot===i;return `<button class="timeline-slot placement-gap ${selected?'on selected':''}" data-slot="${i}" aria-label="${esc(label)}" aria-pressed="${selected}" ${bonusBusy?'disabled':''}>${selected?'<span class="timeline-mystery"><b>?</b><small>Your song</small></span>':'<span class="timeline-plus">+</span>'}</button>`};
-      const cards=years.map((year,i)=>`${choosing?slot(i):''}<span class="timeline-year">${year}</span>`).join('')+(choosing?slot(years.length):'');
-      return `<section class="team-timeline ${active?'active-team':''}" aria-label="${esc(team.name)} timeline"><div class="team-timeline-header"><h2>${esc(team.name)}${active?' <small>Your turn</small>':''}</h2><div class="team-timeline-totals"><b>${team.score}${cfg.victory==='10'?'/10':''} cards</b><span>${bonusBalance(team)} bonus</span></div></div><div class="timeline-years ${hasPlacement?'has-placement':''}">${cards||'<span class="timeline-empty">No cards collected yet</span>'}</div></section>`;
+      const choosing=interactive&&active&&cfg.playMode==='virtual',displaySlot=choosing&&pendingSlot!==null?placementBoundarySlot(years,pendingSlot):null,hasPlacement=displaySlot!==null;
+      const {groups,maxCount}=timelineYearGroups(years);
+      const slot=i=>{const boundary=placementBoundarySlot(years,i),label=placementLabel(years,boundary),selected=displaySlot===boundary;return `<button class="timeline-slot placement-gap ${selected?'on selected':''}" data-slot="${boundary}" aria-label="${esc(label)}" aria-pressed="${selected}" ${bonusBusy?'disabled':''}>${selected?'<span class="timeline-mystery"><b>?</b><small>Your song</small></span>':'<span class="timeline-plus">+</span>'}</button>`};
+      const rows=groups.map(group=>{
+        const cards=Array.from({length:group.count},(_,cardIndex)=>`<span class="timeline-card" aria-hidden="true" data-card-index="${cardIndex+1}"></span>`).join('');
+        return `${choosing?slot(group.start):''}<div class="timeline-year-row" data-year="${group.year}"><span class="timeline-year-label">${group.year}</span><span class="timeline-card-stack" style="--timeline-cols:${maxCount}">${cards}</span></div>`;
+      }).join('')+(choosing?slot(years.length):'');
+      return `<section class="team-timeline ${active?'active-team':''}" aria-label="${esc(team.name)} timeline"><div class="team-timeline-header"><h2>${esc(team.name)}${active?' <small>Your turn</small>':''}</h2><div class="team-timeline-totals"><b>${team.score}${cfg.victory==='10'?'/10':''} cards</b><span>${bonusBalance(team)} bonus</span></div></div><div class="timeline-years ${hasPlacement?'has-placement':''}">${rows||'<span class="timeline-empty">No cards collected yet</span>'}</div></section>`;
     }).join('')}</div>`;
   }
   function bonusActions(award=false){
@@ -827,7 +845,7 @@
   }
   function lockPlacement(){
     if(bonusBusy||pendingSlot===null||!current||cfg.playMode!=='virtual'||!['playing','guess'].includes(screen))return;
-    const team=activeTeam(),years=[...(team.timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b),slot=pendingSlot;
+    const team=activeTeam(),years=[...(team.timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b),slot=placementBoundarySlot(years,pendingSlot);
     if(!Number.isInteger(slot)||slot<0||slot>years.length){toast('Choose a valid placement first.');pendingSlot=null;match.pendingSlot=null;saveMatch();render();return}
     const left=slot>0?years[slot-1]:null,right=slot<years.length?years[slot]:null;
     const correct=P.placementIsCorrect(years,slot,current.year);
