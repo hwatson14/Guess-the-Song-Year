@@ -1,5 +1,6 @@
 name: Apply remaining issue patches
 
+# One-shot branch maintenance workflow. Remove after the patch commit lands.
 on:
   push:
     branches: [fix/remaining-issues-audit]
