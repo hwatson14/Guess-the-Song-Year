@@ -1,5 +1,6 @@
 name: Copy reviewed mode data
 
+# One-shot integration workflow; removed after the runtime/data commit lands.
 on:
   push:
     branches: [fix/mode-preview-pools-v2]
