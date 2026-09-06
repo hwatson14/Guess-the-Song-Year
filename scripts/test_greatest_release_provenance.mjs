@@ -20,11 +20,13 @@ expect('I Want to Hold Your Hand',1963);
 expect('Need You Tonight',1987);
 expect('Footloose',1984);
 expect('Heat Waves',2020);
+expect('Candle in the Wind 1997',1997);
 
 const tears=buckets['1966'].find(song=>song.title==='96 Tears'&&String(song.artist).includes('Mysterians'));
 if(!tears||tears.releaseYearEvidence!=='Wikipedia song/single infobox release date')throw new Error('the original 96 Tears recording lacks release evidence');
-if(!buckets['1997'].some(song=>song.title==='Candle in the Wind'))throw new Error('Candle in the Wind must remain unresolved in 1997 for now');
+const candle=buckets['1997'].find(song=>song.title==='Candle in the Wind 1997'&&song.artist==='Elton John');
+if(!candle||candle.evidenceState!=='externally_observed'||!String(candle.sourceUrl||'').startsWith('https://www.officialcharts.com/'))throw new Error('Candle in the Wind 1997 must carry accepted 1997 release evidence');
 const covered=Object.keys(buckets).map(Number).filter(year=>buckets[year].length);
 const missing=Array.from({length:73},(_,i)=>1950+i).filter(year=>!covered.includes(year));
 if(catalogue.coverage.greatest!==covered.length||JSON.stringify(catalogue.missing.greatest)!==JSON.stringify(missing))throw new Error("Greatest coverage metadata must agree with the actual catalogue");
-console.log('Greatest Wikipedia release-year checks passed (76 distinct verified)');
+console.log('Greatest release-year provenance checks passed (76 Wikipedia rows plus accepted supplemental evidence)');
