@@ -27,6 +27,7 @@ jobs:
           node scripts/migrations/2026-09-06-canonical-year-v2.mjs --write
           node scripts/migrations/2026-09-06-canonical-year-v2-followup.mjs --write
           node scripts/migrations/2026-09-06-canonical-year-v2-verification-followup.mjs --write
+          node scripts/migrations/2026-09-06-release-cache-bump.mjs --write
       - name: Rebuild generated catalogue and status
         run: |
           node scripts/song_database.mjs build
@@ -47,5 +48,5 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Materialize canonical song identity and release years"
+          git commit -m "Finalize canonical identity release assets"
           git push origin HEAD:${GITHUB_REF_NAME}
