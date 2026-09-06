@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {compileDatabase,migrateCatalogue} from './song_database.mjs';
+import {compileDatabase,migrateCatalogue,membershipAnswerYear} from './song_database.mjs';
 import {catalogueEngine,loadProductionCatalogue} from './catalogue_runtime.mjs';
 const db=JSON.parse(fs.readFileSync('data/song-database.json','utf8'));
 const {data,manifest}=loadProductionCatalogue(),E=catalogueEngine(data,manifest);
@@ -65,7 +65,7 @@ assert.throws(()=>compileDatabase({...migrated,memberships:[{...migrated.members
 assert.throws(()=>compileDatabase({...migrated,memberships:[...migrated.memberships,migrated.memberships[0]]}),/Duplicate membership/);
 for(const m of db.memberships){
   const info=manifest.modes[m.mode],song=db.songs[m.songId];assert.ok(info&&song);
-  const answerYear=info.yearBasis==='release'?Number(song.release.answerYear):Number(m.year);
+  const answerYear=membershipAnswerYear(m,song,info);
   assert.ok(data.years.includes(answerYear));
 }
 assert.equal(new Set(Object.values(data.modes).flatMap(b=>Object.values(b).flat()).map(E.songUseKey)).size,Object.keys(db.songs).length);
