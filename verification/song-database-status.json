@@ -1,15 +1,15 @@
 {
-  "songs": 1106,
-  "memberships": 1298,
+  "songs": 1107,
+  "memberships": 1460,
   "providers": {
     "spotify": {
-      "linked": 604,
+      "linked": 605,
       "missing": 502,
       "metadataChecked": 604,
       "verified": 4
     },
     "youtube": {
-      "linked": 430,
+      "linked": 431,
       "missing": 676,
       "metadataChecked": 416,
       "verified": 0
@@ -17,7 +17,7 @@
   },
   "releaseEvidence": {
     "unresolved": 249,
-    "externally_observed": 857
+    "externally_observed": 858
   },
   "greatestDepth": {
     "1950": {
@@ -133,7 +133,7 @@
       "needed": 0
     },
     "1978": {
-      "songs": 12,
+      "songs": 13,
       "needed": 0
     },
     "1979": {
@@ -153,7 +153,7 @@
       "needed": 0
     },
     "1983": {
-      "songs": 12,
+      "songs": 13,
       "needed": 0
     },
     "1984": {
