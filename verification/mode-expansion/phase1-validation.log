@@ -1,0 +1,33 @@
+engine-v7 multi-mode status and underlying-song regression tests passed
+runtime coverage, identity counts, filtering and exhaustion regressions passed
+runtime recovery VM regressions passed: provider reconciliation, failed fixed upload, stale YouTube startup and all three stale Spotify paths
+Spotify legacy migration and disconnect regression tests passed
+YouTube playback lifecycle regression tests passed
+Year-gap evidence, runtime eligibility, identity and idempotence checks passed (15 additions)
+year range VM regressions passed: starters, persistence, finite exhaustion, refills, fixed repeats, scan rejection and provider failures
+catalogue identity checks passed without mutating production data
+Shared database checks passed: 1118 master records and 1299 memberships; lossless generation and shared edits verified.
+mode expansion manifest, release/screen/composite and explicit-remix semantics passed
+Provider audit history, failure preservation and verification boundary checks passed.
+Preferred provider changes override cached searches for Spotify and YouTube.
+Reviewed playback selection rejects conflicting identity, version, date and source evidence.
+Reviewed date corrections retain prior evidence and full year-pool depth.
+Expansion evidence checks passed: 688 memberships with retained recording metadata.
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: movie_themes: year coverage changed
+
+0 !== undefined
+
+    at file:///home/runner/work/Guess-the-Song-Year/Guess-the-Song-Year/scripts/test_catalogue_cleanup.mjs:29:10 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 0,
+  expected: undefined,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.23.2
