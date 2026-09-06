@@ -13,21 +13,18 @@ Preferred provider changes override cached searches for Spotify and YouTube.
 Reviewed playback selection rejects conflicting identity, version, date and source evidence.
 Reviewed date corrections retain prior evidence and full year-pool depth.
 Expansion evidence checks passed: 688 memberships with retained recording metadata.
-node:internal/modules/run_main:123
-    triggerUncaughtException(
-    ^
-
-AssertionError [ERR_ASSERTION]: movie_themes: year coverage changed
-
-0 !== undefined
-
-    at file:///home/runner/work/Guess-the-Song-Year/Guess-the-Song-Year/scripts/test_catalogue_cleanup.mjs:29:10 {
-  generatedMessage: false,
-  code: 'ERR_ASSERTION',
-  actual: 0,
-  expected: undefined,
-  operator: 'strictEqual',
-  diff: 'simple'
-}
-
-Node.js v22.23.2
+Catalogue cleanup checks passed: 665 originals accounted for, 79 decisions, zero hidden exclusions, saved aliases and idempotency verified.
+catalogue bucket uniqueness checks passed
+same-year playback-ID uniqueness checks passed
+Greatest Wikipedia release-year checks passed (76 distinct verified)
+Australian release audit checks passed (17 verified, 1 recording master unresolved)
+bonus gameplay VM regressions passed
+physical ready gate regression tests passed
+engine playback fixes passed: YouTube cache expiry/revalidation, Spotify match floor, serialized device commands
+app policy regression tests passed
+card year override regression tests passed
+security storage and vendored dependency regression tests passed
+Setup playback UI contract passed.
+Mobile setup scroll regression tests passed
+Mode label song-count and year-basis UI contract passed.
+catalogue validation failed: catalogue and mode manifest disagree: catalogue=['australian', 'greatest', 'number1_au', 'number1_us', 'unexpected'], manifest=['australian', 'greatest', 'movie_themes', 'number1_au', 'number1_us', 'one_hit_wonders', 'remix_original_year', 'screen_themes', 'tv_themes', 'unexpected']
