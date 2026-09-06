@@ -1,0 +1,52 @@
+name: P1 evidence and provider hardening
+
+on:
+  push:
+    branches: [chatgpt/p1-evidence-provider]
+
+permissions:
+  contents: write
+
+jobs:
+  harden:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install validation dependency
+        run: python -m pip install --disable-pip-version-check -r requirements-dev.txt
+      - name: Syntax-check hardening tools
+        run: python -m py_compile scripts/harden_release_evidence.py scripts/harden_provider_links.py
+      - name: Confirm unresolved release years without changing answer years
+        run: python scripts/harden_release_evidence.py --write
+      - name: Discover and verify recording-linked provider assets
+        run: python scripts/harden_provider_links.py --write
+      - name: Rebuild generated catalogue and review reports
+        run: |
+          node scripts/song_database.mjs build
+          node scripts/song_database_report.mjs --write
+          node scripts/provider_review_report.mjs --write
+      - name: Full regression gate
+        run: node scripts/check.mjs
+      - name: Diff hygiene
+        run: git diff --check
+      - name: Commit hardened evidence and provider data
+        shell: bash
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No hardening changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Materialize P1 evidence and provider hardening"
+          git push origin HEAD:${GITHUB_REF_NAME}
