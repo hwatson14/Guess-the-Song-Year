@@ -9,6 +9,7 @@ on:
       - 'scripts/preserve_unexpected_superseded_claims.mjs'
       - 'scripts/test_catalogue_expansion.mjs'
       - 'scripts/test_unexpected_years_200.mjs'
+      - 'scripts/test_catalogue_cleanup.mjs'
       - 'scripts/check.mjs'
       - 'scripts/song_database_report.mjs'
       - '.github/workflows/finish-unexpected-years-200.yml'
