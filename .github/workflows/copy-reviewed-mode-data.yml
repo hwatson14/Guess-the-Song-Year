@@ -1,0 +1,30 @@
+name: Copy reviewed mode data
+
+on:
+  push:
+    branches: [fix/mode-preview-pools-v2]
+    paths:
+      - .github/workflows/copy-reviewed-mode-data.yml
+
+permissions:
+  contents: write
+
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: fix/mode-preview-pools-v2
+          fetch-depth: 0
+      - name: Copy validated canonical mode data from completed build commit
+        run: |
+          git fetch origin 3efb8992c3c8e1d0b9abe30e744f1001192b7638
+          git checkout 3efb8992c3c8e1d0b9abe30e744f1001192b7638 -- data/song-database.json data/catalogue.json data/modes.json
+      - name: Commit reviewed mode data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/song-database.json data/catalogue.json data/modes.json
+          git commit -m "Add reviewed Preview mode pools"
+          git push origin HEAD:fix/mode-preview-pools-v2
