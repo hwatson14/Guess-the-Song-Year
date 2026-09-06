@@ -14,7 +14,10 @@ assert.match(engine,/localStorage\.removeItem\(LS\.token\)/);
 assert.doesNotMatch(engine,/saveSessionJSON|gsy\.spotifyToken\.v7/);
 assert.match(engine,/spotifyAccessToken\(true\)/);
 assert.match(engine,/r\.status===401&&!retried/);
-assert.match(engine,/catch\(err\)\{if\(err\?\.status!==404\)throw err\}/);
+// Candidate lookup may recover from 404 only. The resolver can perform cleanup after
+// that guard, so do not couple this security check to the exact catch-body shape.
+assert.match(engine,/if\(err\?\.status!==404\)throw err/);
+assert.doesNotMatch(engine,/if\(err\?\.status===500\).*continue/);
 assert.doesNotMatch(engine,/setSpotifyDevice\(chosen\.id\)/);
 assert.match(engine,/function enqueueSpotifyPlayback\(task\)/);
 assert.match(engine,/function pauseSpotify\(\)\{return enqueueSpotifyPlayback\(/);
