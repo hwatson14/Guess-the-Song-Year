@@ -101,7 +101,7 @@
   async function loadCatalogue(){
     if(catalogue)return catalogue;
     if(cataloguePromise)return cataloguePromise;
-    cataloguePromise=fetch('./data/catalogue.json?v=7.5.19',{cache:'no-store'}).then(async r=>{
+    cataloguePromise=fetch('./data/catalogue.json?v=7.6.1',{cache:'no-store'}).then(async r=>{
       if(!r.ok)throw new AppError('CATALOGUE_UNAVAILABLE','The song catalogue is unavailable. Reload the app in a moment.',r.status);
       const data=await r.json();
       if(!data?.modes)throw new AppError('CATALOGUE_INVALID','The song catalogue is invalid.');
