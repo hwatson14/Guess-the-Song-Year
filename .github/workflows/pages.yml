@@ -38,8 +38,8 @@ jobs:
       - name: Stage public application files
         run: |
           mkdir -p _site/data
-          cp index.html app.css app.js app-policy.js engine.js engine-v7.js setup-playback.css setup-playback.js robots.txt THIRD_PARTY_NOTICES.md _site/
-          cp data/catalogue.json data/modes.json _site/data/
+          cp index.html app.css app.js app-policy.js engine.js engine-v7.js mode-expansion.js setup-playback.css setup-playback.js robots.txt THIRD_PARTY_NOTICES.md _site/
+          cp data/catalogue.json data/modes.json data/mode-expansion.json _site/data/
           cp -R assets vendor _site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
