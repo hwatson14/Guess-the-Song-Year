@@ -21,7 +21,7 @@ const songs=[
 
 const unexpectedSong={title:'Preview Song',artist:'Preview Artist',year:2000,canonicalKey:'preview song|preview artist'};
 const chartSong={title:'Chart Remix',artist:'Chart Artist',year:2000,chartYear:2000,canonicalKey:'chart remix|chart artist'};
-const australianSong={title:'Australian Song',artist:'Australian Artist',year:2000,canonicalKey:'australian song|australian artist'};
+const australianSong={songId:'song_australian_2000',title:'Australian Song',artist:'Australian Artist',year:2000,canonicalKey:'australian song|australian artist'};
 const usChartSong={title:'US Chart Song',artist:'US Chart Artist',year:2000,chartYear:2000,canonicalKey:'us chart song|us chart artist'};
 globalThis.window={GSYEngine:{
   MODES:{greatest:{name:'Greatest Hits',status:'beta',yearBasis:'release',repeatPolicy:'unique'},australian:{name:'Australian',status:'beta',yearBasis:'release',repeatPolicy:'unique'},unexpected:{name:'Unexpected Years',status:'preview',yearBasis:'release',repeatPolicy:'unique'},number1_us:{name:'#1 US',status:'beta',yearBasis:'chart',repeatPolicy:'fixed'},number1_au:{name:'#1 Australia',status:'beta',yearBasis:'chart',repeatPolicy:'fixed'}},
@@ -33,6 +33,11 @@ globalThis.window={GSYEngine:{
 
 await import(`${pathToFileURL(path.resolve('engine-v7.js')).href}?test=${Date.now()}`);
 const E=globalThis.window.GSYEngine;
+
+const stableIdentity={songId:'song_stable_identity',title:'Stable',artist:'Artist',canonicalKey:'stable before|artist'};
+if(E.songUseKey(stableIdentity)!=='song_stable_identity')throw new Error('master songId must be primary runtime identity');
+stableIdentity.canonicalKey='stable after|artist';
+if(E.songUseKey(stableIdentity)!=='song_stable_identity')throw new Error('editing canonicalKey must not change primary runtime identity');
 
 const alphaKey=E.songUseKey(songs[0]);
 if(alphaKey!=='alpha|artist a')throw new Error(`unexpected Alpha underlying key: ${alphaKey}`);
@@ -70,6 +75,10 @@ const allUsed=[alphaKey,E.songUseKey(songs[3]),E.songUseKey(songs[4]),E.songUseK
 let exhausted=false;
 try{await E.chooseSong(2000,'greatest',allUsed)}catch(err){exhausted=err?.code==='NO_UNUSED_SONG'}
 if(!exhausted)throw new Error('depleted year must throw NO_UNUSED_SONG rather than recycle an alternate version');
+
+let legacyIdentityBlocked=false;
+try{await E.chooseSong(2000,'australian',[australianSong.canonicalKey])}catch(err){legacyIdentityBlocked=err?.code==='NO_UNUSED_SONG'}
+if(!legacyIdentityBlocked)throw new Error('pre-migration saved canonicalKey must still block the stable songId song');
 
 const preview=await E.chooseSong(2000,'unexpected',[]);
 if(preview.title!==unexpectedSong.title)throw new Error('preview mode must use its direct pool');

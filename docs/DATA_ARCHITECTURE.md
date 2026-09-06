@@ -10,8 +10,8 @@ The compiler in `scripts/song_database.mjs` loads the source, validates identiti
 
 The JSON source already expresses the following relationships:
 
-- **Master song:** stable internal song ID, title, artist, canonical key, release evidence, and canonical year.
-- **Mode membership:** a reference to a master song plus mode/year metadata; chart modes retain chart year and rank.
+- **Master song:** immutable internal song ID, title, artist, reviewable canonical key, release evidence, and `release.answerYear` for release-year gameplay.
+- **Mode membership:** a reference to a master song plus mode metadata. Release-mode membership years are retained only as a legacy compatibility mirror; they do not determine the compiled answer year. Chart modes retain their chart year and rank.
 - **Provider track:** Spotify or YouTube ID and URL, state, audit metadata, and optional preferred ID. Provider identity never becomes song identity.
 - **Evidence:** source URLs, MusicBrainz recording IDs, retrieval dates, matched title/artist, release dates, and review decisions.
 
@@ -21,9 +21,9 @@ SQLite is an optional future workspace for relational queries, constraints, and 
 
 ## Canonical-year and identity rules
 
-For reviewed release evidence, the current data uses MusicBrainz recording earliest `first-release-date` evidence, with title/artist matching and alternate-version filtering. The semantic goal remains the earliest credible release year of the intended canonical song/recording. A future evidence calibration may compare recording and release-group representations, but it must preserve provenance and a rule version rather than silently rewriting years.
+For release-year modes, `release.answerYear` is the single gameplay source of truth on the master song. `release.year` and `release.state` separately record accepted external evidence and its confidence, so an unresolved legacy answer can remain playable without pretending it is independently verified. For reviewed release evidence, the current data uses MusicBrainz recording earliest `first-release-date` evidence, with title/artist matching and alternate-version filtering. The semantic goal remains the earliest credible release year of the intended canonical song/recording. A future evidence calibration may compare recording and release-group representations, but it must preserve provenance and a rule version rather than silently rewriting years.
 
-Canonical song identity is represented by the stable master ID; `canonicalKey` remains matching/dedupe machinery. MusicBrainz IDs are evidence references. Spotify and YouTube IDs are playback references. Distinct covers remain distinct songs unless explicitly reviewed otherwise. Remasters, edits, remixes, live/acoustic versions, and re-recordings must not create accidental duplicate answers, while genuine titles containing version-like words remain valid.
+Canonical song identity is represented by the immutable master ID and is emitted as `songId` in the runtime catalogue; `canonicalKey` remains reviewable matching/dedupe machinery and may change after metadata correction. MusicBrainz IDs are evidence references. Spotify and YouTube IDs are playback references. Distinct covers remain distinct songs unless explicitly reviewed otherwise. Remasters, edits, remixes, live/acoustic versions, and re-recordings must not create accidental duplicate answers, while genuine titles containing version-like words remain valid.
 
 ## Provider policy
 

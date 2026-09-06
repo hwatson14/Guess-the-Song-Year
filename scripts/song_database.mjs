@@ -7,18 +7,22 @@ import {catalogueEngine,loadProductionCatalogue} from './catalogue_runtime.mjs';
 
 export const songId=key=>'song_'+createHash('sha256').update(key).digest('hex').slice(0,20);
 const providers=['spotify','youtube'];
+const releaseModes=new Set(['greatest','australian','unexpected']);
 const link=(provider,id)=>provider==='spotify'?`https://open.spotify.com/track/${id}`:`https://www.youtube.com/watch?v=${id}`;
 export function migrateCatalogue(data,manifest){
   const E=catalogueEngine(data,manifest),songs={},memberships=[];
   const {modes,coverage,missing,...catalogue}=structuredClone(data);
   for(const [mode,buckets] of Object.entries(modes))for(const [year,rows] of Object.entries(buckets))for(const row of rows){
-    const key=E.songUseKey(row),id=songId(key);
+    // Preserve an existing immutable ID when rebuilding normalized source from generated rows.
+    // Only genuinely legacy rows without songId receive a deterministic bootstrap ID.
+    const key=row.canonicalKey?String(row.canonicalKey):E.songUseKey({...row,songId:null});
+    const id=row.songId?String(row.songId):songId(key);
     const song=songs[id]??={id,canonicalKey:key,title:row.title,artist:row.artist,
-      release:{year:null,state:'unresolved',claims:[]},providers:Object.fromEntries(providers.map(p=>[p,{preferredId:null,links:[]}]))};
+      release:{answerYear:null,year:null,state:'unresolved',claims:[]},providers:Object.fromEntries(providers.map(p=>[p,{preferredId:null,links:[]}]))};
     const membership={songId:id,mode,year:Number(year),metadata:{},fieldOrder:Object.keys(row)};
     if(row.title!==song.title||row.artist!==song.artist)membership.displayOverrides={title:row.title,artist:row.artist};
     for(const [field,value] of Object.entries(row)){
-      if(['title','artist','year'].includes(field))continue;
+      if(['title','artist','year','canonicalKey','songId'].includes(field))continue;
       const provider=providers.find(p=>field===p+'Id');
       if(provider){
         (membership.providerRefs??={})[provider]=value||null;
@@ -26,7 +30,10 @@ export function migrateCatalogue(data,manifest){
       }else membership.metadata[field]=value;
     }
     if(manifest.modes[mode].yearBasis==='release'){
-      const claim={year:Number(row.releaseYear||year),state:row.releaseYear&&row.evidenceState==='externally_observed'?'externally_observed':'legacy_unverified',sourceUrl:row.sourceUrl||null,evidence:row.releaseYearEvidence||null};
+      const answerYear=Number(row.releaseYear||year);
+      if(song.release.answerYear!=null&&song.release.answerYear!==answerYear)throw new Error('Conflicting release answer years for '+id);
+      song.release.answerYear=answerYear;
+      const claim={year:answerYear,state:row.releaseYear&&row.evidenceState==='externally_observed'?'externally_observed':'legacy_unverified',sourceUrl:row.sourceUrl||null,evidence:row.releaseYearEvidence||null};
       if(!song.release.claims.some(x=>JSON.stringify(x)===JSON.stringify(claim)))song.release.claims.push(claim);
     }
     memberships.push(membership);
@@ -36,18 +43,21 @@ export function migrateCatalogue(data,manifest){
     if(years.length===1)song.release={...song.release,year:years[0],state:'externally_observed'};
     else if(years.length>1)song.release.state='conflicting_evidence';
   }
-  return {schemaVersion:1,catalogue,songs,memberships};
+  return {schemaVersion:2,catalogue,songs,memberships};
 }
 export function compileDatabase(db){
-  if(db.schemaVersion!==1)throw new Error('Unsupported song database schema');
+  if(db.schemaVersion!==2)throw new Error('Unsupported song database schema');
   const data={...structuredClone(db.catalogue),modes:{},coverage:{},missing:{}};
   const seen=new Set();
   for(const m of db.memberships){
-    if(!['greatest','australian','unexpected','number1_us','number1_au'].includes(m.mode)||!data.years.includes(m.year))throw new Error('Invalid mode/year membership');
-    if(Object.keys(m.metadata||{}).some(k=>['title','artist','year','spotifyId','youtubeId','__proto__','constructor','prototype'].includes(k)))throw new Error('Reserved membership metadata');
+    if(!['greatest','australian','unexpected','number1_us','number1_au'].includes(m.mode))throw new Error('Invalid mode membership');
     const song=db.songs[m.songId];if(!song)throw new Error('Dangling song membership '+m.songId);
-    const identity=`${m.mode}/${m.year}/${m.songId}`;if(seen.has(identity))throw new Error('Duplicate membership '+identity);seen.add(identity);
-    const values={title:song.title,artist:song.artist,year:m.year,...m.displayOverrides,...structuredClone(m.metadata)};
+    const year=releaseModes.has(m.mode)?Number(song.release?.answerYear):Number(m.year);
+    if(!data.years.includes(year))throw new Error('Invalid mode/year membership');
+    if(releaseModes.has(m.mode)&&song.release?.state==='externally_observed'&&Number(song.release?.year)!==year)throw new Error('Canonical release answer year conflicts with accepted release evidence for '+m.songId);
+    if(Object.keys(m.metadata||{}).some(k=>['title','artist','year','songId','canonicalKey','spotifyId','youtubeId','__proto__','constructor','prototype'].includes(k)))throw new Error('Reserved membership metadata');
+    const identity=`${m.mode}/${year}/${m.songId}`;if(seen.has(identity))throw new Error('Duplicate membership '+identity);seen.add(identity);
+    const values={...structuredClone(m.metadata),title:song.title,artist:song.artist,year,songId:song.id,canonicalKey:song.canonicalKey,...m.displayOverrides};
     for(const provider of providers){
       const explicit=Object.hasOwn(m.providerRefs||{},provider)?m.providerRefs[provider]:undefined;
       if(explicit&&!song.providers[provider].links.some(x=>x.id===explicit))throw new Error('Dangling playback reference '+explicit);
@@ -59,7 +69,7 @@ export function compileDatabase(db){
         else if(explicit===null)values[provider+'Id']='';
     }
     const row={};for(const k of [...(m.fieldOrder||[]),...Object.keys(values)])if(Object.hasOwn(values,k))row[k]=values[k];
-    ((data.modes[m.mode]??={})[m.year]??=[]).push(row);
+    ((data.modes[m.mode]??={})[year]??=[]).push(row);
   }
   for(const [mode,buckets] of Object.entries(data.modes)){
     data.coverage[mode]=Object.keys(buckets).length;data.missing[mode]=data.years.filter(y=>!buckets[y]?.length);

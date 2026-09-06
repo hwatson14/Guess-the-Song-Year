@@ -8,13 +8,14 @@ const expected={greatest:[1964,1994,2022],australian:[1950,1955,1960,1961,1962,2
 assert.equal(evidence.length,15);
 for(const input of evidence){
   const {mode,...song}=input;delete song.canonicalKey;
-  const key=E.songUseKey(song),rows=Object.values(data.modes[mode]).flat().filter(s=>E.songUseKey(s)===key);
-  assert.equal(rows.length,1,input.title+' must have one identity within its mode');
+  const matchingKey=E.songUseKey(song),rows=Object.values(data.modes[mode]).flat().filter(s=>String(s.canonicalKey||'')===matchingKey);
+  assert.equal(rows.length,1,input.title+' must have one canonical match within its mode');
+  const runtimeKey=E.songUseKey(rows[0]);
   assert.equal(rows[0].year,input.releaseYear);
   assert.ok(rows[0].releaseYearEvidence&&rows[0].sourceProvider&&rows[0].sourceRetrievalDate);
-  assert.ok(reports[mode].yearSongKeys[input.year].includes(key),'new row must pass the actual runtime filter');
-  const excluded=reports[mode].yearSongKeys[input.year].filter(candidate=>candidate!==key);
-  assert.equal(E.songUseKey(await E.chooseSong(input.year,mode,excluded)),key);
+  assert.ok(reports[mode].yearSongKeys[input.year].includes(runtimeKey),'new row must pass the actual runtime filter');
+  const excluded=reports[mode].yearSongKeys[input.year].filter(candidate=>candidate!==runtimeKey);
+  assert.equal(E.songUseKey(await E.chooseSong(input.year,mode,excluded)),runtimeKey);
 }
 for(const [mode,years] of Object.entries(expected))for(const year of years)assert.ok(reports[mode].years.includes(year));
 const before=JSON.stringify(data);assert.deepEqual(integrateYearGaps(data,manifest,evidence),[]);
