@@ -6,6 +6,10 @@ on:
     paths:
       - 'scripts/finish_unexpected_years_200.mjs'
       - 'scripts/add_1982_greatest_backfill.mjs'
+      - 'scripts/preserve_unexpected_superseded_claims.mjs'
+      - 'scripts/test_catalogue_expansion.mjs'
+      - 'scripts/test_unexpected_years_200.mjs'
+      - 'scripts/check.mjs'
       - 'scripts/song_database_report.mjs'
       - '.github/workflows/finish-unexpected-years-200.yml'
 
@@ -29,6 +33,8 @@ jobs:
         run: node scripts/add_1982_greatest_backfill.mjs --write
       - name: Resolve reviewed selection and write canonical data
         run: node scripts/finish_unexpected_years_200.mjs --write
+      - name: Preserve superseded release evidence for audit
+        run: node scripts/preserve_unexpected_superseded_claims.mjs --write
       - name: Refresh database status
         run: node scripts/song_database_report.mjs --write
       - name: Validate full current application and catalogue
