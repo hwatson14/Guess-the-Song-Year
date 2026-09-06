@@ -27,4 +27,18 @@ security storage and vendored dependency regression tests passed
 Setup playback UI contract passed.
 Mobile setup scroll regression tests passed
 Mode label song-count and year-basis UI contract passed.
-catalogue validation failed: catalogue and mode manifest disagree: catalogue=['australian', 'greatest', 'number1_au', 'number1_us', 'unexpected'], manifest=['australian', 'greatest', 'movie_themes', 'number1_au', 'number1_us', 'one_hit_wonders', 'remix_original_year', 'screen_themes', 'tv_themes', 'unexpected']
+Catalogue v17 mode status:
+  greatest: {'status': 'Beta', 'coverage': '73/73', 'songs': 877, 'minPool': 12, 'missingCanonical': 196, 'duplicateSpotify': 0, 'alternateLabels': 0}
+  australian: {'status': 'Beta', 'coverage': '73/73', 'songs': 236, 'minPool': 1, 'missingCanonical': 229, 'duplicateSpotify': 0, 'alternateLabels': 0}
+  unexpected: {'status': 'Preview', 'coverage': '40/73', 'songs': 40, 'minPool': 1, 'missingCanonical': 40, 'duplicateSpotify': 0, 'alternateLabels': 0}
+  number1_us: {'status': 'Beta', 'coverage': '73/73', 'songs': 73, 'minPool': 1, 'missingCanonical': 73, 'duplicateSpotify': 0, 'alternateLabels': 2}
+  number1_au: {'status': 'Beta', 'coverage': '73/73', 'songs': 73, 'minPool': 1, 'missingCanonical': 73, 'duplicateSpotify': 0, 'alternateLabels': 0}
+  movie_themes: {'status': 'Building', 'coverage': '0/73', 'songs': 0, 'minPool': 0, 'missingCanonical': 0, 'duplicateSpotify': 0, 'alternateLabels': 0}
+  tv_themes: {'status': 'Building', 'coverage': '0/73', 'songs': 0, 'minPool': 0, 'missingCanonical': 0, 'duplicateSpotify': 0, 'alternateLabels': 0}
+  screen_themes: {'status': 'Building', 'coverage': '0/73', 'songs': 0, 'minPool': 0, 'missingCanonical': 0, 'duplicateSpotify': 0, 'alternateLabels': 0}
+  remix_original_year: {'status': 'Building', 'coverage': '0/73', 'songs': 0, 'minPool': 0, 'missingCanonical': 0, 'duplicateSpotify': 0, 'alternateLabels': 0}
+  one_hit_wonders: {'status': 'Building', 'coverage': '0/73', 'songs': 0, 'minPool': 0, 'missingCanonical': 0, 'duplicateSpotify': 0, 'alternateLabels': 0}
+Traceback (most recent call last):
+  File "/home/runner/work/Guess-the-Song-Year/Guess-the-Song-Year/scripts/validate_catalogue_schema.py", line 7, in <module>
+    import jsonschema
+ModuleNotFoundError: No module named 'jsonschema'
