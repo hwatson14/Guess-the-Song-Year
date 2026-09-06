@@ -18,4 +18,8 @@ replaceExact('scripts/integrate_year_gaps.mjs',
   "    const existing=Object.entries(data.modes[mode]).flatMap(([year,pool])=>pool\n      .filter(row=>E.songUseKey(row)===song.canonicalKey).map(row=>({year:Number(year),row})));",
   "    // Ingestion/reconciliation matches the reviewable canonicalKey. Runtime no-repeat uses immutable songId.\n    const existing=Object.entries(data.modes[mode]).flatMap(([year,pool])=>pool\n      .filter(row=>String(row.canonicalKey||'')===song.canonicalKey).map(row=>({year:Number(year),row})));");
 
+replaceExact('scripts/song_database.mjs',
+  "    const key=E.songUseKey(row),id=songId(key);",
+  "    // Preserve an existing immutable ID when rebuilding normalized source from generated rows.\n    // Only genuinely legacy rows without songId receive a deterministic bootstrap ID.\n    const key=row.canonicalKey?String(row.canonicalKey):E.songUseKey({...row,songId:null});\n    const id=row.songId?String(row.songId):songId(key);");
+
 console.log(JSON.stringify({write:WRITE,patched:true}));
