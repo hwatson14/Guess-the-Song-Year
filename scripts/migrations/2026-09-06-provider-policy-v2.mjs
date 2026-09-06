@@ -13,6 +13,10 @@ function patch(file,from,to,label){
 let changed=false;
 const provider='scripts/harden_provider_links.py';
 changed=patch(provider,
+`POLICY = "musicbrainz-recording-provider-v1"`,
+`POLICY = "musicbrainz-recording-provider-v2"`,
+'provider policy version')||changed;
+changed=patch(provider,
 `BAD_DISAMBIG = re.compile(r"\\b(live|remix|re[- ]?mix|remaster(?:ed)?|demo|karaoke|tribute|cover|acoustic|instrumental|re[- ]?record(?:ed)?|edit|mix)\\b", re.I)`,
 `BAD_DISAMBIG = re.compile(r"\\b(live|remix|re[- ]?mix|remaster(?:ed)?|demo|karaoke|tribute|cover|acoustic|instrumental|re[- ]?record(?:ed)?|edit|mix)\\b", re.I)\nSTREAM_RELATIONS = {"free streaming", "streaming"}`,
 'provider relationship whitelist')||changed;
