@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "catalogue": {
-    "version": 17,
-    "generatedAt": "2026-09-05T06:29:06.027Z",
+    "version": 18,
+    "generatedAt": "2026-09-06T04:39:07.417Z",
     "years": [
       1950,
       1951,
@@ -558,9 +558,9 @@
     },
     "song_3e577c1f92cf18db181e": {
       "id": "song_3e577c1f92cf18db181e",
-      "canonicalKey": "blue tango|leroy anderson pops concert orchestra",
+      "canonicalKey": "blue tango|leroy anderson",
       "title": "Blue Tango",
-      "artist": "Leroy Anderson “Pops” Concert Orchestra",
+      "artist": "Leroy Anderson",
       "release": {
         "year": null,
         "state": "unresolved",
@@ -894,7 +894,7 @@
     "song_0d7a6fa38e57bc3fe13e": {
       "id": "song_0d7a6fa38e57bc3fe13e",
       "canonicalKey": "the song from moulin rouge where is your heart|percy faith",
-      "title": "The Song From Moulin Rouge (Where Is Your Heart)",
+      "title": "The Song from Moulin Rouge (Where Is Your Heart)",
       "artist": "Percy Faith and His Orchestra with Felicia Sanders",
       "release": {
         "year": 1953,
@@ -912,7 +912,44 @@
       "providers": {
         "spotify": {
           "preferredId": null,
-          "links": []
+          "links": [
+            {
+              "id": "7GtpZ01gEJDxrXfH2ayvuc",
+              "url": "https://open.spotify.com/track/7GtpZ01gEJDxrXfH2ayvuc",
+              "state": "metadata_checked",
+              "origin": "legacy-catalogue",
+              "metadataCheck": {
+                "songId": "song_bf27dbfb2d5582bc5391",
+                "provider": "spotify",
+                "id": "7GtpZ01gEJDxrXfH2ayvuc",
+                "checkedAt": "2026-09-05",
+                "state": "metadata_checked",
+                "httpStatus": 200,
+                "title": "The Song From \"Moulin Rouge\"",
+                "artists": [
+                  "Percy Faith"
+                ],
+                "playable": true,
+                "titleMatches": true,
+                "artistMatches": true
+              },
+              "lastAudit": {
+                "songId": "song_bf27dbfb2d5582bc5391",
+                "provider": "spotify",
+                "id": "7GtpZ01gEJDxrXfH2ayvuc",
+                "checkedAt": "2026-09-05",
+                "state": "metadata_checked",
+                "httpStatus": 200,
+                "title": "The Song From \"Moulin Rouge\"",
+                "artists": [
+                  "Percy Faith"
+                ],
+                "playable": true,
+                "titleMatches": true,
+                "artistMatches": true
+              }
+            }
+          ]
         },
         "youtube": {
           "preferredId": null,
@@ -1125,7 +1162,7 @@
     },
     "song_a030dc6616018ab0788f": {
       "id": "song_a030dc6616018ab0788f",
-      "canonicalKey": "cherry pink and apple blossom white|pe rez prado",
+      "canonicalKey": "cherry pink and apple blossom white|perez prado",
       "title": "Cherry Pink and Apple Blossom White",
       "artist": "Pérez Prado",
       "release": {
@@ -1182,35 +1219,6 @@
               }
             }
           ]
-        },
-        "youtube": {
-          "preferredId": null,
-          "links": []
-        }
-      }
-    },
-    "song_861cb60c1c56ae2a71b6": {
-      "id": "song_861cb60c1c56ae2a71b6",
-      "canonicalKey": "cherry pink and apple blossom white cerezo rosa|pe rez prado",
-      "title": "Cherry Pink And Apple Blossom White (Cerezo Rosa)",
-      "artist": "Pérez Prado and His Orchestra",
-      "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [
-          {
-            "year": 1955,
-            "state": "legacy_unverified",
-            "sourceUrl": null,
-            "evidence": null
-          }
-        ],
-        "answerYear": 1955
-      },
-      "providers": {
-        "spotify": {
-          "preferredId": null,
-          "links": []
         },
         "youtube": {
           "preferredId": null,
@@ -2646,35 +2654,6 @@
         }
       }
     },
-    "song_c223ab5e9e385520ad45": {
-      "id": "song_c223ab5e9e385520ad45",
-      "canonicalKey": "tossin turnin|bobby lewis",
-      "title": "Tossin' & Turnin'",
-      "artist": "Bobby Lewis",
-      "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [
-          {
-            "year": 1961,
-            "state": "legacy_unverified",
-            "sourceUrl": null,
-            "evidence": null
-          }
-        ],
-        "answerYear": 1961
-      },
-      "providers": {
-        "spotify": {
-          "preferredId": null,
-          "links": []
-        },
-        "youtube": {
-          "preferredId": null,
-          "links": []
-        }
-      }
-    },
     "song_11381b6461d062c383c3": {
       "id": "song_11381b6461d062c383c3",
       "canonicalKey": "tossin and turnin|bobby lewis",
@@ -2689,6 +2668,12 @@
             "state": "externally_observed",
             "sourceUrl": "https://en.wikipedia.org/wiki/Tossin'_and_Turnin'",
             "evidence": "Wikipedia song/single infobox release date"
+          },
+          {
+            "year": 1961,
+            "state": "legacy_unverified",
+            "sourceUrl": null,
+            "evidence": null
           }
         ],
         "answerYear": 1961
@@ -3166,8 +3151,8 @@
     },
     "song_2e6112af037b8c8c4d94": {
       "id": "song_2e6112af037b8c8c4d94",
-      "canonicalKey": "surfin u s a|beach boys",
-      "title": "Surfin’ U.S.A.",
+      "canonicalKey": "surfin usa|beach boys",
+      "title": "Surfin' U.S.A.",
       "artist": "The Beach Boys",
       "release": {
         "year": null,
@@ -3185,7 +3170,44 @@
       "providers": {
         "spotify": {
           "preferredId": null,
-          "links": []
+          "links": [
+            {
+              "id": "0wz1LjDb9ZNEYwOmDJ3Q4b",
+              "url": "https://open.spotify.com/track/0wz1LjDb9ZNEYwOmDJ3Q4b",
+              "state": "metadata_checked",
+              "origin": "legacy-catalogue",
+              "metadataCheck": {
+                "songId": "song_275b119114c4ec21bdd7",
+                "provider": "spotify",
+                "id": "0wz1LjDb9ZNEYwOmDJ3Q4b",
+                "checkedAt": "2026-09-05",
+                "state": "metadata_checked",
+                "httpStatus": 200,
+                "title": "Surfin' U.S.A. - Remastered 2001",
+                "artists": [
+                  "The Beach Boys"
+                ],
+                "playable": true,
+                "titleMatches": false,
+                "artistMatches": true
+              },
+              "lastAudit": {
+                "songId": "song_275b119114c4ec21bdd7",
+                "provider": "spotify",
+                "id": "0wz1LjDb9ZNEYwOmDJ3Q4b",
+                "checkedAt": "2026-09-05",
+                "state": "metadata_checked",
+                "httpStatus": 200,
+                "title": "Surfin' U.S.A. - Remastered 2001",
+                "artists": [
+                  "The Beach Boys"
+                ],
+                "playable": true,
+                "titleMatches": false,
+                "artistMatches": true
+              }
+            }
+          ]
         },
         "youtube": {
           "preferredId": null,
@@ -5178,38 +5200,9 @@
         }
       }
     },
-    "song_7825677a785672c119cd": {
-      "id": "song_7825677a785672c119cd",
-      "canonicalKey": "tie a yellow ribbon round the ole oak tree|dawn",
-      "title": "Tie a Yellow Ribbon ’Round the Ole Oak Tree",
-      "artist": "Dawn featuring Tony Orlando",
-      "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [
-          {
-            "year": 1973,
-            "state": "legacy_unverified",
-            "sourceUrl": null,
-            "evidence": null
-          }
-        ],
-        "answerYear": 1973
-      },
-      "providers": {
-        "spotify": {
-          "preferredId": null,
-          "links": []
-        },
-        "youtube": {
-          "preferredId": null,
-          "links": []
-        }
-      }
-    },
     "song_8511fc340a058cf745b9": {
       "id": "song_8511fc340a058cf745b9",
-      "canonicalKey": "tie a yellow ribbon round the ole oak tree|tony orlando",
+      "canonicalKey": "tie a yellow ribbon round the ole oak tree|tony orlando and dawn",
       "title": "Tie a Yellow Ribbon Round the Ole Oak Tree",
       "artist": "Tony Orlando & Dawn",
       "release": {
@@ -7932,7 +7925,50 @@
       "providers": {
         "spotify": {
           "preferredId": null,
-          "links": []
+          "links": [
+            {
+              "id": "1cOj24fUMnBSXhtp7waHVW",
+              "url": "https://open.spotify.com/track/1cOj24fUMnBSXhtp7waHVW",
+              "state": "metadata_checked",
+              "origin": "legacy-catalogue",
+              "metadataCheck": {
+                "songId": "song_e460fb216655c321089b",
+                "provider": "spotify",
+                "id": "1cOj24fUMnBSXhtp7waHVW",
+                "checkedAt": "2026-09-05",
+                "state": "metadata_checked",
+                "httpStatus": 200,
+                "title": "That's What Friends Are For (with Elton John, Gladys Knight & Stevie Wonder)",
+                "artists": [
+                  "Dionne Warwick",
+                  "Elton John",
+                  "Gladys Knight",
+                  "Stevie Wonder"
+                ],
+                "playable": true,
+                "titleMatches": false,
+                "artistMatches": false
+              },
+              "lastAudit": {
+                "songId": "song_e460fb216655c321089b",
+                "provider": "spotify",
+                "id": "1cOj24fUMnBSXhtp7waHVW",
+                "checkedAt": "2026-09-05",
+                "state": "metadata_checked",
+                "httpStatus": 200,
+                "title": "That's What Friends Are For (with Elton John, Gladys Knight & Stevie Wonder)",
+                "artists": [
+                  "Dionne Warwick",
+                  "Elton John",
+                  "Gladys Knight",
+                  "Stevie Wonder"
+                ],
+                "playable": true,
+                "titleMatches": false,
+                "artistMatches": false
+              }
+            }
+          ]
         },
         "youtube": {
           "preferredId": null,
@@ -8292,44 +8328,7 @@
       "providers": {
         "spotify": {
           "preferredId": null,
-          "links": [
-            {
-              "id": "6kvoHl80mfCVTv7XnZkjQn",
-              "url": "https://open.spotify.com/track/6kvoHl80mfCVTv7XnZkjQn",
-              "state": "metadata_checked",
-              "origin": "legacy-catalogue",
-              "metadataCheck": {
-                "songId": "song_c5aef0dc987135ed9bac",
-                "provider": "spotify",
-                "id": "6kvoHl80mfCVTv7XnZkjQn",
-                "checkedAt": "2026-09-05",
-                "state": "metadata_checked",
-                "httpStatus": 200,
-                "title": "It Must Have Been Love - From the Film \"Pretty Woman\"",
-                "artists": [
-                  "Roxette"
-                ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": true
-              },
-              "lastAudit": {
-                "songId": "song_c5aef0dc987135ed9bac",
-                "provider": "spotify",
-                "id": "6kvoHl80mfCVTv7XnZkjQn",
-                "checkedAt": "2026-09-05",
-                "state": "metadata_checked",
-                "httpStatus": 200,
-                "title": "It Must Have Been Love - From the Film \"Pretty Woman\"",
-                "artists": [
-                  "Roxette"
-                ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": true
-              }
-            }
-          ]
+          "links": []
         },
         "youtube": {
           "preferredId": null,
@@ -9204,6 +9203,12 @@
             "state": "externally_observed",
             "sourceUrl": "https://en.wikipedia.org/wiki/I_Wanna_Sex_You_Up",
             "evidence": "Wikipedia song/single infobox release date"
+          },
+          {
+            "year": 1991,
+            "state": "legacy_unverified",
+            "sourceUrl": null,
+            "evidence": null
           }
         ],
         "answerYear": 1991
@@ -9249,35 +9254,6 @@
               }
             }
           ]
-        },
-        "youtube": {
-          "preferredId": null,
-          "links": []
-        }
-      }
-    },
-    "song_798f6ce537f0d5ef063a": {
-      "id": "song_798f6ce537f0d5ef063a",
-      "canonicalKey": "i wanna sex you up|colour me badd",
-      "title": "I Wanna Sex You Up",
-      "artist": "Colour Me Badd",
-      "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [
-          {
-            "year": 1991,
-            "state": "legacy_unverified",
-            "sourceUrl": null,
-            "evidence": null
-          }
-        ],
-        "answerYear": 1991
-      },
-      "providers": {
-        "spotify": {
-          "preferredId": null,
-          "links": []
         },
         "youtube": {
           "preferredId": null,
@@ -10048,101 +10024,6 @@
         }
       }
     },
-    "song_b770e2066084fdc0295a": {
-      "id": "song_b770e2066084fdc0295a",
-      "canonicalKey": "candle in the wind|elton john",
-      "title": "Candle in the Wind",
-      "artist": "Elton John",
-      "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [
-          {
-            "year": 1997,
-            "state": "legacy_unverified",
-            "sourceUrl": null,
-            "evidence": null
-          }
-        ],
-        "answerYear": 1997
-      },
-      "providers": {
-        "spotify": {
-          "preferredId": null,
-          "links": [
-            {
-              "id": "3DUcaEvPO72PijivCjtZcU",
-              "url": "https://open.spotify.com/track/3DUcaEvPO72PijivCjtZcU",
-              "state": "metadata_checked",
-              "origin": "legacy-catalogue",
-              "metadataCheck": {
-                "songId": "song_b770e2066084fdc0295a",
-                "provider": "spotify",
-                "id": "3DUcaEvPO72PijivCjtZcU",
-                "checkedAt": "2026-09-05",
-                "state": "metadata_checked",
-                "httpStatus": 200,
-                "title": "Candle In The Wind 1997",
-                "artists": [
-                  "Elton John"
-                ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": true
-              },
-              "lastAudit": {
-                "songId": "song_b770e2066084fdc0295a",
-                "provider": "spotify",
-                "id": "3DUcaEvPO72PijivCjtZcU",
-                "checkedAt": "2026-09-05",
-                "state": "metadata_checked",
-                "httpStatus": 200,
-                "title": "Candle In The Wind 1997",
-                "artists": [
-                  "Elton John"
-                ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": true
-              }
-            }
-          ]
-        },
-        "youtube": {
-          "preferredId": null,
-          "links": []
-        }
-      }
-    },
-    "song_ca8fed89b1a2d1a65793": {
-      "id": "song_ca8fed89b1a2d1a65793",
-      "canonicalKey": "candle in the wind 97|elton john",
-      "title": "Candle in the Wind ’97",
-      "artist": "Elton John",
-      "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [
-          {
-            "year": 1997,
-            "state": "legacy_unverified",
-            "sourceUrl": null,
-            "evidence": null
-          }
-        ],
-        "answerYear": 1997
-      },
-      "providers": {
-        "spotify": {
-          "preferredId": null,
-          "links": []
-        },
-        "youtube": {
-          "preferredId": null,
-          "links": []
-        }
-      }
-    },
     "song_880d7be193b2a10f1250": {
       "id": "song_880d7be193b2a10f1250",
       "canonicalKey": "something about the way you look tonight|elton john",
@@ -10756,7 +10637,7 @@
       "id": "song_2d856da0aee5c1c8cc40",
       "canonicalKey": "smooth|santana",
       "title": "Smooth",
-      "artist": "Santana",
+      "artist": "Santana feat. Rob Thomas",
       "release": {
         "year": null,
         "state": "unresolved",
@@ -10889,35 +10770,6 @@
               }
             }
           ]
-        }
-      }
-    },
-    "song_09c24c50eddd79da4285": {
-      "id": "song_09c24c50eddd79da4285",
-      "canonicalKey": "smooth|carlos santana",
-      "title": "Smooth",
-      "artist": "Carlos Santana",
-      "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [
-          {
-            "year": 2000,
-            "state": "legacy_unverified",
-            "sourceUrl": null,
-            "evidence": null
-          }
-        ],
-        "answerYear": 2000
-      },
-      "providers": {
-        "spotify": {
-          "preferredId": null,
-          "links": []
-        },
-        "youtube": {
-          "preferredId": null,
-          "links": []
         }
       }
     },
@@ -12280,6 +12132,12 @@
             "state": "externally_observed",
             "sourceUrl": "https://en.wikipedia.org/wiki/Tik_Tok_(song)",
             "evidence": "Wikipedia song/single infobox release date"
+          },
+          {
+            "year": 2010,
+            "state": "legacy_unverified",
+            "sourceUrl": null,
+            "evidence": null
           }
         ],
         "answerYear": 2009
@@ -12457,35 +12315,6 @@
               }
             }
           ]
-        }
-      }
-    },
-    "song_e8e62b733b5faf52e71a": {
-      "id": "song_e8e62b733b5faf52e71a",
-      "canonicalKey": "tik tok|ke ha",
-      "title": "Tik Tok",
-      "artist": "Ke$ha",
-      "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [
-          {
-            "year": 2010,
-            "state": "legacy_unverified",
-            "sourceUrl": null,
-            "evidence": null
-          }
-        ],
-        "answerYear": 2010
-      },
-      "providers": {
-        "spotify": {
-          "preferredId": null,
-          "links": []
-        },
-        "youtube": {
-          "preferredId": null,
-          "links": []
         }
       }
     },
@@ -15890,14 +15719,26 @@
       "title": "The Battle of the Blue and the Grey",
       "artist": "Bee Gees",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1963,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1963,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1964,
+            "state": "legacy_unverified",
+            "sourceUrl": null,
+            "evidence": null
+          },
+          {
+            "year": 1963,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.robingibb.com/recordings/the-battle-of-the-blue-and-the-grey",
+            "evidence": "Robin Gibb discography: released March 1963."
           }
         ],
         "answerYear": 1963
@@ -16004,35 +15845,6 @@
       "id": "song_2e15a897e1ffa48c08a7",
       "canonicalKey": "theme from jaimie mcpheeters|bee gees",
       "title": "Theme from Jaimie McPheeters",
-      "artist": "Bee Gees",
-      "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [
-          {
-            "year": 1964,
-            "state": "legacy_unverified",
-            "sourceUrl": null,
-            "evidence": null
-          }
-        ],
-        "answerYear": 1964
-      },
-      "providers": {
-        "spotify": {
-          "preferredId": null,
-          "links": []
-        },
-        "youtube": {
-          "preferredId": null,
-          "links": []
-        }
-      }
-    },
-    "song_09f06b915733c92fbb09": {
-      "id": "song_09f06b915733c92fbb09",
-      "canonicalKey": "the battle of the blue and grey|bee gees",
-      "title": "The Battle of the Blue and Grey",
       "artist": "Bee Gees",
       "release": {
         "year": null,
@@ -24798,14 +24610,20 @@
       "title": "One More Time",
       "artist": "Daft Punk",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 2000,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 2000,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 2000,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.rhino.com/article/november-2000-daft-punk-release-one-more-time",
+            "evidence": "Rhino: Daft Punk released One More Time on November 13, 2000."
           }
         ],
         "answerYear": 2000
@@ -25623,183 +25441,6 @@
         }
       }
     },
-    "song_96d7887a27dd86497ac3": {
-      "id": "song_96d7887a27dd86497ac3",
-      "canonicalKey": "blue tango|leroy anderson",
-      "title": "Blue Tango",
-      "artist": "Leroy Anderson",
-      "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [],
-        "answerYear": null
-      },
-      "providers": {
-        "spotify": {
-          "preferredId": null,
-          "links": [
-            {
-              "id": "6ecG5Am0TRxn0uwZBQHA3L",
-              "url": "https://open.spotify.com/track/6ecG5Am0TRxn0uwZBQHA3L",
-              "state": "metadata_checked",
-              "origin": "legacy-catalogue",
-              "metadataCheck": {
-                "songId": "song_96d7887a27dd86497ac3",
-                "provider": "spotify",
-                "id": "6ecG5Am0TRxn0uwZBQHA3L",
-                "checkedAt": "2026-09-05",
-                "state": "metadata_checked",
-                "httpStatus": 200,
-                "title": "Blue Tango",
-                "artists": [
-                  "Leroy Anderson"
-                ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
-              },
-              "lastAudit": {
-                "songId": "song_96d7887a27dd86497ac3",
-                "provider": "spotify",
-                "id": "6ecG5Am0TRxn0uwZBQHA3L",
-                "checkedAt": "2026-09-05",
-                "state": "metadata_checked",
-                "httpStatus": 200,
-                "title": "Blue Tango",
-                "artists": [
-                  "Leroy Anderson"
-                ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
-              }
-            }
-          ]
-        },
-        "youtube": {
-          "preferredId": null,
-          "links": []
-        }
-      }
-    },
-    "song_bf27dbfb2d5582bc5391": {
-      "id": "song_bf27dbfb2d5582bc5391",
-      "canonicalKey": "the song from moulin rouge|percy faith",
-      "title": "The Song from Moulin Rouge",
-      "artist": "Percy Faith",
-      "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [],
-        "answerYear": null
-      },
-      "providers": {
-        "spotify": {
-          "preferredId": null,
-          "links": [
-            {
-              "id": "7GtpZ01gEJDxrXfH2ayvuc",
-              "url": "https://open.spotify.com/track/7GtpZ01gEJDxrXfH2ayvuc",
-              "state": "metadata_checked",
-              "origin": "legacy-catalogue",
-              "metadataCheck": {
-                "songId": "song_bf27dbfb2d5582bc5391",
-                "provider": "spotify",
-                "id": "7GtpZ01gEJDxrXfH2ayvuc",
-                "checkedAt": "2026-09-05",
-                "state": "metadata_checked",
-                "httpStatus": 200,
-                "title": "The Song From \"Moulin Rouge\"",
-                "artists": [
-                  "Percy Faith"
-                ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
-              },
-              "lastAudit": {
-                "songId": "song_bf27dbfb2d5582bc5391",
-                "provider": "spotify",
-                "id": "7GtpZ01gEJDxrXfH2ayvuc",
-                "checkedAt": "2026-09-05",
-                "state": "metadata_checked",
-                "httpStatus": 200,
-                "title": "The Song From \"Moulin Rouge\"",
-                "artists": [
-                  "Percy Faith"
-                ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
-              }
-            }
-          ]
-        },
-        "youtube": {
-          "preferredId": null,
-          "links": []
-        }
-      }
-    },
-    "song_8c0121f9d8521b0f1cdb": {
-      "id": "song_8c0121f9d8521b0f1cdb",
-      "canonicalKey": "cherry pink and apple blossom white|perez prado",
-      "title": "Cherry Pink and Apple Blossom White",
-      "artist": "Perez Prado",
-      "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [],
-        "answerYear": null
-      },
-      "providers": {
-        "spotify": {
-          "preferredId": null,
-          "links": [
-            {
-              "id": "5HisVcYPaIB4uHdrnW6HCt",
-              "url": "https://open.spotify.com/track/5HisVcYPaIB4uHdrnW6HCt",
-              "state": "metadata_checked",
-              "origin": "legacy-catalogue",
-              "metadataCheck": {
-                "songId": "song_8c0121f9d8521b0f1cdb",
-                "provider": "spotify",
-                "id": "5HisVcYPaIB4uHdrnW6HCt",
-                "checkedAt": "2026-09-05",
-                "state": "metadata_checked",
-                "httpStatus": 200,
-                "title": "Cherry Pink And Apple Blossom White",
-                "artists": [
-                  "Pérez Prado"
-                ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
-              },
-              "lastAudit": {
-                "songId": "song_8c0121f9d8521b0f1cdb",
-                "provider": "spotify",
-                "id": "5HisVcYPaIB4uHdrnW6HCt",
-                "checkedAt": "2026-09-05",
-                "state": "metadata_checked",
-                "httpStatus": 200,
-                "title": "Cherry Pink And Apple Blossom White",
-                "artists": [
-                  "Pérez Prado"
-                ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
-              }
-            }
-          ]
-        },
-        "youtube": {
-          "preferredId": null,
-          "links": []
-        }
-      }
-    },
     "song_3b02011f022be9bf35f4": {
       "id": "song_3b02011f022be9bf35f4",
       "canonicalKey": "volare nel blu dipinto di blu|domenico modugno",
@@ -25918,65 +25559,6 @@
         }
       }
     },
-    "song_275b119114c4ec21bdd7": {
-      "id": "song_275b119114c4ec21bdd7",
-      "canonicalKey": "surfin usa|beach boys",
-      "title": "Surfin' USA",
-      "artist": "The Beach Boys",
-      "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [],
-        "answerYear": null
-      },
-      "providers": {
-        "spotify": {
-          "preferredId": null,
-          "links": [
-            {
-              "id": "0wz1LjDb9ZNEYwOmDJ3Q4b",
-              "url": "https://open.spotify.com/track/0wz1LjDb9ZNEYwOmDJ3Q4b",
-              "state": "metadata_checked",
-              "origin": "legacy-catalogue",
-              "metadataCheck": {
-                "songId": "song_275b119114c4ec21bdd7",
-                "provider": "spotify",
-                "id": "0wz1LjDb9ZNEYwOmDJ3Q4b",
-                "checkedAt": "2026-09-05",
-                "state": "metadata_checked",
-                "httpStatus": 200,
-                "title": "Surfin' U.S.A. - Remastered 2001",
-                "artists": [
-                  "The Beach Boys"
-                ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": true
-              },
-              "lastAudit": {
-                "songId": "song_275b119114c4ec21bdd7",
-                "provider": "spotify",
-                "id": "0wz1LjDb9ZNEYwOmDJ3Q4b",
-                "checkedAt": "2026-09-05",
-                "state": "metadata_checked",
-                "httpStatus": 200,
-                "title": "Surfin' U.S.A. - Remastered 2001",
-                "artists": [
-                  "The Beach Boys"
-                ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": true
-              }
-            }
-          ]
-        },
-        "youtube": {
-          "preferredId": null,
-          "links": []
-        }
-      }
-    },
     "song_8d3c8aa6b9cbaca8e8f8": {
       "id": "song_8d3c8aa6b9cbaca8e8f8",
       "canonicalKey": "california dreamin|mamas",
@@ -26026,65 +25608,6 @@
                 "playable": true,
                 "titleMatches": false,
                 "artistMatches": true
-              }
-            }
-          ]
-        },
-        "youtube": {
-          "preferredId": null,
-          "links": []
-        }
-      }
-    },
-    "song_16b8b3360e376a3392c7": {
-      "id": "song_16b8b3360e376a3392c7",
-      "canonicalKey": "the way we were|barbara streisand",
-      "title": "The Way We Were",
-      "artist": "Barbara Streisand",
-      "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [],
-        "answerYear": null
-      },
-      "providers": {
-        "spotify": {
-          "preferredId": null,
-          "links": [
-            {
-              "id": "1vZTgn4JXWMahR8r99ug5H",
-              "url": "https://open.spotify.com/track/1vZTgn4JXWMahR8r99ug5H",
-              "state": "metadata_checked",
-              "origin": "legacy-catalogue",
-              "metadataCheck": {
-                "songId": "song_16b8b3360e376a3392c7",
-                "provider": "spotify",
-                "id": "1vZTgn4JXWMahR8r99ug5H",
-                "checkedAt": "2026-09-05",
-                "state": "metadata_checked",
-                "httpStatus": 200,
-                "title": "The Way We Were",
-                "artists": [
-                  "Barbra Streisand"
-                ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": false
-              },
-              "lastAudit": {
-                "songId": "song_16b8b3360e376a3392c7",
-                "provider": "spotify",
-                "id": "1vZTgn4JXWMahR8r99ug5H",
-                "checkedAt": "2026-09-05",
-                "state": "metadata_checked",
-                "httpStatus": 200,
-                "title": "The Way We Were",
-                "artists": [
-                  "Barbra Streisand"
-                ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": false
               }
             }
           ]
@@ -26203,71 +25726,6 @@
                 "playable": true,
                 "titleMatches": true,
                 "artistMatches": true
-              }
-            }
-          ]
-        },
-        "youtube": {
-          "preferredId": null,
-          "links": []
-        }
-      }
-    },
-    "song_e460fb216655c321089b": {
-      "id": "song_e460fb216655c321089b",
-      "canonicalKey": "that s what friends are for|dionne",
-      "title": "That's What Friends Are For",
-      "artist": "Dionne and Friends",
-      "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [],
-        "answerYear": null
-      },
-      "providers": {
-        "spotify": {
-          "preferredId": null,
-          "links": [
-            {
-              "id": "1cOj24fUMnBSXhtp7waHVW",
-              "url": "https://open.spotify.com/track/1cOj24fUMnBSXhtp7waHVW",
-              "state": "metadata_checked",
-              "origin": "legacy-catalogue",
-              "metadataCheck": {
-                "songId": "song_e460fb216655c321089b",
-                "provider": "spotify",
-                "id": "1cOj24fUMnBSXhtp7waHVW",
-                "checkedAt": "2026-09-05",
-                "state": "metadata_checked",
-                "httpStatus": 200,
-                "title": "That's What Friends Are For (with Elton John, Gladys Knight & Stevie Wonder)",
-                "artists": [
-                  "Dionne Warwick",
-                  "Elton John",
-                  "Gladys Knight",
-                  "Stevie Wonder"
-                ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": false
-              },
-              "lastAudit": {
-                "songId": "song_e460fb216655c321089b",
-                "provider": "spotify",
-                "id": "1cOj24fUMnBSXhtp7waHVW",
-                "checkedAt": "2026-09-05",
-                "state": "metadata_checked",
-                "httpStatus": 200,
-                "title": "That's What Friends Are For (with Elton John, Gladys Knight & Stevie Wonder)",
-                "artists": [
-                  "Dionne Warwick",
-                  "Elton John",
-                  "Gladys Knight",
-                  "Stevie Wonder"
-                ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": false
               }
             }
           ]
@@ -26497,65 +25955,6 @@
               }
             }
           ]
-        }
-      }
-    },
-    "song_2c4717878b5bd5401715": {
-      "id": "song_2c4717878b5bd5401715",
-      "canonicalKey": "macarena|los del rio",
-      "title": "Macarena (Bayside Boys Remix)",
-      "artist": "Los del Rio",
-      "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [],
-        "answerYear": null
-      },
-      "providers": {
-        "spotify": {
-          "preferredId": null,
-          "links": [
-            {
-              "id": "2df5QsXucx4VLiHNGusXD5",
-              "url": "https://open.spotify.com/track/2df5QsXucx4VLiHNGusXD5",
-              "state": "metadata_checked",
-              "origin": "legacy-catalogue",
-              "metadataCheck": {
-                "songId": "song_2c4717878b5bd5401715",
-                "provider": "spotify",
-                "id": "2df5QsXucx4VLiHNGusXD5",
-                "checkedAt": "2026-09-05",
-                "state": "metadata_checked",
-                "httpStatus": 200,
-                "title": "Macarena - Bayside Boys Remix",
-                "artists": [
-                  "Los Del Rio"
-                ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
-              },
-              "lastAudit": {
-                "songId": "song_2c4717878b5bd5401715",
-                "provider": "spotify",
-                "id": "2df5QsXucx4VLiHNGusXD5",
-                "checkedAt": "2026-09-05",
-                "state": "metadata_checked",
-                "httpStatus": 200,
-                "title": "Macarena - Bayside Boys Remix",
-                "artists": [
-                  "Los Del Rio"
-                ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
-              }
-            }
-          ]
-        },
-        "youtube": {
-          "preferredId": null,
-          "links": []
         }
       }
     },
@@ -27184,10 +26583,17 @@
       "title": "I'm Gonna Knock on Your Door",
       "artist": "Eddie Hodges",
       "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [],
-        "answerYear": null
+        "year": 1961,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1961,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/I%27m_Gonna_Knock_on_Your_Door",
+            "evidence": "Eddie Hodges single released June 1961."
+          }
+        ],
+        "answerYear": 1961
       },
       "providers": {
         "spotify": {
@@ -27927,42 +27333,6 @@
           "preferredId": null,
           "links": [
             {
-              "id": "1ZPlNanZsJSPK5h9YZZFbZ",
-              "url": "https://open.spotify.com/track/1ZPlNanZsJSPK5h9YZZFbZ",
-              "state": "metadata_checked",
-              "origin": "legacy-catalogue",
-              "metadataCheck": {
-                "songId": "song_e89a9ff7ef98eb287ff2",
-                "provider": "spotify",
-                "id": "1ZPlNanZsJSPK5h9YZZFbZ",
-                "checkedAt": "2026-09-05",
-                "state": "metadata_checked",
-                "httpStatus": 200,
-                "title": "Like a Virgin",
-                "artists": [
-                  "Madonna"
-                ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": true
-              },
-              "lastAudit": {
-                "songId": "song_e89a9ff7ef98eb287ff2",
-                "provider": "spotify",
-                "id": "1ZPlNanZsJSPK5h9YZZFbZ",
-                "checkedAt": "2026-09-05",
-                "state": "metadata_checked",
-                "httpStatus": 200,
-                "title": "Like a Virgin",
-                "artists": [
-                  "Madonna"
-                ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": true
-              }
-            },
-            {
               "id": "1z3ugFmUKoCzGsI6jdY4Ci",
               "url": "https://open.spotify.com/track/1z3ugFmUKoCzGsI6jdY4Ci",
               "state": "metadata_checked",
@@ -28271,7 +27641,7 @@
     },
     "song_a99e74e4debf210d1a8c": {
       "id": "song_a99e74e4debf210d1a8c",
-      "canonicalKey": "macarena|los del ri o",
+      "canonicalKey": "macarena|los del rio",
       "title": "Macarena",
       "artist": "Los del Río",
       "release": {
@@ -28283,7 +27653,45 @@
       "providers": {
         "spotify": {
           "preferredId": null,
-          "links": []
+          "links": [
+            {
+              "id": "2df5QsXucx4VLiHNGusXD5",
+              "url": "https://open.spotify.com/track/2df5QsXucx4VLiHNGusXD5",
+              "state": "metadata_checked",
+              "origin": "legacy-catalogue",
+              "metadataCheck": {
+                "songId": "song_2c4717878b5bd5401715",
+                "provider": "spotify",
+                "id": "2df5QsXucx4VLiHNGusXD5",
+                "checkedAt": "2026-09-05",
+                "state": "metadata_checked",
+                "httpStatus": 200,
+                "title": "Macarena - Bayside Boys Remix",
+                "artists": [
+                  "Los Del Rio"
+                ],
+                "playable": true,
+                "titleMatches": true,
+                "artistMatches": true
+              },
+              "lastAudit": {
+                "songId": "song_2c4717878b5bd5401715",
+                "provider": "spotify",
+                "id": "2df5QsXucx4VLiHNGusXD5",
+                "checkedAt": "2026-09-05",
+                "state": "metadata_checked",
+                "httpStatus": 200,
+                "title": "Macarena - Bayside Boys Remix",
+                "artists": [
+                  "Los Del Rio"
+                ],
+                "playable": true,
+                "titleMatches": true,
+                "artistMatches": true
+              },
+              "recordingVariant": "Bayside Boys Remix"
+            }
+          ]
         },
         "youtube": {
           "preferredId": null,
@@ -28297,10 +27705,23 @@
       "title": "Candle in the Wind 1997",
       "artist": "Elton John",
       "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [],
-        "answerYear": null
+        "year": 1997,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1997,
+            "state": "legacy_unverified",
+            "sourceUrl": null,
+            "evidence": null
+          },
+          {
+            "year": 1997,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/elton-john-something-about-the-way-you-lookcandle/",
+            "evidence": "Official Charts: the re-written and re-recorded Candle in the Wind 97 was released 13 September 1997."
+          }
+        ],
+        "answerYear": 1997
       },
       "providers": {
         "spotify": {
@@ -28453,42 +27874,6 @@
         "spotify": {
           "preferredId": null,
           "links": [
-            {
-              "id": "6FZDfxM3a3UCqtzo5pxSLZ",
-              "url": "https://open.spotify.com/track/6FZDfxM3a3UCqtzo5pxSLZ",
-              "state": "metadata_checked",
-              "origin": "legacy-catalogue",
-              "metadataCheck": {
-                "songId": "song_dd9e904be04f78be21e4",
-                "provider": "spotify",
-                "id": "6FZDfxM3a3UCqtzo5pxSLZ",
-                "checkedAt": "2026-09-05",
-                "state": "metadata_checked",
-                "httpStatus": 200,
-                "title": "Without Me",
-                "artists": [
-                  "Halsey"
-                ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": false
-              },
-              "lastAudit": {
-                "songId": "song_dd9e904be04f78be21e4",
-                "provider": "spotify",
-                "id": "6FZDfxM3a3UCqtzo5pxSLZ",
-                "checkedAt": "2026-09-05",
-                "state": "metadata_checked",
-                "httpStatus": 200,
-                "title": "Without Me",
-                "artists": [
-                  "Halsey"
-                ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": false
-              }
-            },
             {
               "id": "7lQ8MOhq6IN2w8EYcFNSUk",
               "url": "https://open.spotify.com/track/7lQ8MOhq6IN2w8EYcFNSUk",
@@ -28863,10 +28248,17 @@
       "title": "Love the Way You Lie",
       "artist": "Eminem",
       "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [],
-        "answerYear": null
+        "year": 2010,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2010,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/song/1440782199",
+            "evidence": "Apple Music lists Love the Way You Lie on Recovery on June 21, 2010."
+          }
+        ],
+        "answerYear": 2010
       },
       "providers": {
         "spotify": {
@@ -73872,6 +73264,122 @@
           ]
         }
       }
+    },
+    "song_e716a1e409cdc55cae08": {
+      "id": "song_e716a1e409cdc55cae08",
+      "canonicalKey": "tutti frutti|little richard",
+      "title": "Tutti Frutti",
+      "artist": "Little Richard",
+      "release": {
+        "answerYear": 1955,
+        "year": 1955,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1955,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Tutti_Frutti_(song)",
+            "evidence": "Little Richard single released October 1955."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_937d7eb4deb7e91ec9a6": {
+      "id": "song_937d7eb4deb7e91ec9a6",
+      "canonicalKey": "let s get it on|marvin gaye",
+      "title": "Let's Get It On",
+      "artist": "Marvin Gaye",
+      "release": {
+        "answerYear": 1973,
+        "year": 1973,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1973,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Let%27s_Get_It_On_(song)",
+            "evidence": "Marvin Gaye single released June 15, 1973."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_e4afd9acdfde91a5daac": {
+      "id": "song_e4afd9acdfde91a5daac",
+      "canonicalKey": "enter sandman|metallica",
+      "title": "Enter Sandman",
+      "artist": "Metallica",
+      "release": {
+        "answerYear": 1991,
+        "year": 1991,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1991,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Enter_Sandman",
+            "evidence": "Metallica single released July 29, 1991."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_56da601a1857d26dd6e8": {
+      "id": "song_56da601a1857d26dd6e8",
+      "canonicalKey": "bitter sweet symphony|verve",
+      "title": "Bitter Sweet Symphony",
+      "artist": "The Verve",
+      "release": {
+        "answerYear": 1997,
+        "year": 1997,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1997,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/release-group/8912c382-99cd-3175-a259-2382d7b9e261",
+            "evidence": "MusicBrainz official release group lists UK releases in June 1997."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
     }
   },
   "memberships": [
@@ -74099,7 +73607,11 @@
       "metadata": {
         "mbScore": 59,
         "source": "release-year-verified",
-        "sourceLabel": "Billboard hit · legacy release-year label"
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "legacyKeys": [
+          "blue tango|leroy anderson pops concert orchestra",
+          "song_96d7887a27dd86497ac3"
+        ]
       },
       "fieldOrder": [
         "title",
@@ -74239,7 +73751,11 @@
         "source": "catalogue-cleanup-release-audit",
         "sourceLabel": "Sourced original recording",
         "evidenceState": "externally_observed",
-        "sourceRetrievalDate": "2026-09-05"
+        "sourceRetrievalDate": "2026-09-05",
+        "legacyKeys": [
+          "song_bf27dbfb2d5582bc5391",
+          "the song from moulin rouge|percy faith"
+        ]
       },
       "fieldOrder": [
         "title",
@@ -74381,7 +73897,13 @@
       "metadata": {
         "mbScore": 100,
         "source": "release-year-verified",
-        "sourceLabel": "Billboard hit · legacy release-year label"
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "legacyKeys": [
+          "cherry pink and apple blossom white|pe rez prado",
+          "song_861cb60c1c56ae2a71b6",
+          "cherry pink and apple blossom white cerezo rosa|pe rez prado",
+          "song_8c0121f9d8521b0f1cdb"
+        ]
       },
       "fieldOrder": [
         "title",
@@ -74391,36 +73913,12 @@
         "source",
         "sourceLabel",
         "spotifyId",
-        "youtubeId"
-      ],
-      "providerRefs": {
-        "spotify": "5HisVcYPaIB4uHdrnW6HCt",
-        "youtube": null
-      }
-    },
-    {
-      "songId": "song_861cb60c1c56ae2a71b6",
-      "mode": "greatest",
-      "year": 1955,
-      "metadata": {
-        "mbScore": 78,
-        "source": "release-year-verified",
-        "sourceLabel": "Billboard hit · legacy release-year label",
-        "playbackEvidenceState": "needs_reenrichment",
-        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
-      },
-      "fieldOrder": [
-        "title",
-        "artist",
-        "year",
-        "mbScore",
-        "source",
-        "sourceLabel",
         "youtubeId",
         "playbackEvidenceState",
         "playbackIssue"
       ],
       "providerRefs": {
+        "spotify": "5HisVcYPaIB4uHdrnW6HCt",
         "youtube": null
       }
     },
@@ -75157,32 +74655,6 @@
       }
     },
     {
-      "songId": "song_c223ab5e9e385520ad45",
-      "mode": "greatest",
-      "year": 1961,
-      "metadata": {
-        "mbScore": 100,
-        "source": "release-year-verified",
-        "sourceLabel": "Billboard hit · legacy release-year label",
-        "playbackEvidenceState": "needs_reenrichment",
-        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
-      },
-      "fieldOrder": [
-        "title",
-        "artist",
-        "year",
-        "mbScore",
-        "source",
-        "sourceLabel",
-        "youtubeId",
-        "playbackEvidenceState",
-        "playbackIssue"
-      ],
-      "providerRefs": {
-        "youtube": null
-      }
-    },
-    {
       "songId": "song_11381b6461d062c383c3",
       "mode": "greatest",
       "year": 1961,
@@ -75200,7 +74672,11 @@
         "sourceTitle": "Tossin' and Turnin'",
         "sourceArtist": "Bobby Lewis",
         "sourceRevisionId": 1361120217,
-        "sourceRevisionTimestamp": "2026-06-25T19:38:34Z"
+        "sourceRevisionTimestamp": "2026-06-25T19:38:34Z",
+        "legacyKeys": [
+          "song_c223ab5e9e385520ad45",
+          "tossin turnin|bobby lewis"
+        ]
       },
       "fieldOrder": [
         "title",
@@ -75222,7 +74698,9 @@
         "sourceTitle",
         "sourceArtist",
         "sourceRevisionId",
-        "sourceRevisionTimestamp"
+        "sourceRevisionTimestamp",
+        "playbackEvidenceState",
+        "playbackIssue"
       ],
       "providerRefs": {
         "spotify": "79s3pSe1u6ggQBEwVPm58Z",
@@ -75442,7 +74920,11 @@
       "metadata": {
         "mbScore": 100,
         "source": "release-year-verified",
-        "sourceLabel": "Billboard hit · legacy release-year label"
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "legacyKeys": [
+          "surfin u s a|beach boys",
+          "song_275b119114c4ec21bdd7"
+        ]
       },
       "fieldOrder": [
         "title",
@@ -76569,39 +76051,18 @@
       }
     },
     {
-      "songId": "song_7825677a785672c119cd",
-      "mode": "greatest",
-      "year": 1973,
-      "metadata": {
-        "mbScore": 100,
-        "source": "release-year-verified",
-        "sourceLabel": "Billboard hit · legacy release-year label",
-        "playbackEvidenceState": "needs_reenrichment",
-        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
-      },
-      "fieldOrder": [
-        "title",
-        "artist",
-        "year",
-        "mbScore",
-        "source",
-        "sourceLabel",
-        "youtubeId",
-        "playbackEvidenceState",
-        "playbackIssue"
-      ],
-      "providerRefs": {
-        "youtube": null
-      }
-    },
-    {
       "songId": "song_8511fc340a058cf745b9",
       "mode": "greatest",
       "year": 1973,
       "metadata": {
         "mbScore": 100,
         "source": "release-year-verified",
-        "sourceLabel": "Billboard hit · legacy release-year label"
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "legacyKeys": [
+          "tie a yellow ribbon round the ole oak tree|tony orlando",
+          "song_7825677a785672c119cd",
+          "tie a yellow ribbon round the ole oak tree|dawn"
+        ]
       },
       "fieldOrder": [
         "title",
@@ -76611,7 +76072,9 @@
         "source",
         "sourceLabel",
         "spotifyId",
-        "youtubeId"
+        "youtubeId",
+        "playbackEvidenceState",
+        "playbackIssue"
       ],
       "providerRefs": {
         "spotify": "12UzVR0M7asW2MHAZRJk0I",
@@ -77859,7 +77322,9 @@
         "sourceLabel": "Sourced original recording",
         "evidenceState": "externally_observed",
         "legacyKeys": [
-          "that s what friends are for|dionne warwickelton johngladys knightstevie wonder"
+          "that s what friends are for|dionne warwickelton johngladys knightstevie wonder",
+          "song_e460fb216655c321089b",
+          "that s what friends are for|dionne"
         ]
       },
       "fieldOrder": [
@@ -78036,7 +77501,9 @@
         "sourceTitle": "It Must Have Been Love",
         "sourceArtist": "Roxette",
         "sourceRevisionId": 1367285896,
-        "sourceRevisionTimestamp": "2026-08-02T04:34:24Z"
+        "sourceRevisionTimestamp": "2026-08-02T04:34:24Z",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "incorrect_spotify_mapping_removed"
       },
       "fieldOrder": [
         "title",
@@ -78061,7 +77528,7 @@
         "sourceRevisionTimestamp"
       ],
       "providerRefs": {
-        "spotify": "6kvoHl80mfCVTv7XnZkjQn",
+        "spotify": null,
         "youtube": null
       }
     },
@@ -78468,7 +77935,11 @@
         "sourceTitle": "I Wanna Sex You Up",
         "sourceArtist": "Color Me Badd",
         "sourceRevisionId": 1367232920,
-        "sourceRevisionTimestamp": "2026-08-01T21:32:47Z"
+        "sourceRevisionTimestamp": "2026-08-01T21:32:47Z",
+        "legacyKeys": [
+          "song_798f6ce537f0d5ef063a",
+          "i wanna sex you up|colour me badd"
+        ]
       },
       "fieldOrder": [
         "title",
@@ -78490,36 +77961,12 @@
         "sourceTitle",
         "sourceArtist",
         "sourceRevisionId",
-        "sourceRevisionTimestamp"
-      ],
-      "providerRefs": {
-        "spotify": "1kPBHRXyXdrtYfUfeRwBko",
-        "youtube": null
-      }
-    },
-    {
-      "songId": "song_798f6ce537f0d5ef063a",
-      "mode": "greatest",
-      "year": 1991,
-      "metadata": {
-        "mbScore": 100,
-        "source": "release-year-verified",
-        "sourceLabel": "Billboard hit · legacy release-year label",
-        "playbackEvidenceState": "needs_reenrichment",
-        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
-      },
-      "fieldOrder": [
-        "title",
-        "artist",
-        "year",
-        "mbScore",
-        "source",
-        "sourceLabel",
-        "youtubeId",
+        "sourceRevisionTimestamp",
         "playbackEvidenceState",
         "playbackIssue"
       ],
       "providerRefs": {
+        "spotify": "1kPBHRXyXdrtYfUfeRwBko",
         "youtube": null
       }
     },
@@ -78846,13 +78293,19 @@
       }
     },
     {
-      "songId": "song_b770e2066084fdc0295a",
+      "songId": "song_116456e15d49e88cb6fa",
       "mode": "greatest",
       "year": 1997,
       "metadata": {
         "mbScore": 84,
         "source": "release-year-verified",
-        "sourceLabel": "Billboard hit · legacy release-year label"
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "legacyKeys": [
+          "song_b770e2066084fdc0295a",
+          "candle in the wind|elton john",
+          "song_ca8fed89b1a2d1a65793",
+          "candle in the wind 97|elton john"
+        ]
       },
       "fieldOrder": [
         "title",
@@ -78862,36 +78315,12 @@
         "source",
         "sourceLabel",
         "spotifyId",
-        "youtubeId"
-      ],
-      "providerRefs": {
-        "spotify": "3DUcaEvPO72PijivCjtZcU",
-        "youtube": null
-      }
-    },
-    {
-      "songId": "song_ca8fed89b1a2d1a65793",
-      "mode": "greatest",
-      "year": 1997,
-      "metadata": {
-        "mbScore": 79,
-        "source": "release-year-verified",
-        "sourceLabel": "Billboard hit · legacy release-year label",
-        "playbackEvidenceState": "needs_reenrichment",
-        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
-      },
-      "fieldOrder": [
-        "title",
-        "artist",
-        "year",
-        "mbScore",
-        "source",
-        "sourceLabel",
         "youtubeId",
         "playbackEvidenceState",
         "playbackIssue"
       ],
       "providerRefs": {
+        "spotify": "3DUcaEvPO72PijivCjtZcU",
         "youtube": null
       }
     },
@@ -79180,7 +78609,9 @@
         "source": "release-year-verified",
         "sourceLabel": "Billboard hit · legacy release-year label",
         "legacyKeys": [
-          "smooth|santanarob thomas"
+          "smooth|santanarob thomas",
+          "song_09c24c50eddd79da4285",
+          "smooth|carlos santana"
         ]
       },
       "fieldOrder": [
@@ -79192,36 +78623,12 @@
         "sourceLabel",
         "spotifyId",
         "youtubeId",
-        "legacyKeys"
-      ],
-      "providerRefs": {
-        "spotify": "0n2SEXB2qoRQg171q7XqeW",
-        "youtube": null
-      }
-    },
-    {
-      "songId": "song_09c24c50eddd79da4285",
-      "mode": "greatest",
-      "year": 2000,
-      "metadata": {
-        "mbScore": 57,
-        "source": "release-year-verified",
-        "sourceLabel": "Billboard hit · legacy release-year label",
-        "playbackEvidenceState": "needs_reenrichment",
-        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
-      },
-      "fieldOrder": [
-        "title",
-        "artist",
-        "year",
-        "mbScore",
-        "source",
-        "sourceLabel",
-        "youtubeId",
+        "legacyKeys",
         "playbackEvidenceState",
         "playbackIssue"
       ],
       "providerRefs": {
+        "spotify": "0n2SEXB2qoRQg171q7XqeW",
         "youtube": null
       }
     },
@@ -79796,7 +79203,9 @@
         "sourceRevisionId": 1368984023,
         "sourceRevisionTimestamp": "2026-08-12T05:42:41Z",
         "legacyKeys": [
-          "tik tok|pitbullke ha"
+          "tik tok|pitbullke ha",
+          "song_e8e62b733b5faf52e71a",
+          "tik tok|ke ha"
         ]
       },
       "fieldOrder": [
@@ -79820,7 +79229,9 @@
         "sourceArtist",
         "sourceRevisionId",
         "sourceRevisionTimestamp",
-        "legacyKeys"
+        "legacyKeys",
+        "playbackEvidenceState",
+        "playbackIssue"
       ],
       "providerRefs": {
         "spotify": "0HPD5WQqrq7wPWR7P7Dw1i",
@@ -79875,32 +79286,6 @@
       ],
       "providerRefs": {
         "spotify": "1c8gk2PeTE04A1pIDH9YMk",
-        "youtube": null
-      }
-    },
-    {
-      "songId": "song_e8e62b733b5faf52e71a",
-      "mode": "greatest",
-      "year": 2010,
-      "metadata": {
-        "mbScore": 95,
-        "source": "release-year-verified",
-        "sourceLabel": "Billboard hit · legacy release-year label",
-        "playbackEvidenceState": "needs_reenrichment",
-        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
-      },
-      "fieldOrder": [
-        "title",
-        "artist",
-        "year",
-        "mbScore",
-        "source",
-        "sourceLabel",
-        "youtubeId",
-        "playbackEvidenceState",
-        "playbackIssue"
-      ],
-      "providerRefs": {
         "youtube": null
       }
     },
@@ -81465,7 +80850,11 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "legacyKeys": [
+          "song_09f06b915733c92fbb09",
+          "the battle of the blue and grey|bee gees"
+        ]
       },
       "fieldOrder": [
         "title",
@@ -81532,24 +80921,6 @@
     },
     {
       "songId": "song_2e15a897e1ffa48c08a7",
-      "mode": "australian",
-      "year": 1964,
-      "metadata": {
-        "mbScore": 100,
-        "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
-      },
-      "fieldOrder": [
-        "title",
-        "artist",
-        "year",
-        "mbScore",
-        "source",
-        "sourceLabel"
-      ]
-    },
-    {
-      "songId": "song_09f06b915733c92fbb09",
       "mode": "australian",
       "year": 1964,
       "metadata": {
@@ -86256,7 +85627,7 @@
       }
     },
     {
-      "songId": "song_96d7887a27dd86497ac3",
+      "songId": "song_3e577c1f92cf18db181e",
       "mode": "number1_us",
       "year": 1952,
       "metadata": {
@@ -86288,6 +85659,10 @@
             "sourceUrl": "https://raw.githubusercontent.com/madelinehamilton/BiMMuDa/main/metadata/bimmuda_per_song_metadata.csv",
             "title": "Blue Tango"
           }
+        ],
+        "legacyKeys": [
+          "blue tango|leroy anderson pops concert orchestra",
+          "song_96d7887a27dd86497ac3"
         ]
       },
       "fieldOrder": [
@@ -86318,7 +85693,7 @@
       }
     },
     {
-      "songId": "song_bf27dbfb2d5582bc5391",
+      "songId": "song_0d7a6fa38e57bc3fe13e",
       "mode": "number1_us",
       "year": 1953,
       "metadata": {
@@ -86350,6 +85725,10 @@
             "sourceUrl": "https://raw.githubusercontent.com/madelinehamilton/BiMMuDa/main/metadata/bimmuda_per_song_metadata.csv",
             "title": "The Song from Moulin Rouge"
           }
+        ],
+        "legacyKeys": [
+          "song_bf27dbfb2d5582bc5391",
+          "the song from moulin rouge|percy faith"
         ]
       },
       "fieldOrder": [
@@ -86442,7 +85821,7 @@
       }
     },
     {
-      "songId": "song_8c0121f9d8521b0f1cdb",
+      "songId": "song_a030dc6616018ab0788f",
       "mode": "number1_us",
       "year": 1955,
       "metadata": {
@@ -86474,6 +85853,12 @@
             "sourceUrl": "https://raw.githubusercontent.com/madelinehamilton/BiMMuDa/main/metadata/bimmuda_per_song_metadata.csv",
             "title": "Cherry Pink and Apple Blossom White"
           }
+        ],
+        "legacyKeys": [
+          "cherry pink and apple blossom white|pe rez prado",
+          "song_861cb60c1c56ae2a71b6",
+          "cherry pink and apple blossom white cerezo rosa|pe rez prado",
+          "song_8c0121f9d8521b0f1cdb"
         ]
       },
       "fieldOrder": [
@@ -86846,6 +86231,10 @@
             "sourceUrl": "https://raw.githubusercontent.com/madelinehamilton/BiMMuDa/main/metadata/bimmuda_per_song_metadata.csv",
             "title": "Tossin' and Turnin'"
           }
+        ],
+        "legacyKeys": [
+          "song_c223ab5e9e385520ad45",
+          "tossin turnin|bobby lewis"
         ]
       },
       "fieldOrder": [
@@ -86942,7 +86331,7 @@
       }
     },
     {
-      "songId": "song_275b119114c4ec21bdd7",
+      "songId": "song_2e6112af037b8c8c4d94",
       "mode": "number1_us",
       "year": 1963,
       "metadata": {
@@ -86974,6 +86363,10 @@
             "sourceUrl": "https://raw.githubusercontent.com/madelinehamilton/BiMMuDa/main/metadata/bimmuda_per_song_metadata.csv",
             "title": "Surfin' USA"
           }
+        ],
+        "legacyKeys": [
+          "surfin u s a|beach boys",
+          "song_275b119114c4ec21bdd7"
         ]
       },
       "fieldOrder": [
@@ -87602,6 +86995,11 @@
             "sourceUrl": "https://raw.githubusercontent.com/madelinehamilton/BiMMuDa/main/metadata/bimmuda_per_song_metadata.csv",
             "title": "Tie a Yellow Ribbon Round the Ole Oak Tree"
           }
+        ],
+        "legacyKeys": [
+          "tie a yellow ribbon round the ole oak tree|tony orlando",
+          "song_7825677a785672c119cd",
+          "tie a yellow ribbon round the ole oak tree|dawn"
         ]
       },
       "fieldOrder": [
@@ -87636,7 +87034,7 @@
       }
     },
     {
-      "songId": "song_16b8b3360e376a3392c7",
+      "songId": "song_5d780ddd60d443c3c9be",
       "mode": "number1_us",
       "year": 1974,
       "metadata": {
@@ -87668,6 +87066,10 @@
             "sourceUrl": "https://raw.githubusercontent.com/madelinehamilton/BiMMuDa/main/metadata/bimmuda_per_song_metadata.csv",
             "title": "The Way We Were"
           }
+        ],
+        "legacyKeys": [
+          "song_16b8b3360e376a3392c7",
+          "the way we were|barbara streisand"
         ]
       },
       "fieldOrder": [
@@ -88380,7 +87782,7 @@
       }
     },
     {
-      "songId": "song_e460fb216655c321089b",
+      "songId": "song_02ef333b4fd2a224b8eb",
       "mode": "number1_us",
       "year": 1986,
       "metadata": {
@@ -88412,6 +87814,11 @@
             "sourceUrl": "https://raw.githubusercontent.com/madelinehamilton/BiMMuDa/main/metadata/bimmuda_per_song_metadata.csv",
             "title": "That's What Friends Are For"
           }
+        ],
+        "legacyKeys": [
+          "song_e460fb216655c321089b",
+          "that s what friends are for|dionne",
+          "that s what friends are for|dionne warwickelton johngladys knightstevie wonder"
         ]
       },
       "fieldOrder": [
@@ -89004,7 +88411,7 @@
       }
     },
     {
-      "songId": "song_2c4717878b5bd5401715",
+      "songId": "song_a99e74e4debf210d1a8c",
       "mode": "number1_us",
       "year": 1996,
       "metadata": {
@@ -89036,7 +88443,12 @@
             "sourceUrl": "https://raw.githubusercontent.com/madelinehamilton/BiMMuDa/main/metadata/bimmuda_per_song_metadata.csv",
             "title": "Macarena (Bayside Boys Remix)"
           }
-        ]
+        ],
+        "legacyKeys": [
+          "macarena|los del ri o",
+          "song_2c4717878b5bd5401715"
+        ],
+        "recordingVariant": "Bayside Boys Remix"
       },
       "fieldOrder": [
         "title",
@@ -89063,6 +88475,10 @@
       "providerRefs": {
         "spotify": "2df5QsXucx4VLiHNGusXD5",
         "youtube": null
+      },
+      "displayOverrides": {
+        "title": "Macarena (Bayside Boys Remix)",
+        "artist": "Los del Rio"
       }
     },
     {
@@ -89937,6 +89353,11 @@
             "sourceUrl": "https://raw.githubusercontent.com/madelinehamilton/BiMMuDa/main/metadata/bimmuda_per_song_metadata.csv",
             "title": "Tik Tok"
           }
+        ],
+        "legacyKeys": [
+          "song_e8e62b733b5faf52e71a",
+          "tik tok|ke ha",
+          "tik tok|pitbullke ha"
         ]
       },
       "fieldOrder": [
@@ -90832,7 +90253,11 @@
         "sourceProvider": "Top 100 Singles AMR annual table",
         "sourceUrl": "https://www.top100singles.net/2016/10/amr-top-singles-of-1953.html",
         "sourceTitle": "The Song from \"Moulin Rouge\" (Where is Your Heart)",
-        "sourceArtist": "Percy Faith feat. Felicia Sanders"
+        "sourceArtist": "Percy Faith feat. Felicia Sanders",
+        "legacyKeys": [
+          "song_bf27dbfb2d5582bc5391",
+          "the song from moulin rouge|percy faith"
+        ]
       },
       "fieldOrder": [
         "title",
@@ -91603,7 +91028,12 @@
         "sourceArtist": "Tony Orlando and Dawn",
         "sourcePageId": 19088582,
         "sourceRevisionId": 1368820700,
-        "sourceRevisionTimestamp": "2026-08-11T08:16:06Z"
+        "sourceRevisionTimestamp": "2026-08-11T08:16:06Z",
+        "legacyKeys": [
+          "tie a yellow ribbon round the ole oak tree|tony orlando",
+          "song_7825677a785672c119cd",
+          "tie a yellow ribbon round the ole oak tree|dawn"
+        ]
       },
       "fieldOrder": [
         "title",
@@ -92218,7 +91648,9 @@
         "sourceProvider": "Official ARIA annual singles chart",
         "sourceUrl": "https://www.aria.com.au/charts/1989/singles-chart",
         "sourceTitle": "Like A Prayer",
-        "sourceArtist": "Madonna"
+        "sourceArtist": "Madonna",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "incorrect_spotify_mapping_removed"
       },
       "fieldOrder": [
         "title",
@@ -92238,7 +91670,7 @@
         "sourceArtist"
       ],
       "providerRefs": {
-        "spotify": "1ZPlNanZsJSPK5h9YZZFbZ",
+        "spotify": null,
         "youtube": null
       }
     },
@@ -92474,7 +91906,11 @@
         "sourceProvider": "Official ARIA annual singles chart",
         "sourceUrl": "https://www.aria.com.au/charts/1996/singles-chart",
         "sourceTitle": "Macarena (remix)",
-        "sourceArtist": "Los Del Rio"
+        "sourceArtist": "Los Del Rio",
+        "legacyKeys": [
+          "macarena|los del ri o",
+          "song_2c4717878b5bd5401715"
+        ]
       },
       "fieldOrder": [
         "title",
@@ -92506,7 +91942,13 @@
         "sourceProvider": "Official ARIA annual singles chart",
         "sourceUrl": "https://www.aria.com.au/charts/1997/singles-chart",
         "sourceTitle": "Something About The Way.../candle 97",
-        "sourceArtist": "Elton John"
+        "sourceArtist": "Elton John",
+        "legacyKeys": [
+          "song_b770e2066084fdc0295a",
+          "candle in the wind|elton john",
+          "song_ca8fed89b1a2d1a65793",
+          "candle in the wind 97|elton john"
+        ]
       },
       "fieldOrder": [
         "title",
@@ -92672,7 +92114,9 @@
         "sourceProvider": "Official ARIA annual singles chart",
         "sourceUrl": "https://www.aria.com.au/charts/2002/singles-chart",
         "sourceTitle": "Without Me",
-        "sourceArtist": "Eminem"
+        "sourceArtist": "Eminem",
+        "playbackEvidenceState": "needs_reenrichment",
+        "playbackIssue": "incorrect_spotify_mapping_removed"
       },
       "fieldOrder": [
         "title",
@@ -92692,7 +92136,7 @@
         "sourceArtist"
       ],
       "providerRefs": {
-        "spotify": "6FZDfxM3a3UCqtzo5pxSLZ",
+        "spotify": null,
         "youtube": null
       }
     },
@@ -93878,7 +93322,11 @@
         "sourceRetrievalDate": "2026-09-05",
         "releaseYearEvidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded.",
         "releaseDateEvidence": "1973-09-26",
-        "evidenceState": "externally_observed"
+        "evidenceState": "externally_observed",
+        "legacyKeys": [
+          "song_16b8b3360e376a3392c7",
+          "the way we were|barbara streisand"
+        ]
       },
       "fieldOrder": [
         "title",
@@ -121675,6 +121123,230 @@
         "spotify": null,
         "youtube": null
       }
+    },
+    {
+      "songId": "song_e716a1e409cdc55cae08",
+      "mode": "greatest",
+      "year": 1955,
+      "metadata": {
+        "releaseYear": 1955,
+        "source": "identity-dedupe-depth-replacement",
+        "sourceLabel": "Sourced replacement after duplicate merge",
+        "evidenceState": "externally_observed",
+        "evidenceDisposition": "exact",
+        "sourceProvider": "Wikipedia",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Tutti_Frutti_(song)",
+        "releaseYearEvidence": "Little Richard single released October 1955.",
+        "sourceRetrievalDate": "2026-09-06"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "evidenceState",
+        "evidenceDisposition",
+        "sourceProvider",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "sourceRetrievalDate",
+        "songId",
+        "canonicalKey"
+      ]
+    },
+    {
+      "songId": "song_4132400b7edfa87362b8",
+      "mode": "greatest",
+      "year": 1961,
+      "metadata": {
+        "releaseYear": 1961,
+        "source": "identity-dedupe-depth-replacement",
+        "sourceLabel": "Sourced replacement after duplicate merge",
+        "evidenceState": "externally_observed",
+        "evidenceDisposition": "exact",
+        "sourceProvider": "Wikipedia",
+        "sourceUrl": "https://en.wikipedia.org/wiki/I%27m_Gonna_Knock_on_Your_Door",
+        "releaseYearEvidence": "Eddie Hodges single released June 1961.",
+        "sourceRetrievalDate": "2026-09-06"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "evidenceState",
+        "evidenceDisposition",
+        "sourceProvider",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "sourceRetrievalDate",
+        "songId",
+        "canonicalKey"
+      ]
+    },
+    {
+      "songId": "song_937d7eb4deb7e91ec9a6",
+      "mode": "greatest",
+      "year": 1973,
+      "metadata": {
+        "releaseYear": 1973,
+        "source": "identity-dedupe-depth-replacement",
+        "sourceLabel": "Sourced replacement after duplicate merge",
+        "evidenceState": "externally_observed",
+        "evidenceDisposition": "exact",
+        "sourceProvider": "Wikipedia",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Let%27s_Get_It_On_(song)",
+        "releaseYearEvidence": "Marvin Gaye single released June 15, 1973.",
+        "sourceRetrievalDate": "2026-09-06"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "evidenceState",
+        "evidenceDisposition",
+        "sourceProvider",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "sourceRetrievalDate",
+        "songId",
+        "canonicalKey"
+      ]
+    },
+    {
+      "songId": "song_e4afd9acdfde91a5daac",
+      "mode": "greatest",
+      "year": 1991,
+      "metadata": {
+        "releaseYear": 1991,
+        "source": "identity-dedupe-depth-replacement",
+        "sourceLabel": "Sourced replacement after duplicate merge",
+        "evidenceState": "externally_observed",
+        "evidenceDisposition": "exact",
+        "sourceProvider": "Wikipedia",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Enter_Sandman",
+        "releaseYearEvidence": "Metallica single released July 29, 1991.",
+        "sourceRetrievalDate": "2026-09-06"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "evidenceState",
+        "evidenceDisposition",
+        "sourceProvider",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "sourceRetrievalDate",
+        "songId",
+        "canonicalKey"
+      ]
+    },
+    {
+      "songId": "song_56da601a1857d26dd6e8",
+      "mode": "greatest",
+      "year": 1997,
+      "metadata": {
+        "releaseYear": 1997,
+        "source": "identity-dedupe-depth-replacement",
+        "sourceLabel": "Sourced replacement after duplicate merge",
+        "evidenceState": "externally_observed",
+        "evidenceDisposition": "exact",
+        "sourceProvider": "MusicBrainz",
+        "sourceUrl": "https://musicbrainz.org/release-group/8912c382-99cd-3175-a259-2382d7b9e261",
+        "releaseYearEvidence": "MusicBrainz official release group lists UK releases in June 1997.",
+        "sourceRetrievalDate": "2026-09-06"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "evidenceState",
+        "evidenceDisposition",
+        "sourceProvider",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "sourceRetrievalDate",
+        "songId",
+        "canonicalKey"
+      ]
+    },
+    {
+      "songId": "song_da856af84fad3929ebee",
+      "mode": "greatest",
+      "year": 2000,
+      "metadata": {
+        "releaseYear": 2000,
+        "source": "identity-dedupe-depth-replacement",
+        "sourceLabel": "Sourced replacement after duplicate merge",
+        "evidenceState": "externally_observed",
+        "evidenceDisposition": "exact",
+        "sourceProvider": "Rhino",
+        "sourceUrl": "https://www.rhino.com/article/november-2000-daft-punk-release-one-more-time",
+        "releaseYearEvidence": "Rhino: Daft Punk released One More Time on November 13, 2000.",
+        "sourceRetrievalDate": "2026-09-06"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "evidenceState",
+        "evidenceDisposition",
+        "sourceProvider",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "sourceRetrievalDate",
+        "songId",
+        "canonicalKey"
+      ]
+    },
+    {
+      "songId": "song_caf19c65d5dfd12902ed",
+      "mode": "greatest",
+      "year": 2010,
+      "metadata": {
+        "releaseYear": 2010,
+        "source": "identity-dedupe-depth-replacement",
+        "sourceLabel": "Sourced replacement after duplicate merge",
+        "evidenceState": "externally_observed",
+        "evidenceDisposition": "exact",
+        "sourceProvider": "Apple Music / Aftermath Records",
+        "sourceUrl": "https://music.apple.com/us/song/1440782199",
+        "releaseYearEvidence": "Apple Music lists Love the Way You Lie on Recovery on June 21, 2010.",
+        "sourceRetrievalDate": "2026-09-06"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "evidenceState",
+        "evidenceDisposition",
+        "sourceProvider",
+        "sourceUrl",
+        "releaseYearEvidence",
+        "sourceRetrievalDate",
+        "songId",
+        "canonicalKey"
+      ]
     }
   ],
   "aliases": {
