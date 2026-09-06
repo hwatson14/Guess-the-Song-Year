@@ -42,6 +42,9 @@ jobs:
           replace('app.js',
             "${report.yearBasis==='chart'?'chart year':'release year'}",
             "${report.yearBasis==='chart'?'chart year':report.yearBasis==='screen'?'screen-work year':'release year'}")
+          replace('mode-labels.js',
+            "const basis=report.yearBasis==='chart'?'chart year':'release year';",
+            "const basis=report.yearBasis==='chart'?'chart year':report.yearBasis==='screen'?'screen-work year':'release year';")
 
           # Membership-explicit playback (used by Remix: Original Year) must never fall
           # through to generic provider search, which could silently play the original.
@@ -88,7 +91,7 @@ jobs:
           code="$(cat verification/mode-expansion/phase1-validation-exit-code.txt)"
           git add verification/mode-expansion/phase1-validation.log verification/mode-expansion/phase1-validation-exit-code.txt
           if [ "$code" = "0" ]; then
-            git add engine.js engine-v7.js app.js
+            git add engine.js engine-v7.js app.js mode-labels.js
           fi
           git commit -m "Record mode expansion phase 1 validation" || true
           git push
