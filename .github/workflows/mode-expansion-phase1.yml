@@ -18,9 +18,14 @@ jobs:
       - uses: actions/checkout@v6
         with:
           ref: mode-expansion-verification
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
+      - name: Install validation dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements-dev.txt
       - name: Apply runtime generalisation
         run: |
           python - <<'PY'
