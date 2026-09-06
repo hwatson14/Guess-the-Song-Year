@@ -5,6 +5,7 @@ on:
     branches: [mode-expansion-verification]
     paths:
       - .github/workflows/mode-expansion-phase1.yml
+      - scripts/validate_modes.py
 
 permissions:
   contents: write
