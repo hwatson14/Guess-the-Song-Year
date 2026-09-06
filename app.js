@@ -333,7 +333,7 @@
       if(match){match.phase='ready';saveMatch()}
       screen='ready';render();
     }
-    if(screen==='playing'||screen==='youtube'||playing)stopPlayback();
+    if(current?.provider!=='spotify'&&(screen==='playing'||screen==='youtube'||playing))stopPlayback();
   }
   document.addEventListener('visibilitychange',()=>{
     if(document.visibilityState==='hidden'){suspendForBackground();return}
