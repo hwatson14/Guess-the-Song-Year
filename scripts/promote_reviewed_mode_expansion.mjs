@@ -5,6 +5,7 @@ const MODES_PATH='data/modes.json';
 const REVIEW_PATH='verification/mode-expansion/reviewed-mode-relationships.json';
 const REPORT_PATH='verification/mode-expansion/promotion-report.json';
 const SOURCE='reviewed-mode-expansion-v1';
+const EXPECTED={movie_themes:14,tv_themes:7,screen_themes:21,remix_original_year:5};
 
 const db=JSON.parse(fs.readFileSync(DB_PATH,'utf8'));
 const manifest=JSON.parse(fs.readFileSync(MODES_PATH,'utf8'));
@@ -12,16 +13,19 @@ const review=JSON.parse(fs.readFileSync(REVIEW_PATH,'utf8'));
 if(db.schemaVersion!==2)throw new Error('Expected schemaVersion 2 song database');
 if(review.schemaVersion!==1)throw new Error('Expected reviewed mode expansion schemaVersion 1');
 
-const norm=value=>String(value??'').replace(/&/g,' and ').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g,' ').trim();
+const norm=value=>String(value??'').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g,' ').trim();
+// Match the proven runtime resolver: collapse featured/joined credits to the lead artist
+// for canonical identity matching, while keeping the canonical master song unchanged.
+const primaryArtist=value=>norm(String(value??'').split(/feat\.|ft\.|featuring|&|,| and /i)[0]).replace(/^the\s+/,'');
 const titleOptions=rel=>new Set([rel.title,...(rel.titleAliases||[])].map(norm).filter(Boolean));
-const artistOptions=rel=>new Set([rel.artist,...(rel.artistAliases||[])].map(norm).filter(Boolean));
+const artistOptions=rel=>new Set([rel.artist,...(rel.artistAliases||[])].map(primaryArtist).filter(Boolean));
 const songs=Object.values(db.songs||{});
-const pairsBySong=new Map(songs.map(song=>[song.id,new Set([`${norm(song.title)}|${norm(song.artist)}`])]));
+const pairsBySong=new Map(songs.map(song=>[song.id,new Set([`${norm(song.title)}|${primaryArtist(song.artist)}`])]));
 for(const membership of db.memberships||[]){
   const song=db.songs[membership.songId];if(!song)continue;
   const title=membership.displayOverrides?.title??song.title;
   const artist=membership.displayOverrides?.artist??song.artist;
-  pairsBySong.get(song.id)?.add(`${norm(title)}|${norm(artist)}`);
+  pairsBySong.get(song.id)?.add(`${norm(title)}|${primaryArtist(artist)}`);
 }
 
 function matchesFor(rel){
@@ -109,7 +113,8 @@ preview('tv_themes',report.promoted.tv_themes,`${report.promoted.tv_themes} revi
 preview('screen_themes',report.promoted.screen_themes,`Derived automatically from the ${report.promoted.movie_themes} reviewed Movie and ${report.promoted.tv_themes} reviewed TV relationships; no independent source catalogue.`);
 preview('remix_original_year',report.promoted.remix_original_year,`${report.promoted.remix_original_year} reviewed remix recordings are playable; answer year and no-repeat identity stay tied to the canonical original.`);
 
-if(!report.promoted.movie_themes||!report.promoted.tv_themes||!report.promoted.remix_original_year)throw new Error(`Promotion did not produce all required source previews: ${JSON.stringify(report.promoted)}`);
+if(report.unresolved.length||report.ambiguous.length||report.conflicts.length)throw new Error(`Reviewed relationship promotion was not lossless: ${JSON.stringify({unresolved:report.unresolved,ambiguous:report.ambiguous,conflicts:report.conflicts})}`);
+for(const [mode,count] of Object.entries(EXPECTED))if(report.promoted[mode]!==count)throw new Error(`Reviewed ${mode} count changed: expected ${count}, got ${report.promoted[mode]}`);
 
 fs.writeFileSync(DB_PATH,JSON.stringify(db,null,2)+'\n');
 fs.writeFileSync(MODES_PATH,JSON.stringify(manifest,null,2)+'\n');
