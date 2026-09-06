@@ -53,6 +53,21 @@ jobs:
           PY
       - name: Apply dedupe migration
         run: node scripts/migrations/2026-09-06-song-identity-dedupe.mjs --write
+      - name: Diagnose post-merge provider references
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          const db=JSON.parse(fs.readFileSync('data/song-database.json','utf8'));
+          const dangling=[];
+          for(const m of db.memberships){
+            const song=db.songs[m.songId];
+            for(const provider of ['spotify','youtube']){
+              const ref=m.providerRefs?.[provider];
+              if(ref&&!song?.providers?.[provider]?.links?.some(x=>x.id===ref))dangling.push({songId:m.songId,title:song?.title,artist:song?.artist,mode:m.mode,year:m.year,provider,ref,masterLinks:(song?.providers?.[provider]?.links||[]).map(x=>x.id)});
+            }
+          }
+          console.log(JSON.stringify({dangling},null,2));
+          JS
       - name: Rebuild generated catalogue and coverage report
         run: |
           node scripts/song_database.mjs build
