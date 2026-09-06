@@ -1,23 +1,23 @@
 {
-  "songs": 1118,
-  "memberships": 1299,
+  "songs": 1106,
+  "memberships": 1298,
   "providers": {
     "spotify": {
-      "linked": 609,
-      "missing": 509,
-      "metadataChecked": 609,
+      "linked": 604,
+      "missing": 502,
+      "metadataChecked": 604,
       "verified": 3
     },
     "youtube": {
       "linked": 430,
-      "missing": 688,
+      "missing": 676,
       "metadataChecked": 415,
       "verified": 0
     }
   },
   "releaseEvidence": {
-    "unresolved": 310,
-    "externally_observed": 808
+    "unresolved": 289,
+    "externally_observed": 817
   },
   "greatestDepth": {
     "1950": {
@@ -373,7 +373,7 @@
     {
       "songId": "song_3e577c1f92cf18db181e",
       "title": "Blue Tango",
-      "artist": "Leroy Anderson “Pops” Concert Orchestra",
+      "artist": "Leroy Anderson",
       "missing": [
         "youtube"
       ]
@@ -412,10 +412,9 @@
     },
     {
       "songId": "song_0d7a6fa38e57bc3fe13e",
-      "title": "The Song From Moulin Rouge (Where Is Your Heart)",
+      "title": "The Song from Moulin Rouge (Where Is Your Heart)",
       "artist": "Percy Faith and His Orchestra with Felicia Sanders",
       "missing": [
-        "spotify",
         "youtube"
       ]
     },
@@ -448,15 +447,6 @@
       "title": "Cherry Pink and Apple Blossom White",
       "artist": "Pérez Prado",
       "missing": [
-        "youtube"
-      ]
-    },
-    {
-      "songId": "song_861cb60c1c56ae2a71b6",
-      "title": "Cherry Pink And Apple Blossom White (Cerezo Rosa)",
-      "artist": "Pérez Prado and His Orchestra",
-      "missing": [
-        "spotify",
         "youtube"
       ]
     },
@@ -621,15 +611,6 @@
       ]
     },
     {
-      "songId": "song_c223ab5e9e385520ad45",
-      "title": "Tossin' & Turnin'",
-      "artist": "Bobby Lewis",
-      "missing": [
-        "spotify",
-        "youtube"
-      ]
-    },
-    {
       "songId": "song_11381b6461d062c383c3",
       "title": "Tossin' and Turnin'",
       "artist": "Bobby Lewis",
@@ -679,10 +660,9 @@
     },
     {
       "songId": "song_2e6112af037b8c8c4d94",
-      "title": "Surfin’ U.S.A.",
+      "title": "Surfin' U.S.A.",
       "artist": "The Beach Boys",
       "missing": [
-        "spotify",
         "youtube"
       ]
     },
@@ -908,15 +888,6 @@
       ]
     },
     {
-      "songId": "song_7825677a785672c119cd",
-      "title": "Tie a Yellow Ribbon ’Round the Ole Oak Tree",
-      "artist": "Dawn featuring Tony Orlando",
-      "missing": [
-        "spotify",
-        "youtube"
-      ]
-    },
-    {
       "songId": "song_8511fc340a058cf745b9",
       "title": "Tie a Yellow Ribbon Round the Ole Oak Tree",
       "artist": "Tony Orlando & Dawn",
@@ -1105,7 +1076,6 @@
       "title": "That's What Friends Are For",
       "artist": "Dionne Warwick with Elton John, Gladys Knight & Stevie Wonder",
       "missing": [
-        "spotify",
         "youtube"
       ]
     },
@@ -1130,6 +1100,7 @@
       "title": "It Must Have Been Love",
       "artist": "Roxette",
       "missing": [
+        "spotify",
         "youtube"
       ]
     },
@@ -1198,15 +1169,6 @@
       ]
     },
     {
-      "songId": "song_798f6ce537f0d5ef063a",
-      "title": "I Wanna Sex You Up",
-      "artist": "Colour Me Badd",
-      "missing": [
-        "spotify",
-        "youtube"
-      ]
-    },
-    {
       "songId": "song_66d46918f675a9bf6c8a",
       "title": "Whoomp! (There It Is)",
       "artist": "Tag Team",
@@ -1236,23 +1198,6 @@
       "title": "Because You Loved Me",
       "artist": "Céline Dion",
       "missing": [
-        "youtube"
-      ]
-    },
-    {
-      "songId": "song_b770e2066084fdc0295a",
-      "title": "Candle in the Wind",
-      "artist": "Elton John",
-      "missing": [
-        "youtube"
-      ]
-    },
-    {
-      "songId": "song_ca8fed89b1a2d1a65793",
-      "title": "Candle in the Wind ’97",
-      "artist": "Elton John",
-      "missing": [
-        "spotify",
         "youtube"
       ]
     },
@@ -1300,15 +1245,6 @@
       ]
     },
     {
-      "songId": "song_09c24c50eddd79da4285",
-      "title": "Smooth",
-      "artist": "Carlos Santana",
-      "missing": [
-        "spotify",
-        "youtube"
-      ]
-    },
-    {
       "songId": "song_7965b5f2492cfc4ee475",
       "title": "Up in da Club",
       "artist": "50 Cent",
@@ -1337,15 +1273,6 @@
       "songId": "song_a668a7fc0f33de0081f6",
       "title": "Bleeding Love, Part 1",
       "artist": "Leona Lewis",
-      "missing": [
-        "spotify",
-        "youtube"
-      ]
-    },
-    {
-      "songId": "song_e8e62b733b5faf52e71a",
-      "title": "Tik Tok",
-      "artist": "Ke$ha",
       "missing": [
         "spotify",
         "youtube"
@@ -1686,15 +1613,6 @@
     {
       "songId": "song_2e15a897e1ffa48c08a7",
       "title": "Theme from Jaimie McPheeters",
-      "artist": "Bee Gees",
-      "missing": [
-        "spotify",
-        "youtube"
-      ]
-    },
-    {
-      "songId": "song_09f06b915733c92fbb09",
-      "title": "The Battle of the Blue and Grey",
       "artist": "Bee Gees",
       "missing": [
         "spotify",
@@ -3483,30 +3401,6 @@
       ]
     },
     {
-      "songId": "song_96d7887a27dd86497ac3",
-      "title": "Blue Tango",
-      "artist": "Leroy Anderson",
-      "missing": [
-        "youtube"
-      ]
-    },
-    {
-      "songId": "song_bf27dbfb2d5582bc5391",
-      "title": "The Song from Moulin Rouge",
-      "artist": "Percy Faith",
-      "missing": [
-        "youtube"
-      ]
-    },
-    {
-      "songId": "song_8c0121f9d8521b0f1cdb",
-      "title": "Cherry Pink and Apple Blossom White",
-      "artist": "Perez Prado",
-      "missing": [
-        "youtube"
-      ]
-    },
-    {
       "songId": "song_3b02011f022be9bf35f4",
       "title": "Volare (Nel blu dipinto di blu)",
       "artist": "Domenico Modugno",
@@ -3523,25 +3417,9 @@
       ]
     },
     {
-      "songId": "song_275b119114c4ec21bdd7",
-      "title": "Surfin' USA",
-      "artist": "The Beach Boys",
-      "missing": [
-        "youtube"
-      ]
-    },
-    {
       "songId": "song_8d3c8aa6b9cbaca8e8f8",
       "title": "California Dreamin'",
       "artist": "The Mamas & The Papas",
-      "missing": [
-        "youtube"
-      ]
-    },
-    {
-      "songId": "song_16b8b3360e376a3392c7",
-      "title": "The Way We Were",
-      "artist": "Barbara Streisand",
       "missing": [
         "youtube"
       ]
@@ -3563,14 +3441,6 @@
       ]
     },
     {
-      "songId": "song_e460fb216655c321089b",
-      "title": "That's What Friends Are For",
-      "artist": "Dionne and Friends",
-      "missing": [
-        "youtube"
-      ]
-    },
-    {
       "songId": "song_68a4379c076f79dcc7f3",
       "title": "Walk Like an Egyptian",
       "artist": "The Bangles",
@@ -3582,14 +3452,6 @@
       "songId": "song_d9f06353da86dd3fbda2",
       "title": "Faith",
       "artist": "George Michael",
-      "missing": [
-        "youtube"
-      ]
-    },
-    {
-      "songId": "song_2c4717878b5bd5401715",
-      "title": "Macarena (Bayside Boys Remix)",
-      "artist": "Los del Rio",
       "missing": [
         "youtube"
       ]
@@ -3894,7 +3756,6 @@
       "title": "Macarena",
       "artist": "Los del Río",
       "missing": [
-        "spotify",
         "youtube"
       ]
     },
@@ -6357,6 +6218,42 @@
       "songId": "song_e2812bde48480217fc1a",
       "title": "Apache",
       "artist": "The Shadows",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e716a1e409cdc55cae08",
+      "title": "Tutti Frutti",
+      "artist": "Little Richard",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_937d7eb4deb7e91ec9a6",
+      "title": "Let's Get It On",
+      "artist": "Marvin Gaye",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_e4afd9acdfde91a5daac",
+      "title": "Enter Sandman",
+      "artist": "Metallica",
+      "missing": [
+        "spotify",
+        "youtube"
+      ]
+    },
+    {
+      "songId": "song_56da601a1857d26dd6e8",
+      "title": "Bitter Sweet Symphony",
+      "artist": "The Verve",
       "missing": [
         "spotify",
         "youtube"

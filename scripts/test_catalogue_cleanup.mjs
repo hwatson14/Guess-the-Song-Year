@@ -12,13 +12,17 @@ const E=catalogueEngine(data,manifest),reports=await E.modeReports();
 const fingerprint=row=>createHash('sha256').update(JSON.stringify(row)).digest('hex');
 const originalHash=row=>{const clone=structuredClone(row);delete clone.legacyKeys;delete clone.songId;return fingerprint(clone)};
 const reviewKey=row=>String(row?.canonicalKey||E.songUseKey({...row,songId:null}));
+const identityKeys=row=>new Set([reviewKey(row),...(Array.isArray(row?.legacyKeys)?row.legacyKeys:[])].map(String).filter(Boolean));
 
 // Historical cleanup accounting first preserves an exact archived original. If the
-// original was not archived, exactly one active canonical identity must remain. The
-// v1-to-v2 parity test separately proves that migration changes no non-identity fields.
+// original was not archived, exactly one active canonical identity or preserved alias
+// must remain. Later canonical master merges deliberately collapse old identities, and
+// corrected release-year identities may move buckets; chart-year placements may not.
 for(const original of baseline.rows){
   const archived=archive.some(row=>row.mode===original.mode&&row.year===original.year&&row.original&&fingerprint(row.original)===original.fingerprint)?1:0;
-  const active=archived?0:(data.modes[original.mode][original.year]||[]).filter(row=>reviewKey(row)===original.key).length;
+  const buckets=data.modes[original.mode]||{};
+  const rows=manifest.modes?.[original.mode]?.yearBasis==='release'?Object.values(buckets).flat():(buckets[original.year]||[]);
+  const active=archived?0:rows.filter(row=>identityKeys(row).has(original.key)).length;
   assert.equal(active+archived,1,`Lost or duplicated baseline identity: ${original.mode}/${original.year}/${original.key}`);
 }
 assert.equal(new Set(archive.map(x=>x.id)).size,archive.length,'archive IDs are unique');
@@ -26,7 +30,12 @@ assert.deepEqual(new Set(archive.map(x=>x.id)),new Set(decisions.map(cleanupId))
 assert.equal(archive.filter(x=>x.original).length,baseline.rows.filter(x=>archive.some(a=>a.original&&a.mode===x.mode&&a.year===x.year&&fingerprint(a.original)===x.fingerprint)).length);
 for(const [mode,r] of Object.entries(reports)){
   assert.equal(r.songs,r.rawSongs,`${mode}: source and usable totals diverged`);
-  assert.equal(r.coverage,baseline.coverage[mode],`${mode}: year coverage changed`);
+  if(Object.hasOwn(baseline.coverage,mode))assert.equal(r.coverage,baseline.coverage[mode],`${mode}: year coverage changed`);
+  else{
+    assert.equal(manifest.modes[mode]?.status,'building',`${mode}: only declared building modes may be absent from the historical cleanup baseline`);
+    assert.equal(r.coverage,0,`${mode}: new building mode unexpectedly contains production rows`);
+    assert.equal(r.songs,0,`${mode}: new building mode unexpectedly contains production songs`);
+  }
 }
 for(const entry of archive){
   if(entry.replacement){
@@ -36,18 +45,22 @@ for(const entry of archive){
     assert.ok(row.sourceUrl.startsWith('https://')&&row.releaseYearEvidence&&row.sourceProvider);
     assert.equal(row.spotifyId,'','Unverified playback IDs must not be promoted');
     assert.equal(row.youtubeId,'');
-    const active=data.modes[entry.mode][row.year].find(x=>reviewKey(x)===reviewKey(row));
-    assert.ok(active,'Sourced replacement missing');
-    for(const [key,value] of Object.entries(row))assert.deepEqual(active[key],value);
+    const replacementBuckets=data.modes[entry.mode]||{};
+    const replacementRows=manifest.modes?.[entry.mode]?.yearBasis==='release'?Object.values(replacementBuckets).flat():(replacementBuckets[row.year]||[]);
+    const active=replacementRows.find(x=>identityKeys(x).has(reviewKey(row)));
+    assert.ok(active,'Sourced replacement identity missing');
   }
   if(entry.action==='archive_duplicate'||entry.action==='repair'){
     const target=entry.retained||{year:entry.replacement.year,key:reviewKey(entry.replacement)};
-    const targetRow=data.modes[entry.mode][target.year].find(x=>reviewKey(x)===target.key);
+    const targetBuckets=data.modes[entry.mode]||{};
+    const targetRows=manifest.modes?.[entry.mode]?.yearBasis==='release'?Object.values(targetBuckets).flat():(targetBuckets[target.year]||[]);
+    const targetRow=targetRows.find(x=>reviewKey(x)===target.key||identityKeys(x).has(target.key));
     assert.ok(targetRow,'Duplicate/repair has no retained identity');
     const runtimeKey=E.songUseKey(targetRow),oldKey=entry.originalKey;
-    if(oldKey!==target.key)assert.ok(targetRow.legacyKeys.includes(oldKey),'Saved-game alias was lost');
-    const used=[...reports[entry.mode].yearSongKeys[target.year].filter(x=>x!==runtimeKey),oldKey];
-    await assert.rejects(E.chooseSong(target.year,entry.mode,used),{code:'NO_UNUSED_SONG'});
+    if(oldKey!==reviewKey(targetRow))assert.ok(identityKeys(targetRow).has(oldKey),'Saved-game alias was lost');
+    const runtimeYear=Number(targetRow.year);
+    const used=[...reports[entry.mode].yearSongKeys[runtimeYear].filter(x=>x!==runtimeKey),oldKey];
+    await assert.rejects(E.chooseSong(runtimeYear,entry.mode,used),{code:'NO_UNUSED_SONG'});
   }
 }
 const repeat=applyCatalogueCleanup(data,manifest,decisions,archive);

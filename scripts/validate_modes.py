@@ -22,7 +22,7 @@ GUARD = ROOT / "engine-v7.js"
 APP = ROOT / "app.js"
 VALID_STATUSES = {"ready", "beta", "preview", "building"}
 STATUS_LABELS = {"ready": "Ready", "beta": "Beta", "preview": "Preview", "building": "Building"}
-VALID_YEAR_BASES = {"release", "chart"}
+VALID_YEAR_BASES = {"release", "chart", "screen"}
 VALID_REPEAT_POLICIES = {"unique", "fixed"}
 
 
@@ -83,11 +83,20 @@ def main():
 
     if schema.get("title") != "Guess the Song Year prebuilt catalogue":
         fail("unexpected catalogue schema")
-    if set(catalogue_modes) != set(declared_modes):
-        fail(
-            "catalogue and mode manifest disagree: "
-            f"catalogue={sorted(catalogue_modes)}, manifest={sorted(declared_modes)}"
-        )
+
+    # Runtime data may never contain an undeclared mode. A declared mode may be
+    # absent only while it is explicitly `building`; this lets us register future
+    # modes without pretending an empty catalogue is playable.
+    undeclared = set(catalogue_modes) - set(declared_modes)
+    if undeclared:
+        fail(f"catalogue contains undeclared modes: {sorted(undeclared)}")
+    missing_declared = set(declared_modes) - set(catalogue_modes)
+    invalid_missing = sorted(
+        mode_id for mode_id in missing_declared
+        if str((declared_modes.get(mode_id) or {}).get("status") or "") != "building"
+    )
+    if invalid_missing:
+        fail(f"non-building declared modes are missing from catalogue: {invalid_missing}")
 
     year_map = load_year_map()
     required_years = set(int(year) for year in year_map[1:] if year)
@@ -97,11 +106,11 @@ def main():
 
     reports = {}
     for mode_id, meta in declared_modes.items():
+        if not isinstance(meta, dict):
+            fail(f"{mode_id} metadata is not an object")
         status = str(meta.get("status") or "")
         if status not in VALID_STATUSES:
             fail(f"{mode_id} has invalid status {status!r}")
-        if not isinstance(meta, dict):
-            fail(f"{mode_id} metadata is not an object")
         for field in ("name", "short", "desc", "statusLabel", "statusNote", "yearBasis", "repeatPolicy"):
             if not isinstance(meta.get(field), str) or not meta[field].strip():
                 fail(f"{mode_id} is missing mode metadata {field}")
@@ -114,9 +123,23 @@ def main():
         if (meta["yearBasis"] == "chart") != (meta["repeatPolicy"] == "fixed"):
             fail(f"{mode_id} chart modes must use the fixed repeat policy, and only chart modes may use it")
 
-        buckets = catalogue_modes.get(mode_id)
+        composite = meta.get("compositeOf")
+        if composite is not None:
+            if not isinstance(composite, list) or len(composite) < 2 or any(not isinstance(x, str) or not x for x in composite):
+                fail(f"{mode_id} compositeOf must contain at least two declared mode IDs")
+            if mode_id in composite or any(source not in declared_modes for source in composite):
+                fail(f"{mode_id} compositeOf contains an invalid source mode")
+            if any(declared_modes[source].get("yearBasis") != meta["yearBasis"] for source in composite):
+                fail(f"{mode_id} composite sources must share its yearBasis")
+
+        if meta.get("playbackVariant") not in (None, "membership_explicit"):
+            fail(f"{mode_id} has unsupported playbackVariant {meta.get('playbackVariant')!r}")
+
+        buckets = catalogue_modes.get(mode_id, {})
         if not isinstance(buckets, dict):
             fail(f"{mode_id} catalogue is not an object")
+        if not buckets and status != "building":
+            fail(f"{mode_id} has no catalogue rows but is not building")
         years = set()
         songs = []
         alternate_labels = 0
@@ -160,6 +183,15 @@ def main():
                     missing_canonical += 1
                 if meta["yearBasis"] == "chart" and int(song.get("chartYear") or 0) != year:
                     fail(f"{mode_id} {year}[{index}] must identify chartYear {year}")
+                if meta["yearBasis"] == "screen":
+                    if not str(song.get("screenWorkId") or "").strip():
+                        fail(f"{mode_id} {year}[{index}] screen mode is missing screenWorkId")
+                    if song.get("workType") not in ("movie", "tv") or not str(song.get("workTitle") or "").strip():
+                        fail(f"{mode_id} {year}[{index}] has invalid screen-work metadata")
+                    if type(song.get("workAnswerYear")) is not int or song["workAnswerYear"] != year:
+                        fail(f"{mode_id} {year}[{index}] workAnswerYear must equal its bucket year")
+                if meta.get("playbackVariant") == "membership_explicit" and song.get("playbackPolicy") != "membership-explicit":
+                    fail(f"{mode_id} {year}[{index}] must use membership-explicit playback")
                 songs.append(song)
 
         coverage = len(years)

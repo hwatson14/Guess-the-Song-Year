@@ -1,0 +1,25 @@
+.setup-playback-card .setup-service-grid{margin-top:15px}
+.setup-playback-card .setup-device{margin-top:14px;padding:15px 16px;border:1px solid var(--line2);border-radius:18px;background:#071014}
+.setup-device-top{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.setup-device-copy{min-width:0}
+.setup-device-label{display:block;text-transform:uppercase;letter-spacing:.12em;font-size:10px;font-weight:850;color:var(--mint);margin-bottom:4px}
+.setup-device-copy strong{display:block;font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.setup-device-copy small{display:block;color:var(--muted);margin-top:3px;line-height:1.3}
+.setup-device-change{min-height:44px;flex:0 0 auto;padding:0 16px;border-radius:14px}
+.setup-device-picker{display:grid;gap:8px;margin-top:13px;padding-top:13px;border-top:1px solid var(--line2)}
+.setup-device-picker[hidden]{display:none}
+.setup-device-picker select{width:100%;min-height:50px;border:1px solid var(--line2);border-radius:15px;background:#061013;color:var(--text);padding:0 12px}
+.setup-device-picker .btn{width:100%;min-height:46px}
+.setup-device-picker small{color:var(--muted);line-height:1.35}
+@media(max-width:520px){
+  .setup-device-top{align-items:flex-start}
+  .setup-device-change{min-height:42px;padding:0 14px}
+  .screen-setup .setup-grid{
+    align-content:start;
+    overflow-y:auto;
+    overflow-x:hidden;
+    overscroll-behavior-y:contain;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:8px;
+  }
+}

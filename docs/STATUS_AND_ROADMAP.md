@@ -1,6 +1,6 @@
 # Status and Roadmap
 
-_Reviewed: 2026-09-05_
+_Reviewed: 2026-09-06_
 
 ## Current status
 
@@ -15,18 +15,24 @@ The v17 architecture is a working multi-mode product backed by normalized JSON s
 | Unexpected Years | Preview | 40/73 years; intentionally sparse |
 | #1 US | Beta | 73/73 fixed chart leaders |
 | #1 Australia | Beta | 73/73 fixed chart leaders |
+| Movie Themes | Planned | Answer year = represented movie release year; source memberships/work evidence still need curation |
+| TV Themes | Planned | Answer year = represented show's Season 1 / series-premiere year; source memberships/work evidence still need curation |
+| TV & Movie Themes | Planned | Deterministic union of Movie Themes + TV Themes, inheriting each source work's answer year |
+| Remix: Original Year | Planned | Hear a reviewed remix, answer with original song release year |
 | Canonical source | Working v17 | 1,118 masters, shared across memberships |
 | Compiler | Working | Offline deterministic JSON compiler from `data/song-database.json` |
 | Provider links | Partially reviewed | Three preferred Spotify links; no preferred YouTube links; remaining imports are candidates |
 | SQLite | Future option | Useful as a rebuilt query/validation workspace, not yet required or authoritative |
 
-All five modes are selectable, but none is labelled Ready. Beta/Preview status reflects incomplete evidence and provider coverage, not a reason to weaken runtime identity or year invariants.
+The five current modes are selectable, but none is labelled Ready. Beta/Preview status reflects incomplete evidence and provider coverage, not a reason to weaken runtime identity or year invariants. The four newly requested modes are specified in `docs/MODE_EXPANSION_SPEC.md` and are not yet exposed as playable until their data/mechanics are valid.
 
 ## Architecture facts to preserve
 
 The normalized JSON source separates master song facts from mode memberships and provider links. Release-mode answer years now come from the master song's `release.answerYear`, and runtime identity uses immutable `songId`; a correction is made once and flows through every membership when the deterministic compiler rebuilds the runtime catalogue. The runtime must continue to consume a static artifact suitable for GitHub Pages.
 
 The current YouTube fallback searches from the browser and validates candidates through the public API. It is dependent on a restricted public key and quota. Search quota/auth failures must remain visible provider errors; they must not be treated as evidence that a song or year changed. Spotify preferred links are reviewed separately from unverified imports.
+
+The new screen-theme modes require a separate screen-work answer-year basis. A theme song remains canonical music data with its own `release.answerYear`, while its movie/show relationship supplies the gameplay year for theme modes. Movie Themes use the movie's release year. TV Themes use the show's Season 1 / series-premiere year. `TV & Movie Themes` must be derived from its two source modes while preserving song-to-screen-work relationship identity. `Remix: Original Year` needs an explicit reviewed remix playback reference while preserving the original song's `songId` and `release.answerYear` as gameplay identity and answer.
 
 ## Roadmap
 
@@ -36,18 +42,30 @@ The current YouTube fallback searches from the browser and validates candidates 
 2. Keep `node scripts/check.mjs` as the blocking local/CI gate and ensure all clean-checkout workflow inputs are committed.
 3. Improve YouTube quota monitoring, candidate validation, and failure recovery; preserve clear fallback behavior.
 
+### Mode expansion
+
+1. Generalise compiler/runtime validation so supported modes are driven by declared semantics where practical rather than repeated hard-coded ID lists.
+2. Add a stable screen-work relationship model with verified movie release year / TV Season 1 premiere year and an explicit `screen` year basis.
+3. Add `movie_themes` and `tv_themes` source memberships using screen-work answer years, without mutating canonical song release years.
+4. Add `screen_themes` as the deterministic union of those two modes, preserving work identity and avoiding ambiguous duplicate audio with different answers.
+5. Extend provider/recording relationships so `remix_original_year` can intentionally play a reviewed remix without contaminating normal-mode canonical playback.
+6. Curate reviewed seed catalogues, screen-work evidence, and playback assets for the new modes.
+7. Only make each mode selectable after its catalogue/runtime checks pass; sparse Preview operation is acceptable, silent fallback is not.
+
+See `docs/MODE_EXPANSION_SPEC.md` for the detailed product and data contract.
+
 ### Normalized data evolution
 
-1. Add reviewable schema/migrations for songs, recordings, evidence, provider tracks, chart entries, playlists, memberships, and cards.
+1. Add reviewable schema/migrations for songs, recordings, evidence, provider tracks, chart entries, screen works, playlists, memberships, and cards.
 2. Optionally rebuild a SQLite workspace from JSON for relational checks and queries; keep text JSON as reviewable source unless explicitly changed.
 3. Prove semantic and gameplay equivalence before changing the browser catalogue shape.
 
 ### Playlist expansion
 
-1. Keep the five current modes as shared memberships over canonical songs.
+1. Keep the five current modes and future themed modes as shared memberships over canonical songs.
 2. Add reviewed Spotify playlist import by resolving provider tracks to canonical song IDs; unresolved tracks become review items.
 3. Do not infer answer years from Spotify metadata alone or maintain a second Spotify song database.
 
 ## Definition of green
 
-A release is green when source and generated v17 data agree, schema and runtime checks pass, the compiler is deterministic/offline, every active mode obeys year and identity invariants, Pages stages the complete public asset set, and no credentials or session data are committed.
+A release is green when source and generated v17 data agree, schema and runtime checks pass, the compiler is deterministic/offline, every active mode obeys its declared year and identity invariants, Pages stages the complete public asset set, and no credentials or session data are committed.
