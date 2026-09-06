@@ -44,6 +44,10 @@ assert.equal(legacyReleaseMembership.year,1999,'changing the master does not req
 const evidenceConflict=structuredClone(movedDb),conflictSong=evidenceConflict.songs[stableId];
 conflictSong.release.state='externally_observed';conflictSong.release.year=1999;
 assert.throws(()=>compileDatabase(evidenceConflict),/conflicts with accepted release evidence/);
+// Presentation-only membership overrides cannot replace canonical identity or year fields.
+const invalidOverrideDb=structuredClone(migrated);
+invalidOverrideDb.memberships[0].displayOverrides={songId:'forged'};
+assert.throws(()=>compileDatabase(invalidOverrideDb),/Invalid membership display override/);
 // A verified centrally preferred provider is inherited by every membership,
 // including memberships that explicitly carry a null legacy reference.
 const preferredDb=structuredClone(migrated),preferredSong=Object.values(preferredDb.songs)[0];
