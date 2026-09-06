@@ -17,11 +17,12 @@ for(const original of baseline.rows){
   const archived=archive.some(row=>row.mode===original.mode&&row.year===original.year&&row.original&&fingerprint(row.original)===original.fingerprint);
   assert.equal(Number(active)+Number(archived),1,\`Lost or duplicated baseline record: \${original.mode}/\${original.year}/\${original.key}\`);
 }`,
-`// Historical cleanup accounting is identity-based. The v1-to-v2 migration parity test
-// separately proves that no non-identity runtime fields change while songId/canonicalKey are materialized.
+`// Historical cleanup accounting first preserves an exact archived original. If the
+// original was not archived, exactly one active canonical identity must remain. The
+// v1-to-v2 parity test separately proves that migration changes no non-identity fields.
 for(const original of baseline.rows){
-  const active=(data.modes[original.mode][original.year]||[]).filter(row=>reviewKey(row)===original.key).length;
   const archived=archive.some(row=>row.mode===original.mode&&row.year===original.year&&row.original&&fingerprint(row.original)===original.fingerprint)?1:0;
+  const active=archived?0:(data.modes[original.mode][original.year]||[]).filter(row=>reviewKey(row)===original.key).length;
   assert.equal(active+archived,1,\`Lost or duplicated baseline identity: \${original.mode}/\${original.year}/\${original.key}\`);
 }`);
 
