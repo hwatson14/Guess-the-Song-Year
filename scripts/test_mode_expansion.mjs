@@ -35,9 +35,7 @@ const expanded=await engine.loadCatalogue();
 const diagnostics=engine.modeExpansionDiagnostics();
 assert.deepEqual(diagnostics.unresolved,[],'every promoted relationship must resolve to a canonical song');
 assert.deepEqual(diagnostics.ambiguous,[],'every promoted relationship must resolve unambiguously');
-assert.ok(diagnostics.counts.movie_themes>=10,'movie preview must contain a useful reviewed pool');
-assert.ok(diagnostics.counts.tv_themes>=6,'TV preview must contain a useful reviewed pool');
-assert.ok(diagnostics.counts.remix_original_year>=3,'remix preview must contain reviewed provider recordings');
+assert.deepEqual(diagnostics.counts,{movie_themes:14,tv_themes:7,screen_themes:21,remix_original_year:5},'reviewed Preview pool counts must change intentionally');
 assert.equal(diagnostics.counts.screen_themes,diagnostics.counts.movie_themes+diagnostics.counts.tv_themes,'combined screen mode must be the exact derived union');
 
 const all=buckets=>Object.values(buckets||{}).flat();
