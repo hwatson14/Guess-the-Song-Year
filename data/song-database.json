@@ -73872,6 +73872,666 @@
           ]
         }
       }
+    },
+    "song_69a70f7e99d11e1f873f": {
+      "id": "song_69a70f7e99d11e1f873f",
+      "canonicalKey": "mrs robinson|simon",
+      "title": "Mrs. Robinson",
+      "artist": "Simon & Garfunkel",
+      "release": {
+        "answerYear": 1968,
+        "year": 1968,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1968,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Mrs._Robinson",
+            "evidence": "The full Simon & Garfunkel single was released in 1968; The Graduate premiered in 1967.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_2d4cadd98c9fffde079a": {
+      "id": "song_2d4cadd98c9fffde079a",
+      "canonicalKey": "ghostbusters|ray parker jr",
+      "title": "Ghostbusters",
+      "artist": "Ray Parker Jr.",
+      "release": {
+        "answerYear": 1984,
+        "year": 1984,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1984,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Ghostbusters_(song)",
+            "evidence": "Ray Parker Jr. title single released in 1984.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_fa859c02596f48574f19": {
+      "id": "song_fa859c02596f48574f19",
+      "canonicalKey": "don t you forget about me|simple minds",
+      "title": "Don't You (Forget About Me)",
+      "artist": "Simple Minds",
+      "release": {
+        "answerYear": 1985,
+        "year": 1985,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1985,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Don%27t_You_(Forget_About_Me)",
+            "evidence": "Simple Minds single released in 1985.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_f594b163e33aa67f7ffc": {
+      "id": "song_f594b163e33aa67f7ffc",
+      "canonicalKey": "unchained melody|righteous brothers",
+      "title": "Unchained Melody",
+      "artist": "The Righteous Brothers",
+      "release": {
+        "answerYear": 1965,
+        "year": 1965,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1965,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Unchained_Melody",
+            "evidence": "The Righteous Brothers recording was released in 1965; it was later featured in Ghost.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_0b37893316ac49c7a8a2": {
+      "id": "song_0b37893316ac49c7a8a2",
+      "canonicalKey": "misirlou|dick dale",
+      "title": "Misirlou",
+      "artist": "Dick Dale",
+      "release": {
+        "answerYear": 1962,
+        "year": 1962,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1962,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Misirlou",
+            "evidence": "Dick Dale surf-rock recording released in 1962; later featured in Pulp Fiction.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_1c391c8befcee9b15337": {
+      "id": "song_1c391c8befcee9b15337",
+      "canonicalKey": "all star|smash mouth",
+      "title": "All Star",
+      "artist": "Smash Mouth",
+      "release": {
+        "answerYear": 1999,
+        "year": 1999,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1999,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/All_Star_(song)",
+            "evidence": "Smash Mouth single released in 1999; later strongly associated with Shrek.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_8ec1f6aa5f877d98d893": {
+      "id": "song_8ec1f6aa5f877d98d893",
+      "canonicalKey": "hooked on a feeling|blue swede",
+      "title": "Hooked on a Feeling",
+      "artist": "Blue Swede",
+      "release": {
+        "answerYear": 1973,
+        "year": 1973,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1973,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Hooked_on_a_Feeling",
+            "evidence": "Blue Swede recording first released in Sweden in 1973; later featured in Guardians of the Galaxy.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_1b09e1b07e55020c9ea0": {
+      "id": "song_1b09e1b07e55020c9ea0",
+      "canonicalKey": "no time to die|billie eilish",
+      "title": "No Time to Die",
+      "artist": "Billie Eilish",
+      "release": {
+        "answerYear": 2020,
+        "year": 2020,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2020,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/No_Time_to_Die_(song)",
+            "evidence": "Billie Eilish theme song released in 2020 before the film release in 2021.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_27c53bbeb7375d7f94ab": {
+      "id": "song_27c53bbeb7375d7f94ab",
+      "canonicalKey": "suicide is painless|johnny mandel",
+      "title": "Suicide Is Painless",
+      "artist": "Johnny Mandel",
+      "release": {
+        "answerYear": 1970,
+        "year": 1970,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1970,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Suicide_Is_Painless",
+            "evidence": "M*A*S*H theme composition/recording released with the 1970 film before the TV series premiered in 1972.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_c6427dc962d294830e60": {
+      "id": "song_c6427dc962d294830e60",
+      "canonicalKey": "i ll be there for you|rembrandts",
+      "title": "I'll Be There for You",
+      "artist": "The Rembrandts",
+      "release": {
+        "answerYear": 1995,
+        "year": 1995,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1995,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/I%27ll_Be_There_for_You_(The_Rembrandts_song)",
+            "evidence": "Full Rembrandts single released in 1995 after Friends premiered in 1994.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_91232c1b83395e848891": {
+      "id": "song_91232c1b83395e848891",
+      "canonicalKey": "i don t want to wait|paula cole",
+      "title": "I Don't Want to Wait",
+      "artist": "Paula Cole",
+      "release": {
+        "answerYear": 1997,
+        "year": 1997,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1997,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/I_Don%27t_Want_to_Wait",
+            "evidence": "Paula Cole single released in 1997 before Dawson's Creek premiered in 1998.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_a81b713da0e4d88bc497": {
+      "id": "song_a81b713da0e4d88bc497",
+      "canonicalKey": "california|phantom planet",
+      "title": "California",
+      "artist": "Phantom Planet",
+      "release": {
+        "answerYear": 2002,
+        "year": 2002,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2002,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/California_(Phantom_Planet_song)",
+            "evidence": "Phantom Planet single released in 2002 before The O.C. premiered in 2003.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_87ab65224f99ee6ae053": {
+      "id": "song_87ab65224f99ee6ae053",
+      "canonicalKey": "cold little heart|michael kiwanuka",
+      "title": "Cold Little Heart",
+      "artist": "Michael Kiwanuka",
+      "release": {
+        "answerYear": 2016,
+        "year": 2016,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2016,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Love_%26_Hate_(Michael_Kiwanuka_album)",
+            "evidence": "Recording first released on Love & Hate in 2016 before Big Little Lies premiered in 2017.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_89565f0cccf8ff2d9f6c": {
+      "id": "song_89565f0cccf8ff2d9f6c",
+      "canonicalKey": "enemy|imagine dragons",
+      "title": "Enemy",
+      "artist": "Imagine Dragons & JID",
+      "release": {
+        "answerYear": 2021,
+        "year": 2021,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2021,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Enemy_(Imagine_Dragons_and_JID_song)",
+            "evidence": "Imagine Dragons and JID single released in 2021 as the Arcane theme.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_8920d628fd75d823daf4": {
+      "id": "song_8920d628fd75d823daf4",
+      "canonicalKey": "missing|everything but the girl",
+      "title": "Missing",
+      "artist": "Everything But The Girl",
+      "release": {
+        "answerYear": 1994,
+        "year": 1994,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1994,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Missing_(Everything_but_the_Girl_song)",
+            "evidence": "Original Everything But The Girl single released in 1994 before the Todd Terry remix became the hit version.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "2p9fnViY10hbqxdKbZZvdq",
+              "url": "https://open.spotify.com/track/2p9fnViY10hbqxdKbZZvdq",
+              "state": "verified",
+              "origin": "mode-expansion-reviewed",
+              "evidence": {
+                "recordingMatch": true,
+                "checkedAt": "2026-09-06T00:00:00Z",
+                "sourceUrl": "https://open.spotify.com/track/2p9fnViY10hbqxdKbZZvdq",
+                "sourceTitle": "Missing - Todd Terry Remix",
+                "sourceArtist": "Everything But The Girl",
+                "reviewScope": "membership-explicit-remix"
+              }
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "IAkY5m00rpY",
+              "url": "https://www.youtube.com/watch?v=IAkY5m00rpY",
+              "state": "verified",
+              "origin": "mode-expansion-reviewed",
+              "evidence": {
+                "recordingMatch": true,
+                "checkedAt": "2026-09-06T00:00:00Z",
+                "sourceUrl": "https://www.youtube.com/watch?v=IAkY5m00rpY",
+                "sourceTitle": "Missing - Todd Terry Remix",
+                "sourceArtist": "Everything But The Girl",
+                "reviewScope": "membership-explicit-remix"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "song_29b8bfbc61038e134875": {
+      "id": "song_29b8bfbc61038e134875",
+      "canonicalKey": "prayer in c|lilly wood",
+      "title": "Prayer in C",
+      "artist": "Lilly Wood and The Prick",
+      "release": {
+        "answerYear": 2010,
+        "year": 2010,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2010,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Prayer_in_C",
+            "evidence": "Original recording released in 2010 before the Robin Schulz remix.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "3k9FFXVPn3ua8dlpkxlCvZ",
+              "url": "https://open.spotify.com/track/3k9FFXVPn3ua8dlpkxlCvZ",
+              "state": "verified",
+              "origin": "mode-expansion-reviewed",
+              "evidence": {
+                "recordingMatch": true,
+                "checkedAt": "2026-09-06T00:00:00Z",
+                "sourceUrl": "https://open.spotify.com/track/3k9FFXVPn3ua8dlpkxlCvZ",
+                "sourceTitle": "Prayer in C - Robin Schulz Remix",
+                "sourceArtist": "Lilly Wood and The Prick",
+                "reviewScope": "membership-explicit-remix"
+              }
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "fiore9Z5iUg",
+              "url": "https://www.youtube.com/watch?v=fiore9Z5iUg",
+              "state": "verified",
+              "origin": "mode-expansion-reviewed",
+              "evidence": {
+                "recordingMatch": true,
+                "checkedAt": "2026-09-06T00:00:00Z",
+                "sourceUrl": "https://www.youtube.com/watch?v=fiore9Z5iUg",
+                "sourceTitle": "Prayer in C - Robin Schulz Remix",
+                "sourceArtist": "Lilly Wood and The Prick",
+                "reviewScope": "membership-explicit-remix"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "song_cc5a52991b165dd9ccfe": {
+      "id": "song_cc5a52991b165dd9ccfe",
+      "canonicalKey": "summertime sadness|lana del rey",
+      "title": "Summertime Sadness",
+      "artist": "Lana Del Rey",
+      "release": {
+        "answerYear": 2012,
+        "year": 2012,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2012,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Summertime_Sadness",
+            "evidence": "Original recording released in 2012 before the Cedric Gervais remix.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "6D5pfooPP6hi99RaXjkDsP",
+              "url": "https://open.spotify.com/track/6D5pfooPP6hi99RaXjkDsP",
+              "state": "verified",
+              "origin": "mode-expansion-reviewed",
+              "evidence": {
+                "recordingMatch": true,
+                "checkedAt": "2026-09-06T00:00:00Z",
+                "sourceUrl": "https://open.spotify.com/track/6D5pfooPP6hi99RaXjkDsP",
+                "sourceTitle": "Summertime Sadness - Cedric Gervais Remix",
+                "sourceArtist": "Lana Del Rey",
+                "reviewScope": "membership-explicit-remix"
+              }
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "akhmS1D2Ce4",
+              "url": "https://www.youtube.com/watch?v=akhmS1D2Ce4",
+              "state": "verified",
+              "origin": "mode-expansion-reviewed",
+              "evidence": {
+                "recordingMatch": true,
+                "checkedAt": "2026-09-06T00:00:00Z",
+                "sourceUrl": "https://www.youtube.com/watch?v=akhmS1D2Ce4",
+                "sourceTitle": "Summertime Sadness - Cedric Gervais Remix",
+                "sourceArtist": "Lana Del Rey",
+                "reviewScope": "membership-explicit-remix"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "song_25889cbf07453ed6ea45": {
+      "id": "song_25889cbf07453ed6ea45",
+      "canonicalKey": "i took a pill in ibiza|mike posner",
+      "title": "I Took a Pill in Ibiza",
+      "artist": "Mike Posner",
+      "release": {
+        "answerYear": 2015,
+        "year": 2015,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2015,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/I_Took_a_Pill_in_Ibiza",
+            "evidence": "Original version released in 2015 before the Seeb remix.",
+            "checkedAt": "2026-09-06T00:00:00Z"
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "62UAFVREdTssSevwa5jqhF",
+              "url": "https://open.spotify.com/track/62UAFVREdTssSevwa5jqhF",
+              "state": "verified",
+              "origin": "mode-expansion-reviewed",
+              "evidence": {
+                "recordingMatch": true,
+                "checkedAt": "2026-09-06T00:00:00Z",
+                "sourceUrl": "https://open.spotify.com/track/62UAFVREdTssSevwa5jqhF",
+                "sourceTitle": "I Took A Pill In Ibiza - Seeb Remix",
+                "sourceArtist": "Mike Posner",
+                "reviewScope": "membership-explicit-remix"
+              }
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "foE1mO2yM04",
+              "url": "https://www.youtube.com/watch?v=foE1mO2yM04",
+              "state": "verified",
+              "origin": "mode-expansion-reviewed",
+              "evidence": {
+                "recordingMatch": true,
+                "checkedAt": "2026-09-06T00:00:00Z",
+                "sourceUrl": "https://www.youtube.com/watch?v=foE1mO2yM04",
+                "sourceTitle": "I Took A Pill In Ibiza - Seeb Remix",
+                "sourceArtist": "Mike Posner",
+                "reviewScope": "membership-explicit-remix"
+              }
+            }
+          ]
+        }
+      }
     }
   },
   "memberships": [
@@ -121675,6 +122335,1004 @@
         "spotify": null,
         "youtube": null
       }
+    },
+    {
+      "songId": "song_69a70f7e99d11e1f873f",
+      "mode": "movie_themes",
+      "year": 1967,
+      "metadata": {
+        "screenWorkId": "movie/the-graduate/1967",
+        "workType": "movie",
+        "workTitle": "The Graduate",
+        "workAnswerYear": 1967,
+        "themeRole": "signature-song",
+        "relationshipState": "reviewed",
+        "workEvidenceUrl": "https://en.wikipedia.org/wiki/The_Graduate",
+        "workEvidence": "The Graduate release year reviewed as 1967.",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "screenWorkId",
+        "workType",
+        "workTitle",
+        "workAnswerYear",
+        "themeRole",
+        "relationshipState",
+        "workEvidenceUrl",
+        "workEvidence",
+        "reviewedAt"
+      ]
+    },
+    {
+      "songId": "song_089f87767974e67818d1",
+      "mode": "movie_themes",
+      "year": 1977,
+      "metadata": {
+        "screenWorkId": "movie/saturday-night-fever/1977",
+        "workType": "movie",
+        "workTitle": "Saturday Night Fever",
+        "workAnswerYear": 1977,
+        "themeRole": "signature-song",
+        "relationshipState": "reviewed",
+        "workEvidenceUrl": "https://en.wikipedia.org/wiki/Saturday_Night_Fever",
+        "workEvidence": "Saturday Night Fever release year reviewed as 1977.",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "screenWorkId",
+        "workType",
+        "workTitle",
+        "workAnswerYear",
+        "themeRole",
+        "relationshipState",
+        "workEvidenceUrl",
+        "workEvidence",
+        "reviewedAt"
+      ]
+    },
+    {
+      "songId": "song_8dd620e47958bae6eebf",
+      "mode": "movie_themes",
+      "year": 1982,
+      "metadata": {
+        "screenWorkId": "movie/rocky-iii/1982",
+        "workType": "movie",
+        "workTitle": "Rocky III",
+        "workAnswerYear": 1982,
+        "themeRole": "signature-song",
+        "relationshipState": "reviewed",
+        "workEvidenceUrl": "https://en.wikipedia.org/wiki/Rocky_III",
+        "workEvidence": "Rocky III release year reviewed as 1982.",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "screenWorkId",
+        "workType",
+        "workTitle",
+        "workAnswerYear",
+        "themeRole",
+        "relationshipState",
+        "workEvidenceUrl",
+        "workEvidence",
+        "reviewedAt"
+      ]
+    },
+    {
+      "songId": "song_2d4cadd98c9fffde079a",
+      "mode": "movie_themes",
+      "year": 1984,
+      "metadata": {
+        "screenWorkId": "movie/ghostbusters/1984",
+        "workType": "movie",
+        "workTitle": "Ghostbusters",
+        "workAnswerYear": 1984,
+        "themeRole": "title-song",
+        "relationshipState": "reviewed",
+        "workEvidenceUrl": "https://en.wikipedia.org/wiki/Ghostbusters",
+        "workEvidence": "Ghostbusters release year reviewed as 1984.",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "screenWorkId",
+        "workType",
+        "workTitle",
+        "workAnswerYear",
+        "themeRole",
+        "relationshipState",
+        "workEvidenceUrl",
+        "workEvidence",
+        "reviewedAt"
+      ]
+    },
+    {
+      "songId": "song_fa859c02596f48574f19",
+      "mode": "movie_themes",
+      "year": 1985,
+      "metadata": {
+        "screenWorkId": "movie/the-breakfast-club/1985",
+        "workType": "movie",
+        "workTitle": "The Breakfast Club",
+        "workAnswerYear": 1985,
+        "themeRole": "signature-song",
+        "relationshipState": "reviewed",
+        "workEvidenceUrl": "https://en.wikipedia.org/wiki/The_Breakfast_Club",
+        "workEvidence": "The Breakfast Club release year reviewed as 1985.",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "screenWorkId",
+        "workType",
+        "workTitle",
+        "workAnswerYear",
+        "themeRole",
+        "relationshipState",
+        "workEvidenceUrl",
+        "workEvidence",
+        "reviewedAt"
+      ]
+    },
+    {
+      "songId": "song_f594b163e33aa67f7ffc",
+      "mode": "movie_themes",
+      "year": 1990,
+      "metadata": {
+        "screenWorkId": "movie/ghost/1990",
+        "workType": "movie",
+        "workTitle": "Ghost",
+        "workAnswerYear": 1990,
+        "themeRole": "signature-song",
+        "relationshipState": "reviewed",
+        "workEvidenceUrl": "https://en.wikipedia.org/wiki/Ghost_(1990_film)",
+        "workEvidence": "Ghost release year reviewed as 1990.",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "screenWorkId",
+        "workType",
+        "workTitle",
+        "workAnswerYear",
+        "themeRole",
+        "relationshipState",
+        "workEvidenceUrl",
+        "workEvidence",
+        "reviewedAt"
+      ]
+    },
+    {
+      "songId": "song_869b73d446042a9936d7",
+      "mode": "movie_themes",
+      "year": 1992,
+      "metadata": {
+        "screenWorkId": "movie/the-bodyguard/1992",
+        "workType": "movie",
+        "workTitle": "The Bodyguard",
+        "workAnswerYear": 1992,
+        "themeRole": "signature-song",
+        "relationshipState": "reviewed",
+        "workEvidenceUrl": "https://en.wikipedia.org/wiki/The_Bodyguard_(1992_film)",
+        "workEvidence": "The Bodyguard release year reviewed as 1992.",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "screenWorkId",
+        "workType",
+        "workTitle",
+        "workAnswerYear",
+        "themeRole",
+        "relationshipState",
+        "workEvidenceUrl",
+        "workEvidence",
+        "reviewedAt"
+      ]
+    },
+    {
+      "songId": "song_0b37893316ac49c7a8a2",
+      "mode": "movie_themes",
+      "year": 1994,
+      "metadata": {
+        "screenWorkId": "movie/pulp-fiction/1994",
+        "workType": "movie",
+        "workTitle": "Pulp Fiction",
+        "workAnswerYear": 1994,
+        "themeRole": "signature-song",
+        "relationshipState": "reviewed",
+        "workEvidenceUrl": "https://en.wikipedia.org/wiki/Pulp_Fiction",
+        "workEvidence": "Pulp Fiction release year reviewed as 1994.",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "screenWorkId",
+        "workType",
+        "workTitle",
+        "workAnswerYear",
+        "themeRole",
+        "relationshipState",
+        "workEvidenceUrl",
+        "workEvidence",
+        "reviewedAt"
+      ]
+    },
+    {
+      "songId": "song_d49d482a19fcdd6545f9",
+      "mode": "movie_themes",
+      "year": 1997,
+      "metadata": {
+        "screenWorkId": "movie/titanic/1997",
+        "workType": "movie",
+        "workTitle": "Titanic",
+        "workAnswerYear": 1997,
+        "themeRole": "signature-song",
+        "relationshipState": "reviewed",
+        "workEvidenceUrl": "https://en.wikipedia.org/wiki/Titanic_(1997_film)",
+        "workEvidence": "Titanic release year reviewed as 1997.",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "screenWorkId",
+        "workType",
+        "workTitle",
+        "workAnswerYear",
+        "themeRole",
+        "relationshipState",
+        "workEvidenceUrl",
+        "workEvidence",
+        "reviewedAt"
+      ]
+    },
+    {
+      "songId": "song_1c391c8befcee9b15337",
+      "mode": "movie_themes",
+      "year": 2001,
+      "metadata": {
+        "screenWorkId": "movie/shrek/2001",
+        "workType": "movie",
+        "workTitle": "Shrek",
+        "workAnswerYear": 2001,
+        "themeRole": "signature-song",
+        "relationshipState": "reviewed",
+        "workEvidenceUrl": "https://en.wikipedia.org/wiki/Shrek",
+        "workEvidence": "Shrek release year reviewed as 2001.",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "screenWorkId",
+        "workType",
+        "workTitle",
+        "workAnswerYear",
+        "themeRole",
+        "relationshipState",
+        "workEvidenceUrl",
+        "workEvidence",
+        "reviewedAt"
+      ]
+    },
+    {
+      "songId": "song_b91ddb96e9013c3c47b2",
+      "mode": "movie_themes",
+      "year": 2002,
+      "metadata": {
+        "screenWorkId": "movie/8-mile/2002",
+        "workType": "movie",
+        "workTitle": "8 Mile",
+        "workAnswerYear": 2002,
+        "themeRole": "signature-song",
+        "relationshipState": "reviewed",
+        "workEvidenceUrl": "https://en.wikipedia.org/wiki/8_Mile_(film)",
+        "workEvidence": "8 Mile release year reviewed as 2002.",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "screenWorkId",
+        "workType",
+        "workTitle",
+        "workAnswerYear",
+        "themeRole",
+        "relationshipState",
+        "workEvidenceUrl",
+        "workEvidence",
+        "reviewedAt"
+      ]
+    },
+    {
+      "songId": "song_f3c842b1f31bec482171",
+      "mode": "movie_themes",
+      "year": 2012,
+      "metadata": {
+        "screenWorkId": "movie/skyfall/2012",
+        "workType": "movie",
+        "workTitle": "Skyfall",
+        "workAnswerYear": 2012,
+        "themeRole": "title-song",
+        "relationshipState": "reviewed",
+        "workEvidenceUrl": "https://en.wikipedia.org/wiki/Skyfall",
+        "workEvidence": "Skyfall release year reviewed as 2012.",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "screenWorkId",
+        "workType",
+        "workTitle",
+        "workAnswerYear",
+        "themeRole",
+        "relationshipState",
+        "workEvidenceUrl",
+        "workEvidence",
+        "reviewedAt"
+      ]
+    },
+    {
+      "songId": "song_8ec1f6aa5f877d98d893",
+      "mode": "movie_themes",
+      "year": 2014,
+      "metadata": {
+        "screenWorkId": "movie/guardians-of-the-galaxy/2014",
+        "workType": "movie",
+        "workTitle": "Guardians of the Galaxy",
+        "workAnswerYear": 2014,
+        "themeRole": "signature-song",
+        "relationshipState": "reviewed",
+        "workEvidenceUrl": "https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)",
+        "workEvidence": "Guardians of the Galaxy release year reviewed as 2014.",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "screenWorkId",
+        "workType",
+        "workTitle",
+        "workAnswerYear",
+        "themeRole",
+        "relationshipState",
+        "workEvidenceUrl",
+        "workEvidence",
+        "reviewedAt"
+      ]
+    },
+    {
+      "songId": "song_1b09e1b07e55020c9ea0",
+      "mode": "movie_themes",
+      "year": 2021,
+      "metadata": {
+        "screenWorkId": "movie/no-time-to-die/2021",
+        "workType": "movie",
+        "workTitle": "No Time to Die",
+        "workAnswerYear": 2021,
+        "themeRole": "title-song",
+        "relationshipState": "reviewed",
+        "workEvidenceUrl": "https://en.wikipedia.org/wiki/No_Time_to_Die",
+        "workEvidence": "No Time to Die release year reviewed as 2021.",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "screenWorkId",
+        "workType",
+        "workTitle",
+        "workAnswerYear",
+        "themeRole",
+        "relationshipState",
+        "workEvidenceUrl",
+        "workEvidence",
+        "reviewedAt"
+      ]
+    },
+    {
+      "songId": "song_27c53bbeb7375d7f94ab",
+      "mode": "tv_themes",
+      "year": 1972,
+      "metadata": {
+        "screenWorkId": "tv/m-a-s-h/1972",
+        "workType": "tv",
+        "workTitle": "M*A*S*H",
+        "workAnswerYear": 1972,
+        "themeRole": "main-theme",
+        "relationshipState": "reviewed",
+        "workEvidenceUrl": "https://en.wikipedia.org/wiki/M*A*S*H_(TV_series)",
+        "workEvidence": "M*A*S*H Season 1 / series premiere year reviewed as 1972.",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "screenWorkId",
+        "workType",
+        "workTitle",
+        "workAnswerYear",
+        "themeRole",
+        "relationshipState",
+        "workEvidenceUrl",
+        "workEvidence",
+        "reviewedAt"
+      ]
+    },
+    {
+      "songId": "song_c6427dc962d294830e60",
+      "mode": "tv_themes",
+      "year": 1994,
+      "metadata": {
+        "screenWorkId": "tv/friends/1994",
+        "workType": "tv",
+        "workTitle": "Friends",
+        "workAnswerYear": 1994,
+        "themeRole": "main-theme",
+        "relationshipState": "reviewed",
+        "workEvidenceUrl": "https://en.wikipedia.org/wiki/Friends",
+        "workEvidence": "Friends Season 1 / series premiere year reviewed as 1994.",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "screenWorkId",
+        "workType",
+        "workTitle",
+        "workAnswerYear",
+        "themeRole",
+        "relationshipState",
+        "workEvidenceUrl",
+        "workEvidence",
+        "reviewedAt"
+      ]
+    },
+    {
+      "songId": "song_91232c1b83395e848891",
+      "mode": "tv_themes",
+      "year": 1998,
+      "metadata": {
+        "screenWorkId": "tv/dawson-s-creek/1998",
+        "workType": "tv",
+        "workTitle": "Dawson's Creek",
+        "workAnswerYear": 1998,
+        "themeRole": "main-theme",
+        "relationshipState": "reviewed",
+        "workEvidenceUrl": "https://en.wikipedia.org/wiki/Dawson%27s_Creek",
+        "workEvidence": "Dawson's Creek Season 1 / series premiere year reviewed as 1998.",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "screenWorkId",
+        "workType",
+        "workTitle",
+        "workAnswerYear",
+        "themeRole",
+        "relationshipState",
+        "workEvidenceUrl",
+        "workEvidence",
+        "reviewedAt"
+      ]
+    },
+    {
+      "songId": "song_a81b713da0e4d88bc497",
+      "mode": "tv_themes",
+      "year": 2003,
+      "metadata": {
+        "screenWorkId": "tv/the-o-c/2003",
+        "workType": "tv",
+        "workTitle": "The O.C.",
+        "workAnswerYear": 2003,
+        "themeRole": "main-theme",
+        "relationshipState": "reviewed",
+        "workEvidenceUrl": "https://en.wikipedia.org/wiki/The_O.C.",
+        "workEvidence": "The O.C. Season 1 / series premiere year reviewed as 2003.",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "screenWorkId",
+        "workType",
+        "workTitle",
+        "workAnswerYear",
+        "themeRole",
+        "relationshipState",
+        "workEvidenceUrl",
+        "workEvidence",
+        "reviewedAt"
+      ]
+    },
+    {
+      "songId": "song_c571c1726fc806207f39",
+      "mode": "tv_themes",
+      "year": 2004,
+      "metadata": {
+        "screenWorkId": "tv/house/2004",
+        "workType": "tv",
+        "workTitle": "House",
+        "workAnswerYear": 2004,
+        "themeRole": "main-theme",
+        "relationshipState": "reviewed",
+        "workEvidenceUrl": "https://en.wikipedia.org/wiki/House_(TV_series)",
+        "workEvidence": "House Season 1 / series premiere year reviewed as 2004.",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "screenWorkId",
+        "workType",
+        "workTitle",
+        "workAnswerYear",
+        "themeRole",
+        "relationshipState",
+        "workEvidenceUrl",
+        "workEvidence",
+        "reviewedAt"
+      ]
+    },
+    {
+      "songId": "song_87ab65224f99ee6ae053",
+      "mode": "tv_themes",
+      "year": 2017,
+      "metadata": {
+        "screenWorkId": "tv/big-little-lies/2017",
+        "workType": "tv",
+        "workTitle": "Big Little Lies",
+        "workAnswerYear": 2017,
+        "themeRole": "main-theme",
+        "relationshipState": "reviewed",
+        "workEvidenceUrl": "https://en.wikipedia.org/wiki/Big_Little_Lies_(TV_series)",
+        "workEvidence": "Big Little Lies Season 1 / series premiere year reviewed as 2017.",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "screenWorkId",
+        "workType",
+        "workTitle",
+        "workAnswerYear",
+        "themeRole",
+        "relationshipState",
+        "workEvidenceUrl",
+        "workEvidence",
+        "reviewedAt"
+      ]
+    },
+    {
+      "songId": "song_89565f0cccf8ff2d9f6c",
+      "mode": "tv_themes",
+      "year": 2021,
+      "metadata": {
+        "screenWorkId": "tv/arcane/2021",
+        "workType": "tv",
+        "workTitle": "Arcane",
+        "workAnswerYear": 2021,
+        "themeRole": "main-theme",
+        "relationshipState": "reviewed",
+        "workEvidenceUrl": "https://en.wikipedia.org/wiki/Arcane_(TV_series)",
+        "workEvidence": "Arcane Season 1 / series premiere year reviewed as 2021.",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "screenWorkId",
+        "workType",
+        "workTitle",
+        "workAnswerYear",
+        "themeRole",
+        "relationshipState",
+        "workEvidenceUrl",
+        "workEvidence",
+        "reviewedAt"
+      ]
+    },
+    {
+      "songId": "song_8920d628fd75d823daf4",
+      "mode": "remix_original_year",
+      "year": 1994,
+      "metadata": {
+        "playedVersion": "Missing - Todd Terry Remix",
+        "remixer": "Todd Terry",
+        "remixReviewState": "reviewed",
+        "originalAnswerYear": 1994,
+        "originalYearEvidenceUrl": "https://en.wikipedia.org/wiki/Missing_(Everything_but_the_Girl_song)",
+        "spotifyEvidenceUrl": "https://open.spotify.com/track/2p9fnViY10hbqxdKbZZvdq",
+        "youtubeEvidenceUrl": "https://www.youtube.com/watch?v=IAkY5m00rpY",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "providerRefs": {
+        "spotify": "2p9fnViY10hbqxdKbZZvdq",
+        "youtube": "IAkY5m00rpY"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "playedVersion",
+        "remixer",
+        "remixReviewState",
+        "originalAnswerYear",
+        "originalYearEvidenceUrl",
+        "spotifyEvidenceUrl",
+        "youtubeEvidenceUrl",
+        "reviewedAt",
+        "spotifyId",
+        "youtubeId"
+      ]
+    },
+    {
+      "songId": "song_29b8bfbc61038e134875",
+      "mode": "remix_original_year",
+      "year": 2010,
+      "metadata": {
+        "playedVersion": "Prayer in C - Robin Schulz Remix",
+        "remixer": "Robin Schulz",
+        "remixReviewState": "reviewed",
+        "originalAnswerYear": 2010,
+        "originalYearEvidenceUrl": "https://en.wikipedia.org/wiki/Prayer_in_C",
+        "spotifyEvidenceUrl": "https://open.spotify.com/track/3k9FFXVPn3ua8dlpkxlCvZ",
+        "youtubeEvidenceUrl": "https://www.youtube.com/watch?v=fiore9Z5iUg",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "providerRefs": {
+        "spotify": "3k9FFXVPn3ua8dlpkxlCvZ",
+        "youtube": "fiore9Z5iUg"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "playedVersion",
+        "remixer",
+        "remixReviewState",
+        "originalAnswerYear",
+        "originalYearEvidenceUrl",
+        "spotifyEvidenceUrl",
+        "youtubeEvidenceUrl",
+        "reviewedAt",
+        "spotifyId",
+        "youtubeId"
+      ]
+    },
+    {
+      "songId": "song_cc5a52991b165dd9ccfe",
+      "mode": "remix_original_year",
+      "year": 2012,
+      "metadata": {
+        "playedVersion": "Summertime Sadness - Cedric Gervais Remix",
+        "remixer": "Cedric Gervais",
+        "remixReviewState": "reviewed",
+        "originalAnswerYear": 2012,
+        "originalYearEvidenceUrl": "https://en.wikipedia.org/wiki/Summertime_Sadness",
+        "spotifyEvidenceUrl": "https://open.spotify.com/track/6D5pfooPP6hi99RaXjkDsP",
+        "youtubeEvidenceUrl": "https://www.youtube.com/watch?v=akhmS1D2Ce4",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "providerRefs": {
+        "spotify": "6D5pfooPP6hi99RaXjkDsP",
+        "youtube": "akhmS1D2Ce4"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "playedVersion",
+        "remixer",
+        "remixReviewState",
+        "originalAnswerYear",
+        "originalYearEvidenceUrl",
+        "spotifyEvidenceUrl",
+        "youtubeEvidenceUrl",
+        "reviewedAt",
+        "spotifyId",
+        "youtubeId"
+      ]
+    },
+    {
+      "songId": "song_25889cbf07453ed6ea45",
+      "mode": "remix_original_year",
+      "year": 2015,
+      "metadata": {
+        "playedVersion": "I Took A Pill In Ibiza - Seeb Remix",
+        "remixer": "Seeb",
+        "remixReviewState": "reviewed",
+        "originalAnswerYear": 2015,
+        "originalYearEvidenceUrl": "https://en.wikipedia.org/wiki/I_Took_a_Pill_in_Ibiza",
+        "spotifyEvidenceUrl": "https://open.spotify.com/track/62UAFVREdTssSevwa5jqhF",
+        "youtubeEvidenceUrl": "https://www.youtube.com/watch?v=foE1mO2yM04",
+        "reviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "providerRefs": {
+        "spotify": "62UAFVREdTssSevwa5jqhF",
+        "youtube": "foE1mO2yM04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "playedVersion",
+        "remixer",
+        "remixReviewState",
+        "originalAnswerYear",
+        "originalYearEvidenceUrl",
+        "spotifyEvidenceUrl",
+        "youtubeEvidenceUrl",
+        "reviewedAt",
+        "spotifyId",
+        "youtubeId"
+      ]
+    },
+    {
+      "songId": "song_0cb5f327cae9eea18bc3",
+      "mode": "one_hit_wonders",
+      "year": 1954,
+      "metadata": {
+        "qualificationState": "core",
+        "qualificationDisposition": "approved",
+        "qualificationBasis": "only top-40 hit for The Penguins; culturally dominant signature song",
+        "qualificationEvidenceUrl": "https://www.midside.com/publications/declercq_2013_one-hit_wonders.pdf",
+        "qualificationMarketContext": "broad Australian/international player recognition; disputed and recent seed rows remain quarantined",
+        "qualificationReviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "qualificationState",
+        "qualificationDisposition",
+        "qualificationBasis",
+        "qualificationEvidenceUrl",
+        "qualificationMarketContext",
+        "qualificationReviewedAt"
+      ]
+    },
+    {
+      "songId": "song_4783d49ebe9ce32740ce",
+      "mode": "one_hit_wonders",
+      "year": 1959,
+      "metadata": {
+        "qualificationState": "core",
+        "qualificationDisposition": "approved",
+        "qualificationBasis": "Phil Phillips recording is tagged/reviewed as a one-hit wonder performance",
+        "qualificationEvidenceUrl": "https://secondhandsongs.com/performance/4612/all",
+        "qualificationMarketContext": "broad Australian/international player recognition; disputed and recent seed rows remain quarantined",
+        "qualificationReviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "qualificationState",
+        "qualificationDisposition",
+        "qualificationBasis",
+        "qualificationEvidenceUrl",
+        "qualificationMarketContext",
+        "qualificationReviewedAt"
+      ]
+    },
+    {
+      "songId": "song_c487037af5e8f8f06405",
+      "mode": "one_hit_wonders",
+      "year": 1974,
+      "metadata": {
+        "qualificationState": "core",
+        "qualificationDisposition": "approved",
+        "qualificationBasis": "Carl Douglas remains broadly identified as a one-hit wonder",
+        "qualificationEvidenceUrl": "https://wnyc.org/story/was-hit-kung-fu-fighting/",
+        "qualificationMarketContext": "broad Australian/international player recognition; disputed and recent seed rows remain quarantined",
+        "qualificationReviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "qualificationState",
+        "qualificationDisposition",
+        "qualificationBasis",
+        "qualificationEvidenceUrl",
+        "qualificationMarketContext",
+        "qualificationReviewedAt"
+      ]
+    },
+    {
+      "songId": "song_b0e69780e6e9f45aff64",
+      "mode": "one_hit_wonders",
+      "year": 1976,
+      "metadata": {
+        "qualificationState": "core",
+        "qualificationDisposition": "approved",
+        "qualificationBasis": "Wild Cherry is broadly remembered as a one-hit wonder around this signature hit",
+        "qualificationEvidenceUrl": "https://www.allmusic.com/album/wild-cherry-mw0000654821",
+        "qualificationMarketContext": "broad Australian/international player recognition; disputed and recent seed rows remain quarantined",
+        "qualificationReviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "qualificationState",
+        "qualificationDisposition",
+        "qualificationBasis",
+        "qualificationEvidenceUrl",
+        "qualificationMarketContext",
+        "qualificationReviewedAt"
+      ]
+    },
+    {
+      "songId": "song_66d46918f675a9bf6c8a",
+      "mode": "one_hit_wonders",
+      "year": 1993,
+      "metadata": {
+        "qualificationState": "core",
+        "qualificationDisposition": "approved",
+        "qualificationBasis": "Tag Team is explicitly described as a one-hit wonder after follow-ups failed to match the hit",
+        "qualificationEvidenceUrl": "https://en.wikipedia.org/wiki/Whoomp%21_%28There_It_Is%29",
+        "qualificationMarketContext": "broad Australian/international player recognition; disputed and recent seed rows remain quarantined",
+        "qualificationReviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "qualificationState",
+        "qualificationDisposition",
+        "qualificationBasis",
+        "qualificationEvidenceUrl",
+        "qualificationMarketContext",
+        "qualificationReviewedAt"
+      ]
+    },
+    {
+      "songId": "song_aaefc66af032a876c18b",
+      "mode": "one_hit_wonders",
+      "year": 2000,
+      "metadata": {
+        "qualificationState": "core",
+        "qualificationDisposition": "approved",
+        "qualificationBasis": "Baha Men version was a global phenomenon and #1 in Australia; source discusses its one-hit-wonder status",
+        "qualificationEvidenceUrl": "https://www.colorado.edu/asmagazine/2025/08/07/one-hit-wondering-who-let-dogs-out",
+        "qualificationMarketContext": "broad Australian/international player recognition; disputed and recent seed rows remain quarantined",
+        "qualificationReviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "qualificationState",
+        "qualificationDisposition",
+        "qualificationBasis",
+        "qualificationEvidenceUrl",
+        "qualificationMarketContext",
+        "qualificationReviewedAt"
+      ]
+    },
+    {
+      "songId": "song_e1353bed6ebd2484d3b2",
+      "mode": "one_hit_wonders",
+      "year": 2013,
+      "metadata": {
+        "qualificationState": "core",
+        "qualificationDisposition": "approved",
+        "qualificationBasis": "Billboard Canada explicitly discusses MAGIC! as a one-hit-wonder case; later Hot 100 songs did not approach Rude",
+        "qualificationEvidenceUrl": "https://ca.billboard.com/music/chart-beat/rude-magic",
+        "qualificationMarketContext": "broad Australian/international player recognition; disputed and recent seed rows remain quarantined",
+        "qualificationReviewedAt": "2026-09-06T00:00:00Z"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "songId",
+        "canonicalKey",
+        "qualificationState",
+        "qualificationDisposition",
+        "qualificationBasis",
+        "qualificationEvidenceUrl",
+        "qualificationMarketContext",
+        "qualificationReviewedAt"
+      ]
     }
   ],
   "aliases": {

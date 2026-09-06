@@ -55,9 +55,9 @@
       "name": "Movie Themes",
       "short": "Movies",
       "desc": "Recognisable movie themes and soundtrack signatures. Guess the movie's release year.",
-      "status": "building",
-      "statusLabel": "Building",
-      "statusNote": "Curated seed exists; screen-work evidence and reviewed playback are being promoted into the canonical database.",
+      "status": "preview",
+      "statusLabel": "Preview",
+      "statusNote": "14 reviewed movie relationships are playable; remaining seed candidates stay in review.",
       "yearBasis": "screen",
       "repeatPolicy": "unique"
     },
@@ -65,9 +65,9 @@
       "name": "TV Themes",
       "short": "TV",
       "desc": "Recognisable TV themes. Guess the show's Season 1 / series-premiere year.",
-      "status": "building",
-      "statusLabel": "Building",
-      "statusNote": "Curated seed exists; series-premiere evidence and reviewed playback are being promoted into the canonical database.",
+      "status": "preview",
+      "statusLabel": "Preview",
+      "statusNote": "7 reviewed TV relationships are playable; remaining seed candidates stay in review.",
       "yearBasis": "screen",
       "repeatPolicy": "unique"
     },
@@ -75,20 +75,23 @@
       "name": "TV & Movie Themes",
       "short": "Screen",
       "desc": "Movie and TV themes combined. Guess the represented movie or show's first release year.",
-      "status": "building",
-      "statusLabel": "Building",
-      "statusNote": "Derived from Movie Themes and TV Themes; it has no independently curated source catalogue.",
+      "status": "preview",
+      "statusLabel": "Preview",
+      "statusNote": "Derived automatically from the reviewed Movie Themes and TV Themes relationships.",
       "yearBasis": "screen",
       "repeatPolicy": "unique",
-      "compositeOf": ["movie_themes", "tv_themes"]
+      "compositeOf": [
+        "movie_themes",
+        "tv_themes"
+      ]
     },
     "remix_original_year": {
       "name": "Remix: Original Year",
       "short": "Remix",
       "desc": "Hear a reviewed remix, but guess when the original song was released.",
-      "status": "building",
-      "statusLabel": "Building",
-      "statusNote": "Curated remix seed exists; exact alternate recordings and original-song evidence are being reviewed.",
+      "status": "preview",
+      "statusLabel": "Preview",
+      "statusNote": "4 original songs have explicit reviewed Spotify and YouTube remix recordings; the answer remains the original release year.",
       "yearBasis": "release",
       "repeatPolicy": "unique",
       "playbackVariant": "membership_explicit"
@@ -97,9 +100,9 @@
       "name": "One Hit Wonders",
       "short": "One Hit",
       "desc": "Famous breakout songs from acts strongly identified with one mainstream hit.",
-      "status": "building",
-      "statusLabel": "Building",
-      "statusNote": "Australian-first qualification review and canonical song matching are in progress.",
+      "status": "preview",
+      "statusLabel": "Preview",
+      "statusNote": "7 conservative evidence-backed memberships are playable; disputed, unmatched and recent seed rows remain quarantined.",
       "yearBasis": "release",
       "repeatPolicy": "unique"
     }
