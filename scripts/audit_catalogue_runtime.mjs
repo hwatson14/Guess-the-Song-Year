@@ -2,11 +2,25 @@ import assert from 'node:assert/strict';
 import {catalogueEngine,loadProductionCatalogue} from './catalogue_runtime.mjs';
 
 const {data,manifest}=loadProductionCatalogue(),E=catalogueEngine(data,manifest),reports=await E.modeReports();
-assert.deepEqual(Object.keys(data.modes).sort(),Object.keys(manifest.modes).sort());
+const catalogueModes=new Set(Object.keys(data.modes)),declaredModes=new Set(Object.keys(manifest.modes));
+for(const mode of catalogueModes)assert.ok(declaredModes.has(mode),`catalogue contains undeclared mode ${mode}`);
+for(const [mode,meta] of Object.entries(manifest.modes)){
+  if(catalogueModes.has(mode))continue;
+  assert.equal(meta.status,'building',`${mode}: only building modes may be declared without catalogue rows`);
+}
 const summary={};
 for(const [mode,meta] of Object.entries(manifest.modes)){
   const report=reports[mode],usedAcrossYears=new Set();
-  if(meta.status==='building'){assert.equal(report.selectable,false);continue}
+  assert.ok(report,`${mode}: manifest-declared mode has no runtime report`);
+  if(meta.status==='building'){
+    assert.equal(report.selectable,false,`${mode}: building mode must not be selectable`);
+    if(!catalogueModes.has(mode)){
+      assert.equal(report.songs,0,`${mode}: absent building mode unexpectedly reports songs`);
+      assert.equal(report.coverage,0,`${mode}: absent building mode unexpectedly reports coverage`);
+    }
+    continue;
+  }
+  assert.ok(catalogueModes.has(mode),`${mode}: non-building mode must have catalogue rows`);
   assert.equal(report.rawSongs,report.songs,`${mode}: shipped rows must all be usable; archive unresolved variants`);
   if(meta.status==='ready')assert.equal(report.readyEligible,true,`${mode} does not satisfy Ready gates`);
   for(let year=1950;year<=2022;year++){
