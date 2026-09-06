@@ -13,6 +13,7 @@
   Object.assign(E.MODES,modeMeta);
 
   const baseLoadCatalogue=E.loadCatalogue.bind(E);
+  const baseResolveSong=E.resolveSong.bind(E);
   let overlayPromise=null,expandedPromise=null,diagnostics=null;
 
   const norm=value=>String(value??'').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g,' ').trim();
@@ -166,6 +167,6 @@
       }
       throw new E.AppError('REMIX_PROVIDER_UNAVAILABLE',`No reviewed ${kind} recording is available for this remix.`);
     }
-    return window.GSYEngineBaseResolveSong?window.GSYEngineBaseResolveSong(song,kind):Promise.reject(new E.AppError('RESOLVER_UNAVAILABLE','The music resolver is unavailable.'));
+    return baseResolveSong(song,kind);
   };
 })();

@@ -26,8 +26,12 @@
   function providerReady(){return E.getProvider()==='youtube'||E.isSpotifyConnected()}
   function modeId(){return match?.mode||cfg.mode||'greatest'}
   function modeInfo(id=modeId()){return E.MODES?.[id]||E.MODES?.greatest||{name:'Greatest Hits',short:'Hits',desc:''}}
-  function modeReport(id=modeId()){return modeReports[id]||{id,status:'preview',statusLabel:'Loading',coverage:0,totalYears:73,coverageLabel:'Checking coverage',years:[],selectable:true,statusNote:'Catalogue status is being checked.'}}
+  function modeReport(id=modeId()){return modeReports[id]||{id,status:'preview',statusLabel:'Loading',coverage:0,totalYears:73,coverageLabel:'Checking coverage',years:[],songs:0,selectable:true,statusNote:'Catalogue status is being checked.'}}
   function modeStatusClass(id=modeId()){return ['ready','beta','preview'].includes(modeReport(id).status)?modeReport(id).status:'building'}
+  function songCountLabel(value){const n=Math.max(0,Number(value)||0);return `${n.toLocaleString()} ${n===1?'song':'songs'}`}
+  function yearBasisLabel(report=modeReport()){return report.yearBasis==='chart'?'chart year':report.yearBasis==='screen'?'movie/show year':report.yearBasis==='original'?'original song year':'release year'}
+  function placementLabel(years,index){return index===0?`Before ${years[0]??'timeline'}`:index===years.length?`After ${years.at(-1)??'timeline'}`:`Between ${years[index-1]} and ${years[index]}`}
+  function placementLockCopy(){if(pendingSlot===null)return 'Lock Placement';const years=[...(activeTeam().timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b),label=placementLabel(years,pendingSlot);return `Lock ${label.charAt(0).toLowerCase()}${label.slice(1)}`}
   function selectedRange(){const settings=match?.settings||cfg;return P.normalizeYearRange(settings.minYear,settings.maxYear)}
   function rangeStats(id=cfg.mode){const range=selectedRange();return {...P.rangeStats(modeReport(id),range.minYear,range.maxYear),eligibleCards:virtualCardsForMode(id).length}}
   function yearHasAvailableSong(year){const report=modeReport(modeId());if(!(report.years||[]).includes(Number(year)))return false;if(report.repeatPolicy==='fixed')return true;const keys=report.yearSongKeys?.[year]||report.yearSongKeys?.[String(year)]||[],legacy=report.songLegacyKeys?.[year]||report.songLegacyKeys?.[String(year)]||{};return keys.some(k=>!(match?.used||[]).includes(k)&&!(legacy[k]||[]).some(alias=>(match?.used||[]).includes(alias)))}
@@ -146,14 +150,14 @@
     const report=modeReport(cfg.mode),info=modeInfo(cfg.mode);
     const rs={...rangeStats(cfg.mode),eligibleCards:virtualCardsForMode(cfg.mode).length},target=cfg.victory==='10'?cfg.teams*9+1:0;
     const rangeWarning=report.repeatPolicy!=='fixed'&&target&&rs.songs<target?`Only ${rs.songs} usable songs for a ${target}-card target; the game may end before a winner.`:'';
-    const modeOptions=Object.entries(E.MODES||{}).map(([id,m])=>{const r=modeReport(id);return `<option value="${esc(id)}" ${cfg.mode===id?'selected':''} ${r.selectable===false?'disabled':''}>${esc(m.name)} — ${esc(r.statusLabel)} · ${esc(r.coverageLabel)}</option>`}).join('');
+    const modeOptions=Object.entries(E.MODES||{}).map(([id,m])=>{const r=modeReport(id);return `<option value="${esc(id)}" ${cfg.mode===id?'selected':''} ${r.selectable===false?'disabled':''}>${esc(m.name)} — ${esc(r.statusLabel)} · ${esc(songCountLabel(r.songs))} · ${esc(r.coverageLabel)}</option>`}).join('');
     return `${topLine(false)}
       <div class="kicker">NEW GAME</div><h1 class="display title">Game <span class="mint">Setup</span></h1><p class="subtitle">Choose a music mode, then pick how you want to play.</p>
       <div class="setup-grid">
         <section class="card option-card mode-card">
           <div class="option-head"><h3>1. Music mode</h3><span class="mode-status ${modeStatusClass(cfg.mode)}">${esc(report.statusLabel)}</span></div>
           <select class="mode-select" data-mode-picker aria-label="Music mode">${modeOptions}</select>
-          <div class="mode-detail"><b>${esc(report.coverageLabel)} · ${report.yearBasis==='chart'?'chart year':'release year'}</b><span>${esc(info.desc)} ${esc(report.statusNote)}</span></div>
+          <div class="mode-detail"><b>${esc(songCountLabel(report.songs))} · ${esc(report.coverageLabel)} · ${esc(yearBasisLabel(report))}</b><span>${esc(info.desc)} ${esc(report.statusNote)}</span></div>
         </section>
         <section class="card option-card">
           <div class="option-head"><h3>2. Play style</h3><span>${cfg.playMode==='physical'?'QR cards + camera':'Fully in-app timeline'}</span></div>
@@ -201,16 +205,16 @@
 
   function playingScreen(){
     const virtual=cfg.playMode==='virtual';
-    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>${virtual?'Place the song':'Your timelines'}</h1><p>${virtual?'Choose a + on your timeline.':'Place the physical card on the table, then reveal.'}</p></div>${virtual?virtualTimeline():`${timelineBoard()}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="toggle-play">Pause music</button><button class="btn primary" data-action="guess-now">Guess now</button></div>`}`;
+    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>${virtual?'Place the song':'Your timelines'}</h1><p>${virtual?'Tap a gap in your timeline. Your mystery song will appear there.':'Place the physical card on the table, then reveal.'}</p></div>${virtual?virtualTimeline():`${timelineBoard()}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="toggle-play">Pause music</button><button class="btn primary" data-action="guess-now">Guess now</button></div>`}`;
   }
 
   function guessScreen(){
     const virtual=cfg.playMode==='virtual';
-    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>${virtual?'Place the song':'Make your guess'}</h1><p>${virtual?'Choose a + on your timeline, then lock your placement.':'Place the physical card on the table, then reveal.'}</p></div>${virtual?virtualTimeline():`${timelineBoard()}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="listen-again">Listen again</button><button class="btn primary" data-action="reveal">Reveal Answer</button></div>`}`;
+    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>${virtual?'Place the song':'Make your guess'}</h1><p>${virtual?'Tap a gap in your timeline. Your mystery song will appear there.':'Place the physical card on the table, then reveal.'}</p></div>${virtual?virtualTimeline():`${timelineBoard()}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="listen-again">Listen again</button><button class="btn primary" data-action="reveal">Reveal Answer</button></div>`}`;
   }
 
   function virtualTimeline(){
-    return `${timelineBoard(true)}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="listen-again" ${bonusBusy?'disabled':''}>Listen again</button><button class="btn primary" data-action="lock-placement" ${pendingSlot===null||bonusBusy?'disabled':''}>Lock Placement</button></div>`;
+    return `${timelineBoard(true)}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="listen-again" ${bonusBusy?'disabled':''}>Listen again</button><button class="btn primary" data-action="lock-placement" ${pendingSlot===null||bonusBusy?'disabled':''}>${esc(placementLockCopy())}</button></div>`;
   }
   function bonusBalance(team=activeTeam()){
     const n=Number(team?.bonusPoints);return Number.isFinite(n)?Math.max(0,Math.floor(n)):0;
@@ -219,10 +223,10 @@
     const teams=(match?.teams||[]).map((team,index)=>({team,index}));
     return `<div class="timeline-board" aria-label="Team timelines" data-team-count="${teams.length}">${teams.map(({team,index})=>{
       const active=index===match.turn,years=[...(team.timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b);
-      const slot=i=>{const label=i===0?`Before ${years[0]??'timeline'}`:i===years.length?`After ${years.at(-1)??'timeline'}`:`Between ${years[i-1]} and ${years[i]}`;return `<button class="timeline-slot ${pendingSlot===i?'on':''}" data-slot="${i}" aria-label="${esc(label)}" aria-pressed="${pendingSlot===i}" ${bonusBusy?'disabled':''}>+</button>`};
-      const choosing=interactive&&active&&cfg.playMode==='virtual';
-      const cards=years.map((year,i)=>`<span class="timeline-step">${choosing?slot(i):''}<span class="timeline-year">${year}</span></span>`).join('')+(choosing?slot(years.length):'');
-      return `<section class="team-timeline ${active?'active-team':''}" aria-label="${esc(team.name)} timeline"><div class="team-timeline-header"><h2>${esc(team.name)}${active?' <small>Your turn</small>':''}</h2><div class="team-timeline-totals"><b>${team.score}${cfg.victory==='10'?'/10':''} cards</b><span>${bonusBalance(team)} bonus</span></div></div><div class="timeline-years">${cards||'<span class="timeline-empty">No cards collected yet</span>'}</div></section>`;
+      const choosing=interactive&&active&&cfg.playMode==='virtual',hasPlacement=choosing&&pendingSlot!==null;
+      const slot=i=>{const label=placementLabel(years,i),selected=pendingSlot===i;return `<button class="timeline-slot placement-gap ${selected?'on selected':''}" data-slot="${i}" aria-label="${esc(label)}" aria-pressed="${selected}" ${bonusBusy?'disabled':''}>${selected?'<span class="timeline-mystery"><b>?</b><small>Your song</small></span>':'<span class="timeline-plus">+</span>'}</button>`};
+      const cards=years.map((year,i)=>`${choosing?slot(i):''}<span class="timeline-year">${year}</span>`).join('')+(choosing?slot(years.length):'');
+      return `<section class="team-timeline ${active?'active-team':''}" aria-label="${esc(team.name)} timeline"><div class="team-timeline-header"><h2>${esc(team.name)}${active?' <small>Your turn</small>':''}</h2><div class="team-timeline-totals"><b>${team.score}${cfg.victory==='10'?'/10':''} cards</b><span>${bonusBalance(team)} bonus</span></div></div><div class="timeline-years ${hasPlacement?'has-placement':''}">${cards||'<span class="timeline-empty">No cards collected yet</span>'}</div></section>`;
     }).join('')}</div>`;
   }
   function bonusActions(award=false){
@@ -236,9 +240,10 @@
   }
 
   function revealScreen(){
-    const virtual=cfg.playMode==='virtual',marked=!!placementResult;
+    const virtual=cfg.playMode==='virtual',marked=!!placementResult,song=current?.song||{};
     const result=marked?(placementResult.correct?'Correct placement':'Wrong position'):'Mark your placement';
-    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>Reveal</h1></div><section class="card answer-card"><div class="answer-top"><div><div class="answer-song">${esc(current?.song?.title||'Unknown')}</div><div class="answer-artist">${esc(current?.song?.artist||'')}</div></div><div class="answer-year">${current?.year||'----'}</div></div><div class="result-badge ${marked?(placementResult.correct?'ok':'bad'):''}">${result}</div></section>${timelineBoard()}${bonusCardNotice()}${marked?`${bonusActions(true)}<div class="board-actionbar"><button class="btn primary" data-action="next-turn" ${bonusBusy?'disabled':''}>${winner()?'See results':'Next Team'}</button></div>`:`<div class="board-actionbar"><button class="btn ghost" data-action="wrong-answer">Wrong placement</button><button class="btn primary" data-action="correct-answer">Correct placement</button></div>`}${!virtual?'<button class="btn text" data-action="update-card-year">Update card year reference</button>':''}`;
+    const answerContext=song.screenWorkTitle?`${song.screenWorkType==='movie'?'Movie':'TV show'}: ${song.screenWorkTitle}`:song.playbackVariant==='remix'?`Played: ${song.remixTitle||song.title}${song.remixer?` · ${song.remixer} remix`:''}`:'';
+    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>Reveal</h1></div><section class="card answer-card"><div class="answer-top"><div><div class="answer-song">${esc(song.title||'Unknown')}</div><div class="answer-artist">${esc(song.artist||'')}</div>${answerContext?`<div class="answer-context">${esc(answerContext)}</div>`:''}</div><div class="answer-year">${current?.year||'----'}</div></div><div class="result-badge ${marked?(placementResult.correct?'ok':'bad'):''}">${result}</div></section>${timelineBoard()}${bonusCardNotice()}${marked?`${bonusActions(true)}<div class="board-actionbar"><button class="btn primary" data-action="next-turn" ${bonusBusy?'disabled':''}>${winner()?'See results':'Next Team'}</button></div>`:`<div class="board-actionbar"><button class="btn ghost" data-action="wrong-answer">Wrong placement</button><button class="btn primary" data-action="correct-answer">Correct placement</button></div>`}${!virtual?'<button class="btn text" data-action="update-card-year">Update card year reference</button>':''}`;
   }
 
   function gameOverScreen(){

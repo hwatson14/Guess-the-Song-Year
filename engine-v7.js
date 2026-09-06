@@ -4,9 +4,6 @@
   const E=window.GSYEngine;
   if(!E)throw new Error('GSYEngine must load before engine-v7.js');
 
-  const supported=['greatest','australian','unexpected','number1_us','number1_au'];
-  for(const id of Object.keys(E.MODES||{}))if(!supported.includes(id))delete E.MODES[id];
-
   // Version words matter only in metadata-like annotations/suffixes. Genuine titles such as
   // "Live and Let Die" and "Another Brick in the Wall (Part II)" remain valid songs.
   const versionMarker=/\b(karaoke|tribute|demo|live|remix|re[- ]?mix|mix|mixed|edit|version|recording|master|radio|single|album|vocal|acoustic|unplugged|a cappella|acapella|backing(?: track)?|instrumental|strumentale|base musicale|bootleg|mashup|refix|rework|preview|playback|deluxe|bonus|voice note|alternate|alternative|original|rehearsal|session|concert|remaster(?:ed)?(?:\s*\d{4})?|radio edit|radio version|single edit|single version|album version|extended(?: version| edit| mix)?|club mix|dance mix|original mix|dub(?: version| mix)?|mono|stereo|sped up|slowed|re[- ]?record(?:ed)?|music video|video|video version|solo vocal|take \d+|pt\.?\s*\d+|special disco version|clean version|call out #1|jamie xx shuffle|gdp|space jesus|restrung|rumba 22)\b/i;
@@ -54,6 +51,7 @@
   }
 
   function underlyingKey(song){
+    if(song?.relationshipType==='screen-work-theme'&&song?.relationshipId)return String(song.relationshipId);
     if(song?.songId)return String(song.songId);
     if(song?.canonicalKey)return String(song.canonicalKey);
     return `${baseTitle(song?.title)}|${primaryArtist(song?.artist)}`;

@@ -64,7 +64,7 @@ assert.equal(reports.remix_original_year.yearBasis,'original');
 
 const remix=remixes[0];
 assert.equal((await engine.resolveSong(remix,'spotify')).id,remix.spotifyId);
-assert.equal((await engine.resolveSong(remix,'youtube')).id,remix.youtubeId);
+assert.equal((await engine.resolveSong(remix,'youtube')).videoId,remix.youtubeId);
 await assert.rejects(engine.resolveSong({...remix,youtubeId:''},'youtube'),{code:'REMIX_PROVIDER_UNAVAILABLE'});
 
 console.log('mode expansion contracts passed',diagnostics.counts);
