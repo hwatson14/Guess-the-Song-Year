@@ -16,5 +16,5 @@ replace_once('app.js',
 replace_once('app.js',
 "    const answerContext=song.screenWorkTitle?`${song.screenWorkType==='movie'?'Movie':'TV show'}: ${song.screenWorkTitle}`:song.playbackVariant==='remix'?`Played: ${song.remixTitle||song.title}${song.remixer?` · ${song.remixer} remix`:''}`:'';",
 "    const answerContext=song.workTitle?`${song.workType==='movie'?'Movie':'TV show'}: ${song.workTitle}`:song.playedVersion?`Played: ${song.playedVersion}${song.remixer?` · ${song.remixer} remix`:''}`:'';")
-replace_once('index.html','<script src="./app.js?v=7.6.2"></script>','<script src="./app.js?v=7.6.3"></script>')
+replace_once('index.html','<script src="./app.js?v=7.6.4"></script>','<script src="./app.js?v=7.6.5"></script>')
 print('Patched screen relationship identity and answer semantics.')
