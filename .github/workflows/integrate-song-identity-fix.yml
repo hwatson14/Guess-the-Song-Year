@@ -1,0 +1,170 @@
+name: Integrate song identity fix with main
+
+on:
+  push:
+    branches:
+      - fix/song-identity-dedup-spotify
+
+permissions:
+  contents: write
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install validation dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements-dev.txt
+      - name: Merge current main and resolve validation overlaps
+        run: |
+          git fetch origin main
+          set +e
+          git merge origin/main --no-ff --no-commit
+          merge_status=$?
+          set -e
+          conflicts="$(git diff --name-only --diff-filter=U)"
+          unexpected="$(printf '%s\n' "$conflicts" | grep -Ev '^(scripts/check\.mjs|scripts/test_catalogue_cleanup\.mjs)$' || true)"
+          if [ -n "$unexpected" ]; then
+            echo "Unexpected merge conflicts:"
+            printf '%s\n' "$unexpected"
+            exit 1
+          fi
+          echo "Merge status: $merge_status"
+          echo "Expected conflicts:"
+          printf '%s\n' "$conflicts"
+
+          cat > scripts/check.mjs <<'EOF'
+          import {spawnSync} from 'node:child_process';
+          import path from 'node:path';
+          import {fileURLToPath} from 'node:url';
+
+          const cwd=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+          const checks=[
+            ...['engine.js','engine-v7.js','app-policy.js','app.js','setup-playback.js'].map(file=>[process.execPath,'--check',file]),
+            ...['test_engine_v7','test_runtime_catalogue','test_runtime_recovery','test_spotify_session','test_engine_playback_lifecycle','test_year_gap_evidence',
+              'test_year_range','test_catalogue_identity','test_song_database','test_global_song_identity','test_mode_expansion','test_provider_audit','test_preferred_link_cache','test_reviewed_provider_links','test_catalogue_corrections','test_catalogue_expansion','test_catalogue_cleanup','test_catalogue_bucket_uniqueness',
+              'test_same_year_playback_ids','test_greatest_release_provenance','test_australian_release_audit',
+              'test_bonus_gameplay','test_physical_ready','test_engine_playback_fixes','test_app_policy','test_card_year_overrides','test_security_contract','test_setup_playback_ui','test_mobile_setup_scroll','test_native_placement_ui','test_release_integrity'].map(name=>[process.execPath,`scripts/${name}.mjs`]),
+            ...['validate_catalogue','validate_catalogue_schema','test_number1_us_provenance','test_number1_au_provenance',
+              'test_verification_contract','audit_catalogue_variants'].map(name=>['python',`scripts/${name}.py`]),
+          ];
+          for(const [command,...args] of checks){
+            const result=spawnSync(command,args,{cwd,stdio:'inherit'});
+            if(result.error){console.error(result.error.message);process.exit(1)}
+            if(result.status!==0)process.exit(result.status||1);
+          }
+          console.log(`All ${checks.length} application and catalogue checks passed.`);
+          EOF
+
+          cat > scripts/test_catalogue_cleanup.mjs <<'EOF'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          import {createHash} from 'node:crypto';
+          import {applyCatalogueCleanup,cleanupId} from './cleanup_catalogue.mjs';
+          import {catalogueEngine,loadProductionCatalogue} from './catalogue_runtime.mjs';
+
+          const {data,manifest}=loadProductionCatalogue();
+          const decisions=JSON.parse(fs.readFileSync('verification/catalogue_cleanup_decisions.json','utf8'));
+          const archive=JSON.parse(fs.readFileSync('verification/catalogue_cleanup_archive.json','utf8')).entries;
+          const baseline=JSON.parse(fs.readFileSync('verification/catalogue_cleanup_baseline.json','utf8'));
+          const E=catalogueEngine(data,manifest),reports=await E.modeReports();
+          const fingerprint=row=>createHash('sha256').update(JSON.stringify(row)).digest('hex');
+          const originalHash=row=>{const clone=structuredClone(row);delete clone.legacyKeys;delete clone.songId;return fingerprint(clone)};
+          const reviewKey=row=>String(row?.canonicalKey||E.songUseKey({...row,songId:null}));
+          const identityKeys=row=>new Set([reviewKey(row),...(Array.isArray(row?.legacyKeys)?row.legacyKeys:[])].map(String).filter(Boolean));
+
+          // Historical cleanup accounting first preserves an exact archived original. If the
+          // original was not archived, exactly one active canonical identity or preserved alias
+          // must remain. Later canonical master merges deliberately collapse old identities, and
+          // corrected release-year identities may move buckets; chart-year placements may not.
+          for(const original of baseline.rows){
+            const archived=archive.some(row=>row.mode===original.mode&&row.year===original.year&&row.original&&fingerprint(row.original)===original.fingerprint)?1:0;
+            const buckets=data.modes[original.mode]||{};
+            const rows=manifest.modes?.[original.mode]?.yearBasis==='release'?Object.values(buckets).flat():(buckets[original.year]||[]);
+            const active=archived?0:rows.filter(row=>identityKeys(row).has(original.key)).length;
+            assert.equal(active+archived,1,`Lost or duplicated baseline identity: ${original.mode}/${original.year}/${original.key}`);
+          }
+          assert.equal(new Set(archive.map(x=>x.id)).size,archive.length,'archive IDs are unique');
+          assert.deepEqual(new Set(archive.map(x=>x.id)),new Set(decisions.map(cleanupId)));
+          assert.equal(archive.filter(x=>x.original).length,baseline.rows.filter(x=>archive.some(a=>a.original&&a.mode===x.mode&&a.year===x.year&&fingerprint(a.original)===x.fingerprint)).length);
+          for(const [mode,r] of Object.entries(reports)){
+            assert.equal(r.songs,r.rawSongs,`${mode}: source and usable totals diverged`);
+            if(Object.hasOwn(baseline.coverage,mode))assert.equal(r.coverage,baseline.coverage[mode],`${mode}: year coverage changed`);
+            else{
+              assert.equal(manifest.modes[mode]?.status,'building',`${mode}: only declared building modes may be absent from the historical cleanup baseline`);
+              assert.equal(r.coverage,0,`${mode}: new building mode unexpectedly contains production rows`);
+              assert.equal(r.songs,0,`${mode}: new building mode unexpectedly contains production songs`);
+            }
+          }
+          for(const entry of archive){
+            if(entry.replacement){
+              const row=entry.replacement;
+              assert.equal(row.releaseYear,row.year);
+              assert.equal(row.evidenceState,'externally_observed');
+              assert.ok(row.sourceUrl.startsWith('https://')&&row.releaseYearEvidence&&row.sourceProvider);
+              assert.equal(row.spotifyId,'','Unverified playback IDs must not be promoted');
+              assert.equal(row.youtubeId,'');
+              const replacementBuckets=data.modes[entry.mode]||{};
+              const replacementRows=manifest.modes?.[entry.mode]?.yearBasis==='release'?Object.values(replacementBuckets).flat():(replacementBuckets[row.year]||[]);
+              const active=replacementRows.find(x=>identityKeys(x).has(reviewKey(row)));
+              assert.ok(active,'Sourced replacement identity missing');
+            }
+            if(entry.action==='archive_duplicate'||entry.action==='repair'){
+              const target=entry.retained||{year:entry.replacement.year,key:reviewKey(entry.replacement)};
+              const targetBuckets=data.modes[entry.mode]||{};
+              const targetRows=manifest.modes?.[entry.mode]?.yearBasis==='release'?Object.values(targetBuckets).flat():(targetBuckets[target.year]||[]);
+              const targetRow=targetRows.find(x=>reviewKey(x)===target.key||identityKeys(x).has(target.key));
+              assert.ok(targetRow,'Duplicate/repair has no retained identity');
+              const runtimeKey=E.songUseKey(targetRow),oldKey=entry.originalKey;
+              if(oldKey!==reviewKey(targetRow))assert.ok(identityKeys(targetRow).has(oldKey),'Saved-game alias was lost');
+              const runtimeYear=Number(targetRow.year);
+              const used=[...reports[entry.mode].yearSongKeys[runtimeYear].filter(x=>x!==runtimeKey),oldKey];
+              await assert.rejects(E.chooseSong(runtimeYear,entry.mode,used),{code:'NO_UNUSED_SONG'});
+            }
+          }
+          const repeat=applyCatalogueCleanup(data,manifest,decisions,archive);
+          assert.equal(repeat.changes.length,0,'Cleanup is idempotent');
+          assert.deepEqual(repeat.data,data);
+          assert.deepEqual(repeat.archive,archive);
+
+          // Failed decisions cannot mutate the caller's catalogue or silently discard a row.
+          const fixture=structuredClone(data),mode='greatest',year=1950,original=fixture.modes[mode][year][0];
+          const snapshot=JSON.stringify(fixture);
+          assert.throws(()=>applyCatalogueCleanup(fixture,manifest,[{mode,year,original,action:'repair',reason:'fixture',replacement:{title:'Example',artist:'Artist',year}}]),/lacks release/);
+          assert.equal(JSON.stringify(fixture),snapshot);
+          assert.throws(()=>applyCatalogueCleanup(fixture,manifest,[{mode,year,original,action:'archive_duplicate',reason:'fixture',retained:{key:'missing',year}}]),/retained identity/);
+          assert.throws(()=>applyCatalogueCleanup(fixture,manifest,[{mode,year,original:{...original,title:'Absent'},action:'archive_unresolved',reason:'fixture'}]),/match exactly once/);
+          console.log(`Catalogue cleanup checks passed: ${baseline.rows.length} originals accounted for, ${archive.length} decisions, zero hidden exclusions, saved aliases and idempotency verified.`);
+          EOF
+
+          git add scripts/check.mjs scripts/test_catalogue_cleanup.mjs
+          if [ -n "$(git diff --name-only --diff-filter=U)" ]; then
+            echo 'Unresolved merge conflicts remain:'
+            git diff --name-only --diff-filter=U
+            exit 1
+          fi
+      - name: Rebuild catalogue with current main compiler
+        run: |
+          node scripts/song_database.mjs build
+          node scripts/song_database_report.mjs --write
+      - name: Validate integrated tree
+        run: node scripts/check.mjs
+      - name: Check diff
+        run: git diff --check
+      - name: Commit integrated branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm .github/workflows/integrate-song-identity-fix.yml
+          git add -A
+          git commit -m "Integrate song identity dedupe with current main"
+          git push origin HEAD:fix/song-identity-dedup-spotify
