@@ -33,6 +33,7 @@ YT_WATCH_RE = re.compile(r"^https?://(?:www\.)?youtube\.com/watch\?v=([A-Za-z0-9
 YT_SHORT_RE = re.compile(r"^https?://youtu\.be/([A-Za-z0-9_-]{11})(?:\?.*)?$", re.I)
 BAD_MARKERS = ["karaoke", "reaction", "cover", "tribute", "sped up", "slowed", "nightcore", "remix", "re-mix", "live", "acoustic", "instrumental", "remaster", "remastered", "demo"]
 BAD_DISAMBIG = re.compile(r"\b(live|remix|re[- ]?mix|remaster(?:ed)?|demo|karaoke|tribute|cover|acoustic|instrumental|re[- ]?record(?:ed)?|edit|mix)\b", re.I)
+STREAM_RELATIONS = {"free streaming", "streaming"}
 
 
 def norm(value):
@@ -112,6 +113,8 @@ def mb_get(recording_id, state):
 def relation_candidates(recording):
     out = []
     for relation in recording.get("relations", []):
+        if str(relation.get("type", "")).lower() not in STREAM_RELATIONS:
+            continue
         url = str(relation.get("url", {}).get("resource", ""))
         match = SPOTIFY_RE.match(url)
         if match:
@@ -242,11 +245,17 @@ def main():
     if LEDGER_PATH.exists() and not args.refresh:
         prior = json.loads(LEDGER_PATH.read_text(encoding="utf-8"))
         prior.setdefault("records", {})
+    prior_review = []
+    if QUEUE_PATH.exists() and not args.refresh:
+        prior_queue = json.loads(QUEUE_PATH.read_text(encoding="utf-8"))
+        prior_review = list(prior_queue.get("queue", []))
     checked_at = date.today().isoformat()
     targets = []
     for song in db.get("songs", {}).values():
         recording_id, claim_url = recording_claim(song)
-        if recording_id:
+        # The durable recording ledger is the checkpoint: normal runs only research
+        # recording IDs not already classified. --refresh explicitly rechecks all.
+        if recording_id and (args.refresh or recording_id not in prior["records"]):
             targets.append((song, recording_id, claim_url))
     targets.sort(key=lambda x: (sum(1 for m in db.get("memberships", []) if m.get("songId") == x[0]["id"]) * -1, int(x[0]["release"]["answerYear"]), x[0]["id"]))
     if args.limit > 0:
@@ -254,7 +263,7 @@ def main():
 
     mb_state = {"last_request": 0.0}
     records = prior["records"]
-    review = []
+    review = list(prior_review)
     stats = {"targeted": len(targets), "recordingsFetched": 0, "recordingsCached": 0, "recordingRejected": 0, "linksAdded": 0, "spotifyVerified": 0, "youtubeVerified": 0, "ambiguous": 0, "providerFailures": 0}
     candidates_to_check = []
     recording_by_song = {}
@@ -332,6 +341,12 @@ def main():
 
     # Count genuinely new relations after all processing by comparing durable source properties.
     stats["linksAdded"] = sum(1 for song in db["songs"].values() for provider in ("spotify", "youtube") for asset in song["providers"][provider]["links"] if asset.get("origin") == "musicbrainz-recording-url-relation" and asset.get("checkedAt") == checked_at)
+    # Preserve review findings across resumable chunks while replacing duplicate observations.
+    review_by_key = {}
+    for row in review:
+        key = (str(row.get("songId", "")), str(row.get("provider", "")), str(row.get("id") or row.get("recordingId") or ""), str(row.get("reason", "")))
+        review_by_key[key] = row
+    review = [review_by_key[key] for key in sorted(review_by_key)]
     ledger = {"generatedAt": checked_at, "policy": POLICY, "records": records}
     queue = {"generatedAt": checked_at, "policy": POLICY, "counts": stats, "queue": review}
     LEDGER_PATH.write_text(json.dumps(ledger, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

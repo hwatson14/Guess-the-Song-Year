@@ -24,6 +24,7 @@ from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = ROOT / "data" / "song-database.json"
+MODES_PATH = ROOT / "data" / "modes.json"
 REVIEW_PATH = ROOT / "verification" / "release-evidence-review-queue.json"
 CACHE = ROOT / "output" / "evidence-hardening" / "musicbrainz-search"
 MB_SEARCH = "https://musicbrainz.org/ws/2/recording/"
@@ -136,7 +137,7 @@ def classify(song, payload):
     return {"status": "confirmed", "recording": best, "earliestYear": earliest, "candidateCount": len(earliest_rows)}
 
 
-def apply_confirmation(db, song, result, checked_at):
+def apply_confirmation(db, song, result, checked_at, release_modes):
     answer_year = int(song["release"]["answerYear"])
     recording = result["recording"]
     recording_id = str(recording["id"])
@@ -158,7 +159,7 @@ def apply_confirmation(db, song, result, checked_at):
     song["release"]["evidencePolicy"] = POLICY
     song["release"]["evidenceCheckedAt"] = checked_at
     for membership in db.get("memberships", []):
-        if membership.get("songId") != song["id"] or membership.get("mode") not in {"greatest", "australian", "unexpected"}:
+        if membership.get("songId") != song["id"] or membership.get("mode") not in release_modes:
             continue
         metadata = membership.setdefault("metadata", {})
         metadata.setdefault("musicbrainzId", recording_id)
@@ -180,6 +181,8 @@ def main():
     if not 1 <= args.batch_size <= 10:
         raise ValueError("batch size must be 1..10")
     db = json.loads(DB_PATH.read_text(encoding="utf-8"))
+    mode_defs = json.loads(MODES_PATH.read_text(encoding="utf-8")).get("modes", {})
+    release_modes = {mode for mode, info in mode_defs.items() if info.get("yearBasis") == "release" and not info.get("compositeOf")}
     targets = [song for song in db.get("songs", {}).values() if song.get("release", {}).get("state") == "unresolved" and isinstance(song.get("release", {}).get("answerYear"), int)]
     targets.sort(key=lambda s: (int(s["release"]["answerYear"]), s.get("artist", ""), s.get("title", ""), s["id"]))
     if args.limit > 0:
@@ -212,7 +215,7 @@ def main():
                 rec = result["recording"]
                 confirmed.append({"songId": song["id"], "title": song["title"], "artist": song["artist"], "answerYear": song["release"]["answerYear"], "recordingId": rec["id"], "firstReleaseDate": rec["first-release-date"], "score": rec.get("score"), "candidateCount": result["candidateCount"]})
                 if args.write:
-                    apply_confirmation(db, song, result, checked_at)
+                    apply_confirmation(db, song, result, checked_at, release_modes)
             else:
                 counts["review"] += 1
                 review.append({"songId": song["id"], "title": song["title"], "artist": song["artist"], "answerYear": song["release"]["answerYear"], **{k: v for k, v in result.items() if k != "status"}})

@@ -1,0 +1,876 @@
+{
+  "generatedAt": "2026-09-06",
+  "policy": "musicbrainz-recording-provider-v1",
+  "records": {
+    "1a388ffb-bef5-46c4-96cb-4656b0016eb2": {
+      "songId": "song_8511fc340a058cf745b9",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "4d1bb5a1-14ba-438d-b96d-070704f400f5": {
+      "songId": "song_8c7dc668666965c2543e",
+      "checkedAt": "2026-09-06",
+      "accepted": false,
+      "reason": "recording_title_differs",
+      "relations": [
+        {
+          "provider": "spotify",
+          "id": "0F7FA14euOIX8KcbEturGH",
+          "url": "https://open.spotify.com/track/0F7FA14euOIX8KcbEturGH",
+          "relationship": "free streaming"
+        },
+        {
+          "provider": "youtube",
+          "id": "5ho88VXJTBg",
+          "url": "https://www.youtube.com/watch?v=5ho88VXJTBg",
+          "relationship": "free streaming"
+        }
+      ]
+    },
+    "866b31df-5575-4e22-9119-48b1c007e258": {
+      "songId": "song_c364be92b3e40400461f",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "98c32b0d-14ac-4c8e-9d2b-eeedb4ff9964": {
+      "songId": "song_aa965cbad5ad3d48ae86",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "d27db25c-f745-452a-89c1-9eebd60631ad": {
+      "songId": "song_fef01e46369d5bd24f65",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "23ff17be-769c-4535-97b8-cb4d2ddfbf4f": {
+      "songId": "song_09f821ac61e507f339a6",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "00f8614c-cb04-4881-9d18-d659464d0158": {
+      "songId": "song_5d780ddd60d443c3c9be",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "2220c404-2e89-43ed-b577-4dc82d1fe73c": {
+      "songId": "song_9148f3ec2a1a04612d5e",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "6374c7d3-35d1-4b9a-9d8d-d2b43502927c": {
+      "songId": "song_a38d29a974ae7bfeb35a",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "23ed9195-f99f-42fa-b3fb-0c626ec80d11": {
+      "songId": "song_b7cb90736e82bd2d9e0c",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "b88657e8-e752-402e-844c-b8cf623e24d7": {
+      "songId": "song_3d33a43312b8b2e62bef",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "dd984605-8e1b-4d96-964a-893e1f6c17a7": {
+      "songId": "song_6839e23ac44229e21be7",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "bc43f3eb-10af-4983-81c7-69fc67ef846a": {
+      "songId": "song_3838f1f8f636f7fe0bfd",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "a7b12356-1693-4859-af89-078f565c9bec": {
+      "songId": "song_a0c25b1221ddd9b1bd0c",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "e97fa9a8-4f38-4e43-b5f1-5047a0f33fa4": {
+      "songId": "song_2bb8645a46a54f925a83",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "47e5d560-f9c3-44a2-b958-d86eb2ddfd03": {
+      "songId": "song_4e03cebfb275121134eb",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "3e415fdb-510c-4af8-bcff-72fb63935a75": {
+      "songId": "song_6b800adff8c865758899",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "871c9072-c914-4bb0-b833-3bb5834c8e43": {
+      "songId": "song_7376844e1e72b83bd9cf",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "063964f7-35c3-467f-b30c-cb7303d866b9": {
+      "songId": "song_143dac4cf9386942f570",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "c32330f2-426d-4c2d-9ce3-b294278a4dd8": {
+      "songId": "song_5276e48ba8d4aea089b9",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "ee0cbe47-c695-42c4-9537-a929f371c5a0": {
+      "songId": "song_5bf77632c94020e6aa90",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "7b862bc2-58a4-4d3f-bc1b-b0c15fc17316": {
+      "songId": "song_814ed7d08d19ee701b77",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "701cc207-331e-4930-b508-38caedc8cd7f": {
+      "songId": "song_94a4d092e7fd8958e9ca",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "2d7730cb-e633-41ff-909b-4d61a35cc065": {
+      "songId": "song_eb73ca92e69d55e2e6cd",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "97a362c9-042d-44b6-8777-7af5a8c92c26": {
+      "songId": "song_8b75051914f4ef45a5ed",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": [
+        {
+          "provider": "spotify",
+          "id": "77smrLzHIscpKxwU11m7Hs",
+          "url": "https://open.spotify.com/track/77smrLzHIscpKxwU11m7Hs",
+          "relationship": "free streaming"
+        }
+      ]
+    },
+    "ab15056e-50ba-4758-a6e1-3a951d2538c0": {
+      "songId": "song_9e9aacc86b116fd2070d",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "ea24a9be-a5a2-477d-8f2a-a285e5dca298": {
+      "songId": "song_a685064aa2e4d9af4b65",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "7ce86631-ab98-4814-b2e0-ec13f8a4d658": {
+      "songId": "song_c124d87e95d00afcfd33",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": [
+        {
+          "provider": "spotify",
+          "id": "1Tr4K5MU5XYE44umXGDndd",
+          "url": "https://open.spotify.com/track/1Tr4K5MU5XYE44umXGDndd",
+          "relationship": "free streaming"
+        }
+      ]
+    },
+    "794204c3-3332-4767-85c8-34fe37f641e8": {
+      "songId": "song_019fd2b864e9a73b3a31",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "ef4c6855-949e-4e22-b41e-8e0a2d372d5f": {
+      "songId": "song_051e61aa849723da67d8",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": [
+        {
+          "provider": "spotify",
+          "id": "0HpukCAAHgTFpQ4eAZFr9z",
+          "url": "https://open.spotify.com/track/0HpukCAAHgTFpQ4eAZFr9z",
+          "relationship": "free streaming"
+        },
+        {
+          "provider": "spotify",
+          "id": "3Q51wrTPUlHfDHzMtvsPt3",
+          "url": "https://open.spotify.com/track/3Q51wrTPUlHfDHzMtvsPt3",
+          "relationship": "free streaming"
+        },
+        {
+          "provider": "spotify",
+          "id": "4EeN4nZiGWLVUo4fv9Hqjm",
+          "url": "https://open.spotify.com/track/4EeN4nZiGWLVUo4fv9Hqjm",
+          "relationship": "free streaming"
+        }
+      ]
+    },
+    "b15e9a41-fd5d-4e54-98ef-dc7ceec909a8": {
+      "songId": "song_09079de581a8cfd465e5",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "d0d8e9df-9438-479a-8732-36416018905b": {
+      "songId": "song_3ae8e9b4422be8b3cac7",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "78013cf3-5498-4757-8f86-d7dacde23eb4": {
+      "songId": "song_66aafe47648357c158f2",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "7e66de4d-5977-4b4e-921b-2e2f9524a8e4": {
+      "songId": "song_de69650c1d45a0f78eea",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "188d9289-e872-41b2-96c5-c56bbb419908": {
+      "songId": "song_26c7acdc070a54fc122c",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": [
+        {
+          "provider": "spotify",
+          "id": "2YSYE2xK7oMuli7hCPgerg",
+          "url": "https://open.spotify.com/track/2YSYE2xK7oMuli7hCPgerg",
+          "relationship": "free streaming"
+        }
+      ]
+    },
+    "5b2d0700-e5cf-41d7-a238-15316e86f97f": {
+      "songId": "song_44d8ef8af009440a1eaa",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "0fe7f1ef-1d4b-4544-905a-da34bb08d63b": {
+      "songId": "song_d55215efaff72ed3b68b",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "9aa2be7b-8fb0-4187-bce4-9bb4e84815fc": {
+      "songId": "song_04f7b786ee78ef0ae295",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "46896cd5-4675-4243-908e-2f78a70ba139": {
+      "songId": "song_5f91bc22665483c370e7",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "5d668d77-2ccc-4f33-9598-0bac25d17b4f": {
+      "songId": "song_637d3bcc6341dadf6781",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "cf4798c2-8d6d-4a25-9f07-00b3efea7903": {
+      "songId": "song_7e56705f8c6aaa72988e",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "e4245192-ac92-4120-8723-e92e0dbd2539": {
+      "songId": "song_aeda4196553f2489a388",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "7f8d9b90-acdf-48ae-ba86-8ceea8917d24": {
+      "songId": "song_0ddba2c020c535ffa1cf",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "e18cb6e8-1b3a-4c9e-a9b6-6cc281ace4f3": {
+      "songId": "song_5c8247039688fec76097",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "f2f99a81-9375-4557-8138-2a0a297f5c85": {
+      "songId": "song_6349d978336ced922667",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": [
+        {
+          "provider": "spotify",
+          "id": "7FwBtcecmlpc1sLySPXeGE",
+          "url": "https://open.spotify.com/track/7FwBtcecmlpc1sLySPXeGE",
+          "relationship": "free streaming"
+        },
+        {
+          "provider": "youtube",
+          "id": "129kuDCQtHs",
+          "url": "https://www.youtube.com/watch?v=129kuDCQtHs",
+          "relationship": "free streaming"
+        }
+      ]
+    },
+    "f3d50ef7-dbb1-46c4-9f32-b5745760b954": {
+      "songId": "song_84ef03203301ce053173",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "0ff60fc8-0673-4e6f-aa55-a106fb01bd77": {
+      "songId": "song_381d4a0a82711d64c817",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "ea304ce7-d3f1-4563-91bf-34110987656c": {
+      "songId": "song_5ca1a60f1cc5b702a5de",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "5d1f8a6f-c427-4447-9ccd-871b0a49ef8c": {
+      "songId": "song_61da0c09d0023cba4801",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "aeab06bc-3316-4426-ad45-89d7a44ff552": {
+      "songId": "song_6924a04548905901823d",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "94f5e5cc-d1de-454c-b50f-8d2e4b28f22a": {
+      "songId": "song_82f7249172c10f505d7e",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "e87d0feb-abac-482d-b0b0-e5c65f2489ad": {
+      "songId": "song_cfeb8c3e4e81231c3045",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": [
+        {
+          "provider": "spotify",
+          "id": "3ddhKSsc4D0NqPzJJjs17z",
+          "url": "https://open.spotify.com/track/3ddhKSsc4D0NqPzJJjs17z",
+          "relationship": "free streaming"
+        }
+      ]
+    },
+    "5f043d1d-9faf-475e-ac55-9c99bf390cec": {
+      "songId": "song_db34439eec34b2cc66bc",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "973668d3-61cc-40a6-bd89-9637b19f19b5": {
+      "songId": "song_007b690d834629735f30",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "c7198b8f-3455-4dd1-aab7-03d4941637df": {
+      "songId": "song_29a9406dc683447ee8fc",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "5e996aa8-9cf9-450e-8423-a85aad6d8464": {
+      "songId": "song_d9f06353da86dd3fbda2",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "cbdd9348-dee9-4004-8db1-a14b60c00fad": {
+      "songId": "song_f7af73a850c2eb464146",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "911ae6e0-1c30-4332-a950-859ed98b0e6f": {
+      "songId": "song_0860c7be3562e8f2aca7",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "7c728faa-485b-471c-9756-5ee144a61000": {
+      "songId": "song_131aa9c65652ba57b179",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "5b50f4ef-8034-4b69-9e7f-006bff69402f": {
+      "songId": "song_2e010d0c1147e1ff6dd9",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "ff2e83cb-2a89-4655-af4e-cd99d42d9843": {
+      "songId": "song_4700aa6ad83ca52becb0",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "fb446eaa-e264-4199-9abd-c98d17daeb51": {
+      "songId": "song_be98bceb87dfb6aa1aa1",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "c537e588-b001-4a72-9dcc-5f702049956c": {
+      "songId": "song_1efc41d620e85b50beea",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "e5f30d38-1c6b-40a9-9a7a-206a6a22af6d": {
+      "songId": "song_9e47b09e1ebd2f64e86f",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "0b7b092c-17dc-41f9-b0e6-13cfc3accaeb": {
+      "songId": "song_e71153c5de30453b06ba",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "3a6062b0-fdf6-4fef-ba83-0287cd229bf0": {
+      "songId": "song_e89a9ff7ef98eb287ff2",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "72cbbcdd-4b3a-41b8-92d6-0fa13888f00d": {
+      "songId": "song_fbe918f110870c9f1e1d",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": [
+        {
+          "provider": "spotify",
+          "id": "4UCTgh5jvtqoaMX6MAhUNn",
+          "url": "https://open.spotify.com/track/4UCTgh5jvtqoaMX6MAhUNn",
+          "relationship": "free streaming"
+        }
+      ]
+    },
+    "cfa03e25-2700-490c-b087-9bc8feec5cb5": {
+      "songId": "song_acf2eb8680fbd195c10c",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "cd02e9ba-2641-4ee1-ac10-9544f3cfa159": {
+      "songId": "song_e659e99a3632dda646f3",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "505b2dec-19ba-43ab-ac8d-eb26223eac9f": {
+      "songId": "song_1c89af98e1951abb93f4",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "05717fbe-9212-438c-b581-d7e26e2fe270": {
+      "songId": "song_a7efb46e60c03e0b4063",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "2de1623b-b669-4415-b46a-7ace1918682d": {
+      "songId": "song_376a828f9e04d727cc64",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "94b6703e-3ea7-4156-827e-7d7baa33e385": {
+      "songId": "song_4682ea32163099f1c3b8",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "74be3ea4-2e3f-4006-96ef-283d54ba4cc5": {
+      "songId": "song_869b73d446042a9936d7",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "05018d23-8b43-4de3-8fe6-2d6a8db514e2": {
+      "songId": "song_a5a2e92b043b88c8e345",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "653fb08a-0236-4fd8-9f7d-af5f079b2871": {
+      "songId": "song_f3fc8f2fde7f59cf057a",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "b6b34866-7019-41b9-852b-1d1a84140c11": {
+      "songId": "song_0c392f5f4f013c4f1796",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "4abf665b-8141-46ec-b68b-595e21385750": {
+      "songId": "song_47f34feffffea58101e6",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": [
+        {
+          "provider": "spotify",
+          "id": "0Xhl61W9jM3UWZXENs0C00",
+          "url": "https://open.spotify.com/track/0Xhl61W9jM3UWZXENs0C00",
+          "relationship": "free streaming"
+        }
+      ]
+    },
+    "6dc911c5-a42c-4a83-ac87-afaca4d0204c": {
+      "songId": "song_a6383540da31be7f4e73",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "772a9e60-00ec-4094-b14b-4dadd11d5d96": {
+      "songId": "song_dcfd697adedc5422a404",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": [
+        {
+          "provider": "spotify",
+          "id": "2hkDSauUXpjheTiwY55gU7",
+          "url": "https://open.spotify.com/track/2hkDSauUXpjheTiwY55gU7",
+          "relationship": "free streaming"
+        }
+      ]
+    },
+    "04d41a03-ca39-4c27-9e55-fde5612366ab": {
+      "songId": "song_0d6bbdb13030d3bc48a4",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "24b9316a-4a96-4a60-824f-b0bbe27279c6": {
+      "songId": "song_3fb33c1a605ada905436",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "0ad00d5d-e491-44e5-b8bc-80502b8d59fa": {
+      "songId": "song_78beb1480b11f0b693a3",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "f44cb8cd-1527-4928-8058-7f5118fe6efe": {
+      "songId": "song_af2082666ae7a9d8ed30",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "540e156d-0ccf-4b50-989c-28d754e3f7ec": {
+      "songId": "song_d3d902c7defe7ae8013e",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "b39b7227-c271-4ab8-912b-cb1fe2fc0e5e": {
+      "songId": "song_36a4bb88103ff1cdfc9c",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": [
+        {
+          "provider": "spotify",
+          "id": "1id6H6vcwSB9GGv9NXh5cl",
+          "url": "https://open.spotify.com/track/1id6H6vcwSB9GGv9NXh5cl",
+          "relationship": "free streaming"
+        },
+        {
+          "provider": "spotify",
+          "id": "6nvpBmQiX9LpT2dXmCJWaP",
+          "url": "https://open.spotify.com/track/6nvpBmQiX9LpT2dXmCJWaP",
+          "relationship": "free streaming"
+        }
+      ]
+    },
+    "2977adea-9ee2-4518-b679-5957de89bb1a": {
+      "songId": "song_890067e19786ef69405f",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "95b471ad-50cd-49d4-9f23-2735c7dc3fe5": {
+      "songId": "song_ac9a83675c3db8a0cadb",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": [
+        {
+          "provider": "spotify",
+          "id": "0KDaN0HL3TcJVTbXlQCEsS",
+          "url": "https://open.spotify.com/track/0KDaN0HL3TcJVTbXlQCEsS",
+          "relationship": "free streaming"
+        },
+        {
+          "provider": "spotify",
+          "id": "0tQMg8pVBMS0ii2o3we06F",
+          "url": "https://open.spotify.com/track/0tQMg8pVBMS0ii2o3we06F",
+          "relationship": "free streaming"
+        },
+        {
+          "provider": "spotify",
+          "id": "2HXSjnfVfBtc1kKawVhSd7",
+          "url": "https://open.spotify.com/track/2HXSjnfVfBtc1kKawVhSd7",
+          "relationship": "free streaming"
+        },
+        {
+          "provider": "spotify",
+          "id": "4O8cZQ7KMBuH7vJ9sb5gX0",
+          "url": "https://open.spotify.com/track/4O8cZQ7KMBuH7vJ9sb5gX0",
+          "relationship": "free streaming"
+        }
+      ]
+    },
+    "c5952e99-c1b7-4ee4-9038-560b349fd3a7": {
+      "songId": "song_ce4e4885477c44a97e5e",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": [
+        {
+          "provider": "spotify",
+          "id": "1fp0rsgDH1M1WfQ5bYwLYi",
+          "url": "https://open.spotify.com/track/1fp0rsgDH1M1WfQ5bYwLYi",
+          "relationship": "free streaming"
+        },
+        {
+          "provider": "spotify",
+          "id": "6f4D6NFibo9GXVPUpGqo6E",
+          "url": "https://open.spotify.com/track/6f4D6NFibo9GXVPUpGqo6E",
+          "relationship": "free streaming"
+        },
+        {
+          "provider": "spotify",
+          "id": "7kwz4URSSeZpIyGBPt1r2u",
+          "url": "https://open.spotify.com/track/7kwz4URSSeZpIyGBPt1r2u",
+          "relationship": "free streaming"
+        }
+      ]
+    },
+    "bf29bf16-43bd-45d3-bce3-4767b23bcb1e": {
+      "songId": "song_dcf0d999820b3a8db1b4",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "b43bec3d-3687-4b6a-b787-e47cddf7e554": {
+      "songId": "song_1a5b64b571faa3fc91a5",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "8d5a51c3-f493-4cb7-89e6-f5d3de37be7e": {
+      "songId": "song_011977284e2d9d4a0c15",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "03bf7e6f-8d48-43ae-86f4-6e4fd61d5ae7": {
+      "songId": "song_967101a38cec2e6b43ca",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "8149d770-c6e9-4b7c-85a6-5fbb88e9fab9": {
+      "songId": "song_77990f9797c269b52957",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "5081d9f7-f3f9-4f90-a0b1-b18bd320900c": {
+      "songId": "song_a03a803fd37407d174ff",
+      "checkedAt": "2026-09-06",
+      "accepted": false,
+      "reason": "recording_artist_differs",
+      "relations": []
+    },
+    "887a5d12-f9fd-499b-8424-61f28f00b393": {
+      "songId": "song_5499afe854245b718bf4",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "cf496f70-9ee9-48b8-b021-49985bd6e9b6": {
+      "songId": "song_ff97f98d2af60869c0f9",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "bc25de97-7c62-4d3f-a200-ac9b0619d438": {
+      "songId": "song_63320e76a78f9468f824",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "c362a1cc-dec3-4a7a-b541-3ffd6521128c": {
+      "songId": "song_f9cda4ad099b9289ee7b",
+      "checkedAt": "2026-09-06",
+      "accepted": true,
+      "reason": null,
+      "relations": []
+    },
+    "7c5b6609-0e04-4ea4-a871-513301db8c9a": {
+      "songId": "song_4c935c55014d0706ce86",
+      "checkedAt": "2026-09-06",
+      "accepted": false,
+      "reason": "recording_artist_differs",
+      "relations": [
+        {
+          "provider": "spotify",
+          "id": "2K2Qyj9XwSYjNZSfymu3xP",
+          "url": "https://open.spotify.com/track/2K2Qyj9XwSYjNZSfymu3xP",
+          "relationship": "free streaming"
+        },
+        {
+          "provider": "spotify",
+          "id": "3JnCQ3p7wvsfZlJ46h3IKR",
+          "url": "https://open.spotify.com/track/3JnCQ3p7wvsfZlJ46h3IKR",
+          "relationship": "free streaming"
+        },
+        {
+          "provider": "spotify",
+          "id": "3Qb3S7DqgUbQyM4eqJBkhg",
+          "url": "https://open.spotify.com/track/3Qb3S7DqgUbQyM4eqJBkhg",
+          "relationship": "free streaming"
+        }
+      ]
+    }
+  }
+}

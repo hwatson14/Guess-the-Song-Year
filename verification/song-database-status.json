@@ -5,8 +5,8 @@
     "spotify": {
       "linked": 604,
       "missing": 502,
-      "metadataChecked": 604,
-      "verified": 3
+      "metadataChecked": 603,
+      "verified": 4
     },
     "youtube": {
       "linked": 430,
@@ -16,8 +16,8 @@
     }
   },
   "releaseEvidence": {
-    "unresolved": 289,
-    "externally_observed": 817
+    "unresolved": 249,
+    "externally_observed": 857
   },
   "greatestDepth": {
     "1950": {
