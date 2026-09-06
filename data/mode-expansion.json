@@ -1,0 +1,357 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-09-06",
+  "screenRelationships": {
+    "movie_themes": [
+      {
+        "relationshipId": "movie:the-graduate:1967:mrs-robinson",
+        "workId": "movie:the-graduate:1967",
+        "workTitle": "The Graduate",
+        "workAnswerYear": 1967,
+        "title": "Mrs. Robinson",
+        "artist": "Simon & Garfunkel",
+        "role": "signature-song",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/The_Graduate", "label": "The Graduate (1967 film)"}
+      },
+      {
+        "relationshipId": "movie:saturday-night-fever:1977:stayin-alive",
+        "workId": "movie:saturday-night-fever:1977",
+        "workTitle": "Saturday Night Fever",
+        "workAnswerYear": 1977,
+        "title": "Stayin' Alive",
+        "artist": "Bee Gees",
+        "role": "signature-song",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/Saturday_Night_Fever", "label": "Saturday Night Fever (1977 film)"}
+      },
+      {
+        "relationshipId": "movie:rocky-iii:1982:eye-of-the-tiger",
+        "workId": "movie:rocky-iii:1982",
+        "workTitle": "Rocky III",
+        "workAnswerYear": 1982,
+        "title": "Eye of the Tiger",
+        "artist": "Survivor",
+        "role": "signature-song",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/Rocky_III", "label": "Rocky III (1982 film)"}
+      },
+      {
+        "relationshipId": "movie:ghostbusters:1984:ghostbusters",
+        "workId": "movie:ghostbusters:1984",
+        "workTitle": "Ghostbusters",
+        "workAnswerYear": 1984,
+        "title": "Ghostbusters",
+        "artist": "Ray Parker Jr.",
+        "role": "title-song",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/Ghostbusters", "label": "Ghostbusters (1984 film)"}
+      },
+      {
+        "relationshipId": "movie:the-breakfast-club:1985:dont-you-forget-about-me",
+        "workId": "movie:the-breakfast-club:1985",
+        "workTitle": "The Breakfast Club",
+        "workAnswerYear": 1985,
+        "title": "Don't You (Forget About Me)",
+        "artist": "Simple Minds",
+        "role": "signature-song",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/The_Breakfast_Club", "label": "The Breakfast Club (1985 film)"}
+      },
+      {
+        "relationshipId": "movie:ghost:1990:unchained-melody",
+        "workId": "movie:ghost:1990",
+        "workTitle": "Ghost",
+        "workAnswerYear": 1990,
+        "title": "Unchained Melody",
+        "artist": "The Righteous Brothers",
+        "role": "signature-song",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/Ghost_(1990_film)", "label": "Ghost (1990 film)"}
+      },
+      {
+        "relationshipId": "movie:the-bodyguard:1992:i-will-always-love-you",
+        "workId": "movie:the-bodyguard:1992",
+        "workTitle": "The Bodyguard",
+        "workAnswerYear": 1992,
+        "title": "I Will Always Love You",
+        "artist": "Whitney Houston",
+        "role": "signature-song",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/The_Bodyguard_(1992_film)", "label": "The Bodyguard (1992 film)"}
+      },
+      {
+        "relationshipId": "movie:pulp-fiction:1994:misirlou",
+        "workId": "movie:pulp-fiction:1994",
+        "workTitle": "Pulp Fiction",
+        "workAnswerYear": 1994,
+        "title": "Misirlou",
+        "titleAliases": ["Miserlou"],
+        "artist": "Dick Dale",
+        "role": "signature-song",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/Pulp_Fiction", "label": "Pulp Fiction (1994 film)"}
+      },
+      {
+        "relationshipId": "movie:titanic:1997:my-heart-will-go-on",
+        "workId": "movie:titanic:1997",
+        "workTitle": "Titanic",
+        "workAnswerYear": 1997,
+        "title": "My Heart Will Go On",
+        "artist": "Celine Dion",
+        "artistAliases": ["Céline Dion"],
+        "role": "signature-song",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/Titanic_(1997_film)", "label": "Titanic (1997 film)"}
+      },
+      {
+        "relationshipId": "movie:shrek:2001:all-star",
+        "workId": "movie:shrek:2001",
+        "workTitle": "Shrek",
+        "workAnswerYear": 2001,
+        "title": "All Star",
+        "artist": "Smash Mouth",
+        "role": "signature-song",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/Shrek", "label": "Shrek (2001 film)"}
+      },
+      {
+        "relationshipId": "movie:8-mile:2002:lose-yourself",
+        "workId": "movie:8-mile:2002",
+        "workTitle": "8 Mile",
+        "workAnswerYear": 2002,
+        "title": "Lose Yourself",
+        "artist": "Eminem",
+        "role": "signature-song",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/8_Mile_(film)", "label": "8 Mile (2002 film)"}
+      },
+      {
+        "relationshipId": "movie:skyfall:2012:skyfall",
+        "workId": "movie:skyfall:2012",
+        "workTitle": "Skyfall",
+        "workAnswerYear": 2012,
+        "title": "Skyfall",
+        "artist": "Adele",
+        "role": "title-song",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/Skyfall", "label": "Skyfall (2012 film)"}
+      },
+      {
+        "relationshipId": "movie:guardians-of-the-galaxy:2014:hooked-on-a-feeling",
+        "workId": "movie:guardians-of-the-galaxy:2014",
+        "workTitle": "Guardians of the Galaxy",
+        "workAnswerYear": 2014,
+        "title": "Hooked on a Feeling",
+        "artist": "Blue Swede",
+        "role": "signature-song",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)", "label": "Guardians of the Galaxy (2014 film)"}
+      },
+      {
+        "relationshipId": "movie:spider-verse:2018:sunflower",
+        "workId": "movie:spider-man-into-the-spider-verse:2018",
+        "workTitle": "Spider-Man: Into the Spider-Verse",
+        "workAnswerYear": 2018,
+        "title": "Sunflower",
+        "artist": "Post Malone",
+        "role": "signature-song",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/Spider-Man:_Into_the_Spider-Verse", "label": "Spider-Man: Into the Spider-Verse (2018 film)"}
+      },
+      {
+        "relationshipId": "movie:no-time-to-die:2021:no-time-to-die",
+        "workId": "movie:no-time-to-die:2021",
+        "workTitle": "No Time to Die",
+        "workAnswerYear": 2021,
+        "title": "No Time to Die",
+        "artist": "Billie Eilish",
+        "role": "title-song",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/No_Time_to_Die", "label": "No Time to Die (2021 film)"}
+      },
+      {
+        "relationshipId": "movie:top-gun-maverick:2022:hold-my-hand",
+        "workId": "movie:top-gun-maverick:2022",
+        "workTitle": "Top Gun: Maverick",
+        "workAnswerYear": 2022,
+        "title": "Hold My Hand",
+        "artist": "Lady Gaga",
+        "role": "signature-song",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/Top_Gun:_Maverick", "label": "Top Gun: Maverick (2022 film)"}
+      }
+    ],
+    "tv_themes": [
+      {
+        "relationshipId": "tv:the-monkees:1966:theme-from-the-monkees",
+        "workId": "tv:the-monkees:1966",
+        "workTitle": "The Monkees",
+        "workAnswerYear": 1966,
+        "title": "(Theme From) The Monkees",
+        "titleAliases": ["Theme from The Monkees", "The Monkees"],
+        "artist": "The Monkees",
+        "role": "main-theme",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/The_Monkees_(TV_series)", "label": "The Monkees premiered in 1966"}
+      },
+      {
+        "relationshipId": "tv:mash:1972:suicide-is-painless",
+        "workId": "tv:mash:1972",
+        "workTitle": "M*A*S*H",
+        "workAnswerYear": 1972,
+        "title": "Suicide Is Painless",
+        "artist": "Johnny Mandel",
+        "role": "main-theme",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/M*A*S*H_(TV_series)", "label": "M*A*S*H premiered in 1972"}
+      },
+      {
+        "relationshipId": "tv:cheers:1982:where-everybody-knows-your-name",
+        "workId": "tv:cheers:1982",
+        "workTitle": "Cheers",
+        "workAnswerYear": 1982,
+        "title": "Where Everybody Knows Your Name",
+        "artist": "Gary Portnoy",
+        "role": "main-theme",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/Cheers", "label": "Cheers premiered in 1982"}
+      },
+      {
+        "relationshipId": "tv:fresh-prince:1990:yo-home-to-bel-air",
+        "workId": "tv:the-fresh-prince-of-bel-air:1990",
+        "workTitle": "The Fresh Prince of Bel-Air",
+        "workAnswerYear": 1990,
+        "title": "Yo Home to Bel-Air",
+        "titleAliases": ["The Fresh Prince of Bel-Air", "Fresh Prince of Bel-Air"],
+        "artist": "DJ Jazzy Jeff",
+        "role": "main-theme",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/The_Fresh_Prince_of_Bel-Air", "label": "The Fresh Prince of Bel-Air premiered in 1990"}
+      },
+      {
+        "relationshipId": "tv:friends:1994:ill-be-there-for-you",
+        "workId": "tv:friends:1994",
+        "workTitle": "Friends",
+        "workAnswerYear": 1994,
+        "title": "I'll Be There for You",
+        "artist": "The Rembrandts",
+        "role": "main-theme",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/Friends", "label": "Friends premiered in 1994"}
+      },
+      {
+        "relationshipId": "tv:dawsons-creek:1998:i-dont-want-to-wait",
+        "workId": "tv:dawsons-creek:1998",
+        "workTitle": "Dawson's Creek",
+        "workAnswerYear": 1998,
+        "title": "I Don't Want to Wait",
+        "artist": "Paula Cole",
+        "role": "main-theme",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/Dawson%27s_Creek", "label": "Dawson's Creek premiered in 1998"}
+      },
+      {
+        "relationshipId": "tv:malcolm-in-the-middle:2000:boss-of-me",
+        "workId": "tv:malcolm-in-the-middle:2000",
+        "workTitle": "Malcolm in the Middle",
+        "workAnswerYear": 2000,
+        "title": "Boss of Me",
+        "artist": "They Might Be Giants",
+        "role": "main-theme",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/Malcolm_in_the_Middle", "label": "Malcolm in the Middle premiered in 2000"}
+      },
+      {
+        "relationshipId": "tv:the-oc:2003:california",
+        "workId": "tv:the-oc:2003",
+        "workTitle": "The O.C.",
+        "workAnswerYear": 2003,
+        "title": "California",
+        "artist": "Phantom Planet",
+        "role": "main-theme",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/The_O.C.", "label": "The O.C. premiered in 2003"}
+      },
+      {
+        "relationshipId": "tv:house:2004:teardrop",
+        "workId": "tv:house:2004",
+        "workTitle": "House",
+        "workAnswerYear": 2004,
+        "title": "Teardrop",
+        "artist": "Massive Attack",
+        "role": "main-theme",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/House_(TV_series)", "label": "House premiered in 2004"}
+      },
+      {
+        "relationshipId": "tv:suits:2011:greenback-boogie",
+        "workId": "tv:suits:2011",
+        "workTitle": "Suits",
+        "workAnswerYear": 2011,
+        "title": "Greenback Boogie",
+        "artist": "Ima Robot",
+        "role": "main-theme",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/Suits_(American_TV_series)", "label": "Suits premiered in 2011"}
+      },
+      {
+        "relationshipId": "tv:big-little-lies:2017:cold-little-heart",
+        "workId": "tv:big-little-lies:2017",
+        "workTitle": "Big Little Lies",
+        "workAnswerYear": 2017,
+        "title": "Cold Little Heart",
+        "artist": "Michael Kiwanuka",
+        "role": "main-theme",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/Big_Little_Lies_(TV_series)", "label": "Big Little Lies premiered in 2017"}
+      },
+      {
+        "relationshipId": "tv:arcane:2021:enemy",
+        "workId": "tv:arcane:2021",
+        "workTitle": "Arcane",
+        "workAnswerYear": 2021,
+        "title": "Enemy",
+        "artist": "Imagine Dragons",
+        "role": "main-theme",
+        "evidence": {"url": "https://en.wikipedia.org/wiki/Arcane_(TV_series)", "label": "Arcane premiered in 2021"}
+      }
+    ]
+  },
+  "remixRelationships": [
+    {
+      "relationshipId": "remix:missing:todd-terry",
+      "title": "Missing",
+      "artist": "Everything But The Girl",
+      "originalAnswerYear": 1994,
+      "remixTitle": "Missing - Todd Terry Remix",
+      "remixer": "Todd Terry",
+      "spotifyId": "2p9fnViY10hbqxdKbZZvdq",
+      "youtubeId": "iaky5m00rpy",
+      "yearEvidence": {"url": "https://open.spotify.com/album/21iwczqjbjthphPXrRHoBL", "label": "Missing (Remixes), original and Todd Terry versions, 1994"},
+      "playbackEvidence": {"url": "https://www.youtube.com/watch?v=iaky5m00rpy", "label": "Everything But The Girl official Todd Terry remix video"}
+    },
+    {
+      "relationshipId": "remix:heads-will-roll:a-trak",
+      "title": "Heads Will Roll",
+      "artist": "Yeah Yeah Yeahs",
+      "originalAnswerYear": 2009,
+      "remixTitle": "Heads Will Roll - A-Trak Remix Radio Edit",
+      "remixer": "A-Trak",
+      "spotifyId": "1RG14YqZXXQxMWXq9tjcOU",
+      "youtubeId": "wTrztS8nMmI",
+      "yearEvidence": {"url": "https://open.spotify.com/track/1RG14YqZXXQxMWXq9tjcOU", "label": "Heads Will Roll release/remix metadata, 2009"},
+      "playbackEvidence": {"url": "https://www.youtube.com/watch?v=wTrztS8nMmI", "label": "Yeah Yeah Yeahs official A-Trak Remix Radio Edit audio"}
+    },
+    {
+      "relationshipId": "remix:prayer-in-c:robin-schulz",
+      "title": "Prayer in C",
+      "artist": "Lilly Wood and The Prick",
+      "originalAnswerYear": 2010,
+      "remixTitle": "Prayer in C - Robin Schulz Remix",
+      "remixer": "Robin Schulz",
+      "spotifyId": "3k9FFXVPn3ua8dlpkxlCvZ",
+      "youtubeId": "fiore9Z5iUg",
+      "yearEvidence": {"url": "https://en.wikipedia.org/wiki/Prayer_in_C", "label": "Prayer in C original album release, 2010"},
+      "playbackEvidence": {"url": "https://www.youtube.com/watch?v=fiore9Z5iUg", "label": "Robin Schulz official remix video"}
+    },
+    {
+      "relationshipId": "remix:summertime-sadness:cedric-gervais",
+      "title": "Summertime Sadness",
+      "artist": "Lana Del Rey",
+      "originalAnswerYear": 2012,
+      "remixTitle": "Summertime Sadness - Cedric Gervais Remix",
+      "remixer": "Cedric Gervais",
+      "spotifyId": "6D5pfooPP6hi99RaXjkDsP",
+      "youtubeId": "akhmS1D2Ce4",
+      "yearEvidence": {"url": "https://en.wikipedia.org/wiki/Summertime_Sadness", "label": "Summertime Sadness original release, 2012"},
+      "playbackEvidence": {"url": "https://www.youtube.com/watch?v=akhmS1D2Ce4", "label": "Spinnin' Records Cedric Gervais remix video"}
+    },
+    {
+      "relationshipId": "remix:i-took-a-pill-in-ibiza:seeb",
+      "title": "I Took A Pill In Ibiza",
+      "titleAliases": ["I Took a Pill in Ibiza"],
+      "artist": "Mike Posner",
+      "originalAnswerYear": 2015,
+      "remixTitle": "I Took A Pill In Ibiza - Seeb Remix",
+      "remixer": "Seeb",
+      "spotifyId": "62UAFVREdTssSevwa5jqhF",
+      "youtubeId": "foE1mO2yM04",
+      "yearEvidence": {"url": "https://en.wikipedia.org/wiki/I_Took_a_Pill_in_Ibiza", "label": "I Took a Pill in Ibiza original single release, 2015"},
+      "playbackEvidence": {"url": "https://www.youtube.com/watch?v=foE1mO2yM04", "label": "Mike Posner official Seeb remix video"}
+    }
+  ]
+}
