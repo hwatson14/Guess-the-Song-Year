@@ -17,14 +17,19 @@ jobs:
         with:
           ref: fix/mode-preview-pools-v2
           fetch-depth: 0
-      - name: Copy validated canonical mode data from completed build commit
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Copy validated canonical mode data and patch runtime semantics
         run: |
           git fetch origin 3efb8992c3c8e1d0b9abe30e744f1001192b7638
           git checkout 3efb8992c3c8e1d0b9abe30e744f1001192b7638 -- data/song-database.json data/catalogue.json data/modes.json
-      - name: Commit reviewed mode data
+          python scripts/patch_mode_preview_runtime.py
+      - name: Commit reviewed mode data and runtime semantics
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/song-database.json data/catalogue.json data/modes.json
-          git commit -m "Add reviewed Preview mode pools"
+          git add data/song-database.json data/catalogue.json data/modes.json engine-v7.js app.js index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Enable reviewed Preview mode pools"
           git push origin HEAD:fix/mode-preview-pools-v2
