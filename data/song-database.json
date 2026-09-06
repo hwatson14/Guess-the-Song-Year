@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "catalogue": {
     "version": 18,
-    "generatedAt": "2026-09-06T04:39:07.417Z",
+    "generatedAt": "2026-09-06",
     "years": [
       1950,
       1951,
@@ -763,17 +763,27 @@
       "title": "(How Much Is) That Doggie in the Window",
       "artist": "Patti Page",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1953,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1953,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1953,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/e17ad563-6d55-44d3-9e42-d92cd5aab514",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1953
+        "answerYear": 1953,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -829,17 +839,27 @@
       "title": "Vaya con Dios",
       "artist": "Les Paul & Mary Ford",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1953,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1953,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1953,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/ed64bfa0-1ea2-40b8-9f2f-58771d242437",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1953
+        "answerYear": 1953,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -3345,17 +3365,27 @@
       "title": "I Can’t Help Myself (Sugar Pie, Honey Bunch)",
       "artist": "Four Tops",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1965,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1965,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1965,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/85323b77-8fce-47a1-ab0d-2366c5300115",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1965
+        "answerYear": 1965,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -3442,17 +3472,27 @@
       "title": "Wooly Bully",
       "artist": "Sam the Sham & the Pharaohs",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1965,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1965,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1965,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/98c32b0d-14ac-4c8e-9d2b-eeedb4ff9964",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1965
+        "answerYear": 1965,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -5206,17 +5246,27 @@
       "title": "Tie a Yellow Ribbon Round the Ole Oak Tree",
       "artist": "Tony Orlando & Dawn",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1973,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1973,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1973,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/1a388ffb-bef5-46c4-96cb-4656b0016eb2",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1973
+        "answerYear": 1973,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -9032,17 +9082,27 @@
       "title": "Nothing Compares 2 U",
       "artist": "Sinéad O’Connor",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1990,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1990,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1990,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/cfa03e25-2700-490c-b087-9bc8feec5cb5",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1990
+        "answerYear": 1990,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -10358,17 +10418,27 @@
       "title": "Believe",
       "artist": "Cher-esque",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1999,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1999,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1999,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/9c8551c6-c585-4f41-9efd-2e2a68f428d6",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1999
+        "answerYear": 1999,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -14820,17 +14890,27 @@
       "title": "I Can’t Stand Sitting in a Cell",
       "artist": "Buddy Williams",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1951,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1951,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1951,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/3256be66-84d1-42cb-a6c6-7857dda92751",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1951
+        "answerYear": 1951,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -14878,17 +14958,27 @@
       "title": "I’m Gonna Tear Down the Mailbox",
       "artist": "Buddy Williams",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1951,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1951,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1951,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/8aaa9047-32ed-42ee-ad52-72c56c52372b",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1951
+        "answerYear": 1951,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -14907,17 +14997,27 @@
       "title": "Gambling Polka Dot Blues",
       "artist": "Buddy Williams",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1951,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1951,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1951,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/6e2f0497-bb33-4d85-8f24-53ef49c61a2f",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1951
+        "answerYear": 1951,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -14936,17 +15036,27 @@
       "title": "Smoky (That Wild Stallion Grand)",
       "artist": "Smoky Dawson",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1952,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1952,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1952,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/126580cf-d69e-4afd-9aef-2f73c193ccfc",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1952
+        "answerYear": 1952,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -15023,17 +15133,27 @@
       "title": "New Wabash Cannon Ball",
       "artist": "Smoky Dawson",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1952,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1952,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1952,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/4158d538-17da-4ec9-9dcb-8dbedb25f682",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1952
+        "answerYear": 1952,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -15371,17 +15491,27 @@
       "title": "Once When I Was Mustering",
       "artist": "Slim Dusty",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1957,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1957,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1957,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/43172353-bce7-4183-b61c-db5e2224d8a1",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1957
+        "answerYear": 1957,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -15429,17 +15559,27 @@
       "title": "Buzz, Buzz, Buzz",
       "artist": "Johnny Ashcroft",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1958,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1958,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1958,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/089262df-d046-4593-a78a-e5416ff461c6",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1958
+        "answerYear": 1958,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -15545,17 +15685,27 @@
       "title": "I’ll Stroll Down Memory Lane With You",
       "artist": "Buddy Williams",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1959,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1959,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1959,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/9ed3936b-6ea5-4341-b3e6-6ba91e0edf71",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1959
+        "answerYear": 1959,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -15789,17 +15939,27 @@
       "title": "Dese Bones G'Wine Rise Again",
       "artist": "The Seekers",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1963,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1963,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1963,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/3ba8dea8-3f4e-4e49-b21c-187290acafde",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1963
+        "answerYear": 1963,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -15847,17 +16007,27 @@
       "title": "Theme from Jaimie McPheeters",
       "artist": "Bee Gees",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1964,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1964,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1964,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/9d0b0dff-b4c0-46f5-90bc-e6f810bfb7b7",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1964
+        "answerYear": 1964,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -16021,17 +16191,27 @@
       "title": "If It Don't Work Out",
       "artist": "Normie Rowe",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1966,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1966,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1966,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/80b9633c-b99e-46c5-ac91-7f64abaa7365",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1966
+        "answerYear": 1966,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -16079,17 +16259,27 @@
       "title": "Stormy Weather",
       "artist": "Normie Rowe",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1966,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1966,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1966,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/c1734f8e-80a9-4bec-b250-d5765a182a5f",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1966
+        "answerYear": 1966,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -16108,17 +16298,27 @@
       "title": "Rat Race",
       "artist": "Normie Rowe",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1966,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1966,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1966,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/41bde664-249e-4817-afcc-2db21feedfcf",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1966
+        "answerYear": 1966,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -16137,17 +16337,27 @@
       "title": "Ooh La La",
       "artist": "Normie Rowe",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1967,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1967,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1967,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/532dd238-745e-4793-b481-60a8a21d3b3a",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1967
+        "answerYear": 1967,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -16166,17 +16376,27 @@
       "title": "Hot Gully Wind",
       "artist": "The Masters Apprentices",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1967,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1967,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1967,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/658b01ae-073f-44f5-a723-d1a1d2db28fc",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1967
+        "answerYear": 1967,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -16253,17 +16473,27 @@
       "title": "I Started a Joke",
       "artist": "Bee Gees",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1968,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1968,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1968,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/784fc041-e26b-410a-9dc5-1a53baa9453f",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1968
+        "answerYear": 1968,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -16411,17 +16641,27 @@
       "title": "Let There Be Love",
       "artist": "Bee Gees",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1968,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1968,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1968,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/fd67690f-09bd-47e3-b0a5-3f63a9c4bdfd",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1968
+        "answerYear": 1968,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -16556,17 +16796,27 @@
       "title": "You’ll Never See My Face Again",
       "artist": "Bee Gees",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1969,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1969,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1969,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/f79b8f07-1a08-4881-9cf0-2b72220ac966",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1969
+        "answerYear": 1969,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -16614,17 +16864,27 @@
       "title": "Every Second, Every Minute",
       "artist": "Bee Gees",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1970,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1970,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1970,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/8f49088b-47d9-49cd-af1e-3083c0244741",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1970
+        "answerYear": 1970,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -16759,17 +17019,27 @@
       "title": "You’re Nobody Till Somebody Loves You",
       "artist": "Bee Gees",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1971,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1971,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1971,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/2d5ba8e4-8daf-48be-ac99-42b8c517b67c",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1971
+        "answerYear": 1971,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -16846,17 +17116,27 @@
       "title": "Please Don’t Turn Out the Lights",
       "artist": "Bee Gees",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1972,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1972,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1972,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/393b6759-fad9-4f36-a858-a8d3b70dc90c",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 1972
+        "answerYear": 1972,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -17762,34 +18042,30 @@
               "relationship": "free streaming",
               "checkedAt": "2026-09-05",
               "lastAudit": {
-                "songId": "song_8b75051914f4ef45a5ed",
                 "provider": "spotify",
+                "songId": "song_8b75051914f4ef45a5ed",
                 "id": "77smrLzHIscpKxwU11m7Hs",
-                "checkedAt": "2026-09-05T06:13:16.057623+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "No Time for Games - Remastered",
                 "artists": [
                   "Midnight Oil"
                 ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": true
+                "playable": true
               },
               "metadataCheck": {
-                "songId": "song_8b75051914f4ef45a5ed",
                 "provider": "spotify",
+                "songId": "song_8b75051914f4ef45a5ed",
                 "id": "77smrLzHIscpKxwU11m7Hs",
-                "checkedAt": "2026-09-05T06:13:16.057623+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "No Time for Games - Remastered",
                 "artists": [
                   "Midnight Oil"
                 ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": true
+                "playable": true
               }
             }
           ]
@@ -18216,34 +18492,30 @@
               "relationship": "free streaming",
               "checkedAt": "2026-09-05",
               "lastAudit": {
-                "songId": "song_26c7acdc070a54fc122c",
                 "provider": "spotify",
+                "songId": "song_26c7acdc070a54fc122c",
                 "id": "2YSYE2xK7oMuli7hCPgerg",
-                "checkedAt": "2026-09-05T06:13:16.057869+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Read About It - Remastered Version",
                 "artists": [
                   "Midnight Oil"
                 ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": true
+                "playable": true
               },
               "metadataCheck": {
-                "songId": "song_26c7acdc070a54fc122c",
                 "provider": "spotify",
+                "songId": "song_26c7acdc070a54fc122c",
                 "id": "2YSYE2xK7oMuli7hCPgerg",
-                "checkedAt": "2026-09-05T06:13:16.057869+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Read About It - Remastered Version",
                 "artists": [
                   "Midnight Oil"
                 ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": true
+                "playable": true
               }
             }
           ]
@@ -19539,46 +19811,55 @@
       },
       "providers": {
         "spotify": {
-          "preferredId": null,
+          "preferredId": "0Xhl61W9jM3UWZXENs0C00",
           "links": [
             {
               "id": "0Xhl61W9jM3UWZXENs0C00",
               "url": "https://open.spotify.com/track/0Xhl61W9jM3UWZXENs0C00",
-              "state": "metadata_checked",
+              "state": "verified",
               "origin": "musicbrainz-recording-url-relation",
               "sourceUrl": "https://musicbrainz.org/recording/4abf665b-8141-46ec-b68b-595e21385750",
               "recordingId": "4abf665b-8141-46ec-b68b-595e21385750",
               "relationship": "free streaming",
               "checkedAt": "2026-09-05",
               "lastAudit": {
-                "songId": "song_47f34feffffea58101e6",
                 "provider": "spotify",
+                "songId": "song_47f34feffffea58101e6",
                 "id": "0Xhl61W9jM3UWZXENs0C00",
-                "checkedAt": "2026-09-05T06:13:17.739316+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Greatest Gift",
                 "artists": [
                   "Tina Arena"
                 ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
+                "playable": true
               },
               "metadataCheck": {
-                "songId": "song_47f34feffffea58101e6",
                 "provider": "spotify",
+                "songId": "song_47f34feffffea58101e6",
                 "id": "0Xhl61W9jM3UWZXENs0C00",
-                "checkedAt": "2026-09-05T06:13:17.739316+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Greatest Gift",
                 "artists": [
                   "Tina Arena"
                 ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
+                "playable": true
+              },
+              "evidence": {
+                "recordingMatch": true,
+                "checkedAt": "2026-09-06",
+                "method": "musicbrainz-recording-provider-v1",
+                "recordingId": "4abf665b-8141-46ec-b68b-595e21385750",
+                "sourceUrl": "https://musicbrainz.org/recording/4abf665b-8141-46ec-b68b-595e21385750",
+                "observedTitle": "Greatest Gift",
+                "observedArtists": [
+                  "Tina Arena"
+                ],
+                "audioAuditioned": false,
+                "automatedPolicy": true
               }
             }
           ]
@@ -19662,34 +19943,30 @@
               "relationship": "free streaming",
               "checkedAt": "2026-09-05",
               "lastAudit": {
-                "songId": "song_dcfd697adedc5422a404",
                 "provider": "spotify",
+                "songId": "song_dcfd697adedc5422a404",
                 "id": "2hkDSauUXpjheTiwY55gU7",
-                "checkedAt": "2026-09-05T06:13:17.779091+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "That's The Way A Woman Feels",
                 "artists": [
                   "Tina Arena"
                 ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": true
+                "playable": true
               },
               "metadataCheck": {
-                "songId": "song_dcfd697adedc5422a404",
                 "provider": "spotify",
+                "songId": "song_dcfd697adedc5422a404",
                 "id": "2hkDSauUXpjheTiwY55gU7",
-                "checkedAt": "2026-09-05T06:13:17.779091+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "That's The Way A Woman Feels",
                 "artists": [
                   "Tina Arena"
                 ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": true
+                "playable": true
               }
             }
           ]
@@ -19936,34 +20213,30 @@
               "relationship": "free streaming",
               "checkedAt": "2026-09-05",
               "lastAudit": {
-                "songId": "song_ce4e4885477c44a97e5e",
                 "provider": "spotify",
+                "songId": "song_ce4e4885477c44a97e5e",
                 "id": "1fp0rsgDH1M1WfQ5bYwLYi",
-                "checkedAt": "2026-09-05T06:13:19.422182+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Smoke",
                 "artists": [
                   "Natalie Imbruglia"
                 ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
+                "playable": true
               },
               "metadataCheck": {
-                "songId": "song_ce4e4885477c44a97e5e",
                 "provider": "spotify",
+                "songId": "song_ce4e4885477c44a97e5e",
                 "id": "1fp0rsgDH1M1WfQ5bYwLYi",
-                "checkedAt": "2026-09-05T06:13:19.422182+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Smoke",
                 "artists": [
                   "Natalie Imbruglia"
                 ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
+                "playable": true
               }
             },
             {
@@ -19976,34 +20249,30 @@
               "relationship": "free streaming",
               "checkedAt": "2026-09-05",
               "lastAudit": {
-                "songId": "song_ce4e4885477c44a97e5e",
                 "provider": "spotify",
+                "songId": "song_ce4e4885477c44a97e5e",
                 "id": "6f4D6NFibo9GXVPUpGqo6E",
-                "checkedAt": "2026-09-05T06:13:19.557380+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Smoke",
                 "artists": [
                   "Natalie Imbruglia"
                 ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
+                "playable": true
               },
               "metadataCheck": {
-                "songId": "song_ce4e4885477c44a97e5e",
                 "provider": "spotify",
+                "songId": "song_ce4e4885477c44a97e5e",
                 "id": "6f4D6NFibo9GXVPUpGqo6E",
-                "checkedAt": "2026-09-05T06:13:19.557380+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Smoke",
                 "artists": [
                   "Natalie Imbruglia"
                 ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
+                "playable": true
               }
             },
             {
@@ -20016,34 +20285,30 @@
               "relationship": "free streaming",
               "checkedAt": "2026-09-05",
               "lastAudit": {
-                "songId": "song_ce4e4885477c44a97e5e",
                 "provider": "spotify",
+                "songId": "song_ce4e4885477c44a97e5e",
                 "id": "7kwz4URSSeZpIyGBPt1r2u",
-                "checkedAt": "2026-09-05T06:13:21.164372+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Smoke",
                 "artists": [
                   "Natalie Imbruglia"
                 ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
+                "playable": true
               },
               "metadataCheck": {
-                "songId": "song_ce4e4885477c44a97e5e",
                 "provider": "spotify",
+                "songId": "song_ce4e4885477c44a97e5e",
                 "id": "7kwz4URSSeZpIyGBPt1r2u",
-                "checkedAt": "2026-09-05T06:13:21.164372+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Smoke",
                 "artists": [
                   "Natalie Imbruglia"
                 ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
+                "playable": true
               }
             }
           ]
@@ -20127,34 +20392,30 @@
               "relationship": "free streaming",
               "checkedAt": "2026-09-05",
               "lastAudit": {
-                "songId": "song_ac9a83675c3db8a0cadb",
                 "provider": "spotify",
+                "songId": "song_ac9a83675c3db8a0cadb",
                 "id": "0KDaN0HL3TcJVTbXlQCEsS",
-                "checkedAt": "2026-09-05T06:13:21.189393+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Torn",
                 "artists": [
                   "Natalie Imbruglia"
                 ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
+                "playable": true
               },
               "metadataCheck": {
-                "songId": "song_ac9a83675c3db8a0cadb",
                 "provider": "spotify",
+                "songId": "song_ac9a83675c3db8a0cadb",
                 "id": "0KDaN0HL3TcJVTbXlQCEsS",
-                "checkedAt": "2026-09-05T06:13:21.189393+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Torn",
                 "artists": [
                   "Natalie Imbruglia"
                 ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
+                "playable": true
               }
             },
             {
@@ -20167,34 +20428,30 @@
               "relationship": "free streaming",
               "checkedAt": "2026-09-05",
               "lastAudit": {
-                "songId": "song_ac9a83675c3db8a0cadb",
                 "provider": "spotify",
+                "songId": "song_ac9a83675c3db8a0cadb",
                 "id": "0tQMg8pVBMS0ii2o3we06F",
-                "checkedAt": "2026-09-05T06:13:22.969626+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Torn",
                 "artists": [
                   "Natalie Imbruglia"
                 ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
+                "playable": true
               },
               "metadataCheck": {
-                "songId": "song_ac9a83675c3db8a0cadb",
                 "provider": "spotify",
+                "songId": "song_ac9a83675c3db8a0cadb",
                 "id": "0tQMg8pVBMS0ii2o3we06F",
-                "checkedAt": "2026-09-05T06:13:22.969626+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Torn",
                 "artists": [
                   "Natalie Imbruglia"
                 ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
+                "playable": true
               }
             },
             {
@@ -20207,34 +20464,30 @@
               "relationship": "free streaming",
               "checkedAt": "2026-09-05",
               "lastAudit": {
-                "songId": "song_ac9a83675c3db8a0cadb",
                 "provider": "spotify",
+                "songId": "song_ac9a83675c3db8a0cadb",
                 "id": "2HXSjnfVfBtc1kKawVhSd7",
-                "checkedAt": "2026-09-05T06:13:23.060871+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Torn",
                 "artists": [
                   "Natalie Imbruglia"
                 ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
+                "playable": true
               },
               "metadataCheck": {
-                "songId": "song_ac9a83675c3db8a0cadb",
                 "provider": "spotify",
+                "songId": "song_ac9a83675c3db8a0cadb",
                 "id": "2HXSjnfVfBtc1kKawVhSd7",
-                "checkedAt": "2026-09-05T06:13:23.060871+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Torn",
                 "artists": [
                   "Natalie Imbruglia"
                 ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
+                "playable": true
               }
             },
             {
@@ -20247,34 +20500,30 @@
               "relationship": "free streaming",
               "checkedAt": "2026-09-05",
               "lastAudit": {
-                "songId": "song_ac9a83675c3db8a0cadb",
                 "provider": "spotify",
+                "songId": "song_ac9a83675c3db8a0cadb",
                 "id": "4O8cZQ7KMBuH7vJ9sb5gX0",
-                "checkedAt": "2026-09-05T06:13:24.610799+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Torn",
                 "artists": [
                   "Natalie Imbruglia"
                 ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
+                "playable": true
               },
               "metadataCheck": {
-                "songId": "song_ac9a83675c3db8a0cadb",
                 "provider": "spotify",
+                "songId": "song_ac9a83675c3db8a0cadb",
                 "id": "4O8cZQ7KMBuH7vJ9sb5gX0",
-                "checkedAt": "2026-09-05T06:13:24.610799+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Torn",
                 "artists": [
                   "Natalie Imbruglia"
                 ],
-                "playable": true,
-                "titleMatches": true,
-                "artistMatches": true
+                "playable": true
               }
             }
           ]
@@ -20413,17 +20662,27 @@
       "title": "The Soul of the Beat",
       "artist": "Hilltop Hoods",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 2001,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 2001,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 2001,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/2eeadc20-1ee7-4ba2-9d8d-11d787f47bea",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 2001
+        "answerYear": 2001,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -20471,17 +20730,27 @@
       "title": "Sojourn",
       "artist": "Hilltop Hoods",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 2001,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 2001,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 2001,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/fc51344d-2f43-4570-97ed-1c4d63ee064a",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 2001
+        "answerYear": 2001,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -20500,17 +20769,27 @@
       "title": "Running From the Storm",
       "artist": "Hilltop Hoods",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 2001,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 2001,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 2001,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/b1534efb-75a9-4347-bedf-f05cfa09cf6d",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 2001
+        "answerYear": 2001,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -20703,17 +20982,27 @@
       "title": "Simmy and the Gravyspitter",
       "artist": "Hilltop Hoods",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 2003,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 2003,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 2003,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/a7b89923-fc26-4ae4-96e3-c4de5edfd9c2",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 2003
+        "answerYear": 2003,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -20819,17 +21108,27 @@
       "title": "Nosebleed Section",
       "artist": "Hilltop Hoods",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 2004,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 2004,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 2004,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/46c5aff4-9d82-417f-9dcd-8c45597abc80",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 2004
+        "answerYear": 2004,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -21225,17 +21524,27 @@
       "title": "Roll on Up Restrung",
       "artist": "Hilltop Hoods",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 2009,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 2009,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 2009,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/4cfe82cd-715c-456a-a6ee-2b19377b301d",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 2009
+        "answerYear": 2009,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -21728,17 +22037,27 @@
       "title": "American Idiot",
       "artist": "5 Seconds of Summer",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 2014,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 2014,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 2014,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/67d45112-fd27-46c3-939b-6aa8a5c95139",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 2014
+        "answerYear": 2014,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -21757,17 +22076,27 @@
       "title": "Tomorrow Never Dies",
       "artist": "5 Seconds of Summer",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 2014,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 2014,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 2014,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/5f61731c-d71c-46e1-b592-252740b612c1",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 2014
+        "answerYear": 2014,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -22091,17 +22420,27 @@
       "title": "Powerlines",
       "artist": "Tame Impala",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 2017,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 2017,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 2017,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/89d4b3de-9ae7-48e7-82e0-2ecb63733565",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 2017
+        "answerYear": 2017,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -22120,17 +22459,27 @@
       "title": "List of People (to Try and Forget About)",
       "artist": "Tame Impala",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 2017,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 2017,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 2017,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/82bb6913-d04d-4ff1-9260-cba8ba966ede",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 2017
+        "answerYear": 2017,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -22378,17 +22727,27 @@
       "title": "Why Won’t You Love Me",
       "artist": "5 Seconds of Summer",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 2018,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 2018,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 2018,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/4887f48f-308a-4dc3-8812-e264ef021035",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 2018
+        "answerYear": 2018,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -22536,17 +22895,27 @@
       "title": "Who Do You Love",
       "artist": "5 Seconds of Summer",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 2019,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 2019,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 2019,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/recording/c54a5fec-de57-4593-949a-b629455fc7eb",
+            "evidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+            "checkedAt": "2026-09-06",
+            "policy": "musicbrainz-exact-answer-year-v1"
           }
         ],
-        "answerYear": 2019
+        "answerYear": 2019,
+        "evidencePolicy": "musicbrainz-exact-answer-year-v1",
+        "evidenceCheckedAt": "2026-09-06"
       },
       "providers": {
         "spotify": {
@@ -23809,6 +24178,114 @@
                 "titleMatches": true,
                 "artistMatches": true
               }
+            },
+            {
+              "id": "0HpukCAAHgTFpQ4eAZFr9z",
+              "url": "https://open.spotify.com/track/0HpukCAAHgTFpQ4eAZFr9z",
+              "state": "metadata_checked",
+              "origin": "musicbrainz-recording-url-relation",
+              "sourceUrl": "https://musicbrainz.org/recording/ef4c6855-949e-4e22-b41e-8e0a2d372d5f",
+              "recordingId": "ef4c6855-949e-4e22-b41e-8e0a2d372d5f",
+              "relationship": "free streaming",
+              "checkedAt": "2026-09-06",
+              "lastAudit": {
+                "provider": "spotify",
+                "songId": "song_051e61aa849723da67d8",
+                "id": "0HpukCAAHgTFpQ4eAZFr9z",
+                "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
+                "httpStatus": 200,
+                "title": "Tainted Love",
+                "artists": [
+                  "Soft Cell"
+                ],
+                "playable": true
+              },
+              "metadataCheck": {
+                "provider": "spotify",
+                "songId": "song_051e61aa849723da67d8",
+                "id": "0HpukCAAHgTFpQ4eAZFr9z",
+                "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
+                "httpStatus": 200,
+                "title": "Tainted Love",
+                "artists": [
+                  "Soft Cell"
+                ],
+                "playable": true
+              }
+            },
+            {
+              "id": "3Q51wrTPUlHfDHzMtvsPt3",
+              "url": "https://open.spotify.com/track/3Q51wrTPUlHfDHzMtvsPt3",
+              "state": "metadata_checked",
+              "origin": "musicbrainz-recording-url-relation",
+              "sourceUrl": "https://musicbrainz.org/recording/ef4c6855-949e-4e22-b41e-8e0a2d372d5f",
+              "recordingId": "ef4c6855-949e-4e22-b41e-8e0a2d372d5f",
+              "relationship": "free streaming",
+              "checkedAt": "2026-09-06",
+              "lastAudit": {
+                "provider": "spotify",
+                "songId": "song_051e61aa849723da67d8",
+                "id": "3Q51wrTPUlHfDHzMtvsPt3",
+                "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
+                "httpStatus": 200,
+                "title": "Tainted Love",
+                "artists": [
+                  "Soft Cell"
+                ],
+                "playable": true
+              },
+              "metadataCheck": {
+                "provider": "spotify",
+                "songId": "song_051e61aa849723da67d8",
+                "id": "3Q51wrTPUlHfDHzMtvsPt3",
+                "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
+                "httpStatus": 200,
+                "title": "Tainted Love",
+                "artists": [
+                  "Soft Cell"
+                ],
+                "playable": true
+              }
+            },
+            {
+              "id": "4EeN4nZiGWLVUo4fv9Hqjm",
+              "url": "https://open.spotify.com/track/4EeN4nZiGWLVUo4fv9Hqjm",
+              "state": "metadata_checked",
+              "origin": "musicbrainz-recording-url-relation",
+              "sourceUrl": "https://musicbrainz.org/recording/ef4c6855-949e-4e22-b41e-8e0a2d372d5f",
+              "recordingId": "ef4c6855-949e-4e22-b41e-8e0a2d372d5f",
+              "relationship": "free streaming",
+              "checkedAt": "2026-09-06",
+              "lastAudit": {
+                "provider": "spotify",
+                "songId": "song_051e61aa849723da67d8",
+                "id": "4EeN4nZiGWLVUo4fv9Hqjm",
+                "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
+                "httpStatus": 200,
+                "title": "Tainted Love",
+                "artists": [
+                  "Soft Cell"
+                ],
+                "playable": true
+              },
+              "metadataCheck": {
+                "provider": "spotify",
+                "songId": "song_051e61aa849723da67d8",
+                "id": "4EeN4nZiGWLVUo4fv9Hqjm",
+                "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
+                "httpStatus": 200,
+                "title": "Tainted Love",
+                "artists": [
+                  "Soft Cell"
+                ],
+                "playable": true
+              }
             }
           ]
         },
@@ -23993,34 +24470,30 @@
               "relationship": "free streaming",
               "checkedAt": "2026-09-05",
               "lastAudit": {
-                "songId": "song_cfeb8c3e4e81231c3045",
                 "provider": "spotify",
+                "songId": "song_cfeb8c3e4e81231c3045",
                 "id": "3ddhKSsc4D0NqPzJJjs17z",
-                "checkedAt": "2026-09-05T06:13:24.693070+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Running Up That Hill (A Deal With God) - 12\" Mix",
                 "artists": [
                   "Kate Bush"
                 ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": true
+                "playable": true
               },
               "metadataCheck": {
-                "songId": "song_cfeb8c3e4e81231c3045",
                 "provider": "spotify",
+                "songId": "song_cfeb8c3e4e81231c3045",
                 "id": "3ddhKSsc4D0NqPzJJjs17z",
-                "checkedAt": "2026-09-05T06:13:24.693070+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Running Up That Hill (A Deal With God) - 12\" Mix",
                 "artists": [
                   "Kate Bush"
                 ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": true
+                "playable": true
               }
             }
           ]
@@ -24175,34 +24648,30 @@
               "relationship": "free streaming",
               "checkedAt": "2026-09-05",
               "lastAudit": {
-                "songId": "song_fbe918f110870c9f1e1d",
                 "provider": "spotify",
+                "songId": "song_fbe918f110870c9f1e1d",
                 "id": "4UCTgh5jvtqoaMX6MAhUNn",
-                "checkedAt": "2026-09-05T06:13:26.210798+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Personal Jesus - Single Version",
                 "artists": [
                   "Depeche Mode"
                 ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": true
+                "playable": true
               },
               "metadataCheck": {
-                "songId": "song_fbe918f110870c9f1e1d",
                 "provider": "spotify",
+                "songId": "song_fbe918f110870c9f1e1d",
                 "id": "4UCTgh5jvtqoaMX6MAhUNn",
-                "checkedAt": "2026-09-05T06:13:26.210798+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Personal Jesus - Single Version",
                 "artists": [
                   "Depeche Mode"
                 ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": true
+                "playable": true
               }
             }
           ]
@@ -24385,34 +24854,30 @@
               "relationship": "free streaming",
               "checkedAt": "2026-09-05",
               "lastAudit": {
-                "songId": "song_36a4bb88103ff1cdfc9c",
                 "provider": "spotify",
+                "songId": "song_36a4bb88103ff1cdfc9c",
                 "id": "1id6H6vcwSB9GGv9NXh5cl",
-                "checkedAt": "2026-09-05T06:13:26.709546+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Song 2 - 2012 Remaster",
                 "artists": [
                   "Blur"
                 ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": true
+                "playable": true
               },
               "metadataCheck": {
-                "songId": "song_36a4bb88103ff1cdfc9c",
                 "provider": "spotify",
+                "songId": "song_36a4bb88103ff1cdfc9c",
                 "id": "1id6H6vcwSB9GGv9NXh5cl",
-                "checkedAt": "2026-09-05T06:13:26.709546+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Song 2 - 2012 Remaster",
                 "artists": [
                   "Blur"
                 ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": true
+                "playable": true
               }
             },
             {
@@ -24425,34 +24890,30 @@
               "relationship": "free streaming",
               "checkedAt": "2026-09-05",
               "lastAudit": {
-                "songId": "song_36a4bb88103ff1cdfc9c",
                 "provider": "spotify",
+                "songId": "song_36a4bb88103ff1cdfc9c",
                 "id": "6nvpBmQiX9LpT2dXmCJWaP",
-                "checkedAt": "2026-09-05T06:13:27.859803+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Song 2 - 2012 Remaster",
                 "artists": [
                   "Blur"
                 ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": true
+                "playable": true
               },
               "metadataCheck": {
-                "songId": "song_36a4bb88103ff1cdfc9c",
                 "provider": "spotify",
+                "songId": "song_36a4bb88103ff1cdfc9c",
                 "id": "6nvpBmQiX9LpT2dXmCJWaP",
-                "checkedAt": "2026-09-05T06:13:27.859803+00:00",
                 "state": "metadata_checked",
+                "checkedAt": "2026-09-06",
                 "httpStatus": 200,
                 "title": "Song 2 - 2012 Remaster",
                 "artists": [
                   "Blur"
                 ],
-                "playable": true,
-                "titleMatches": false,
-                "artistMatches": true
+                "playable": true
               }
             }
           ]
@@ -73698,7 +74159,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "release-year-verified",
-        "sourceLabel": "Billboard hit · legacy release-year label"
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "musicbrainzId": "e17ad563-6d55-44d3-9e42-d92cd5aab514",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/e17ad563-6d55-44d3-9e42-d92cd5aab514",
+        "releaseYear": 1953,
+        "releaseDateEvidence": "1953",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -73722,7 +74191,15 @@
       "metadata": {
         "mbScore": 71,
         "source": "release-year-verified",
-        "sourceLabel": "Billboard hit · legacy release-year label"
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "musicbrainzId": "ed64bfa0-1ea2-40b8-9f2f-58771d242437",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/ed64bfa0-1ea2-40b8-9f2f-58771d242437",
+        "releaseYear": 1953,
+        "releaseDateEvidence": "1953",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -75063,7 +75540,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "release-year-verified",
-        "sourceLabel": "Billboard hit · legacy release-year label"
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "musicbrainzId": "85323b77-8fce-47a1-ab0d-2366c5300115",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/85323b77-8fce-47a1-ab0d-2366c5300115",
+        "releaseYear": 1965,
+        "releaseDateEvidence": "1965-04",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -75087,7 +75572,15 @@
       "metadata": {
         "mbScore": 67,
         "source": "release-year-verified",
-        "sourceLabel": "Billboard hit · legacy release-year label"
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "musicbrainzId": "98c32b0d-14ac-4c8e-9d2b-eeedb4ff9964",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/98c32b0d-14ac-4c8e-9d2b-eeedb4ff9964",
+        "releaseYear": 1965,
+        "releaseDateEvidence": "1965",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -76062,7 +76555,15 @@
           "tie a yellow ribbon round the ole oak tree|tony orlando",
           "song_7825677a785672c119cd",
           "tie a yellow ribbon round the ole oak tree|dawn"
-        ]
+        ],
+        "musicbrainzId": "1a388ffb-bef5-46c4-96cb-4656b0016eb2",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/1a388ffb-bef5-46c4-96cb-4656b0016eb2",
+        "releaseYear": 1973,
+        "releaseDateEvidence": "1973",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -77849,7 +78350,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "release-year-verified",
-        "sourceLabel": "Billboard hit · legacy release-year label"
+        "sourceLabel": "Billboard hit · legacy release-year label",
+        "musicbrainzId": "cfa03e25-2700-490c-b087-9bc8feec5cb5",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/cfa03e25-2700-490c-b087-9bc8feec5cb5",
+        "releaseYear": 1990,
+        "releaseDateEvidence": "1990",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -78457,7 +78966,15 @@
         "source": "release-year-verified",
         "sourceLabel": "Billboard hit · legacy release-year label",
         "playbackEvidenceState": "needs_reenrichment",
-        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year"
+        "playbackIssue": "duplicate_spotify_id_reused_in_same_mode_year",
+        "musicbrainzId": "9c8551c6-c585-4f41-9efd-2e2a68f428d6",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/9c8551c6-c585-4f41-9efd-2e2a68f428d6",
+        "releaseYear": 1999,
+        "releaseDateEvidence": "1999",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -80214,7 +80731,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "3256be66-84d1-42cb-a6c6-7857dda92751",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/3256be66-84d1-42cb-a6c6-7857dda92751",
+        "releaseYear": 1951,
+        "releaseDateEvidence": "1951-10-30",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -80250,7 +80775,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "8aaa9047-32ed-42ee-ad52-72c56c52372b",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/8aaa9047-32ed-42ee-ad52-72c56c52372b",
+        "releaseYear": 1951,
+        "releaseDateEvidence": "1951-06-18",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -80268,7 +80801,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "6e2f0497-bb33-4d85-8f24-53ef49c61a2f",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/6e2f0497-bb33-4d85-8f24-53ef49c61a2f",
+        "releaseYear": 1951,
+        "releaseDateEvidence": "1951-10-30",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -80286,7 +80827,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "126580cf-d69e-4afd-9aef-2f73c193ccfc",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/126580cf-d69e-4afd-9aef-2f73c193ccfc",
+        "releaseYear": 1952,
+        "releaseDateEvidence": "1952",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -80340,7 +80889,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "4158d538-17da-4ec9-9dcb-8dbedb25f682",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/4158d538-17da-4ec9-9dcb-8dbedb25f682",
+        "releaseYear": 1952,
+        "releaseDateEvidence": "1952",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -80575,7 +81132,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "43172353-bce7-4183-b61c-db5e2224d8a1",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/43172353-bce7-4183-b61c-db5e2224d8a1",
+        "releaseYear": 1957,
+        "releaseDateEvidence": "1957",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -80611,7 +81176,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "089262df-d046-4593-a78a-e5416ff461c6",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/089262df-d046-4593-a78a-e5416ff461c6",
+        "releaseYear": 1958,
+        "releaseDateEvidence": "1958-09-01",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -80683,7 +81256,15 @@
       "metadata": {
         "mbScore": 95,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "9ed3936b-6ea5-4341-b3e6-6ba91e0edf71",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/9ed3936b-6ea5-4341-b3e6-6ba91e0edf71",
+        "releaseYear": 1959,
+        "releaseDateEvidence": "1959",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -80890,7 +81471,15 @@
       "metadata": {
         "mbScore": 73,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "3ba8dea8-3f4e-4e49-b21c-187290acafde",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/3ba8dea8-3f4e-4e49-b21c-187290acafde",
+        "releaseYear": 1963,
+        "releaseDateEvidence": "1963",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -80926,7 +81515,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "9d0b0dff-b4c0-46f5-90bc-e6f810bfb7b7",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/9d0b0dff-b4c0-46f5-90bc-e6f810bfb7b7",
+        "releaseYear": 1964,
+        "releaseDateEvidence": "1964-10",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -81034,7 +81631,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "80b9633c-b99e-46c5-ac91-7f64abaa7365",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/80b9633c-b99e-46c5-ac91-7f64abaa7365",
+        "releaseYear": 1966,
+        "releaseDateEvidence": "1966",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -81070,7 +81675,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "c1734f8e-80a9-4bec-b250-d5765a182a5f",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/c1734f8e-80a9-4bec-b250-d5765a182a5f",
+        "releaseYear": 1966,
+        "releaseDateEvidence": "1966",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -81088,7 +81701,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "41bde664-249e-4817-afcc-2db21feedfcf",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/41bde664-249e-4817-afcc-2db21feedfcf",
+        "releaseYear": 1966,
+        "releaseDateEvidence": "1966",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -81106,7 +81727,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "532dd238-745e-4793-b481-60a8a21d3b3a",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/532dd238-745e-4793-b481-60a8a21d3b3a",
+        "releaseYear": 1967,
+        "releaseDateEvidence": "1967",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -81124,7 +81753,15 @@
       "metadata": {
         "mbScore": 89,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "658b01ae-073f-44f5-a723-d1a1d2db28fc",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/658b01ae-073f-44f5-a723-d1a1d2db28fc",
+        "releaseYear": 1967,
+        "releaseDateEvidence": "1967-06",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -81178,7 +81815,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "784fc041-e26b-410a-9dc5-1a53baa9453f",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/784fc041-e26b-410a-9dc5-1a53baa9453f",
+        "releaseYear": 1968,
+        "releaseDateEvidence": "1968-09",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -81232,7 +81877,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "fd67690f-09bd-47e3-b0a5-3f63a9c4bdfd",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/fd67690f-09bd-47e3-b0a5-3f63a9c4bdfd",
+        "releaseYear": 1968,
+        "releaseDateEvidence": "1968-09",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -81341,7 +81994,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "f79b8f07-1a08-4881-9cf0-2b72220ac966",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/f79b8f07-1a08-4881-9cf0-2b72220ac966",
+        "releaseYear": 1969,
+        "releaseDateEvidence": "1969-02",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -81377,7 +82038,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "8f49088b-47d9-49cd-af1e-3083c0244741",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/8f49088b-47d9-49cd-af1e-3083c0244741",
+        "releaseYear": 1970,
+        "releaseDateEvidence": "1970",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -81505,7 +82174,15 @@
       "metadata": {
         "mbScore": 96,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "2d5ba8e4-8daf-48be-ac99-42b8c517b67c",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/2d5ba8e4-8daf-48be-ac99-42b8c517b67c",
+        "releaseYear": 1971,
+        "releaseDateEvidence": "1971",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -81559,7 +82236,15 @@
       "metadata": {
         "mbScore": 96,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "393b6759-fad9-4f36-a858-a8d3b70dc90c",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/393b6759-fad9-4f36-a858-a8d3b70dc90c",
+        "releaseYear": 1972,
+        "releaseDateEvidence": "1972",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -83308,7 +83993,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "2eeadc20-1ee7-4ba2-9d8d-11d787f47bea",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/2eeadc20-1ee7-4ba2-9d8d-11d787f47bea",
+        "releaseYear": 2001,
+        "releaseDateEvidence": "2001-08-20",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -83344,7 +84037,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "fc51344d-2f43-4570-97ed-1c4d63ee064a",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/fc51344d-2f43-4570-97ed-1c4d63ee064a",
+        "releaseYear": 2001,
+        "releaseDateEvidence": "2001-08-20",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -83362,7 +84063,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "b1534efb-75a9-4347-bedf-f05cfa09cf6d",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/b1534efb-75a9-4347-bedf-f05cfa09cf6d",
+        "releaseYear": 2001,
+        "releaseDateEvidence": "2001-08-20",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -83526,7 +84235,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "a7b89923-fc26-4ae4-96e3-c4de5edfd9c2",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/a7b89923-fc26-4ae4-96e3-c4de5edfd9c2",
+        "releaseYear": 2003,
+        "releaseDateEvidence": "2003-09-22",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -83617,7 +84334,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "46c5aff4-9d82-417f-9dcd-8c45597abc80",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/46c5aff4-9d82-417f-9dcd-8c45597abc80",
+        "releaseYear": 2004,
+        "releaseDateEvidence": "2004-11-29",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -83869,7 +84594,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "4cfe82cd-715c-456a-a6ee-2b19377b301d",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/4cfe82cd-715c-456a-a6ee-2b19377b301d",
+        "releaseYear": 2009,
+        "releaseDateEvidence": "2009-11-20",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -84276,7 +85009,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "67d45112-fd27-46c3-939b-6aa8a5c95139",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/67d45112-fd27-46c3-939b-6aa8a5c95139",
+        "releaseYear": 2014,
+        "releaseDateEvidence": "2014-06-11",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -84294,7 +85035,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "5f61731c-d71c-46e1-b592-252740b612c1",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/5f61731c-d71c-46e1-b592-252740b612c1",
+        "releaseYear": 2014,
+        "releaseDateEvidence": "2014-06-27",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -84515,7 +85264,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "89d4b3de-9ae7-48e7-82e0-2ecb63733565",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/89d4b3de-9ae7-48e7-82e0-2ecb63733565",
+        "releaseYear": 2017,
+        "releaseDateEvidence": "2017-11-16",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -84533,7 +85290,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "82bb6913-d04d-4ff1-9260-cba8ba966ede",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/82bb6913-d04d-4ff1-9260-cba8ba966ede",
+        "releaseYear": 2017,
+        "releaseDateEvidence": "2017-11-16",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -84605,7 +85370,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "4887f48f-308a-4dc3-8812-e264ef021035",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/4887f48f-308a-4dc3-8812-e264ef021035",
+        "releaseYear": 2018,
+        "releaseDateEvidence": "2018-06-15",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",
@@ -84659,7 +85432,15 @@
       "metadata": {
         "mbScore": 100,
         "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "sourceLabel": "Australian artist · legacy release-year label",
+        "musicbrainzId": "c54a5fec-de57-4593-949a-b629455fc7eb",
+        "musicbrainzSourceUrl": "https://musicbrainz.org/recording/c54a5fec-de57-4593-949a-b629455fc7eb",
+        "releaseYear": 2019,
+        "releaseDateEvidence": "2019-02-11",
+        "releaseYearEvidence": "Exact title/artist MusicBrainz recording; earliest observed official first-release-date matches canonical answer year.",
+        "sourceRetrievalDate": "2026-09-06",
+        "evidenceState": "externally_observed",
+        "yearEvidence": "MusicBrainz recording earliest first-release-date"
       },
       "fieldOrder": [
         "title",

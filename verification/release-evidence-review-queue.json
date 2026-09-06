@@ -1,0 +1,4127 @@
+{
+  "generatedAt": "2026-09-06",
+  "policy": "musicbrainz-exact-answer-year-v1",
+  "write": true,
+  "batchSize": 8,
+  "counts": {
+    "targeted": 248,
+    "confirmed": 40,
+    "review": 208,
+    "network_error": 0,
+    "fetchedQueries": 31,
+    "cachedQueries": 0
+  },
+  "confirmed": [
+    {
+      "songId": "song_1dfe1a17884fbef67ffb",
+      "title": "Gambling Polka Dot Blues",
+      "artist": "Buddy Williams",
+      "answerYear": 1951,
+      "recordingId": "6e2f0497-bb33-4d85-8f24-53ef49c61a2f",
+      "firstReleaseDate": "1951-10-30",
+      "score": 100,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_3922d164a86076e7c7cd",
+      "title": "I Can’t Stand Sitting in a Cell",
+      "artist": "Buddy Williams",
+      "answerYear": 1951,
+      "recordingId": "3256be66-84d1-42cb-a6c6-7857dda92751",
+      "firstReleaseDate": "1951-10-30",
+      "score": 95,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_fec860843f6aba2c2f66",
+      "title": "I’m Gonna Tear Down the Mailbox",
+      "artist": "Buddy Williams",
+      "answerYear": 1951,
+      "recordingId": "8aaa9047-32ed-42ee-ad52-72c56c52372b",
+      "firstReleaseDate": "1951-06-18",
+      "score": 98,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_a039de58b24a8680b187",
+      "title": "New Wabash Cannon Ball",
+      "artist": "Smoky Dawson",
+      "answerYear": 1952,
+      "recordingId": "4158d538-17da-4ec9-9dcb-8dbedb25f682",
+      "firstReleaseDate": "1952",
+      "score": 93,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_a7c0a04cb645b507f67c",
+      "title": "Smoky (That Wild Stallion Grand)",
+      "artist": "Smoky Dawson",
+      "answerYear": 1952,
+      "recordingId": "126580cf-d69e-4afd-9aef-2f73c193ccfc",
+      "firstReleaseDate": "1952",
+      "score": 100,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_e007fb5b528d73f57ebc",
+      "title": "Vaya con Dios",
+      "artist": "Les Paul & Mary Ford",
+      "answerYear": 1953,
+      "recordingId": "ed64bfa0-1ea2-40b8-9f2f-58771d242437",
+      "firstReleaseDate": "1953",
+      "score": 96,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_b99ca5f823843d4d2a24",
+      "title": "(How Much Is) That Doggie in the Window",
+      "artist": "Patti Page",
+      "answerYear": 1953,
+      "recordingId": "e17ad563-6d55-44d3-9e42-d92cd5aab514",
+      "firstReleaseDate": "1953",
+      "score": 100,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_81e28f2b530786ddfc68",
+      "title": "Once When I Was Mustering",
+      "artist": "Slim Dusty",
+      "answerYear": 1957,
+      "recordingId": "43172353-bce7-4183-b61c-db5e2224d8a1",
+      "firstReleaseDate": "1957",
+      "score": 100,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_2bfd00adf043794104c7",
+      "title": "Buzz, Buzz, Buzz",
+      "artist": "Johnny Ashcroft",
+      "answerYear": 1958,
+      "recordingId": "089262df-d046-4593-a78a-e5416ff461c6",
+      "firstReleaseDate": "1958-09-01",
+      "score": 97,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_d71c0cbdeeee97be8563",
+      "title": "I’ll Stroll Down Memory Lane With You",
+      "artist": "Buddy Williams",
+      "answerYear": 1959,
+      "recordingId": "9ed3936b-6ea5-4341-b3e6-6ba91e0edf71",
+      "firstReleaseDate": "1959",
+      "score": 100,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_809a05b717e6a83fb5ee",
+      "title": "Dese Bones G'Wine Rise Again",
+      "artist": "The Seekers",
+      "answerYear": 1963,
+      "recordingId": "3ba8dea8-3f4e-4e49-b21c-187290acafde",
+      "firstReleaseDate": "1963",
+      "score": 100,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_2e15a897e1ffa48c08a7",
+      "title": "Theme from Jaimie McPheeters",
+      "artist": "Bee Gees",
+      "answerYear": 1964,
+      "recordingId": "9d0b0dff-b4c0-46f5-90bc-e6f810bfb7b7",
+      "firstReleaseDate": "1964-10",
+      "score": 98,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_bdaa5bb041bcc5f317be",
+      "title": "I Can’t Help Myself (Sugar Pie, Honey Bunch)",
+      "artist": "Four Tops",
+      "answerYear": 1965,
+      "recordingId": "85323b77-8fce-47a1-ab0d-2366c5300115",
+      "firstReleaseDate": "1965-04",
+      "score": 100,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_aa965cbad5ad3d48ae86",
+      "title": "Wooly Bully",
+      "artist": "Sam the Sham & the Pharaohs",
+      "answerYear": 1965,
+      "recordingId": "98c32b0d-14ac-4c8e-9d2b-eeedb4ff9964",
+      "firstReleaseDate": "1965",
+      "score": 99,
+      "candidateCount": 2
+    },
+    {
+      "songId": "song_01a65b877493daef6e85",
+      "title": "If It Don't Work Out",
+      "artist": "Normie Rowe",
+      "answerYear": 1966,
+      "recordingId": "80b9633c-b99e-46c5-ac91-7f64abaa7365",
+      "firstReleaseDate": "1966",
+      "score": 100,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_a7f9ff52e963869a49f3",
+      "title": "Rat Race",
+      "artist": "Normie Rowe",
+      "answerYear": 1966,
+      "recordingId": "41bde664-249e-4817-afcc-2db21feedfcf",
+      "firstReleaseDate": "1966",
+      "score": 92,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_0d11c08a99bebeea526c",
+      "title": "Stormy Weather",
+      "artist": "Normie Rowe",
+      "answerYear": 1966,
+      "recordingId": "c1734f8e-80a9-4bec-b250-d5765a182a5f",
+      "firstReleaseDate": "1966",
+      "score": 94,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_a187fd8b43c2b97633cb",
+      "title": "Ooh La La",
+      "artist": "Normie Rowe",
+      "answerYear": 1967,
+      "recordingId": "532dd238-745e-4793-b481-60a8a21d3b3a",
+      "firstReleaseDate": "1967",
+      "score": 92,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_3270fc6ca8fa3d260dc4",
+      "title": "Hot Gully Wind",
+      "artist": "The Masters Apprentices",
+      "answerYear": 1967,
+      "recordingId": "658b01ae-073f-44f5-a723-d1a1d2db28fc",
+      "firstReleaseDate": "1967-06",
+      "score": 100,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_461a4504add7d06a7e67",
+      "title": "I Started a Joke",
+      "artist": "Bee Gees",
+      "answerYear": 1968,
+      "recordingId": "784fc041-e26b-410a-9dc5-1a53baa9453f",
+      "firstReleaseDate": "1968-09",
+      "score": 100,
+      "candidateCount": 2
+    },
+    {
+      "songId": "song_bfaf41ff6e6a99eaf8af",
+      "title": "Let There Be Love",
+      "artist": "Bee Gees",
+      "answerYear": 1968,
+      "recordingId": "fd67690f-09bd-47e3-b0a5-3f63a9c4bdfd",
+      "firstReleaseDate": "1968-09",
+      "score": 91,
+      "candidateCount": 2
+    },
+    {
+      "songId": "song_af7fc0b952b65a8b35d9",
+      "title": "You’ll Never See My Face Again",
+      "artist": "Bee Gees",
+      "answerYear": 1969,
+      "recordingId": "f79b8f07-1a08-4881-9cf0-2b72220ac966",
+      "firstReleaseDate": "1969-02",
+      "score": 100,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_443797ae9cae6abe28ef",
+      "title": "Every Second, Every Minute",
+      "artist": "Bee Gees",
+      "answerYear": 1970,
+      "recordingId": "8f49088b-47d9-49cd-af1e-3083c0244741",
+      "firstReleaseDate": "1970",
+      "score": 96,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_ec28aad59673b09c0446",
+      "title": "You’re Nobody Till Somebody Loves You",
+      "artist": "Bee Gees",
+      "answerYear": 1971,
+      "recordingId": "2d5ba8e4-8daf-48be-ac99-42b8c517b67c",
+      "firstReleaseDate": "1971",
+      "score": 100,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_34391991dee7ca366926",
+      "title": "Please Don’t Turn Out the Lights",
+      "artist": "Bee Gees",
+      "answerYear": 1972,
+      "recordingId": "393b6759-fad9-4f36-a858-a8d3b70dc90c",
+      "firstReleaseDate": "1972",
+      "score": 91,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_8511fc340a058cf745b9",
+      "title": "Tie a Yellow Ribbon Round the Ole Oak Tree",
+      "artist": "Tony Orlando & Dawn",
+      "answerYear": 1973,
+      "recordingId": "1a388ffb-bef5-46c4-96cb-4656b0016eb2",
+      "firstReleaseDate": "1973",
+      "score": 100,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_acf2eb8680fbd195c10c",
+      "title": "Nothing Compares 2 U",
+      "artist": "Sinéad O’Connor",
+      "answerYear": 1990,
+      "recordingId": "cfa03e25-2700-490c-b087-9bc8feec5cb5",
+      "firstReleaseDate": "1990",
+      "score": 100,
+      "candidateCount": 3
+    },
+    {
+      "songId": "song_52be22fc81cc76cca879",
+      "title": "Believe",
+      "artist": "Cher-esque",
+      "answerYear": 1999,
+      "recordingId": "9c8551c6-c585-4f41-9efd-2e2a68f428d6",
+      "firstReleaseDate": "1999",
+      "score": 99,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_6b9faf8f44c0303e958d",
+      "title": "Running From the Storm",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2001,
+      "recordingId": "b1534efb-75a9-4347-bedf-f05cfa09cf6d",
+      "firstReleaseDate": "2001-08-20",
+      "score": 100,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_2233f28d2096a2f0aac9",
+      "title": "Sojourn",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2001,
+      "recordingId": "fc51344d-2f43-4570-97ed-1c4d63ee064a",
+      "firstReleaseDate": "2001-08-20",
+      "score": 90,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_ab32419f50a143159d73",
+      "title": "The Soul of the Beat",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2001,
+      "recordingId": "2eeadc20-1ee7-4ba2-9d8d-11d787f47bea",
+      "firstReleaseDate": "2001-08-20",
+      "score": 93,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_cb1aef68e523bb94d67c",
+      "title": "Simmy and the Gravyspitter",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2003,
+      "recordingId": "a7b89923-fc26-4ae4-96e3-c4de5edfd9c2",
+      "firstReleaseDate": "2003-09-22",
+      "score": 100,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_878f213b38f47b44a17d",
+      "title": "Nosebleed Section",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2004,
+      "recordingId": "46c5aff4-9d82-417f-9dcd-8c45597abc80",
+      "firstReleaseDate": "2004-11-29",
+      "score": 97,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_2f4ddaec3d01c88d3bc2",
+      "title": "Roll on Up Restrung",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2009,
+      "recordingId": "4cfe82cd-715c-456a-a6ee-2b19377b301d",
+      "firstReleaseDate": "2009-11-20",
+      "score": 93,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_f4b98896d2bedf75f010",
+      "title": "American Idiot",
+      "artist": "5 Seconds of Summer",
+      "answerYear": 2014,
+      "recordingId": "67d45112-fd27-46c3-939b-6aa8a5c95139",
+      "firstReleaseDate": "2014-06-11",
+      "score": 93,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_0f7d8a5f4f36d8e90b5f",
+      "title": "Tomorrow Never Dies",
+      "artist": "5 Seconds of Summer",
+      "answerYear": 2014,
+      "recordingId": "5f61731c-d71c-46e1-b592-252740b612c1",
+      "firstReleaseDate": "2014-06-27",
+      "score": 97,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_85cbf3c2b6e2635e5e82",
+      "title": "List of People (to Try and Forget About)",
+      "artist": "Tame Impala",
+      "answerYear": 2017,
+      "recordingId": "82bb6913-d04d-4ff1-9260-cba8ba966ede",
+      "firstReleaseDate": "2017-11-16",
+      "score": 100,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_551a18706aaf5a1245c5",
+      "title": "Powerlines",
+      "artist": "Tame Impala",
+      "answerYear": 2017,
+      "recordingId": "89d4b3de-9ae7-48e7-82e0-2ecb63733565",
+      "firstReleaseDate": "2017-11-16",
+      "score": 90,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_cae8b2cd2859658546b2",
+      "title": "Why Won’t You Love Me",
+      "artist": "5 Seconds of Summer",
+      "answerYear": 2018,
+      "recordingId": "4887f48f-308a-4dc3-8812-e264ef021035",
+      "firstReleaseDate": "2018-06-15",
+      "score": 100,
+      "candidateCount": 1
+    },
+    {
+      "songId": "song_661e83fd7c2f9c881686",
+      "title": "Who Do You Love",
+      "artist": "5 Seconds of Summer",
+      "answerYear": 2019,
+      "recordingId": "c54a5fec-de57-4593-949a-b629455fc7eb",
+      "firstReleaseDate": "2019-02-11",
+      "score": 92,
+      "candidateCount": 1
+    }
+  ],
+  "review": [
+    {
+      "songId": "song_70ea432d902895721de1",
+      "title": "Mona Lisa",
+      "artist": "Nat King Cole",
+      "answerYear": 1950,
+      "reason": "low_search_score",
+      "earliestYear": 1950,
+      "candidates": [
+        {
+          "id": "fb196fab-bfac-4c3d-adf7-8d6d718f5788",
+          "date": "1950",
+          "score": 88,
+          "title": "Mona Lisa",
+          "artist": "Nat King Cole"
+        }
+      ]
+    },
+    {
+      "songId": "song_12a4c3db21737a65d1e9",
+      "title": "Beyond the Setting Sun",
+      "artist": "Buddy Williams",
+      "answerYear": 1951,
+      "reason": "low_search_score",
+      "earliestYear": 1951,
+      "candidates": [
+        {
+          "id": "a5087bc6-febb-47e7-8b52-5566b8dccb74",
+          "date": "1951-06-18",
+          "score": 83,
+          "title": "Beyond the Setting Sun",
+          "artist": "Buddy Williams"
+        }
+      ]
+    },
+    {
+      "songId": "song_22c877c2b5848f713e6d",
+      "title": "How High the Moon",
+      "artist": "Les Paul and Mary Ford",
+      "answerYear": 1951,
+      "reason": "low_search_score",
+      "earliestYear": 1951,
+      "candidates": [
+        {
+          "id": "7bc9fe77-a9ec-4435-aed5-dbc39df7601a",
+          "date": "1951",
+          "score": 89,
+          "title": "How High the Moon",
+          "artist": "Les Paul and Mary Ford"
+        }
+      ]
+    },
+    {
+      "songId": "song_19e336ff7107fd3329b4",
+      "title": "Too Young",
+      "artist": "Nat King Cole",
+      "answerYear": 1951,
+      "reason": "low_search_score",
+      "earliestYear": 1951,
+      "candidates": [
+        {
+          "id": "6134daa4-b9ac-467b-9adf-70a91db328e3",
+          "date": "1951-03",
+          "score": 76,
+          "title": "Too Young",
+          "artist": "Nat King Cole"
+        }
+      ]
+    },
+    {
+      "songId": "song_a8481150c4a4a2cc9712",
+      "title": "Because of You",
+      "artist": "Tony Bennett",
+      "answerYear": 1951,
+      "reason": "low_search_score",
+      "earliestYear": 1951,
+      "candidates": [
+        {
+          "id": "765e8983-159b-402a-9fe3-ddfc3a4554df",
+          "date": "1951-12",
+          "score": 68,
+          "title": "Because of You",
+          "artist": "Tony Bennett"
+        }
+      ]
+    },
+    {
+      "songId": "song_113b0eeb61634be0e276",
+      "title": "Wheel of Fortune",
+      "artist": "Kay Starr",
+      "answerYear": 1952,
+      "reason": "low_search_score",
+      "earliestYear": 1952,
+      "candidates": [
+        {
+          "id": "caf6c246-104f-4de3-a5a4-5ec30db3738d",
+          "date": "1952",
+          "score": 71,
+          "title": "Wheel of Fortune",
+          "artist": "Kay Starr"
+        }
+      ]
+    },
+    {
+      "songId": "song_3e577c1f92cf18db181e",
+      "title": "Blue Tango",
+      "artist": "Leroy Anderson",
+      "answerYear": 1952,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_4f865a124c1a1a0ea3c8",
+      "title": "The Man From Never Never",
+      "artist": "Smoky Dawson",
+      "answerYear": 1952,
+      "reason": "low_search_score",
+      "earliestYear": 1952,
+      "candidates": [
+        {
+          "id": "c84f528a-fc03-4c1a-ae57-1ef72950b629",
+          "date": "1952",
+          "score": 74,
+          "title": "The Man From Never Never",
+          "artist": "Smoky Dawson"
+        }
+      ]
+    },
+    {
+      "songId": "song_9ff184dc1931da97a9a6",
+      "title": "The Wild Colonial Boy",
+      "artist": "Smoky Dawson",
+      "answerYear": 1952,
+      "reason": "low_search_score",
+      "earliestYear": 1952,
+      "candidates": [
+        {
+          "id": "ed7a0a58-cacb-43bc-aeb9-9ac9d92b7b7e",
+          "date": "1952-03",
+          "score": 82,
+          "title": "The Wild Colonial Boy",
+          "artist": "Smoky Dawson"
+        }
+      ]
+    },
+    {
+      "songId": "song_18b51df07a3a4a1f1d50",
+      "title": "Missing in Action",
+      "artist": "Buddy Williams",
+      "answerYear": 1953,
+      "reason": "low_search_score",
+      "earliestYear": 1953,
+      "candidates": [
+        {
+          "id": "ecaab412-79a3-4229-aa65-4ddf72afba0b",
+          "date": "1953",
+          "score": 63,
+          "title": "Missing in Action",
+          "artist": "Buddy Williams"
+        }
+      ]
+    },
+    {
+      "songId": "song_5bb61393710eed9c1250",
+      "title": "The Death of Hank Williams",
+      "artist": "Buddy Williams",
+      "answerYear": 1953,
+      "reason": "low_search_score",
+      "earliestYear": 1953,
+      "candidates": [
+        {
+          "id": "68cfd59b-8c08-4923-bf3f-680a7df07811",
+          "date": "1953",
+          "score": 74,
+          "title": "The Death of Hank Williams",
+          "artist": "Buddy Williams"
+        }
+      ]
+    },
+    {
+      "songId": "song_70b1dcd28680442edd5d",
+      "title": "Pentridge Jail",
+      "artist": "Buddy Williams",
+      "answerYear": 1954,
+      "reason": "low_search_score",
+      "earliestYear": 1954,
+      "candidates": [
+        {
+          "id": "c78ee270-1734-4db4-9f51-d81516adf02f",
+          "date": "1954",
+          "score": 89,
+          "title": "Pentridge Jail",
+          "artist": "Buddy Williams"
+        }
+      ]
+    },
+    {
+      "songId": "song_4ecf612ebf0c08d2d22a",
+      "title": "The Spirit of Progress",
+      "artist": "Buddy Williams",
+      "answerYear": 1954,
+      "reason": "low_search_score",
+      "earliestYear": 1954,
+      "candidates": [
+        {
+          "id": "50b5b67a-722e-4a79-b80b-ea15e42d2e8d",
+          "date": "1954",
+          "score": 71,
+          "title": "The Spirit of Progress",
+          "artist": "Buddy Williams"
+        }
+      ]
+    },
+    {
+      "songId": "song_0f54412cb7f46a621688",
+      "title": "Castaway",
+      "artist": "Johnny Ashcroft",
+      "answerYear": 1954,
+      "reason": "low_search_score",
+      "earliestYear": 1954,
+      "candidates": [
+        {
+          "id": "68d44ddf-d766-4b5e-8e6b-7541a41b1e03",
+          "date": "1954",
+          "score": 69,
+          "title": "Castaway",
+          "artist": "Johnny Ashcroft"
+        }
+      ]
+    },
+    {
+      "songId": "song_4cd72073992e490adc25",
+      "title": "The Farmer’s Song",
+      "artist": "Johnny Ashcroft",
+      "answerYear": 1954,
+      "reason": "low_search_score",
+      "earliestYear": 1954,
+      "candidates": [
+        {
+          "id": "b2eb4a96-5a5b-453b-8b77-079bcf154d47",
+          "date": "1954",
+          "score": 74,
+          "title": "The Farmer’s Song",
+          "artist": "Johnny Ashcroft"
+        }
+      ]
+    },
+    {
+      "songId": "song_b87dd923c8ded33a0799",
+      "title": "Wanted",
+      "artist": "Perry Como",
+      "answerYear": 1954,
+      "reason": "low_search_score",
+      "earliestYear": 1954,
+      "candidates": [
+        {
+          "id": "c1b9cdfe-5ed6-4c33-8d58-e4dd72fd288f",
+          "date": "1954",
+          "score": 62,
+          "title": "Wanted",
+          "artist": "Perry Como"
+        }
+      ]
+    },
+    {
+      "songId": "song_14b87616dfb2a38ff279",
+      "title": "Rock Around the Clock",
+      "artist": "Bill Haley",
+      "answerYear": 1955,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_a030dc6616018ab0788f",
+      "title": "Cherry Pink and Apple Blossom White",
+      "artist": "Pérez Prado",
+      "answerYear": 1955,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_bb024f513d41a4d3f2a6",
+      "title": "Don’t Be Cruel",
+      "artist": "Elvis Presley",
+      "answerYear": 1956,
+      "reason": "low_search_score",
+      "earliestYear": 1956,
+      "candidates": [
+        {
+          "id": "a2ea4cc1-1c52-483b-98ef-f7b62902dc9a",
+          "date": "1956-07-13",
+          "score": 67,
+          "title": "Don’t Be Cruel",
+          "artist": "Elvis Presley"
+        }
+      ]
+    },
+    {
+      "songId": "song_670b1ef0abc20571819f",
+      "title": "Highway 31",
+      "artist": "Johnny Ashcroft",
+      "answerYear": 1956,
+      "reason": "low_search_score",
+      "earliestYear": 1956,
+      "candidates": [
+        {
+          "id": "f1b23177-f06c-4737-ba6d-b3f3c7bd04e9",
+          "date": "1956",
+          "score": 70,
+          "title": "Highway 31",
+          "artist": "Johnny Ashcroft"
+        }
+      ]
+    },
+    {
+      "songId": "song_7791d80368aea2b25f50",
+      "title": "Put Your Cards on the Table",
+      "artist": "Johnny Ashcroft",
+      "answerYear": 1956,
+      "reason": "low_search_score",
+      "earliestYear": 1956,
+      "candidates": [
+        {
+          "id": "8069ffc2-7f6f-4597-88db-6650e20dd33a",
+          "date": "1956",
+          "score": 89,
+          "title": "Put Your Cards on the Table",
+          "artist": "Johnny Ashcroft"
+        }
+      ]
+    },
+    {
+      "songId": "song_aa457e5b8b824d7cd51d",
+      "title": "Tell Me",
+      "artist": "Johnny Ashcroft",
+      "answerYear": 1956,
+      "reason": "low_search_score",
+      "earliestYear": 1956,
+      "candidates": [
+        {
+          "id": "2359ac09-3069-4994-af7c-f4ccd6eae888",
+          "date": "1956",
+          "score": 60,
+          "title": "Tell Me",
+          "artist": "Johnny Ashcroft"
+        }
+      ]
+    },
+    {
+      "songId": "song_9f2ce187dcbb3c143417",
+      "title": "Train Whistle Blues",
+      "artist": "Johnny Ashcroft",
+      "answerYear": 1956,
+      "reason": "low_search_score",
+      "earliestYear": 1956,
+      "candidates": [
+        {
+          "id": "56ae89e0-ec4e-4d91-b20a-b7974ad734ef",
+          "date": "1956",
+          "score": 77,
+          "title": "Train Whistle Blues",
+          "artist": "Johnny Ashcroft"
+        }
+      ]
+    },
+    {
+      "songId": "song_43b771a28441c080c7f0",
+      "title": "Lisbon Antigua",
+      "artist": "Nelson Riddle",
+      "answerYear": 1956,
+      "reason": "low_search_score",
+      "earliestYear": 1956,
+      "candidates": [
+        {
+          "id": "e8d72b09-e82d-4be7-9345-6bdef6086dcf",
+          "date": "1956",
+          "score": 86,
+          "title": "Lisbon Antigua",
+          "artist": "Nelson Riddle"
+        }
+      ]
+    },
+    {
+      "songId": "song_9cedbebcc1b9deb89036",
+      "title": "Love Letters in the Sand",
+      "artist": "Pat Boone",
+      "answerYear": 1957,
+      "reason": "low_search_score",
+      "earliestYear": 1957,
+      "candidates": [
+        {
+          "id": "035eae03-d575-490d-8417-20db887af770",
+          "date": "1957-04",
+          "score": 77,
+          "title": "Love Letters in the Sand",
+          "artist": "Pat Boone"
+        }
+      ]
+    },
+    {
+      "songId": "song_835e72c9ec23961c1fa6",
+      "title": "A Pub With No Beer",
+      "artist": "Slim Dusty",
+      "answerYear": 1957,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_6af6e454916ceee79c32",
+      "title": "Don't",
+      "artist": "Elvis Presley",
+      "answerYear": 1958,
+      "reason": "low_search_score",
+      "earliestYear": 1958,
+      "candidates": [
+        {
+          "id": "541fc965-7fd6-42f9-b1f0-943f97cbe708",
+          "date": "1958-01-07",
+          "score": 47,
+          "title": "Don't",
+          "artist": "Elvis Presley"
+        }
+      ]
+    },
+    {
+      "songId": "song_3c30b1c1af3d63c062b4",
+      "title": "Real Wild Child",
+      "artist": "Johnny O’Keefe",
+      "answerYear": 1958,
+      "reason": "low_search_score",
+      "earliestYear": 1958,
+      "candidates": [
+        {
+          "id": "0e0811f7-541d-4367-ac29-f0f90b4397da",
+          "date": "1958",
+          "score": 82,
+          "title": "Real Wild Child",
+          "artist": "Johnny O’Keefe"
+        }
+      ]
+    },
+    {
+      "songId": "song_49bd8a58aecdcecb868b",
+      "title": "Rumble",
+      "artist": "Link Wray",
+      "answerYear": 1958,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_71dbc924b057cbf3f98c",
+      "title": "Mack the Knife",
+      "artist": "Bobby Darin",
+      "answerYear": 1959,
+      "reason": "low_search_score",
+      "earliestYear": 1959,
+      "candidates": [
+        {
+          "id": "327805b8-2ed6-46aa-8b91-2b48154892b7",
+          "date": "1959-03",
+          "score": 80,
+          "title": "Mack the Knife",
+          "artist": "Bobby Darin"
+        }
+      ]
+    },
+    {
+      "songId": "song_89e59c94b691a1b00dfe",
+      "title": "Don’t Forget Me, Little Darlin’",
+      "artist": "Buddy Williams",
+      "answerYear": 1959,
+      "reason": "low_search_score",
+      "earliestYear": 1959,
+      "candidates": [
+        {
+          "id": "da300c5f-e7d2-4f88-bddf-e077ab1d445e",
+          "date": "1959",
+          "score": 84,
+          "title": "Don’t Forget Me, Little Darlin’",
+          "artist": "Buddy Williams"
+        }
+      ]
+    },
+    {
+      "songId": "song_3e2f46c41fb7488066a6",
+      "title": "My Sleepy Valley Home",
+      "artist": "Buddy Williams",
+      "answerYear": 1959,
+      "reason": "low_search_score",
+      "earliestYear": 1959,
+      "candidates": [
+        {
+          "id": "cb78936c-1d54-49a7-a57a-468fbd27539e",
+          "date": "1959",
+          "score": 83,
+          "title": "My Sleepy Valley Home",
+          "artist": "Buddy Williams"
+        }
+      ]
+    },
+    {
+      "songId": "song_647017e0c628ae8ee793",
+      "title": "When the Cactus Is in Bloom",
+      "artist": "Buddy Williams",
+      "answerYear": 1959,
+      "reason": "low_search_score",
+      "earliestYear": 1959,
+      "candidates": [
+        {
+          "id": "4defff39-791a-4a7c-a124-3cdd0e41ccb9",
+          "date": "1959",
+          "score": 87,
+          "title": "When the Cactus Is in Bloom",
+          "artist": "Buddy Williams"
+        }
+      ]
+    },
+    {
+      "songId": "song_7f87f2a00859d470d618",
+      "title": "Venus",
+      "artist": "Frankie Avalon",
+      "answerYear": 1959,
+      "reason": "low_search_score",
+      "earliestYear": 1959,
+      "candidates": [
+        {
+          "id": "39c4d4a8-e7ae-43b5-aabf-d7bb35d1122d",
+          "date": "1959",
+          "score": 65,
+          "title": "Venus",
+          "artist": "Frankie Avalon"
+        }
+      ]
+    },
+    {
+      "songId": "song_5ee198af7187303ccd15",
+      "title": "Personality",
+      "artist": "Lloyd Price",
+      "answerYear": 1959,
+      "reason": "low_search_score",
+      "earliestYear": 1959,
+      "candidates": [
+        {
+          "id": "8a6c1f80-ec0f-4d33-b73c-8e5c5172f38e",
+          "date": "1959",
+          "score": 66,
+          "title": "Personality",
+          "artist": "Lloyd Price"
+        },
+        {
+          "id": "e04155eb-55bb-4cf0-8127-d3a29e49be22",
+          "date": "1959",
+          "score": 66,
+          "title": "Personality",
+          "artist": "Lloyd Price"
+        }
+      ]
+    },
+    {
+      "songId": "song_f70ab64380cfce227248",
+      "title": "He’ll Have to Go",
+      "artist": "Jim Reeves",
+      "answerYear": 1960,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1959,
+      "candidates": [
+        {
+          "id": "82afa77e-2617-438d-860d-44ccfd375602",
+          "date": "1959-11",
+          "score": 84,
+          "title": "He’ll Have to Go",
+          "artist": "Jim Reeves"
+        }
+      ]
+    },
+    {
+      "songId": "song_5f8c261838b4b855c3a4",
+      "title": "Cathy’s Clown",
+      "artist": "The Everly Brothers",
+      "answerYear": 1960,
+      "reason": "low_search_score",
+      "earliestYear": 1960,
+      "candidates": [
+        {
+          "id": "46b14fdd-ea64-48ba-a6c2-330378f98207",
+          "date": "1960-04-01",
+          "score": 84,
+          "title": "Cathy’s Clown",
+          "artist": "The Everly Brothers"
+        }
+      ]
+    },
+    {
+      "songId": "song_93fb02b499e667f8df66",
+      "title": "Crying",
+      "artist": "Roy Orbison",
+      "answerYear": 1961,
+      "reason": "low_search_score",
+      "earliestYear": 1961,
+      "candidates": [
+        {
+          "id": "63131cae-2269-47e6-9790-4f0188ed4b24",
+          "date": "1961",
+          "score": 61,
+          "title": "Crying",
+          "artist": "Roy Orbison"
+        }
+      ]
+    },
+    {
+      "songId": "song_365644c1398c47432149",
+      "title": "I Can’t Stop Loving You",
+      "artist": "Ray Charles",
+      "answerYear": 1962,
+      "reason": "low_search_score",
+      "earliestYear": 1962,
+      "candidates": [
+        {
+          "id": "3757f603-060d-4d9d-87f7-f5006d5b154c",
+          "date": "1962-04",
+          "score": 65,
+          "title": "I Can’t Stop Loving You",
+          "artist": "Ray Charles"
+        },
+        {
+          "id": "7e31df2c-7ec2-4afa-b012-def539c1fcd6",
+          "date": "1962",
+          "score": 65,
+          "title": "I Can’t Stop Loving You",
+          "artist": "Ray Charles"
+        },
+        {
+          "id": "94e24aee-330a-4f58-8774-794683684651",
+          "date": "1962-04",
+          "score": 65,
+          "title": "I Can’t Stop Loving You",
+          "artist": "Ray Charles"
+        }
+      ]
+    },
+    {
+      "songId": "song_df572cac87958a8e06af",
+      "title": "The Three Kisses of Love",
+      "artist": "Bee Gees",
+      "answerYear": 1963,
+      "reason": "low_search_score",
+      "earliestYear": 1963,
+      "candidates": [
+        {
+          "id": "00122d74-2e23-47a6-8334-4e9f5942e9d3",
+          "date": "1963-03-22",
+          "score": 72,
+          "title": "The Three Kisses of Love",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_54e5980b198b50b085d4",
+      "title": "Blue Velvet",
+      "artist": "Bobby Vinton",
+      "answerYear": 1963,
+      "reason": "low_search_score",
+      "earliestYear": 1963,
+      "candidates": [
+        {
+          "id": "b48b5aa3-9fc9-4126-a37e-2313fdf7e7ea",
+          "date": "1963-08-02",
+          "score": 64,
+          "title": "Blue Velvet",
+          "artist": "Bobby Vinton"
+        },
+        {
+          "id": "4900fe8d-4cf8-4ae5-9ca5-fb29b447ebd3",
+          "date": "1963",
+          "score": 64,
+          "title": "Blue Velvet",
+          "artist": "Bobby Vinton"
+        }
+      ]
+    },
+    {
+      "songId": "song_2e6112af037b8c8c4d94",
+      "title": "Surfin' U.S.A.",
+      "artist": "The Beach Boys",
+      "answerYear": 1963,
+      "reason": "low_search_score",
+      "earliestYear": 1963,
+      "candidates": [
+        {
+          "id": "7ebab115-254a-4ec9-ad32-5052ab13d348",
+          "date": "1963-03-04",
+          "score": 66,
+          "title": "Surfin’ U.S.A.",
+          "artist": "The Beach Boys"
+        },
+        {
+          "id": "b4019c1c-0f40-4b7b-84ed-06ea85ca54fd",
+          "date": "1963-03-25",
+          "score": 66,
+          "title": "Surfin’ U.S.A.",
+          "artist": "The Beach Boys"
+        },
+        {
+          "id": "99197e2b-c35f-4960-9f29-9c65fd8cec72",
+          "date": "1963",
+          "score": 66,
+          "title": "Surfin’ U.S.A.",
+          "artist": "The Beach Boys"
+        },
+        {
+          "id": "1199092c-dc56-4f84-8008-f5db571a662e",
+          "date": "1963",
+          "score": 66,
+          "title": "Surfin’ U.S.A.",
+          "artist": "The Beach Boys"
+        },
+        {
+          "id": "09fa8bae-e17c-4866-85c2-7357937e7889",
+          "date": "1963-03-04",
+          "score": 66,
+          "title": "Surfin’ U.S.A.",
+          "artist": "The Beach Boys"
+        }
+      ]
+    },
+    {
+      "songId": "song_ec6bf8fdfe29b56042be",
+      "title": "He’s So Fine",
+      "artist": "The Chiffons",
+      "answerYear": 1963,
+      "reason": "low_search_score",
+      "earliestYear": 1963,
+      "candidates": [
+        {
+          "id": "a8ff1991-52e5-4cd2-8151-80b7573cb1a4",
+          "date": "1963",
+          "score": 64,
+          "title": "He’s So Fine",
+          "artist": "The Chiffons"
+        },
+        {
+          "id": "3bc5ede4-4011-4e0f-b810-f4658dea11fc",
+          "date": "1963-05",
+          "score": 64,
+          "title": "He’s So Fine",
+          "artist": "The Chiffons"
+        }
+      ]
+    },
+    {
+      "songId": "song_04370e0f51b4edbfe82b",
+      "title": "Wild Rover",
+      "artist": "The Seekers",
+      "answerYear": 1963,
+      "reason": "low_search_score",
+      "earliestYear": 1963,
+      "candidates": [
+        {
+          "id": "f8f442b7-7161-403c-897a-ed1a9fad2c10",
+          "date": "1963",
+          "score": 60,
+          "title": "Wild Rover",
+          "artist": "The Seekers"
+        }
+      ]
+    },
+    {
+      "songId": "song_466e7362bc3e6c87ba37",
+      "title": "Timber",
+      "artist": "Bee Gees",
+      "answerYear": 1964,
+      "reason": "low_search_score",
+      "earliestYear": 1964,
+      "candidates": [
+        {
+          "id": "6a42ff2b-398f-49a7-a6ad-8d23746175c5",
+          "date": "1964-01",
+          "score": 62,
+          "title": "Timber",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_f66d940e14fccd3d8e74",
+      "title": "Turn Around, Look at Me",
+      "artist": "Bee Gees",
+      "answerYear": 1964,
+      "reason": "low_search_score",
+      "earliestYear": 1964,
+      "candidates": [
+        {
+          "id": "5fb9fb1e-f137-4412-82e2-6a98317faa0e",
+          "date": "1964-10",
+          "score": 79,
+          "title": "Turn Around, Look at Me",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_53e959c95c715c3e6ddd",
+      "title": "You Really Got Me",
+      "artist": "The Kinks",
+      "answerYear": 1964,
+      "reason": "low_search_score",
+      "earliestYear": 1964,
+      "candidates": [
+        {
+          "id": "7491cee5-32f2-4d5e-82d1-9823418e38fb",
+          "date": "1964-08-04",
+          "score": 59,
+          "title": "You Really Got Me",
+          "artist": "The Kinks"
+        }
+      ]
+    },
+    {
+      "songId": "song_56c5fc9a5692f79d22c2",
+      "title": "Don’t Say Goodbye",
+      "artist": "Bee Gees",
+      "answerYear": 1965,
+      "reason": "low_search_score",
+      "earliestYear": 1965,
+      "candidates": [
+        {
+          "id": "30396ea3-d0fc-47cc-a88c-99ec961b6763",
+          "date": "1965",
+          "score": 69,
+          "title": "Don’t Say Goodbye",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_8bf7e525810e48ce8513",
+      "title": "Everyday I Have to Cry",
+      "artist": "Bee Gees",
+      "answerYear": 1965,
+      "reason": "low_search_score",
+      "earliestYear": 1965,
+      "candidates": [
+        {
+          "id": "e5d58c68-6db5-4537-b7a1-0fa4a5e55956",
+          "date": "1965",
+          "score": 77,
+          "title": "Everyday I Have to Cry",
+          "artist": "Bee Gees"
+        },
+        {
+          "id": "0585df57-1208-40bd-9228-72db5db993d6",
+          "date": "1965-03",
+          "score": 77,
+          "title": "Everyday I Have to Cry",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_92f872704e9b4679eb60",
+      "title": "Peace of Mind",
+      "artist": "Bee Gees",
+      "answerYear": 1965,
+      "reason": "low_search_score",
+      "earliestYear": 1965,
+      "candidates": [
+        {
+          "id": "8bba0282-4a9b-46ad-97f6-b21f239b24fd",
+          "date": "1965",
+          "score": 66,
+          "title": "Peace of Mind",
+          "artist": "Bee Gees"
+        },
+        {
+          "id": "90b52838-ad9e-4351-8478-7246df4dc85f",
+          "date": "1965",
+          "score": 66,
+          "title": "Peace of Mind",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_be228b46343c98b0d90c",
+      "title": "To Be or Not to Be",
+      "artist": "Bee Gees",
+      "answerYear": 1965,
+      "reason": "low_search_score",
+      "earliestYear": 1965,
+      "candidates": [
+        {
+          "id": "b28dd943-8194-4886-8023-6e622c6cabcc",
+          "date": "1965",
+          "score": 75,
+          "title": "To Be or Not to Be",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_166046e8b863d2dd019e",
+      "title": "96 Tears",
+      "artist": "Big Maybelle",
+      "answerYear": 1966,
+      "reason": "low_search_score",
+      "earliestYear": 1966,
+      "candidates": [
+        {
+          "id": "0eef8f7b-dbcc-4125-b5eb-a2503447c792",
+          "date": "1966",
+          "score": 77,
+          "title": "96 Tears",
+          "artist": "Big Maybelle"
+        }
+      ]
+    },
+    {
+      "songId": "song_b5856cd07867b43e5d14",
+      "title": "The Night",
+      "artist": "Normie Rowe",
+      "answerYear": 1966,
+      "reason": "low_search_score",
+      "earliestYear": 1966,
+      "candidates": [
+        {
+          "id": "a56ff636-6c44-4182-b209-466f7da3a94e",
+          "date": "1966",
+          "score": 70,
+          "title": "The Night",
+          "artist": "Normie Rowe"
+        }
+      ]
+    },
+    {
+      "songId": "song_e7c50a49bdda114d2d68",
+      "title": "Tomorrow Never Knows",
+      "artist": "The Beatles",
+      "answerYear": 1966,
+      "reason": "low_search_score",
+      "earliestYear": 1966,
+      "candidates": [
+        {
+          "id": "fe5faa4b-3f74-4bdd-b508-5d11e36df7ff",
+          "date": "1966-08-05",
+          "score": 67,
+          "title": "Tomorrow Never Knows",
+          "artist": "The Beatles"
+        },
+        {
+          "id": "3db1ed20-fff9-491f-a7b1-0ea2f76ff9cd",
+          "date": "1966-08-05",
+          "score": 67,
+          "title": "Tomorrow Never Knows",
+          "artist": "The Beatles"
+        }
+      ]
+    },
+    {
+      "songId": "song_c845b88f18874cf23496",
+      "title": "96 Tears",
+      "artist": "The Fire Escape",
+      "answerYear": 1966,
+      "reason": "low_search_score",
+      "earliestYear": 1966,
+      "candidates": [
+        {
+          "id": "dc169859-4612-412c-a78d-031c387f335d",
+          "date": "1966-11-26",
+          "score": 77,
+          "title": "96 Tears",
+          "artist": "The Fire Escape"
+        }
+      ]
+    },
+    {
+      "songId": "song_96e4da64a4fbd31b38d4",
+      "title": "96 Tears",
+      "artist": "The Music Machine",
+      "answerYear": 1966,
+      "reason": "low_search_score",
+      "earliestYear": 1966,
+      "candidates": [
+        {
+          "id": "17f693e9-eb76-480e-bb8b-df896ae92b5a",
+          "date": "1966",
+          "score": 72,
+          "title": "96 Tears",
+          "artist": "The Music Machine"
+        }
+      ]
+    },
+    {
+      "songId": "song_8bc9c368f64a13ad8056",
+      "title": "White Rabbit",
+      "artist": "Jefferson Airplane",
+      "answerYear": 1967,
+      "reason": "low_search_score",
+      "earliestYear": 1967,
+      "candidates": [
+        {
+          "id": "1e5ef621-9aea-464a-9a7d-6a18baddd334",
+          "date": "1967",
+          "score": 81,
+          "title": "White Rabbit",
+          "artist": "Jefferson Airplane"
+        },
+        {
+          "id": "5f231710-2468-4a9e-90a0-9e8cd38b60b0",
+          "date": "1967-02",
+          "score": 81,
+          "title": "White Rabbit",
+          "artist": "Jefferson Airplane"
+        },
+        {
+          "id": "64ca8364-fadd-46b4-9b3b-b3d789063422",
+          "date": "1967-02",
+          "score": 81,
+          "title": "White Rabbit",
+          "artist": "Jefferson Airplane"
+        }
+      ]
+    },
+    {
+      "songId": "song_f9e6945d4b16ddb8a676",
+      "title": "The Letter",
+      "artist": "The Box Tops",
+      "answerYear": 1967,
+      "reason": "low_search_score",
+      "earliestYear": 1967,
+      "candidates": [
+        {
+          "id": "546be4b8-39bf-4cae-a029-1d12e462b2a2",
+          "date": "1967-11",
+          "score": 66,
+          "title": "The Letter",
+          "artist": "The Box Tops"
+        }
+      ]
+    },
+    {
+      "songId": "song_c07e1e8c72263038282e",
+      "title": "Buried and Dead",
+      "artist": "The Masters Apprentices",
+      "answerYear": 1967,
+      "reason": "low_search_score",
+      "earliestYear": 1967,
+      "candidates": [
+        {
+          "id": "9db2902e-293c-4e64-a788-67b4425d7416",
+          "date": "1967-06",
+          "score": 88,
+          "title": "Buried and Dead",
+          "artist": "The Masters Apprentices"
+        }
+      ]
+    },
+    {
+      "songId": "song_3ca83456ce38cd43f09d",
+      "title": "My Girl",
+      "artist": "The Masters Apprentices",
+      "answerYear": 1967,
+      "reason": "low_search_score",
+      "earliestYear": 1967,
+      "candidates": [
+        {
+          "id": "c3e1641b-9f5c-40c3-aba0-5a1087383b15",
+          "date": "1967-06",
+          "score": 71,
+          "title": "My Girl",
+          "artist": "The Masters Apprentices"
+        }
+      ]
+    },
+    {
+      "songId": "song_81fb648cf920d8063239",
+      "title": "Down to Earth",
+      "artist": "Bee Gees",
+      "answerYear": 1968,
+      "reason": "low_search_score",
+      "earliestYear": 1968,
+      "candidates": [
+        {
+          "id": "a65e8728-daec-452f-8f5f-13f0c2f2c68a",
+          "date": "1968-09",
+          "score": 77,
+          "title": "Down to Earth",
+          "artist": "Bee Gees"
+        },
+        {
+          "id": "401ce84c-0081-40e2-b621-ffed60c25d5d",
+          "date": "1968-09",
+          "score": 77,
+          "title": "Down to Earth",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_1f83de7ce9566c5874d7",
+      "title": "Jumbo",
+      "artist": "Bee Gees",
+      "answerYear": 1968,
+      "reason": "low_search_score",
+      "earliestYear": 1968,
+      "candidates": [
+        {
+          "id": "a560cc14-b7f6-41c0-a0d7-3835cb221570",
+          "date": "1968",
+          "score": 81,
+          "title": "Jumbo",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_a6c776273464fb7c4827",
+      "title": "Honey",
+      "artist": "Bobby Goldsboro",
+      "answerYear": 1968,
+      "reason": "low_search_score",
+      "earliestYear": 1968,
+      "candidates": [
+        {
+          "id": "b0a2ddb2-cb06-48eb-b379-29d2c1e6377d",
+          "date": "1968",
+          "score": 72,
+          "title": "Honey",
+          "artist": "Bobby Goldsboro"
+        },
+        {
+          "id": "642eac83-64a9-437a-8403-39db95e0149d",
+          "date": "1968-03",
+          "score": 72,
+          "title": "Honey",
+          "artist": "Bobby Goldsboro"
+        }
+      ]
+    },
+    {
+      "songId": "song_95318738e2be8963d7c7",
+      "title": "Love Is Blue",
+      "artist": "Paul Mauriat",
+      "answerYear": 1968,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1967,
+      "candidates": [
+        {
+          "id": "e05dd187-12c9-4715-b782-40f322cba872",
+          "date": "1967",
+          "score": 74,
+          "title": "Love Is Blue",
+          "artist": "Paul Mauriat"
+        }
+      ]
+    },
+    {
+      "songId": "song_840838cfc291e018a363",
+      "title": "People Got to Be Free",
+      "artist": "The Young Rascals",
+      "answerYear": 1968,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_430c52b30464c3491889",
+      "title": "Edison",
+      "artist": "Bee Gees",
+      "answerYear": 1969,
+      "reason": "low_search_score",
+      "earliestYear": 1969,
+      "candidates": [
+        {
+          "id": "4f9757f5-5a41-4b35-9018-feec4474d861",
+          "date": "1969-02",
+          "score": 83,
+          "title": "Edison",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_ceffefbb8b50854c4cd0",
+      "title": "Sound of Love",
+      "artist": "Bee Gees",
+      "answerYear": 1969,
+      "reason": "low_search_score",
+      "earliestYear": 1969,
+      "candidates": [
+        {
+          "id": "99720ff5-e467-4bc5-9df6-582bad070ab1",
+          "date": "1969-02",
+          "score": 81,
+          "title": "Sound of Love",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_c11e9432a986762f5e72",
+      "title": "Tomorrow Tomorrow",
+      "artist": "The Bee Gees",
+      "answerYear": 1969,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_b07c2314412dd9f1ab3f",
+      "title": "I Can’t Get Next to You",
+      "artist": "The Temptations",
+      "answerYear": 1969,
+      "reason": "low_search_score",
+      "earliestYear": 1969,
+      "candidates": [
+        {
+          "id": "c128ed23-8a73-43e4-b78e-652d8dcbf7f8",
+          "date": "1969",
+          "score": 76,
+          "title": "I Can’t Get Next to You",
+          "artist": "The Temptations"
+        },
+        {
+          "id": "ef7ddbed-e545-4de9-b3e9-7949edc89703",
+          "date": "1969-09-23",
+          "score": 76,
+          "title": "I Can’t Get Next to You",
+          "artist": "The Temptations"
+        }
+      ]
+    },
+    {
+      "songId": "song_16e3667916421e907d30",
+      "title": "Could It Be",
+      "artist": "Bee Gees",
+      "answerYear": 1970,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_18d6f627e4a11d0eea80",
+      "title": "I Lay Down and Die",
+      "artist": "Bee Gees",
+      "answerYear": 1970,
+      "reason": "low_search_score",
+      "earliestYear": 1970,
+      "candidates": [
+        {
+          "id": "0f5161c3-4bf3-4cf0-812c-404030ce2395",
+          "date": "1970-04-01",
+          "score": 85,
+          "title": "I Lay Down and Die",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_fedaa46f3a9ec08499a4",
+      "title": "Turning Tide",
+      "artist": "Bee Gees",
+      "answerYear": 1970,
+      "reason": "low_search_score",
+      "earliestYear": 1970,
+      "candidates": [
+        {
+          "id": "94f7ed12-bb4a-460b-8839-3cdbbf0bb678",
+          "date": "1970-04-01",
+          "score": 83,
+          "title": "Turning Tide",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_e56c4b3b7b79444375c1",
+      "title": "All by Myself",
+      "artist": "Bee Gees",
+      "answerYear": 1971,
+      "reason": "low_search_score",
+      "earliestYear": 1971,
+      "candidates": [
+        {
+          "id": "49b2a2c0-1c4b-4982-b426-a1252281c190",
+          "date": "1971",
+          "score": 80,
+          "title": "All by Myself",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_df7a06dad8c433887cea",
+      "title": "You’re the Reason",
+      "artist": "Bee Gees",
+      "answerYear": 1971,
+      "reason": "low_search_score",
+      "earliestYear": 1971,
+      "candidates": [
+        {
+          "id": "c7024858-148f-4e05-b227-0911aa26fb2b",
+          "date": "1971",
+          "score": 74,
+          "title": "You’re the Reason",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_9abd12e669860ef53cd1",
+      "title": "Baba O’Riley",
+      "artist": "The Who",
+      "answerYear": 1971,
+      "reason": "low_search_score",
+      "earliestYear": 1971,
+      "candidates": [
+        {
+          "id": "67713103-6e0d-4a93-bf14-b4ee6070ff65",
+          "date": "1971",
+          "score": 72,
+          "title": "Baba O’Riley",
+          "artist": "The Who"
+        }
+      ]
+    },
+    {
+      "songId": "song_63e9740597b9c36cd4b4",
+      "title": "Joy to the World",
+      "artist": "Three Dog Night",
+      "answerYear": 1971,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1970,
+      "candidates": [
+        {
+          "id": "537e3ba4-ab97-4e8f-aad9-26b82b91c4e6",
+          "date": "1970-11-18",
+          "score": 78,
+          "title": "Joy to the World",
+          "artist": "Three Dog Night"
+        }
+      ]
+    },
+    {
+      "songId": "song_fb420daaf57b17cabd96",
+      "title": "Bad Bad Dreams",
+      "artist": "Bee Gees",
+      "answerYear": 1972,
+      "reason": "low_search_score",
+      "earliestYear": 1972,
+      "candidates": [
+        {
+          "id": "ea1aec08-51b4-4f6d-a11b-4bd0757fde35",
+          "date": "1972",
+          "score": 79,
+          "title": "Bad Bad Dreams",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_3164e82a91839c31cb42",
+      "title": "I Held a Party",
+      "artist": "Bee Gees",
+      "answerYear": 1972,
+      "reason": "low_search_score",
+      "earliestYear": 1972,
+      "candidates": [
+        {
+          "id": "ad9ba8df-e758-4672-9490-6e49f072534f",
+          "date": "1972",
+          "score": 81,
+          "title": "I Held a Party",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_552d10ffa1829a080379",
+      "title": "Road to Alaska",
+      "artist": "Bee Gees",
+      "answerYear": 1972,
+      "reason": "low_search_score",
+      "earliestYear": 1972,
+      "candidates": [
+        {
+          "id": "3aad0b72-5e81-4ffb-9d5a-beadc5142611",
+          "date": "1972",
+          "score": 81,
+          "title": "Road to Alaska",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_fd8e346c688d5e68bf5f",
+      "title": "Alone Again (Naturally)",
+      "artist": "Gilbert O’Sullivan",
+      "answerYear": 1972,
+      "reason": "low_search_score",
+      "earliestYear": 1972,
+      "candidates": [
+        {
+          "id": "7a7000bc-f053-42fd-8d29-e9943de8a3b8",
+          "date": "1972-06-01",
+          "score": 71,
+          "title": "Alone Again (Naturally)",
+          "artist": "Gilbert O’Sullivan"
+        },
+        {
+          "id": "a7ad7fac-2178-4280-9ce8-930d2026b80f",
+          "date": "1972",
+          "score": 71,
+          "title": "Alone Again (Naturally)",
+          "artist": "Gilbert O’Sullivan"
+        }
+      ]
+    },
+    {
+      "songId": "song_3a1bef47e8636bb62121",
+      "title": "The Candy Man",
+      "artist": "Sammy Davis Jr.",
+      "answerYear": 1972,
+      "reason": "low_search_score",
+      "earliestYear": 1972,
+      "candidates": [
+        {
+          "id": "c7893fd6-f8ef-4af5-971b-8be0277889ad",
+          "date": "1972",
+          "score": 61,
+          "title": "The Candy Man",
+          "artist": "Sammy Davis Jr."
+        },
+        {
+          "id": "6b3192dd-bfae-44aa-a4b2-843e2ff85a2a",
+          "date": "1972",
+          "score": 61,
+          "title": "The Candy Man",
+          "artist": "Sammy Davis Jr."
+        }
+      ]
+    },
+    {
+      "songId": "song_86e1cfbcb2c93bf3c7be",
+      "title": "Cherry Red",
+      "artist": "Bee Gees",
+      "answerYear": 1973,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1966,
+      "candidates": [
+        {
+          "id": "81c98e35-56a8-48b2-85c3-41cd275d56fb",
+          "date": "1966-03",
+          "score": 61,
+          "title": "Cherry Red",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_b8580a10f3de260e9149",
+      "title": "Killing Me Softly With His Song",
+      "artist": "Roberta Flack",
+      "answerYear": 1973,
+      "reason": "low_search_score",
+      "earliestYear": 1973,
+      "candidates": [
+        {
+          "id": "3c398767-66a3-4b6c-bfe3-17623b33acbe",
+          "date": "1973",
+          "score": 83,
+          "title": "Killing Me Softly With His Song",
+          "artist": "Roberta Flack"
+        },
+        {
+          "id": "a6622f2d-3f1c-4512-9e9f-44ba184d112b",
+          "date": "1973-08-01",
+          "score": 83,
+          "title": "Killing Me Softly With His Song",
+          "artist": "Roberta Flack"
+        }
+      ]
+    },
+    {
+      "songId": "song_13f5abfcf4c3edd3247c",
+      "title": "Wouldn't I Be Someone",
+      "artist": "The Bee Gees",
+      "answerYear": 1973,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_bdb8ce22ef6655181cf4",
+      "title": "It Doesn’t Matter Much to Me",
+      "artist": "Bee Gees",
+      "answerYear": 1974,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_c765858cd6a6e7ee8b02",
+      "title": "Throw a Penny",
+      "artist": "Bee Gees",
+      "answerYear": 1974,
+      "reason": "low_search_score",
+      "earliestYear": 1974,
+      "candidates": [
+        {
+          "id": "8218ad8e-7732-4ff9-843b-862ad26295ce",
+          "date": "1974-05",
+          "score": 68,
+          "title": "Throw a Penny",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_9c00f8c047cb5d2c74ed",
+      "title": "Autobahn",
+      "artist": "Kraftwerk",
+      "answerYear": 1974,
+      "reason": "low_search_score",
+      "earliestYear": 1974,
+      "candidates": [
+        {
+          "id": "fdac70c5-7d14-408c-a1d1-645499f36083",
+          "date": "1974-01-01",
+          "score": 51,
+          "title": "Autobahn",
+          "artist": "Kraftwerk"
+        },
+        {
+          "id": "5a523783-b4ed-495a-ba9b-13af1c06a937",
+          "date": "1974",
+          "score": 51,
+          "title": "Autobahn",
+          "artist": "Kraftwerk"
+        }
+      ]
+    },
+    {
+      "songId": "song_976410c9c5939af8bdc1",
+      "title": "Take Me Home Country Roads",
+      "artist": "Olivia Newton-John",
+      "answerYear": 1974,
+      "reason": "low_search_score",
+      "earliestYear": 1974,
+      "candidates": [
+        {
+          "id": "8b2631b7-a6e0-4ef7-be2f-31e2138b8aa0",
+          "date": "1974",
+          "score": 82,
+          "title": "Take Me Home Country Roads",
+          "artist": "Olivia Newton-John"
+        }
+      ]
+    },
+    {
+      "songId": "song_c2ab7dff4dd095cb3271",
+      "title": "Seasons in the Sun",
+      "artist": "Terry Jacks",
+      "answerYear": 1974,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1973,
+      "candidates": [
+        {
+          "id": "4a708ce4-740e-4d97-a25b-8e9c9e88caa5",
+          "date": "1973",
+          "score": 66,
+          "title": "Seasons in the Sun",
+          "artist": "Terry Jacks"
+        }
+      ]
+    },
+    {
+      "songId": "song_3b78303218f94c414d7b",
+      "title": "Melody Fair",
+      "artist": "Bee Gees",
+      "answerYear": 1975,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1969,
+      "candidates": [
+        {
+          "id": "dffe6031-9368-4488-98c3-0fea1a4100df",
+          "date": "1969-02",
+          "score": 68,
+          "title": "Melody Fair",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_54ef714bf079a5d879d8",
+      "title": "New York Mining Disaster 1941",
+      "artist": "Bee Gees",
+      "answerYear": 1975,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1967,
+      "candidates": [
+        {
+          "id": "86b61485-7e50-4cde-9120-ec02d264fcec",
+          "date": "1967",
+          "score": 100,
+          "title": "New York Mining Disaster 1941",
+          "artist": "Bee Gees"
+        },
+        {
+          "id": "83c91f79-b394-487f-a884-e83941000358",
+          "date": "1967-07",
+          "score": 100,
+          "title": "New York Mining Disaster 1941",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_80a821ab6f49e409ccc1",
+      "title": "Love Will Keep Us Together",
+      "artist": "Captain & Tennille",
+      "answerYear": 1975,
+      "reason": "low_search_score",
+      "earliestYear": 1975,
+      "candidates": [
+        {
+          "id": "8f3bb719-ed33-4d2a-8e3c-4400d7c8bfed",
+          "date": "1975-05",
+          "score": 83,
+          "title": "Love Will Keep Us Together",
+          "artist": "Captain & Tennille"
+        }
+      ]
+    },
+    {
+      "songId": "song_841143bd3994ae09299a",
+      "title": "Fanny (Be Tender With My Love)",
+      "artist": "Bee Gees",
+      "answerYear": 1976,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1975,
+      "candidates": [
+        {
+          "id": "fd7fd4fb-7e3e-4e3c-962c-8056f8c595d9",
+          "date": "1975-06",
+          "score": 85,
+          "title": "Fanny (Be Tender With My Love)",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_d7f9694c20211fee4a41",
+      "title": "Golden Slumbers / Carry That Weight",
+      "artist": "Bee Gees",
+      "answerYear": 1976,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_575488c1330646f54095",
+      "title": "Jive Talkin’",
+      "artist": "Bee Gees",
+      "answerYear": 1977,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1975,
+      "candidates": [
+        {
+          "id": "de34046d-1e80-4b9d-9fda-e7d20ba04541",
+          "date": "1975",
+          "score": 93,
+          "title": "Jive Talkin’",
+          "artist": "Bee Gees"
+        },
+        {
+          "id": "d4734031-c35b-4994-811d-da5d299e1f6e",
+          "date": "1975-06",
+          "score": 93,
+          "title": "Jive Talkin’",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_6545ba5866c5d2e744c7",
+      "title": "You Should Be Dancing",
+      "artist": "Bee Gees",
+      "answerYear": 1977,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1976,
+      "candidates": [
+        {
+          "id": "998e57a7-9ac2-47ee-ab37-936dee1478a3",
+          "date": "1976",
+          "score": 96,
+          "title": "You Should Be Dancing",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_ec4237d42d029a9674ec",
+      "title": "Best of My Love",
+      "artist": "Emotions",
+      "answerYear": 1977,
+      "reason": "low_search_score",
+      "earliestYear": 1977,
+      "candidates": [
+        {
+          "id": "efc9f822-4b5d-4da4-9090-817c573c0929",
+          "date": "1977-05",
+          "score": 68,
+          "title": "Best of My Love",
+          "artist": "Emotions"
+        }
+      ]
+    },
+    {
+      "songId": "song_a03a2e02e86558170f4a",
+      "title": "Night Fever",
+      "artist": "Bee Gees",
+      "answerYear": 1978,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1977,
+      "candidates": [
+        {
+          "id": "8bb16130-76a1-49bb-97a5-64ffd80b4565",
+          "date": "1977-11-07",
+          "score": 82,
+          "title": "Night Fever",
+          "artist": "Bee Gees"
+        }
+      ]
+    },
+    {
+      "songId": "song_9fba172a8cbb32d6e1c1",
+      "title": "Mona and the Preacher",
+      "artist": "Cold Chisel",
+      "answerYear": 1978,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_144f403135fbc9061084",
+      "title": "Bad Girls",
+      "artist": "Donna Summer",
+      "answerYear": 1979,
+      "reason": "low_search_score",
+      "earliestYear": 1979,
+      "candidates": [
+        {
+          "id": "ac2c905d-9070-48ce-ac11-f0fd04a70333",
+          "date": "1979-05",
+          "score": 80,
+          "title": "Bad Girls",
+          "artist": "Donna Summer"
+        },
+        {
+          "id": "c45c7b6e-0a7f-4195-a5dc-297dba584e07",
+          "date": "1979-10-15",
+          "score": 80,
+          "title": "Bad Girls",
+          "artist": "Donna Summer"
+        }
+      ]
+    },
+    {
+      "songId": "song_751129cb6b132bd323e3",
+      "title": "Call Me",
+      "artist": "Blondie",
+      "answerYear": 1980,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_158b472733e64a44aaa9",
+      "title": "Magic",
+      "artist": "Olivia Newton‐John",
+      "answerYear": 1980,
+      "reason": "low_search_score",
+      "earliestYear": 1980,
+      "candidates": [
+        {
+          "id": "aa11e4a2-191a-4a6a-8c72-7ce43dba643e",
+          "date": "1980",
+          "score": 70,
+          "title": "Magic",
+          "artist": "Olivia Newton‐John"
+        },
+        {
+          "id": "a03fc477-b083-4355-8ad5-93087447e701",
+          "date": "1980-05",
+          "score": 70,
+          "title": "Magic",
+          "artist": "Olivia Newton‐John"
+        }
+      ]
+    },
+    {
+      "songId": "song_cd748f4b77479a92472f",
+      "title": "Another Brick in the Wall (Part II)",
+      "artist": "Pink Floyd",
+      "answerYear": 1980,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_a8ca9d9644ca94d0682b",
+      "title": "Endless Love",
+      "artist": "Diana Ross",
+      "answerYear": 1981,
+      "reason": "low_search_score",
+      "earliestYear": 1981,
+      "candidates": [
+        {
+          "id": "7c5d5e60-9bef-4cd0-bf49-030dbe899a5e",
+          "date": "1981",
+          "score": 64,
+          "title": "Endless Love",
+          "artist": "Diana Ross"
+        }
+      ]
+    },
+    {
+      "songId": "song_2ca8e0f7c128b5ad0147",
+      "title": "Billie Jean",
+      "artist": "Michael Jackson",
+      "answerYear": 1983,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1982,
+      "candidates": [
+        {
+          "id": "eca2877f-8423-4639-8fe2-fa8c0060aa2f",
+          "date": "1982",
+          "score": 72,
+          "title": "Billie Jean",
+          "artist": "Michael Jackson"
+        }
+      ]
+    },
+    {
+      "songId": "song_b1b789eff7d7d2671051",
+      "title": "Every Breath You Take",
+      "artist": "The Police",
+      "answerYear": 1983,
+      "reason": "low_search_score",
+      "earliestYear": 1983,
+      "candidates": [
+        {
+          "id": "ad704170-12b0-4353-9805-aa1372bcda7f",
+          "date": "1983",
+          "score": 73,
+          "title": "Every Breath You Take",
+          "artist": "The Police"
+        },
+        {
+          "id": "1fb54c48-daf2-41df-b265-16ec7676f048",
+          "date": "1983",
+          "score": 73,
+          "title": "Every Breath You Take",
+          "artist": "The Police"
+        },
+        {
+          "id": "3e19df7a-3f9a-4d42-adbf-31867646f602",
+          "date": "1983-05-20",
+          "score": 73,
+          "title": "Every Breath You Take",
+          "artist": "The Police"
+        }
+      ]
+    },
+    {
+      "songId": "song_1fc8b626cc3762f2c17e",
+      "title": "Tomorrow That Was Yesterday",
+      "artist": "Hoodoo Gurus",
+      "answerYear": 1984,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_65830a3b2a3768e20f06",
+      "title": "When Doves Cry",
+      "artist": "Prince",
+      "answerYear": 1984,
+      "reason": "low_search_score",
+      "earliestYear": 1984,
+      "candidates": [
+        {
+          "id": "205297fd-410e-4842-9dea-d1489283e7ec",
+          "date": "1984-07-14",
+          "score": 70,
+          "title": "When Doves Cry",
+          "artist": "Prince"
+        }
+      ]
+    },
+    {
+      "songId": "song_d78b069b85702c2f059a",
+      "title": "What’s Love Got to Do With It",
+      "artist": "Tina Turner",
+      "answerYear": 1984,
+      "reason": "low_search_score",
+      "earliestYear": 1984,
+      "candidates": [
+        {
+          "id": "c476f0fc-ec0b-4945-a310-939d4a68c9fa",
+          "date": "1984",
+          "score": 83,
+          "title": "What’s Love Got to Do With It",
+          "artist": "Tina Turner"
+        },
+        {
+          "id": "4d56a4f9-b69f-4c17-9743-71a55ba318c9",
+          "date": "1984-07-14",
+          "score": 83,
+          "title": "What’s Love Got to Do With It",
+          "artist": "Tina Turner"
+        },
+        {
+          "id": "51caf173-e21a-45dd-8034-8513bdb8727c",
+          "date": "1984-05-01",
+          "score": 83,
+          "title": "What’s Love Got to Do With It",
+          "artist": "Tina Turner"
+        }
+      ]
+    },
+    {
+      "songId": "song_85e48db38b29580d1624",
+      "title": "Careless Whisper",
+      "artist": "George Michael",
+      "answerYear": 1985,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1984,
+      "candidates": [
+        {
+          "id": "d0f7ce9c-6418-4f0a-81cd-365ab690d1b0",
+          "date": "1984",
+          "score": 71,
+          "title": "Careless Whisper",
+          "artist": "George Michael"
+        }
+      ]
+    },
+    {
+      "songId": "song_013e1191186d9a60b50d",
+      "title": "Dr. Heckyll & Mr. Jive",
+      "artist": "Men at Work",
+      "answerYear": 1986,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1983,
+      "candidates": [
+        {
+          "id": "e34ef5b3-d0e0-4161-917a-dd7538bafe89",
+          "date": "1983-04-27",
+          "score": 100,
+          "title": "Dr. Heckyll & Mr. Jive",
+          "artist": "Men at Work"
+        }
+      ]
+    },
+    {
+      "songId": "song_0c5cdaeca620ec5106ce",
+      "title": "Broken Wings",
+      "artist": "Mr. Mister",
+      "answerYear": 1986,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1985,
+      "candidates": [
+        {
+          "id": "8d43a8ee-0488-401b-ad30-53958cf68926",
+          "date": "1985-12-16",
+          "score": 60,
+          "title": "Broken Wings",
+          "artist": "Mr. Mister"
+        },
+        {
+          "id": "4c937158-b4f5-4d77-834c-4dd0fab75586",
+          "date": "1985",
+          "score": 60,
+          "title": "Broken Wings",
+          "artist": "Mr. Mister"
+        },
+        {
+          "id": "449342b7-7fea-472c-8f41-3df35f78cc42",
+          "date": "1985-05",
+          "score": 60,
+          "title": "Broken Wings",
+          "artist": "Mr. Mister"
+        }
+      ]
+    },
+    {
+      "songId": "song_de08c6fd86b35835e9e7",
+      "title": "Shake You Down",
+      "artist": "Gregory Abbott",
+      "answerYear": 1987,
+      "reason": "low_search_score",
+      "earliestYear": 1987,
+      "candidates": [
+        {
+          "id": "2a4886b2-698f-489c-b61a-262a5abe6c00",
+          "date": "1987",
+          "score": 63,
+          "title": "Shake You Down",
+          "artist": "Gregory Abbott"
+        }
+      ]
+    },
+    {
+      "songId": "song_37308f1be9d1b74dc03f",
+      "title": "Alone",
+      "artist": "Heart",
+      "answerYear": 1987,
+      "reason": "low_search_score",
+      "earliestYear": 1987,
+      "candidates": [
+        {
+          "id": "61499d6d-e681-4ede-a733-82c287242430",
+          "date": "1987",
+          "score": 36,
+          "title": "Alone",
+          "artist": "Heart"
+        },
+        {
+          "id": "d2c1d3fa-31ae-4fd1-b0be-daf95ee06d21",
+          "date": "1987-06-05",
+          "score": 36,
+          "title": "Alone",
+          "artist": "Heart"
+        }
+      ]
+    },
+    {
+      "songId": "song_2bf3f1e3456652a9b11e",
+      "title": "Good Times",
+      "artist": "Hoodoo Gurus",
+      "answerYear": 1987,
+      "reason": "low_search_score",
+      "earliestYear": 1987,
+      "candidates": [
+        {
+          "id": "8b0d3d1f-6023-485c-9822-0961150903c9",
+          "date": "1987-07-07",
+          "score": 67,
+          "title": "Good Times",
+          "artist": "Hoodoo Gurus"
+        }
+      ]
+    },
+    {
+      "songId": "song_73b68f4074a4a0ce7ff4",
+      "title": "In the Middle of the Land",
+      "artist": "Hoodoo Gurus",
+      "answerYear": 1987,
+      "reason": "low_search_score",
+      "earliestYear": 1987,
+      "candidates": [
+        {
+          "id": "86cddb10-3e6d-4fb1-95fe-bf5cd32035bc",
+          "date": "1987-07-07",
+          "score": 76,
+          "title": "In the Middle of the Land",
+          "artist": "Hoodoo Gurus"
+        }
+      ]
+    },
+    {
+      "songId": "song_aa224b2ffbacf2143ffa",
+      "title": "Party Machine",
+      "artist": "Hoodoo Gurus",
+      "answerYear": 1987,
+      "reason": "low_search_score",
+      "earliestYear": 1987,
+      "candidates": [
+        {
+          "id": "17d89c76-0ad8-4e2e-b524-68603655b91f",
+          "date": "1987-07-07",
+          "score": 69,
+          "title": "Party Machine",
+          "artist": "Hoodoo Gurus"
+        }
+      ]
+    },
+    {
+      "songId": "song_5a314862a1730b005644",
+      "title": "Never Gonna Give You Up",
+      "artist": "Rick Astley",
+      "answerYear": 1988,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1987,
+      "candidates": [
+        {
+          "id": "8f3471b5-7e6a-48da-86a9-c1c07a0f47ae",
+          "date": "1987-07-27",
+          "score": 73,
+          "title": "Never Gonna Give You Up",
+          "artist": "Rick Astley"
+        },
+        {
+          "id": "b1eeffb1-c8f4-4430-9b8f-1eeb288ab08f",
+          "date": "1987-11-12",
+          "score": 73,
+          "title": "Never Gonna Give You Up",
+          "artist": "Rick Astley"
+        }
+      ]
+    },
+    {
+      "songId": "song_42f7f2c70253649fff16",
+      "title": "I Want You Back",
+      "artist": "Hoodoo Gurus",
+      "answerYear": 1989,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1984,
+      "candidates": [
+        {
+          "id": "b1a70b7d-0988-4bb7-81e5-b024651e3df6",
+          "date": "1984",
+          "score": 87,
+          "title": "I Want You Back",
+          "artist": "Hoodoo Gurus"
+        },
+        {
+          "id": "a1c94b71-6f69-452c-8819-49fe953d0835",
+          "date": "1984",
+          "score": 87,
+          "title": "I Want You Back",
+          "artist": "Hoodoo Gurus"
+        }
+      ]
+    },
+    {
+      "songId": "song_5c4eae23076802f39fab",
+      "title": "Straight Up",
+      "artist": "Paula Abdul",
+      "answerYear": 1989,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1988,
+      "candidates": [
+        {
+          "id": "73415035-969a-4620-a61c-4d6e81e14ccf",
+          "date": "1988-06-21",
+          "score": 77,
+          "title": "Straight Up",
+          "artist": "Paula Abdul"
+        }
+      ]
+    },
+    {
+      "songId": "song_d484922a70616a316d57",
+      "title": "Groove Is in the Heart",
+      "artist": "Deee-Lite",
+      "answerYear": 1990,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_783b58a9e42ea1f1356a",
+      "title": "It Must Have Been Love - From the Film \"Pretty Woman",
+      "artist": "Roxette",
+      "answerYear": 1990,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_440db95ffd4d96c4d4e8",
+      "title": "Hold On",
+      "artist": "Wilson Phillips",
+      "answerYear": 1990,
+      "reason": "low_search_score",
+      "earliestYear": 1990,
+      "candidates": [
+        {
+          "id": "5dc6e8e5-d9eb-4f51-a295-cd77faa49bd0",
+          "date": "1990",
+          "score": 63,
+          "title": "Hold On",
+          "artist": "Wilson Phillips"
+        },
+        {
+          "id": "419eb8c5-6749-411c-ae5a-57f04704621f",
+          "date": "1990",
+          "score": 63,
+          "title": "Hold On",
+          "artist": "Wilson Phillips"
+        },
+        {
+          "id": "70469934-3b39-4536-984d-f704c5e94c4d",
+          "date": "1990",
+          "score": 63,
+          "title": "Hold On",
+          "artist": "Wilson Phillips"
+        },
+        {
+          "id": "b8f9e331-df4a-4c4f-8a70-a7d650a2284e",
+          "date": "1990",
+          "score": 63,
+          "title": "Hold On",
+          "artist": "Wilson Phillips"
+        },
+        {
+          "id": "d1766308-ebde-4d92-8f3b-5f65186aef61",
+          "date": "1990",
+          "score": 63,
+          "title": "Hold On",
+          "artist": "Wilson Phillips"
+        }
+      ]
+    },
+    {
+      "songId": "song_de4ccad6681a617b3f03",
+      "title": "Woman’s Work",
+      "artist": "Tina Arena",
+      "answerYear": 1991,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1990,
+      "candidates": [
+        {
+          "id": "0bebd9d3-07d4-45cf-bc07-5aea2b036399",
+          "date": "1990",
+          "score": 76,
+          "title": "Woman’s Work",
+          "artist": "Tina Arena"
+        }
+      ]
+    },
+    {
+      "songId": "song_e3752049fa03b0fc1e60",
+      "title": "End of the Road",
+      "artist": "Boyz II Men",
+      "answerYear": 1992,
+      "reason": "low_search_score",
+      "earliestYear": 1992,
+      "candidates": [
+        {
+          "id": "489537c7-fede-404c-adcd-ff2ab3fcf470",
+          "date": "1992",
+          "score": 83,
+          "title": "End of the Road",
+          "artist": "Boyz II Men"
+        },
+        {
+          "id": "8394d8cb-a2ba-4471-ad95-3e82137b9cb5",
+          "date": "1992-06-30",
+          "score": 83,
+          "title": "End of the Road",
+          "artist": "Boyz II Men"
+        }
+      ]
+    },
+    {
+      "songId": "song_1f169e871ea9ebfde9c7",
+      "title": "Give Me Just a Little More Time",
+      "artist": "Kylie Minogue",
+      "answerYear": 1992,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1991,
+      "candidates": [
+        {
+          "id": "70300ac6-4a5b-4361-bd2b-b0e5dcc03ebe",
+          "date": "1991-10-14",
+          "score": 98,
+          "title": "Give Me Just a Little More Time",
+          "artist": "Kylie Minogue"
+        }
+      ]
+    },
+    {
+      "songId": "song_a6f4e8d263ef4ac528a4",
+      "title": "Shocked",
+      "artist": "Kylie Minogue",
+      "answerYear": 1992,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1990,
+      "candidates": [
+        {
+          "id": "06d5b701-4a05-4b04-a712-19467733b647",
+          "date": "1990-11-12",
+          "score": 79,
+          "title": "Shocked",
+          "artist": "Kylie Minogue"
+        }
+      ]
+    },
+    {
+      "songId": "song_302bee6a26a0db18e5bf",
+      "title": "Always Find the Time",
+      "artist": "Kylie Minogue",
+      "answerYear": 1993,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1990,
+      "candidates": [
+        {
+          "id": "07cc10f6-0180-4f7a-9a93-bc2de205a8c3",
+          "date": "1990-11-12",
+          "score": 87,
+          "title": "Always Find the Time",
+          "artist": "Kylie Minogue"
+        }
+      ]
+    },
+    {
+      "songId": "song_a390f45bb60de26a964d",
+      "title": "Celebration",
+      "artist": "Kylie Minogue",
+      "answerYear": 1993,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1992,
+      "candidates": [
+        {
+          "id": "c076dc98-40f6-4b31-964f-c66dd043bcab",
+          "date": "1992-08-22",
+          "score": 70,
+          "title": "Celebration",
+          "artist": "Kylie Minogue"
+        },
+        {
+          "id": "c7ef1444-0b87-491e-b58b-9949cc9c5b70",
+          "date": "1992-10-21",
+          "score": 70,
+          "title": "Celebration",
+          "artist": "Kylie Minogue"
+        }
+      ]
+    },
+    {
+      "songId": "song_e213f8c81f979a7b71a4",
+      "title": "Turn It Into Love",
+      "artist": "Kylie Minogue",
+      "answerYear": 1993,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1992,
+      "candidates": [
+        {
+          "id": "ad8773ed-c4f4-4700-a483-1f4340c823e8",
+          "date": "1992-10-21",
+          "score": 87,
+          "title": "Turn It Into Love",
+          "artist": "Kylie Minogue"
+        }
+      ]
+    },
+    {
+      "songId": "song_1446fdc68a4fd4d26be3",
+      "title": "Waterfalls",
+      "artist": "TLC",
+      "answerYear": 1995,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1994,
+      "candidates": [
+        {
+          "id": "84643916-a2a6-4bbb-9ceb-80851c84143b",
+          "date": "1994-11-15",
+          "score": 65,
+          "title": "Waterfalls",
+          "artist": "TLC"
+        }
+      ]
+    },
+    {
+      "songId": "song_49cdc6f5737af88f1a4d",
+      "title": "Show Me Heaven",
+      "artist": "Tina Arena",
+      "answerYear": 1995,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1994,
+      "candidates": [
+        {
+          "id": "3d71593c-3672-4b0e-9343-0e70d54d9b55",
+          "date": "1994-11-14",
+          "score": 82,
+          "title": "Show Me Heaven",
+          "artist": "Tina Arena"
+        }
+      ]
+    },
+    {
+      "songId": "song_1b993146235d836edd2f",
+      "title": "Sorrento Moon (I Remember)",
+      "artist": "Tina Arena",
+      "answerYear": 1995,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1994,
+      "candidates": [
+        {
+          "id": "2aec5f59-6857-4bba-9edd-bf893fa3d245",
+          "date": "1994-11-14",
+          "score": 100,
+          "title": "Sorrento Moon (I Remember)",
+          "artist": "Tina Arena"
+        }
+      ]
+    },
+    {
+      "songId": "song_137a5f41e9e73e6aa30e",
+      "title": "Because You Loved Me",
+      "artist": "Céline Dion",
+      "answerYear": 1996,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1995,
+      "candidates": [
+        {
+          "id": "df162c54-de7e-4f63-871e-5bc327b038f6",
+          "date": "1995",
+          "score": 74,
+          "title": "Because You Loved Me",
+          "artist": "Céline Dion"
+        }
+      ]
+    },
+    {
+      "songId": "song_62a175bc997fd8ab7561",
+      "title": "The Boy Is Mine",
+      "artist": "Brandy",
+      "answerYear": 1998,
+      "reason": "low_search_score",
+      "earliestYear": 1998,
+      "candidates": [
+        {
+          "id": "8517f31c-5962-4571-812d-159b7205da54",
+          "date": "1998-06-17",
+          "score": 59,
+          "title": "The Boy Is Mine",
+          "artist": "Brandy"
+        }
+      ]
+    },
+    {
+      "songId": "song_e7f758e479f5da0d6122",
+      "title": "Left of the Middle",
+      "artist": "Natalie Imbruglia",
+      "answerYear": 1998,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1997,
+      "candidates": [
+        {
+          "id": "9c97a988-535a-4e43-9613-8c3561f17efb",
+          "date": "1997-11-24",
+          "score": 74,
+          "title": "Left of the Middle",
+          "artist": "Natalie Imbruglia"
+        }
+      ]
+    },
+    {
+      "songId": "song_b1275576a85079ddf837",
+      "title": "Too Close",
+      "artist": "Next",
+      "answerYear": 1998,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1997,
+      "candidates": [
+        {
+          "id": "b693d9da-dedd-42d0-bca8-592178f27f31",
+          "date": "1997-12",
+          "score": 52,
+          "title": "Too Close",
+          "artist": "Next"
+        },
+        {
+          "id": "44525d52-7379-4f97-84db-f5f2fc4cd6b5",
+          "date": "1997",
+          "score": 52,
+          "title": "Too Close",
+          "artist": "Next"
+        }
+      ]
+    },
+    {
+      "songId": "song_bfd18f4df65dd097ffc1",
+      "title": "Believe",
+      "artist": "Cher",
+      "answerYear": 1999,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1998,
+      "candidates": [
+        {
+          "id": "f536d1aa-0f29-401f-a856-3aaa7db33fc4",
+          "date": "1998",
+          "score": 42,
+          "title": "Believe",
+          "artist": "Cher"
+        },
+        {
+          "id": "fc5da0b0-a5a6-4b31-8741-2bb8ba82f37c",
+          "date": "1998",
+          "score": 42,
+          "title": "Believe",
+          "artist": "Cher"
+        }
+      ]
+    },
+    {
+      "songId": "song_7f901f99003b647e1bcb",
+      "title": "I Believe",
+      "artist": "Cher",
+      "answerYear": 1999,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_e7d9eb8dce33d5701d4a",
+      "title": "Who You Gonna Believe",
+      "artist": "Cher",
+      "answerYear": 1999,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1991,
+      "candidates": [
+        {
+          "id": "d294f69e-9f47-4487-aa36-ccf5187c3cb7",
+          "date": "1991-06-11",
+          "score": 100,
+          "title": "Who You Gonna Believe",
+          "artist": "Cher"
+        },
+        {
+          "id": "3ed45740-5d4f-4bf6-929f-01a3c9d72c19",
+          "date": "1991",
+          "score": 100,
+          "title": "Who You Gonna Believe",
+          "artist": "Cher"
+        }
+      ]
+    },
+    {
+      "songId": "song_a7f6350a7ab4e6b5d24e",
+      "title": "Why",
+      "artist": "Natalie Imbruglia",
+      "answerYear": 1999,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1998,
+      "candidates": [
+        {
+          "id": "cf2c7f5c-403d-478b-9948-30306a915560",
+          "date": "1998-02-23",
+          "score": 70,
+          "title": "Why",
+          "artist": "Natalie Imbruglia"
+        }
+      ]
+    },
+    {
+      "songId": "song_cffa3868448b1e19af7d",
+      "title": "Did It Again",
+      "artist": "Kylie Minogue",
+      "answerYear": 2000,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1997,
+      "candidates": [
+        {
+          "id": "c9093370-2655-45ad-b6b2-876b35089ba9",
+          "date": "1997-03-23",
+          "score": 85,
+          "title": "Did It Again",
+          "artist": "Kylie Minogue"
+        }
+      ]
+    },
+    {
+      "songId": "song_2d856da0aee5c1c8cc40",
+      "title": "Smooth",
+      "artist": "Santana feat. Rob Thomas",
+      "answerYear": 2000,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_fa73acd4a117968d1bcc",
+      "title": "Fallin’",
+      "artist": "Alicia Keys",
+      "answerYear": 2001,
+      "reason": "low_search_score",
+      "earliestYear": 2001,
+      "candidates": [
+        {
+          "id": "7276155b-a01b-42a9-9d31-eb0c317d07b8",
+          "date": "2001-06-05",
+          "score": 72,
+          "title": "Fallin’",
+          "artist": "Alicia Keys"
+        }
+      ]
+    },
+    {
+      "songId": "song_bdb243fbadd923cdfe28",
+      "title": "Don’t Stop",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2001,
+      "reason": "low_search_score",
+      "earliestYear": 2001,
+      "candidates": [
+        {
+          "id": "2fb8773a-1573-4560-bbc4-ac64f2ad4f62",
+          "date": "2001-08-20",
+          "score": 85,
+          "title": "Don’t Stop",
+          "artist": "Hilltop Hoods"
+        }
+      ]
+    },
+    {
+      "songId": "song_9072f84fedc0377fab26",
+      "title": "Can’t Get You Out of My Head",
+      "artist": "Kylie Minogue",
+      "answerYear": 2001,
+      "reason": "low_search_score",
+      "earliestYear": 2001,
+      "candidates": [
+        {
+          "id": "9d763275-0b67-4edf-8aee-3d9511068716",
+          "date": "2001-08",
+          "score": 74,
+          "title": "Can’t Get You Out of My Head",
+          "artist": "Kylie Minogue"
+        },
+        {
+          "id": "0e3fa85f-d573-45bb-8bc3-9bc13ae4de4f",
+          "date": "2001",
+          "score": 74,
+          "title": "Can’t Get You Out of My Head",
+          "artist": "Kylie Minogue"
+        },
+        {
+          "id": "ddeae131-22f4-48a7-ad15-d4ffbed26ad9",
+          "date": "2001-10-26",
+          "score": 74,
+          "title": "Can’t Get You Out of My Head",
+          "artist": "Kylie Minogue"
+        }
+      ]
+    },
+    {
+      "songId": "song_1595d042b8db19d60b71",
+      "title": "Foolish",
+      "artist": "Ashanti",
+      "answerYear": 2002,
+      "reason": "low_search_score",
+      "earliestYear": 2002,
+      "candidates": [
+        {
+          "id": "269ef41f-87d1-4c6d-bd91-ebbdf3513e4c",
+          "date": "2002",
+          "score": 46,
+          "title": "Foolish",
+          "artist": "Ashanti"
+        },
+        {
+          "id": "2289820c-7310-411a-9562-89486f25a12f",
+          "date": "2002",
+          "score": 46,
+          "title": "Foolish",
+          "artist": "Ashanti"
+        },
+        {
+          "id": "436a776b-8bef-4978-9800-ca5e5594d8be",
+          "date": "2002",
+          "score": 46,
+          "title": "Foolish",
+          "artist": "Ashanti"
+        },
+        {
+          "id": "b0a1366a-ae13-4bb4-af52-a7ee24086d01",
+          "date": "2002-02-09",
+          "score": 46,
+          "title": "Foolish",
+          "artist": "Ashanti"
+        },
+        {
+          "id": "89f9105e-9f58-4b72-8590-a8e561035eec",
+          "date": "2002-07-15",
+          "score": 46,
+          "title": "Foolish",
+          "artist": "Ashanti"
+        }
+      ]
+    },
+    {
+      "songId": "song_cad44b3107d046973b52",
+      "title": "Full Tilt Boogie",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2002,
+      "reason": "low_search_score",
+      "earliestYear": 2002,
+      "candidates": [
+        {
+          "id": "221116d4-6917-4da8-a44a-fe83e4a2b2b9",
+          "date": "2002",
+          "score": 83,
+          "title": "Full Tilt Boogie",
+          "artist": "Hilltop Hoods"
+        }
+      ]
+    },
+    {
+      "songId": "song_4f5c9b47c1e1309b8789",
+      "title": "Riding Under One Banner",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2002,
+      "reason": "low_search_score",
+      "earliestYear": 2002,
+      "candidates": [
+        {
+          "id": "26214f8d-503c-4760-924f-1cb1bb9d9e2d",
+          "date": "2002-10-01",
+          "score": 89,
+          "title": "Riding Under One Banner",
+          "artist": "Hilltop Hoods"
+        }
+      ]
+    },
+    {
+      "songId": "song_62d05ad7fc76a90773ee",
+      "title": "Fever",
+      "artist": "Kylie Minogue",
+      "answerYear": 2002,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 2001,
+      "candidates": [
+        {
+          "id": "9b355668-dca6-4a73-936e-9014885ef2b7",
+          "date": "2001-10-01",
+          "score": 53,
+          "title": "Fever",
+          "artist": "Kylie Minogue"
+        }
+      ]
+    },
+    {
+      "songId": "song_7965b5f2492cfc4ee475",
+      "title": "Up in da Club",
+      "artist": "50 Cent",
+      "answerYear": 2003,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_9fb76460d5debfc793ec",
+      "title": "Mic Felon",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2003,
+      "reason": "low_search_score",
+      "earliestYear": 2003,
+      "candidates": [
+        {
+          "id": "dcc6a59f-2d93-4397-99a3-41d3628c4521",
+          "date": "2003-09-22",
+          "score": 85,
+          "title": "Mic Felon",
+          "artist": "Hilltop Hoods"
+        }
+      ]
+    },
+    {
+      "songId": "song_c435af01c39b7e540c5e",
+      "title": "Tomorrow Will Do",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2003,
+      "reason": "low_search_score",
+      "earliestYear": 2003,
+      "candidates": [
+        {
+          "id": "06ec88f8-3cad-4e36-ba61-34985c30e822",
+          "date": "2003-09-22",
+          "score": 87,
+          "title": "Tomorrow Will Do",
+          "artist": "Hilltop Hoods"
+        }
+      ]
+    },
+    {
+      "songId": "song_6fccd7951213cb182674",
+      "title": "Are You Gonna Be My Girl",
+      "artist": "Jet",
+      "answerYear": 2003,
+      "reason": "low_search_score",
+      "earliestYear": 2003,
+      "candidates": [
+        {
+          "id": "7a9ba7ac-1dbf-41d9-a0e1-1a164148b2e1",
+          "date": "2003-07",
+          "score": 72,
+          "title": "Are You Gonna Be My Girl",
+          "artist": "Jet"
+        }
+      ]
+    },
+    {
+      "songId": "song_9413c9a8b81a34be8e83",
+      "title": "Back Once Again",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2004,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 1997,
+      "candidates": [
+        {
+          "id": "16538f34-3982-4ae3-a102-43ca5632836c",
+          "date": "1997",
+          "score": 88,
+          "title": "Back Once Again",
+          "artist": "Hilltop Hoods"
+        }
+      ]
+    },
+    {
+      "songId": "song_5a847b89c2ad5b7eceb2",
+      "title": "Scar",
+      "artist": "Missy Higgins",
+      "answerYear": 2004,
+      "reason": "low_search_score",
+      "earliestYear": 2004,
+      "candidates": [
+        {
+          "id": "39069654-8f53-463a-8fdc-67739c3d491c",
+          "date": "2004-08-02",
+          "score": 69,
+          "title": "Scar",
+          "artist": "Missy Higgins"
+        }
+      ]
+    },
+    {
+      "songId": "song_ace1009283cac0d302a2",
+      "title": "Burn",
+      "artist": "Usher",
+      "answerYear": 2004,
+      "reason": "low_search_score",
+      "earliestYear": 2004,
+      "candidates": [
+        {
+          "id": "c748279a-aa92-48ed-8edb-b9a925007ce7",
+          "date": "2004-09-15",
+          "score": 48,
+          "title": "Burn",
+          "artist": "Usher"
+        },
+        {
+          "id": "3ddc943d-2cee-4080-b9f7-f52842fd8726",
+          "date": "2004-06",
+          "score": 48,
+          "title": "Burn",
+          "artist": "Usher"
+        },
+        {
+          "id": "b9fcfba7-9f2f-47ac-94fb-5133dfe5104c",
+          "date": "2004-02",
+          "score": 48,
+          "title": "Burn",
+          "artist": "Usher"
+        },
+        {
+          "id": "1de90e2c-c5ac-47e8-a516-f13b4deaf223",
+          "date": "2004-08-30",
+          "score": 48,
+          "title": "Burn",
+          "artist": "Usher"
+        },
+        {
+          "id": "9cb1285b-1ebf-4476-84f9-494523f5fb18",
+          "date": "2004-01-11",
+          "score": 48,
+          "title": "Burn",
+          "artist": "Usher"
+        }
+      ]
+    },
+    {
+      "songId": "song_7283e948ef61699e0c7a",
+      "title": "Yeah",
+      "artist": "Usher",
+      "answerYear": 2004,
+      "reason": "low_search_score",
+      "earliestYear": 2004,
+      "candidates": [
+        {
+          "id": "d30e8a4d-6a2b-469e-a030-a72689e25ac8",
+          "date": "2004",
+          "score": 50,
+          "title": "Yeah",
+          "artist": "Usher"
+        },
+        {
+          "id": "10fdcdd3-9a84-497a-9d90-0ea23531cf26",
+          "date": "2004",
+          "score": 50,
+          "title": "Yeah",
+          "artist": "Usher"
+        }
+      ]
+    },
+    {
+      "songId": "song_a639620e7fb697945636",
+      "title": "Cactus Garden Special",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2005,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_eacba52cfb00d10e3275",
+      "title": "Laying Blame",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2005,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 2003,
+      "candidates": [
+        {
+          "id": "1db962f7-c651-402d-ae16-c16160ba2c74",
+          "date": "2003-09-22",
+          "score": 49,
+          "title": "Laying Blame",
+          "artist": "Hilltop Hoods"
+        }
+      ]
+    },
+    {
+      "songId": "song_03f1644606810e9a6b13",
+      "title": "Testimonial Year",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2005,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 2003,
+      "candidates": [
+        {
+          "id": "71104901-55f4-418b-9199-e9833fd23d3d",
+          "date": "2003-09-22",
+          "score": 49,
+          "title": "Testimonial Year",
+          "artist": "Hilltop Hoods"
+        }
+      ]
+    },
+    {
+      "songId": "song_687ea4322628b43e827b",
+      "title": "Bad Day",
+      "artist": "Daniel Powter",
+      "answerYear": 2006,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 2004,
+      "candidates": [
+        {
+          "id": "82c8cbbb-ea1a-4a14-8958-99be10f99769",
+          "date": "2004",
+          "score": 36,
+          "title": "Bad Day",
+          "artist": "Daniel Powter"
+        }
+      ]
+    },
+    {
+      "songId": "song_e38bb893cf8aad905b05",
+      "title": "Circuit Breaker",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2006,
+      "reason": "low_search_score",
+      "earliestYear": 2006,
+      "candidates": [
+        {
+          "id": "ef2038fa-efb8-4553-a903-46e91bd03dfb",
+          "date": "2006-04-03",
+          "score": 48,
+          "title": "Circuit Breaker",
+          "artist": "Hilltop Hoods"
+        }
+      ]
+    },
+    {
+      "songId": "song_76e48686525c897cb2a5",
+      "title": "The Hard Road",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2006,
+      "reason": "low_search_score",
+      "earliestYear": 2006,
+      "candidates": [
+        {
+          "id": "475cb30c-a3dd-4991-8baf-939d02948e4f",
+          "date": "2006-04-03",
+          "score": 42,
+          "title": "The Hard Road",
+          "artist": "Hilltop Hoods"
+        }
+      ]
+    },
+    {
+      "songId": "song_a3c0babdb85e0aecf219",
+      "title": "What a Great Night",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2006,
+      "reason": "low_search_score",
+      "earliestYear": 2006,
+      "candidates": [
+        {
+          "id": "ead42dd7-5d5a-41ea-a23b-51a306b7f2d9",
+          "date": "2006-12-04",
+          "score": 45,
+          "title": "What a Great Night",
+          "artist": "Hilltop Hoods"
+        }
+      ]
+    },
+    {
+      "songId": "song_8a9aac86c91e4eb63f98",
+      "title": "Restrung",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2007,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_5c23aa2d1b434e90efcd",
+      "title": "The Complete Hard Road Restrung Launch Concert",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2007,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_8d37bfff1524ee7b7f1d",
+      "title": "The Stopping All Stations Tour",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2007,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_9b3440350e8168164d5a",
+      "title": "Low",
+      "artist": "Flo Rida",
+      "answerYear": 2008,
+      "reason": "low_search_score",
+      "earliestYear": 2008,
+      "candidates": [
+        {
+          "id": "9db05a6c-7fcc-4d8d-8ee0-2ea1bdd42217",
+          "date": "2008-07-21",
+          "score": 57,
+          "title": "Low",
+          "artist": "Flo Rida"
+        }
+      ]
+    },
+    {
+      "songId": "song_6d9eac767d3a5a7a6369",
+      "title": "Clown Prince",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2008,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 2006,
+      "candidates": [
+        {
+          "id": "69b0d3d0-9785-461c-9e71-a973b216d1bc",
+          "date": "2006-04-03",
+          "score": 80,
+          "title": "Clown Prince",
+          "artist": "Hilltop Hoods"
+        }
+      ]
+    },
+    {
+      "songId": "song_a668a7fc0f33de0081f6",
+      "title": "Bleeding Love, Part 1",
+      "artist": "Leona Lewis",
+      "answerYear": 2008,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_ad88de3653324e3dbf8b",
+      "title": "Peachy",
+      "artist": "Missy Higgins",
+      "answerYear": 2008,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 2007,
+      "candidates": [
+        {
+          "id": "4b86ff87-c875-4c5a-b78f-d349bd1ab8c9",
+          "date": "2007-04-28",
+          "score": 68,
+          "title": "Peachy",
+          "artist": "Missy Higgins"
+        },
+        {
+          "id": "d4a03966-9896-439a-bbf6-575cced50ad2",
+          "date": "2007",
+          "score": 68,
+          "title": "Peachy",
+          "artist": "Missy Higgins"
+        }
+      ]
+    },
+    {
+      "songId": "song_8defb7d277400bd75773",
+      "title": "Ten Days",
+      "artist": "Missy Higgins",
+      "answerYear": 2008,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 2004,
+      "candidates": [
+        {
+          "id": "b344dad8-1bd9-4658-9993-6a55a098c1b6",
+          "date": "2004-09-06",
+          "score": 69,
+          "title": "Ten Days",
+          "artist": "Missy Higgins"
+        }
+      ]
+    },
+    {
+      "songId": "song_55ebae53bde5963c3c8e",
+      "title": "Last Confession",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2009,
+      "reason": "low_search_score",
+      "earliestYear": 2009,
+      "candidates": [
+        {
+          "id": "dff3d12d-718f-4462-8087-167b62b18056",
+          "date": "2009-06-12",
+          "score": 77,
+          "title": "Last Confession",
+          "artist": "Hilltop Hoods"
+        }
+      ]
+    },
+    {
+      "songId": "song_0e30ce0db0fdc0953728",
+      "title": "Super Official",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2009,
+      "reason": "low_search_score",
+      "earliestYear": 2009,
+      "candidates": [
+        {
+          "id": "b69f6802-ad95-492f-b9e1-707ac4a28c8a",
+          "date": "2009-06-12",
+          "score": 83,
+          "title": "Super Official",
+          "artist": "Hilltop Hoods"
+        }
+      ]
+    },
+    {
+      "songId": "song_feda42c4c298f683cc90",
+      "title": "The Return",
+      "artist": "Hilltop Hoods",
+      "answerYear": 2009,
+      "reason": "low_search_score",
+      "earliestYear": 2009,
+      "candidates": [
+        {
+          "id": "59d66e36-a1bd-4d54-a6ce-62893ce09f3d",
+          "date": "2009",
+          "score": 69,
+          "title": "The Return",
+          "artist": "Hilltop Hoods"
+        },
+        {
+          "id": "03c59ef2-829b-469b-a871-99ccedb9a95d",
+          "date": "2009-06-12",
+          "score": 69,
+          "title": "The Return",
+          "artist": "Hilltop Hoods"
+        }
+      ]
+    },
+    {
+      "songId": "song_093bbcc1c5c41eb8f0be",
+      "title": "Bulletproof",
+      "artist": "La Roux",
+      "answerYear": 2009,
+      "reason": "low_search_score",
+      "earliestYear": 2009,
+      "candidates": [
+        {
+          "id": "8d354994-01e7-49fa-8a78-452503cc4e8f",
+          "date": "2009-10-28",
+          "score": 61,
+          "title": "Bulletproof",
+          "artist": "La Roux"
+        },
+        {
+          "id": "bf3e215f-40b3-495c-b782-42bf65e5e254",
+          "date": "2009-05",
+          "score": 61,
+          "title": "Bulletproof",
+          "artist": "La Roux"
+        }
+      ]
+    },
+    {
+      "songId": "song_b3336c713f7cd4659198",
+      "title": "Desire Be, Desire Go Jam",
+      "artist": "Tame Impala",
+      "answerYear": 2010,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_3c393279477abf015fab",
+      "title": "She’s Not the Only One I Love",
+      "artist": "Tame Impala",
+      "answerYear": 2010,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_89c23a41e1da272311e7",
+      "title": "Skeleton Tiger",
+      "artist": "Tame Impala",
+      "answerYear": 2010,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 2008,
+      "candidates": [
+        {
+          "id": "5cbc1809-65cb-4a0d-bab2-9562147aecf8",
+          "date": "2008-08",
+          "score": 87,
+          "title": "Skeleton Tiger",
+          "artist": "Tame Impala"
+        },
+        {
+          "id": "62aee525-a7a2-4cfb-aa19-fc40613a4bdd",
+          "date": "2008-10-11",
+          "score": 87,
+          "title": "Skeleton Tiger",
+          "artist": "Tame Impala"
+        }
+      ]
+    },
+    {
+      "songId": "song_cd3c395d640b3472d8a9",
+      "title": "Midnight City",
+      "artist": "M83",
+      "answerYear": 2011,
+      "reason": "low_search_score",
+      "earliestYear": 2011,
+      "candidates": [
+        {
+          "id": "e83bc6ba-eff9-412c-8c11-5153672f25e7",
+          "date": "2011-09-26",
+          "score": 59,
+          "title": "Midnight City",
+          "artist": "M83"
+        },
+        {
+          "id": "6591b079-4f13-4aa3-99b2-7f3051daec37",
+          "date": "2011",
+          "score": 59,
+          "title": "Midnight City",
+          "artist": "M83"
+        },
+        {
+          "id": "bb755129-bde5-4cb5-b3df-d6fe2cfeb9f4",
+          "date": "2011",
+          "score": 59,
+          "title": "Midnight City",
+          "artist": "M83"
+        }
+      ]
+    },
+    {
+      "songId": "song_58abc2881f5cfbf41a99",
+      "title": "Beside You",
+      "artist": "5 Seconds of Summer",
+      "answerYear": 2012,
+      "reason": "low_search_score",
+      "earliestYear": 2012,
+      "candidates": [
+        {
+          "id": "84825e74-ac3f-415c-98c9-17a8484e5de7",
+          "date": "2012-12-07",
+          "score": 78,
+          "title": "Beside You",
+          "artist": "5 Seconds of Summer"
+        }
+      ]
+    },
+    {
+      "songId": "song_d1dc46fb5401e4fddaff",
+      "title": "Too Late",
+      "artist": "5 Seconds of Summer",
+      "answerYear": 2012,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_d53eda6e84a487884004",
+      "title": "Unpredictable",
+      "artist": "5 Seconds of Summer",
+      "answerYear": 2012,
+      "reason": "low_search_score",
+      "earliestYear": 2012,
+      "candidates": [
+        {
+          "id": "f6564c81-2af5-402f-b0d9-0ad7cb5d3409",
+          "date": "2012-12-07",
+          "score": 84,
+          "title": "Unpredictable",
+          "artist": "5 Seconds of Summer"
+        }
+      ]
+    },
+    {
+      "songId": "song_0e319abf2c311da08e0d",
+      "title": "I’ve Got This Friend",
+      "artist": "5 Seconds of Summer",
+      "answerYear": 2013,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_ad890bbe6a5e3810c913",
+      "title": "We are Young",
+      "artist": "5 Seconds of Summer",
+      "answerYear": 2013,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_d7ed69bbc2136c77130d",
+      "title": "Long Way Home",
+      "artist": "5 Seconds of Summer",
+      "answerYear": 2014,
+      "reason": "low_search_score",
+      "earliestYear": 2014,
+      "candidates": [
+        {
+          "id": "25fa7292-0751-40a3-8a4f-feb07a81e517",
+          "date": "2014-06-27",
+          "score": 89,
+          "title": "Long Way Home",
+          "artist": "5 Seconds of Summer"
+        }
+      ]
+    },
+    {
+      "songId": "song_a1568f889a8c46afe4a6",
+      "title": "Happy",
+      "artist": "Pharrell Williams",
+      "answerYear": 2014,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 2012,
+      "candidates": [
+        {
+          "id": "a0569af8-dbdc-422d-86e5-c316f69d23e8",
+          "date": "2012-11-07",
+          "score": 56,
+          "title": "Happy",
+          "artist": "Pharrell Williams"
+        }
+      ]
+    },
+    {
+      "songId": "song_e461fe68080645c9303e",
+      "title": "Amnesia",
+      "artist": "5 Seconds of Summer",
+      "answerYear": 2015,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 2014,
+      "candidates": [
+        {
+          "id": "bed7ba9b-48a0-4e4b-a110-596c45112a72",
+          "date": "2014-06-27",
+          "score": 69,
+          "title": "Amnesia",
+          "artist": "5 Seconds of Summer"
+        }
+      ]
+    },
+    {
+      "songId": "song_f2b42092010b5ad50926",
+      "title": "Hey Everybody!",
+      "artist": "5 Seconds of Summer",
+      "answerYear": 2015,
+      "reason": "low_search_score",
+      "earliestYear": 2015,
+      "candidates": [
+        {
+          "id": "75a44a8b-e7f9-4249-9328-511b6b6fd4a9",
+          "date": "2015-10-08",
+          "score": 75,
+          "title": "Hey Everybody!",
+          "artist": "5 Seconds of Summer"
+        },
+        {
+          "id": "8aeacc11-e0f9-4aee-aed3-32e34bb3b504",
+          "date": "2015",
+          "score": 75,
+          "title": "Hey Everybody!",
+          "artist": "5 Seconds of Summer"
+        }
+      ]
+    },
+    {
+      "songId": "song_4a378def80210b0b0022",
+      "title": "Money",
+      "artist": "5 Seconds of Summer",
+      "answerYear": 2015,
+      "reason": "low_search_score",
+      "earliestYear": 2015,
+      "candidates": [
+        {
+          "id": "82acc028-0fe9-4cda-adb6-eb00e8bea4e3",
+          "date": "2015-10-23",
+          "score": 62,
+          "title": "Money",
+          "artist": "5 Seconds of Summer"
+        }
+      ]
+    },
+    {
+      "songId": "song_94ca6e59b64d654bce38",
+      "title": "Safety Pin",
+      "artist": "5 Seconds of Summer",
+      "answerYear": 2015,
+      "reason": "low_search_score",
+      "earliestYear": 2015,
+      "candidates": [
+        {
+          "id": "932c69e2-0352-4921-9d16-995e3acb4ae8",
+          "date": "2015-10-23",
+          "score": 86,
+          "title": "Safety Pin",
+          "artist": "5 Seconds of Summer"
+        }
+      ]
+    },
+    {
+      "songId": "song_b0c43d91873af4bf6ee5",
+      "title": "Redbone",
+      "artist": "Childish Gambino",
+      "answerYear": 2016,
+      "reason": "low_search_score",
+      "earliestYear": 2016,
+      "candidates": [
+        {
+          "id": "7408f11c-6c4e-41e5-b81b-6a15bf6cb268",
+          "date": "2016-11-17",
+          "score": 70,
+          "title": "Redbone",
+          "artist": "Childish Gambino"
+        }
+      ]
+    },
+    {
+      "songId": "song_540573cf5e7913c9ca90",
+      "title": "Sorry",
+      "artist": "Justin Bieber",
+      "answerYear": 2016,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 2015,
+      "candidates": [
+        {
+          "id": "5a3637a0-aa83-402c-b56e-e1f7304df316",
+          "date": "2015-10-23",
+          "score": 55,
+          "title": "Sorry",
+          "artist": "Justin Bieber"
+        }
+      ]
+    },
+    {
+      "songId": "song_37201f62dfc14db6adf2",
+      "title": "Let It Happen",
+      "artist": "Tame Impala",
+      "answerYear": 2017,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 2015,
+      "candidates": [
+        {
+          "id": "b85f7f6d-813a-4ebc-8a1d-5998ab02be9a",
+          "date": "2015-03-11",
+          "score": 78,
+          "title": "Let It Happen",
+          "artist": "Tame Impala"
+        }
+      ]
+    },
+    {
+      "songId": "song_185985f9761444e88c7f",
+      "title": "Love/Paranoia",
+      "artist": "Tame Impala",
+      "answerYear": 2017,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 2015,
+      "candidates": [
+        {
+          "id": "88d35fac-b78b-41b5-a4b1-4e75ac0f30e6",
+          "date": "2015-07-15",
+          "score": 86,
+          "title": "Love/Paranoia",
+          "artist": "Tame Impala"
+        }
+      ]
+    },
+    {
+      "songId": "song_2ae288626f715b9d20d7",
+      "title": "No Roots",
+      "artist": "5 Seconds of Summer",
+      "answerYear": 2018,
+      "reason": "no_exact_official_recording"
+    },
+    {
+      "songId": "song_65445bca6af54f474246",
+      "title": "Youngblood",
+      "artist": "5 Seconds of Summer",
+      "answerYear": 2018,
+      "reason": "low_search_score",
+      "earliestYear": 2018,
+      "candidates": [
+        {
+          "id": "9541592c-0102-4b94-93cc-ee0f3cf83d64",
+          "date": "2018",
+          "score": 89,
+          "title": "Youngblood",
+          "artist": "5 Seconds of Summer"
+        },
+        {
+          "id": "079cab5d-0ae6-4524-81f9-5235a284ec49",
+          "date": "2018-04-12",
+          "score": 89,
+          "title": "Youngblood",
+          "artist": "5 Seconds of Summer"
+        }
+      ]
+    },
+    {
+      "songId": "song_6687b37fbbb56ef21557",
+      "title": "Don't Stop",
+      "artist": "5 Seconds of Summer",
+      "answerYear": 2019,
+      "reason": "low_search_score",
+      "earliestYear": 2019,
+      "candidates": [
+        {
+          "id": "07341e3f-7fbd-4608-8a36-b9784189e1f1",
+          "date": "2019",
+          "score": 84,
+          "title": "Don't Stop",
+          "artist": "5 Seconds of Summer"
+        }
+      ]
+    },
+    {
+      "songId": "song_6b3b808beb1832da7b57",
+      "title": "Easier",
+      "artist": "5 Seconds of Summer",
+      "answerYear": 2019,
+      "reason": "low_search_score",
+      "earliestYear": 2019,
+      "candidates": [
+        {
+          "id": "25597f61-a704-4c93-84b7-067812cbc6a1",
+          "date": "2019-05-23",
+          "score": 84,
+          "title": "Easier",
+          "artist": "5 Seconds of Summer"
+        }
+      ]
+    },
+    {
+      "songId": "song_b8a6f683987bec50f09e",
+      "title": "bad guy",
+      "artist": "Billie Eilish",
+      "answerYear": 2019,
+      "reason": "low_search_score",
+      "earliestYear": 2019,
+      "candidates": [
+        {
+          "id": "20aeeea6-a86a-469f-b274-d81e3d9f6c6c",
+          "date": "2019-03-29",
+          "score": 76,
+          "title": "bad guy",
+          "artist": "Billie Eilish"
+        },
+        {
+          "id": "a0fa346a-4c7c-4a16-b8ea-44af865b5323",
+          "date": "2019-10-25",
+          "score": 76,
+          "title": "Bad Guy",
+          "artist": "Billie Eilish"
+        },
+        {
+          "id": "694da04d-1ffc-435c-8b4b-59cc23ac8003",
+          "date": "2019-03-29",
+          "score": 76,
+          "title": "bad guy",
+          "artist": "Billie Eilish"
+        }
+      ]
+    },
+    {
+      "songId": "song_898feefa83f6746a24d8",
+      "title": "Without Me",
+      "artist": "Halsey",
+      "answerYear": 2019,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 2018,
+      "candidates": [
+        {
+          "id": "888bb953-61ed-45e8-9c4f-33c3346dc16f",
+          "date": "2018-10-04",
+          "score": 57,
+          "title": "Without Me",
+          "artist": "Halsey"
+        },
+        {
+          "id": "01552e9a-11b0-4b5d-bcd5-cd15850ebd29",
+          "date": "2018-10-04",
+          "score": 57,
+          "title": "Without Me",
+          "artist": "Halsey"
+        }
+      ]
+    },
+    {
+      "songId": "song_2e8efda4ae96b10af911",
+      "title": "Bye Bye",
+      "artist": "Genesis Owusu",
+      "answerYear": 2021,
+      "reason": "low_search_score",
+      "earliestYear": 2021,
+      "candidates": [
+        {
+          "id": "e1ede42c-1731-454c-8a79-32e734b2326d",
+          "date": "2021-03-05",
+          "score": 83,
+          "title": "Bye Bye",
+          "artist": "Genesis Owusu"
+        }
+      ]
+    },
+    {
+      "songId": "song_78590bc6bd9d235d6067",
+      "title": "good 4 u",
+      "artist": "Olivia Rodrigo",
+      "answerYear": 2021,
+      "reason": "low_search_score",
+      "earliestYear": 2021,
+      "candidates": [
+        {
+          "id": "6dcd90ad-d083-4b02-a58f-49c07cc9001a",
+          "date": "2021-12-10",
+          "score": 77,
+          "title": "Good 4 U",
+          "artist": "Olivia Rodrigo"
+        },
+        {
+          "id": "97aa087b-5fa2-42ff-bd48-d162862cdc95",
+          "date": "2021-05-14",
+          "score": 77,
+          "title": "good 4 u",
+          "artist": "Olivia Rodrigo"
+        },
+        {
+          "id": "c0f4542d-bb04-4e4a-aa2f-89b346934a7a",
+          "date": "2021-09-12",
+          "score": 77,
+          "title": "good 4 u",
+          "artist": "Olivia Rodrigo"
+        },
+        {
+          "id": "3f871dc2-ce65-46c0-a9e4-4cb83d1359a3",
+          "date": "2021",
+          "score": 77,
+          "title": "good 4 u",
+          "artist": "Olivia Rodrigo"
+        },
+        {
+          "id": "3317fb20-7b5e-4905-92d1-8da68f5da27e",
+          "date": "2021-05-14",
+          "score": 77,
+          "title": "good 4 u",
+          "artist": "Olivia Rodrigo"
+        }
+      ]
+    },
+    {
+      "songId": "song_a96f10765d4e1a3241de",
+      "title": "Angel Baby",
+      "artist": "Troye Sivan",
+      "answerYear": 2021,
+      "reason": "low_search_score",
+      "earliestYear": 2021,
+      "candidates": [
+        {
+          "id": "055b91cb-af4e-439c-b9e4-4ac16c6f92b3",
+          "date": "2021-09-10",
+          "score": 80,
+          "title": "Angel Baby",
+          "artist": "Troye Sivan"
+        }
+      ]
+    },
+    {
+      "songId": "song_dc27bdd53cdf7e65056f",
+      "title": "YOUTH",
+      "artist": "Troye Sivan",
+      "answerYear": 2021,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 2015,
+      "candidates": [
+        {
+          "id": "c8a0a03f-242d-4bf0-bb82-80ed0138e9f4",
+          "date": "2015-11-13",
+          "score": 73,
+          "title": "YOUTH",
+          "artist": "Troye Sivan"
+        }
+      ]
+    },
+    {
+      "songId": "song_b348502c61671643acd9",
+      "title": "Bloom",
+      "artist": "Troye Sivan",
+      "answerYear": 2022,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 2018,
+      "candidates": [
+        {
+          "id": "c45abe48-2fd0-4327-9b84-cc5c6d628930",
+          "date": "2018-05-02",
+          "score": 74,
+          "title": "Bloom",
+          "artist": "Troye Sivan"
+        }
+      ]
+    },
+    {
+      "songId": "song_7244bd6ca062dc6a0c23",
+      "title": "What a Heavenly Way to Die",
+      "artist": "Troye Sivan",
+      "answerYear": 2022,
+      "reason": "earlier_exact_recording",
+      "earliestYear": 2018,
+      "candidates": [
+        {
+          "id": "c5960adc-34bf-4f82-a597-b6f909fc5c69",
+          "date": "2018-08-31",
+          "score": 100,
+          "title": "What a Heavenly Way to Die",
+          "artist": "Troye Sivan"
+        }
+      ]
+    }
+  ]
+}

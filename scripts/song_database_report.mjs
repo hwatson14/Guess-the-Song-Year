@@ -8,7 +8,7 @@ for(const song of Object.values(db.songs)){
   for(const provider of ['spotify','youtube']){
     const assets=song.providers[provider].links,stats=result.providers[provider];
     if(assets.length)stats.linked++;else{stats.missing++;missing.push(provider)}
-    if(assets.some(x=>x.state==='metadata_checked'))stats.metadataChecked++;
+    if(assets.some(x=>x.metadataCheck||x.state==='metadata_checked'||x.state==='verified'))stats.metadataChecked++;
     if(assets.some(x=>x.state==='verified'))stats.verified++;
   }
   if(missing.length)result.pendingLinks.push({songId:song.id,title:song.title,artist:song.artist,missing});

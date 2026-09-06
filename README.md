@@ -10,7 +10,7 @@ See [AGENTS.md](AGENTS.md), [current status and roadmap](docs/STATUS_AND_ROADMAP
 
 ## Current scope
 
-- Five clearly labelled music modes (see the status table below)
+- Five clearly labelled playable music modes (see the status table below)
 - Two play styles: **Real cards** and **Virtual**
 - 1–6 teams
 - Adjustable 1950–2022 year range, saved with each match
@@ -43,15 +43,17 @@ After placement is marked, the active team can claim **Bonus point +1** only if 
 | #1 US | Beta | 73/73 years | One fixed US chart leader per chart year |
 | #1 Australia | Beta | 73/73 years | One fixed Australian chart leader per chart year |
 
-Coverage counts usable songs after the runtime filter. Catalogue v18 contains 1,106 master song records across 1,298 mode placements: 877 Greatest Hits (at least 12 per year), 235 Australian, 40 Unexpected Years, and 73 in each chart mode. Every stored row is usable. A global identity/provider-ID regression check prevents the same master identity or provider recording ID from reappearing under multiple song records. Original cleanup records remain accounted for in the archive; the expansion ledger retains source recording metadata and withdrawn alias decisions. Run `node scripts/catalogue_summary.mjs` for runtime counts and `node scripts/song_database_report.mjs` for provider coverage. Legacy release evidence and exact playback-recording verification remain incomplete, so status stays Beta/Preview.
+Coverage counts usable songs after the runtime filter. Catalogue v18 contains 1,106 master song records across 1,298 active mode placements: 877 Greatest Hits (at least 12 per year), 235 Australian, 40 Unexpected Years, and 73 in each chart mode. Every stored active row is usable. A global identity/provider-ID regression check prevents the same master identity or provider recording ID from reappearing under multiple song records. Original cleanup records remain accounted for in the archive; the expansion ledger retains source recording metadata and withdrawn alias decisions. Run `node scripts/catalogue_summary.mjs` for runtime counts and `node scripts/song_database_report.mjs` for provider coverage.
 
-No mode is currently labelled **Ready**. `data/modes.json` is the product source of truth for these labels and their explanations. A sparse mode never silently falls back to another mode: Virtual play deals only supported years, while Real cards report an unavailable year and let the player scan another card or change mode.
+P1 evidence hardening has independently observed release-year evidence for 857 masters; 249 remain unresolved. The latest sweep confirmed 40 previously unresolved master years without changing any answer year automatically. Legacy release evidence and exact playback-recording verification remain incomplete, so status stays Beta/Preview.
+
+No mode is currently labelled **Ready**. `data/modes.json` is the product source of truth for these labels and their explanations. A sparse mode never silently falls back to another mode: Virtual play deals only supported years, while Real cards report an unavailable year and let the player scan another card or change mode. Additional requested modes are declared as Building until their data and mechanics satisfy the release gate.
 
 ## Architecture
 
 - `app-policy.js` - testable runtime policy for error classification, Back interception and timeline placement
 - `PRODUCTION_CONTRACT.md` - authoritative integration requirements for runtime, cards and catalogue data
-- `verification/` - physical-card identity audit, unresolved-year ledger and capture/import protocol
+- `verification/` - physical-card identity audit, release/provider review ledgers and capture/import protocol
 
 - `index.html` — minimal app shell
 - `app.css` — consolidated visual system
@@ -66,22 +68,26 @@ No mode is currently labelled **Ready**. `data/modes.json` is the product source
 - `scripts/validate_catalogue.py` / `scripts/validate_modes.py` — validate the status-aware catalogue contract
 - `scripts/build_catalogue.py` — legacy catalogue builder; catalogue generation is not part of runtime gameplay
 
-Each master song has an immutable ID, title, artist, a master `release.answerYear` for release-year gameplay, release evidence, and Spotify/YouTube links. Separate memberships tag it for Greatest Hits, Australian, Unexpected Years or chart modes, retaining chart-year semantics. A verified preferred provider link applies across all memberships. Imported links are candidates until reviewed; metadata availability alone does not prove the exact recording. Missing IDs continue to use the existing search flow.
+Each master song has an immutable ID, title, artist, a master `release.answerYear` for release-year gameplay, release evidence, and Spotify/YouTube links. Separate memberships tag it for release, chart, screen or alternate-playback modes according to the declared mode semantics. A verified preferred provider link applies across compatible memberships. Ordinary imported links are candidates until reviewed; metadata availability alone does not prove the exact recording. Missing IDs continue to use the existing search flow.
 
-Provider maintenance commands:
+Provider and evidence maintenance commands:
 
+- `python scripts/harden_release_evidence.py --write` researches unresolved master years conservatively. It can confirm the existing `release.answerYear`; earlier/ambiguous/low-confidence evidence goes to a review queue rather than changing gameplay truth.
+- `python scripts/harden_provider_links.py --write` researches provider URLs tied directly to accepted MusicBrainz recordings. Automatic verification is restricted to recording-level `free streaming` / `streaming` relationships plus matching provider identity/version metadata.
 - `node scripts/import_provider_candidates.mjs --write` imports candidate references and completed metadata observations.
 - `node scripts/integrate_recording_links.mjs --write` checks MusicBrainz URL proposals against retained source responses before adding candidates.
 - `node scripts/provider_review_report.mjs --write` writes missing links, differing credits and live/performance review flags to `verification/provider-review-queue.json`.
 - `node scripts/song_database_report.mjs --write` refreshes aggregate coverage.
 
-Transient metadata request failures preserve earlier observations. None of these importers promotes a candidate into a preferred playback recording. Explicit reviewed decisions in `verification/provider-recording-decisions.json` are applied with `node scripts/promote_reviewed_links.mjs --write`. This gate checks recording identity, provider metadata, version annotations, release year and the direct source relationship; audio-audition status remains explicit. Cached search results are invalidated when the catalogue selects a different provider ID.
+Transient metadata request failures preserve earlier observations. Bulk importers do not promote a candidate merely because metadata exists. Explicit reviewed decisions in `verification/provider-recording-decisions.json` remain supported through `node scripts/promote_reviewed_links.mjs --write`. The automated hardening path is narrower: it requires accepted master recording provenance, a playback-relevant MusicBrainz streaming relationship, exact year/recording compatibility, provider identity checks and no alternate-version flags. Audio-audition status remains explicit.
+
+Spotify static catalogue IDs, cached IDs and searched tracks are all identity-checked before playback. The expected lead artist is compared against individual Spotify artist credits with a strong match floor; a mismatched static/cached candidate is discarded rather than trusted. Only a 404 is treated as a missing candidate; other Spotify API failures propagate as provider errors. Cached search results are also invalidated when the catalogue selects a different provider ID.
 
 ## Core invariant
 
-For every played card, the selected song must come from the chosen mode's bucket for that card year. Runtime mode or year fallback is not permitted. Release-year modes use the recording's release year; the two #1 modes use chart year.
+For every played card, the selected song must come from the chosen mode's bucket for that card year. Runtime mode or year fallback is not permitted. Release-year modes use the canonical master answer year; the two #1 modes use chart year; future screen/alternate-playback modes follow their explicit declared semantics.
 
-The existing catalogue still needs further human curation for canonical release-year quality and recognisability. The v7 runtime filter removes obvious remix/live/backing-track duplicates, but this is not a substitute for a fully curated canonical catalogue.
+The existing catalogue still needs further human curation for canonical release-year quality and recognisability. Runtime filtering removes obvious remix/live/backing-track duplicates, but this is not a substitute for a fully curated canonical catalogue.
 
 ## Deployment
 

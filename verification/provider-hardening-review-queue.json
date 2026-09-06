@@ -1,0 +1,136 @@
+{
+  "generatedAt": "2026-09-06",
+  "policy": "musicbrainz-recording-provider-v1",
+  "counts": {
+    "targeted": 100,
+    "recordingsFetched": 100,
+    "recordingsCached": 0,
+    "recordingRejected": 3,
+    "linksAdded": 3,
+    "spotifyVerified": 1,
+    "youtubeVerified": 0,
+    "ambiguous": 3,
+    "providerFailures": 7
+  },
+  "queue": [
+    {
+      "songId": "song_051e61aa849723da67d8",
+      "provider": "spotify",
+      "reason": "multiple_qualifying_recording_links",
+      "ids": [
+        "0HpukCAAHgTFpQ4eAZFr9z",
+        "3Q51wrTPUlHfDHzMtvsPt3",
+        "4EeN4nZiGWLVUo4fv9Hqjm"
+      ]
+    },
+    {
+      "songId": "song_26c7acdc070a54fc122c",
+      "provider": "spotify",
+      "id": "2YSYE2xK7oMuli7hCPgerg",
+      "reason": "provider_title_differs",
+      "observedTitle": "Read About It - Remastered Version",
+      "observedArtist": [
+        "Midnight Oil"
+      ]
+    },
+    {
+      "songId": "song_36a4bb88103ff1cdfc9c",
+      "provider": "spotify",
+      "id": "1id6H6vcwSB9GGv9NXh5cl",
+      "reason": "provider_title_differs",
+      "observedTitle": "Song 2 - 2012 Remaster",
+      "observedArtist": [
+        "Blur"
+      ]
+    },
+    {
+      "songId": "song_36a4bb88103ff1cdfc9c",
+      "provider": "spotify",
+      "id": "6nvpBmQiX9LpT2dXmCJWaP",
+      "reason": "provider_title_differs",
+      "observedTitle": "Song 2 - 2012 Remaster",
+      "observedArtist": [
+        "Blur"
+      ]
+    },
+    {
+      "songId": "song_4c935c55014d0706ce86",
+      "provider": "all",
+      "reason": "recording_artist_differs",
+      "recordingId": "7c5b6609-0e04-4ea4-a871-513301db8c9a"
+    },
+    {
+      "songId": "song_8b75051914f4ef45a5ed",
+      "provider": "spotify",
+      "id": "77smrLzHIscpKxwU11m7Hs",
+      "reason": "provider_title_differs",
+      "observedTitle": "No Time for Games - Remastered",
+      "observedArtist": [
+        "Midnight Oil"
+      ]
+    },
+    {
+      "songId": "song_8c7dc668666965c2543e",
+      "provider": "all",
+      "reason": "recording_title_differs",
+      "recordingId": "4d1bb5a1-14ba-438d-b96d-070704f400f5"
+    },
+    {
+      "songId": "song_a03a803fd37407d174ff",
+      "provider": "all",
+      "reason": "recording_artist_differs",
+      "recordingId": "5081d9f7-f3f9-4f90-a0b1-b18bd320900c"
+    },
+    {
+      "songId": "song_ac9a83675c3db8a0cadb",
+      "provider": "spotify",
+      "reason": "multiple_qualifying_recording_links",
+      "ids": [
+        "0KDaN0HL3TcJVTbXlQCEsS",
+        "0tQMg8pVBMS0ii2o3we06F",
+        "2HXSjnfVfBtc1kKawVhSd7",
+        "4O8cZQ7KMBuH7vJ9sb5gX0"
+      ]
+    },
+    {
+      "songId": "song_ce4e4885477c44a97e5e",
+      "provider": "spotify",
+      "reason": "multiple_qualifying_recording_links",
+      "ids": [
+        "1fp0rsgDH1M1WfQ5bYwLYi",
+        "6f4D6NFibo9GXVPUpGqo6E",
+        "7kwz4URSSeZpIyGBPt1r2u"
+      ]
+    },
+    {
+      "songId": "song_cfeb8c3e4e81231c3045",
+      "provider": "spotify",
+      "id": "3ddhKSsc4D0NqPzJJjs17z",
+      "reason": "provider_title_differs",
+      "observedTitle": "Running Up That Hill (A Deal With God) - 12\" Mix",
+      "observedArtist": [
+        "Kate Bush"
+      ]
+    },
+    {
+      "songId": "song_dcfd697adedc5422a404",
+      "provider": "spotify",
+      "id": "2hkDSauUXpjheTiwY55gU7",
+      "reason": "provider_title_differs",
+      "observedTitle": "That's The Way A Woman Feels",
+      "observedArtist": [
+        "Tina Arena"
+      ]
+    },
+    {
+      "songId": "song_fbe918f110870c9f1e1d",
+      "provider": "spotify",
+      "id": "4UCTgh5jvtqoaMX6MAhUNn",
+      "reason": "provider_title_differs",
+      "observedTitle": "Personal Jesus - Single Version",
+      "observedArtist": [
+        "Depeche Mode"
+      ]
+    }
+  ]
+}

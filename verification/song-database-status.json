@@ -6,18 +6,18 @@
       "linked": 604,
       "missing": 502,
       "metadataChecked": 604,
-      "verified": 3
+      "verified": 4
     },
     "youtube": {
       "linked": 430,
       "missing": 676,
-      "metadataChecked": 415,
+      "metadataChecked": 416,
       "verified": 0
     }
   },
   "releaseEvidence": {
-    "unresolved": 289,
-    "externally_observed": 817
+    "unresolved": 249,
+    "externally_observed": 857
   },
   "greatestDepth": {
     "1950": {
