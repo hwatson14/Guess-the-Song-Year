@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 1,
   "modes": {
     "greatest": {
       "name": "Greatest Hits",
@@ -50,47 +50,6 @@
       "statusNote": "Complete chart-year list; one fixed leader per year may repeat.",
       "yearBasis": "chart",
       "repeatPolicy": "fixed"
-    },
-    "movie_themes": {
-      "name": "Movie Themes",
-      "short": "Movies",
-      "desc": "Hear a recognisable movie song or theme and place the movie's release year.",
-      "status": "preview",
-      "statusLabel": "Preview",
-      "statusNote": "Reviewed preview relationships only; more seed candidates are being verified.",
-      "yearBasis": "screen",
-      "repeatPolicy": "unique"
-    },
-    "tv_themes": {
-      "name": "TV Themes",
-      "short": "TV",
-      "desc": "Hear a TV theme or signature song and place the show's Season 1 / premiere year.",
-      "status": "preview",
-      "statusLabel": "Preview",
-      "statusNote": "Reviewed preview relationships only; more seed candidates are being verified.",
-      "yearBasis": "screen",
-      "repeatPolicy": "unique"
-    },
-    "screen_themes": {
-      "name": "TV & Movie Themes",
-      "short": "Screen",
-      "desc": "Movie and TV theme relationships combined from the two source modes.",
-      "status": "preview",
-      "statusLabel": "Preview",
-      "statusNote": "Derived automatically from reviewed Movie Themes and TV Themes relationships.",
-      "yearBasis": "screen",
-      "repeatPolicy": "unique",
-      "compositeOf": ["movie_themes", "tv_themes"]
-    },
-    "remix_original_year": {
-      "name": "Remix: Original Year",
-      "short": "Remix",
-      "desc": "Hear a reviewed remix, but place the original song's release year.",
-      "status": "preview",
-      "statusLabel": "Preview",
-      "statusNote": "Only explicit reviewed remix recordings are playable; original song identity and year remain canonical.",
-      "yearBasis": "original",
-      "repeatPolicy": "unique"
     }
   }
 }
