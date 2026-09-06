@@ -1,0 +1,48 @@
+name: Live production smoke verification
+
+on:
+  push:
+    branches: [chatgpt/p0-canonical-year]
+
+permissions:
+  contents: read
+
+jobs:
+  live-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch deployed production assets
+        run: |
+          set -euo pipefail
+          base='https://hwatson14.github.io/Guess-the-Song-Year'
+          curl --fail --silent --show-error --retry 5 --retry-delay 2 "$base/" -o /tmp/live-index.html
+          curl --fail --silent --show-error --retry 5 --retry-delay 2 "$base/engine.js?v=7.6.1" -o /tmp/live-engine.js
+          curl --fail --silent --show-error --retry 5 --retry-delay 2 "$base/engine-v7.js?v=7.6.1" -o /tmp/live-engine-v7.js
+          curl --fail --silent --show-error --retry 5 --retry-delay 2 "$base/data/catalogue.json?v=7.6.1" -o /tmp/live-catalogue.json
+      - name: Verify deployed version and stable runtime identity
+        run: |
+          set -euo pipefail
+          grep -F './app.js?v=7.6.1' /tmp/live-index.html
+          grep -F "./data/catalogue.json?v=7.6.1" /tmp/live-engine.js
+          grep -F 'if(song?.songId)return String(song.songId);' /tmp/live-engine-v7.js
+          node <<'NODE'
+          const fs=require('fs');
+          const data=JSON.parse(fs.readFileSync('/tmp/live-catalogue.json','utf8'));
+          let placements=0;
+          const ids=new Set();
+          for(const [mode,buckets] of Object.entries(data.modes||{})){
+            for(const [bucket,rows] of Object.entries(buckets||{})){
+              for(const row of rows||[]){
+                placements++;
+                if(!/^song_[0-9a-f]{20}$/.test(String(row.songId||'')))throw new Error(`invalid songId ${mode}/${bucket}`);
+                if(Number(row.year)!==Number(bucket))throw new Error(`bucket/year mismatch ${mode}/${bucket}/${row.title}`);
+                if(!row.canonicalKey)throw new Error(`missing canonicalKey ${mode}/${bucket}/${row.title}`);
+                ids.add(row.songId);
+              }
+            }
+          }
+          if(placements!==1299)throw new Error(`expected 1299 placements, got ${placements}`);
+          if(ids.size!==1118)throw new Error(`expected 1118 unique master IDs, got ${ids.size}`);
+          if(data.coverage?.greatest!==73||data.coverage?.australian!==73||data.coverage?.unexpected!==40||data.coverage?.number1_us!==73||data.coverage?.number1_au!==73)throw new Error('live coverage map changed');
+          console.log(JSON.stringify({production:true,placements,uniqueSongIds:ids.size,coverage:data.coverage}));
+          NODE
