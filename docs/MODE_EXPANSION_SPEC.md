@@ -18,11 +18,42 @@ These are two new mode families: **screen themes** and **remix/original-year**.
 - Keep the existing min/max year selector and all normal game flow behaviour.
 - Never silently fall back to another mode or year.
 - Canonical song identity stays shared across modes.
-- New themed modes are memberships/relationships over canonical songs, not copied master records.
-- The combined TV & Movie mode must be derived from the two source theme modes and deduplicated by canonical `songId`.
+- New themed modes are relationships/memberships over canonical songs, not copied master records.
+- The combined TV & Movie mode must be derived from the two source theme modes, not curated independently.
 - Provider failures must never redefine the answer year.
 - Physical-card mode and Virtual mode must use the same answer-year semantics.
 - Do not expose a mode as playable until it has at least one valid pool; initial lifecycle status may be `building` or `preview`.
+
+## Screen-theme year rule
+
+Harry explicitly chose **screen-work release year**, not song release year.
+
+- **Movie Themes:** the answer is the release year of the movie the theme represents.
+- **TV Themes:** the answer is the premiere year of the TV show, meaning **Season 1 / series premiere year**.
+- **TV & Movie Themes:** inherits the appropriate movie or TV rule from each source membership.
+- The song's own `release.answerYear` remains canonical music metadata and must not be overwritten by the screen-work year.
+- The card/year bucket, generated runtime `song.year`, reveal answer, and year-range filtering for these modes must all use the screen-work answer year.
+
+This requires an explicit new mode year basis rather than overloading the existing `release` basis. Recommended manifest value: `yearBasis: "screen"`.
+
+## Screen-work model
+
+Store a first-class or otherwise stable screen-work relationship so answer-year truth is reviewable independently from song truth.
+
+Recommended fields:
+
+- `screenWorkId` — immutable/stable work identifier
+- `workType: "movie" | "tv"`
+- `workTitle`
+- `workAnswerYear`
+  - movie: verified movie release year
+  - TV: verified Season 1 / series premiere year
+- optional `themeRole`, such as `main-theme`, `title-theme`, `signature-theme`, `soundtrack-signature`
+- evidence/provenance for the work title and answer year
+
+The playable theme identity is a **song-to-screen-work relationship**, not merely a song tagged with a mode.
+
+If the same canonical song is associated with more than one screen work, do not create ambiguous gameplay where identical audio could imply different answer years. Prefer one primary association, or a distinct reviewed recording/context that makes the intended work unambiguous.
 
 ## 1. Movie Themes
 
@@ -30,18 +61,19 @@ Proposed mode ID: `movie_themes`.
 
 Purpose: play recognisable movie themes, soundtrack themes, title themes, or strongly movie-associated theme recordings.
 
-### Tentative year semantics
+### Answer-year rule
 
-Until Harry explicitly chooses otherwise, preserve the core **Guess the Song Year** mechanic: the answer year is the canonical recording/song's `release.answerYear`, not the film's premiere year.
+The answer year is `workAnswerYear` for the represented **movie**, not the song's `release.answerYear`.
 
-Store screen-work context separately so a future film-year variant remains possible without rewriting song truth:
+Example:
 
-- `workType: "movie"`
-- `workTitle`
-- `workYear` (film release year when verified)
-- optional `themeRole` such as `main-theme`, `title-theme`, `signature-theme`, `soundtrack-signature`
+```text
+canonical song / recording -> remains music truth
+movie relationship -> Movie X, release year 1999
+movie_themes membership -> answer year 1999
+```
 
-A future product decision may choose to make the film's release year the answer instead. If so, introduce an explicit new year basis rather than overloading canonical song release year.
+The song may have been released in a different year. That difference is intentional and must not alter canonical music metadata.
 
 ## 2. TV Themes
 
@@ -49,14 +81,16 @@ Proposed mode ID: `tv_themes`.
 
 Purpose: play recognisable television themes/title themes.
 
-Use the same canonical-song model and tentative song-release answer semantics as Movie Themes.
+### Answer-year rule
 
-Recommended membership metadata:
+The answer year is the **Season 1 / series-premiere year** of the represented TV show.
 
-- `workType: "tv"`
-- `workTitle`
-- `workYear` (series premiere or relevant theme-introduction year when verified)
-- optional `themeRole`
+This remains true even if:
+
+- the theme recording itself was released earlier or later; or
+- the exact theme arrangement was introduced in a later season.
+
+If a later-season theme would make the intended series association unclear, omit or separately review it rather than changing the show's answer year.
 
 Do not create duplicate canonical songs just because the same recording appears across multiple series, films, or other modes.
 
@@ -71,11 +105,12 @@ This mode is exactly the union of `movie_themes` and `tv_themes`.
 Do **not** manually curate a third set of source memberships. Derive it deterministically from the two source modes during compilation/runtime generation.
 
 - union source mode memberships
-- deduplicate by canonical `songId` within each answer-year bucket
-- preserve source context so Reveal can identify whether the item came from a movie or TV show
-- if one song legitimately belongs to both, keep one playable canonical song with both contexts available where practical
+- preserve each membership's `screenWorkId`, `workType`, `workTitle`, and `workAnswerYear`
+- deduplicate duplicate **song-to-work relationships**, preferably by stable membership/work identity rather than blindly by `songId`
+- preserve source context so Reveal identifies the movie or TV show
+- if the same song legitimately represents two different works, treat that as an ambiguity/curation case rather than silently collapsing or assigning two hidden answer years to indistinguishable audio
 
-This prevents divergence between the combined mode and its two components.
+This prevents divergence between the combined mode and its two components while preserving correct screen-work year semantics.
 
 ## 4. Remix: Original Year
 
@@ -125,28 +160,38 @@ No-repeat remains keyed to the canonical original `songId`, not the remix provid
 
 The current compiler hard-codes release-mode IDs and supported mode IDs. Expansion should replace brittle mode-ID tests with declared mode semantics where possible.
 
-Recommended future manifest concepts:
+Recommended manifest concepts:
 
-- `yearBasis`: existing `release` / `chart`, with any new basis added explicitly if required
+- `yearBasis`: `release`, `chart`, or new `screen`
 - `repeatPolicy`
 - optional `compositeOf: ["movie_themes", "tv_themes"]`
 - optional playback policy such as `playbackVariant: "remix"` or membership-explicit playback selection
+
+Compiler semantics should be:
+
+- `release` -> master song `release.answerYear`
+- `chart` -> membership/chart year
+- `screen` -> verified screen-work `workAnswerYear`
 
 Do not make `screen_themes` a third independently maintained membership set.
 
 ## Suggested delivery order
 
 1. Generalise mode/compiler validation so new declared modes are not hard-coded in multiple files.
-2. Add Movie Themes and TV Themes source membership support.
-3. Derive TV & Movie Themes automatically.
-4. Add explicit alternate-recording/playback-reference support for Remix: Original Year.
-5. Curate reviewed seed catalogues and provider assets.
-6. Run the full `node scripts/check.mjs` suite before making any new mode selectable.
+2. Add a screen-work relationship model and `screen` year basis.
+3. Add Movie Themes and TV Themes source memberships with verified work years.
+4. Derive TV & Movie Themes automatically.
+5. Add explicit alternate-recording/playback-reference support for Remix: Original Year.
+6. Curate reviewed seed catalogues and provider assets.
+7. Run the full `node scripts/check.mjs` suite before making any new mode selectable.
 
 ## Acceptance criteria
 
 - All four mode names appear as first-class product modes once playable.
-- TV & Movie Themes exactly reflects the union of the two source theme modes, modulo canonical dedupe.
+- Movie Themes reveals/scores the represented movie's release year, regardless of the song's release year.
+- TV Themes reveals/scores the represented show's Season 1 / series-premiere year, regardless of the theme recording's release year.
+- TV & Movie Themes exactly reflects the union of the two source theme modes without an independently curated third catalogue.
+- Screen-work answer years never overwrite canonical song release truth.
 - Remix mode always answers with original release year even when the played remix was released much later.
 - A remix provider ID never overwrites canonical song identity or release truth.
 - Year filtering, no-repeat, Resume, scoring, physical cards, Virtual cards, Spotify, and YouTube semantics remain intact.
