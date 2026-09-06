@@ -13,7 +13,6 @@
   Object.assign(E.MODES,modeMeta);
 
   const baseLoadCatalogue=E.loadCatalogue.bind(E);
-  const baseResolveSong=E.resolveSong.bind(E);
   let overlayPromise=null,expandedPromise=null,diagnostics=null;
 
   const norm=value=>String(value??'').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g,' ').trim();
@@ -155,9 +154,18 @@
 
   E.resolveSong=async function(song,kind=E.getProvider()){
     if(song?.playbackVariant==='remix'){
-      const explicit=kind==='spotify'?song.spotifyId:kind==='youtube'?song.youtubeId:'';
-      if(!explicit)throw new E.AppError('REMIX_PROVIDER_UNAVAILABLE',`No reviewed ${kind} recording is available for this remix.`);
+      if(kind==='spotify'){
+        const id=String(song.spotifyId||'');
+        if(!id)throw new E.AppError('REMIX_PROVIDER_UNAVAILABLE','No reviewed Spotify recording is available for this remix.');
+        return {provider:'spotify',id,uri:`spotify:track:${id}`,url:`https://open.spotify.com/track/${id}`,title:song.remixTitle||song.title,artist:song.artist,song};
+      }
+      if(kind==='youtube'){
+        const id=String(song.youtubeId||'');
+        if(!id)throw new E.AppError('REMIX_PROVIDER_UNAVAILABLE','No reviewed YouTube recording is available for this remix.');
+        return {provider:'youtube',matchPolicy:'reviewed-remix-explicit',videoId:id,candidateIds:[id],url:`https://www.youtube.com/watch?v=${id}`,title:song.remixTitle||song.title,artist:song.artist,song};
+      }
+      throw new E.AppError('REMIX_PROVIDER_UNAVAILABLE',`No reviewed ${kind} recording is available for this remix.`);
     }
-    return baseResolveSong(song,kind);
+    return window.GSYEngineBaseResolveSong?window.GSYEngineBaseResolveSong(song,kind):Promise.reject(new E.AppError('RESOLVER_UNAVAILABLE','The music resolver is unavailable.'));
   };
 })();
