@@ -26,10 +26,13 @@ jobs:
         run: |
           node scripts/migrations/2026-09-06-canonical-year-v2.mjs --write
           node scripts/migrations/2026-09-06-canonical-year-v2-followup.mjs --write
+          node scripts/migrations/2026-09-06-canonical-year-v2-verification-followup.mjs --write
       - name: Rebuild generated catalogue and status
         run: |
           node scripts/song_database.mjs build
           node scripts/song_database_report.mjs --write
+      - name: Prove v1 to v2 runtime parity
+        run: node scripts/migrations/verify-v1-v2-parity.mjs
       - name: Full validation gate
         run: node scripts/check.mjs
       - name: Diff hygiene
