@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import {compileDatabase} from './song_database.mjs';
+import modes from '../data/modes.json' with {type:'json'};
 
 const databasePath='data/song-database.json';
 const cataloguePath='data/catalogue.json';
@@ -29,6 +30,11 @@ for(const rejected of superseded){
   const list=song.release.rejectedClaims??=[];
   if(!list.some(c=>Number(c.year)===rejected.year&&c.sourceUrl===rejected.sourceUrl)){
     list.push({year:rejected.year,state:'rejected',sourceUrl:rejected.sourceUrl,evidence:rejected.evidence,rejectedReason:rejected.rejectedReason});
+  }
+  for(const membership of db.memberships.filter(m=>m.songId===rejected.songId&&modes.modes?.[m.mode]?.yearBasis==='release')){
+    membership.metadata??={};
+    membership.metadata.source='unexpected-years-release-correction';
+    membership.metadata.sourceLabel='Reviewed release-year correction during Unexpected Years expansion';
   }
 }
 const compiled=compileDatabase(db);
