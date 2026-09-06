@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 
 const catalogue=JSON.parse(fs.readFileSync(new URL('../data/catalogue.json',import.meta.url),'utf8'));
+const db=JSON.parse(fs.readFileSync(new URL('../data/song-database.json',import.meta.url),'utf8'));
 const buckets=catalogue.modes.greatest;
 const all=Object.entries(buckets).flatMap(([bucket,songs])=>songs.map(song=>({bucket:Number(bucket),song})));
 const wikipedia=all.filter(({song})=>song.releaseYearEvidence==='Wikipedia song/single infobox release date');
@@ -24,9 +25,10 @@ expect('Candle in the Wind 1997',1997);
 
 const tears=buckets['1966'].find(song=>song.title==='96 Tears'&&String(song.artist).includes('Mysterians'));
 if(!tears||tears.releaseYearEvidence!=='Wikipedia song/single infobox release date')throw new Error('the original 96 Tears recording lacks release evidence');
-const candle=buckets['1997'].find(song=>song.title==='Candle in the Wind 1997'&&song.artist==='Elton John');
-if(!candle||candle.evidenceState!=='externally_observed'||!String(candle.sourceUrl||'').startsWith('https://www.officialcharts.com/'))throw new Error('Candle in the Wind 1997 must carry accepted 1997 release evidence');
+const candle=db.songs.song_116456e15d49e88cb6fa;
+if(!candle||candle.release?.state!=='externally_observed'||Number(candle.release?.year)!==1997||Number(candle.release?.answerYear)!==1997)throw new Error('Candle in the Wind 1997 must have accepted canonical 1997 release state');
+if(!(candle.release.claims||[]).some(claim=>claim.state==='externally_observed'&&Number(claim.year)===1997&&String(claim.sourceUrl||'').startsWith('https://www.officialcharts.com/')))throw new Error('Candle in the Wind 1997 must retain its Official Charts release evidence');
 const covered=Object.keys(buckets).map(Number).filter(year=>buckets[year].length);
 const missing=Array.from({length:73},(_,i)=>1950+i).filter(year=>!covered.includes(year));
 if(catalogue.coverage.greatest!==covered.length||JSON.stringify(catalogue.missing.greatest)!==JSON.stringify(missing))throw new Error("Greatest coverage metadata must agree with the actual catalogue");
-console.log('Greatest release-year provenance checks passed (76 Wikipedia rows plus accepted supplemental evidence)');
+console.log('Greatest release-year provenance checks passed (76 Wikipedia rows plus accepted master evidence)');
