@@ -1,4 +1,5 @@
 import importlib.util
+import json
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -46,4 +47,19 @@ assert synthetic['memberships'][0]['metadata']['evidenceState']=='externally_obs
 assert synthetic['memberships'][1]['metadata']['evidenceState']=='externally_observed'
 assert synthetic['memberships'][2]['metadata']=={}
 
-print('evidence/provider hardening policy regressions passed')
+# Every automatically promoted production provider asset must have recording-level
+# streaming provenance. Manual reviewed assets are governed by their separate decision ledger.
+db=json.loads((ROOT/'data/song-database.json').read_text(encoding='utf-8'))
+automated=[]
+for production_song in db['songs'].values():
+    for provider_name,bucket in production_song.get('providers',{}).items():
+        for asset in bucket.get('links',[]):
+            if asset.get('state')=='verified' and asset.get('evidence',{}).get('automatedPolicy'):
+                automated.append((production_song['id'],provider_name,asset))
+                assert asset.get('origin')=='musicbrainz-recording-url-relation'
+                assert str(asset.get('relationship','')).lower() in {'free streaming','streaming'}
+                assert asset.get('recordingId')==asset.get('evidence',{}).get('recordingId')
+                assert asset.get('sourceUrl')==asset.get('evidence',{}).get('sourceUrl')
+assert automated, 'P1 should retain at least one automatically verified recording-linked provider asset'
+
+print(f'evidence/provider hardening policy regressions passed; automated verified assets={len(automated)}')
