@@ -31,6 +31,7 @@ After placement is marked, the active team can claim **Bonus point +1** only if 
 New games start each team with **2 bonus points**. Existing matches retain their balances.
 
 - **1 bonus point:** skip the current card, see its title, artist and year, then tap **Next song** to continue the same team's turn.
+- **Broken playback:** tap **Song not working? Skip free**, even with no bonus points. The skipped answer is shown, then **Next song** continues the same team's turn without changing its score or bonus balance. Playback-error recovery is also explicitly labelled free; if no song could be prepared, deal or scan another card directly.
 - **1 bonus point:** attempt a steal before the answer is revealed. **Reveal** goes straight to the answer; **Steal** opens the optional challenge flow. Each opposing team can lock one different gap on the active team's timeline, in the order they called. Challengers cannot reuse the active placement or another challenge's gap. If the active team is wrong, the first correct challenger gets the card on their own timeline and one card toward victory. A correct active placement always keeps the card, including same-year ties. Every committed challenge spends its point, regardless of outcome.
 - **5 bonus points:** reveal and add a separate unused year card, earning one card toward victory without spending the turn. The current hidden card stays unchanged.
 - A failed bonus draw costs nothing. Provider-error recovery remains free.
