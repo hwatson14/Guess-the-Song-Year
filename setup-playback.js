@@ -8,6 +8,7 @@
   let scheduled=false,pickerOpen=false,deviceSeq=0;
   let cachedDevices=[],cachedAt=0,devicePromise=null;
   const DEVICE_CACHE_MS=15000;
+  const renderedOptions=new WeakMap();
 
   const esc=s=>String(s??'').replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));
   const setText=(el,value)=>{if(el&&el.textContent!==String(value??''))el.textContent=String(value??'')};
@@ -150,7 +151,9 @@
       options.push(`<option value="${esc(item.id)}" ${selected===item.id?'selected':''}>${esc(item.name||'Spotify device')}${item.type?` · ${esc(item.type)}`:''}${item.is_active?' · active':''}</option>`);
     }
     const html=options.join('');
-    if(select.innerHTML!==html)select.innerHTML=html;
+    // innerHTML normalizes boolean attributes (selected -> selected="").
+    // Compare our last input instead of repeatedly rewriting equivalent DOM.
+    if(renderedOptions.get(select)!==html){select.innerHTML=html;renderedOptions.set(select,html)}
     setText(help,devices.length?'Choose Automatic to follow Spotify’s active device.':'Open Spotify on the target device and play/pause once, then refresh.');
     syncPickerVisibility(panel);
   }
@@ -202,6 +205,8 @@
   }
 
   const observer=new MutationObserver(schedule);
-  observer.observe(root,{childList:true,subtree:true});
+  // app.js replaces root's children on render. Nested changes belong to this
+  // panel; observing them would feed our own device/status writes back into sync.
+  observer.observe(root,{childList:true});
   schedule();
 })();

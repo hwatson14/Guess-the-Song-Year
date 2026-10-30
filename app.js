@@ -385,8 +385,9 @@
   async function selectProvider(kind){
     E.setProvider(kind);
     if(kind==='spotify'&&!E.isSpotifyConnected()){musicModal=true;render();return}
-    if(kind==='spotify')await refreshDevices(false).catch(()=>{});
     render();
+    // Discovery can be slow; show the selected provider without blocking on it.
+    if(kind==='spotify')refreshDevices(false).catch(()=>{});
   }
 
   async function refreshDevices(showToast=true){
