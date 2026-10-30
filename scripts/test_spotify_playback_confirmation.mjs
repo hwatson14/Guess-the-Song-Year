@@ -9,12 +9,12 @@ const response=(data,status=200)=>({ok:status<400,status,json:async()=>data});
 const playing=(overrides={})=>({is_playing:true,item:{uri},device:{...device,volume_percent:50},...overrides});
 const tick=()=>new Promise(resolve=>setImmediate(resolve));
 
-function make({states=[playing()],devices=[device],hang='',expired=false,selected='',playStatus=204,loadStability=false,activationDelay=0}={}){
+function make({states=[playing()],devices=[device],hang='',expired=false,selected='',playStatus=204,loadStability=false,activationDelay=0,albumTrack=null,albumRecovers=false,albumStatus=204}={}){
   const storage=new Map([
     ['gsy.spotifyToken.v6',JSON.stringify({access_token:'TEST',refresh_token:'REFRESH',expires_at:expired?0:Date.now()+3600000})],
     ['gsy.spotifyDevice.v6',selected],
   ]);
-  const calls=[],timers=new Map();let nextTimer=0,read=0,activated='',activationReads=0;
+  const calls=[],timers=new Map();let nextTimer=0,read=0,activated='',activationReads=0,albumRequested=false;
   const setTimeout=(fn,ms)=>{
     const id=++nextTimer;timers.set(id,{fn,ms});
     if(ms<10000)queueMicrotask(()=>{if(timers.delete(id))fn()});
@@ -24,7 +24,7 @@ function make({states=[playing()],devices=[device],hang='',expired=false,selecte
     window:{},localStorage:{getItem:key=>storage.get(key)??null,setItem:(key,value)=>storage.set(key,String(value)),removeItem:key=>storage.delete(key)},
     location:{search:''},URL,URLSearchParams,AbortController,setTimeout,clearTimeout:id=>timers.delete(id),console,
     fetch:async(raw,options={})=>{
-      const url=new URL(raw);const call={path:url.pathname,method:options.method||'GET',signal:options.signal};calls.push(call);
+      const url=new URL(raw);const call={path:url.pathname,search:url.search,method:options.method||'GET',signal:options.signal,body:options.headers?.['Content-Type']==='application/json'?JSON.parse(options.body):null};calls.push(call);
       if(hang&&url.pathname===hang){
         return new Promise((resolve,reject)=>options.signal.addEventListener('abort',()=>reject(new Error('request aborted')),{once:true}));
       }
@@ -33,9 +33,15 @@ function make({states=[playing()],devices=[device],hang='',expired=false,selecte
         const ready=activated&&activationReads++>=activationDelay;
         return response({devices:devices.map(item=>ready?{...item,is_active:item.id===activated}:item)});
       }
-      if(url.pathname.endsWith('/play'))return response(playStatus===403?{error:{message:'Premium required'}}:null,playStatus);
+      if(url.pathname.endsWith('/play')){
+        albumRequested=!!call.body.context_uri;
+        const status=albumRequested?albumStatus:playStatus;
+        return response(status===403?{error:{message:'Premium required'}}:null,status);
+      }
+      if(url.pathname==='/v1/tracks/requested')return response(albumTrack||{uri});
       if(url.pathname==='/v1/me/player'&&options.method==='PUT'){activated=JSON.parse(options.body).device_ids[0];return response(null,204)}
       if(url.pathname==='/v1/me/player'){
+        if(albumRequested&&albumRecovers)return response(playing({item:{uri:albumTrack?.uri||uri}}));
         const state=states[Math.min(read++,states.length-1)];
         return response(state,state===null?204:200);
       }
@@ -114,3 +120,53 @@ for(const [hang,expired,action] of [
 }
 
 console.log('Spotify playback confirmation, restricted/muted targets, bounded waits and queue recovery passed.');
+
+const albumUri='spotify:album:exactAlbum';
+const exactTrack={uri,album:{uri:albumUri}};
+const stopped=[playing({is_playing:false,item:{uri:'spotify:track:old'}})];
+{
+  const h=make({states:stopped,albumRecovers:true,loadStability:true});
+  assert.equal(await h.E.playSpotify(uri,{uri,albumUri}),'phone');
+  const plays=h.calls.filter(call=>call.path.endsWith('/play'));
+  assert.equal(plays.length,2,'one bounded album recovery after the accepted direct play does nothing');
+  assert.deepEqual(plays[0].body,{uris:[uri],position_ms:0});
+  assert.deepEqual(plays[1].body,{context_uri:albumUri,offset:{uri},position_ms:0});
+  assert.equal(plays[1].search,plays[0].search,'recovery targets the same device');
+  assert.equal(h.calls.some(call=>call.path.startsWith('/v1/tracks/')),false,'reuse metadata already resolved for this recording');
+}
+{
+  const h=make({states:stopped,albumTrack:exactTrack,albumRecovers:true});
+  assert.equal(await h.E.playSpotify(uri),'phone','old saved games recover through a fresh track lookup');
+  assert.match(h.calls.find(call=>call.path==='/v1/tracks/requested').search,/market=from_token/);
+}
+{
+  const h=make({states:stopped,albumTrack:{uri:'spotify:track:regional',linked_from:{uri},album:{uri:albumUri}},albumRecovers:true});
+  assert.equal(await h.E.playSpotify(uri),'phone');
+  const body=h.calls.filter(call=>call.path.endsWith('/play')).at(-1).body;
+  assert.equal(body.offset.uri,'spotify:track:regional','use the exact provider-declared regional recording');
+}
+for(const albumTrack of [{uri:'spotify:track:unrelated',album:{uri:albumUri}},{linked_from:{uri},album:{uri:albumUri}}]){
+  const h=make({states:stopped,albumTrack});
+  await assert.rejects(h.E.playSpotify(uri),error=>error.code==='SPOTIFY_PLAYBACK_UNCONFIRMED');
+  assert.equal(h.calls.filter(call=>call.path.endsWith('/play')).length,1,'never play a different or missing recording as album recovery');
+}
+{
+  const h=make({states:stopped,albumTrack:{...exactTrack,is_playable:false}});
+  await assert.rejects(h.E.playSpotify(uri),error=>error.code==='SPOTIFY_TRACK_UNAVAILABLE');
+}
+{
+  const h=make({states:stopped,albumTrack:exactTrack});
+  await assert.rejects(h.E.playSpotify(uri),error=>error.code==='SPOTIFY_PLAYBACK_UNCONFIRMED'&&error.message.includes('both playback methods'));
+  assert.equal(h.calls.filter(call=>call.path.endsWith('/play')).length,2,'failed recovery is not an infinite playback retry');
+  assert.equal(h.calls.filter(call=>call.path==='/v1/me/player'&&call.method==='GET').length,10,'both confirmation windows are bounded');
+}
+{
+  const h=make({states:stopped,albumTrack:exactTrack,albumStatus:403});
+  await assert.rejects(h.E.playSpotify(uri),error=>error.status===403,'provider errors remain visible');
+}
+{
+  const h=make({albumTrack:exactTrack});
+  await h.E.playSpotify(uri,{uri,albumUri});
+  assert.equal(h.calls.filter(call=>call.path.endsWith('/play')).length,1,'normal devices keep the direct single-track path');
+}
+console.log('Spotify album-context recovery preserves recording/device identity and verifies both playback paths.');

@@ -83,3 +83,13 @@ function make({cache={},fetchImpl}={}){
 }
 
 console.log('Spotify static/cached identity validation and error propagation regressions passed');
+
+for(const restriction of [{is_playable:false},{is_local:true},{restrictions:{reason:'market'}}]){
+  const h=make({fetchImpl:async url=>{
+    if(url.pathname.endsWith('/tracks/unavailable'))return ok({...track('unavailable'),...restriction});
+    if(url.pathname.endsWith('/search'))return ok({tracks:{items:[{...track('unavailable'),...restriction},track('playable')]}});
+    throw new Error('unexpected '+url.pathname);
+  }});
+  assert.equal((await h.E.resolveSong({...baseSong,spotifyId:'unavailable'},'spotify')).id,'playable','unavailable recordings cannot win static or search selection');
+  assert.ok(h.calls.some(path=>path.includes('market=from_token')),'static lookup asks Spotify for the connected account’s market');
+}

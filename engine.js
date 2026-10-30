@@ -167,6 +167,7 @@
   }
 
   function spotifyCandidateScore(track,song){
+    if(track?.is_playable===false||track?.is_local===true||track?.restrictions?.reason)return -99;
     const title=track?.name||'',expectedArtist=norm(mainArtist(song?.artist||'')).replace(/^the\s+/, '');
     const artistSimilarity=Math.max(0,...(track?.artists||[]).map(a=>similarity(norm(a?.name||'').replace(/^the\s+/, ''),expectedArtist)));
     const titleSimilarity=similarity(title,song?.title||'');
@@ -184,14 +185,14 @@
     const cached=cacheGet('spotify',song);
     if(cached?.id){
       try{
-        const t=await spotifyApi(`/tracks/${encodeURIComponent(cached.id)}`);
+        const t=await spotifyApi(`/tracks/${encodeURIComponent(cached.id)}?market=from_token`);
         if(spotifyCandidateAllowed(t,matchSong))return spotifyTrack(t);
         cacheDrop('spotify',song);
       }catch(err){if(err?.status!==404)throw err;cacheDrop('spotify',song)}
     }
     if(song.spotifyId){
       try{
-        const t=await spotifyApi(`/tracks/${encodeURIComponent(song.spotifyId)}`);
+        const t=await spotifyApi(`/tracks/${encodeURIComponent(song.spotifyId)}?market=from_token`);
         if(spotifyCandidateAllowed(t,matchSong)){cachePut('spotify',song,{id:t.id});return spotifyTrack(t)}
         if(song.playbackPolicy==='membership-explicit')throw new AppError('SPOTIFY_TRACK_NOT_FOUND',`The reviewed Spotify alternate for “${song.title}” no longer matches its expected recording metadata.`);
       }catch(err){if(err?.status!==404)throw err;if(song.playbackPolicy==='membership-explicit')throw new AppError('SPOTIFY_TRACK_NOT_FOUND',`The reviewed Spotify alternate for “${song.title}” is unavailable.`)}
@@ -211,7 +212,7 @@
     cachePut('spotify',song,{id:best.id});return spotifyTrack(best);
   }
 
-  function spotifyTrack(t){return {provider:'spotify',id:t.id,uri:t.uri,url:t.external_urls?.spotify||`https://open.spotify.com/track/${t.id}`,title:t.name,artist:(t.artists||[]).map(a=>a.name).join(', ')}}
+  function spotifyTrack(t){return {provider:'spotify',id:t.id,uri:t.uri,albumUri:t.album?.uri||'',url:t.external_urls?.spotify||`https://open.spotify.com/track/${t.id}`,title:t.name,artist:(t.artists||[]).map(a=>a.name).join(', ')}}
 
   function providerMatchSong(song){return song?.playbackTitle||song?.playbackArtist?{...song,title:song.playbackTitle||song.title,artist:song.playbackArtist||song.artist}:song}
 
@@ -417,7 +418,33 @@
     return chosen.id;
   }
 
-  async function playSpotifyNow(uri){
+  async function spotifyAlbumPlayback(uri,track){
+    if(track?.uri===uri&&/^spotify:album:[A-Za-z0-9]+$/.test(track.albumUri||''))return {uri,albumUri:track.albumUri};
+    const match=/^spotify:track:([A-Za-z0-9]+)$/.exec(uri);
+    if(!match)return null;
+    let t;
+    try{t=await spotifyApi(`/tracks/${encodeURIComponent(match[1])}?market=from_token`)}
+    catch(error){if(error?.status===404)return null;throw error}
+    // Recovery may use a provider-declared regional equivalent, never another song.
+    if(!/^spotify:track:[A-Za-z0-9]+$/.test(t?.uri||'')||(t.uri!==uri&&t?.linked_from?.uri!==uri))return null;
+    if(t.is_playable===false||t.is_local===true||t.restrictions?.reason)throw new AppError('SPOTIFY_TRACK_UNAVAILABLE','Spotify reports this recording is unavailable for the connected account. Choose another card or music service.');
+    return /^spotify:album:[A-Za-z0-9]+$/.test(t.album?.uri||'')?{uri:t.uri,albumUri:t.album.uri}:null;
+  }
+
+  async function confirmSpotifyPlayback(uris,id){
+    for(let attempt=0;attempt<5;attempt++){
+      const state=await spotifyApi('/me/player');
+      const matches=uris.includes(state?.item?.uri)||uris.includes(state?.item?.linked_from?.uri);
+      if(state?.is_playing&&matches&&state?.device?.id===id){
+        if(state.device.volume_percent===0)throw new AppError('SPOTIFY_MUTED','Spotify started on the selected device, but its Spotify volume is zero. Turn up that device’s volume, then retry.');
+        return true;
+      }
+      if(attempt<4)await new Promise(resolve=>setTimeout(resolve,500));
+    }
+    return false;
+  }
+
+  async function playSpotifyNow(uri,track){
     if(!uri)throw new AppError('SPOTIFY_TRACK_MISSING','Spotify track is missing.');
     const pinned=!!spotifyDevice;
     let id=await ensureSpotifyDevice();
@@ -437,19 +464,18 @@
     }
     // A successful command response does not prove the requested track started.
     // Keep this inside the playback queue so older checks cannot affect a newer play.
-    for(let attempt=0;attempt<5;attempt++){
-      const state=await spotifyApi('/me/player');
-      const matches=state?.item?.uri===uri||state?.item?.linked_from?.uri===uri;
-      if(state?.is_playing&&matches&&state?.device?.id===id){
-        if(state.device.volume_percent===0)throw new AppError('SPOTIFY_MUTED','Spotify started on the selected device, but its Spotify volume is zero. Turn up that device’s volume, then retry.');
-        return id;
-      }
-      if(attempt<4)await new Promise(resolve=>setTimeout(resolve,500));
+    if(await confirmSpotifyPlayback([uri],id))return id;
+    // Some Spotify clients acknowledge bare-track requests without playing.
+    // Retry the exact recording through its album, a documented API request form.
+    const album=await spotifyAlbumPlayback(uri,track);
+    if(album){
+      await spotifyApi(`/me/player/play?device_id=${encodeURIComponent(id)}`,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({context_uri:album.albumUri,offset:{uri:album.uri},position_ms:0})},true);
+      if(await confirmSpotifyPlayback([uri,album.uri],id))return id;
     }
-    throw new AppError('SPOTIFY_PLAYBACK_UNCONFIRMED','Spotify accepted the request, but the requested song did not start on the selected device. Check the playback device and connected account, then retry.');
+    throw new AppError('SPOTIFY_PLAYBACK_UNCONFIRMED',album?'Spotify accepted both playback methods, but did not report the requested song playing on the selected device.':'Spotify accepted Play but did not report the requested song playing. No verified album context was available for recovery.');
   }
   function enqueueSpotifyPlayback(task){const run=spotifyPlaybackChain.then(task,task);spotifyPlaybackChain=run.catch(()=>{});return run}
-  function playSpotify(uri){return enqueueSpotifyPlayback(()=>playSpotifyNow(uri))}
+  function playSpotify(uri,track){return enqueueSpotifyPlayback(()=>playSpotifyNow(uri,track))}
   // The command queue owns all Spotify device side effects; callers must await the wrapper.
   function pauseSpotify(){return enqueueSpotifyPlayback(async()=>{const id=await ensureSpotifyDevice();await spotifyApi(`/me/player/pause?device_id=${encodeURIComponent(id)}`,{method:'PUT'},true)})}
 
