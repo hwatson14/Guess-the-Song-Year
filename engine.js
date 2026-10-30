@@ -339,8 +339,7 @@
     const verifier=sessionStorage.getItem('gsy.spotify.verifier'),state=sessionStorage.getItem('gsy.spotify.state');
     if(!verifier||!state||state!==p.get('state')){history.replaceState({},document.title,redirectUri());throw new AppError('SPOTIFY_AUTH_STATE','Spotify login state was lost. Connect again.')}
     const body=new URLSearchParams({grant_type:'authorization_code',code,redirect_uri:redirectUri(),client_id:SPOTIFY_CLIENT_ID,code_verifier:verifier});
-    const r=await fetch('https://accounts.spotify.com/api/token',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body});
-    const t=await r.json().catch(()=>({}));
+    const {response:r,data:t}=await spotifyRequest('https://accounts.spotify.com/api/token',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body},'finishing sign-in');
     sessionStorage.removeItem('gsy.spotify.verifier');sessionStorage.removeItem('gsy.spotify.state');history.replaceState({},document.title,new URL('./',location.href).pathname);
     if(!r.ok)throw new AppError('SPOTIFY_TOKEN',`Spotify connection failed (${r.status}).`,r.status);
     setSpotifyToken(t);setProvider('spotify');return true;
@@ -355,18 +354,34 @@
     if(!forceRefresh&&Date.now()<(spotifyToken.expires_at||0)-60000)return spotifyToken.access_token;
     if(!spotifyToken.refresh_token)throw new AppError('SPOTIFY_REAUTH','Spotify needs to be connected again.');
     const body=new URLSearchParams({grant_type:'refresh_token',refresh_token:spotifyToken.refresh_token,client_id:SPOTIFY_CLIENT_ID});
-    const r=await fetch('https://accounts.spotify.com/api/token',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body});const t=await r.json().catch(()=>({}));
+    const {response:r,data:t}=await spotifyRequest('https://accounts.spotify.com/api/token',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body},'renewing sign-in');
     if(!r.ok){if(t.error==='invalid_grant'){spotifyDisconnect();throw new AppError('SPOTIFY_REAUTH','Spotify authorization expired. Connect Spotify once to renew it.',r.status)}throw new AppError('SPOTIFY_REFRESH',`Spotify refresh failed (${r.status}).`,r.status)}
     setSpotifyToken(t);return spotifyToken.access_token;
   }
 
+  async function spotifyRequest(url,opt={},action='contacting Spotify',noJson=false){
+    const controller=new AbortController();let timer;
+    const timeout=new Promise((_,reject)=>{timer=setTimeout(()=>{
+      controller.abort();
+      reject(new AppError('SPOTIFY_TIMEOUT',`Spotify timed out while ${action}. Try again or choose another playback device.`));
+    },10000)});
+    try{
+      return await Promise.race([(async()=>{
+        const response=await fetch(url,{...opt,signal:controller.signal});
+        const data=response.status===204||(response.ok&&noJson)?null:await response.json().catch(error=>{if(controller.signal.aborted)throw error;return {}});
+        return {response,data};
+      })(),timeout]);
+    }finally{clearTimeout(timer)}
+  }
+
   async function spotifyApi(path,opt={},noJson=false,retried=false){
     const access=await spotifyAccessToken();
-    const r=await fetch(`https://api.spotify.com/v1${path}`,{...opt,headers:{Authorization:`Bearer ${access}`,...(opt.headers||{})}});
+    const action=path.startsWith('/me/player/devices')?'finding playback devices':path.startsWith('/me/player/play')?'starting music':path.startsWith('/me/player/pause')?'pausing music':path==='/me/player'?(opt.method==='PUT'?'switching playback device':'checking whether music started'):'loading the song';
+    const {response:r,data}=await spotifyRequest(`https://api.spotify.com/v1${path}`,{...opt,headers:{Authorization:`Bearer ${access}`,...(opt.headers||{})}},action,noJson);
     if(r.status===401&&!retried){await spotifyAccessToken(true);return spotifyApi(path,opt,noJson,true)}
     if(r.status===204)return null;
-    if(!r.ok){let detail='';try{const d=await r.json();detail=d?.error?.message||d?.error_description||''}catch{}throw new AppError('SPOTIFY_API',detail||`Spotify API ${r.status}`,r.status)}
-    return noJson?null:r.json();
+    if(!r.ok){const detail=data?.error?.message||data?.error_description||'';throw new AppError('SPOTIFY_API',detail||`Spotify API ${r.status}`,r.status)}
+    return noJson?null:data;
   }
 
   async function spotifyDevices(){
@@ -378,13 +393,26 @@
   function setSpotifyDevice(id){spotifyDevice=id||'';if(spotifyDevice)localStorage.setItem(LS.device,spotifyDevice);else localStorage.removeItem(LS.device)}
   function getSpotifyDevice(){return spotifyDevice}
 
+  async function activateSpotifyDevice(id){
+    await spotifyApi('/me/player',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({device_ids:[id],play:false})},true);
+    for(let attempt=0;attempt<5;attempt++){
+      const devices=await spotifyDevices();
+      if(devices.some(device=>device.id===id&&device.is_active))return;
+      if(attempt<4)await new Promise(resolve=>setTimeout(resolve,500));
+    }
+    throw new AppError('SPOTIFY_DEVICE_NOT_READY','Spotify did not activate the selected playback device. Choose an available device and retry.');
+  }
+
   async function ensureSpotifyDevice(){
     const devices=await spotifyDevices();
-    if(!devices.length)throw new AppError('NO_SPOTIFY_DEVICE','Open Spotify on the phone or speaker you want to use and play/pause any song once, then try again.');
-    let chosen=devices.find(x=>x.id===spotifyDevice)||devices.find(x=>x.is_active)||devices[0];
+    if(!devices.length)throw new AppError('NO_SPOTIFY_DEVICE','Spotify reports no playback device for the connected account. Refresh devices or select a device in Spotify, then retry.');
+    const controllable=devices.filter(x=>x.id&&x.is_restricted!==true);
+    const selected=spotifyDevice?devices.find(x=>x.id===spotifyDevice):null;
+    if(selected?.is_restricted)throw new AppError('SPOTIFY_DEVICE_RESTRICTED','The selected Spotify device does not allow playback control. Choose another device.');
+    const chosen=selected||controllable.find(x=>x.is_active)||controllable[0];
+    if(!chosen)throw new AppError('SPOTIFY_DEVICE_RESTRICTED','None of the available Spotify devices allows playback control. Choose another device.');
     if(!chosen.is_active){
-      try{await spotifyApi('/me/player',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({device_ids:[chosen.id],play:false})},true)}catch(e){if(e.status!==404)throw e}
-      await new Promise(r=>setTimeout(r,250));
+      try{await activateSpotifyDevice(chosen.id)}catch(e){if(e.status!==404)throw e}
     }
     return chosen.id;
   }
@@ -394,16 +422,31 @@
     const pinned=!!spotifyDevice;
     let id=await ensureSpotifyDevice();
     const body=JSON.stringify({uris:[uri],position_ms:0});
-    try{await spotifyApi(`/me/player/play?device_id=${encodeURIComponent(id)}`,{method:'PUT',headers:{'Content-Type':'application/json'},body},true);return id}
+    try{await spotifyApi(`/me/player/play?device_id=${encodeURIComponent(id)}`,{method:'PUT',headers:{'Content-Type':'application/json'},body},true)}
     catch(e){
       if(e.status===404){
-        const devices=await spotifyDevices();const fallback=devices.find(x=>x.is_active)||devices[0];
-        if(fallback){if(pinned)setSpotifyDevice(fallback.id);id=fallback.id;try{await spotifyApi('/me/player',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({device_ids:[id],play:false})},true);await new Promise(r=>setTimeout(r,300));await spotifyApi(`/me/player/play?device_id=${encodeURIComponent(id)}`,{method:'PUT',headers:{'Content-Type':'application/json'},body},true);return id}catch(fallbackErr){if(fallbackErr?.status!==404)throw fallbackErr}}
-        throw new AppError('SPOTIFY_DEVICE_LOST','Spotify lost the playback device. Open Spotify on the target device, play/pause once, then retry.',404);
+        const devices=(await spotifyDevices()).filter(x=>x.id&&x.is_restricted!==true);const fallback=devices.find(x=>x.is_active)||devices[0];
+        if(!fallback)throw new AppError('SPOTIFY_DEVICE_LOST','Spotify lost the playback device. Choose an available device and retry.',404);
+        if(pinned)setSpotifyDevice(fallback.id);id=fallback.id;
+        try{await activateSpotifyDevice(id);await spotifyApi(`/me/player/play?device_id=${encodeURIComponent(id)}`,{method:'PUT',headers:{'Content-Type':'application/json'},body},true)}
+        catch(fallbackErr){if(fallbackErr?.status!==404)throw fallbackErr;throw new AppError('SPOTIFY_DEVICE_LOST','Spotify lost the playback device. Choose an available device and retry.',404)}
+      }else{
+        if(e.status===403)throw new AppError('SPOTIFY_FORBIDDEN','Spotify rejected playback control. Confirm the connected account has Premium and Spotify is open on the target device.',403);
+        throw e;
       }
-      if(e.status===403)throw new AppError('SPOTIFY_FORBIDDEN','Spotify rejected playback control. Confirm the connected account has Premium and Spotify is open on the target device.',403);
-      throw e;
     }
+    // A successful command response does not prove the requested track started.
+    // Keep this inside the playback queue so older checks cannot affect a newer play.
+    for(let attempt=0;attempt<5;attempt++){
+      const state=await spotifyApi('/me/player');
+      const matches=state?.item?.uri===uri||state?.item?.linked_from?.uri===uri;
+      if(state?.is_playing&&matches&&state?.device?.id===id){
+        if(state.device.volume_percent===0)throw new AppError('SPOTIFY_MUTED','Spotify started on the selected device, but its Spotify volume is zero. Turn up that device’s volume, then retry.');
+        return id;
+      }
+      if(attempt<4)await new Promise(resolve=>setTimeout(resolve,500));
+    }
+    throw new AppError('SPOTIFY_PLAYBACK_UNCONFIRMED','Spotify accepted the request, but the requested song did not start on the selected device. Check the playback device and connected account, then retry.');
   }
   function enqueueSpotifyPlayback(task){const run=spotifyPlaybackChain.then(task,task);spotifyPlaybackChain=run.catch(()=>{});return run}
   function playSpotify(uri){return enqueueSpotifyPlayback(()=>playSpotifyNow(uri))}

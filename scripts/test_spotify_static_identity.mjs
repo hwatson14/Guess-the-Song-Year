@@ -21,7 +21,7 @@ function make({cache={},fetchImpl}={}){
     localStorage:{getItem:k=>storage.get(k)??null,setItem:(k,v)=>storage.set(k,String(v)),removeItem:k=>storage.delete(k)},
     sessionStorage:{getItem:()=>null,setItem(){},removeItem(){}},
     history:{replaceState(){}},document:{head:{appendChild(){}},createElement:()=>({})},
-    URL,URLSearchParams,console,crypto:{getRandomValues:a=>a,subtle:{digest:async()=>new ArrayBuffer(32)}},TextEncoder,
+    URL,URLSearchParams,console,AbortController,setTimeout,clearTimeout,crypto:{getRandomValues:a=>a,subtle:{digest:async()=>new ArrayBuffer(32)}},TextEncoder,
     btoa:s=>Buffer.from(s,'binary').toString('base64'),
     fetch:async raw=>{const url=new URL(raw,'https://example.test');calls.push(url.pathname+url.search);return fetchImpl(url,calls)},
   });

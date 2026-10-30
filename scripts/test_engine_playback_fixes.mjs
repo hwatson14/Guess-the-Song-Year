@@ -12,7 +12,7 @@ function make({cache={},fetchImpl}={}){
   const calls=[];
   const context=vm.createContext({window:{},location:{origin:'https://example.test',href:'https://example.test/game',search:''},
     localStorage:{getItem:k=>storage.get(k)??null,setItem:(k,v)=>storage.set(k,String(v)),removeItem:k=>storage.delete(k)},
-    document:{head:{appendChild(){}},createElement:()=>({})},URL,URLSearchParams,console,
+    document:{head:{appendChild(){}},createElement:()=>({})},URL,URLSearchParams,console,AbortController,setTimeout,clearTimeout,
     fetch:async raw=>{const url=new URL(raw,'https://example.test');calls.push(url.pathname+url.search);return fetchImpl(url,calls)}
   });
   vm.runInContext(policy,context);vm.runInContext(source,context,{filename:'engine.js'});
@@ -68,6 +68,7 @@ const ok=data=>({ok:true,json:async()=>data});
   const h=make({fetchImpl:async(url)=>{
     if(url.pathname.endsWith('/devices'))return ok({devices:[{id:'device',is_active:true}]});
     if(url.pathname.endsWith('/play'))return new Promise(resolve=>{releasePlay=()=>resolve(ok(null));});
+    if(url.pathname==='/v1/me/player')return ok({is_playing:true,item:{uri:'spotify:track:first'},device:{id:'device'}});
     if(url.pathname.endsWith('/pause'))return ok(null);
     throw new Error('unexpected '+url.pathname);
   }});

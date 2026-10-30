@@ -13,6 +13,7 @@
   let musicModal=false,deviceList=[],backGuardReady=false,prepareSeq=0,playbackSeq=0,countdownTimer=null,youtubeListenTimer=null,youtubeDownAt=0;
   let lastRenderedScreen=null,lastModalOpen=false;
   let modeReports={},bonusBusy=false;
+  let spotifyStarting=false;
 
   const esc=s=>String(s??'').replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));
   function load(k,f){try{return JSON.parse(localStorage.getItem(k))??f}catch{return f}}
@@ -219,7 +220,7 @@
 
   function playingScreen(){
     const virtual=cfg.playMode==='virtual';
-    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>${virtual?'Place the song':'Your timelines'}</h1><p>${virtual?'Tap a gap in your timeline. Your mystery song will appear there.':'Place the physical card on the table, then reveal.'}</p></div>${virtual?virtualTimeline():`${timelineBoard()}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="toggle-play">Pause music</button><button class="btn primary" data-action="guess-now">Guess now</button></div>`}`;
+    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>${spotifyStarting?'Starting Spotify…':virtual?'Place the song':'Your timelines'}</h1><p role="status">${spotifyStarting?'Waiting for Spotify to confirm playback on the selected device.':virtual?'Tap a gap in your timeline. Your mystery song will appear there.':'Place the physical card on the table, then reveal.'}</p></div>${virtual?virtualTimeline():`${timelineBoard()}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="toggle-play" ${spotifyStarting?'disabled':''}>Pause music</button><button class="btn primary" data-action="guess-now">Guess now</button></div>`}`;
   }
 
   function guessScreen(){
@@ -228,7 +229,7 @@
   }
 
   function virtualTimeline(){
-    return `${timelineBoard(true)}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="listen-again" ${bonusBusy?'disabled':''}>Listen again</button><button class="btn primary" data-action="lock-placement" ${pendingSlot===null||bonusBusy?'disabled':''}>${esc(placementLockCopy())}</button></div>`;
+    return `${timelineBoard(true)}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="listen-again" ${bonusBusy||spotifyStarting?'disabled':''}>Listen again</button><button class="btn primary" data-action="lock-placement" ${pendingSlot===null||bonusBusy?'disabled':''}>${esc(placementLockCopy())}</button></div>`;
   }
   function bonusBalance(team=activeTeam()){
     const n=Number(team?.bonusPoints);return Number.isFinite(n)?Math.max(0,Math.floor(n)):0;
@@ -626,14 +627,15 @@
   async function startSpotifyListening(){
     if(!current||current.provider!=='spotify')return;
     const seq=++playbackSeq;
+    spotifyStarting=true;
     match.phase='playing';match.current=current;saveMatch();screen='playing';render();resetScroll();
     try{
       await E.playSpotify(current.resolved.uri);
       if(seq!==playbackSeq||screen!=='playing'||!current)return;
-      playing=true;playNeedsTap=false;recordSongUsed()
+      spotifyStarting=false;playing=true;playNeedsTap=false;recordSongUsed();render();
     }catch(err){
       if(seq!==playbackSeq)return;
-      playing=false;showRoundError(err,{cardId:current?.cardId,year:current?.year});
+      spotifyStarting=false;playing=false;showRoundError(err,{cardId:current?.cardId,year:current?.year});
     }
   }
 
@@ -775,7 +777,7 @@
     }catch(err){if(seq!==playbackSeq)return;playing=false;showRoundError(err,{cardId:current?.cardId,year:current?.year})}
   }
   async function stopPlayback(){
-    playbackSeq++;playing=false;
+    playbackSeq++;playing=false;spotifyStarting=false;
     if(!current)return;
     if(current.provider==='youtube'){E.pauseYouTube();return}
     try{await E.pauseSpotify()}catch{}

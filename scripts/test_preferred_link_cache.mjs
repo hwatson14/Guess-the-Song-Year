@@ -3,7 +3,7 @@ import vm from 'node:vm';
 import fs from 'node:fs';
 function harness(cache){
  const storage=new Map([['gsy.resolveCache.v6',JSON.stringify(cache)],['gsy.spotifyToken.v6',JSON.stringify({access_token:'TEST',refresh_token:'TEST_REFRESH',expires_at:Date.now()+3600000})]]),calls=[];
- const context=vm.createContext({window:{},localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,String(v)),removeItem:k=>storage.delete(k)},URL,URLSearchParams,location:{search:''},console,
+ const context=vm.createContext({window:{},localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,String(v)),removeItem:k=>storage.delete(k)},URL,URLSearchParams,location:{search:''},console,AbortController,setTimeout,clearTimeout,
   fetch:async raw=>{const url=new URL(raw,'https://example.test');calls.push(url.pathname);let data={};
    if(url.pathname.startsWith('/v1/tracks/')){const id=url.pathname.split('/').at(-1);data={id,uri:'spotify:track:'+id,name:'Example',artists:[{name:'Artist'}]}}
    else if(url.pathname.endsWith('/videos'))data={items:[{id:url.searchParams.get('id'),status:{embeddable:true,privacyStatus:'public',uploadStatus:'processed'},snippet:{title:'Example',channelTitle:'Artist'}}]};
