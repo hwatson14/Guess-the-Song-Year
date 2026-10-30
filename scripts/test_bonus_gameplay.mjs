@@ -7,7 +7,8 @@ const source = fs.readFileSync('app.js','utf8').replace('  boot();',`  modeRepor
   window.__test={addBonusPoint,buyBonusYear,newCardForRepeat,finishPhysical,
     finishVirtualTurn,lockPlacement,migrateMatch,handleBack,saveMatch,startMatch,resumeMatch,
     startSteal,selectStealTeam,selectStealSlot,commitSteal,revealSteals,judgePhysicalSteal,
-    revealPhysical,skippedScreen,virtualTimeline,clearRoundState,
+    revealPhysical,skippedScreen,virtualTimeline,clearRoundState,skipBrokenSong,skipFailedCard,
+    bonusActions,youtubeListeningScreen,startSpotifyListening,
     getState:()=>({cfg,screen,match,current,pendingSlot,placementResult}),
     setState:next=>{if(next.cfg)cfg={...DEFAULT_CFG,...next.cfg};if('match' in next)match=next.match;
       if('current' in next)current=next.current;if('screen' in next)screen=next.screen;
@@ -28,7 +29,7 @@ async function make(saved={}){
     init:async()=>{}, modeReports:()=>({greatest:{id:'greatest',status:'beta',selectable:true,repeatPolicy:'unique',years:[2000,2001,2002,2003],yearSongKeys:{2000:['alpha|example artist'],2001:['bravo|example artist'],2002:['charlie|example artist'],2003:['delta|example artist']}}}),
     cardYear:id=>({1:2000,2:2001,3:2002,4:2003}[id]||null), songUseKey:s=>s.canonicalKey, songKey:s=>s.canonicalKey,
     chooseSong:async year=>catalogue.find(s=>s.year===year), resolveSong:async s=>({videoId:s.title}), getProvider:()=> 'youtube', isSpotifyConnected:()=>false, getSpotifyDevice:()=>'', spotifyDevices:async()=>[],
-    pauseYouTube(){},destroyYouTube(){},replayYouTube:()=>true,baseCardYear:id=>E.cardYear(id),cardYearReference:id=>({year:E.cardYear(id)}),setCardYearReference(){},
+    pauseYouTube(){},destroyYouTube(){},pauseSpotify:async()=>{},replayYouTube:()=>true,baseCardYear:id=>E.cardYear(id),cardYearReference:id=>({year:E.cardYear(id)}),setCardYearReference(){},
     AppError:class AppError extends Error{constructor(code,msg){super(msg);this.code=code}}
   };
   const ctx=vm.createContext({window:{GSYEngine:E,addEventListener(){},scrollTo(){}},document:{getElementById:id=>['app','toast'].includes(id)?node:null,activeElement:null,querySelectorAll:()=>[],addEventListener(){}},localStorage:{getItem:k=>store.get(k)??null,setItem:(k,v)=>store.set(k,v),removeItem:k=>store.delete(k)},navigator:{},requestAnimationFrame(fn){fn?.()},setTimeout(fn){fn?.();return 1},clearTimeout(){},setInterval(){return 1},clearInterval(){},URL,console,prompt(){return null},history:{state:null,replaceState(){},pushState(){},back(){}}});
@@ -60,6 +61,27 @@ async function make(saved={}){
 
 // Physical finish marks once, adds the collected year, and stays on reveal.
 {const h=await make({settings:{playMode:'physical',teams:2,victory:'10',mode:'greatest',minYear:2000,maxYear:2003}});h.R.setState({cfg:{playMode:'physical'},screen:'reveal',placementResult:null});h.R.finishPhysical(true);h.R.finishPhysical(true);const m=h.state().match;assert.equal(h.state().screen,'reveal');assert.equal(m.teams[0].score,3);assert.equal(m.teams[0].timeline.filter(y=>y===2000).length,2)}
+
+// Broken songs can be skipped with zero points on either provider/play style.
+// The old answer remains visible, no card/point/turn changes, and no repeat.
+for(const playMode of ['virtual','physical'])for(const provider of ['spotify','youtube'])for(const screen of ['ready','playing','guess',...(provider==='youtube'?['youtube']:[])]){
+ const h=await make();h.R.setState({cfg:{playMode},screen,current:{...current,provider},placementResult:null,pendingSlot:1});
+ const before=JSON.stringify(h.state().match.teams),round=h.state().match.round,turn=h.state().match.turn;
+ const html=screen==='youtube'?h.R.youtubeListeningScreen():h.R.bonusActions();
+ assert.match(html,/data-action="broken-song"\s*>Song not working\? Skip free/,'free recovery is enabled without bonus points');
+ h.R.skipBrokenSong();h.R.skipBrokenSong();const m=h.state().match;
+ assert.equal(h.state().screen,'skipped');assert.equal(m.phase,'skipped');assert.equal(m.skipReason,'broken');assert.equal(JSON.stringify(m.teams),before);assert.equal(m.turn,turn);assert.equal(m.round,round);assert.equal(m.pendingSlot,null);assert.equal(m.placementResult,null);assert.equal(m.history.filter(x=>x.outcome==='broken-skip').length,1);assert.equal(m.history.at(-1).bonusSpent,0);assert.ok(m.used.includes(current.song.canonicalKey));
+ assert.match(h.R.skippedScreen(),/Broken song skipped for free/);assert.match(h.R.skippedScreen(),/Alpha/);assert.match(h.R.skippedScreen(),/Example Artist/);assert.match(h.R.skippedScreen(),/2000/);assert.doesNotMatch(h.R.skippedScreen(),/1 bonus spent/);
+ const reload=await make(JSON.parse(h.store.get('gsy.match.v7')));reload.R.setState({screen:'resume'});await reload.R.resumeMatch();assert.equal(reload.state().screen,'skipped');assert.equal(reload.state().match.skipReason,'broken');assert.match(reload.R.skippedScreen(),/skipped for free/);reload.R.clearRoundState();assert.equal(reload.state().match.skipReason,null);
+}
+
+// Known-song errors use the same free answer reveal. Free recovery cannot
+// reopen a revealed answer or undo a challenge already committed.
+{const h=await make({error:{code:'SPOTIFY_PLAYBACK_UNCONFIRMED'}});h.R.setState({screen:'error',placementResult:null});h.R.skipFailedCard();assert.equal(h.state().screen,'skipped');assert.equal(h.state().match.error,null);assert.equal(h.state().match.teams[0].bonusPoints,0)}
+for(const screen of ['reveal','steal','skipped','resume','loading']){const h=await make();h.R.setState({screen});const before=JSON.stringify(h.state().match);h.R.skipBrokenSong();assert.equal(JSON.stringify(h.state().match),before)}
+
+// A late Spotify startup response cannot overwrite the free skip screen.
+{const h=await make();let release;h.E.playSpotify=()=>new Promise(resolve=>{release=resolve});h.R.setState({screen:'ready',current:{...current,provider:'spotify'},placementResult:null});const pending=h.R.startSpotifyListening();h.R.skipBrokenSong();release();await pending;assert.equal(h.state().screen,'skipped');assert.equal(h.state().match.skipReason,'broken');assert.equal(h.state().match.teams[0].bonusPoints,0)}
 
 const team=(name,bonusPoints=2,timeline=[1990,2010],score=0)=>({name,bonusPoints,timeline,score,correct:0,wrong:0});
 async function placing(teams=[team('Team 1'),team('Team 2')],slot=0){
