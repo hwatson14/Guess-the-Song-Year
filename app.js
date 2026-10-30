@@ -220,12 +220,12 @@
 
   function playingScreen(){
     const virtual=cfg.playMode==='virtual';
-    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>${spotifyStarting?'Starting Spotify…':virtual?'Place the song':'Your timelines'}</h1><p role="status">${spotifyStarting?'Waiting for Spotify to confirm playback on the selected device.':virtual?'Tap a gap in your timeline. Your mystery song will appear there.':'Place the physical card on the table, then reveal.'}</p></div>${virtual?virtualTimeline():`${timelineBoard()}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="toggle-play" ${spotifyStarting?'disabled':''}>Pause music</button><button class="btn primary" data-action="guess-now">Guess now</button></div>`}`;
+    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>${spotifyStarting?'Starting Spotify…':virtual?'Place the song':'Your timelines'}</h1><p role="status">${spotifyStarting?'Waiting for Spotify to confirm playback on the selected device.':virtual?'Tap a gap in your timeline. Older songs go above; newer songs go below.':'Place the physical card on the table, then reveal.'}</p></div>${virtual?virtualTimeline():`${timelineBoard()}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="toggle-play" ${spotifyStarting?'disabled':''}>Pause music</button><button class="btn primary" data-action="guess-now">Guess now</button></div>`}`;
   }
 
   function guessScreen(){
     const virtual=cfg.playMode==='virtual';
-    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>${virtual?'Place the song':'Make your guess'}</h1><p>${virtual?'Tap a gap in your timeline. Your mystery song will appear there.':'Place the physical card on the table, then reveal.'}</p></div>${virtual?virtualTimeline():`${timelineBoard()}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="listen-again">Listen again</button><button class="btn primary" data-action="reveal">Reveal Answer</button></div>`}`;
+    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>${virtual?'Place the song':'Make your guess'}</h1><p>${virtual?'Tap a gap in your timeline. Older songs go above; newer songs go below.':'Place the physical card on the table, then reveal.'}</p></div>${virtual?virtualTimeline():`${timelineBoard()}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="listen-again">Listen again</button><button class="btn primary" data-action="reveal">Reveal Answer</button></div>`}`;
   }
 
   function virtualTimeline(){
@@ -245,7 +245,7 @@
         const cards=Array.from({length:group.count},(_,cardIndex)=>`<span class="timeline-card" aria-hidden="true" data-card-index="${cardIndex+1}"></span>`).join('');
         return `${choosing?slot(group.start):''}<div class="timeline-year-row" data-year="${group.year}"><span class="timeline-year-label">${group.year}</span><span class="timeline-card-stack" style="--timeline-cols:${maxCount}">${cards}</span></div>`;
       }).join('')+(choosing?slot(years.length):'');
-      return `<section class="team-timeline ${active?'active-team':''}" aria-label="${esc(team.name)} timeline"><div class="team-timeline-header"><h2>${esc(team.name)}${active?' <small>Your turn</small>':''}</h2><div class="team-timeline-totals"><b>${team.score}${cfg.victory==='10'?'/10':''} cards</b><span>${bonusBalance(team)} bonus</span></div></div><div class="timeline-years ${hasPlacement?'has-placement':''}">${rows||'<span class="timeline-empty">No cards collected yet</span>'}</div></section>`;
+      return `<section class="team-timeline ${active?'active-team':''}" aria-label="${esc(team.name)} timeline"><div class="team-timeline-header"><h2>${esc(team.name)}${active?' <small>Your turn</small>':''}</h2><div class="team-timeline-totals"><b>${team.score}${cfg.victory==='10'?'/10':''} cards</b><span>${bonusBalance(team)} bonus</span></div></div><div class="timeline-years ${hasPlacement?'has-placement':''}" role="group" aria-label="Older at the top, newer at the bottom"><span class="timeline-direction"><span aria-hidden="true">↑</span> Older</span>${rows||'<span class="timeline-empty">No cards collected yet</span>'}<span class="timeline-direction"><span aria-hidden="true">↓</span> Newer</span></div></section>`;
     }).join('')}</div>`;
   }
   function bonusActions(award=false){

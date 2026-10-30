@@ -264,6 +264,8 @@ main.app.screen-reveal .timeline-years{gap:2px}
 
 
 /* duplicate-year stacked timeline rows */
+.timeline-direction{display:flex;align-items:center;justify-content:center;gap:5px;min-height:18px;flex:none;color:#bbd3cc;font:750 10px var(--sans);letter-spacing:.06em;text-transform:uppercase}
+.timeline-direction>span{color:var(--mint);font-size:14px;line-height:1}
 .timeline-year-row{display:grid;grid-template-columns:48px minmax(0,1fr);align-items:center;gap:6px;width:100%;min-width:0}
 .timeline-year-label{display:flex;align-items:center;justify-content:flex-end;height:30px;padding-right:2px;color:var(--mint);font:750 14px var(--sans);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
 .timeline-card-stack{display:grid;grid-template-columns:repeat(var(--timeline-cols,1),minmax(0,1fr));gap:4px;width:100%;min-width:0}
