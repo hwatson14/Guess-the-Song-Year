@@ -12,6 +12,15 @@ function make({phase='guess',mode='greatest'}={}){
  vm.runInContext(policy,ctx);vm.runInContext(engine,ctx);vm.runInContext(app,ctx);return{R:ctx.window.__test,E,calls};
 }
 {const{R,E,calls}=make();await R.selectProvider('spotify');await R.resumeMatch();await R.listenAgain();assert.equal(E.getProvider(),'spotify');assert.equal(R.getState().current.provider,'spotify');assert.equal(calls.resolve.length,1)}
+{
+ const {R,E}=make();let finishDiscovery,settled=false;
+ E.spotifyDevices=()=>new Promise(resolve=>{finishDiscovery=resolve});
+ const selecting=R.selectProvider('spotify').then(()=>{settled=true});
+ await new Promise(resolve=>setImmediate(resolve));
+ assert.equal(settled,true,'provider selection must not wait for slow Spotify discovery');
+ assert.equal(E.getProvider(),'spotify');
+ finishDiscovery([]);await selecting;
+}
 {const{R,E,calls}=make({phase:'ready'});let finishOld;E.playYouTube=async()=>new Promise(resolve=>{finishOld=resolve});const old=R.startYouTubeListening();R.finishYouTubeListening();await R.listenAgain();E.playYouTube=async()=>({started:true,videoId:'new-working-player'});await R.startYouTubeListening();const before=calls.destroy;finishOld({started:false,needsTap:true});await old;assert.equal(calls.destroy,before);assert.equal(R.getState().playing,true)}
 {const{R,calls}=make({phase:'ready',mode:'number1_us'});await R.startYouTubeListening();assert.equal(R.getState().screen,'error');assert.equal(R.getState().match.phase,'error');assert.equal(calls.play.length,1)}
 for(const operation of ['startSpotifyListening','togglePlay','replay']){
