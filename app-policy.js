@@ -2,7 +2,7 @@
   'use strict';
 
   const NESTED_SCREENS=Object.freeze([
-    'scanner','loading','ready','countdown','youtube','playing','guess','reveal','error'
+    'scanner','loading','ready','countdown','youtube','playing','guess','steal','skipped','reveal','error'
   ]);
   const SUPPORTED_CARD_DECKS=Object.freeze({
     uk:'aaaa0005',au:'aaah0001'

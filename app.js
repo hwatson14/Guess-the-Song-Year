@@ -122,7 +122,7 @@
     match.bonusAwarded=match.bonusAwarded===true;
     // Older physical matches recorded outcomes but did not populate their timeline.
     if(cfg.playMode==='physical')for(const [i,team] of (match.teams||[]).entries()){
-      if(!team.timeline.length)team.timeline=(match.history||[]).filter(h=>h.team===i&&['correct','bonus-year'].includes(h.outcome)).map(h=>Number(h.year)).filter(Number.isFinite).sort((a,b)=>a-b);
+      if(!team.timeline.length)team.timeline=(match.history||[]).filter(h=>h.team===i&&['correct','bonus-year','steal-won'].includes(h.outcome)).map(h=>Number(h.year)).filter(Number.isFinite).sort((a,b)=>a-b);
     }
     delete match.assign;
     if(match.settings.playMode==='virtual')ensureVirtualStarters();
@@ -133,9 +133,9 @@
     const screenChanged=screen!==lastRenderedScreen,modalWasOpen=lastModalOpen,modalChanged=musicModal!==modalWasOpen;
     const boardScroll=root.querySelector('.timeline-board')?.scrollTop||0;
     const active=document.activeElement;
-    const focusAttr=['action','play','victory','provider','slot','modePicker','range'].find(key=>active?.dataset?.[key]!==undefined);
+    const focusAttr=['action','play','victory','provider','slot','stealTeam','stealSlot','modePicker','range'].find(key=>active?.dataset?.[key]!==undefined);
     const focusSelector=focusAttr?`[data-${focusAttr.replace(/[A-Z]/g,c=>'-'+c.toLowerCase())}="${active.dataset[focusAttr]}"]`:null;
-    const content=screen==='setup'?setupScreen():screen==='resume'?resumeScreen():screen==='scanner'?scannerScreen():screen==='loading'?loadingScreen():screen==='error'?errorScreen():screen==='ready'?readyScreen():screen==='countdown'?countdownScreen():screen==='youtube'?youtubeListeningScreen():screen==='playing'?playingScreen():screen==='guess'?guessScreen():screen==='reveal'?revealScreen():screen==='gameover'?gameOverScreen():setupScreen();
+    const content=screen==='setup'?setupScreen():screen==='resume'?resumeScreen():screen==='scanner'?scannerScreen():screen==='loading'?loadingScreen():screen==='error'?errorScreen():screen==='ready'?readyScreen():screen==='countdown'?countdownScreen():screen==='youtube'?youtubeListeningScreen():screen==='playing'?playingScreen():screen==='guess'?guessScreen():screen==='steal'?stealScreen():screen==='skipped'?skippedScreen():screen==='reveal'?revealScreen():screen==='gameover'?gameOverScreen():setupScreen();
     root.innerHTML=`<main class="app screen-${esc(screen)}" id="mainContent" ${musicModal?'inert aria-hidden="true"':''}>${content}</main>${musicSheet()}`;
     bind();
     if(!screenChanged){const board=root.querySelector('.timeline-board');if(board)board.scrollTop=boardScroll;}
@@ -194,7 +194,7 @@
 
   function resumeScreen(){
     const phase=match?.phase||'between';
-    const phaseText=phase==='reveal'?'Answer ready':['ready','countdown','youtube','playing','guess'].includes(phase)?'Song in progress':phase==='scanner'?'Waiting for a card':'Ready for the next card';
+    const phaseText=phase==='reveal'?'Answer ready':phase==='skipped'?'Skipped song revealed':phase==='steal'?'Steals open before reveal':['ready','countdown','youtube','playing','guess'].includes(phase)?'Song in progress':phase==='scanner'?'Waiting for a card':'Ready for the next card';
     return `${topLine(false)}<div class="kicker">GAME IN PROGRESS</div><h1 class="display title">Ready to <span class="mint">continue?</span></h1>
       <section class="hero"><h2>${esc(activeTeam().name)} is up</h2><p>${cfg.playMode==='physical'?'Real cards':'Virtual'} · ${esc(modeInfo(match.mode).name)} (${esc(modeReport(match.mode).statusLabel)}) · ${cfg.teams} team${cfg.teams===1?'':'s'} · ${victoryLabel()} · ${phaseText}</p><div class="hero-actions"><button class="btn primary" data-action="resume">Resume Game</button><button class="btn ghost" data-action="new-game">New Game</button>${cfg.victory==='unlimited'?'<button class="btn text" data-action="end-game">End Game</button>':''}</div></section>${scoreStrip()}`;
   }
@@ -215,22 +215,23 @@
   }
 
   function youtubeListeningScreen(){
-    return `${matchHeader()}<div class="turn-toolbar"><h1>Listen, then guess</h1><p>Keep the phone face-down while the visible YouTube player plays.</p></div>${timelineBoard()}<div class="youtube-player"><div id="youtubePlayer"></div></div><button class="btn primary yt-start-fallback hidden" id="ytStartFallback" data-action="yt-start">Tap to start YouTube</button><div class="board-actionbar"><button class="btn primary" data-action="guess-now">Guess now</button><button class="btn ghost" data-action="new-card" ${bonusBalance()<1?'disabled':''}>Skip · 1 bonus</button></div>`;
+    return `${matchHeader()}<div class="turn-toolbar"><h1>Listen, then guess</h1><p>Keep the phone face-down while the visible YouTube player plays.</p></div>${timelineBoard()}<div class="youtube-player"><div id="youtubePlayer"></div></div><button class="btn primary yt-start-fallback hidden" id="ytStartFallback" data-action="yt-start">Tap to start YouTube</button><div class="board-actionbar">${cfg.playMode==='physical'?stealButton():''}<button class="btn primary" data-action="guess-now">${cfg.playMode==='physical'?'Reveal':'Guess now'}</button><button class="btn ghost" data-action="new-card" ${bonusBalance()<1?'disabled':''}>Skip · 1 bonus</button></div>`;
   }
 
   function playingScreen(){
     const virtual=cfg.playMode==='virtual';
-    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>${spotifyStarting?'Starting Spotify…':virtual?'Place the song':'Your timelines'}</h1><p role="status">${spotifyStarting?'Waiting for Spotify to confirm playback on the selected device.':virtual?'Tap a gap in your timeline. Older songs go above; newer songs go below.':'Place the physical card on the table, then reveal.'}</p></div>${virtual?virtualTimeline():`${timelineBoard()}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="toggle-play" ${spotifyStarting?'disabled':''}>Pause music</button><button class="btn primary" data-action="guess-now">Guess now</button></div>`}`;
+    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>${spotifyStarting?'Starting Spotify…':virtual?'Place the song':'Your timelines'}</h1><p role="status">${spotifyStarting?'Waiting for Spotify to confirm playback on the selected device.':virtual?'Tap a gap in your timeline. Older songs go above; newer songs go below.':'Place the physical card on the table, then reveal.'}</p></div>${virtual?virtualTimeline():`${timelineBoard()}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="toggle-play" ${spotifyStarting?'disabled':''}>Pause music</button>${stealButton()}<button class="btn primary" data-action="reveal">Reveal</button></div>`}`;
   }
 
   function guessScreen(){
     const virtual=cfg.playMode==='virtual';
-    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>${virtual?'Place the song':'Make your guess'}</h1><p>${virtual?'Tap a gap in your timeline. Older songs go above; newer songs go below.':'Place the physical card on the table, then reveal.'}</p></div>${virtual?virtualTimeline():`${timelineBoard()}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="listen-again">Listen again</button><button class="btn primary" data-action="reveal">Reveal Answer</button></div>`}`;
+    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>${virtual?'Place the song':'Make your guess'}</h1><p>${virtual?'Tap a gap in your timeline. Older songs go above; newer songs go below.':'Place the physical card on the table, then reveal.'}</p></div>${virtual?virtualTimeline():`${timelineBoard()}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="listen-again">Listen again</button>${stealButton()}<button class="btn primary" data-action="reveal">Reveal</button></div>`}`;
   }
 
   function virtualTimeline(){
-    return `${timelineBoard(true)}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="listen-again" ${bonusBusy||spotifyStarting?'disabled':''}>Listen again</button><button class="btn primary" data-action="lock-placement" ${pendingSlot===null||bonusBusy?'disabled':''}>${esc(placementLockCopy())}</button></div>`;
+    return `${timelineBoard(true)}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="listen-again" ${bonusBusy||spotifyStarting?'disabled':''}>Listen again</button>${stealButton()}<button class="btn primary" data-action="lock-placement" aria-label="Reveal answer: ${esc(placementLockCopy())}" ${pendingSlot===null||bonusBusy?'disabled':''}>Reveal</button></div>`;
   }
+  function stealButton(){return match?.teams.length>1?`<button class="btn ghost" data-action="start-steal" ${bonusBusy||(cfg.playMode==='virtual'&&pendingSlot===null)||!match.teams.some((_,i)=>canSteal(i))?'disabled':''}>Steal</button>`:''}
   function bonusBalance(team=activeTeam()){
     const n=Number(team?.bonusPoints);return Number.isFinite(n)?Math.max(0,Math.floor(n)):0;
   }
@@ -238,9 +239,10 @@
     const teams=(match?.teams||[]).map((team,index)=>({team,index}));
     return `<div class="timeline-board" aria-label="Team timelines" data-team-count="${teams.length}">${teams.map(({team,index})=>{
       const active=index===match.turn,years=[...(team.timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b);
-      const choosing=interactive&&active&&cfg.playMode==='virtual',displaySlot=choosing&&pendingSlot!==null?placementBoundarySlot(years,pendingSlot):null,hasPlacement=displaySlot!==null;
+      const stealing=screen==='steal'&&match.steal?.virtual&&active;
+      const choosing=(interactive&&active&&cfg.playMode==='virtual')||stealing,displaySlot=choosing&&pendingSlot!==null?placementBoundarySlot(years,pendingSlot):null,hasPlacement=!stealing&&displaySlot!==null;
       const {groups,maxCount}=timelineYearGroups(years);
-      const slot=i=>{const boundary=placementBoundarySlot(years,i),label=placementLabel(years,boundary),selected=displaySlot===boundary;return `<button class="timeline-slot placement-gap ${selected?'on selected':''}" data-slot="${boundary}" aria-label="${esc(label)}" aria-pressed="${selected}" ${bonusBusy?'disabled':''}>${selected?'<span class="timeline-mystery"><b>?</b><small>Your song</small></span>':'<span class="timeline-plus">+</span>'}</button>`};
+      const slot=i=>{const boundary=placementBoundarySlot(years,i),label=placementLabel(years,boundary),selected=displaySlot===boundary;if(stealing)return stealGap(boundary,label);return `<button class="timeline-slot placement-gap ${selected?'on selected':''}" data-slot="${boundary}" aria-label="${esc(label)}" aria-pressed="${selected}" ${bonusBusy?'disabled':''}>${selected?'<span class="timeline-mystery"><b>?</b><small>Your song</small></span>':'<span class="timeline-plus">+</span>'}</button>`};
       const rows=groups.map(group=>{
         const cards=Array.from({length:group.count},(_,cardIndex)=>`<span class="timeline-card" aria-hidden="true" data-card-index="${cardIndex+1}"></span>`).join('');
         return `${choosing?slot(group.start):''}<div class="timeline-year-row" data-year="${group.year}"><span class="timeline-year-label">${group.year}</span><span class="timeline-card-stack" style="--timeline-cols:${maxCount}">${cards}</span></div>`;
@@ -249,8 +251,39 @@
     }).join('')}</div>`;
   }
   function bonusActions(award=false){
-    const balance=bonusBalance(),canSkip=!!current&&['ready','guess','playing','youtube'].includes(screen),canBuy=['ready','guess','reveal','playing'].includes(screen);
+    const balance=bonusBalance(),canSkip=!!current&&['ready','guess','playing','youtube'].includes(screen),canBuy=['ready','guess','reveal','playing'].includes(screen)&&!match?.steal?.physicalPending;
     return `<div class="bonus-actions" aria-label="Bonus points">${award?`<button class="btn ghost" data-action="bonus-point" ${match.bonusAwarded||bonusBusy?'disabled':''}>${match.bonusAwarded?'✓ Bonus point added':'Bonus point +1'}</button>`:''}${canSkip?`<button class="btn ghost" data-action="new-card" ${balance<1||bonusBusy?'disabled':''}>Skip · 1 bonus</button>`:''}${canBuy?`<button class="btn ghost" data-action="bonus-year" ${balance<5||bonusBusy||winner()?'disabled':''}>${bonusBusy?'Drawing year…':'Free year · 5 bonus'}</button>`:''}</div>${award?'<small class="bonus-hint">Claim 1 point only if both title and artist were correct.</small>':''}`;
+  }
+
+  function canSteal(teamIndex){
+    if(!match||!Number.isInteger(teamIndex)||teamIndex===match.turn||!match.teams[teamIndex]||bonusBalance(match.teams[teamIndex])<1||match.steal?.challenges.some(c=>c.team===teamIndex))return false;
+    const steal=match.steal;
+    if(!steal?.virtual)return true;
+    for(let slot=0;slot<=steal.years.length;slot++)if(placementBoundarySlot(steal.years,slot)===slot&&slot!==steal.slot&&!steal.challenges.some(c=>c.slot===slot))return true;
+    return false;
+  }
+  function stealGap(slot,label){
+    const steal=match.steal,claim=steal.challenges.find(c=>c.slot===slot),locked=steal.slot===slot;
+    if(locked||claim)return `<div class="steal-marker ${locked?'':'challenger'}" aria-label="${esc(label)}: ${esc(match.teams[locked?match.turn:claim.team].name)} ${locked?'placement':'steal'}"><b>?</b><span>${esc(match.teams[locked?match.turn:claim.team].name)}<small>${locked?'Locked placement':'Steal · 1 bonus spent'}</small></span></div>`;
+    const selected=steal.selectedSlot===slot;
+    return `<button class="timeline-slot placement-gap steal-gap ${selected?'on selected':''}" data-steal-slot="${slot}" aria-label="Steal ${esc(label.toLowerCase())}" aria-pressed="${selected}" ${!canSteal(steal.selectedTeam)?'disabled':''}>${selected?'<span class="timeline-mystery"><b>?</b><small>Steal here</small></span>':'<span class="timeline-plus">+</span>'}</button>`;
+  }
+  function stealScreen(){
+    const steal=match.steal,selected=Number.isInteger(steal?.selectedTeam)?match.teams[steal.selectedTeam]:null;
+    const teams=match.teams.map((team,i)=>i===match.turn?'':`<button class="steal-team ${steal.selectedTeam===i?'on':''}" data-steal-team="${i}" aria-pressed="${steal.selectedTeam===i}" ${canSteal(i)?'':'disabled'}><b>${esc(team.name)}</b><small>${steal.challenges.some(c=>c.team===i)?'Steal locked':`${bonusBalance(team)} bonus`}</small></button>`).join('');
+    const claims=steal.challenges.map(c=>`<li>${esc(match.teams[c.team].name)} · ${steal.virtual?esc(placementLabel(steal.years,c.slot)):'token placed on the table'} · 1 bonus spent</li>`).join('');
+    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>Steal the song</h1><p>${steal.virtual?`${esc(activeTeam().name)} has locked a placement. Choose a challenging team, then a different gap on ${esc(activeTeam().name)}’s timeline.`:'Keep the card face-down. Challengers place a token in a different gap on the active team’s physical timeline, then register below.'} Each attempt costs 1 bonus. First to call chooses first.</p></div><div class="steal-teams" aria-label="Choose a challenging team">${teams}</div>${steal.virtual?timelineBoard():`<div class="steal-physical"><p>The answer stays hidden until all challenges are locked.</p>${claims?`<ol>${claims}</ol>`:''}</div>`}<div class="steal-status" role="status">${selected?`${esc(selected.name)}: ${steal.virtual?'choose a free gap, then lock your steal.':'place your token on the table, then lock your steal.'}`:steal.challenges.length?`${steal.challenges.length} steal${steal.challenges.length===1?'':'s'} locked. More challengers can join before reveal.`:'Choose a challenger, or reveal without stealing.'}</div>${selected?`<div class="board-actionbar"><button class="btn ghost" data-action="cancel-steal">Cancel selection</button><button class="btn primary" data-action="commit-steal" ${steal.virtual&&steal.selectedSlot===null?'disabled':''}>Lock steal · 1 bonus</button></div>`:`<div class="board-actionbar"><button class="btn primary" data-action="reveal-steals">Reveal</button></div>`}`;
+  }
+  function skippedScreen(){
+    const song=current?.song||{};
+    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>Skipped song</h1><p>1 bonus spent. Still ${esc(activeTeam().name)}’s turn.</p></div><section class="card answer-card"><div class="answer-top"><div><div class="answer-song">${esc(song.title)}</div><div class="answer-artist">${esc(song.artist)}</div></div><div class="answer-year">${current?.year||'----'}</div></div></section>${timelineBoard()}<div class="board-actionbar"><button class="btn primary" data-action="next-skipped">Next song</button></div>`;
+  }
+  function stealResultNotice(){
+    const steal=match?.steal;if(!steal?.challenges.length)return '';
+    if(steal.physicalPending){const claim=steal.challenges[steal.checkIndex];return `<div class="bonus-panel steal-result"><strong>Check ${esc(match.teams[claim.team].name)}’s token</strong><p>Was it in a correct gap on ${esc(activeTeam().name)}’s timeline? Check in the order teams called.</p><div class="board-actionbar"><button class="btn ghost" data-action="physical-steal-wrong">Wrong gap</button><button class="btn primary" data-action="physical-steal-correct">Correct · steal card</button></div></div>`}
+    if(!steal.resolved)return '';
+    const result=Number.isInteger(steal.winner)?`${esc(match.teams[steal.winner].name)} stole the card. Added to their timeline.`:placementResult?.correct?`${esc(activeTeam().name)} keeps the card. Their placement was correct.`:'No successful steals. Discard this card.';
+    return `<div class="bonus-panel steal-result" role="status"><strong>${result}</strong><small>Each challenger spent 1 bonus.</small></div>`;
   }
 
   function bonusCardNotice(){
@@ -262,7 +295,7 @@
     const virtual=cfg.playMode==='virtual',marked=!!placementResult,song=current?.song||{};
     const result=marked?(placementResult.correct?'Correct placement':'Wrong position'):'Mark your placement';
     const answerContext=song.screenWorkTitle?`${song.screenWorkType==='movie'?'Movie':'TV show'}: ${song.screenWorkTitle}`:song.playbackVariant==='remix'?`Played: ${song.remixTitle||song.title}${song.remixer?` · ${song.remixer} remix`:''}`:'';
-    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>Reveal</h1></div><section class="card answer-card"><div class="answer-top"><div><div class="answer-song">${esc(song.title||'Unknown')}</div><div class="answer-artist">${esc(song.artist||'')}</div>${answerContext?`<div class="answer-context">${esc(answerContext)}</div>`:''}</div><div class="answer-year">${current?.year||'----'}</div></div><div class="result-badge ${marked?(placementResult.correct?'ok':'bad'):''}">${result}</div></section>${timelineBoard()}${bonusCardNotice()}${marked?`${bonusActions(true)}<div class="board-actionbar"><button class="btn primary" data-action="next-turn" ${bonusBusy?'disabled':''}>${winner()?'See results':'Next Team'}</button></div>`:`<div class="board-actionbar"><button class="btn ghost" data-action="wrong-answer">Wrong placement</button><button class="btn primary" data-action="correct-answer">Correct placement</button></div>`}${!virtual?'<button class="btn text" data-action="update-card-year">Update card year reference</button>':''}`;
+    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>Reveal</h1></div><section class="card answer-card"><div class="answer-top"><div><div class="answer-song">${esc(song.title||'Unknown')}</div><div class="answer-artist">${esc(song.artist||'')}</div>${answerContext?`<div class="answer-context">${esc(answerContext)}</div>`:''}</div><div class="answer-year">${current?.year||'----'}</div></div><div class="result-badge ${marked?(placementResult.correct?'ok':'bad'):''}">${result}</div></section>${timelineBoard()}${stealResultNotice()}${bonusCardNotice()}${marked?`${bonusActions(true)}<div class="board-actionbar"><button class="btn primary" data-action="next-turn" ${bonusBusy||match.steal?.physicalPending?'disabled':''}>${winner()?'See results':'Next Team'}</button></div>`:`<div class="board-actionbar"><button class="btn ghost" data-action="wrong-answer">Wrong placement</button><button class="btn primary" data-action="correct-answer">Correct placement</button></div>`}${!virtual?'<button class="btn text" data-action="update-card-year">Update card year reference</button>':''}`;
   }
 
   function gameOverScreen(){
@@ -285,6 +318,8 @@
     root.querySelectorAll('[data-victory]').forEach(b=>{b.setAttribute('aria-pressed',b.dataset.victory===cfg.victory?'true':'false');b.onclick=()=>{cfg.victory=b.dataset.victory;saveCfg();render()}});
     root.querySelectorAll('[data-range]').forEach(input=>{input.oninput=()=>{const key=input.dataset.range==='min'?'minYear':'maxYear',next=P.normalizeYearRange(key==='minYear'?Number(input.value):cfg.minYear,key==='maxYear'?Number(input.value):cfg.maxYear);root.querySelector('.range-values b:first-child').textContent=next.minYear;root.querySelector('.range-values b:last-child').textContent=next.maxYear};input.onchange=()=>{const key=input.dataset.range==='min'?'minYear':'maxYear',next={...cfg,[key]:Number(input.value)};Object.assign(cfg,P.normalizeYearRange(next.minYear,next.maxYear));saveCfg();render()}});
     root.querySelectorAll('[data-slot]').forEach(b=>b.onclick=()=>selectSlot(Number(b.dataset.slot)));
+    root.querySelectorAll('[data-steal-team]').forEach(b=>b.onclick=()=>selectStealTeam(Number(b.dataset.stealTeam)));
+    root.querySelectorAll('[data-steal-slot]').forEach(b=>b.onclick=()=>selectStealSlot(Number(b.dataset.stealSlot)));
     root.querySelectorAll('[data-provider]').forEach(b=>{b.setAttribute('aria-pressed',b.dataset.provider===E.getProvider()?'true':'false');b.onclick=()=>selectProvider(b.dataset.provider)});
     const labels={'teams-minus':'Use one fewer team','teams-plus':'Use one more team','manual':'Enter card number manually','toggle-play':playing?'Pause music':'Resume music','close-music':'Close music settings'};
     for(const [action,label] of Object.entries(labels))root.querySelector(`[data-action="${action}"]`)?.setAttribute('aria-label',label);
@@ -313,6 +348,13 @@
       if(a==='reveal')b.onclick=revealPhysical;
       if(a==='update-card-year')b.onclick=updateCardYearReference;
       if(a==='lock-placement')b.onclick=lockPlacement;
+      if(a==='start-steal')b.onclick=startSteal;
+      if(a==='next-skipped')b.onclick=()=>{if(screen==='skipped'&&match?.phase==='skipped')nextRound()};
+      if(a==='commit-steal')b.onclick=commitSteal;
+      if(a==='cancel-steal')b.onclick=()=>{if(screen==='steal'){match.steal.selectedTeam=null;match.steal.selectedSlot=null;saveMatch();render()}};
+      if(a==='reveal-steals')b.onclick=revealSteals;
+      if(a==='physical-steal-correct')b.onclick=()=>judgePhysicalSteal(true);
+      if(a==='physical-steal-wrong')b.onclick=()=>judgePhysicalSteal(false);
       if(a==='correct-answer')b.onclick=()=>finishPhysical(true);
       if(a==='wrong-answer')b.onclick=()=>finishPhysical(false);
       if(a==='next-turn')b.onclick=finishVirtualTurn;
@@ -403,7 +445,7 @@
     const settings={...cfg},virtualDeck=shuffle(virtualCardsForMode(cfg.mode));
     if(!rangeStats(cfg.mode).years.length){toast('No usable songs exist in the selected year range.');return}
     if(cfg.playMode==='virtual'&&!virtualDeck.length){toast(`${modeInfo(cfg.mode).name} has no playable card years in this range.`);return}
-    match={active:true,id:`g${Date.now()}`,mode:cfg.mode,settings,phase:'between',round:0,turn:0,teams:Array.from({length:cfg.teams},(_,i)=>({name:`Team ${i+1}`,score:0,correct:0,wrong:0,bonusPoints:0,bonusYears:0,timeline:[],starterYear:null,starterCardId:null})),used:[],history:[],virtualDeck,virtualPos:0,current:null,placementResult:null,pendingSlot:null,error:null};
+    match={active:true,id:`g${Date.now()}`,mode:cfg.mode,settings,phase:'between',round:0,turn:0,teams:Array.from({length:cfg.teams},(_,i)=>({name:`Team ${i+1}`,score:0,correct:0,wrong:0,bonusPoints:2,bonusYears:0,timeline:[],starterYear:null,starterCardId:null})),used:[],history:[],virtualDeck,virtualPos:0,current:null,placementResult:null,pendingSlot:null,error:null,steal:null};
     if(cfg.playMode==='virtual')ensureVirtualStarters();
     current=null;placementResult=null;pendingSlot=null;
     saveCfg();saveMatch();
@@ -417,6 +459,8 @@
     if(phase==='error'&&runtimeError){screen='error';render();return}
     if(phase==='gameover'){screen='gameover';render();return}
     if(phase==='reveal'&&current){screen='reveal';render();return}
+    if(phase==='skipped'&&current){screen='skipped';render();return}
+    if(phase==='steal'&&current&&match.steal){screen='steal';render();return}
     if(current&&current.provider!==E.getProvider()){
       const seq=++prepareSeq;
       try{
@@ -444,7 +488,7 @@
     cancelCountdown();cancelYoutubeListening();prepareSeq++;
     current=null;pendingSlot=null;placementResult=null;runtimeError=null;playing=false;playNeedsTap=false;youtubeDownAt=0;
     E.destroyYouTube();
-    if(match){match.bonusAwarded=false;match.lastBonusYear=null;match.current=null;match.placementResult=null;match.pendingSlot=null;match.error=null;match.phase='between'}
+    if(match){match.bonusAwarded=false;match.lastBonusYear=null;match.steal=null;match.current=null;match.placementResult=null;match.pendingSlot=null;match.error=null;match.phase='between'}
   }
 
   function showRoundError(err,context={}){
@@ -701,8 +745,6 @@
   function guessNow(){
     if(!current)return;
     if(cfg.playMode==='physical'){
-      cancelYoutubeListening();
-      E.pauseYouTube();E.destroyYouTube();playing=false;playNeedsTap=false;
       revealPhysical();return;
     }
     if(screen==='youtube')finishYouTubeListening();
@@ -787,9 +829,7 @@
     if(cfg.playMode!=='virtual'||!current||!['playing','guess'].includes(screen))return;
     const years=[...(activeTeam().timeline||[])];
     if(!Number.isInteger(slot)||slot<0||slot>years.length){toast('That placement is not available.');return}
-    pendingSlot=slot;match.pendingSlot=slot;saveMatch();
-    root.querySelectorAll('[data-slot]').forEach(x=>{const on=Number(x.dataset.slot)===slot;x.classList.toggle('on',on);x.setAttribute('aria-pressed',on?'true':'false')});
-    const lock=root.querySelector('[data-action="lock-placement"]');if(lock)lock.disabled=false;
+    pendingSlot=slot;match.pendingSlot=slot;saveMatch();render();
   }
   function recordSongUsed(){if(!current?.song||!match)return;const key=E.songUseKey?.(current.song)||E.songKey(current.song);if(!match.used.includes(key)){match.used.push(key);saveMatch()}}
   function logOutcome(outcome,extra={}){if(!match)return;match.history=Array.isArray(match.history)?match.history:[];match.history.push({round:match.round,team:match.turn,teamName:activeTeam().name,cardId:current?.cardId||null,year:current?.year||null,songKey:current?.song?(E.songUseKey?.(current.song)||E.songKey(current.song)):null,outcome,...extra});saveMatch()}
@@ -797,8 +837,9 @@
     if(!match||!current||bonusBusy||!['ready','guess','playing','youtube'].includes(screen)||bonusBalance()<1)return;
     activeTeam().bonusPoints=bonusBalance()-1;
     recordSongUsed();logOutcome('bonus-skip',{bonusSpent:1});
-    stopPlayback();E.destroyYouTube();playing=false;playNeedsTap=false;
-    nextRound();
+    cancelCountdown();cancelYoutubeListening();stopPlayback();E.destroyYouTube();playing=false;playNeedsTap=false;
+    pendingSlot=null;placementResult=null;match.pendingSlot=null;match.placementResult=null;match.steal=null;
+    match.phase='skipped';syncCurrent();screen='skipped';render();resetScroll();
   }
   function addBonusPoint(){
     if(screen!=='reveal'||!match||!placementResult||match.bonusAwarded||bonusBusy)return;
@@ -806,7 +847,7 @@
     logOutcome('bonus-earned',{bonusEarned:1});saveMatch();render();
   }
   async function buyBonusYear(){
-    if(!match||!current||bonusBusy||bonusBalance()<5||winner()||!['ready','guess','reveal','playing'].includes(screen))return;
+    if(!match||!current||bonusBusy||match.steal?.physicalPending||bonusBalance()<5||winner()||!['ready','guess','reveal','playing'].includes(screen))return;
     const owner=match,team=activeTeam(),turn=match.turn,seq=prepareSeq;
     const keyOf=s=>E.songUseKey?.(s)||E.songKey(s),excluded=[...(match.used||[]),keyOf(current.song)];
     bonusBusy=true;render();
@@ -830,7 +871,7 @@
     finally{bonusBusy=false;if(match===owner)render()}
   }
 
-  function revealPhysical(){if(!current)return;recordSongUsed();stopPlayback();placementResult=null;match.placementResult=null;match.phase='reveal';syncCurrent();screen='reveal';render()}
+  function revealPhysical(){if(!current||cfg.playMode!=='physical'||!['guess','playing','youtube'].includes(screen))return;recordSongUsed();cancelYoutubeListening();stopPlayback();E.destroyYouTube();placementResult=null;match.placementResult=null;match.phase='reveal';syncCurrent();screen='reveal';render()}
   function updateCardYearReference(){
     if(cfg.playMode!=='physical'||screen!=='reveal'||!current?.cardId)return;
     const cardId=Number(current.cardId),cardLabel=String(cardId).padStart(5,'0');
@@ -850,22 +891,81 @@
     if(bonusBusy||pendingSlot===null||!current||cfg.playMode!=='virtual'||!['playing','guess'].includes(screen))return;
     const team=activeTeam(),years=[...(team.timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b),slot=placementBoundarySlot(years,pendingSlot);
     if(!Number.isInteger(slot)||slot<0||slot>years.length){toast('Choose a valid placement first.');pendingSlot=null;match.pendingSlot=null;saveMatch();render();return}
-    const left=slot>0?years[slot-1]:null,right=slot<years.length?years[slot]:null;
-    const correct=P.placementIsCorrect(years,slot,current.year);
+    settleVirtualPlacement(years,slot);
+  }
+  function settleVirtualPlacement(years,slot){
+    const team=activeTeam(),left=slot>0?years[slot-1]:null,right=slot<years.length?years[slot]:null,correct=P.placementIsCorrect(years,slot,current.year);
     placementResult={correct,left,right,slot};recordSongUsed();stopPlayback();
     if(correct){years.splice(slot,0,current.year);team.timeline=years;team.score++;team.correct=(team.correct||0)+1}else team.wrong=(team.wrong||0)+1;
     logOutcome(correct?'correct':'wrong',{slot,left,right});
+    if(match.steal){
+      const steal=match.steal;
+      steal.challenges.forEach(c=>{c.correct=P.placementIsCorrect(steal.years,c.slot,current.year)});
+      const winningClaim=correct?null:steal.challenges.find(c=>c.correct);
+      if(winningClaim)awardStolenCard(winningClaim.team);
+      steal.resolved=true;
+    }
     pendingSlot=null;match.pendingSlot=null;match.placementResult=placementResult;match.phase='reveal';syncCurrent();screen='reveal';render();resetScroll();
+  }
+  function startSteal(){
+    if(!match||!current||bonusBusy||!['playing','guess',...(cfg.playMode==='physical'?['youtube']:[])].includes(screen)||!match.teams.some((_,i)=>canSteal(i)))return;
+    const virtual=cfg.playMode==='virtual',years=[...(activeTeam().timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b);
+    if(virtual&&pendingSlot===null)return;
+    const slot=virtual?placementBoundarySlot(years,pendingSlot):null;
+    match.steal={virtual,years,slot,challenges:[],selectedTeam:null,selectedSlot:null,resolved:false,winner:null};
+    cancelYoutubeListening();stopPlayback();E.destroyYouTube();
+    pendingSlot=null;match.pendingSlot=null;match.phase='steal';syncCurrent();screen='steal';render();resetScroll();
+  }
+  function selectStealTeam(teamIndex){
+    if(screen!=='steal'||!Number.isInteger(teamIndex)||!canSteal(teamIndex))return;
+    match.steal.selectedTeam=teamIndex;match.steal.selectedSlot=null;saveMatch();render();
+  }
+  function selectStealSlot(slot){
+    if(screen!=='steal'||!match.steal?.virtual||!canSteal(match.steal.selectedTeam))return;
+    const steal=match.steal;
+    if(!Number.isInteger(slot)||slot<0||slot>steal.years.length||placementBoundarySlot(steal.years,slot)!==slot||slot===steal.slot||steal.challenges.some(c=>c.slot===slot))return;
+    steal.selectedSlot=slot;saveMatch();render();
+  }
+  function commitSteal(){
+    if(screen!=='steal'||!match.steal||!canSteal(match.steal.selectedTeam))return;
+    const steal=match.steal,team=steal.selectedTeam,slot=steal.selectedSlot;
+    if(steal.virtual&&(!Number.isInteger(slot)||slot<0||slot>steal.years.length||placementBoundarySlot(steal.years,slot)!==slot||slot===steal.slot||steal.challenges.some(c=>c.slot===slot)))return;
+    match.teams[team].bonusPoints=bonusBalance(match.teams[team])-1;
+    steal.challenges.push({team,slot});steal.selectedTeam=null;steal.selectedSlot=null;
+    logOutcome('steal-attempt',{team,teamName:match.teams[team].name,challengedTeam:match.turn,slot,bonusSpent:1});saveMatch();render();
+  }
+  function revealSteals(){
+    if(screen!=='steal'||!current||!match.steal||match.steal.selectedTeam!==null)return;
+    const steal=match.steal;
+    if(steal.virtual){settleVirtualPlacement([...steal.years],steal.slot);return}
+    recordSongUsed();placementResult=null;match.placementResult=null;match.phase='reveal';syncCurrent();screen='reveal';render();resetScroll();
+  }
+  function awardStolenCard(teamIndex){
+    const steal=match.steal;if(Number.isInteger(steal.winner))return;
+    const team=match.teams[teamIndex];team.score++;team.stolen=(Number(team.stolen)||0)+1;team.timeline=[...(team.timeline||[]),current.year].sort((a,b)=>a-b);
+    steal.winner=teamIndex;
+    logOutcome('steal-won',{team:teamIndex,teamName:team.name,fromTeam:match.turn});
   }
   function finishPhysical(correct){
     if(screen!=='reveal'||!match||!current||placementResult||bonusBusy)return;
     const team=activeTeam();
     if(correct){team.score++;team.correct=(team.correct||0)+1;team.timeline=[...(team.timeline||[]),current.year].sort((a,b)=>a-b)}else team.wrong=(team.wrong||0)+1;
     placementResult={correct};match.placementResult=placementResult;
+    const steal=match.steal;
+    if(steal){steal.physicalPending=!correct&&steal.challenges.length>0;steal.checkIndex=0;steal.resolved=!steal.physicalPending}
     logOutcome(correct?'correct':'wrong');saveMatch();render();
   }
+  function judgePhysicalSteal(correct){
+    const steal=match?.steal;
+    if(screen!=='reveal'||cfg.playMode!=='physical'||!placementResult||placementResult.correct||!steal?.physicalPending)return;
+    const claim=steal.challenges[steal.checkIndex];claim.correct=correct;
+    if(correct)awardStolenCard(claim.team);
+    else steal.checkIndex++;
+    if(correct||steal.checkIndex>=steal.challenges.length){steal.physicalPending=false;steal.resolved=true}
+    saveMatch();render();
+  }
 
-  function finishVirtualTurn(){if(screen!=='reveal'||!match||!placementResult||bonusBusy)return;if(winner()){endGame('target');return}advanceTurn()}
+  function finishVirtualTurn(){if(screen!=='reveal'||!match||!placementResult||bonusBusy||match.steal?.physicalPending)return;if(winner()){endGame('target');return}advanceTurn()}
   function advanceTurn(){if(!match)return;match.turn=(match.turn+1)%match.teams.length;match.round++;saveMatch();nextRound()}
   function endGame(reason){if(!match)return;cancelCountdown();cancelYoutubeListening();prepareSeq++;stopScanner();stopPlayback();E.destroyYouTube();match.endReason=reason;match.phase='gameover';match.current=current;saveMatch();screen='gameover';render();resetScroll()}
   function openTrack(){const url=current?.resolved?.url;if(url)window.open(url,'_blank','noopener')}

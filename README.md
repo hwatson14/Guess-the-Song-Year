@@ -28,10 +28,14 @@ Both teams' timelines stay on the main game screen. Team 1 stays on the left and
 
 After placement is marked, the active team can claim **Bonus point +1** only if it named both the song title and artist correctly. This is an optional, manually judged award, once per card. Bonus points are separate from the card score and persist with Resume.
 
-- **1 bonus point:** skip the current card and keep the same team's turn.
+New games start each team with **2 bonus points**. Existing matches retain their balances.
+
+- **1 bonus point:** skip the current card, see its title, artist and year, then tap **Next song** to continue the same team's turn.
+- **1 bonus point:** attempt a steal before the answer is revealed. **Reveal** goes straight to the answer; **Steal** opens the optional challenge flow. Each opposing team can lock one different gap on the active team's timeline, in the order they called. Challengers cannot reuse the active placement or another challenge's gap. If the active team is wrong, the first correct challenger gets the card on their own timeline and one card toward victory. A correct active placement always keeps the card, including same-year ties. Every committed challenge spends its point, regardless of outcome.
 - **5 bonus points:** reveal and add a separate unused year card, earning one card toward victory without spending the turn. The current hidden card stays unchanged.
 - A failed bonus draw costs nothing. Provider-error recovery remains free.
 - Physical placement now stays on Reveal for bonus claiming before Next Team. Collected physical years are retained in the app; physical starter cards not recorded in the app remain on the table.
+- In Real cards, challengers put tokens on different gaps on the table and register their attempts before Reveal. After checking the active placement, check challengers' tokens in call order. The app records the first successful steal. Challenge choices, spending, skipped answers and results survive Resume.
 
 ### Mode status
 
