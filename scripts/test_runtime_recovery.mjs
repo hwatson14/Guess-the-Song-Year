@@ -9,9 +9,20 @@ function make({phase='guess',mode='greatest'}={}){
  class AppError extends Error{constructor(code,message){super(message);this.code=code}}
  const E={AppError,MODES:{greatest:{name:'Greatest Hits',status:'beta',yearBasis:'release',repeatPolicy:'unique'},number1_us:{name:'#1 US',status:'beta',yearBasis:'chart',repeatPolicy:'fixed'}},getProvider:()=>provider,setProvider:p=>{provider=p},isSpotifyConnected:()=>true,getSpotifyDevice:()=>'',spotifyDevices:async()=>[],loadCatalogue:async()=>({modes:{greatest:{2000:[song]},number1_us:{2000:[song]}}}),baseCardYear:()=>2000,resolveSong:async s=>{calls.resolve.push(s);return{videoId:s.youtubeId,candidateIds:[s.youtubeId],uri:'spotify:example'}},pauseYouTube:()=>calls.pause++,destroyYouTube:()=>calls.destroy++,pauseSpotify:async()=>{calls.spotifyPauses++},playYouTube:async(c,r)=>{calls.play.push(r.videoId);throw new AppError('YOUTUBE_PLAY_FAILED','blocked upload')}};
  const ctx=vm.createContext({window:{GSYEngine:E,addEventListener(){},scrollTo(){}},document:{getElementById:id=>['app','toast'].includes(id)?node:null,activeElement:null,querySelectorAll:()=>[],addEventListener(){}},localStorage:{getItem:k=>store.get(k)??null,setItem:(k,v)=>store.set(k,v),removeItem:k=>store.delete(k)},navigator:{},requestAnimationFrame(){},setTimeout(){return 1},setInterval(){return 1},clearTimeout(){},clearInterval(){},URL,console});
- vm.runInContext(policy,ctx);vm.runInContext(engine,ctx);vm.runInContext(app,ctx);return{R:ctx.window.__test,E,calls};
+ vm.runInContext(policy,ctx);vm.runInContext(engine,ctx);vm.runInContext(app,ctx);return{R:ctx.window.__test,E,calls,markup:()=>node.innerHTML};
 }
 {const{R,E,calls}=make();await R.selectProvider('spotify');await R.resumeMatch();await R.listenAgain();assert.equal(E.getProvider(),'spotify');assert.equal(R.getState().current.provider,'spotify');assert.equal(calls.resolve.length,1)}
+for(const succeeds of [true,false]){
+ const {R,E,markup}=make({phase:'ready'});await R.selectProvider('spotify');await R.resumeMatch();
+ let finish,fail;E.playSpotify=()=>new Promise((resolve,reject)=>{finish=resolve;fail=reject});
+ const pending=R.startSpotifyListening();
+ assert.match(markup(),/Starting Spotify…/,'pending command must not imply confirmed playback');
+ assert.equal(R.getState().playing,false);assert.equal(R.getState().match.used.length,0);
+ if(succeeds)finish();else fail(new E.AppError('SPOTIFY_TIMEOUT','Spotify timed out while starting music.'));
+ await pending;
+ if(succeeds){assert.equal(R.getState().playing,true);assert.doesNotMatch(markup(),/Starting Spotify…/);assert.equal(R.getState().match.used.length,1)}
+ else{assert.equal(R.getState().screen,'error');assert.equal(R.getState().match.used.length,0);assert.match(markup(),/timed out while starting music/)}
+}
 {
  const {R,E}=make();let finishDiscovery,settled=false;
  E.spotifyDevices=()=>new Promise(resolve=>{finishDiscovery=resolve});

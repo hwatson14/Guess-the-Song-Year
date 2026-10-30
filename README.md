@@ -83,6 +83,8 @@ Transient metadata request failures preserve earlier observations. Bulk importer
 
 Spotify static catalogue IDs, cached IDs and searched tracks are all identity-checked before playback. The expected lead artist is compared against individual Spotify artist credits with a strong match floor; a mismatched static/cached candidate is discarded rather than trusted. Only a 404 is treated as a missing candidate; other Spotify API failures propagate as provider errors. Cached search results are also invalidated when the catalogue selects a different provider ID.
 
+Spotify startup displays a pending state until the playback API reports the requested track playing on the selected device. Transfers wait for the target to become active before sending play. Confirmation also accepts Spotify's regional track relinking. Five bounded status reads allow startup to settle; paused playback, the previous song or a different device produces a recoverable error without consuming the card. Spotify requests time out and abort after 10 seconds per request, identifying whether sign-in, discovery, transfer, start or confirmation stalled. Restricted targets and zero Spotify device volume produce specific errors. This confirms reported player state, not physical audibility.
+
 ## Core invariant
 
 For every played card, the selected song must come from the chosen mode's bucket for that card year. Runtime mode or year fallback is not permitted. Release-year modes use the canonical master answer year; the two #1 modes use chart year; future screen/alternate-playback modes follow their explicit declared semantics.
