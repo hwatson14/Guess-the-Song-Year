@@ -630,7 +630,7 @@
     spotifyStarting=true;
     match.phase='playing';match.current=current;saveMatch();screen='playing';render();resetScroll();
     try{
-      await E.playSpotify(current.resolved.uri);
+      await E.playSpotify(current.resolved.uri,current.resolved);
       if(seq!==playbackSeq||screen!=='playing'||!current)return;
       spotifyStarting=false;playing=true;playNeedsTap=false;recordSongUsed();render();
     }catch(err){
@@ -758,7 +758,7 @@
       }else if(playing){
         await E.pauseSpotify();if(seq!==playbackSeq)return;playing=false
       }else{
-        await E.playSpotify(current.resolved.uri);
+        await E.playSpotify(current.resolved.uri,current.resolved);
         if(seq!==playbackSeq)return;
         playing=true
       }
@@ -770,7 +770,7 @@
     try{
       if(current.provider==='youtube'&&!E.replayYouTube())throw new E.AppError('YOUTUBE_PLAY_BLOCKED','YouTube could not replay this track.');
       if(current.provider==='spotify'){
-        await E.playSpotify(current.resolved.uri);
+        await E.playSpotify(current.resolved.uri,current.resolved);
         if(seq!==playbackSeq)return;
       }
       playing=true;
