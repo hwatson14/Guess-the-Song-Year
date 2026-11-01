@@ -96,6 +96,53 @@
     return pool;
   }
 
+  // Match history is already persisted as used song identities, including
+  // legacy canonical keys. Derive artist history without changing save format.
+  const artistIndexCache=new WeakMap();
+  function artistIndex(data){
+    let index=artistIndexCache.get(data);
+    if(index)return index;
+    index=new Map();
+    for(const buckets of Object.values(data.modes||{})){
+      for(const pool of Object.values(buckets||{})){
+        if(!Array.isArray(pool))continue;
+        for(const song of pool){
+          const artist=primaryArtist(song.artist);
+          if(!artist)continue;
+          for(const key of [underlyingKey(song),...legacyIdentityKeys(song)]){
+            if(key&&!index.has(key))index.set(key,artist);
+          }
+        }
+      }
+    }
+    artistIndexCache.set(data,index);
+    return index;
+  }
+
+  // A multi-track artist must not receive extra lottery tickets in a year.
+  // Prefer acts not heard earlier in the match; if every act in the required
+  // card year has played, choose the least-repeated act. Never change year.
+  function chooseDiverseSong(available,data,usedKeys){
+    const index=artistIndex(data),history=(usedKeys||[]).map(key=>index.get(key)).filter(Boolean),counts=new Map();
+    for(const artist of history)counts.set(artist,(counts.get(artist)||0)+1);
+    const groups=new Map();
+    for(const song of available){
+      const artist=primaryArtist(song.artist)||norm(song.artist);
+      if(!groups.has(artist))groups.set(artist,[]);
+      groups.get(artist).push(song);
+    }
+    let minimum=Infinity;
+    for(const artist of groups.keys())minimum=Math.min(minimum,counts.get(artist)||0);
+    let eligible=[...groups.entries()].filter(([artist])=>(counts.get(artist)||0)===minimum);
+    const previous=history[history.length-1];
+    if(eligible.length>1&&previous){
+      const notPrevious=eligible.filter(([artist])=>artist!==previous);
+      if(notPrevious.length)eligible=notPrevious;
+    }
+    const tracks=eligible[Math.floor(Math.random()*eligible.length)][1];
+    return tracks[Math.floor(Math.random()*tracks.length)];
+  }
+
   E.songUnderlyingKey=underlyingKey;
   E.songUseKey=underlyingKey;
   E.isAlternateSongTitle=isAlternateTitle;
@@ -141,6 +188,6 @@
       return !legacyIdentityKeys(song).some(key=>used.has(key));
     });
     if(!available.length)throw new E.AppError('NO_UNUSED_SONG',`Every ${year} song in ${info.name} has already been used. Scan or deal a new card.`);
-    return {...available[Math.floor(Math.random()*available.length)]};
+    return {...chooseDiverseSong(available,data,usedKeys)};
   };
 })();
