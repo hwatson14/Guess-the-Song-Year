@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-02",
+  "state": "pending-human-source-review",
+  "policy": "Nonblocking curation candidates only. Do not change song-database.json answerYear or claim verified provider recording solely from this file. Confirm exact recording and external release provenance, retain rejected claims, preserve pool depth, rebuild catalogue via compiler.",
+  "items": [
+    {
+      "mode": "australian",
+      "title": "Bloom",
+      "artist": "Troye Sivan",
+      "listedYear": 2022,
+      "proposedYear": 2018,
+      "issue": "release-year-conflict",
+      "evidence": "Label statement for 2018 single",
+      "sourceUrl": "https://www.universalmusic.ca/2018/05/03/troye-sivan-releases-new-single-bloom/"
+    },
+    {
+      "mode": "australian",
+      "title": "What a Heavenly Way to Die",
+      "artist": "Troye Sivan",
+      "listedYear": 2022,
+      "proposedYear": 2018,
+      "issue": "release-year-conflict",
+      "evidence": "2018 original Bloom album track",
+      "sourceUrl": "https://music.apple.com/us/album/bloom/1396292262"
+    },
+    {
+      "mode": "australian",
+      "title": "Ten Days",
+      "artist": "Missy Higgins",
+      "listedYear": 2008,
+      "proposedYear": 2004,
+      "issue": "release-year-conflict",
+      "evidence": "Artist lists song on The Sound of White, released 2004",
+      "sourceUrl": "https://www.missyhiggins.com/music/"
+    },
+    {
+      "mode": "australian",
+      "title": "Peachy",
+      "artist": "Missy Higgins",
+      "listedYear": 2008,
+      "proposedYear": 2007,
+      "issue": "release-year-conflict",
+      "evidence": "Artist lists song on On a Clear Night, released 2007",
+      "sourceUrl": "https://www.missyhiggins.com/music/"
+    },
+    {
+      "mode": "australian",
+      "title": "Did It Again",
+      "artist": "Kylie Minogue",
+      "listedYear": 2000,
+      "proposedYear": 1997,
+      "issue": "release-year-conflict",
+      "evidence": "First UK chart entry in 1997; date of original single needs recording check",
+      "sourceUrl": "https://www.officialcharts.com/songs/kylie-minogue-did-it-again/"
+    },
+    {
+      "mode": "australian",
+      "title": "Amnesia",
+      "artist": "5 Seconds of Summer",
+      "listedYear": 2015,
+      "proposedYear": 2014,
+      "issue": "release-year-conflict",
+      "evidence": "2014 single and original self-titled album",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Amnesia_(5_Seconds_of_Summer_song)"
+    },
+    {
+      "mode": "australian",
+      "title": "Clown Prince",
+      "artist": "Hilltop Hoods",
+      "listedYear": 2008,
+      "proposedYear": 2006,
+      "issue": "release-year-conflict",
+      "evidence": "Original single catalogue 20 January 2006",
+      "sourceUrl": "https://australian-charts.com/showitem.asp?cat=s&interpret=Hilltop+Hoods&titel=Clown+Prince"
+    },
+    {
+      "mode": "greatest",
+      "title": "Fernando",
+      "artist": "ABBA",
+      "listedYear": 1975,
+      "proposedYear": 1976,
+      "issue": "recording-year-conflict",
+      "evidence": "ABBA English recording first issued March 1976; distinct Frida solo Swedish version issued 1975",
+      "sourceUrl": "https://abbaomnibus.com/songs/fernando-1/"
+    },
+    {
+      "mode": "greatest",
+      "title": "Moves Like Jagger",
+      "artist": "Maroon 5",
+      "listedYear": 2010,
+      "proposedYear": 2011,
+      "issue": "release-year-conflict",
+      "evidence": "Song released as single June 2011",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Moves_like_Jagger"
+    },
+    {
+      "mode": "greatest",
+      "title": "Smooth",
+      "artist": "Santana feat. Rob Thomas",
+      "listedYear": 2000,
+      "proposedYear": 1999,
+      "issue": "release-year-conflict",
+      "evidence": "Official Charts records charting in 1999",
+      "sourceUrl": "https://www.officialcharts.com/songs/santana-ft-rob-thomas-smooth/"
+    },
+    {
+      "mode": "greatest",
+      "title": "Family Affair",
+      "artist": "Mary J. Blige",
+      "listedYear": 2000,
+      "proposedYear": 2001,
+      "issue": "release-year-conflict",
+      "evidence": "US federal appeals judgment states album released in 2001 and early recording in 2000; do not conflate recording with release",
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/USCOURTS-ca6-07-01051/pdf/USCOURTS-ca6-07-01051-0.pdf"
+    },
+    {
+      "mode": "australian",
+      "title": "The Stopping All Stations Tour",
+      "artist": "Hilltop Hoods",
+      "listedYear": 2007,
+      "proposedYear": null,
+      "issue": "possible-non-song",
+      "evidence": "Tour title, not a clearly identified standalone recording; inspect source before removal",
+      "sourceUrl": null
+    },
+    {
+      "mode": "australian",
+      "title": "The Complete Hard Road Restrung Launch Concert",
+      "artist": "Hilltop Hoods",
+      "listedYear": 2007,
+      "proposedYear": null,
+      "issue": "possible-non-song",
+      "evidence": "Concert release/title, not a clearly identified standalone song; inspect source before removal",
+      "sourceUrl": null
+    }
+  ]
+}
