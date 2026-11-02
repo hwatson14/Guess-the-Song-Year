@@ -1,17 +1,17 @@
 # Status and Roadmap
 
-_Reviewed: 2026-09-06_
+_Reviewed: 2026-11-02_
 
 ## Current status
 
-Catalogue v18 is a working multi-mode product backed by normalized JSON source and a deterministic compiler. `data/song-database.json` is the reviewable source; `scripts/song_database.mjs` compiles it into the browser-facing `data/catalogue.json`. The current source contains 1,107 master song records and 1,460 active mode placements.
+Catalogue v19 is a working multi-mode product backed by normalized JSON source and a deterministic compiler. `data/song-database.json` is the reviewable source; `scripts/song_database.mjs` compiles it into the browser-facing `data/catalogue.json`. The current source contains 1,124 master song records and 1,483 active mode placements.
 
 | Area | Status | Current truth |
 |---|---|---|
 | Core gameplay | Stable | Real cards and Virtual play; 1–6 teams; First to 10 or Unlimited; Resume and Back handling |
 | Year range | Implemented | Generic min/max selector, persisted in config/match state; physical out-of-range scans are rejected |
-| Greatest Hits | Beta | 73/73 years; 879 songs; at least 12 per year |
-| Australian | Beta | 73/73 years; 235 songs; legacy evidence and shallow pools remain |
+| Greatest Hits | Beta | 73/73 years; 884 songs; at least 12 per year |
+| Australian | Beta | 73/73 years; 253 songs, 45 artist-credit labels; legacy evidence and shallow pools remain |
 | Unexpected Years | Preview | 65/73 years; 200 unique songs; expanded with 160 reviewed, evidence-gated existing masters |
 | #1 US | Beta | 73/73 fixed chart leaders |
 | #1 Australia | Beta | 73/73 fixed chart leaders |
@@ -20,8 +20,8 @@ Catalogue v18 is a working multi-mode product backed by normalized JSON source a
 | TV & Movie Themes | Building | Deterministic union of Movie Themes + TV Themes, inheriting each source work's answer year |
 | Remix: Original Year | Building | Hear an explicitly reviewed remix; answer with the canonical original song release year |
 | One Hit Wonders | Building | Release-year mode over canonical master songs; curation/eligibility evidence still required |
-| Canonical source | Working v18 | 1,107 immutable master identities shared across memberships |
-| Release evidence | Improved | 858 masters externally observed; 249 unresolved |
+| Canonical source | Working v19 | 1,124 immutable master identities shared across memberships |
+| Release evidence | Improved | 889 masters externally observed; 235 unresolved |
 | Provider links | Partially reviewed | Spotify: 605 linked masters / 4 verified preferred tracks. YouTube: 431 linked / 0 verified preferred tracks |
 | Spotify runtime identity | Hardened | Static, cached and searched tracks use the same title + strong lead-artist identity gate; non-404 API failures propagate |
 | Compiler | Working | Offline deterministic JSON compiler from `data/song-database.json` |
@@ -36,6 +36,12 @@ Unexpected Years now contains exactly 200 unique canonical songs across 65 relea
 The review also found two accepted release-year errors and corrected them at the canonical-master level: Gloria Gaynor's `I Will Survive` moved from 1977 to 1978, and Eurythmics' `Sweet Dreams (Are Made Of This)` moved from 1982 to 1983. Their superseded MusicBrainz claims remain retained as rejected evidence. Moving those songs would otherwise have broken the Greatest Hits 12-song-per-year floor, so 1977 was backfilled with the existing canonical `Stayin' Alive` master and 1982 received one properly sourced new master, Musical Youth's `Pass The Dutchie`. Its Spotify and YouTube IDs are retained only as unverified provider candidates, not promoted to verified/preferred playback.
 
 The durable `test_unexpected_years_200.mjs` contract now blocks regressions in the 200-song total, unique canonical identity, 65-year coverage, evidence requirement for the 160 new additions, corrected release truth, and Greatest Hits depth.
+
+### 2026-11-02 sourced playlist correction
+
+A separate first-pass curation applied **13 reviewed original-release year corrections**, added **20 sourced canonical songs**, reused **4 existing masters** in the Australian mode, and removed **3 tour/concert/album entries** into a retained retirement archive. The Australian catalogue grows from 235 to 253 songs across 45 distinct credited artists (previously 33); Greatest Hits grows from 879 to 884 to backfill year buckets while preserving at least 12 songs per year. The 2022 Australian bucket is restored with two actual 2022 singles after relocating Troye Sivan's 2018 tracks. All five playable modes retain their original lifecycle statuses.
+
+**Scope limits:** the broader Australian catalogue is still not fully curated, many imported provider IDs are not independently verified, and legacy release-year evidence remains unresolved. Treat the new canonical decision file and original recording provenance as authoritative for these 13 moves, not as certification of every older row. The paired migration, historical rejection claims, and archived original records preserve auditability. This correction PR does not change runtime artist-diversity selection, which is separately proposed in PR #30.
 
 ## Architecture facts to preserve
 
@@ -86,4 +92,4 @@ See `docs/MODE_EXPANSION_SPEC.md` for the detailed product and data contract.
 
 ## Definition of green
 
-A release is green when source and generated v18 data agree, schema and runtime checks pass, the compiler is deterministic/offline, every active mode obeys its declared year and identity invariants, provider candidates cannot bypass runtime identity validation, Pages stages the complete public asset set, and no credentials or session data are committed.
+A release is green when source and generated v19 data agree, schema and runtime checks pass, the compiler is deterministic/offline, every active mode obeys its declared year and identity invariants, provider candidates cannot bypass runtime identity validation, Pages stages the complete public asset set, and no credentials or session data are committed.
