@@ -69,4 +69,25 @@ for(const m of db.memberships){
   assert.ok(data.years.includes(answerYear));
 }
 assert.equal(new Set(Object.values(data.modes).flatMap(b=>Object.values(b).flat()).map(E.songUseKey)).size,Object.keys(db.songs).length);
+// User-required Greatest Hits may not silently disappear from future catalogue rebuilds.
+for(const [id,title,artist,year,spotifyId] of [
+  ['song_d50929520c4872652aa0','Somebody Told Me','The Killers',2004,'59XNy4523UcEvQfYM8fdQB'],
+  ['song_893cc66aee02fd972cde','Blue (Da Ba Dee)','Eiffel 65',1998,'08VeSelC8QYD1MIsK9gAmY']
+]){
+  const song=db.songs[id];
+  assert.ok(song,'Missing required song '+title);
+  assert.equal(song.title,title);
+  assert.equal(song.artist,artist);
+  assert.equal(song.release.answerYear,year);
+  assert.equal(song.release.year,year);
+  assert.equal(song.release.state,'externally_observed');
+  assert.ok(song.release.claims.some(c=>c.year===year&&c.state==='externally_observed'&&c.sourceUrl),'Missing first-release source');
+  const matches=db.memberships.filter(m=>m.songId===id&&m.mode==='greatest');
+  assert.equal(matches.length,1,'Required Greatest Hits song must occur once');
+  assert.equal(matches[0].year,year);
+  assert.equal(matches[0].providerRefs.spotify,spotifyId);
+  assert.ok(song.providers.spotify.links.some(a=>a.id===spotifyId&&a.state==='unverified'),'Unreviewed Spotify candidate must not be marked verified');
+  assert.ok((data.modes.greatest[year]||[]).some(r=>r.songId===id&&r.spotifyId===spotifyId&&r.year===year),'Required track is missing from runtime catalogue');
+}
+
 console.log(`Shared database checks passed: ${Object.keys(db.songs).length} master records and ${db.memberships.length} memberships; lossless generation and shared edits verified.`);
