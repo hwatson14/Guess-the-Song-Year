@@ -123,8 +123,14 @@ async function run(){
     const state=await providerPage.locator('#mainContent').getAttribute('class');
     if(state.includes('screen-ready')){
       result.providerProbe.status='song_resolved';
+      const songBefore=await providerPage.evaluate(()=>JSON.parse(localStorage.getItem('gsy.match.v7'))?.current?.song?.title);
       await providerPage.locator('[data-action="play-current"]').click();
+      result.providerProbe.immediatelyAfterClick=await providerPage.locator('#mainContent').getAttribute('class');
       await providerPage.waitForTimeout(7500);
+      const matchAfter=await providerPage.evaluate(()=>JSON.parse(localStorage.getItem('gsy.match.v7')));
+      result.providerProbe.prePost={songBefore,songAfter:matchAfter?.current?.song?.title,phaseAfter:matchAfter?.phase,
+        toast:await providerPage.locator('#toast').innerText().catch(()=>null),
+        pageClassAfter:await providerPage.locator('#mainContent').getAttribute('class')};
       const fallback=providerPage.locator('[data-action="yt-start"]');
       if(await fallback.isVisible().catch(()=>false)){
         await fallback.click();
