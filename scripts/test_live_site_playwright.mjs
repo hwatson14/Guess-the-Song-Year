@@ -123,7 +123,22 @@ async function run(){
     const state=await providerPage.locator('#mainContent').getAttribute('class');
     if(state.includes('screen-ready')){
       result.providerProbe.status='song_resolved';
-      result.providerProbe.note='Real YouTube API resolution succeeded; audio has not been human-auditioned';
+      await providerPage.locator('[data-action="play-current"]').click();
+      await providerPage.waitForTimeout(7500);
+      const fallback=providerPage.locator('[data-action="yt-start"]');
+      if(await fallback.isVisible().catch(()=>false)){
+        await fallback.click();
+        await providerPage.waitForTimeout(3000);
+      }
+      const playback=await providerPage.evaluate(()=>{
+        const p=window.GSYEngine.youtubePlayer?.();
+        return {playerState:p?.getPlayerState?.()??null,playerReady:!!p,
+          pageClass:document.querySelector('#mainContent')?.className||'',iframeCount:document.querySelectorAll('#youtubePlayer iframe').length};
+      });
+      result.providerProbe.playback=playback;
+      if(playback.playerState===1)result.providerProbe.status='youtube_reports_playing';
+      else result.providerProbe.status='youtube_playback_unconfirmed';
+      result.providerProbe.note='Headless YouTube player state, not confirmation of correct audible audio or Spotify';
     }else{
       const message=await providerPage.locator('.error-code').innerText().catch(()=>null);
       result.providerProbe.status='provider_error';
