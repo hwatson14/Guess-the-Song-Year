@@ -2,6 +2,12 @@
 
 _Reviewed: 2026-09-06_
 
+## Corrective review (2026-11-02)
+
+A real ~50-song session reported Hoodoo Gurus four times, including the first two selections. The current production catalogue has 18 Hoodoo Gurus entries in Greatest Hits and 23 in Australian. The previous picker weighted songs equally, not artists. The proposed picker samples eligible lead artists evenly, prefers artists not yet heard in the saved match, and falls back within the same card year when necessary. This is a playability fix, not evidence that the One Hit Wonders mode is live: the checked-in manifest still marks `one_hit_wonders` **Building**. Confirm the mode/version used in the reported session separately.
+
+`verification/playlist-curation-review.json` now documents 13 candidate year/recording/entity issues with source links where available. `node scripts/audit_playlist_quality.mjs` reports the queue and artist concentration without altering gameplay facts. Canonical year corrections and Australian playlist rebuilding remain **open**, require recording-specific provenance, and must preserve the Greatest Hits depth gate. No automatic promotion or claim of full curation.
+
 ## Current status
 
 Catalogue v18 is a working multi-mode product backed by normalized JSON source and a deterministic compiler. `data/song-database.json` is the reviewable source; `scripts/song_database.mjs` compiles it into the browser-facing `data/catalogue.json`. The current source contains 1,107 master song records and 1,460 active mode placements.
