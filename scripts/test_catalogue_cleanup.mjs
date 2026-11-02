@@ -8,6 +8,9 @@ const {data,manifest}=loadProductionCatalogue();
 const decisions=JSON.parse(fs.readFileSync('verification/catalogue_cleanup_decisions.json','utf8'));
 const archive=JSON.parse(fs.readFileSync('verification/catalogue_cleanup_archive.json','utf8')).entries;
 const baseline=JSON.parse(fs.readFileSync('verification/catalogue_cleanup_baseline.json','utf8'));
+const retirements=JSON.parse(fs.readFileSync('verification/playlist-retirements-2026-11-02.json','utf8')).entries;
+const retiredIds=new Set(retirements.map(x=>x.songId));
+assert.equal(retiredIds.size,retirements.length,'retired legacy identities may appear only once');
 const E=catalogueEngine(data,manifest),reports=await E.modeReports();
 const fingerprint=row=>createHash('sha256').update(JSON.stringify(row)).digest('hex');
 const originalHash=row=>{const clone=structuredClone(row);delete clone.legacyKeys;delete clone.songId;return fingerprint(clone)};
@@ -22,8 +25,9 @@ for(const original of baseline.rows){
   const archived=archive.some(row=>row.mode===original.mode&&row.year===original.year&&row.original&&fingerprint(row.original)===original.fingerprint)?1:0;
   const buckets=data.modes[original.mode]||{};
   const rows=manifest.modes?.[original.mode]?.yearBasis==='release'?Object.values(buckets).flat():(buckets[original.year]||[]);
-  const active=archived?0:rows.filter(row=>identityKeys(row).has(original.key)).length;
-  assert.equal(active+archived,1,`Lost or duplicated baseline identity: ${original.mode}/${original.year}/${original.key}`);
+  const retired=retirements.some(entry=>entry.mode===original.mode&&entry.membership.year===original.year&&entry.song.canonicalKey===original.key)?1:0;
+  const active=(archived||retired)?0:rows.filter(row=>identityKeys(row).has(original.key)).length;
+  assert.equal(active+archived+retired,1,`Lost or duplicated baseline identity: ${original.mode}/${original.year}/${original.key}`);
 }
 assert.equal(new Set(archive.map(x=>x.id)).size,archive.length,'archive IDs are unique');
 assert.deepEqual(new Set(archive.map(x=>x.id)),new Set(decisions.map(cleanupId)));
