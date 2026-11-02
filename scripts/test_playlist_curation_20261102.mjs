@@ -67,7 +67,8 @@ for(let year=1950;year<=2022;year++){
   assert.ok((cat.modes.greatest[year]||[]).length>=12,'Greatest Hits 12-song minimum for '+year);
   assert.ok((cat.modes.australian[year]||[]).length>=1,'Australian year '+year+' must be playable');
 }
-assert.equal(Object.values(cat.modes.greatest).flat().length,884);
+// The 884-song historical curation baseline has two subsequent required original-release additions.
+assert.equal(Object.values(cat.modes.greatest).flat().length,886);
 assert.equal(Object.values(cat.modes.australian).flat().length,253);
 assert.equal(new Set(Object.values(cat.modes.australian).flat().map(s=>s.artist)).size,45);
 assert.equal(cat.modes.australian[2022].length,2,'2022 must be backfilled after the Troye Sivan correction');

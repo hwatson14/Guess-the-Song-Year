@@ -16,9 +16,9 @@ Read `README.md`, `docs/STATUS_AND_ROADMAP.md`, `docs/DATA_ARCHITECTURE.md`, `do
 
 ## Source and generated data
 
-The current normalized source is the reviewable JSON database at `data/song-database.json`. It contains 1,124 master songs and 1,483 mode memberships/placements. `scripts/song_database.mjs` is the deterministic compiler: `compileDatabase()` produces the browser catalogue, and `node scripts/song_database.mjs build` materializes `data/catalogue.json` from the source and mode manifest. The compiler is local/offline and must remain deterministic for an unchanged source revision.
+The current normalized source is the reviewable JSON database at `data/song-database.json`. It contains 1,126 master songs and 1,485 mode memberships/placements. `scripts/song_database.mjs` is the deterministic compiler: `compileDatabase()` produces the browser catalogue, and `node scripts/song_database.mjs build` materializes `data/catalogue.json` from the source and mode manifest. The compiler is local/offline and must remain deterministic for an unchanged source revision.
 
-The current v19 runtime counts are 884 Greatest Hits songs, with at least 12 per year, 253 Australian, 200 Unexpected Years, and 73 in each chart mode. Do not restore the obsolete v6/v10 one-mode contract or weaken validators to accommodate it.
+The current v19 runtime counts are 886 Greatest Hits songs, with at least 12 per year, 253 Australian, 200 Unexpected Years, and 73 in each chart mode. Do not restore the obsolete v6/v10 one-mode contract or weaken validators to accommodate it.
 
 Provider IDs are playback facts, not canonical song identity. Reviewed preferred links currently cover three Spotify links and no YouTube links; all other imported links remain candidates until reviewed. The YouTube search fallback depends on a referrer-restricted public API key and quota, so quota failure is an operational limitation and must fail clearly without inventing a track.
 

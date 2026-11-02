@@ -2,7 +2,7 @@
 
 ## Current architecture
 
-The authoritative reviewable source is `data/song-database.json`, a normalized JSON document containing master songs, mode memberships, release evidence, and provider links. It currently represents 1,124 master records and 1,483 placements across five active modes. `data/catalogue.json` is the generated browser artifact, not the preferred editing surface.
+The authoritative reviewable source is `data/song-database.json`, a normalized JSON document containing master songs, mode memberships, release evidence, and provider links. It currently represents 1,126 master records and 1,485 placements across five active modes. `data/catalogue.json` is the generated browser artifact, not the preferred editing surface.
 
 The compiler in `scripts/song_database.mjs` loads the source, validates identities and provider-link contracts, and uses `compileDatabase()` to emit the runtime catalogue. Given the same source and manifest, compilation is deterministic and offline. `scripts/catalogue_runtime.mjs` and the browser consume the generated artifact; they do not query external services for catalogue truth.
 
@@ -15,7 +15,7 @@ The JSON source already expresses the following relationships:
 - **Provider track:** Spotify or YouTube ID and URL, state, audit metadata, and optional preferred ID. Provider identity never becomes song identity.
 - **Evidence:** source URLs, MusicBrainz recording IDs, retrieval dates, matched title/artist, release dates, and review decisions.
 
-The current runtime contains 884 Greatest Hits songs (at least 12 per year), 253 Australian, 200 Unexpected Years, and 73 in each chart mode. A correction to a master record should flow to all memberships through one compile.
+The current runtime contains 886 Greatest Hits songs (at least 12 per year), 253 Australian, 200 Unexpected Years, and 73 in each chart mode. A correction to a master record should flow to all memberships through one compile.
 
 SQLite is an optional future workspace for relational queries, constraints, and validation. It is not required for the current product and must not become the only reviewable history. Git-friendly JSON remains the source unless a deliberate migration changes that decision.
 
