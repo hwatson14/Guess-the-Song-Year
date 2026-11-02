@@ -38,6 +38,12 @@ New games start each team with **2 bonus points**. Existing matches retain their
 - Physical placement now stays on Reveal for bonus claiming before Next Team. Collected physical years are retained in the app; physical starter cards not recorded in the app remain on the table.
 - In Real cards, challengers put tokens on different gaps on the table and register their attempts before Reveal. After checking the active placement, check challengers' tokens in call order. The app records the first successful steal. Challenge choices, spending, skipped answers and results survive Resume.
 
+### Song selection fairness
+
+For variable (unique-song) modes, the app now chooses uniformly among eligible **lead artists**, then uniformly among that artist's unused songs in the required card year. It prefers artists not yet heard in the saved match; if the year's remaining pool contains only heard artists, it uses the least-repeated one. Previously played tracks remain excluded, and the requested card year never changes. The one-leader-per-year chart modes intentionally retain their fixed-song repeat behaviour. Legacy saved matches work without migration because artist history is derived from their persisted used-song keys.
+
+Run `node scripts/audit_playlist_quality.mjs` to see per-mode artist concentration, thin years, and an evidence-backed nonblocking year/recording correction queue in `verification/playlist-curation-review.json`. A queue item is **not** an approved correction; update `data/song-database.json` only after checking the exact recording and evidence, then rebuild the generated catalogue and run the full gate.
+
 ### Mode status
 
 | Mode | Status | Coverage | Meaning |
