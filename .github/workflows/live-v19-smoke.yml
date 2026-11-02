@@ -1,0 +1,37 @@
+name: One-off live v19 browser smoke
+on:
+  push:
+    branches:
+      - test/live-v19-smoke-20261102
+    paths:
+      - .github/workflows/live-v19-smoke.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install one-off Playwright runner
+        run: |
+          npm init -y >/dev/null
+          npm install --no-audit --no-fund --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Test deployed Github Pages game
+        run: node scripts/test_live_site_playwright.mjs
+      - name: Upload smoke results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-v19-browser-smoke
+          path: live-smoke-results.json
+          if-no-files-found: ignore
