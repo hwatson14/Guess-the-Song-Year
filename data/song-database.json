@@ -74525,6 +74525,84 @@
           "links": []
         }
       }
+    },
+    "song_d50929520c4872652aa0": {
+      "id": "song_d50929520c4872652aa0",
+      "canonicalKey": "somebody told me|killers",
+      "title": "Somebody Told Me",
+      "artist": "The Killers",
+      "release": {
+        "answerYear": 2004,
+        "year": 2004,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2004,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/killers-somebody-told-me/",
+            "evidence": "First charted on 27 March 2004 in the UK, establishing the original 2004 single before its 2005 re-release."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "59XNy4523UcEvQfYM8fdQB",
+              "url": "https://open.spotify.com/track/59XNy4523UcEvQfYM8fdQB",
+              "state": "unverified",
+              "origin": "public-spotify-track-page",
+              "sourceUrl": "https://open.spotify.com/track/59XNy4523UcEvQfYM8fdQB",
+              "sourceTitle": "Somebody Told Me",
+              "sourceArtist": "The Killers"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_893cc66aee02fd972cde": {
+      "id": "song_893cc66aee02fd972cde",
+      "canonicalKey": "blue da ba dee|eiffel 65",
+      "title": "Blue (Da Ba Dee)",
+      "artist": "Eiffel 65",
+      "release": {
+        "answerYear": 1998,
+        "year": 1998,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1998,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/release-group/9eb4d6dd-ac77-3f10-8459-7948471d73e8",
+            "evidence": "Documented original Italian single release in 1998, ahead of the international 1999 chart breakout."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "08VeSelC8QYD1MIsK9gAmY",
+              "url": "https://open.spotify.com/track/08VeSelC8QYD1MIsK9gAmY",
+              "state": "unverified",
+              "origin": "public-spotify-track-page",
+              "sourceUrl": "https://open.spotify.com/track/08VeSelC8QYD1MIsK9gAmY",
+              "sourceTitle": "Blue (Da Ba Dee) - DJ Ponte Ice Pop Radio",
+              "sourceArtist": "Eiffel 65"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
     }
   },
   "memberships": [
@@ -125597,6 +125675,80 @@
       ],
       "providerRefs": {
         "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_d50929520c4872652aa0",
+      "mode": "greatest",
+      "year": 2004,
+      "metadata": {
+        "releaseYear": 2004,
+        "source": "required-greatest-hits-2026-11-02",
+        "sourceLabel": "Sourced original release · required Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/killers-somebody-told-me/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "First charted on 27 March 2004 in the UK, establishing the original 2004 single before its 2005 re-release.",
+        "releaseDateEvidence": "2004",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "59XNy4523UcEvQfYM8fdQB",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_893cc66aee02fd972cde",
+      "mode": "greatest",
+      "year": 1998,
+      "metadata": {
+        "releaseYear": 1998,
+        "source": "required-greatest-hits-2026-11-02",
+        "sourceLabel": "Sourced original release · required Greatest Hits",
+        "sourceUrl": "https://musicbrainz.org/release-group/9eb4d6dd-ac77-3f10-8459-7948471d73e8",
+        "sourceProvider": "MusicBrainz release group",
+        "releaseYearEvidence": "Documented original Italian single release in 1998, ahead of the international 1999 chart breakout.",
+        "releaseDateEvidence": "1998",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "08VeSelC8QYD1MIsK9gAmY",
         "youtube": null
       }
     }
