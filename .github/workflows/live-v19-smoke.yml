@@ -5,6 +5,7 @@ on:
       - test/live-v19-smoke-20261102
     paths:
       - .github/workflows/live-v19-smoke.yml
+      - scripts/test_live_site_playwright.mjs
   workflow_dispatch:
 
 permissions:
