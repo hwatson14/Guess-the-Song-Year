@@ -2,6 +2,12 @@
 
 _Reviewed: 2026-11-02_
 
+### 2026-11-02 artist-balanced selection
+
+A ~50-song party session reportedly played Hoodoo Gurus four times including the first two. The previous picker sampled song rows uniformly, favouring acts with many entries. The new chooser samples eligible lead artists uniformly, prioritises acts not yet heard in the match, and chooses an unused song in the required card year. Fixed year-end #1 chart modes still repeat their one leader per year.
+
+PR #31 supplied the v19 catalogue; the original 13-item review queue in this feature branch is historical, not outstanding work: 11 release-year errors are corrected and two non-song entries retired. `scripts/audit_playlist_quality.mjs` reconciles those records with v19. Australian year-pool depth and playback verification remain open. One Hit Wonders is marked Building on `main`; the reported play session's exact mode/version remains unconfirmed.
+
 ## Current status
 
 Catalogue v19 is a working multi-mode product backed by normalized JSON source and a deterministic compiler. `data/song-database.json` is the reviewable source; `scripts/song_database.mjs` compiles it into the browser-facing `data/catalogue.json`. The current source contains 1,124 master song records and 1,483 active mode placements.
