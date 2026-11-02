@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-11-02",
+  "policy": "Retired entries preserved with original master/membership and source evidence; never reuse these IDs for another recording.",
+  "entries": [
+    {
+      "songId": "song_8d37bfff1524ee7b7f1d",
+      "mode": "australian",
+      "reason": "Tour name is not a playable individual song; artist released Stopping All Stations on The Hard Road in 2006.",
+      "sourceUrl": "https://hilltophoods.com/discography/the-hard-road/",
+      "song": {
+        "id": "song_8d37bfff1524ee7b7f1d",
+        "canonicalKey": "the stopping all stations tour|hilltop hoods",
+        "title": "The Stopping All Stations Tour",
+        "artist": "Hilltop Hoods",
+        "release": {
+          "year": null,
+          "state": "unresolved",
+          "claims": [
+            {
+              "year": 2007,
+              "state": "legacy_unverified",
+              "sourceUrl": null,
+              "evidence": null
+            }
+          ],
+          "answerYear": 2007
+        },
+        "providers": {
+          "spotify": {
+            "preferredId": null,
+            "links": []
+          },
+          "youtube": {
+            "preferredId": null,
+            "links": []
+          }
+        }
+      },
+      "membership": {
+        "songId": "song_8d37bfff1524ee7b7f1d",
+        "mode": "australian",
+        "year": 2007,
+        "metadata": {
+          "mbScore": 100,
+          "source": "australian-release",
+          "sourceLabel": "Australian artist · legacy release-year label"
+        },
+        "fieldOrder": [
+          "title",
+          "artist",
+          "year",
+          "mbScore",
+          "source",
+          "sourceLabel"
+        ]
+      },
+      "aliases": []
+    },
+    {
+      "songId": "song_5c23aa2d1b434e90efcd",
+      "mode": "australian",
+      "reason": "A concert title, not a standalone canonical song recording.",
+      "sourceUrl": "https://hilltophoods.com/discography/the-hard-road-restrung/",
+      "song": {
+        "id": "song_5c23aa2d1b434e90efcd",
+        "canonicalKey": "the complete hard road restrung launch concert|hilltop hoods",
+        "title": "The Complete Hard Road Restrung Launch Concert",
+        "artist": "Hilltop Hoods",
+        "release": {
+          "year": null,
+          "state": "unresolved",
+          "claims": [
+            {
+              "year": 2007,
+              "state": "legacy_unverified",
+              "sourceUrl": null,
+              "evidence": null
+            }
+          ],
+          "answerYear": 2007
+        },
+        "providers": {
+          "spotify": {
+            "preferredId": null,
+            "links": []
+          },
+          "youtube": {
+            "preferredId": null,
+            "links": []
+          }
+        }
+      },
+      "membership": {
+        "songId": "song_5c23aa2d1b434e90efcd",
+        "mode": "australian",
+        "year": 2007,
+        "metadata": {
+          "mbScore": 100,
+          "source": "australian-release",
+          "sourceLabel": "Australian artist · legacy release-year label"
+        },
+        "fieldOrder": [
+          "title",
+          "artist",
+          "year",
+          "mbScore",
+          "source",
+          "sourceLabel"
+        ]
+      },
+      "aliases": []
+    },
+    {
+      "songId": "song_8a9aac86c91e4eb63f98",
+      "mode": "australian",
+      "reason": "Generic Restrung album/version designation, not an identified original song; avoid album and remix leakage.",
+      "sourceUrl": "https://hilltophoods.com/discography/the-hard-road-restrung/",
+      "song": {
+        "id": "song_8a9aac86c91e4eb63f98",
+        "canonicalKey": "restrung|hilltop hoods",
+        "title": "Restrung",
+        "artist": "Hilltop Hoods",
+        "release": {
+          "year": null,
+          "state": "unresolved",
+          "claims": [
+            {
+              "year": 2007,
+              "state": "legacy_unverified",
+              "sourceUrl": null,
+              "evidence": null
+            }
+          ],
+          "answerYear": 2007
+        },
+        "providers": {
+          "spotify": {
+            "preferredId": null,
+            "links": []
+          },
+          "youtube": {
+            "preferredId": null,
+            "links": []
+          }
+        }
+      },
+      "membership": {
+        "songId": "song_8a9aac86c91e4eb63f98",
+        "mode": "australian",
+        "year": 2007,
+        "metadata": {
+          "mbScore": 100,
+          "source": "australian-release",
+          "sourceLabel": "Australian artist · legacy release-year label"
+        },
+        "fieldOrder": [
+          "title",
+          "artist",
+          "year",
+          "mbScore",
+          "source",
+          "sourceLabel"
+        ]
+      },
+      "aliases": []
+    }
+  ]
+}

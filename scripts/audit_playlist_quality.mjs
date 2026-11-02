@@ -5,9 +5,10 @@ import {loadProductionCatalogue} from './catalogue_runtime.mjs';
 
 const {data,manifest}=loadProductionCatalogue();
 const queue=JSON.parse(fs.readFileSync(new URL('../verification/playlist-curation-review.json',import.meta.url),'utf8'));
+const archive=JSON.parse(fs.readFileSync(new URL('../verification/playlist-retirements-2026-11-02.json',import.meta.url),'utf8'));
 const normalize=value=>String(value||'').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g,' ').trim();
 const leadArtist=value=>normalize(String(value||'').split(/\s+(?:feat\.?|ft\.?|featuring|with)\s+/i)[0].split(/\s+(?:and|&)\s+/i)[0]).replace(/^the\s+/,'');
-const summary={catalogueVersion:data.version,catalogueGenerated:data.generatedAt,modes:{},reviewQueue:{total:queue.items.length,open:[],resolved:[],missing:[]}};
+const summary={catalogueVersion:data.version,catalogueGenerated:data.generatedAt,modes:{},reviewQueue:{total:queue.items.length,open:[],resolved:[],retired:[],missing:[]}};
 
 for(const [id,info] of Object.entries(manifest.modes)){
   const buckets=data.modes[id]||{},rows=Object.entries(buckets).flatMap(([year,songs])=>songs.map(s=>({...s,bucketYear:Number(year)})));
@@ -35,7 +36,8 @@ for(const item of queue.items){
   const matched=pool.filter(song=>normalize(song.title)===normalize(item.title)&&normalize(song.artist)===normalize(item.artist));
   const row=matched.find(s=>s.bucketYear===item.listedYear)||matched[0];
   const result={...item,observedYear:row?.bucketYear??null,found:matched.length};
-  if(!row)summary.reviewQueue.missing.push(result);
+  if(!row&&archive.entries.some(entry=>entry.mode===item.mode&&normalize(entry.song.title)===normalize(item.title)&&normalize(entry.song.artist)===normalize(item.artist)))summary.reviewQueue.retired.push(result);
+  else if(!row)summary.reviewQueue.missing.push(result);
   else if(item.proposedYear!==null&&row.bucketYear===item.proposedYear)summary.reviewQueue.resolved.push(result);
   else summary.reviewQueue.open.push(result);
 }

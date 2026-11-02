@@ -40,9 +40,9 @@ New games start each team with **2 bonus points**. Existing matches retain their
 
 ### Song selection fairness
 
-For variable (unique-song) modes, the app now chooses uniformly among eligible **lead artists**, then uniformly among that artist's unused songs in the required card year. It prefers artists not yet heard in the saved match; if the year's remaining pool contains only heard artists, it uses the least-repeated one. Previously played tracks remain excluded, and the requested card year never changes. The one-leader-per-year chart modes intentionally retain their fixed-song repeat behaviour. Legacy saved matches work without migration because artist history is derived from their persisted used-song keys.
+For unique-song modes, the app selects uniformly among eligible **lead artists**, then among that artist's unused songs in the required card year. Artists not yet heard in the match take priority; if the current year only has previously heard artists, it selects the least-repeated eligible artist. Same-song and cross-year repeats are not introduced. Fixed year-end #1 chart modes still play their defined leaders.
 
-Run `node scripts/audit_playlist_quality.mjs` to see per-mode artist concentration, thin years, and an evidence-backed nonblocking year/recording correction queue in `verification/playlist-curation-review.json`. A queue item is **not** an approved correction; update `data/song-database.json` only after checking the exact recording and evidence, then rebuild the generated catalogue and run the full gate.
+Run `node scripts/audit_playlist_quality.mjs` for artist concentration and the historical review reconciliation. `verification/playlist-curation-review.json` preserves issues found before v19; the canonical reviewed corrections and retirements reside in `verification/playlist-curation-2026-11-02.json` and `verification/playlist-retirements-2026-11-02.json`.
 
 ### Mode status
 
@@ -54,11 +54,15 @@ Run `node scripts/audit_playlist_quality.mjs` to see per-mode artist concentrati
 | #1 US | Beta | 73/73 years | One fixed US chart leader per chart year |
 | #1 Australia | Beta | 73/73 years | One fixed Australian chart leader per chart year |
 
-Coverage counts usable songs after the runtime filter. Catalogue v18 contains 1,106 master song records across 1,298 active mode placements: 877 Greatest Hits (at least 12 per year), 235 Australian, 40 Unexpected Years, and 73 in each chart mode. Every stored active row is usable. A global identity/provider-ID regression check prevents the same master identity or provider recording ID from reappearing under multiple song records. Original cleanup records remain accounted for in the archive; the expansion ledger retains source recording metadata and withdrawn alias decisions. Run `node scripts/catalogue_summary.mjs` for runtime counts and `node scripts/song_database_report.mjs` for provider coverage.
+Coverage counts usable songs after the runtime filter. Catalogue v19 contains 1,124 master song records across 1,483 active mode placements: 884 Greatest Hits (at least 12 per year), 253 Australian, 200 Unexpected Years, and 73 in each chart mode. Every stored active row is usable. A global identity/provider-ID regression check prevents the same master identity or provider recording ID from reappearing under multiple song records. Original cleanup records remain accounted for in the archive; the expansion ledger retains source recording metadata and withdrawn alias decisions. Run `node scripts/catalogue_summary.mjs` for runtime counts and `node scripts/song_database_report.mjs` for provider coverage.
 
-P1 evidence hardening has independently observed release-year evidence for 857 masters; 249 remain unresolved. The latest sweep confirmed 40 previously unresolved master years without changing any answer year automatically. Legacy release evidence and exact playback-recording verification remain incomplete, so status stays Beta/Preview.
+The current canonical database has externally observed release-year evidence for 889 masters; 235 remain unresolved. The 2026-11-02 correction pass independently reviewed 13 erroneous canonical release dates, added 20 sourced masters, reused four masters in Australian, and archived three non-song entries without losing their original records. The latest sweep confirmed 40 previously unresolved master years without changing any answer year automatically. Legacy release evidence and exact playback-recording verification remain incomplete, so status stays Beta/Preview.
 
 No mode is currently labelled **Ready**. `data/modes.json` is the product source of truth for these labels and their explanations. A sparse mode never silently falls back to another mode: Virtual play deals only supported years, while Real cards report an unavailable year and let the player scan another card or change mode. Additional requested modes are declared as Building until their data and mechanics satisfy the release gate.
+
+### Reviewed playlist curation (November 2026)
+
+`verification/playlist-curation-2026-11-02.json` holds the individually sourced decisions. `verification/playlist-retirements-2026-11-02.json` preserves removed song and membership evidence. `scripts/migrations/2026-11-02-reviewed-playlists.mjs` documents the deterministic transformation, while `scripts/test_playlist_curation_20261102.mjs` blocks regressions. These edits **do not** imply that all older release years or exact provider recordings are verified; all existing Beta/Preview labels remain.
 
 ## Architecture
 

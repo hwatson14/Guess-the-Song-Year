@@ -35,6 +35,10 @@ for(const m of db.memberships.filter(m=>m.metadata.source==='catalogue-expansion
 }
 assert.deepEqual(superseded.sort((a,b)=>a.songId.localeCompare(b.songId)),[
   {songId:'song_2305a63b8f720bd2d23a',oldYear:1982,currentYear:1983},
-  {songId:'song_5789f221c273cdaae0dd',oldYear:1977,currentYear:1978}
-].sort((a,b)=>a.songId.localeCompare(b.songId)),'Only the two reviewed Unexpected Years corrections supersede v16 expansion evidence');
+  {songId:'song_5789f221c273cdaae0dd',oldYear:1977,currentYear:1978},
+  {songId:'song_9148f3ec2a1a04612d5e',oldYear:1975,currentYear:1976},
+  {songId:'song_57dde36919ecb3335b0d',oldYear:2010,currentYear:2011},
+  {songId:'song_32d0756d3c798da2ba17',oldYear:2000,currentYear:2001},
+  {songId:'song_beb9b8c88cb761a258e6',oldYear:2005,currentYear:1984}
+].sort((a,b)=>a.songId.localeCompare(b.songId)),'Six reviewed corrections supersede v16 evidence while retaining rejected historical claims');
 console.log(`Expansion evidence checks passed: ${keys.size} historical decisions retained; ${superseded.length} later corrections remain auditable.`);

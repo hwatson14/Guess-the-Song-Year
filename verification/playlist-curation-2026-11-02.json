@@ -1,0 +1,417 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-11-02",
+  "targetCatalogueVersion": 19,
+  "semantics": "First credible release of the intended canonical performance, including first album issue, never its later hit/chart year. Chart memberships remain independent.",
+  "recordingYearCorrections": [
+    {
+      "id": "song_9148f3ec2a1a04612d5e",
+      "oldYear": 1975,
+      "year": 1976,
+      "sourceUrl": "https://abbasite.com/articles/in-focus-arrival-the-making-of-a-classic-pop-album/",
+      "sourceProvider": "ABBA official website",
+      "evidence": "ABBA's English-language Fernando was released as their 1976 single; Frida's 1975 Swedish solo recording is a different performance."
+    },
+    {
+      "id": "song_57dde36919ecb3335b0d",
+      "oldYear": 2010,
+      "year": 2011,
+      "sourceUrl": "https://www.officialcharts.com/songs/maroon-5-ft-christina-aguilera-moves-like-jagger/",
+      "sourceProvider": "Official Charts",
+      "evidence": "Maroon 5's Moves Like Jagger first charted in 2011; earlier MusicBrainz 2010 claim concerns an invalid/relinked recording date."
+    },
+    {
+      "id": "song_2d856da0aee5c1c8cc40",
+      "oldYear": 2000,
+      "year": 1999,
+      "sourceUrl": "https://www.charts.nz/showitem.asp?cat=s&interpret=Santana+feat.+Rob+Thomas&titel=Smooth",
+      "sourceProvider": "Charts.nz single release listing",
+      "evidence": "Physical single and chart date from 1999; 2000 was a subsequent chart year."
+    },
+    {
+      "id": "song_32d0756d3c798da2ba17",
+      "oldYear": 2000,
+      "year": 2001,
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/USCOURTS-ca6-07-01051/pdf/USCOURTS-ca6-07-01051-0.pdf",
+      "sourceProvider": "US Court of Appeals official judgment",
+      "evidence": "Family Affair was commercially released on No More Drama in August 2001; 2000 studio work was not commercial release."
+    },
+    {
+      "id": "song_beb9b8c88cb761a258e6",
+      "oldYear": 2005,
+      "year": 1984,
+      "sourceUrl": "https://music.apple.com/us/song/1676125930",
+      "sourceProvider": "Apple Music original Reckless album",
+      "evidence": "Original Bryan Adams & Tina Turner duet appears on Reckless 5 November 1984; 2005 MusicBrainz reference is later issue.",
+      "artist": "Bryan Adams & Tina Turner",
+      "canonicalKey": "it s only love|bryan adams tina turner"
+    },
+    {
+      "id": "song_b348502c61671643acd9",
+      "oldYear": 2022,
+      "year": 2018,
+      "sourceUrl": "https://open.spotify.com/album/0jp3d3AcvjiGNcbEa6eTs5",
+      "sourceProvider": "Spotify original album",
+      "evidence": "Bloom is on Troye Sivan's album released 31 August 2018."
+    },
+    {
+      "id": "song_7244bd6ca062dc6a0c23",
+      "oldYear": 2022,
+      "year": 2018,
+      "sourceUrl": "https://open.spotify.com/album/0jp3d3AcvjiGNcbEa6eTs5",
+      "sourceProvider": "Spotify original album",
+      "evidence": "What a Heavenly Way to Die is track eight on Troye Sivan's 2018 Bloom album."
+    },
+    {
+      "id": "song_dc27bdd53cdf7e65056f",
+      "oldYear": 2021,
+      "year": 2015,
+      "sourceUrl": "https://music.apple.com/us/album/youth/1876132053?i=1876132065",
+      "sourceProvider": "Apple Music original album",
+      "evidence": "YOUTH appears on Troye Sivan's Blue Neighbourhood first released in 2015."
+    },
+    {
+      "id": "song_8defb7d277400bd75773",
+      "oldYear": 2008,
+      "year": 2004,
+      "sourceUrl": "https://www.missyhiggins.com/music/",
+      "sourceProvider": "Missy Higgins official discography",
+      "evidence": "Ten Days appears on The Sound of White released 6 September 2004."
+    },
+    {
+      "id": "song_ad88de3653324e3dbf8b",
+      "oldYear": 2008,
+      "year": 2007,
+      "sourceUrl": "https://www.missyhiggins.com/music/",
+      "sourceProvider": "Missy Higgins official discography",
+      "evidence": "Peachy appears on On a Clear Night released 28 April 2007."
+    },
+    {
+      "id": "song_cffa3868448b1e19af7d",
+      "oldYear": 2000,
+      "year": 1997,
+      "sourceUrl": "https://www.officialcharts.com/songs/kylie-minogue-did-it-again/",
+      "sourceProvider": "Official Charts",
+      "evidence": "Did It Again first entered UK singles chart on 6 December 1997."
+    },
+    {
+      "id": "song_e461fe68080645c9303e",
+      "oldYear": 2015,
+      "year": 2014,
+      "sourceUrl": "https://music.apple.com/us/album/amnesia-ep/1445037707",
+      "sourceProvider": "Apple Music original EP",
+      "evidence": "5 Seconds of Summer Amnesia is commercially available on their 2014 EP."
+    },
+    {
+      "id": "song_6d9eac767d3a5a7a6369",
+      "oldYear": 2008,
+      "year": 2006,
+      "sourceUrl": "https://hilltophoods.com/discography/the-hard-road/",
+      "sourceProvider": "Hilltop Hoods official discography",
+      "evidence": "Clown Prince is track two of The Hard Road, released 2006; 2008 is not its first issue."
+    }
+  ],
+  "newCanonicalSongs": [
+    {
+      "id": "song_2595dbd3cda5572f3b3b",
+      "title": "It's a Long Way to the Top (If You Wanna Rock 'n' Roll)",
+      "artist": "AC/DC",
+      "year": 1975,
+      "sourceUrl": "https://www.nfsa.gov.au/collection/item/its-long-way-top-if-you-wanna-rock-n-roll-acdc",
+      "sourceProvider": "National Film and Sound Archive of Australia",
+      "modes": [
+        "australian",
+        "greatest"
+      ],
+      "evidence": "First released as a single and on T.N.T. in 1975."
+    },
+    {
+      "id": "song_f08b9dc4d684c07f204a",
+      "title": "Highway to Hell",
+      "artist": "AC/DC",
+      "year": 1979,
+      "sourceUrl": "https://www.acdc.com/music/highway-to-hell/",
+      "sourceProvider": "AC/DC official discography",
+      "modes": [
+        "australian"
+      ],
+      "evidence": "Title track of AC/DC's 1979 Highway to Hell."
+    },
+    {
+      "id": "song_04638a1a85010fba6d56",
+      "title": "Back in Black",
+      "artist": "AC/DC",
+      "year": 1980,
+      "sourceUrl": "https://www.acdc.com/otd-1980-back-in-black-released/",
+      "sourceProvider": "AC/DC official discography",
+      "modes": [
+        "australian"
+      ],
+      "evidence": "Original Back in Black album released 25 July 1980."
+    },
+    {
+      "id": "song_305da935ec720ee3f32b",
+      "title": "You're the Voice",
+      "artist": "John Farnham",
+      "year": 1986,
+      "sourceUrl": "https://www.nfsa.gov.au/collection/item/youre-voice-john-farnham-0",
+      "sourceProvider": "National Film and Sound Archive of Australia",
+      "modes": [
+        "australian"
+      ],
+      "evidence": "Farnham single released September 1986."
+    },
+    {
+      "id": "song_fb981139b0bdd0c576c7",
+      "title": "Age of Reason",
+      "artist": "John Farnham",
+      "year": 1988,
+      "sourceUrl": "https://music.apple.com/us/song/270403625",
+      "sourceProvider": "Apple Music original album",
+      "modes": [
+        "australian"
+      ],
+      "evidence": "Title song released on album July 1988."
+    },
+    {
+      "id": "song_12fddcb3b60ca3256ff3",
+      "title": "Don't Dream It's Over",
+      "artist": "Crowded House",
+      "year": 1986,
+      "sourceUrl": "https://www.neilfinn.com/dont-dream-its-over",
+      "sourceProvider": "Neil Finn official website",
+      "modes": [
+        "australian"
+      ],
+      "evidence": "First issued on Crowded House's 1986 debut album."
+    },
+    {
+      "id": "song_183d3ed2a903e536cfcf",
+      "title": "The Boys Light Up",
+      "artist": "Australian Crawl",
+      "year": 1980,
+      "sourceUrl": "https://music.apple.com/us/song/1442866405",
+      "sourceProvider": "Apple Music original album",
+      "modes": [
+        "australian"
+      ],
+      "evidence": "Title track first released on 1980 album."
+    },
+    {
+      "id": "song_69a73240336880993b4a",
+      "title": "Tomorrow",
+      "artist": "Silverchair",
+      "year": 1994,
+      "sourceUrl": "https://www.nfsa.gov.au/collection/item/tomorrow-silverchair",
+      "sourceProvider": "National Film and Sound Archive of Australia",
+      "modes": [
+        "australian"
+      ],
+      "evidence": "First released on Silverchair's 1994 debut EP, not 1995 album."
+    },
+    {
+      "id": "song_db378fc86649c48b85f2",
+      "title": "Straight Lines",
+      "artist": "Silverchair",
+      "year": 2007,
+      "sourceUrl": "https://music.apple.com/us/album/young-modern/1551914561",
+      "sourceProvider": "Apple Music original album",
+      "modes": [
+        "australian"
+      ],
+      "evidence": "Young Modern released March 2007 and contains Straight Lines."
+    },
+    {
+      "id": "song_c0be0156996bddfef9e8",
+      "title": "I Want You",
+      "artist": "Savage Garden",
+      "year": 1996,
+      "sourceUrl": "https://music.apple.com/us/song/1670838851",
+      "sourceProvider": "Apple Music original single",
+      "modes": [
+        "australian"
+      ],
+      "evidence": "First single released May 1996."
+    },
+    {
+      "id": "song_17646e5fd8ef794edff2",
+      "title": "Truly Madly Deeply",
+      "artist": "Savage Garden",
+      "year": 1997,
+      "sourceUrl": "https://www.nfsa.gov.au/collection/item/truly-madly-deeply-savage-garden",
+      "sourceProvider": "National Film and Sound Archive of Australia",
+      "modes": [
+        "australian"
+      ],
+      "evidence": "Single released March 1997."
+    },
+    {
+      "id": "song_58cabf45d75591c81d74",
+      "title": "These Days",
+      "artist": "Powderfinger",
+      "year": 1999,
+      "sourceUrl": "https://www.nfsa.gov.au/collection/item/these-days-powderfinger",
+      "sourceProvider": "National Film and Sound Archive of Australia",
+      "modes": [
+        "australian"
+      ],
+      "evidence": "Originally released 1999 as B-side and soundtrack; 2000 was later album re-recording."
+    },
+    {
+      "id": "song_5de0ecada23eb768221c",
+      "title": "My Happiness",
+      "artist": "Powderfinger",
+      "year": 2000,
+      "sourceUrl": "https://www.abc.net.au/listen/doublej/music-reads/features/powderfinger-odyssey-number-5/12612384",
+      "sourceProvider": "ABC Double J retrospective",
+      "modes": [
+        "australian",
+        "greatest"
+      ],
+      "evidence": "Breakout single released in August 2000."
+    },
+    {
+      "id": "song_b1d515290e73fedd9d13",
+      "title": "Untouched",
+      "artist": "The Veronicas",
+      "year": 2007,
+      "sourceUrl": "https://music.apple.com/us/album/untouched-ep/269193945",
+      "sourceProvider": "Apple Music original EP",
+      "modes": [
+        "australian"
+      ],
+      "evidence": "Untouched EP issued 8 December 2007."
+    },
+    {
+      "id": "song_97bb3dde54bf3e6b5e87",
+      "title": "Walking on a Dream",
+      "artist": "Empire of the Sun",
+      "year": 2008,
+      "sourceUrl": "https://music.apple.com/us/song/1605860972",
+      "sourceProvider": "Apple Music original song",
+      "modes": [
+        "australian"
+      ],
+      "evidence": "Empire of the Sun original song first issued in 2008."
+    },
+    {
+      "id": "song_ad5be9b779fbbe5e1168",
+      "title": "Thousand Miles",
+      "artist": "The Kid LAROI",
+      "year": 2022,
+      "sourceUrl": "https://music.apple.com/us/album/thousand-miles-single/1618293848",
+      "sourceProvider": "Apple Music original single",
+      "modes": [
+        "australian"
+      ],
+      "evidence": "Released 22 April 2022."
+    },
+    {
+      "id": "song_5257c9f9fb26fa76f247",
+      "title": "Me Myself & I",
+      "artist": "5 Seconds of Summer",
+      "year": 2022,
+      "sourceUrl": "https://music.apple.com/us/album/me-myself-i-single/1622410547",
+      "sourceProvider": "Apple Music original single",
+      "modes": [
+        "australian"
+      ],
+      "evidence": "Released 13 May 2022."
+    },
+    {
+      "id": "song_b1851895cf1a9c41f96d",
+      "title": "Only Girl (In the World)",
+      "artist": "Rihanna",
+      "year": 2010,
+      "sourceUrl": "https://www.officialcharts.com/songs/rihanna-only-girl-in-the-world/",
+      "sourceProvider": "Official Charts",
+      "modes": [
+        "greatest"
+      ],
+      "evidence": "Single charted in 2010."
+    },
+    {
+      "id": "song_0a09786f8c507ac7d72e",
+      "title": "Oops!... I Did It Again",
+      "artist": "Britney Spears",
+      "year": 2000,
+      "sourceUrl": "https://www.officialcharts.com/songs/britney-spears-oops-i-did-it-again/",
+      "sourceProvider": "Official Charts",
+      "modes": [
+        "greatest"
+      ],
+      "evidence": "Single charted from May 2000."
+    },
+    {
+      "id": "song_e515124fe304fed1178a",
+      "title": "Gold Digger",
+      "artist": "Kanye West feat. Jamie Foxx",
+      "year": 2005,
+      "sourceUrl": "https://www.aria.com.au/charts/news/this-week-in-2005",
+      "sourceProvider": "ARIA official retrospective",
+      "modes": [
+        "greatest"
+      ],
+      "evidence": "Australian No. 1 in October 2005."
+    }
+  ],
+  "existingMasterMemberships": [
+    {
+      "songId": "song_8b67630ded5413ca93ed",
+      "mode": "australian",
+      "year": 1990,
+      "sourceUrl": "https://www.nfsa.gov.au/collection/item/thunderstruck-acdc",
+      "evidence": "AC/DC Thunderstruck 1990 recording (cross-check source link prior to promotion)",
+      "status": "reuse-original"
+    },
+    {
+      "songId": "song_98275822caadba3e7ad8",
+      "mode": "australian",
+      "year": 1987,
+      "sourceUrl": "https://www.inxs.com/music/kick/",
+      "evidence": "INXS Need You Tonight on Kick, released 19 October 1987",
+      "status": "reuse-original"
+    },
+    {
+      "songId": "song_6fccd7951213cb182674",
+      "mode": "australian",
+      "year": 2003,
+      "sourceUrl": "https://music.apple.com/us/album/are-you-gonna-be-my-girl-single/1778046431",
+      "evidence": "Jet original single released August 2003",
+      "status": "source-verified"
+    },
+    {
+      "songId": "song_9072f84fedc0377fab26",
+      "mode": "australian",
+      "year": 2001,
+      "sourceUrl": "https://www.officialcharts.com/songs/kylie-minogue-cant-get-you-out-of-my-head/",
+      "evidence": "Kylie Minogue original single charted in 2001",
+      "status": "source-verified"
+    }
+  ],
+  "retiredNonSongs": [
+    {
+      "songId": "song_8d37bfff1524ee7b7f1d",
+      "mode": "australian",
+      "reason": "Tour name is not a playable individual song; artist released Stopping All Stations on The Hard Road in 2006.",
+      "sourceUrl": "https://hilltophoods.com/discography/the-hard-road/"
+    },
+    {
+      "songId": "song_5c23aa2d1b434e90efcd",
+      "mode": "australian",
+      "reason": "A concert title, not a standalone canonical song recording.",
+      "sourceUrl": "https://hilltophoods.com/discography/the-hard-road-restrung/"
+    },
+    {
+      "songId": "song_8a9aac86c91e4eb63f98",
+      "mode": "australian",
+      "reason": "Generic Restrung album/version designation, not an identified original song; avoid album and remix leakage.",
+      "sourceUrl": "https://hilltophoods.com/discography/the-hard-road-restrung/"
+    }
+  ],
+  "policy": {
+    "providerIds": "Never assign guessed Spotify/YouTube track IDs; unresolved playback uses existing runtime search",
+    "status": "All affected modes remain Beta",
+    "historical": "Every corrected claim retained as a rejected historical claim; actual original master IDs never regenerated"
+  }
+}

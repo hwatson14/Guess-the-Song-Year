@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "catalogue": {
-    "version": 18,
-    "generatedAt": "2026-09-06",
+    "version": 19,
+    "generatedAt": "2026-11-02",
     "years": [
       1950,
       1951,
@@ -79,8 +79,8 @@
       2022
     ],
     "sources": {
-      "greatest": "Legacy Greatest Hits with 76 revision-backed release-year rows and sourced gap additions; remaining records are under reconciliation. No cross-mode fallback.",
-      "australian": "Australian artists with sourced release-year gap additions and the existing repeat-year audit; remaining legacy records are under reconciliation. No cross-mode fallback.",
+      "greatest": "Original-release year hits, with reviewed corrections and balanced 12-plus minimum yearly pools; residual year and playback checks remain Beta.",
+      "australian": "Sourced Australian-first repertoire including corrected legacy years and wider mainstream artist coverage; unresolved legacy members remain Beta.",
       "number1_us": "BiMMuDa Billboard year-end position 1",
       "number1_au": "Australian annual chart position 1",
       "unexpected": "Curated time-warp preview; only listed years are playable and there is no cross-mode fallback."
@@ -10709,17 +10709,27 @@
       "title": "Smooth",
       "artist": "Santana feat. Rob Thomas",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1999,
+        "state": "externally_observed",
         "claims": [
+          {
+            "year": 1999,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.charts.nz/showitem.asp?cat=s&interpret=Santana+feat.+Rob+Thomas&titel=Smooth",
+            "evidence": "Physical single and chart date from 1999; 2000 was a subsequent chart year."
+          }
+        ],
+        "answerYear": 1999,
+        "rejectedClaims": [
           {
             "year": 2000,
             "state": "legacy_unverified",
             "sourceUrl": null,
-            "evidence": null
+            "evidence": null,
+            "rejectedAt": "2026-11-02",
+            "reason": "superseded by source-specific original-release review"
           }
-        ],
-        "answerYear": 2000
+        ]
       },
       "providers": {
         "spotify": {
@@ -20633,17 +20643,27 @@
       "title": "Did It Again",
       "artist": "Kylie Minogue",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1997,
+        "state": "externally_observed",
         "claims": [
+          {
+            "year": 1997,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/kylie-minogue-did-it-again/",
+            "evidence": "Did It Again first entered UK singles chart on 6 December 1997."
+          }
+        ],
+        "answerYear": 1997,
+        "rejectedClaims": [
           {
             "year": 2000,
             "state": "legacy_unverified",
             "sourceUrl": null,
-            "evidence": null
+            "evidence": null,
+            "rejectedAt": "2026-11-02",
+            "reason": "superseded by source-specific original-release review"
           }
-        ],
-        "answerYear": 2000
+        ]
       },
       "providers": {
         "spotify": {
@@ -21344,110 +21364,33 @@
         }
       }
     },
-    "song_8d37bfff1524ee7b7f1d": {
-      "id": "song_8d37bfff1524ee7b7f1d",
-      "canonicalKey": "the stopping all stations tour|hilltop hoods",
-      "title": "The Stopping All Stations Tour",
-      "artist": "Hilltop Hoods",
-      "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [
-          {
-            "year": 2007,
-            "state": "legacy_unverified",
-            "sourceUrl": null,
-            "evidence": null
-          }
-        ],
-        "answerYear": 2007
-      },
-      "providers": {
-        "spotify": {
-          "preferredId": null,
-          "links": []
-        },
-        "youtube": {
-          "preferredId": null,
-          "links": []
-        }
-      }
-    },
-    "song_5c23aa2d1b434e90efcd": {
-      "id": "song_5c23aa2d1b434e90efcd",
-      "canonicalKey": "the complete hard road restrung launch concert|hilltop hoods",
-      "title": "The Complete Hard Road Restrung Launch Concert",
-      "artist": "Hilltop Hoods",
-      "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [
-          {
-            "year": 2007,
-            "state": "legacy_unverified",
-            "sourceUrl": null,
-            "evidence": null
-          }
-        ],
-        "answerYear": 2007
-      },
-      "providers": {
-        "spotify": {
-          "preferredId": null,
-          "links": []
-        },
-        "youtube": {
-          "preferredId": null,
-          "links": []
-        }
-      }
-    },
-    "song_8a9aac86c91e4eb63f98": {
-      "id": "song_8a9aac86c91e4eb63f98",
-      "canonicalKey": "restrung|hilltop hoods",
-      "title": "Restrung",
-      "artist": "Hilltop Hoods",
-      "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [
-          {
-            "year": 2007,
-            "state": "legacy_unverified",
-            "sourceUrl": null,
-            "evidence": null
-          }
-        ],
-        "answerYear": 2007
-      },
-      "providers": {
-        "spotify": {
-          "preferredId": null,
-          "links": []
-        },
-        "youtube": {
-          "preferredId": null,
-          "links": []
-        }
-      }
-    },
     "song_6d9eac767d3a5a7a6369": {
       "id": "song_6d9eac767d3a5a7a6369",
       "canonicalKey": "clown prince|hilltop hoods",
       "title": "Clown Prince",
       "artist": "Hilltop Hoods",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 2006,
+        "state": "externally_observed",
         "claims": [
+          {
+            "year": 2006,
+            "state": "externally_observed",
+            "sourceUrl": "https://hilltophoods.com/discography/the-hard-road/",
+            "evidence": "Clown Prince is track two of The Hard Road, released 2006; 2008 is not its first issue."
+          }
+        ],
+        "answerYear": 2006,
+        "rejectedClaims": [
           {
             "year": 2008,
             "state": "legacy_unverified",
             "sourceUrl": null,
-            "evidence": null
+            "evidence": null,
+            "rejectedAt": "2026-11-02",
+            "reason": "superseded by source-specific original-release review"
           }
-        ],
-        "answerYear": 2008
+        ]
       },
       "providers": {
         "spotify": {
@@ -21466,17 +21409,27 @@
       "title": "Peachy",
       "artist": "Missy Higgins",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 2007,
+        "state": "externally_observed",
         "claims": [
+          {
+            "year": 2007,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.missyhiggins.com/music/",
+            "evidence": "Peachy appears on On a Clear Night released 28 April 2007."
+          }
+        ],
+        "answerYear": 2007,
+        "rejectedClaims": [
           {
             "year": 2008,
             "state": "legacy_unverified",
             "sourceUrl": null,
-            "evidence": null
+            "evidence": null,
+            "rejectedAt": "2026-11-02",
+            "reason": "superseded by source-specific original-release review"
           }
-        ],
-        "answerYear": 2008
+        ]
       },
       "providers": {
         "spotify": {
@@ -21495,17 +21448,27 @@
       "title": "Ten Days",
       "artist": "Missy Higgins",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 2004,
+        "state": "externally_observed",
         "claims": [
+          {
+            "year": 2004,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.missyhiggins.com/music/",
+            "evidence": "Ten Days appears on The Sound of White released 6 September 2004."
+          }
+        ],
+        "answerYear": 2004,
+        "rejectedClaims": [
           {
             "year": 2008,
             "state": "legacy_unverified",
             "sourceUrl": null,
-            "evidence": null
+            "evidence": null,
+            "rejectedAt": "2026-11-02",
+            "reason": "superseded by source-specific original-release review"
           }
-        ],
-        "answerYear": 2008
+        ]
       },
       "providers": {
         "spotify": {
@@ -22202,17 +22165,27 @@
       "title": "Amnesia",
       "artist": "5 Seconds of Summer",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 2014,
+        "state": "externally_observed",
         "claims": [
+          {
+            "year": 2014,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/album/amnesia-ep/1445037707",
+            "evidence": "5 Seconds of Summer Amnesia is commercially available on their 2014 EP."
+          }
+        ],
+        "answerYear": 2014,
+        "rejectedClaims": [
           {
             "year": 2015,
             "state": "legacy_unverified",
             "sourceUrl": null,
-            "evidence": null
+            "evidence": null,
+            "rejectedAt": "2026-11-02",
+            "reason": "superseded by source-specific original-release review"
           }
-        ],
-        "answerYear": 2015
+        ]
       },
       "providers": {
         "spotify": {
@@ -23140,17 +23113,27 @@
       "title": "YOUTH",
       "artist": "Troye Sivan",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 2015,
+        "state": "externally_observed",
         "claims": [
+          {
+            "year": 2015,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/album/youth/1876132053?i=1876132065",
+            "evidence": "YOUTH appears on Troye Sivan's Blue Neighbourhood first released in 2015."
+          }
+        ],
+        "answerYear": 2015,
+        "rejectedClaims": [
           {
             "year": 2021,
             "state": "legacy_unverified",
             "sourceUrl": null,
-            "evidence": null
+            "evidence": null,
+            "rejectedAt": "2026-11-02",
+            "reason": "superseded by source-specific original-release review"
           }
-        ],
-        "answerYear": 2021
+        ]
       },
       "providers": {
         "spotify": {
@@ -23369,17 +23352,27 @@
       "title": "Bloom",
       "artist": "Troye Sivan",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 2018,
+        "state": "externally_observed",
         "claims": [
+          {
+            "year": 2018,
+            "state": "externally_observed",
+            "sourceUrl": "https://open.spotify.com/album/0jp3d3AcvjiGNcbEa6eTs5",
+            "evidence": "Bloom is on Troye Sivan's album released 31 August 2018."
+          }
+        ],
+        "answerYear": 2018,
+        "rejectedClaims": [
           {
             "year": 2022,
             "state": "legacy_unverified",
             "sourceUrl": null,
-            "evidence": null
+            "evidence": null,
+            "rejectedAt": "2026-11-02",
+            "reason": "superseded by source-specific original-release review"
           }
-        ],
-        "answerYear": 2022
+        ]
       },
       "providers": {
         "spotify": {
@@ -23398,17 +23391,27 @@
       "title": "What a Heavenly Way to Die",
       "artist": "Troye Sivan",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 2018,
+        "state": "externally_observed",
         "claims": [
+          {
+            "year": 2018,
+            "state": "externally_observed",
+            "sourceUrl": "https://open.spotify.com/album/0jp3d3AcvjiGNcbEa6eTs5",
+            "evidence": "What a Heavenly Way to Die is track eight on Troye Sivan's 2018 Bloom album."
+          }
+        ],
+        "answerYear": 2018,
+        "rejectedClaims": [
           {
             "year": 2022,
             "state": "legacy_unverified",
             "sourceUrl": null,
-            "evidence": null
+            "evidence": null,
+            "rejectedAt": "2026-11-02",
+            "reason": "superseded by source-specific original-release review"
           }
-        ],
-        "answerYear": 2022
+        ]
       },
       "providers": {
         "spotify": {
@@ -25177,14 +25180,14 @@
       "title": "Can’t Get You Out of My Head",
       "artist": "Kylie Minogue",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 2001,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 2001,
-            "state": "legacy_unverified",
-            "sourceUrl": null,
-            "evidence": null
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/kylie-minogue-cant-get-you-out-of-my-head/",
+            "evidence": "Kylie Minogue original single charted in 2001"
           }
         ],
         "answerYear": 2001
@@ -25277,14 +25280,14 @@
       "title": "Are You Gonna Be My Girl",
       "artist": "Jet",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 2003,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 2003,
-            "state": "legacy_unverified",
-            "sourceUrl": null,
-            "evidence": null
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/album/are-you-gonna-be-my-girl-single/1778046431",
+            "evidence": "Jet original single released August 2003"
           }
         ],
         "answerYear": 2003
@@ -27315,17 +27318,27 @@
       "title": "Fernando",
       "artist": "ABBA",
       "release": {
-        "year": 1975,
+        "year": 1976,
         "state": "externally_observed",
         "claims": [
+          {
+            "year": 1976,
+            "state": "externally_observed",
+            "sourceUrl": "https://abbasite.com/articles/in-focus-arrival-the-making-of-a-classic-pop-album/",
+            "evidence": "ABBA's English-language Fernando was released as their 1976 single; Frida's 1975 Swedish solo recording is a different performance."
+          }
+        ],
+        "answerYear": 1976,
+        "rejectedClaims": [
           {
             "year": 1975,
             "state": "externally_observed",
             "sourceUrl": "https://musicbrainz.org/recording/2220c404-2e89-43ed-b577-4dc82d1fe73c",
-            "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+            "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded.",
+            "rejectedAt": "2026-11-02",
+            "reason": "superseded by source-specific original-release review"
           }
-        ],
-        "answerYear": 1975
+        ]
       },
       "providers": {
         "spotify": {
@@ -41654,17 +41667,27 @@
       "title": "Family Affair",
       "artist": "Mary J. Blige",
       "release": {
-        "year": 2000,
+        "year": 2001,
         "state": "externally_observed",
         "claims": [
+          {
+            "year": 2001,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.govinfo.gov/content/pkg/USCOURTS-ca6-07-01051/pdf/USCOURTS-ca6-07-01051-0.pdf",
+            "evidence": "Family Affair was commercially released on No More Drama in August 2001; 2000 studio work was not commercial release."
+          }
+        ],
+        "answerYear": 2001,
+        "rejectedClaims": [
           {
             "year": 2000,
             "state": "externally_observed",
             "sourceUrl": "https://musicbrainz.org/recording/b5c9515d-2562-4072-940a-b10e58cadebd",
-            "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+            "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded.",
+            "rejectedAt": "2026-11-02",
+            "reason": "superseded by source-specific original-release review"
           }
-        ],
-        "answerYear": 2000
+        ]
       },
       "providers": {
         "spotify": {
@@ -44884,17 +44907,27 @@
       "title": "Moves Like Jagger",
       "artist": "Maroon 5",
       "release": {
-        "year": 2010,
+        "year": 2011,
         "state": "externally_observed",
         "claims": [
+          {
+            "year": 2011,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/maroon-5-ft-christina-aguilera-moves-like-jagger/",
+            "evidence": "Maroon 5's Moves Like Jagger first charted in 2011; earlier MusicBrainz 2010 claim concerns an invalid/relinked recording date."
+          }
+        ],
+        "answerYear": 2011,
+        "rejectedClaims": [
           {
             "year": 2010,
             "state": "externally_observed",
             "sourceUrl": "https://musicbrainz.org/recording/c832691f-fe0c-448a-bf22-54e28335627e",
-            "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+            "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded.",
+            "rejectedAt": "2026-11-02",
+            "reason": "superseded by source-specific original-release review"
           }
-        ],
-        "answerYear": 2010
+        ]
       },
       "providers": {
         "spotify": {
@@ -62399,21 +62432,31 @@
     },
     "song_beb9b8c88cb761a258e6": {
       "id": "song_beb9b8c88cb761a258e6",
-      "canonicalKey": "it s only love|bryan adams",
+      "canonicalKey": "it s only love|bryan adams tina turner",
       "title": "It's Only Love",
-      "artist": "Bryan Adams",
+      "artist": "Bryan Adams & Tina Turner",
       "release": {
-        "year": 2005,
+        "year": 1984,
         "state": "externally_observed",
         "claims": [
+          {
+            "year": 1984,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/song/1676125930",
+            "evidence": "Original Bryan Adams & Tina Turner duet appears on Reckless 5 November 1984; 2005 MusicBrainz reference is later issue."
+          }
+        ],
+        "answerYear": 1984,
+        "rejectedClaims": [
           {
             "year": 2005,
             "state": "externally_observed",
             "sourceUrl": "https://musicbrainz.org/recording/19e9441e-d71e-4746-8ee7-bf6e3066a8ef",
-            "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded."
+            "evidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded.",
+            "rejectedAt": "2026-11-02",
+            "reason": "superseded by source-specific original-release review"
           }
-        ],
-        "answerYear": 2005
+        ]
       },
       "providers": {
         "spotify": {
@@ -73902,6 +73945,586 @@
           ]
         }
       }
+    },
+    "song_2595dbd3cda5572f3b3b": {
+      "id": "song_2595dbd3cda5572f3b3b",
+      "canonicalKey": "it s a long way to the top if you wanna rock n roll|ac dc",
+      "title": "It's a Long Way to the Top (If You Wanna Rock 'n' Roll)",
+      "artist": "AC/DC",
+      "release": {
+        "answerYear": 1975,
+        "year": 1975,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1975,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.nfsa.gov.au/collection/item/its-long-way-top-if-you-wanna-rock-n-roll-acdc",
+            "evidence": "First released as a single and on T.N.T. in 1975."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_f08b9dc4d684c07f204a": {
+      "id": "song_f08b9dc4d684c07f204a",
+      "canonicalKey": "highway to hell|ac dc",
+      "title": "Highway to Hell",
+      "artist": "AC/DC",
+      "release": {
+        "answerYear": 1979,
+        "year": 1979,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1979,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.acdc.com/music/highway-to-hell/",
+            "evidence": "Title track of AC/DC's 1979 Highway to Hell."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_04638a1a85010fba6d56": {
+      "id": "song_04638a1a85010fba6d56",
+      "canonicalKey": "back in black|ac dc",
+      "title": "Back in Black",
+      "artist": "AC/DC",
+      "release": {
+        "answerYear": 1980,
+        "year": 1980,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1980,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.acdc.com/otd-1980-back-in-black-released/",
+            "evidence": "Original Back in Black album released 25 July 1980."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_305da935ec720ee3f32b": {
+      "id": "song_305da935ec720ee3f32b",
+      "canonicalKey": "you re the voice|john farnham",
+      "title": "You're the Voice",
+      "artist": "John Farnham",
+      "release": {
+        "answerYear": 1986,
+        "year": 1986,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1986,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.nfsa.gov.au/collection/item/youre-voice-john-farnham-0",
+            "evidence": "Farnham single released September 1986."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_fb981139b0bdd0c576c7": {
+      "id": "song_fb981139b0bdd0c576c7",
+      "canonicalKey": "age of reason|john farnham",
+      "title": "Age of Reason",
+      "artist": "John Farnham",
+      "release": {
+        "answerYear": 1988,
+        "year": 1988,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1988,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/song/270403625",
+            "evidence": "Title song released on album July 1988."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_12fddcb3b60ca3256ff3": {
+      "id": "song_12fddcb3b60ca3256ff3",
+      "canonicalKey": "don t dream it s over|crowded house",
+      "title": "Don't Dream It's Over",
+      "artist": "Crowded House",
+      "release": {
+        "answerYear": 1986,
+        "year": 1986,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1986,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.neilfinn.com/dont-dream-its-over",
+            "evidence": "First issued on Crowded House's 1986 debut album."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_183d3ed2a903e536cfcf": {
+      "id": "song_183d3ed2a903e536cfcf",
+      "canonicalKey": "the boys light up|australian crawl",
+      "title": "The Boys Light Up",
+      "artist": "Australian Crawl",
+      "release": {
+        "answerYear": 1980,
+        "year": 1980,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1980,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/song/1442866405",
+            "evidence": "Title track first released on 1980 album."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_69a73240336880993b4a": {
+      "id": "song_69a73240336880993b4a",
+      "canonicalKey": "tomorrow|silverchair",
+      "title": "Tomorrow",
+      "artist": "Silverchair",
+      "release": {
+        "answerYear": 1994,
+        "year": 1994,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1994,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.nfsa.gov.au/collection/item/tomorrow-silverchair",
+            "evidence": "First released on Silverchair's 1994 debut EP, not 1995 album."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_db378fc86649c48b85f2": {
+      "id": "song_db378fc86649c48b85f2",
+      "canonicalKey": "straight lines|silverchair",
+      "title": "Straight Lines",
+      "artist": "Silverchair",
+      "release": {
+        "answerYear": 2007,
+        "year": 2007,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2007,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/album/young-modern/1551914561",
+            "evidence": "Young Modern released March 2007 and contains Straight Lines."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_c0be0156996bddfef9e8": {
+      "id": "song_c0be0156996bddfef9e8",
+      "canonicalKey": "i want you|savage garden",
+      "title": "I Want You",
+      "artist": "Savage Garden",
+      "release": {
+        "answerYear": 1996,
+        "year": 1996,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1996,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/song/1670838851",
+            "evidence": "First single released May 1996."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_17646e5fd8ef794edff2": {
+      "id": "song_17646e5fd8ef794edff2",
+      "canonicalKey": "truly madly deeply|savage garden",
+      "title": "Truly Madly Deeply",
+      "artist": "Savage Garden",
+      "release": {
+        "answerYear": 1997,
+        "year": 1997,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1997,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.nfsa.gov.au/collection/item/truly-madly-deeply-savage-garden",
+            "evidence": "Single released March 1997."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_58cabf45d75591c81d74": {
+      "id": "song_58cabf45d75591c81d74",
+      "canonicalKey": "these days|powderfinger",
+      "title": "These Days",
+      "artist": "Powderfinger",
+      "release": {
+        "answerYear": 1999,
+        "year": 1999,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1999,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.nfsa.gov.au/collection/item/these-days-powderfinger",
+            "evidence": "Originally released 1999 as B-side and soundtrack; 2000 was later album re-recording."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_5de0ecada23eb768221c": {
+      "id": "song_5de0ecada23eb768221c",
+      "canonicalKey": "my happiness|powderfinger",
+      "title": "My Happiness",
+      "artist": "Powderfinger",
+      "release": {
+        "answerYear": 2000,
+        "year": 2000,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2000,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.abc.net.au/listen/doublej/music-reads/features/powderfinger-odyssey-number-5/12612384",
+            "evidence": "Breakout single released in August 2000."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_b1d515290e73fedd9d13": {
+      "id": "song_b1d515290e73fedd9d13",
+      "canonicalKey": "untouched|the veronicas",
+      "title": "Untouched",
+      "artist": "The Veronicas",
+      "release": {
+        "answerYear": 2007,
+        "year": 2007,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2007,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/album/untouched-ep/269193945",
+            "evidence": "Untouched EP issued 8 December 2007."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_97bb3dde54bf3e6b5e87": {
+      "id": "song_97bb3dde54bf3e6b5e87",
+      "canonicalKey": "walking on a dream|empire of the sun",
+      "title": "Walking on a Dream",
+      "artist": "Empire of the Sun",
+      "release": {
+        "answerYear": 2008,
+        "year": 2008,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2008,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/song/1605860972",
+            "evidence": "Empire of the Sun original song first issued in 2008."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_ad5be9b779fbbe5e1168": {
+      "id": "song_ad5be9b779fbbe5e1168",
+      "canonicalKey": "thousand miles|the kid laroi",
+      "title": "Thousand Miles",
+      "artist": "The Kid LAROI",
+      "release": {
+        "answerYear": 2022,
+        "year": 2022,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2022,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/album/thousand-miles-single/1618293848",
+            "evidence": "Released 22 April 2022."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_5257c9f9fb26fa76f247": {
+      "id": "song_5257c9f9fb26fa76f247",
+      "canonicalKey": "me myself i|5 seconds of summer",
+      "title": "Me Myself & I",
+      "artist": "5 Seconds of Summer",
+      "release": {
+        "answerYear": 2022,
+        "year": 2022,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2022,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/album/me-myself-i-single/1622410547",
+            "evidence": "Released 13 May 2022."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_b1851895cf1a9c41f96d": {
+      "id": "song_b1851895cf1a9c41f96d",
+      "canonicalKey": "only girl in the world|rihanna",
+      "title": "Only Girl (In the World)",
+      "artist": "Rihanna",
+      "release": {
+        "answerYear": 2010,
+        "year": 2010,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2010,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/rihanna-only-girl-in-the-world/",
+            "evidence": "Single charted in 2010."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_0a09786f8c507ac7d72e": {
+      "id": "song_0a09786f8c507ac7d72e",
+      "canonicalKey": "oops i did it again|britney spears",
+      "title": "Oops!... I Did It Again",
+      "artist": "Britney Spears",
+      "release": {
+        "answerYear": 2000,
+        "year": 2000,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2000,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/britney-spears-oops-i-did-it-again/",
+            "evidence": "Single charted from May 2000."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_e515124fe304fed1178a": {
+      "id": "song_e515124fe304fed1178a",
+      "canonicalKey": "gold digger|kanye west feat jamie foxx",
+      "title": "Gold Digger",
+      "artist": "Kanye West feat. Jamie Foxx",
+      "release": {
+        "answerYear": 2005,
+        "year": 2005,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2005,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.aria.com.au/charts/news/this-week-in-2005",
+            "evidence": "Australian No. 1 in October 2005."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
     }
   },
   "memberships": [
@@ -79181,16 +79804,23 @@
     {
       "songId": "song_2d856da0aee5c1c8cc40",
       "mode": "greatest",
-      "year": 2000,
+      "year": 1999,
       "metadata": {
         "mbScore": 61,
-        "source": "release-year-verified",
-        "sourceLabel": "Billboard hit · legacy release-year label",
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
         "legacyKeys": [
           "smooth|santanarob thomas",
           "song_09c24c50eddd79da4285",
           "smooth|carlos santana"
-        ]
+        ],
+        "releaseYear": 1999,
+        "sourceUrl": "https://www.charts.nz/showitem.asp?cat=s&interpret=Santana+feat.+Rob+Thomas&titel=Smooth",
+        "sourceProvider": "Charts.nz single release listing",
+        "releaseYearEvidence": "Physical single and chart date from 1999; 2000 was a subsequent chart year.",
+        "releaseDateEvidence": "1999",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
       },
       "fieldOrder": [
         "title",
@@ -84032,11 +84662,18 @@
     {
       "songId": "song_cffa3868448b1e19af7d",
       "mode": "australian",
-      "year": 2000,
+      "year": 1997,
       "metadata": {
         "mbScore": 81,
-        "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "releaseYear": 1997,
+        "sourceUrl": "https://www.officialcharts.com/songs/kylie-minogue-did-it-again/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Did It Again first entered UK singles chart on 6 December 1997.",
+        "releaseDateEvidence": "1997",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
       },
       "fieldOrder": [
         "title",
@@ -84541,67 +85178,20 @@
       ]
     },
     {
-      "songId": "song_8d37bfff1524ee7b7f1d",
-      "mode": "australian",
-      "year": 2007,
-      "metadata": {
-        "mbScore": 100,
-        "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
-      },
-      "fieldOrder": [
-        "title",
-        "artist",
-        "year",
-        "mbScore",
-        "source",
-        "sourceLabel"
-      ]
-    },
-    {
-      "songId": "song_5c23aa2d1b434e90efcd",
-      "mode": "australian",
-      "year": 2007,
-      "metadata": {
-        "mbScore": 100,
-        "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
-      },
-      "fieldOrder": [
-        "title",
-        "artist",
-        "year",
-        "mbScore",
-        "source",
-        "sourceLabel"
-      ]
-    },
-    {
-      "songId": "song_8a9aac86c91e4eb63f98",
-      "mode": "australian",
-      "year": 2007,
-      "metadata": {
-        "mbScore": 100,
-        "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
-      },
-      "fieldOrder": [
-        "title",
-        "artist",
-        "year",
-        "mbScore",
-        "source",
-        "sourceLabel"
-      ]
-    },
-    {
       "songId": "song_6d9eac767d3a5a7a6369",
       "mode": "australian",
-      "year": 2008,
+      "year": 2006,
       "metadata": {
         "mbScore": 100,
-        "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "releaseYear": 2006,
+        "sourceUrl": "https://hilltophoods.com/discography/the-hard-road/",
+        "sourceProvider": "Hilltop Hoods official discography",
+        "releaseYearEvidence": "Clown Prince is track two of The Hard Road, released 2006; 2008 is not its first issue.",
+        "releaseDateEvidence": "2006",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
       },
       "fieldOrder": [
         "title",
@@ -84615,11 +85205,18 @@
     {
       "songId": "song_ad88de3653324e3dbf8b",
       "mode": "australian",
-      "year": 2008,
+      "year": 2007,
       "metadata": {
         "mbScore": 85,
-        "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "releaseYear": 2007,
+        "sourceUrl": "https://www.missyhiggins.com/music/",
+        "sourceProvider": "Missy Higgins official discography",
+        "releaseYearEvidence": "Peachy appears on On a Clear Night released 28 April 2007.",
+        "releaseDateEvidence": "2007",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
       },
       "fieldOrder": [
         "title",
@@ -84633,11 +85230,18 @@
     {
       "songId": "song_8defb7d277400bd75773",
       "mode": "australian",
-      "year": 2008,
+      "year": 2004,
       "metadata": {
         "mbScore": 85,
-        "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "releaseYear": 2004,
+        "sourceUrl": "https://www.missyhiggins.com/music/",
+        "sourceProvider": "Missy Higgins official discography",
+        "releaseYearEvidence": "Ten Days appears on The Sound of White released 6 September 2004.",
+        "releaseDateEvidence": "2004",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
       },
       "fieldOrder": [
         "title",
@@ -85172,11 +85776,18 @@
     {
       "songId": "song_e461fe68080645c9303e",
       "mode": "australian",
-      "year": 2015,
+      "year": 2014,
       "metadata": {
         "mbScore": 100,
-        "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "releaseYear": 2014,
+        "sourceUrl": "https://music.apple.com/us/album/amnesia-ep/1445037707",
+        "sourceProvider": "Apple Music original EP",
+        "releaseYearEvidence": "5 Seconds of Summer Amnesia is commercially available on their 2014 EP.",
+        "releaseDateEvidence": "2014",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
       },
       "fieldOrder": [
         "title",
@@ -85589,11 +86200,18 @@
     {
       "songId": "song_dc27bdd53cdf7e65056f",
       "mode": "australian",
-      "year": 2021,
+      "year": 2015,
       "metadata": {
         "mbScore": 100,
-        "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "releaseYear": 2015,
+        "sourceUrl": "https://music.apple.com/us/album/youth/1876132053?i=1876132065",
+        "sourceProvider": "Apple Music original album",
+        "releaseYearEvidence": "YOUTH appears on Troye Sivan's Blue Neighbourhood first released in 2015.",
+        "releaseDateEvidence": "2015",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
       },
       "fieldOrder": [
         "title",
@@ -85643,11 +86261,18 @@
     {
       "songId": "song_b348502c61671643acd9",
       "mode": "australian",
-      "year": 2022,
+      "year": 2018,
       "metadata": {
         "mbScore": 100,
-        "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "releaseYear": 2018,
+        "sourceUrl": "https://open.spotify.com/album/0jp3d3AcvjiGNcbEa6eTs5",
+        "sourceProvider": "Spotify original album",
+        "releaseYearEvidence": "Bloom is on Troye Sivan's album released 31 August 2018.",
+        "releaseDateEvidence": "2018",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
       },
       "fieldOrder": [
         "title",
@@ -85661,11 +86286,18 @@
     {
       "songId": "song_7244bd6ca062dc6a0c23",
       "mode": "australian",
-      "year": 2022,
+      "year": 2018,
       "metadata": {
         "mbScore": 100,
-        "source": "australian-release",
-        "sourceLabel": "Australian artist · legacy release-year label"
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "releaseYear": 2018,
+        "sourceUrl": "https://open.spotify.com/album/0jp3d3AcvjiGNcbEa6eTs5",
+        "sourceProvider": "Spotify original album",
+        "releaseYearEvidence": "What a Heavenly Way to Die is track eight on Troye Sivan's 2018 Bloom album.",
+        "releaseDateEvidence": "2018",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
       },
       "fieldOrder": [
         "title",
@@ -102160,18 +102792,16 @@
     {
       "songId": "song_32d0756d3c798da2ba17",
       "mode": "greatest",
-      "year": 2000,
+      "year": 2001,
       "metadata": {
-        "releaseYear": 2000,
-        "musicbrainzId": "b5c9515d-2562-4072-940a-b10e58cadebd",
-        "yearEvidence": "MusicBrainz recording earliest first-release-date",
-        "source": "catalogue-expansion-recording-audit",
-        "sourceLabel": "MusicBrainz recording release evidence",
-        "sourceUrl": "https://musicbrainz.org/recording/b5c9515d-2562-4072-940a-b10e58cadebd",
-        "sourceProvider": "MusicBrainz recording database",
-        "sourceRetrievalDate": "2026-09-05",
-        "releaseYearEvidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded.",
-        "releaseDateEvidence": "2000",
+        "releaseYear": 2001,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://www.govinfo.gov/content/pkg/USCOURTS-ca6-07-01051/pdf/USCOURTS-ca6-07-01051-0.pdf",
+        "sourceProvider": "US Court of Appeals official judgment",
+        "sourceRetrievalDate": "2026-11-02",
+        "releaseYearEvidence": "Family Affair was commercially released on No More Drama in August 2001; 2000 studio work was not commercial release.",
+        "releaseDateEvidence": "2001",
         "evidenceState": "externally_observed"
       },
       "fieldOrder": [
@@ -103636,18 +104266,16 @@
     {
       "songId": "song_57dde36919ecb3335b0d",
       "mode": "greatest",
-      "year": 2010,
+      "year": 2011,
       "metadata": {
-        "releaseYear": 2010,
-        "musicbrainzId": "c832691f-fe0c-448a-bf22-54e28335627e",
-        "yearEvidence": "MusicBrainz recording earliest first-release-date",
-        "source": "catalogue-expansion-recording-audit",
-        "sourceLabel": "MusicBrainz recording release evidence",
-        "sourceUrl": "https://musicbrainz.org/recording/c832691f-fe0c-448a-bf22-54e28335627e",
-        "sourceProvider": "MusicBrainz recording database",
-        "sourceRetrievalDate": "2026-09-05",
-        "releaseYearEvidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded.",
-        "releaseDateEvidence": "2010-09-15",
+        "releaseYear": 2011,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://www.officialcharts.com/songs/maroon-5-ft-christina-aguilera-moves-like-jagger/",
+        "sourceProvider": "Official Charts",
+        "sourceRetrievalDate": "2026-11-02",
+        "releaseYearEvidence": "Maroon 5's Moves Like Jagger first charted in 2011; earlier MusicBrainz 2010 claim concerns an invalid/relinked recording date.",
+        "releaseDateEvidence": "2011",
         "evidenceState": "externally_observed"
       },
       "fieldOrder": [
@@ -106875,18 +107503,16 @@
     {
       "songId": "song_9148f3ec2a1a04612d5e",
       "mode": "greatest",
-      "year": 1975,
+      "year": 1976,
       "metadata": {
-        "releaseYear": 1975,
-        "musicbrainzId": "2220c404-2e89-43ed-b577-4dc82d1fe73c",
-        "yearEvidence": "MusicBrainz recording earliest first-release-date",
-        "source": "catalogue-expansion-recording-audit",
-        "sourceLabel": "MusicBrainz recording release evidence",
-        "sourceUrl": "https://musicbrainz.org/recording/2220c404-2e89-43ed-b577-4dc82d1fe73c",
-        "sourceProvider": "MusicBrainz recording database",
-        "sourceRetrievalDate": "2026-09-05",
-        "releaseYearEvidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded.",
-        "releaseDateEvidence": "1975-11-17",
+        "releaseYear": 1976,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://abbasite.com/articles/in-focus-arrival-the-making-of-a-classic-pop-album/",
+        "sourceProvider": "ABBA official website",
+        "sourceRetrievalDate": "2026-11-02",
+        "releaseYearEvidence": "ABBA's English-language Fernando was released as their 1976 single; Frida's 1975 Swedish solo recording is a different performance.",
+        "releaseDateEvidence": "1976",
         "evidenceState": "externally_observed"
       },
       "fieldOrder": [
@@ -115651,18 +116277,16 @@
     {
       "songId": "song_beb9b8c88cb761a258e6",
       "mode": "greatest",
-      "year": 2005,
+      "year": 1984,
       "metadata": {
-        "releaseYear": 2005,
-        "musicbrainzId": "19e9441e-d71e-4746-8ee7-bf6e3066a8ef",
-        "yearEvidence": "MusicBrainz recording earliest first-release-date",
-        "source": "catalogue-expansion-recording-audit",
-        "sourceLabel": "MusicBrainz recording release evidence",
-        "sourceUrl": "https://musicbrainz.org/recording/19e9441e-d71e-4746-8ee7-bf6e3066a8ef",
-        "sourceProvider": "MusicBrainz recording database",
-        "sourceRetrievalDate": "2026-09-05",
-        "releaseYearEvidence": "Earliest first-release-date among exact title and lead-credit matches in the cached MusicBrainz search; alternate annotations excluded.",
-        "releaseDateEvidence": "2005-12-02",
+        "releaseYear": 1984,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://music.apple.com/us/song/1676125930",
+        "sourceProvider": "Apple Music original Reckless album",
+        "sourceRetrievalDate": "2026-11-02",
+        "releaseYearEvidence": "Original Bryan Adams & Tina Turner duet appears on Reckless 5 November 1984; 2005 MusicBrainz reference is later issue.",
+        "releaseDateEvidence": "1984",
         "evidenceState": "externally_observed"
       },
       "fieldOrder": [
@@ -124013,12 +124637,975 @@
         "spotify": null,
         "youtube": null
       }
+    },
+    {
+      "songId": "song_2595dbd3cda5572f3b3b",
+      "mode": "australian",
+      "year": 1975,
+      "metadata": {
+        "releaseYear": 1975,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://www.nfsa.gov.au/collection/item/its-long-way-top-if-you-wanna-rock-n-roll-acdc",
+        "sourceProvider": "National Film and Sound Archive of Australia",
+        "releaseYearEvidence": "First released as a single and on T.N.T. in 1975.",
+        "releaseDateEvidence": "1975",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_2595dbd3cda5572f3b3b",
+      "mode": "greatest",
+      "year": 1975,
+      "metadata": {
+        "releaseYear": 1975,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://www.nfsa.gov.au/collection/item/its-long-way-top-if-you-wanna-rock-n-roll-acdc",
+        "sourceProvider": "National Film and Sound Archive of Australia",
+        "releaseYearEvidence": "First released as a single and on T.N.T. in 1975.",
+        "releaseDateEvidence": "1975",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_f08b9dc4d684c07f204a",
+      "mode": "australian",
+      "year": 1979,
+      "metadata": {
+        "releaseYear": 1979,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://www.acdc.com/music/highway-to-hell/",
+        "sourceProvider": "AC/DC official discography",
+        "releaseYearEvidence": "Title track of AC/DC's 1979 Highway to Hell.",
+        "releaseDateEvidence": "1979",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_04638a1a85010fba6d56",
+      "mode": "australian",
+      "year": 1980,
+      "metadata": {
+        "releaseYear": 1980,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://www.acdc.com/otd-1980-back-in-black-released/",
+        "sourceProvider": "AC/DC official discography",
+        "releaseYearEvidence": "Original Back in Black album released 25 July 1980.",
+        "releaseDateEvidence": "1980",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_305da935ec720ee3f32b",
+      "mode": "australian",
+      "year": 1986,
+      "metadata": {
+        "releaseYear": 1986,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://www.nfsa.gov.au/collection/item/youre-voice-john-farnham-0",
+        "sourceProvider": "National Film and Sound Archive of Australia",
+        "releaseYearEvidence": "Farnham single released September 1986.",
+        "releaseDateEvidence": "1986",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_fb981139b0bdd0c576c7",
+      "mode": "australian",
+      "year": 1988,
+      "metadata": {
+        "releaseYear": 1988,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://music.apple.com/us/song/270403625",
+        "sourceProvider": "Apple Music original album",
+        "releaseYearEvidence": "Title song released on album July 1988.",
+        "releaseDateEvidence": "1988",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_12fddcb3b60ca3256ff3",
+      "mode": "australian",
+      "year": 1986,
+      "metadata": {
+        "releaseYear": 1986,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://www.neilfinn.com/dont-dream-its-over",
+        "sourceProvider": "Neil Finn official website",
+        "releaseYearEvidence": "First issued on Crowded House's 1986 debut album.",
+        "releaseDateEvidence": "1986",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_183d3ed2a903e536cfcf",
+      "mode": "australian",
+      "year": 1980,
+      "metadata": {
+        "releaseYear": 1980,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://music.apple.com/us/song/1442866405",
+        "sourceProvider": "Apple Music original album",
+        "releaseYearEvidence": "Title track first released on 1980 album.",
+        "releaseDateEvidence": "1980",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_69a73240336880993b4a",
+      "mode": "australian",
+      "year": 1994,
+      "metadata": {
+        "releaseYear": 1994,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://www.nfsa.gov.au/collection/item/tomorrow-silverchair",
+        "sourceProvider": "National Film and Sound Archive of Australia",
+        "releaseYearEvidence": "First released on Silverchair's 1994 debut EP, not 1995 album.",
+        "releaseDateEvidence": "1994",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_db378fc86649c48b85f2",
+      "mode": "australian",
+      "year": 2007,
+      "metadata": {
+        "releaseYear": 2007,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://music.apple.com/us/album/young-modern/1551914561",
+        "sourceProvider": "Apple Music original album",
+        "releaseYearEvidence": "Young Modern released March 2007 and contains Straight Lines.",
+        "releaseDateEvidence": "2007",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_c0be0156996bddfef9e8",
+      "mode": "australian",
+      "year": 1996,
+      "metadata": {
+        "releaseYear": 1996,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://music.apple.com/us/song/1670838851",
+        "sourceProvider": "Apple Music original single",
+        "releaseYearEvidence": "First single released May 1996.",
+        "releaseDateEvidence": "1996",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_17646e5fd8ef794edff2",
+      "mode": "australian",
+      "year": 1997,
+      "metadata": {
+        "releaseYear": 1997,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://www.nfsa.gov.au/collection/item/truly-madly-deeply-savage-garden",
+        "sourceProvider": "National Film and Sound Archive of Australia",
+        "releaseYearEvidence": "Single released March 1997.",
+        "releaseDateEvidence": "1997",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_58cabf45d75591c81d74",
+      "mode": "australian",
+      "year": 1999,
+      "metadata": {
+        "releaseYear": 1999,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://www.nfsa.gov.au/collection/item/these-days-powderfinger",
+        "sourceProvider": "National Film and Sound Archive of Australia",
+        "releaseYearEvidence": "Originally released 1999 as B-side and soundtrack; 2000 was later album re-recording.",
+        "releaseDateEvidence": "1999",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_5de0ecada23eb768221c",
+      "mode": "australian",
+      "year": 2000,
+      "metadata": {
+        "releaseYear": 2000,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://www.abc.net.au/listen/doublej/music-reads/features/powderfinger-odyssey-number-5/12612384",
+        "sourceProvider": "ABC Double J retrospective",
+        "releaseYearEvidence": "Breakout single released in August 2000.",
+        "releaseDateEvidence": "2000",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_5de0ecada23eb768221c",
+      "mode": "greatest",
+      "year": 2000,
+      "metadata": {
+        "releaseYear": 2000,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://www.abc.net.au/listen/doublej/music-reads/features/powderfinger-odyssey-number-5/12612384",
+        "sourceProvider": "ABC Double J retrospective",
+        "releaseYearEvidence": "Breakout single released in August 2000.",
+        "releaseDateEvidence": "2000",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_b1d515290e73fedd9d13",
+      "mode": "australian",
+      "year": 2007,
+      "metadata": {
+        "releaseYear": 2007,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://music.apple.com/us/album/untouched-ep/269193945",
+        "sourceProvider": "Apple Music original EP",
+        "releaseYearEvidence": "Untouched EP issued 8 December 2007.",
+        "releaseDateEvidence": "2007",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_97bb3dde54bf3e6b5e87",
+      "mode": "australian",
+      "year": 2008,
+      "metadata": {
+        "releaseYear": 2008,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://music.apple.com/us/song/1605860972",
+        "sourceProvider": "Apple Music original song",
+        "releaseYearEvidence": "Empire of the Sun original song first issued in 2008.",
+        "releaseDateEvidence": "2008",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_ad5be9b779fbbe5e1168",
+      "mode": "australian",
+      "year": 2022,
+      "metadata": {
+        "releaseYear": 2022,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://music.apple.com/us/album/thousand-miles-single/1618293848",
+        "sourceProvider": "Apple Music original single",
+        "releaseYearEvidence": "Released 22 April 2022.",
+        "releaseDateEvidence": "2022",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_5257c9f9fb26fa76f247",
+      "mode": "australian",
+      "year": 2022,
+      "metadata": {
+        "releaseYear": 2022,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://music.apple.com/us/album/me-myself-i-single/1622410547",
+        "sourceProvider": "Apple Music original single",
+        "releaseYearEvidence": "Released 13 May 2022.",
+        "releaseDateEvidence": "2022",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_b1851895cf1a9c41f96d",
+      "mode": "greatest",
+      "year": 2010,
+      "metadata": {
+        "releaseYear": 2010,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://www.officialcharts.com/songs/rihanna-only-girl-in-the-world/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Single charted in 2010.",
+        "releaseDateEvidence": "2010",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_0a09786f8c507ac7d72e",
+      "mode": "greatest",
+      "year": 2000,
+      "metadata": {
+        "releaseYear": 2000,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://www.officialcharts.com/songs/britney-spears-oops-i-did-it-again/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Single charted from May 2000.",
+        "releaseDateEvidence": "2000",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_e515124fe304fed1178a",
+      "mode": "greatest",
+      "year": 2005,
+      "metadata": {
+        "releaseYear": 2005,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://www.aria.com.au/charts/news/this-week-in-2005",
+        "sourceProvider": "ARIA official retrospective",
+        "releaseYearEvidence": "Australian No. 1 in October 2005.",
+        "releaseDateEvidence": "2005",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_8b67630ded5413ca93ed",
+      "mode": "australian",
+      "year": 1990,
+      "metadata": {
+        "releaseYear": 1990,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://www.nfsa.gov.au/collection/item/thunderstruck-acdc",
+        "sourceProvider": "Official artist/discography source",
+        "releaseYearEvidence": "AC/DC Thunderstruck 1990 recording (cross-check source link prior to promotion)",
+        "releaseDateEvidence": "1990",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_98275822caadba3e7ad8",
+      "mode": "australian",
+      "year": 1987,
+      "metadata": {
+        "releaseYear": 1987,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://www.inxs.com/music/kick/",
+        "sourceProvider": "Official artist/discography source",
+        "releaseYearEvidence": "INXS Need You Tonight on Kick, released 19 October 1987",
+        "releaseDateEvidence": "1987",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_6fccd7951213cb182674",
+      "mode": "australian",
+      "year": 2003,
+      "metadata": {
+        "releaseYear": 2003,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://music.apple.com/us/album/are-you-gonna-be-my-girl-single/1778046431",
+        "sourceProvider": "Official artist/discography source",
+        "releaseYearEvidence": "Jet original single released August 2003",
+        "releaseDateEvidence": "2003",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_9072f84fedc0377fab26",
+      "mode": "australian",
+      "year": 2001,
+      "metadata": {
+        "releaseYear": 2001,
+        "source": "reviewed-playlist-curation-2026-11-02",
+        "sourceLabel": "Reviewed original release · source-backed",
+        "sourceUrl": "https://www.officialcharts.com/songs/kylie-minogue-cant-get-you-out-of-my-head/",
+        "sourceProvider": "Official artist/discography source",
+        "releaseYearEvidence": "Kylie Minogue original single charted in 2001",
+        "releaseDateEvidence": "2001",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-02"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
     }
   ],
   "aliases": {
     "vaya con dios may god be with you|les paul": "song_e007fb5b528d73f57ebc",
     "earth angel will you be mine|penguins": "song_0cb5f327cae9eea18bc3",
     "only you and you alone|platters": "song_ccdba17da4097b2260d1",
-    "only the lonely know how i feel|roy orbison": "song_8d0a0ecf0c9d6d8d498e"
+    "only the lonely know how i feel|roy orbison": "song_8d0a0ecf0c9d6d8d498e",
+    "it s only love|bryan adams": "song_beb9b8c88cb761a258e6"
   }
 }

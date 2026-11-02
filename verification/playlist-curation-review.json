@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "reviewedAt": "2026-11-02",
-  "state": "pending-human-source-review",
-  "policy": "Nonblocking curation candidates only. Do not change song-database.json answerYear or claim verified provider recording solely from this file. Confirm exact recording and external release provenance, retain rejected claims, preserve pool depth, rebuild catalogue via compiler.",
+  "state": "historical-audit-superseded",
+  "policy": "An initial, immutable issue inventory from before catalogue v19, not a list of pending corrections. Reconcile with the canonical reviewed decision ledger and retirement archive using scripts/audit_playlist_quality.mjs.",
   "items": [
     {
       "mode": "australian",
@@ -134,5 +134,7 @@
       "evidence": "Concert release/title, not a clearly identified standalone song; inspect source before removal",
       "sourceUrl": null
     }
-  ]
+  ],
+  "supersededBy": "verification/playlist-curation-2026-11-02.json",
+  "retirementArchive": "verification/playlist-retirements-2026-11-02.json"
 }
