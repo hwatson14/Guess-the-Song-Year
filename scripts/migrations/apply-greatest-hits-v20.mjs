@@ -66,6 +66,17 @@ for(const item of ledger.approvedBenchmarkPromotions){
     song=db.songs[item.existingMasterId];
     assert.ok(song,'Referenced canonical master missing: '+item.title);
     assert.equal(song.release.answerYear,item.year,'Cannot rewrite an existing master release year');
+    // Promote the one pre-existing but unresolved master (Deee-Lite) only after
+    // this ledger supplies explicit original-release evidence for the same year.
+    if(song.release.state==='unresolved'){
+      assert.ok(item.sourceUrl&&item.evidence,'Cannot promote an unresolved master without source evidence');
+      song.release.year=item.year;
+      song.release.state='externally_observed';
+      song.release.claims.push({
+        year:item.year,state:'externally_observed',
+        sourceUrl:item.sourceUrl,evidence:item.evidence
+      });
+    }
     mastersReused++;
   }else{
     assert.ok(!Object.values(db.songs).some(s=>s.canonicalKey===key||(

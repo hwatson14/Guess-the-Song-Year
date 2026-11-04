@@ -33,7 +33,7 @@ Catalogue v20 is a working multi-mode product backed by normalized JSON source a
 | Remix: Original Year | Building | Hear an explicitly reviewed remix; answer with the canonical original song release year |
 | One Hit Wonders | Building | Release-year mode over canonical master songs; curation/eligibility evidence still required |
 | Canonical source | Working v20 | 1,170 immutable master identities shared across memberships |
-| Release evidence | Improved | 935 masters externally observed; 235 unresolved |
+| Release evidence | Improved | 936 masters externally observed; 234 unresolved |
 | Provider links | Partially reviewed | Spotify: 651 linked masters / 4 verified preferred tracks. YouTube: 431 linked / 0 verified preferred tracks |
 | Spotify runtime identity | Hardened | Static, cached and searched tracks use the same title + strong lead-artist identity gate; non-404 API failures propagate |
 | Compiler | Working | Offline deterministic JSON compiler from `data/song-database.json` |
