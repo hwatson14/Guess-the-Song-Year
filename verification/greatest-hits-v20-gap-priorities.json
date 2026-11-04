@@ -1,0 +1,4786 @@
+{
+  "schemaVersion": 1,
+  "generated": "2026-11-04",
+  "basisCommit": "cc1fcde9dfdb79f50208b89f6fd5bea6deeebdd0",
+  "purpose": "Editorial candidate gap inventory and ranked next choices, not an automatically approved song/year list.",
+  "comparator": "UK HITSTER official playlist capture + Bopster community import; false negatives/artist aliases possible",
+  "noAutomaticYearAssignment": true,
+  "summary": {
+    "benchmarkRows": 308,
+    "officialDirect": 100,
+    "exactNormalizedAbsent": 192,
+    "top150": 150,
+    "approvedBenchmarkSelections": 46,
+    "approvedAUReuses": 12,
+    "uncertainCachedMusicBrainzConflicts": 84
+  },
+  "rankedCandidates": [
+    {
+      "position": 1,
+      "title": "If You Leave Me Now",
+      "cleanTitle": "If You Leave Me Now",
+      "artist": "Chicago",
+      "spotifyTrackId": "0KMGxYKeUzK9wc5DZCt3HT",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1976,
+      "capturedMusicBrainz": {
+        "year": 1976,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/7e42ec62-b028-4de4-b0cc-63874bfae34c"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1976,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/chicago-if-you-leave-me-now/",
+      "issueFlags": [],
+      "rank": 1,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 3,
+      "title": "Super Freak",
+      "cleanTitle": "Super Freak",
+      "artist": "Rick James",
+      "spotifyTrackId": "2dCmGcEOQrMQhMMS8Vj7Ca",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1981,
+      "capturedMusicBrainz": {
+        "year": 1981,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/ae88669b-d377-4b5c-9cbe-f9e0706a56ed"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1981,
+      "approvedSourceUrl": "https://music.apple.com/us/album/street-songs/1440805214",
+      "issueFlags": [],
+      "rank": 2,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 9,
+      "title": "Groove Is in the Heart",
+      "cleanTitle": "Groove Is in the Heart",
+      "artist": "Deee-Lite",
+      "spotifyTrackId": "2He3NOyqtLNE3RQPpeDdSb",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1990,
+      "capturedMusicBrainz": {
+        "year": 2001,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/ab018186-6b93-4cb9-97ba-6b871e94bd2d"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1990,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/deee-lite-groove-is-in-the-heartwhat-is-love/",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 3,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 11,
+      "title": "Get Back - Remastered 2009",
+      "cleanTitle": "Get Back",
+      "artist": "The Beatles",
+      "spotifyTrackId": "4MLBqAEzNN89o2M9h92Z26",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1970,
+      "capturedMusicBrainz": {
+        "year": 1969,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/2af5d0ab-ec94-40ff-a92a-fb9851fcc84e"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1969,
+      "approvedSourceUrl": "https://www.thebeatles.com/get-back",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 4,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 26,
+      "title": "Back for Good - Radio Mix",
+      "cleanTitle": "Back for Good",
+      "artist": "Take That",
+      "spotifyTrackId": "6vcdzohhBSbNdsZBh5IRpQ",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1995,
+      "capturedMusicBrainz": {
+        "year": 1994,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/37882982-5412-4013-808f-da8fdfc721be"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1995,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/take-that-back-for-good/",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 5,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 28,
+      "title": "Don't You Want Me",
+      "cleanTitle": "Don't You Want Me",
+      "artist": "The Human League",
+      "spotifyTrackId": "3L7RtEcu1Hw3OXrpnthngx",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1981,
+      "capturedMusicBrainz": {
+        "year": 1981,
+        "confidence": "low",
+        "url": "https://musicbrainz.org/recording/9f1a6ddb-d896-4936-9864-bcfe115c9a7d"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1981,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/human-league-dont-you-want-me-0/",
+      "issueFlags": [],
+      "rank": 6,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 34,
+      "title": "Ballroom Blitz",
+      "cleanTitle": "Ballroom Blitz",
+      "artist": "Sweet",
+      "spotifyTrackId": "3Pu3IChaAoa5EjgUBv5F6x",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1974,
+      "capturedMusicBrainz": {
+        "year": 1973,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/96d333f9-0248-4dc8-8de9-e3f2ab86c623"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1973,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/sweet-ballroom-blitz/",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 7,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 36,
+      "title": "Boys Don't Cry",
+      "cleanTitle": "Boys Don't Cry",
+      "artist": "The Cure",
+      "spotifyTrackId": "1QFh8OH1e78dGd3VyJZCAC",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1979,
+      "capturedMusicBrainz": {
+        "year": 1992,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/4326d0a5-1389-4d0c-bb50-c7ec23eebc88"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1979,
+      "approvedSourceUrl": "https://www.thecure.com/release/boys-dont-cry/",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 8,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 38,
+      "title": "Funkytown",
+      "cleanTitle": "Funkytown",
+      "artist": "Lipps Inc.",
+      "spotifyTrackId": "37yIrMPeJYRm7zJ8rr3Uvv",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 2018,
+      "capturedMusicBrainz": {
+        "year": 1979,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/9db38b34-9d56-4a0a-85da-bd2bd75403ad"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1979,
+      "approvedSourceUrl": "https://music.apple.com/us/album/mouth-to-mouth/1552121129",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 9,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 41,
+      "title": "Mr. Vain",
+      "cleanTitle": "Mr. Vain",
+      "artist": "Culture Beat",
+      "spotifyTrackId": "2rTYgHxgcndkUrRoU7x0Sv",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1993,
+      "capturedMusicBrainz": {
+        "year": 1993,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/36b232d2-d44a-4b2c-91f7-1a759c35447a"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1993,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/culture-beat-mr-vain/",
+      "issueFlags": [],
+      "rank": 10,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 42,
+      "title": "Sweet Child O' Mine",
+      "cleanTitle": "Sweet Child O' Mine",
+      "artist": "Guns N' Roses",
+      "spotifyTrackId": "7o2CTH4ctstm8TNelqjb51",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1987,
+      "capturedMusicBrainz": {
+        "year": 1988,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/3c6ffcb1-4167-40d0-a368-b05657dce636"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1987,
+      "approvedSourceUrl": "https://music.apple.com/us/song/1377826892",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 11,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 45,
+      "title": "Respect",
+      "cleanTitle": "Respect",
+      "artist": "Aretha Franklin",
+      "spotifyTrackId": "7s25THrKz86DM225dOYwnr",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1967,
+      "capturedMusicBrainz": {
+        "year": 1967,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/04bb8880-4c81-4d23-8b09-f294f7222921"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1967,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/aretha-franklin-respect-0/",
+      "issueFlags": [],
+      "rank": 12,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 57,
+      "title": "Parklife - 2012 Remaster",
+      "cleanTitle": "Parklife",
+      "artist": "Blur",
+      "spotifyTrackId": "7FSzJQV6thyoQptFCUTV9c",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1994,
+      "capturedMusicBrainz": {
+        "year": 1995,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/0259740c-2f67-4799-8774-ec08db94bebb"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1994,
+      "approvedSourceUrl": "https://music.apple.com/us/album/parklife/699665183",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 13,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 61,
+      "title": "Love Train",
+      "cleanTitle": "Love Train",
+      "artist": "The O'Jays",
+      "spotifyTrackId": "28285KFbyCq8sJofn58qlD",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1972,
+      "capturedMusicBrainz": {
+        "year": 2002,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/fc85f50d-0e40-403e-a1d0-6f6d883e516f"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1972,
+      "approvedSourceUrl": "https://music.apple.com/us/album/back-stabbers/169937819",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 14,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 62,
+      "title": "I'm a Believer - 2006 Remaster",
+      "cleanTitle": "I'm a Believer",
+      "artist": "The Monkees",
+      "spotifyTrackId": "3G7tRC24Uh09Hmp1KZ7LQ2",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1967,
+      "capturedMusicBrainz": {
+        "year": 1975,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/1bb8b072-d300-4940-be9c-28800f15a29a"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1966,
+      "approvedSourceUrl": "https://music.apple.com/us/song/435393555",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 15,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 69,
+      "title": "That Don't Impress Me Much",
+      "cleanTitle": "That Don't Impress Me Much",
+      "artist": "Shania Twain",
+      "spotifyTrackId": "4I7DV3MIgxJGlObiy9s6nx",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1999,
+      "capturedMusicBrainz": {
+        "year": 1997,
+        "confidence": "low",
+        "url": "https://musicbrainz.org/recording/c263de3a-975e-4b12-a1ab-6d835013aa66"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1997,
+      "approvedSourceUrl": "https://music.apple.com/us/song/1445669387",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 16,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 70,
+      "title": "Y.M.C.A.",
+      "cleanTitle": "Y.M.C.A.",
+      "artist": "Village People",
+      "spotifyTrackId": "4YOJFyjqh8eAcbKFfv88mV",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1978,
+      "capturedMusicBrainz": {
+        "year": 1978,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/a0888458-8441-44ac-961a-fbbb44ec5cf8"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1978,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/village-people-ymca/",
+      "issueFlags": [],
+      "rank": 17,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 92,
+      "title": "November Rain",
+      "cleanTitle": "November Rain",
+      "artist": "Guns N' Roses",
+      "spotifyTrackId": "3YRCqOhFifThpSRFJ1VWFM",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1991,
+      "capturedMusicBrainz": {
+        "year": 1986,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/5744618f-b124-4916-af79-16e28dd5305f"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1991,
+      "approvedSourceUrl": "https://music.apple.com/us/album/use-your-illusion-i/1644730026",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 18,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 94,
+      "title": "American Pie",
+      "cleanTitle": "American Pie",
+      "artist": "Don McLean",
+      "spotifyTrackId": "1fDsrQ23eTAVFElUMaf38X",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1971,
+      "capturedMusicBrainz": {
+        "year": 1971,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/208b91ec-3f23-40dd-a815-698061635a34"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1971,
+      "approvedSourceUrl": "https://music.apple.com/us/album/american-pie/1440834532",
+      "issueFlags": [],
+      "rank": 19,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 97,
+      "title": "Cotton Eye Joe",
+      "cleanTitle": "Cotton Eye Joe",
+      "artist": "Rednex",
+      "spotifyTrackId": "06hsdMbBxWGqBO0TV0Zrkf",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1994,
+      "capturedMusicBrainz": {
+        "year": 1994,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/5e618b9e-bc2a-4f0f-acaf-440a510d0a9d"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1994,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/rednex-cotton-eye-joe/",
+      "issueFlags": [],
+      "rank": 20,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 99,
+      "title": "Tubthumping - Radio Edit",
+      "cleanTitle": "Tubthumping",
+      "artist": "Chumbawamba",
+      "spotifyTrackId": "28O4QR1TELuXdcnVw9Q6Kt",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 2019,
+      "capturedMusicBrainz": {
+        "year": 1997,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/b42772c0-6ed7-48d5-b0e0-8d3ba3da4c9e"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1997,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/chumbawamba-tubthumping/",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 21,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 103,
+      "title": "Crazy In Love (feat. JAY-Z)",
+      "cleanTitle": "Crazy In Love (feat. JAY-Z)",
+      "artist": "Beyoncé",
+      "spotifyTrackId": "5IVuqXILoxVWvWEPm82Jxr",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2003,
+      "capturedMusicBrainz": {
+        "year": 2003,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/1cd11dd1-484e-498d-b864-9d6c6fcf3862"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 2003,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/beyonce-crazy-in-love/",
+      "issueFlags": [],
+      "rank": 22,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 126,
+      "title": "Don't Dream It's Over",
+      "cleanTitle": "Don't Dream It's Over",
+      "artist": "Crowded House",
+      "spotifyTrackId": "56GbZVwxMdf1DENCluYS8A",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1986,
+      "capturedMusicBrainz": {
+        "year": 1987,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/7d066fb2-06d2-4297-862a-b9cd14d595a1"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1986,
+      "approvedSourceUrl": "https://www.neilfinn.com/dont-dream-its-over",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 23,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 143,
+      "title": "I Want It That Way",
+      "cleanTitle": "I Want It That Way",
+      "artist": "Backstreet Boys",
+      "spotifyTrackId": "47BBI51FKFwOMlIiX6m8ya",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1999,
+      "capturedMusicBrainz": {
+        "year": 1999,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/1059c4aa-eab3-478e-8096-26c98203ca6c"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1999,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/backstreet-boys-i-want-it-that-way/",
+      "issueFlags": [],
+      "rank": 24,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 199,
+      "title": "Karma Chameleon - Remastered 2002",
+      "cleanTitle": "Karma Chameleon",
+      "artist": "Culture Club",
+      "spotifyTrackId": "5muHy7Z0bHM4uqExt081ue",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2022,
+      "capturedMusicBrainz": {
+        "year": 1983,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/3b997709-8b49-42bf-be00-16a89fdf8761"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1983,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/culture-club-karma-chameleon/",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 25,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 202,
+      "title": "Purple Rain",
+      "cleanTitle": "Purple Rain",
+      "artist": "Prince",
+      "spotifyTrackId": "54X78diSLoUDI3joC2bjMz",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1984,
+      "capturedMusicBrainz": {
+        "year": 1987,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/255dd412-840f-4038-8dc1-60db9543ec9f"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1984,
+      "approvedSourceUrl": "https://music.apple.com/us/album/purple-rain/1746833068",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 26,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 222,
+      "title": "Viva La Vida",
+      "cleanTitle": "Viva La Vida",
+      "artist": "Coldplay",
+      "spotifyTrackId": "3Fcfwhm8oRrBvBZ8KGhtea",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2008,
+      "capturedMusicBrainz": {
+        "year": 2008,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/2f996f77-50c7-4684-b5c2-33cf6e20d8ee"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 2008,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/coldplay-viva-la-vida/",
+      "issueFlags": [],
+      "rank": 27,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 4,
+      "title": "(What A) Wonderful World - Mono",
+      "cleanTitle": "(What A) Wonderful World",
+      "artist": "Sam Cooke",
+      "spotifyTrackId": "2G0GextMwZJLkNxcSZ7ZJ3",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1960,
+      "capturedMusicBrainz": {
+        "year": 1995,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/55e772ee-2982-4822-9ad6-320469bee906"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1960,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/sam-cooke-wonderful-world/",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 28,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 7,
+      "title": "Year 3000",
+      "cleanTitle": "Year 3000",
+      "artist": "Busted",
+      "spotifyTrackId": "5pWRdriPCFhfz0JSswkdHo",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 2002,
+      "capturedMusicBrainz": {
+        "year": 2002,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/59881bbe-cc97-41a2-9d53-b367b72ec214"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 2002,
+      "approvedSourceUrl": "https://music.apple.com/us/song/1714341619",
+      "issueFlags": [],
+      "rank": 29,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 8,
+      "title": "Step On - 2007 Remaster",
+      "cleanTitle": "Step On",
+      "artist": "Happy Mondays",
+      "spotifyTrackId": "4gAU0cHQJFxj1n2ZDiEIzG",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1990,
+      "capturedMusicBrainz": {
+        "year": 1990,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/062a0720-14ee-4875-b429-211582031b8b"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1990,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/happy-mondays-step-on/",
+      "issueFlags": [],
+      "rank": 30,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 10,
+      "title": "Afternoon Delight",
+      "cleanTitle": "Afternoon Delight",
+      "artist": "Starland Vocal Band",
+      "spotifyTrackId": "1pBAsoHy7eN9aeVCTAiKua",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1976,
+      "capturedMusicBrainz": {
+        "year": 1976,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/c9ea0f7e-1d5f-4e12-863f-2beddeb32a13"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1976,
+      "approvedSourceUrl": "https://music.apple.com/us/song/1825612729",
+      "issueFlags": [],
+      "rank": 31,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 13,
+      "title": "This Charming Man - 2011 Remaster",
+      "cleanTitle": "This Charming Man",
+      "artist": "The Smiths",
+      "spotifyTrackId": "1FvDJ9KGxcqwv1utyPL3JZ",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1984,
+      "capturedMusicBrainz": {
+        "year": 1983,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/9434245c-d68d-4d99-9d39-e7ca3b145847"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1983,
+      "approvedSourceUrl": "https://www.officialcharts.com/artist/21136/smiths/",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 32,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 20,
+      "title": "Itsy Bitsy Teenie Weenie Yellow Polka Dot Bikini",
+      "cleanTitle": "Itsy Bitsy Teenie Weenie Yellow Polka Dot Bikini",
+      "artist": "Brian Hyland",
+      "spotifyTrackId": "4aTCNddtjztjuK2EOgz7ZZ",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1961,
+      "capturedMusicBrainz": {
+        "year": 1960,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/e06eedaa-7eab-4037-a715-aa5a00baeab8"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1960,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/brian-hyland-itsy-bitsy-teenie-weenie-yellow-polka-dot-bikini/",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 33,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 23,
+      "title": "The Locomotion",
+      "cleanTitle": "The Locomotion",
+      "artist": "Little Eva",
+      "spotifyTrackId": "5xzdDMhFYiuUONB0Mha9VS",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1962,
+      "capturedMusicBrainz": {
+        "year": 1992,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/77077947-1945-421a-bdb7-fd057a9ec546"
+      },
+      "sameTitleExistingCredits": [
+        {
+          "artist": "Grand Funk Railroad",
+          "year": 1974
+        },
+        {
+          "artist": "Kylie Minogue",
+          "year": 1992
+        }
+      ],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1962,
+      "approvedSourceUrl": "https://music.apple.com/us/album/llllloco-motion/1088697736",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement",
+        "possible_existing_master_alias"
+      ],
+      "rank": 34,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 25,
+      "title": "Cigarettes & Alcohol",
+      "cleanTitle": "Cigarettes & Alcohol",
+      "artist": "Oasis",
+      "spotifyTrackId": "3nK2qGHdVAEOuVAmMSWQPW",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1994,
+      "capturedMusicBrainz": {
+        "year": 1993,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/573f8d18-8e57-48c4-a3e3-3d3b3d270dd9"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1994,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/oasis-cigarettes-alcohol/",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 35,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 32,
+      "title": "You Can't Hurry Love",
+      "cleanTitle": "You Can't Hurry Love",
+      "artist": "The Supremes",
+      "spotifyTrackId": "4H1iMlEWKZmpKTHCZzDhju",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1966,
+      "capturedMusicBrainz": {
+        "year": 1966,
+        "confidence": "low",
+        "url": "https://musicbrainz.org/recording/adc3b7d9-8411-497b-8b29-b099407c5498"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1966,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/supremes-you-cant-hurry-love/",
+      "issueFlags": [],
+      "rank": 36,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 35,
+      "title": "Perfect Day",
+      "cleanTitle": "Perfect Day",
+      "artist": "Lou Reed",
+      "spotifyTrackId": "4TOMI010Sd4ZAX4aZ5TS85",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1972,
+      "capturedMusicBrainz": {
+        "year": 1972,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/56856396-51ec-4e14-903a-3ef478bac052"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1972,
+      "approvedSourceUrl": "https://music.apple.com/us/album/perfect-day/976826793",
+      "issueFlags": [],
+      "rank": 37,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 39,
+      "title": "Road to Nowhere - 2005 Remaster",
+      "cleanTitle": "Road to Nowhere",
+      "artist": "Talking Heads",
+      "spotifyTrackId": "2co8fDyaVmxv8xruQWORnC",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1985,
+      "capturedMusicBrainz": {
+        "year": 1985,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/51c8124f-a4e4-4c9b-8ed7-d1ba19796763"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1985,
+      "approvedSourceUrl": "https://music.apple.com/us/album/little-creatures/302136342",
+      "issueFlags": [],
+      "rank": 38,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 44,
+      "title": "Genie In a Bottle",
+      "cleanTitle": "Genie In a Bottle",
+      "artist": "Christina Aguilera",
+      "spotifyTrackId": "11mwFrKvLXCbcVGNxffGyP",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1999,
+      "capturedMusicBrainz": {
+        "year": 1999,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/fbe9ad8c-3a31-4b5a-9710-228b8c77907b"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1999,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/christina-aguilera-genie-in-a-bottle-0/",
+      "issueFlags": [],
+      "rank": 39,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 56,
+      "title": "Can't Stand Me Now",
+      "cleanTitle": "Can't Stand Me Now",
+      "artist": "The Libertines",
+      "spotifyTrackId": "2EtZFeLn9msgg4qJzT9Vql",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 2004,
+      "capturedMusicBrainz": {
+        "year": 2004,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/81c89676-c60f-4928-ae2b-38c1d6f06e2d"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 2004,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/libertines-cant-stand-me-now/",
+      "issueFlags": [],
+      "rank": 40,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 65,
+      "title": "Just Give Me a Reason (feat. Nate Ruess)",
+      "cleanTitle": "Just Give Me a Reason (feat. Nate Ruess)",
+      "artist": "P!nk",
+      "spotifyTrackId": "1mKXFLRA179hdOWQBwUk9e",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 2012,
+      "capturedMusicBrainz": {
+        "year": 2013,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/ab9ba859-9f31-45ee-81b6-74bf1c5c7d2c"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 2012,
+      "approvedSourceUrl": "https://music.apple.com/us/album/the-truth-about-love/545398133",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 41,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 66,
+      "title": "One Day Like This",
+      "cleanTitle": "One Day Like This",
+      "artist": "Elbow",
+      "spotifyTrackId": "1OZSVl0JJ1MBzibpuhmmXb",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 2008,
+      "capturedMusicBrainz": {
+        "year": 2008,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/3b5c740b-c6a4-4aea-b714-4117c85b6f1c"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 2008,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/elbow-one-day-like-this/",
+      "issueFlags": [],
+      "rank": 42,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 67,
+      "title": "Praise You",
+      "cleanTitle": "Praise You",
+      "artist": "Fatboy Slim",
+      "spotifyTrackId": "10yY7i70r9wtllofw0GIpx",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1998,
+      "capturedMusicBrainz": {
+        "year": 1998,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/66197b08-aa26-4f44-91da-49a8c89168ae"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1998,
+      "approvedSourceUrl": "https://www.officialcharts.com/albums/fatboy-slim-youve-come-a-long-way-baby/",
+      "issueFlags": [],
+      "rank": 43,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 75,
+      "title": "Flashdance...What a Feeling - Radio Edit",
+      "cleanTitle": "Flashdance...What a Feeling",
+      "artist": "Irene Cara",
+      "spotifyTrackId": "3cbV252akVZInSvJk7jAYX",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1983,
+      "capturedMusicBrainz": {
+        "year": 1983,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/84b4af87-f3f8-410f-9987-6ddda1d5c766"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1983,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/irene-cara-flashdance-what-a-feeling/",
+      "issueFlags": [],
+      "rank": 44,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 91,
+      "title": "White Wedding – Part 1",
+      "cleanTitle": "White Wedding – Part 1",
+      "artist": "Billy Idol",
+      "spotifyTrackId": "1pydT12pGHLgfj3JLxWIUB",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 2009,
+      "capturedMusicBrainz": {
+        "year": 2005,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/de678f32-a9c9-4afc-bea2-0e5a9def4e72"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 1982,
+      "approvedSourceUrl": "https://music.apple.com/us/album/white-wedding-single/726172007",
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 45,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 40,
+      "title": "Toosie Slide",
+      "cleanTitle": "Toosie Slide",
+      "artist": "Drake",
+      "spotifyTrackId": "1d2eMMrAuIsw85u3YklKoc",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 2020,
+      "capturedMusicBrainz": {
+        "year": 2020,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/de4c54c9-6171-4cec-8866-d5f41b24d51d"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 8,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "approved_v20",
+      "proposedAnswerYear": 2020,
+      "approvedSourceUrl": "https://www.officialcharts.com/songs/drake-toosie-slide/",
+      "issueFlags": [],
+      "rank": 46,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 58,
+      "title": "Royals",
+      "cleanTitle": "Royals",
+      "artist": "Lorde",
+      "spotifyTrackId": "4SDWMFvYJKtK1QPhIOeZhd",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 2013,
+      "capturedMusicBrainz": {
+        "year": 2012,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/04cccd2b-bbac-4309-a367-94325fd0ef93"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 47,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 84,
+      "title": "Take on Me",
+      "cleanTitle": "Take on Me",
+      "artist": "a-ha",
+      "spotifyTrackId": "2WfaOiMkCvy7F5fcp2zZ8L",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1985,
+      "capturedMusicBrainz": {
+        "year": 2004,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/14cfc9f6-e79f-4795-a63b-27cb9f9ce901"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 48,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 106,
+      "title": "Escape (The Pina Colada Song)",
+      "cleanTitle": "Escape (The Pina Colada Song)",
+      "artist": "Rupert Holmes",
+      "spotifyTrackId": "5IMtdHjJ1OtkxbGe4zfUxQ",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1979,
+      "capturedMusicBrainz": {
+        "year": 1979,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/47a3b817-2666-48a5-882a-ae0b8750dc35"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 49,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 111,
+      "title": "These Boots Are Made for Walkin'",
+      "cleanTitle": "These Boots Are Made for Walkin'",
+      "artist": "Nancy Sinatra",
+      "spotifyTrackId": "4j2W1eM03mz5MVN5LvR7VH",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1987,
+      "capturedMusicBrainz": {
+        "year": 1966,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/422a32a8-42f8-4df0-8ac3-865b36ff1578"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 50,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 128,
+      "title": "You're So Vain",
+      "cleanTitle": "You're So Vain",
+      "artist": "Carly Simon",
+      "spotifyTrackId": "2DnJjbjNTV9Nd5NOa1KGba",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1972,
+      "capturedMusicBrainz": {
+        "year": 1975,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/ec7e495b-6956-44e9-add5-e569d53332aa"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 51,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 132,
+      "title": "Yeah! (feat. Lil Jon & Ludacris)",
+      "cleanTitle": "Yeah! (feat. Lil Jon & Ludacris)",
+      "artist": "USHER",
+      "spotifyTrackId": "5rb9QrpfcKFHM1EUbSIurX",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2004,
+      "capturedMusicBrainz": {
+        "year": 2004,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/d30e8a4d-6a2b-469e-a030-a72689e25ac8"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 52,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 136,
+      "title": "Don't Speak",
+      "cleanTitle": "Don't Speak",
+      "artist": "No Doubt",
+      "spotifyTrackId": "6JGQ98So2ik5GVI9ydQ2Yh",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2003,
+      "capturedMusicBrainz": {
+        "year": 1997,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/a6b6486f-4a52-4645-ad04-c5def9fec19f"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 53,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 139,
+      "title": "The Best",
+      "cleanTitle": "The Best",
+      "artist": "Tina Turner",
+      "spotifyTrackId": "6pPWRBubXOBAHnjl5ZIujB",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1989,
+      "capturedMusicBrainz": {
+        "year": 1989,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/1f2a19ba-bf07-40ec-8b94-6d77d506050e"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 54,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 146,
+      "title": "Ring of Fire",
+      "cleanTitle": "Ring of Fire",
+      "artist": "Johnny Cash",
+      "spotifyTrackId": "6YffUZJ2R06kyxyK6onezL",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1963,
+      "capturedMusicBrainz": {
+        "year": 1963,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/41c23cb7-bd66-4529-b551-7a97156fced8"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 55,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 151,
+      "title": "Closer",
+      "cleanTitle": "Closer",
+      "artist": "The Chainsmokers",
+      "spotifyTrackId": "7BKLCZ1jbUBVqRi2FVlTVw",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2016,
+      "capturedMusicBrainz": {
+        "year": 2005,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/c7f73192-a729-43a2-9c60-845271e3d696"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 56,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 154,
+      "title": "Give A Little Bit",
+      "cleanTitle": "Give A Little Bit",
+      "artist": "Supertramp",
+      "spotifyTrackId": "6XUHsYE38CEbYunT983O9G",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1977,
+      "capturedMusicBrainz": {
+        "year": 1977,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/701bfb7a-e660-4133-ae11-21734d27c734"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 57,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 160,
+      "title": "Take Me Home, Country Roads - Original Version",
+      "cleanTitle": "Take Me Home, Country Roads - Original Version",
+      "artist": "John Denver",
+      "spotifyTrackId": "1YYhDizHx7PnDhAhko6cDS",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1971,
+      "capturedMusicBrainz": {
+        "year": 1971,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/6b03f838-c649-4be6-88f7-35977f6545dd"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 58,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 164,
+      "title": "Little Red Corvette - 2019 Remaster",
+      "cleanTitle": "Little Red Corvette",
+      "artist": "Prince",
+      "spotifyTrackId": "4mVW9vi2QnLzlbK5SoacK6",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1982,
+      "capturedMusicBrainz": {
+        "year": 1982,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/2eb5645c-1f40-4c2b-8453-e0a17343b133"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 59,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 165,
+      "title": "Manic Monday",
+      "cleanTitle": "Manic Monday",
+      "artist": "The Bangles",
+      "spotifyTrackId": "798fUF6UnRn27xiVuKyJCi",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1985,
+      "capturedMusicBrainz": {
+        "year": 1985,
+        "confidence": "low",
+        "url": "https://musicbrainz.org/recording/c2be13ee-131e-4cdb-9141-0f0195a85626"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 60,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 172,
+      "title": "Girl You Know It's True",
+      "cleanTitle": "Girl You Know It's True",
+      "artist": "Milli Vanilli",
+      "spotifyTrackId": "41CMr8zZ7cMcjL0U4En6gZ",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2010,
+      "capturedMusicBrainz": {
+        "year": 1988,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/a881cfe7-4753-4cf0-b619-a9eaf769f489"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 61,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 173,
+      "title": "Disco Inferno",
+      "cleanTitle": "Disco Inferno",
+      "artist": "The Trammps",
+      "spotifyTrackId": "5jUA1njy3h6ynHLvPdEVHt",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1976,
+      "capturedMusicBrainz": {
+        "year": 1976,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/fe1bbf77-90a5-4d5d-9a7e-b002966510c8"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 62,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 176,
+      "title": "No Woman No Cry",
+      "cleanTitle": "No Woman No Cry",
+      "artist": "Bob Marley & The Wailers",
+      "spotifyTrackId": "3PQLYVskjUeRmRIfECsL0X",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1974,
+      "capturedMusicBrainz": {
+        "year": 1973,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/5f92f7de-f6b4-4c52-9f87-e774a268e194"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 63,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 178,
+      "title": "Stop",
+      "cleanTitle": "Stop",
+      "artist": "Spice Girls",
+      "spotifyTrackId": "3FteycP8CaXS1MhjcXekVT",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1997,
+      "capturedMusicBrainz": {
+        "year": 1997,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/efeb152f-6eb4-485e-a547-3dfc8dad5346"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 64,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 179,
+      "title": "Where Is The Love?",
+      "cleanTitle": "Where Is The Love?",
+      "artist": "Black Eyed Peas",
+      "spotifyTrackId": "0xmjwnQ3FNE6HuWCt2nHdZ",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2003,
+      "capturedMusicBrainz": {
+        "year": 2003,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/8a18c0e6-edf1-49df-bb5c-0d72f9d2ae7b"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 65,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 184,
+      "title": "Get Lucky (feat. Pharrell Williams and Nile Rodgers)",
+      "cleanTitle": "Get Lucky (feat. Pharrell Williams and Nile Rodgers)",
+      "artist": "Daft Punk",
+      "spotifyTrackId": "69kOkLUCkxIZYexIgSG8rq",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2013,
+      "capturedMusicBrainz": {
+        "year": 2013,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/0347d102-b653-4c6c-a0b2-cc9a58c5c585"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 66,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 193,
+      "title": "Moves Like Jagger - Studio Recording From \"The Voice\" Performance",
+      "cleanTitle": "Moves Like Jagger - Studio Recording From \"The Voice\" Performance",
+      "artist": "Maroon 5",
+      "spotifyTrackId": "0HqeTDZMGlYDmgGGVFQrSg",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2011,
+      "capturedMusicBrainz": {
+        "year": 2011,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/aee43ced-a72b-4e1d-9b70-bfa41a991302"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 67,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 198,
+      "title": "Summer",
+      "cleanTitle": "Summer",
+      "artist": "Calvin Harris",
+      "spotifyTrackId": "6YUTL4dYpB9xZO5qExPf05",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2014,
+      "capturedMusicBrainz": {
+        "year": 2014,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/c05b3620-855f-40d5-8643-403a9861c70d"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 68,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 204,
+      "title": "Orinoco Flow",
+      "cleanTitle": "Orinoco Flow",
+      "artist": "Enya",
+      "spotifyTrackId": "0Fyj9w0HVfjoxm9S8nGClt",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2001,
+      "capturedMusicBrainz": {
+        "year": 1988,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/af4c9ad9-839e-4d4a-a4b6-31c3a6d4ff87"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 69,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 205,
+      "title": "Walk Of Life",
+      "cleanTitle": "Walk Of Life",
+      "artist": "Dire Straits",
+      "spotifyTrackId": "6HMFtoMvv6n6Q2eOyPFyne",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1985,
+      "capturedMusicBrainz": {
+        "year": 1985,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/ec36b9f7-c845-4280-8a5b-052bfab95c69"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 70,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 214,
+      "title": "I Bet You Look Good On The Dancefloor",
+      "cleanTitle": "I Bet You Look Good On The Dancefloor",
+      "artist": "Arctic Monkeys",
+      "spotifyTrackId": "3DQVgcqaP3iSMbaKsd57l5",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2006,
+      "capturedMusicBrainz": {
+        "year": 2004,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/49df11a6-cdef-4197-8d08-71672f9accdc"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 71,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 216,
+      "title": "West End Girls - 2018 Remaster",
+      "cleanTitle": "West End Girls",
+      "artist": "Pet Shop Boys",
+      "spotifyTrackId": "2lwnmAQ7VLWmdHA17MHf9G",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1986,
+      "capturedMusicBrainz": {
+        "year": 1984,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/0af64a9d-a852-4dae-998b-372c03fe016f"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 72,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 218,
+      "title": "Ironic - 2015 Remaster",
+      "cleanTitle": "Ironic",
+      "artist": "Alanis Morissette",
+      "spotifyTrackId": "1d6KS9GH06JAd19uiBy9IE",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1995,
+      "capturedMusicBrainz": {
+        "year": 1995,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/f048a1fe-70eb-4374-9aa7-7f2a7b48a0c3"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 73,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 221,
+      "title": "Shout",
+      "cleanTitle": "Shout",
+      "artist": "Tears For Fears",
+      "spotifyTrackId": "2gQaQUhDCNGfBVXTvxAmXQ",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1985,
+      "capturedMusicBrainz": {
+        "year": 1984,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/2e0e96f0-a048-43a1-b53b-c33fea1794c5"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 74,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 224,
+      "title": "What Is Love - 7\" Mix",
+      "cleanTitle": "What Is Love - 7\" Mix",
+      "artist": "Haddaway",
+      "spotifyTrackId": "2IHaGyfxNoFPLJnaEg4GTs",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1993,
+      "capturedMusicBrainz": {
+        "year": 1992,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/547b5a22-ed1f-459c-b573-9ee4eb626f84"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 75,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 225,
+      "title": "Dancing in the Moonlight",
+      "cleanTitle": "Dancing in the Moonlight",
+      "artist": "Toploader",
+      "spotifyTrackId": "3Fzlg5r1IjhLk2qRw667od",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2000,
+      "capturedMusicBrainz": {
+        "year": 2000,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/57945702-8e41-446a-9242-f6883b345b15"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 76,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 226,
+      "title": "You Can Call Me Al",
+      "cleanTitle": "You Can Call Me Al",
+      "artist": "Paul Simon",
+      "spotifyTrackId": "0qxYx4F3vm1AOnfux6dDxP",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1986,
+      "capturedMusicBrainz": {
+        "year": 1986,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/01e1696b-b3c7-4ffe-a42b-ec2c952f7429"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 77,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 231,
+      "title": "Self Esteem",
+      "cleanTitle": "Self Esteem",
+      "artist": "The Offspring",
+      "spotifyTrackId": "1FkoVC85Ds3mFoK0fVqEqP",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1994,
+      "capturedMusicBrainz": {
+        "year": 1994,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/39067fdf-32e3-44a3-93b7-e318917b1dcb"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 78,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 233,
+      "title": "Under Pressure - Remastered 2011",
+      "cleanTitle": "Under Pressure",
+      "artist": "Queen",
+      "spotifyTrackId": "2fuCquhmrzHpu5xcA1ci9x",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1982,
+      "capturedMusicBrainz": {
+        "year": 1984,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/656df612-407a-4c26-b803-105a5b414c32"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 79,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 238,
+      "title": "Jolene",
+      "cleanTitle": "Jolene",
+      "artist": "Dolly Parton",
+      "spotifyTrackId": "2SpEHTbUuebeLkgs9QB7Ue",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1974,
+      "capturedMusicBrainz": {
+        "year": 1973,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/c546d32b-03d9-4cc9-b7a0-bd039404d669"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 80,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 239,
+      "title": "Firestarter",
+      "cleanTitle": "Firestarter",
+      "artist": "The Prodigy",
+      "spotifyTrackId": "79CUrU5o2KAVDTNm4x3eGU",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1997,
+      "capturedMusicBrainz": {
+        "year": 1995,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/22856b1c-9bda-4bdc-a090-61b621eee800"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 81,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 241,
+      "title": "Crazy",
+      "cleanTitle": "Crazy",
+      "artist": "Seal",
+      "spotifyTrackId": "10tdqQKFhddpkjzxllTVRj",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1991,
+      "capturedMusicBrainz": {
+        "year": 1990,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/8b06449a-7465-482e-8321-a584c4458bfb"
+      },
+      "sameTitleExistingCredits": [
+        {
+          "artist": "Patsy Cline",
+          "year": 1961
+        },
+        {
+          "artist": "Gnarls Barkley",
+          "year": 2006
+        }
+      ],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "identity_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement",
+        "possible_existing_master_alias"
+      ],
+      "rank": 82,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 243,
+      "title": "Should I Stay or Should I Go - Remastered",
+      "cleanTitle": "Should I Stay or Should I Go",
+      "artist": "The Clash",
+      "spotifyTrackId": "39shmbIHICJ2Wxnk1fPSdz",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1982,
+      "capturedMusicBrainz": {
+        "year": 1981,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/a800295d-8488-44d4-9d06-ebbd97899b2c"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 83,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 246,
+      "title": "Hips Don't Lie (feat. Wyclef Jean)",
+      "cleanTitle": "Hips Don't Lie (feat. Wyclef Jean)",
+      "artist": "Shakira",
+      "spotifyTrackId": "3ZFTkvIE7kyPt6Nu3PEa7V",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2005,
+      "capturedMusicBrainz": {
+        "year": 2006,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/72fb1447-60b2-4930-9cee-c08e073440e3"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 84,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 249,
+      "title": "It's My Life",
+      "cleanTitle": "It's My Life",
+      "artist": "Bon Jovi",
+      "spotifyTrackId": "6iNBM60VQtPUUhkKfwa5KV",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2010,
+      "capturedMusicBrainz": {
+        "year": 2000,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/b3c9e7f6-92a3-4dd9-90ce-a293479c0460"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 85,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 255,
+      "title": "Waterloo Sunset",
+      "cleanTitle": "Waterloo Sunset",
+      "artist": "The Kinks",
+      "spotifyTrackId": "5nrmGFJ87crVoJF5xdRqwn",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1967,
+      "capturedMusicBrainz": {
+        "year": 1967,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/a431af7b-feaf-4f65-aafa-995960e7fcfe"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 86,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 262,
+      "title": "Black Hole Sun",
+      "cleanTitle": "Black Hole Sun",
+      "artist": "Soundgarden",
+      "spotifyTrackId": "5BHfKRD3LTxFz1tX8AH0DN",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2010,
+      "capturedMusicBrainz": {
+        "year": 1994,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/8fec48d9-4088-4ab4-9b4f-26918f93ceae"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 87,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 265,
+      "title": "Let's Dance - 2018 Remaster",
+      "cleanTitle": "Let's Dance",
+      "artist": "David Bowie",
+      "spotifyTrackId": "3ix6K4wZY29bCujrSznwFZ",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1983,
+      "capturedMusicBrainz": {
+        "year": 1999,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/e5c7131e-14a5-4f0b-8cf6-b48ca3566811"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 88,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 273,
+      "title": "Life on Mars? - 1999 Remaster",
+      "cleanTitle": "Life on Mars?",
+      "artist": "David Bowie",
+      "spotifyTrackId": "7MpQOaVorMfoNHOJ80YxhY",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2002,
+      "capturedMusicBrainz": {
+        "year": 1972,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/cbd9b160-56d3-4411-90da-30a796374789"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 89,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 280,
+      "title": "December, 1963 (Oh What a Night!)",
+      "cleanTitle": "December, 1963 (Oh What a Night!)",
+      "artist": "The Four Seasons",
+      "spotifyTrackId": "1hQFF33xi8ruavZNyovtUN",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1975,
+      "capturedMusicBrainz": {
+        "year": 1975,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/f22db82f-6c55-45cf-966c-ad64662bba5b"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 90,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 291,
+      "title": "Symphony (feat. Zara Larsson)",
+      "cleanTitle": "Symphony (feat. Zara Larsson)",
+      "artist": "Clean Bandit",
+      "spotifyTrackId": "72gv4zhNvRVdQA0eOenCal",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2018,
+      "capturedMusicBrainz": {
+        "year": 2017,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/e11258e7-2f72-4367-86ce-8e86c8e5ff26"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 91,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 300,
+      "title": "Another Brick in the Wall, Pt. 2",
+      "cleanTitle": "Another Brick in the Wall, Pt. 2",
+      "artist": "Pink Floyd",
+      "spotifyTrackId": "4gMgiXfqyzZLMhsksGmbQV",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1979,
+      "capturedMusicBrainz": {
+        "year": 1999,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/92f2426d-9c29-4571-ae47-51cc6393909b"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 10,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 92,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 31,
+      "title": "Crank That (Soulja Boy)",
+      "cleanTitle": "Crank That (Soulja Boy)",
+      "artist": "Soulja Boy",
+      "spotifyTrackId": "66TRwr5uJwPt15mfFkzhbi",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 2007,
+      "capturedMusicBrainz": {
+        "year": 2007,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/89730a6f-24b9-40aa-93d1-90e824975da0"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 93,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 50,
+      "title": "You're Beautiful",
+      "cleanTitle": "You're Beautiful",
+      "artist": "James Blunt",
+      "spotifyTrackId": "0vg4WnUWvze6pBOJDTq99k",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 2005,
+      "capturedMusicBrainz": {
+        "year": 2005,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/b4c986df-547c-441c-b77d-55b88cc200ae"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 94,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 60,
+      "title": "Timber",
+      "cleanTitle": "Timber",
+      "artist": "Pitbull",
+      "spotifyTrackId": "3cHyrEgdyYRjgJKSOiOtcS",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 2012,
+      "capturedMusicBrainz": {
+        "year": 2013,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/f020bfce-d729-4987-9702-acbb5a27ee84"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 95,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 64,
+      "title": "Anarchy In The UK",
+      "cleanTitle": "Anarchy In The UK",
+      "artist": "Sex Pistols",
+      "spotifyTrackId": "5moTxUGPZXgGmosl4rIELm",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1977,
+      "capturedMusicBrainz": {
+        "year": 1976,
+        "confidence": "low",
+        "url": "https://musicbrainz.org/recording/1f5d0031-53e0-4050-92dd-4b7657c01d27"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 96,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 85,
+      "title": "Without You (feat. Sandro Cavazza)",
+      "cleanTitle": "Without You (feat. Sandro Cavazza)",
+      "artist": "Avicii",
+      "spotifyTrackId": "6Pgkp4qUoTmJIPn7ReaGxL",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 2017,
+      "capturedMusicBrainz": {
+        "year": 2011,
+        "confidence": "low",
+        "url": "https://musicbrainz.org/recording/0b0b26c0-e8b7-454b-aba0-45274f7a694a"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 97,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 88,
+      "title": "7 Years",
+      "cleanTitle": "7 Years",
+      "artist": "Lukas Graham",
+      "spotifyTrackId": "5kqIPrATaCc2LqxVWzQGbk",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 2016,
+      "capturedMusicBrainz": {
+        "year": 2015,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/87e36ab4-6914-44ab-b740-7abb37678040"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 98,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 89,
+      "title": "I Like To Move It (feat. The Mad Stuntman) - Erick \"More\" Album Mix",
+      "cleanTitle": "I Like To Move It (feat. The Mad Stuntman) - Erick \"More\" Album Mix",
+      "artist": "Reel 2 Real",
+      "spotifyTrackId": "6dHTkQYY3zdR9i9Nj0IGVW",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1994,
+      "capturedMusicBrainz": {
+        "year": 1993,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/30773a2b-6d9b-41f4-8348-8bdafe959f80"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 99,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 90,
+      "title": "That's Amore",
+      "cleanTitle": "That's Amore",
+      "artist": "Dean Martin",
+      "spotifyTrackId": "6GYqOflskcZxPj8rkTZkOy",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 2009,
+      "capturedMusicBrainz": {
+        "year": 1973,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/e8d6ca2b-6769-46b2-8cb3-513eda481c17"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 100,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 93,
+      "title": "Relax (Come Fighting)",
+      "cleanTitle": "Relax (Come Fighting)",
+      "artist": "Frankie Goes To Hollywood",
+      "spotifyTrackId": "2K22nUTdyr48JDwI5t906t",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1984,
+      "capturedMusicBrainz": {
+        "year": 2003,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/6724db45-67c6-4847-be4a-73492f502e5d"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 101,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 95,
+      "title": "If You Don't Know Me by Now - 2008 Remaster",
+      "cleanTitle": "If You Don't Know Me by Now",
+      "artist": "Simply Red",
+      "spotifyTrackId": "7DFawVSjI88xR9mjnWwURg",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1989,
+      "capturedMusicBrainz": {
+        "year": 1989,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/4ced7c04-fac2-4a03-b149-f6b88e852a52"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 102,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 96,
+      "title": "Gettin' Jiggy Wit It",
+      "cleanTitle": "Gettin' Jiggy Wit It",
+      "artist": "Will Smith",
+      "spotifyTrackId": "0weAUscowxeqDtpCgtbpgp",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1997,
+      "capturedMusicBrainz": {
+        "year": 1997,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/979013be-6050-48d3-81cf-8fbe4130b9af"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 103,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 100,
+      "title": "Build Me Up Buttercup",
+      "cleanTitle": "Build Me Up Buttercup",
+      "artist": "The Foundations",
+      "spotifyTrackId": "6sPOmDulFtLzfX25zICNrC",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1968,
+      "capturedMusicBrainz": {
+        "year": 1967,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/adc54699-90dc-48da-83a5-56872d6650ef"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 104,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 107,
+      "title": "1979",
+      "cleanTitle": "1979",
+      "artist": "The Smashing Pumpkins",
+      "spotifyTrackId": "3h5zik31hTTat9jmpCZZNC",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2001,
+      "capturedMusicBrainz": {
+        "year": 1996,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/610fbefd-6e4c-4b1b-a686-d4e95bfbf8f3"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 105,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 118,
+      "title": "Mercy",
+      "cleanTitle": "Mercy",
+      "artist": "Duffy",
+      "spotifyTrackId": "1zusIxNqJu8i4g6P6hJ2Qa",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2008,
+      "capturedMusicBrainz": {
+        "year": 2007,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/e528371a-0544-4328-a51e-8a2427671fcc"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 106,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 121,
+      "title": "No Role Modelz",
+      "cleanTitle": "No Role Modelz",
+      "artist": "J. Cole",
+      "spotifyTrackId": "68Dni7IE4VyPkTOH9mRWHr",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2014,
+      "capturedMusicBrainz": {
+        "year": 2014,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/c4911089-2728-4034-a36b-9a3db7808fc4"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 107,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 124,
+      "title": "I Need A Dollar",
+      "cleanTitle": "I Need A Dollar",
+      "artist": "Aloe Blacc",
+      "spotifyTrackId": "3oUphdZVPyrsprZ8FgbmQS",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2010,
+      "capturedMusicBrainz": {
+        "year": 2010,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/354ab184-fbb1-471f-a59a-1f00aee9cbac"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 108,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 131,
+      "title": "House of Fun",
+      "cleanTitle": "House of Fun",
+      "artist": "Madness",
+      "spotifyTrackId": "66N7JHuGc205BK90l9gSlb",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1982,
+      "capturedMusicBrainz": {
+        "year": 1982,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/92421017-a2c2-4b2c-9235-1b6bbcf2d212"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 109,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 134,
+      "title": "The Look",
+      "cleanTitle": "The Look",
+      "artist": "Roxette",
+      "spotifyTrackId": "2oWMI54r0qT4N8Xb4C76vq",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1988,
+      "capturedMusicBrainz": {
+        "year": 1988,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/e42e2e0f-d320-47cf-948d-3ba9add0e2e3"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 110,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 135,
+      "title": "Baby Got Back",
+      "cleanTitle": "Baby Got Back",
+      "artist": "Sir Mix-A-Lot",
+      "spotifyTrackId": "1SAkL1mYNJlaqnBQxVZrRl",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1992,
+      "capturedMusicBrainz": {
+        "year": 2000,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/0b67481a-1af0-4426-8e56-2e8502b203c0"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 111,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 137,
+      "title": "Don't Go",
+      "cleanTitle": "Don't Go",
+      "artist": "Yazoo",
+      "spotifyTrackId": "5JOVSWohrjXW0BFTboh8XO",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1982,
+      "capturedMusicBrainz": {
+        "year": 1982,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/2be5b560-f57a-42b3-91c5-258aabdf7926"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 112,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 141,
+      "title": "Tragedy",
+      "cleanTitle": "Tragedy",
+      "artist": "Steps",
+      "spotifyTrackId": "3Yqk2pdNJUtI7VOtweASV8",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1999,
+      "capturedMusicBrainz": {
+        "year": 1998,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/1796bd19-1508-4b16-8846-4697e3ef52fb"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 113,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 150,
+      "title": "I Love It (feat. Charli XCX)",
+      "cleanTitle": "I Love It (feat. Charli XCX)",
+      "artist": "Icona Pop",
+      "spotifyTrackId": "2U8NXPTXZWG2O0ye2sYRiH",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2013,
+      "capturedMusicBrainz": {
+        "year": 2012,
+        "confidence": "medium",
+        "url": "https://musicbrainz.org/recording/f721ba7a-053a-465a-8ed8-58b96074569f"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 114,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 152,
+      "title": "7 Days",
+      "cleanTitle": "7 Days",
+      "artist": "Craig David",
+      "spotifyTrackId": "0gPQTLaqHDgdupKEok7J2x",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2000,
+      "capturedMusicBrainz": {
+        "year": 2000,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/78ca37cd-f66a-4eb9-ba85-3e52bba5c088"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 115,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 157,
+      "title": "Let Me Entertain You",
+      "cleanTitle": "Let Me Entertain You",
+      "artist": "Robbie Williams",
+      "spotifyTrackId": "0SLtqCrXBRrnkxSOMA3X4W",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1997,
+      "capturedMusicBrainz": {
+        "year": 1997,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/9da9747e-b72a-4d1e-accc-ef775e6000e1"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 116,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 162,
+      "title": "You Make Me Feel (Mighty Real)",
+      "cleanTitle": "You Make Me Feel (Mighty Real)",
+      "artist": "Sylvester",
+      "spotifyTrackId": "0RnCUYXa7jhgTXtiMXF2PQ",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1978,
+      "capturedMusicBrainz": {
+        "year": 1978,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/df66b513-60dc-4304-86a7-a30daa982d1c"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 117,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 163,
+      "title": "The Whole of the Moon - 2004 Remaster",
+      "cleanTitle": "The Whole of the Moon",
+      "artist": "The Waterboys",
+      "spotifyTrackId": "15mZo1Kah03g8CTLbSsWrr",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1985,
+      "capturedMusicBrainz": {
+        "year": 1985,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/feb2fadc-8e87-4f43-954f-e12e98c497fb"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 118,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 166,
+      "title": "Girl, You'll Be A Woman Soon",
+      "cleanTitle": "Girl, You'll Be A Woman Soon",
+      "artist": "Neil Diamond",
+      "spotifyTrackId": "1BmVQ5RGqqtF5cnsv6cQYu",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1968,
+      "capturedMusicBrainz": {
+        "year": 1967,
+        "confidence": "low",
+        "url": "https://musicbrainz.org/recording/9d5f962a-e6c3-4dbc-9cf3-956003455bda"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 119,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 175,
+      "title": "You Sexy Thing - Single Version",
+      "cleanTitle": "You Sexy Thing",
+      "artist": "Hot Chocolate",
+      "spotifyTrackId": "3jAG0kb7gg0vGeFFZj6bBt",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2007,
+      "capturedMusicBrainz": {
+        "year": 1975,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/0f751e7c-2d19-4f72-95b6-92528d045ba0"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 120,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 177,
+      "title": "Savage",
+      "cleanTitle": "Savage",
+      "artist": "Megan Thee Stallion",
+      "spotifyTrackId": "55CHeLEfn5iJ0IIkgaa4si",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2020,
+      "capturedMusicBrainz": {
+        "year": 2020,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/6dfc7324-39dc-4ad0-9b28-7c69a167dce5"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 121,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 180,
+      "title": "I Will Wait",
+      "cleanTitle": "I Will Wait",
+      "artist": "Mumford & Sons",
+      "spotifyTrackId": "0hm8rgOY17z7kQJlqGKbu7",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2012,
+      "capturedMusicBrainz": {
+        "year": 2012,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/18d30fc9-32e3-494d-b68a-ede6b2fe63c1"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 122,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 183,
+      "title": "This Is The Life",
+      "cleanTitle": "This Is The Life",
+      "artist": "Amy Macdonald",
+      "spotifyTrackId": "2T3jgoAMbBXiMMD8pSc6QL",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2007,
+      "capturedMusicBrainz": {
+        "year": 2007,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/88897259-36c9-4335-93b8-100d2bcab832"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 123,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 186,
+      "title": "Kingston Town",
+      "cleanTitle": "Kingston Town",
+      "artist": "UB40",
+      "spotifyTrackId": "1YnVYHXoak0syv4xBRHQRb",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1989,
+      "capturedMusicBrainz": {
+        "year": 1989,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/de3ef756-6aac-4f54-a858-9d5e58153cf8"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 124,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 189,
+      "title": "Let It Be - Remastered 2009",
+      "cleanTitle": "Let It Be",
+      "artist": "The Beatles",
+      "spotifyTrackId": "7iN1s7xHE4ifF5povM6A48",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1970,
+      "capturedMusicBrainz": {
+        "year": 1970,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/b93444f5-da17-4e6c-9667-84deeebced76"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 125,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 196,
+      "title": "We R Who We R",
+      "cleanTitle": "We R Who We R",
+      "artist": "Kesha",
+      "spotifyTrackId": "3LUWWox8YYykohBbHUrrxd",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2010,
+      "capturedMusicBrainz": {
+        "year": 2011,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/2ca8f1f0-b4ce-46d3-8b9b-80dee5b1201b"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 126,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 200,
+      "title": "Smoke Gets In Your Eyes",
+      "cleanTitle": "Smoke Gets In Your Eyes",
+      "artist": "The Platters",
+      "spotifyTrackId": "57yz5oqMytzbwdewSG28L9",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1986,
+      "capturedMusicBrainz": {
+        "year": 1958,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/08e1de07-5281-4da8-ad41-94b3ecf674ee"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 127,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 206,
+      "title": "Runaway (U & I)",
+      "cleanTitle": "Runaway (U & I)",
+      "artist": "Galantis",
+      "spotifyTrackId": "6Awg3vdlBZnLnVWBcyG0vW",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2015,
+      "capturedMusicBrainz": {
+        "year": 2014,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/5bc172c6-3f1c-48c8-996d-ccea811de72e"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 128,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 211,
+      "title": "Love Is All Around - From \"Four Weddings And A Funeral\"",
+      "cleanTitle": "Love Is All Around - From \"Four Weddings And A Funeral\"",
+      "artist": "Wet Wet Wet",
+      "spotifyTrackId": "0PCGfA36HrVPmsBZJ57zOU",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1995,
+      "capturedMusicBrainz": {
+        "year": 1994,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/89411964-889c-4d9b-bc24-f8756d46068d"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 129,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 213,
+      "title": "If You Had My Love",
+      "cleanTitle": "If You Had My Love",
+      "artist": "Jennifer Lopez",
+      "spotifyTrackId": "3x4yV0hW5Ve3TKhFkXSqFn",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1999,
+      "capturedMusicBrainz": {
+        "year": 1999,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/8a4809c3-614a-4c60-a3c4-6bce875a7289"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 130,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 217,
+      "title": "(I've Had) The Time of My Life - From \"Dirty Dancing\" Soundtrack",
+      "cleanTitle": "(I've Had) The Time of My Life - From \"Dirty Dancing\" Soundtrack",
+      "artist": "Bill Medley",
+      "spotifyTrackId": "1UvTPXlImVd4jcucK4qJwb",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2009,
+      "capturedMusicBrainz": {
+        "year": 1987,
+        "confidence": "low",
+        "url": "https://musicbrainz.org/recording/2d3ca1f3-642c-4a60-9d98-18e8a2f61056"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 131,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 220,
+      "title": "The Hustle - Original Mix",
+      "cleanTitle": "The Hustle",
+      "artist": "Van McCoy",
+      "spotifyTrackId": "6hYT9vkr0xMjhBlaLsYq9T",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1975,
+      "capturedMusicBrainz": {
+        "year": 1984,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/f92941d7-3d4f-4d67-931f-e24b0ecaa143"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 132,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 227,
+      "title": "I Got You (I Feel Good)",
+      "cleanTitle": "I Got You (I Feel Good)",
+      "artist": "James Brown & The Famous Flames",
+      "spotifyTrackId": "5haXbSJqjjM0TCJ5XkfEaC",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1966,
+      "capturedMusicBrainz": {
+        "year": 1965,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/c23ec4e2-f872-4eb5-822f-d6481163bec3"
+      },
+      "sameTitleExistingCredits": [
+        {
+          "artist": "James Brown",
+          "year": 1965
+        }
+      ],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "identity_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement",
+        "possible_existing_master_alias"
+      ],
+      "rank": 133,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 232,
+      "title": "Stronger",
+      "cleanTitle": "Stronger",
+      "artist": "Kanye West",
+      "spotifyTrackId": "0j2T0R9dR9qdJYsB7ciXhf",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2007,
+      "capturedMusicBrainz": {
+        "year": null,
+        "confidence": "unresolved",
+        "url": null
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "unresolved_musicbrainz"
+      ],
+      "rank": 134,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 244,
+      "title": "Dilemma (feat. Kelly Rowland)",
+      "cleanTitle": "Dilemma (feat. Kelly Rowland)",
+      "artist": "Nelly",
+      "spotifyTrackId": "14MgTooapmJdLlEMAr2zAM",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2002,
+      "capturedMusicBrainz": {
+        "year": 2004,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/42b5bffa-9575-454a-a615-9cb7d7b0d747"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 135,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 245,
+      "title": "(We're Gonna) Rock Around The Clock",
+      "cleanTitle": "(We're Gonna) Rock Around The Clock",
+      "artist": "Bill Haley & His Comets",
+      "spotifyTrackId": "1uRKT2LRANv4baowBWHfDS",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1955,
+      "capturedMusicBrainz": {
+        "year": 1954,
+        "confidence": "low",
+        "url": "https://musicbrainz.org/recording/adc790a2-d7e2-4ce9-9847-025cf75ad0b4"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 136,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 248,
+      "title": "The Wanderer",
+      "cleanTitle": "The Wanderer",
+      "artist": "Dion",
+      "spotifyTrackId": "1UwriLz98ILbRhrtohTca1",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2001,
+      "capturedMusicBrainz": {
+        "year": 1979,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/f61b20ab-486d-41f1-bb3e-b13be51465db"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 137,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 254,
+      "title": "Head & Heart (feat. MNEK)",
+      "cleanTitle": "Head & Heart (feat. MNEK)",
+      "artist": "Joel Corry",
+      "spotifyTrackId": "6cx06DFPPHchuUAcTxznu9",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2020,
+      "capturedMusicBrainz": {
+        "year": 2020,
+        "confidence": "low",
+        "url": "https://musicbrainz.org/recording/168c30ff-7597-471b-a4c8-31c719f4f8af"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 138,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 264,
+      "title": "Feel",
+      "cleanTitle": "Feel",
+      "artist": "Robbie Williams",
+      "spotifyTrackId": "2Ms33RTRCT6gArrpcrPxmo",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2002,
+      "capturedMusicBrainz": {
+        "year": 2002,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/6f99d9a8-8001-4166-974f-4580bbec8ad5"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 139,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 266,
+      "title": "Because of You",
+      "cleanTitle": "Because of You",
+      "artist": "Kelly Clarkson",
+      "spotifyTrackId": "0gJvqi9QyASOCtJu99tytc",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2004,
+      "capturedMusicBrainz": {
+        "year": 2003,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/cd52b2b1-28d4-4885-9f1d-b44b8caf07f7"
+      },
+      "sameTitleExistingCredits": [
+        {
+          "artist": "Tony Bennett",
+          "year": 1951
+        }
+      ],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "identity_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement",
+        "possible_existing_master_alias"
+      ],
+      "rank": 140,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 268,
+      "title": "Watermelon Sugar",
+      "cleanTitle": "Watermelon Sugar",
+      "artist": "Harry Styles",
+      "spotifyTrackId": "6UelLqGlWMcVH1E5c4H7lY",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2019,
+      "capturedMusicBrainz": {
+        "year": 2019,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/1ab009f2-d713-4f85-b4a3-c383c344e24a"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 141,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 272,
+      "title": "Start Me Up - Remastered 2009",
+      "cleanTitle": "Start Me Up",
+      "artist": "The Rolling Stones",
+      "spotifyTrackId": "7HKez549fwJQDzx3zLjHKC",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1981,
+      "capturedMusicBrainz": {
+        "year": 1981,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/fe78da8f-7638-46b6-a1d7-fc741813547e"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 142,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 275,
+      "title": "Baker Street",
+      "cleanTitle": "Baker Street",
+      "artist": "Gerry Rafferty",
+      "spotifyTrackId": "5gOd6zDC8vhlYjqbQdJVWP",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1978,
+      "capturedMusicBrainz": {
+        "year": 1978,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/9235e22e-afbd-48f7-b329-21dae6da2810"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 143,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 277,
+      "title": "Club Foot",
+      "cleanTitle": "Club Foot",
+      "artist": "Kasabian",
+      "spotifyTrackId": "6C0xucNj75wRdlejwWIEW1",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2004,
+      "capturedMusicBrainz": {
+        "year": 2004,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/a71a53cb-f0b7-4c76-9109-cb75b425bf9c"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 144,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 286,
+      "title": "Lust For Life",
+      "cleanTitle": "Lust For Life",
+      "artist": "Iggy Pop",
+      "spotifyTrackId": "21YxK0klhpfLW8budkJaMF",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1977,
+      "capturedMusicBrainz": {
+        "year": 1977,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/36f39793-ee3b-4b7b-821c-f55638ee5027"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 145,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 288,
+      "title": "Jump Around",
+      "cleanTitle": "Jump Around",
+      "artist": "House Of Pain",
+      "spotifyTrackId": "6JymsaWDHk2Yj4e0yNBIFH",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1992,
+      "capturedMusicBrainz": {
+        "year": 1992,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/9dfc78c9-62c8-46f4-ae41-9a1c61de8097"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 146,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 297,
+      "title": "Me and Bobby McGee",
+      "cleanTitle": "Me and Bobby McGee",
+      "artist": "Janis Joplin",
+      "spotifyTrackId": "1IqFh00G2kvvMm8pRMpehA",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1971,
+      "capturedMusicBrainz": {
+        "year": 1970,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/4b1c5fda-0a68-477b-bb2b-3b2c529627c2"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 147,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 299,
+      "title": "21 Seconds",
+      "cleanTitle": "21 Seconds",
+      "artist": "So Solid Crew",
+      "spotifyTrackId": "5KZ8y0RROfoYbB5lwCk3EJ",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2001,
+      "capturedMusicBrainz": {
+        "year": 2000,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/68819bc9-db1b-4bbc-ba9d-1502d6e748d1"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 9,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 148,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 19,
+      "title": "Human",
+      "cleanTitle": "Human",
+      "artist": "Rag'n'Bone Man",
+      "spotifyTrackId": "58zsLZPvfflaiIbNWoA22O",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 2017,
+      "capturedMusicBrainz": {
+        "year": null,
+        "confidence": "unresolved",
+        "url": null
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 8,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "unresolved_musicbrainz"
+      ],
+      "rank": 149,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 21,
+      "title": "Shut Up",
+      "cleanTitle": "Shut Up",
+      "artist": "Stormzy",
+      "spotifyTrackId": "2LPUvD5DDOO4UYGkWgjI2C",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 2017,
+      "capturedMusicBrainz": {
+        "year": 2016,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/6c38850d-736a-40ea-b926-c16b29389e01"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 8,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 150,
+      "priorityBand": "top_150"
+    },
+    {
+      "position": 24,
+      "title": "Wait so Long",
+      "cleanTitle": "Wait so Long",
+      "artist": "Trampled by Turtles",
+      "spotifyTrackId": "1QesQ27kCWYTYuXJi8SApS",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 2010,
+      "capturedMusicBrainz": {
+        "year": 2010,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/f5ea38bf-c55c-416b-bb23-82ab84586375"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 8,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 151,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 33,
+      "title": "Going Underground",
+      "cleanTitle": "Going Underground",
+      "artist": "The Jam",
+      "spotifyTrackId": "6ALPLbDJ9eWVij9ep3Cgf4",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 1979,
+      "capturedMusicBrainz": {
+        "year": 1980,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/95ac2502-22d4-41f1-884a-aa106e92549f"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 8,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 152,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 51,
+      "title": "In the Mood",
+      "cleanTitle": "In the Mood",
+      "artist": "Glenn Miller",
+      "spotifyTrackId": "1xsY8IFXUrxeet1Fcmk4oC",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 2010,
+      "capturedMusicBrainz": {
+        "year": 1939,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/ac347194-8a03-410c-b361-da4c13d1d737"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 8,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 153,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 76,
+      "title": "Second Hand Rose",
+      "cleanTitle": "Second Hand Rose",
+      "artist": "Fanny Brice",
+      "spotifyTrackId": "3vbJPtXl5luZNy8XEyR5fF",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 2012,
+      "capturedMusicBrainz": {
+        "year": 1989,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/07d0f7a6-9387-471a-9fba-c819afd94d24"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 8,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 154,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 77,
+      "title": "2002",
+      "cleanTitle": "2002",
+      "artist": "Anne-Marie",
+      "spotifyTrackId": "2BgEsaKNfHUdlh97KmvFyo",
+      "benchmarkEvidence": "official_spotify_embed_direct_and_bopster_match",
+      "benchmarkDisplayedYear": 2018,
+      "capturedMusicBrainz": {
+        "year": null,
+        "confidence": "unresolved",
+        "url": null
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 8,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "unresolved_musicbrainz"
+      ],
+      "rank": 155,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 108,
+      "title": "Devil Woman - 2001 Remaster",
+      "cleanTitle": "Devil Woman",
+      "artist": "Cliff Richard",
+      "spotifyTrackId": "29YcYtqUNLWaYvGVGdYtZy",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1976,
+      "capturedMusicBrainz": {
+        "year": 1976,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/3256f5bf-441d-4a6e-b556-375a35dc9ec9"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 156,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 112,
+      "title": "INDUSTRY BABY (feat. Jack Harlow)",
+      "cleanTitle": "INDUSTRY BABY (feat. Jack Harlow)",
+      "artist": "Lil Nas X",
+      "spotifyTrackId": "27NovPIUIRrOZoCHxABJwK",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2021,
+      "capturedMusicBrainz": {
+        "year": 2021,
+        "confidence": "low",
+        "url": "https://musicbrainz.org/recording/13dac323-afa2-4787-a21b-d18275a3869b"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 157,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 113,
+      "title": "White Iverson",
+      "cleanTitle": "White Iverson",
+      "artist": "Post Malone",
+      "spotifyTrackId": "6eT7xZZlB2mwyzJ2sUKG6w",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2016,
+      "capturedMusicBrainz": {
+        "year": 2015,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/54b0f3e3-c1d6-44b7-90fa-37ab284cb1ca"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 158,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 117,
+      "title": "Fit but You Know It",
+      "cleanTitle": "Fit but You Know It",
+      "artist": "The Streets",
+      "spotifyTrackId": "312A8WfROSLvZbMDHBUPDp",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2004,
+      "capturedMusicBrainz": {
+        "year": 2004,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/2904e9c7-353c-4956-a51d-9ba91dcb78ea"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 159,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 122,
+      "title": "Valerie (feat. Amy Winehouse) - Version Revisited",
+      "cleanTitle": "Valerie (feat. Amy Winehouse) - Version Revisited",
+      "artist": "Mark Ronson",
+      "spotifyTrackId": "6kopmMZiyLmw7h66uXcXR7",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2007,
+      "capturedMusicBrainz": {
+        "year": null,
+        "confidence": "unresolved",
+        "url": null
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "unresolved_musicbrainz"
+      ],
+      "rank": 160,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 148,
+      "title": "She Likes It (feat. Jake Scott)",
+      "cleanTitle": "She Likes It (feat. Jake Scott)",
+      "artist": "Russell Dickerson",
+      "spotifyTrackId": "6VVqPBFZIbcmv14zNfOc13",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2021,
+      "capturedMusicBrainz": {
+        "year": null,
+        "confidence": "unresolved",
+        "url": null
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "unresolved_musicbrainz"
+      ],
+      "rank": 161,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 159,
+      "title": "Cum on Feel the Noize",
+      "cleanTitle": "Cum on Feel the Noize",
+      "artist": "Slade",
+      "spotifyTrackId": "1agVrzicFWExgEiAtk8lmr",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1973,
+      "capturedMusicBrainz": {
+        "year": 1973,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/339809ce-ed8c-4385-8445-7ee4d850c753"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 162,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 168,
+      "title": "Belfast Child - Remastered 2002",
+      "cleanTitle": "Belfast Child",
+      "artist": "Simple Minds",
+      "spotifyTrackId": "3fKDSSIgOngs8YYzFJO6eD",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1989,
+      "capturedMusicBrainz": {
+        "year": 1989,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/e23cb42a-40d9-4a8d-9f59-dffce4caf483"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 163,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 174,
+      "title": "Haven't Met You Yet",
+      "cleanTitle": "Haven't Met You Yet",
+      "artist": "Michael Bublé",
+      "spotifyTrackId": "4iMdiQO0YJwEkWf8eI2wff",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2009,
+      "capturedMusicBrainz": {
+        "year": 2009,
+        "confidence": "low",
+        "url": "https://musicbrainz.org/recording/31948d1d-f1e4-41c1-ac6f-61df25e8ddc6"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 164,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 228,
+      "title": "I Heard It Through The Grapevine",
+      "cleanTitle": "I Heard It Through The Grapevine",
+      "artist": "Marvin Gaye",
+      "spotifyTrackId": "1tqT6DhmsrtQgyCKUwotiw",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1968,
+      "capturedMusicBrainz": {
+        "year": 1968,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/35432076-f4c5-4878-9807-387baae95021"
+      },
+      "sameTitleExistingCredits": [
+        {
+          "artist": "Gladys Knight & The Pips",
+          "year": 1967
+        }
+      ],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "identity_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "possible_existing_master_alias"
+      ],
+      "rank": 165,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 234,
+      "title": "Survivor",
+      "cleanTitle": "Survivor",
+      "artist": "Destiny's Child",
+      "spotifyTrackId": "2Mpj1Ul5OFPyyP4wB62Rvi",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2001,
+      "capturedMusicBrainz": {
+        "year": 2001,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/d70c90c3-416a-42c2-94bb-75c50fec2394"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 166,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 237,
+      "title": "Baggy Trousers - 2010 Remaster",
+      "cleanTitle": "Baggy Trousers",
+      "artist": "Madness",
+      "spotifyTrackId": "5j4RaTG3kjLlreau6KjLrf",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1980,
+      "capturedMusicBrainz": {
+        "year": 1980,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/270becee-42b2-4be0-83b3-cb407979c42f"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 167,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 242,
+      "title": "Smile",
+      "cleanTitle": "Smile",
+      "artist": "Lily Allen",
+      "spotifyTrackId": "4aR9bPMAOFySBuQSbVWF3d",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2006,
+      "capturedMusicBrainz": {
+        "year": 2006,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/42d49b3c-5551-424f-98c6-43a9707332c7"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 168,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 253,
+      "title": "STAY (with Justin Bieber)",
+      "cleanTitle": "STAY (with Justin Bieber)",
+      "artist": "The Kid LAROI",
+      "spotifyTrackId": "5HCyWlXZPP0y6Gqq8TgA20",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2021,
+      "capturedMusicBrainz": {
+        "year": 2021,
+        "confidence": "medium",
+        "url": "https://musicbrainz.org/recording/0d1e976c-df53-40d1-8983-06908a788406"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 169,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 256,
+      "title": "Zombie",
+      "cleanTitle": "Zombie",
+      "artist": "The Cranberries",
+      "spotifyTrackId": "7EZC6E7UjZe63f1jRmkWxt",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1994,
+      "capturedMusicBrainz": {
+        "year": 1994,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/9f294e68-fd19-44f7-9e55-11f75677bcdd"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 170,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 260,
+      "title": "Signed, Sealed, Delivered (I'm Yours)",
+      "cleanTitle": "Signed, Sealed, Delivered (I'm Yours)",
+      "artist": "Stevie Wonder",
+      "spotifyTrackId": "2eF8pWbiivYsYRpbntYsnc",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1970,
+      "capturedMusicBrainz": {
+        "year": 1970,
+        "confidence": "low",
+        "url": "https://musicbrainz.org/recording/ea30dfd6-ab4c-458f-842d-02959361a9b6"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 171,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 261,
+      "title": "I've Got a Woman",
+      "cleanTitle": "I've Got a Woman",
+      "artist": "Ray Charles",
+      "spotifyTrackId": "4qKlYv1B1XhJ7Q114Thv6m",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1994,
+      "capturedMusicBrainz": {
+        "year": 1954,
+        "confidence": "low",
+        "url": "https://musicbrainz.org/recording/80548ada-36b3-48f1-864c-6a0297248ad2"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 172,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 263,
+      "title": "Reach",
+      "cleanTitle": "Reach",
+      "artist": "S Club",
+      "spotifyTrackId": "6MnWfOgKRkQtY1pRgoTwB1",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2000,
+      "capturedMusicBrainz": {
+        "year": 2000,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/1a237258-745c-460f-86db-ae03dafb56ab"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 173,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 269,
+      "title": "Strangers In The Night",
+      "cleanTitle": "Strangers In The Night",
+      "artist": "Frank Sinatra",
+      "spotifyTrackId": "74VR3AkGPhbYXnxcOYa16x",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1966,
+      "capturedMusicBrainz": {
+        "year": 1966,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/e0cd0bd2-d1ff-4b7a-bfd4-58952ee10a59"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 174,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 271,
+      "title": "Star Girl",
+      "cleanTitle": "Star Girl",
+      "artist": "McFly",
+      "spotifyTrackId": "3k7pyCzQMKwaStsAbdHHWx",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2006,
+      "capturedMusicBrainz": {
+        "year": 2006,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/cd22b8f1-c69d-4382-b3a2-36c766de3de6"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 175,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 274,
+      "title": "Sweet Caroline",
+      "cleanTitle": "Sweet Caroline",
+      "artist": "Neil Diamond",
+      "spotifyTrackId": "62AuGbAkt8Ox2IrFFb8GKV",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1969,
+      "capturedMusicBrainz": {
+        "year": 1969,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/78ea7ea5-a451-4efe-b1fe-840f0697a419"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 176,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 279,
+      "title": "The Joker",
+      "cleanTitle": "The Joker",
+      "artist": "Steve Miller Band",
+      "spotifyTrackId": "1bp2IO61zbQrbWNmKKxg3f",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1973,
+      "capturedMusicBrainz": {
+        "year": 1973,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/177727a4-92ee-4efe-8498-df6f33ca9372"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 177,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 281,
+      "title": "Piano Man",
+      "cleanTitle": "Piano Man",
+      "artist": "Billy Joel",
+      "spotifyTrackId": "78WVLOP9pN0G3gRLFy1rAa",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1973,
+      "capturedMusicBrainz": {
+        "year": 1973,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/92ac918a-07f6-4f5e-b356-5897723310ca"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 178,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 282,
+      "title": "I Like You (A Happier Song) (with Doja Cat)",
+      "cleanTitle": "I Like You (A Happier Song) (with Doja Cat)",
+      "artist": "Post Malone",
+      "spotifyTrackId": "0O6u0VJ46W86TxN9wgyqDj",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2022,
+      "capturedMusicBrainz": {
+        "year": null,
+        "confidence": "unresolved",
+        "url": null
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "unresolved_musicbrainz"
+      ],
+      "rank": 179,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 283,
+      "title": "HUMBLE.",
+      "cleanTitle": "HUMBLE.",
+      "artist": "Kendrick Lamar",
+      "spotifyTrackId": "7KXjTSCq5nL1LoYtL7XAwS",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2017,
+      "capturedMusicBrainz": {
+        "year": 2017,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/398bf241-7d57-4993-860b-1f9ef496c97f"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 180,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 284,
+      "title": "Rocket Man (I Think It's Going To Be A Long, Long Time)",
+      "cleanTitle": "Rocket Man (I Think It's Going To Be A Long, Long Time)",
+      "artist": "Elton John",
+      "spotifyTrackId": "3gdewACMIVMEWVbyb8O9sY",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1972,
+      "capturedMusicBrainz": {
+        "year": 1972,
+        "confidence": "medium",
+        "url": "https://musicbrainz.org/recording/4c2a08bd-26df-4e68-835a-5bc8ff9bcf8a"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 181,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 285,
+      "title": "Price Tag",
+      "cleanTitle": "Price Tag",
+      "artist": "Jessie J",
+      "spotifyTrackId": "2fTsFCKRFQ5M0igJgabnLA",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2011,
+      "capturedMusicBrainz": {
+        "year": 2011,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/4046f064-79e6-4b75-ac62-7c76dad7a5aa"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 182,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 289,
+      "title": "Take A Chance On Me",
+      "cleanTitle": "Take A Chance On Me",
+      "artist": "ABBA",
+      "spotifyTrackId": "5BckPAYcKEJuYs1eV1BHHe",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1977,
+      "capturedMusicBrainz": {
+        "year": 1977,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/ebfcb2ca-1285-4baf-8a9c-b09e737926d8"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 183,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 292,
+      "title": "Shotgun",
+      "cleanTitle": "Shotgun",
+      "artist": "George Ezra",
+      "spotifyTrackId": "4ofwffwvvnbSkrMSCKQDaC",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2018,
+      "capturedMusicBrainz": {
+        "year": 2018,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/81614e2f-298e-4644-aaed-36fe57fb1eb3"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 184,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 293,
+      "title": "Sex on Fire",
+      "cleanTitle": "Sex on Fire",
+      "artist": "Kings of Leon",
+      "spotifyTrackId": "5A1FmxbYVRZKy4nc16MAue",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2008,
+      "capturedMusicBrainz": {
+        "year": 2008,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/7f44c1bb-d57f-42ee-9a63-79c1a7c7bdc7"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 185,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 294,
+      "title": "Waka Waka (This Time for Africa) [The Official 2010 FIFA World Cup (TM) Song] (feat. Freshlyground)",
+      "cleanTitle": "Waka Waka (This Time for Africa) [The Official 2010 FIFA World Cup (TM) Song] (feat. Freshlyground)",
+      "artist": "Shakira",
+      "spotifyTrackId": "2Cd9iWfcOpGDHLz6tVA3G4",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2010,
+      "capturedMusicBrainz": {
+        "year": null,
+        "confidence": "unresolved",
+        "url": null
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "unresolved_musicbrainz"
+      ],
+      "rank": 186,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 295,
+      "title": "Surf City (Rerecorded)",
+      "cleanTitle": "Surf City (Rerecorded)",
+      "artist": "Jan & Dean",
+      "spotifyTrackId": "24QrU0S6w0XvlE3m7kgSsW",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2010,
+      "capturedMusicBrainz": {
+        "year": 1963,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/c1ba34bd-def6-4693-a1be-880bb26e3095"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 187,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 296,
+      "title": "SexyBack (feat. Timbaland)",
+      "cleanTitle": "SexyBack (feat. Timbaland)",
+      "artist": "Justin Timberlake",
+      "spotifyTrackId": "0O45fw2L5vsWpdsOdXwNAR",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2006,
+      "capturedMusicBrainz": {
+        "year": 2006,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/be48c8c8-873b-45e3-90b7-bcdf5c6826b8"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 188,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 298,
+      "title": "Easy",
+      "cleanTitle": "Easy",
+      "artist": "Commodores",
+      "spotifyTrackId": "1JQ6Xm1JrvHfvAqhl5pwaA",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1977,
+      "capturedMusicBrainz": {
+        "year": 1977,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/f0889b16-edbb-489c-ba55-53301987eda1"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 189,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 301,
+      "title": "I'll Be There",
+      "cleanTitle": "I'll Be There",
+      "artist": "Jess Glynne",
+      "spotifyTrackId": "4r1CoAATVuxag55Ct3Y1aX",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 2018,
+      "capturedMusicBrainz": {
+        "year": 2023,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/a50175f8-d759-48e1-b7ed-39f71a246d72"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "release_year_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [
+        "benchmark_vs_cached_musicbrainz_year_disagreement"
+      ],
+      "rank": 190,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 302,
+      "title": "Monday, Monday - Single Version",
+      "cleanTitle": "Monday, Monday",
+      "artist": "The Mamas & The Papas",
+      "spotifyTrackId": "3EFb1qDgIqf9MegIryKtDj",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1966,
+      "capturedMusicBrainz": {
+        "year": 1966,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/34a97e8e-11d3-460e-9936-18a1369522e7"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 191,
+      "priorityBand": "reserve"
+    },
+    {
+      "position": 307,
+      "title": "White Room",
+      "cleanTitle": "White Room",
+      "artist": "Cream",
+      "spotifyTrackId": "3Xls4cNOwy01dtrNXb1inG",
+      "benchmarkEvidence": "community_bopster_numbered_import",
+      "benchmarkDisplayedYear": 1968,
+      "capturedMusicBrainz": {
+        "year": 1968,
+        "confidence": "high",
+        "url": "https://musicbrainz.org/recording/d15ba2bd-f227-415f-9c8a-4245a51a6d8f"
+      },
+      "sameTitleExistingCredits": [],
+      "recognitionEstimate_0_10": 7,
+      "estimateBasis": "editorial Australian party familiarity judgement; not survey data",
+      "reviewState": "awaiting_review",
+      "proposedAnswerYear": null,
+      "approvedSourceUrl": null,
+      "issueFlags": [],
+      "rank": 192,
+      "priorityBand": "reserve"
+    }
+  ],
+  "alternateAustralianPriority": [
+    {
+      "title": "Highway to Hell",
+      "artist": "AC/DC",
+      "year": 1979,
+      "recognitionEstimate_0_10": 10,
+      "existingSongId": "song_f08b9dc4d684c07f204a",
+      "reviewState": "approved_existing_master"
+    },
+    {
+      "title": "Back in Black",
+      "artist": "AC/DC",
+      "year": 1980,
+      "recognitionEstimate_0_10": 10,
+      "existingSongId": "song_04638a1a85010fba6d56",
+      "reviewState": "approved_existing_master"
+    },
+    {
+      "title": "The Boys Light Up",
+      "artist": "Australian Crawl",
+      "year": 1980,
+      "recognitionEstimate_0_10": 8,
+      "existingSongId": "song_183d3ed2a903e536cfcf",
+      "reviewState": "approved_existing_master"
+    },
+    {
+      "title": "Down Under",
+      "artist": "Men at Work",
+      "year": 1981,
+      "recognitionEstimate_0_10": 10,
+      "existingSongId": "song_76dd88ea981d6c6a7f75",
+      "reviewState": "approved_existing_master"
+    },
+    {
+      "title": "You're the Voice",
+      "artist": "John Farnham",
+      "year": 1986,
+      "recognitionEstimate_0_10": 10,
+      "existingSongId": "song_305da935ec720ee3f32b",
+      "reviewState": "approved_existing_master"
+    },
+    {
+      "title": "Tomorrow",
+      "artist": "Silverchair",
+      "year": 1994,
+      "recognitionEstimate_0_10": 9,
+      "existingSongId": "song_69a73240336880993b4a",
+      "reviewState": "approved_existing_master"
+    },
+    {
+      "title": "I Want You",
+      "artist": "Savage Garden",
+      "year": 1996,
+      "recognitionEstimate_0_10": 9,
+      "existingSongId": "song_c0be0156996bddfef9e8",
+      "reviewState": "approved_existing_master"
+    },
+    {
+      "title": "Truly Madly Deeply",
+      "artist": "Savage Garden",
+      "year": 1997,
+      "recognitionEstimate_0_10": 9,
+      "existingSongId": "song_17646e5fd8ef794edff2",
+      "reviewState": "approved_existing_master"
+    },
+    {
+      "title": "These Days",
+      "artist": "Powderfinger",
+      "year": 1999,
+      "recognitionEstimate_0_10": 9,
+      "existingSongId": "song_58cabf45d75591c81d74",
+      "reviewState": "approved_existing_master"
+    },
+    {
+      "title": "Straight Lines",
+      "artist": "Silverchair",
+      "year": 2007,
+      "recognitionEstimate_0_10": 9,
+      "existingSongId": "song_db378fc86649c48b85f2",
+      "reviewState": "approved_existing_master"
+    },
+    {
+      "title": "Untouched",
+      "artist": "The Veronicas",
+      "year": 2007,
+      "recognitionEstimate_0_10": 9,
+      "existingSongId": "song_b1d515290e73fedd9d13",
+      "reviewState": "approved_existing_master"
+    },
+    {
+      "title": "Walking on a Dream",
+      "artist": "Empire of the Sun",
+      "year": 2008,
+      "recognitionEstimate_0_10": 9,
+      "existingSongId": "song_97bb3dde54bf3e6b5e87",
+      "reviewState": "approved_existing_master"
+    }
+  ],
+  "exclusions": [
+    {
+      "title": "Take on Me",
+      "artist": "a-ha",
+      "reason": "Original 1984 version versus widely heard re-recorded 1985 single; determine intended recording and year."
+    },
+    {
+      "title": "Royals",
+      "artist": "Lorde",
+      "reason": "2012 self-release and 2013 commercial release require consistent accepted first-publication policy."
+    },
+    {
+      "title": "Timber",
+      "artist": "Pitbull feat. Kesha",
+      "reason": "Conflicting metadata includes a suspicious 2012 compilation date and 2013 original single evidence; resolve exact recording."
+    },
+    {
+      "title": "Relax",
+      "artist": "Frankie Goes to Hollywood",
+      "reason": "Original 1983 single is evidenced, but benchmark asset marked (Come Fighting) is an alternate mix."
+    },
+    {
+      "title": "Gold Digger",
+      "artist": "Kanye West",
+      "reason": "Already present with extended featured credit; not a new canonical song."
+    },
+    {
+      "title": "Gangsta's Paradise",
+      "artist": "Coolio",
+      "reason": "Potentially present under extended featured credit; reconcile canonical identity before adding."
+    }
+  ]
+}
