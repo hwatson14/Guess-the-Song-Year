@@ -7,7 +7,7 @@ const cat=JSON.parse(fs.readFileSync('data/catalogue.json','utf8'));
 const plan=JSON.parse(fs.readFileSync('verification/playlist-curation-2026-11-02.json','utf8'));
 const retired=JSON.parse(fs.readFileSync('verification/playlist-retirements-2026-11-02.json','utf8'));
 assert.deepEqual(compileDatabase(db),cat,'generated catalogue must exactly match the canonical database');
-assert.equal(cat.version,19);
+assert.equal(cat.version,20);
 assert.equal(plan.recordingYearCorrections.length,13);
 assert.equal(plan.newCanonicalSongs.length,20);
 assert.equal(plan.retiredNonSongs.length,3);
@@ -45,7 +45,18 @@ for(const decision of plan.newCanonicalSongs){
   assert.ok(song.release.claims.some(c=>c.sourceUrl===decision.sourceUrl&&c.year===decision.year));
   for(const provider of ['spotify','youtube']){
     assert.equal(song.providers[provider].preferredId,null,'never promote unreviewed provider IDs');
-    assert.equal(song.providers[provider].links.length,0,'never invent provider recordings');
+    // The 2026-11-02 curation did not invent provider IDs. Later v20 promotions
+    // may add sourced, unverified Spotify candidates to an existing master.
+    if(song.providers[provider].links.length){
+      assert.equal(provider,'spotify','No later YouTube candidate was introduced');
+      const v20=JSON.parse(fs.readFileSync('verification/greatest-hits-v20-reviewed.json','utf8'));
+      assert.ok(v20.approvedBenchmarkPromotions.some(x=>x.existingMasterId===song.id),
+        'Every later candidate on a historical master must be in the v20 reviewed ledger');
+      for(const link of song.providers.spotify.links){
+        assert.equal(link.state,'unverified','Do not equate public track link with recording verification');
+        assert.equal(link.origin,'hitster-uk-candidate','Only explicit v20 benchmark candidates are permitted');
+      }
+    }
   }
   for(const mode of decision.modes)assert.equal(db.memberships.filter(m=>m.songId===decision.id&&m.mode===mode).length,1);
 }
@@ -68,7 +79,7 @@ for(let year=1950;year<=2022;year++){
   assert.ok((cat.modes.australian[year]||[]).length>=1,'Australian year '+year+' must be playable');
 }
 // The 884-song historical curation baseline has two subsequent required original-release additions.
-assert.equal(Object.values(cat.modes.greatest).flat().length,886);
+assert.equal(Object.values(cat.modes.greatest).flat().length,944);
 assert.equal(Object.values(cat.modes.australian).flat().length,253);
 assert.equal(new Set(Object.values(cat.modes.australian).flat().map(s=>s.artist)).size,45);
 assert.equal(cat.modes.australian[2022].length,2,'2022 must be backfilled after the Troye Sivan correction');

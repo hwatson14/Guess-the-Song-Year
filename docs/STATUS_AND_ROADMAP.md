@@ -1,6 +1,12 @@
 # Status and Roadmap
 
-_Reviewed: 2026-11-02_
+_Reviewed: 2026-11-04_
+
+### 2026-11-04 Greatest Hits v20
+
+The reviewed source-backed playlist pass promotes **46** missing HITSTER-UK-benchmark classics and **12** additional Australian source-backed classics into Greatest Hits. Of these 58 memberships, 14 reuse existing canonical masters from other modes and 44 create sourced original master records. No gameplay rule, unrelated playlist or year assignment was changed. Original release, not chart peak or remaster issue, is the answer-year policy. New stored Spotify IDs are **unverified playback candidates** and are never promoted to preferred recording status without review.
+
+A ranked **150-candidate** gap inventory (`verification/greatest-hits-v20-gap-priorities.json`) is preserved as editorial judgement with explicit uncertainty flags. The approved source evidence is in `verification/greatest-hits-v20-reviewed.json`; disputed release/recording cases are excluded from automatic promotion. The mode still remains Beta.
 
 ### 2026-11-02 artist-balanced selection
 
@@ -10,13 +16,13 @@ PR #31 supplied the v19 catalogue; the original 13-item review queue in this fea
 
 ## Current status
 
-Catalogue v19 is a working multi-mode product backed by normalized JSON source and a deterministic compiler. `data/song-database.json` is the reviewable source; `scripts/song_database.mjs` compiles it into the browser-facing `data/catalogue.json`. The current source contains 1,126 master song records and 1,485 active mode placements.
+Catalogue v20 is a working multi-mode product backed by normalized JSON source and a deterministic compiler. `data/song-database.json` is the reviewable source; `scripts/song_database.mjs` compiles it into the browser-facing `data/catalogue.json`. The current source contains 1,170 master song records and 1,543 active mode placements.
 
 | Area | Status | Current truth |
 |---|---|---|
 | Core gameplay | Stable | Real cards and Virtual play; 1–6 teams; First to 10 or Unlimited; Resume and Back handling |
 | Year range | Implemented | Generic min/max selector, persisted in config/match state; physical out-of-range scans are rejected |
-| Greatest Hits | Beta | 73/73 years; 886 songs; at least 12 per year |
+| Greatest Hits | Beta | 73/73 years; 944 songs; at least 12 per year |
 | Australian | Beta | 73/73 years; 253 songs, 45 artist-credit labels; legacy evidence and shallow pools remain |
 | Unexpected Years | Preview | 65/73 years; 200 unique songs; expanded with 160 reviewed, evidence-gated existing masters |
 | #1 US | Beta | 73/73 fixed chart leaders |
@@ -26,9 +32,9 @@ Catalogue v19 is a working multi-mode product backed by normalized JSON source a
 | TV & Movie Themes | Building | Deterministic union of Movie Themes + TV Themes, inheriting each source work's answer year |
 | Remix: Original Year | Building | Hear an explicitly reviewed remix; answer with the canonical original song release year |
 | One Hit Wonders | Building | Release-year mode over canonical master songs; curation/eligibility evidence still required |
-| Canonical source | Working v19 | 1,126 immutable master identities shared across memberships |
-| Release evidence | Improved | 891 masters externally observed; 235 unresolved |
-| Provider links | Partially reviewed | Spotify: 607 linked masters / 4 verified preferred tracks. YouTube: 431 linked / 0 verified preferred tracks |
+| Canonical source | Working v20 | 1,170 immutable master identities shared across memberships |
+| Release evidence | Improved | 936 masters externally observed; 234 unresolved |
+| Provider links | Partially reviewed | Spotify: 651 linked masters / 4 verified preferred tracks. YouTube: 431 linked / 0 verified preferred tracks |
 | Spotify runtime identity | Hardened | Static, cached and searched tracks use the same title + strong lead-artist identity gate; non-404 API failures propagate |
 | Compiler | Working | Offline deterministic JSON compiler from `data/song-database.json` |
 | SQLite | Future option | Useful as a rebuilt query/validation workspace, not required or authoritative |
@@ -102,4 +108,4 @@ See `docs/MODE_EXPANSION_SPEC.md` for the detailed product and data contract.
 
 ## Definition of green
 
-A release is green when source and generated v19 data agree, schema and runtime checks pass, the compiler is deterministic/offline, every active mode obeys its declared year and identity invariants, provider candidates cannot bypass runtime identity validation, Pages stages the complete public asset set, and no credentials or session data are committed.
+A release is green when source and generated v20 data agree, schema and runtime checks pass, the compiler is deterministic/offline, every active mode obeys its declared year and identity invariants, provider candidates cannot bypass runtime identity validation, Pages stages the complete public asset set, and no credentials or session data are committed.

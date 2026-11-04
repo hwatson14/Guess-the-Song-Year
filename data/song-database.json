@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "catalogue": {
-    "version": 19,
-    "generatedAt": "2026-11-02",
+    "version": 20,
+    "generatedAt": "2026-11-04",
     "years": [
       1950,
       1951,
@@ -79,7 +79,7 @@
       2022
     ],
     "sources": {
-      "greatest": "Original-release year hits, with reviewed corrections and balanced 12-plus minimum yearly pools; residual year and playback checks remain Beta.",
+      "greatest": "Source-backed Australian-recognisable Greatest Hits v20; 58 curated memberships added without treating chart/remaster years as original release years.",
       "australian": "Sourced Australian-first repertoire including corrected legacy years and wider mainstream artist coverage; unresolved legacy members remain Beta.",
       "number1_us": "BiMMuDa Billboard year-end position 1",
       "number1_au": "Australian annual chart position 1",
@@ -24691,14 +24691,20 @@
       "title": "Groove Is in the Heart",
       "artist": "Deee-Lite",
       "release": {
-        "year": null,
-        "state": "unresolved",
+        "year": 1990,
+        "state": "externally_observed",
         "claims": [
           {
             "year": 1990,
             "state": "legacy_unverified",
             "sourceUrl": null,
             "evidence": null
+          },
+          {
+            "year": 1990,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/deee-lite-groove-is-in-the-heartwhat-is-love/",
+            "evidence": "1990 original single; reuses already-evidenced Unexpected Years master."
           }
         ],
         "answerYear": 1990
@@ -24706,7 +24712,17 @@
       "providers": {
         "spotify": {
           "preferredId": null,
-          "links": []
+          "links": [
+            {
+              "id": "2He3NOyqtLNE3RQPpeDdSb",
+              "url": "https://open.spotify.com/track/2He3NOyqtLNE3RQPpeDdSb",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Groove Is in the Heart",
+              "sourceArtist": "Deee-Lite"
+            }
+          ]
         },
         "youtube": {
           "preferredId": null,
@@ -74112,7 +74128,17 @@
       "providers": {
         "spotify": {
           "preferredId": null,
-          "links": []
+          "links": [
+            {
+              "id": "56GbZVwxMdf1DENCluYS8A",
+              "url": "https://open.spotify.com/track/56GbZVwxMdf1DENCluYS8A",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Don't Dream It's Over",
+              "sourceArtist": "Crowded House"
+            }
+          ]
         },
         "youtube": {
           "preferredId": null,
@@ -74595,6 +74621,1722 @@
               "sourceUrl": "https://open.spotify.com/track/08VeSelC8QYD1MIsK9gAmY",
               "sourceTitle": "Blue (Da Ba Dee) - DJ Ponte Ice Pop Radio",
               "sourceArtist": "Eiffel 65"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_b1d63e0a17f2e73b7362": {
+      "id": "song_b1d63e0a17f2e73b7362",
+      "canonicalKey": "if you leave me now|chicago",
+      "title": "If You Leave Me Now",
+      "artist": "Chicago",
+      "release": {
+        "answerYear": 1976,
+        "year": 1976,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1976,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/chicago-if-you-leave-me-now/",
+            "evidence": "Original single charted in October 1976."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "0KMGxYKeUzK9wc5DZCt3HT",
+              "url": "https://open.spotify.com/track/0KMGxYKeUzK9wc5DZCt3HT",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "If You Leave Me Now",
+              "sourceArtist": "Chicago"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_57237171a71c7a16f1b4": {
+      "id": "song_57237171a71c7a16f1b4",
+      "canonicalKey": "super freak|rick james",
+      "title": "Super Freak",
+      "artist": "Rick James",
+      "release": {
+        "answerYear": 1981,
+        "year": 1981,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1981,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/album/street-songs/1440805214",
+            "evidence": "Original Street Songs album containing the recording issued 7 April 1981."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "2dCmGcEOQrMQhMMS8Vj7Ca",
+              "url": "https://open.spotify.com/track/2dCmGcEOQrMQhMMS8Vj7Ca",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Super Freak",
+              "sourceArtist": "Rick James"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_1adc96df0997f241735c": {
+      "id": "song_1adc96df0997f241735c",
+      "canonicalKey": "wonderful world|sam cooke",
+      "title": "Wonderful World",
+      "artist": "Sam Cooke",
+      "release": {
+        "answerYear": 1960,
+        "year": 1960,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1960,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/sam-cooke-wonderful-world/",
+            "evidence": "Sam Cooke original Wonderful World charted in July 1960; cached 1995 MusicBrainz date is a later issue."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "2G0GextMwZJLkNxcSZ7ZJ3",
+              "url": "https://open.spotify.com/track/2G0GextMwZJLkNxcSZ7ZJ3",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Wonderful World",
+              "sourceArtist": "Sam Cooke"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_05e5305735e26c56a548": {
+      "id": "song_05e5305735e26c56a548",
+      "canonicalKey": "year 3000|busted",
+      "title": "Year 3000",
+      "artist": "Busted",
+      "release": {
+        "answerYear": 2002,
+        "year": 2002,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2002,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/song/1714341619",
+            "evidence": "Song is on Busted's original 2002 album, preceding its 2003 UK single chart peak."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "5pWRdriPCFhfz0JSswkdHo",
+              "url": "https://open.spotify.com/track/5pWRdriPCFhfz0JSswkdHo",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Year 3000",
+              "sourceArtist": "Busted"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_12ea0203d84c30f27233": {
+      "id": "song_12ea0203d84c30f27233",
+      "canonicalKey": "step on|happy mondays",
+      "title": "Step On",
+      "artist": "Happy Mondays",
+      "release": {
+        "answerYear": 1990,
+        "year": 1990,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1990,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/happy-mondays-step-on/",
+            "evidence": "1990 original UK single, not the 2007 remaster in the benchmark."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "4gAU0cHQJFxj1n2ZDiEIzG",
+              "url": "https://open.spotify.com/track/4gAU0cHQJFxj1n2ZDiEIzG",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Step On",
+              "sourceArtist": "Happy Mondays"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_be78617200d4ec30b866": {
+      "id": "song_be78617200d4ec30b866",
+      "canonicalKey": "afternoon delight|starland vocal band",
+      "title": "Afternoon Delight",
+      "artist": "Starland Vocal Band",
+      "release": {
+        "answerYear": 1976,
+        "year": 1976,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1976,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/song/1825612729",
+            "evidence": "Original Starland Vocal Band album features song in 1976."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "1pBAsoHy7eN9aeVCTAiKua",
+              "url": "https://open.spotify.com/track/1pBAsoHy7eN9aeVCTAiKua",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Afternoon Delight",
+              "sourceArtist": "Starland Vocal Band"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_f073bb348aa24318fa38": {
+      "id": "song_f073bb348aa24318fa38",
+      "canonicalKey": "get back|beatles",
+      "title": "Get Back",
+      "artist": "The Beatles",
+      "release": {
+        "answerYear": 1969,
+        "year": 1969,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1969,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.thebeatles.com/get-back",
+            "evidence": "Beatles' original single with Billy Preston was issued 11 April 1969; 1970 Let It Be mix is later."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "4MLBqAEzNN89o2M9h92Z26",
+              "url": "https://open.spotify.com/track/4MLBqAEzNN89o2M9h92Z26",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Get Back",
+              "sourceArtist": "The Beatles"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_e48ae6d3fdbce1414ad1": {
+      "id": "song_e48ae6d3fdbce1414ad1",
+      "canonicalKey": "this charming man|smiths",
+      "title": "This Charming Man",
+      "artist": "The Smiths",
+      "release": {
+        "answerYear": 1983,
+        "year": 1983,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1983,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/artist/21136/smiths/",
+            "evidence": "Smiths original UK chart debut was November 1983; benchmark lists later remaster."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "1FvDJ9KGxcqwv1utyPL3JZ",
+              "url": "https://open.spotify.com/track/1FvDJ9KGxcqwv1utyPL3JZ",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "This Charming Man",
+              "sourceArtist": "The Smiths"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_baa3e89faba3a6f20e0b": {
+      "id": "song_baa3e89faba3a6f20e0b",
+      "canonicalKey": "itsy bitsy teenie weenie yellow polka dot bikini|brian hyland",
+      "title": "Itsy Bitsy Teenie Weenie Yellow Polka Dot Bikini",
+      "artist": "Brian Hyland",
+      "release": {
+        "answerYear": 1960,
+        "year": 1960,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1960,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/brian-hyland-itsy-bitsy-teenie-weenie-yellow-polka-dot-bikini/",
+            "evidence": "Brian Hyland 1960 original single charted July 1960, not 1961 benchmark year."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "4aTCNddtjztjuK2EOgz7ZZ",
+              "url": "https://open.spotify.com/track/4aTCNddtjztjuK2EOgz7ZZ",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Itsy Bitsy Teenie Weenie Yellow Polka Dot Bikini",
+              "sourceArtist": "Brian Hyland"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_088d626e0f49453f3051": {
+      "id": "song_088d626e0f49453f3051",
+      "canonicalKey": "the locomotion|little eva",
+      "title": "The Locomotion",
+      "artist": "Little Eva",
+      "release": {
+        "answerYear": 1962,
+        "year": 1962,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1962,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/album/llllloco-motion/1088697736",
+            "evidence": "Little Eva's 1962 album contains the original performance; cached MusicBrainz 1992 is not first release."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "5xzdDMhFYiuUONB0Mha9VS",
+              "url": "https://open.spotify.com/track/5xzdDMhFYiuUONB0Mha9VS",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "The Locomotion",
+              "sourceArtist": "Little Eva"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_4289e9ffa4d26438133c": {
+      "id": "song_4289e9ffa4d26438133c",
+      "canonicalKey": "cigarettes alcohol|oasis",
+      "title": "Cigarettes & Alcohol",
+      "artist": "Oasis",
+      "release": {
+        "answerYear": 1994,
+        "year": 1994,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1994,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/oasis-cigarettes-alcohol/",
+            "evidence": "Oasis original release charted October 1994; MusicBrainz 1993 claim conflicts with commercial release evidence."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "3nK2qGHdVAEOuVAmMSWQPW",
+              "url": "https://open.spotify.com/track/3nK2qGHdVAEOuVAmMSWQPW",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Cigarettes & Alcohol",
+              "sourceArtist": "Oasis"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_b94a714f20f8b7ddf72d": {
+      "id": "song_b94a714f20f8b7ddf72d",
+      "canonicalKey": "back for good|take that",
+      "title": "Back for Good",
+      "artist": "Take That",
+      "release": {
+        "answerYear": 1995,
+        "year": 1995,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1995,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/take-that-back-for-good/",
+            "evidence": "Original Take That single charted April 1995; 1994 cached MusicBrainz date is not accepted."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "6vcdzohhBSbNdsZBh5IRpQ",
+              "url": "https://open.spotify.com/track/6vcdzohhBSbNdsZBh5IRpQ",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Back for Good",
+              "sourceArtist": "Take That"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_e8962a8964e4888f49a6": {
+      "id": "song_e8962a8964e4888f49a6",
+      "canonicalKey": "don t you want me|human league",
+      "title": "Don't You Want Me",
+      "artist": "The Human League",
+      "release": {
+        "answerYear": 1981,
+        "year": 1981,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1981,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/human-league-dont-you-want-me-0/",
+            "evidence": "Original single released 27 November 1981 after Dare album; not a 1995 reissue."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "3L7RtEcu1Hw3OXrpnthngx",
+              "url": "https://open.spotify.com/track/3L7RtEcu1Hw3OXrpnthngx",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Don't You Want Me",
+              "sourceArtist": "The Human League"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_25552310e06efd60185a": {
+      "id": "song_25552310e06efd60185a",
+      "canonicalKey": "you can t hurry love|supremes",
+      "title": "You Can't Hurry Love",
+      "artist": "The Supremes",
+      "release": {
+        "answerYear": 1966,
+        "year": 1966,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1966,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/supremes-you-cant-hurry-love/",
+            "evidence": "The Supremes original recording charted September 1966; distinct from Phil Collins cover."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "4H1iMlEWKZmpKTHCZzDhju",
+              "url": "https://open.spotify.com/track/4H1iMlEWKZmpKTHCZzDhju",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "You Can't Hurry Love",
+              "sourceArtist": "The Supremes"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_c88be61bc9ad76e956cf": {
+      "id": "song_c88be61bc9ad76e956cf",
+      "canonicalKey": "the ballroom blitz|sweet",
+      "title": "The Ballroom Blitz",
+      "artist": "Sweet",
+      "release": {
+        "answerYear": 1973,
+        "year": 1973,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1973,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/sweet-ballroom-blitz/",
+            "evidence": "Sweet's original single charted September 1973; 1974 benchmark year is later-market/chart context."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "3Pu3IChaAoa5EjgUBv5F6x",
+              "url": "https://open.spotify.com/track/3Pu3IChaAoa5EjgUBv5F6x",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "The Ballroom Blitz",
+              "sourceArtist": "Sweet"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_e369cade2727421589f4": {
+      "id": "song_e369cade2727421589f4",
+      "canonicalKey": "perfect day|lou reed",
+      "title": "Perfect Day",
+      "artist": "Lou Reed",
+      "release": {
+        "answerYear": 1972,
+        "year": 1972,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1972,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/album/perfect-day/976826793",
+            "evidence": "Lou Reed's Transformer album includes Perfect Day, issued 8 November 1972."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "4TOMI010Sd4ZAX4aZ5TS85",
+              "url": "https://open.spotify.com/track/4TOMI010Sd4ZAX4aZ5TS85",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Perfect Day",
+              "sourceArtist": "Lou Reed"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_976e867615fdd27037a2": {
+      "id": "song_976e867615fdd27037a2",
+      "canonicalKey": "boys don t cry|cure",
+      "title": "Boys Don't Cry",
+      "artist": "The Cure",
+      "release": {
+        "answerYear": 1979,
+        "year": 1979,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1979,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.thecure.com/release/boys-dont-cry/",
+            "evidence": "Official Cure site dates original single 12 June 1979, not a later re-recording."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "1QFh8OH1e78dGd3VyJZCAC",
+              "url": "https://open.spotify.com/track/1QFh8OH1e78dGd3VyJZCAC",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Boys Don't Cry",
+              "sourceArtist": "The Cure"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_8c2734e69c41568a351e": {
+      "id": "song_8c2734e69c41568a351e",
+      "canonicalKey": "funkytown|lipps inc",
+      "title": "Funkytown",
+      "artist": "Lipps Inc.",
+      "release": {
+        "answerYear": 1979,
+        "year": 1979,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1979,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/album/mouth-to-mouth/1552121129",
+            "evidence": "Original Lipps, Inc. Mouth to Mouth album contains Funkytown from November 1979; 1980 was breakout single year."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "37yIrMPeJYRm7zJ8rr3Uvv",
+              "url": "https://open.spotify.com/track/37yIrMPeJYRm7zJ8rr3Uvv",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Funkytown",
+              "sourceArtist": "Lipps Inc."
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_f392009fde2c0db957db": {
+      "id": "song_f392009fde2c0db957db",
+      "canonicalKey": "road to nowhere|talking heads",
+      "title": "Road to Nowhere",
+      "artist": "Talking Heads",
+      "release": {
+        "answerYear": 1985,
+        "year": 1985,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1985,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/album/little-creatures/302136342",
+            "evidence": "Talking Heads' original Little Creatures album includes Road to Nowhere in June 1985."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "2co8fDyaVmxv8xruQWORnC",
+              "url": "https://open.spotify.com/track/2co8fDyaVmxv8xruQWORnC",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Road to Nowhere",
+              "sourceArtist": "Talking Heads"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_104ae62042aa05f7379c": {
+      "id": "song_104ae62042aa05f7379c",
+      "canonicalKey": "toosie slide|drake",
+      "title": "Toosie Slide",
+      "artist": "Drake",
+      "release": {
+        "answerYear": 2020,
+        "year": 2020,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2020,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/drake-toosie-slide/",
+            "evidence": "Drake original recording charted April 2020."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "1d2eMMrAuIsw85u3YklKoc",
+              "url": "https://open.spotify.com/track/1d2eMMrAuIsw85u3YklKoc",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Toosie Slide",
+              "sourceArtist": "Drake"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_79dc1e48e898d9b198ed": {
+      "id": "song_79dc1e48e898d9b198ed",
+      "canonicalKey": "mr vain|culture beat",
+      "title": "Mr. Vain",
+      "artist": "Culture Beat",
+      "release": {
+        "answerYear": 1993,
+        "year": 1993,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1993,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/culture-beat-mr-vain/",
+            "evidence": "Original Culture Beat single charted August 1993."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "2rTYgHxgcndkUrRoU7x0Sv",
+              "url": "https://open.spotify.com/track/2rTYgHxgcndkUrRoU7x0Sv",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Mr. Vain",
+              "sourceArtist": "Culture Beat"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_6fd7e7eaddb905d73a0f": {
+      "id": "song_6fd7e7eaddb905d73a0f",
+      "canonicalKey": "sweet child o mine|guns n roses",
+      "title": "Sweet Child O' Mine",
+      "artist": "Guns N' Roses",
+      "release": {
+        "answerYear": 1987,
+        "year": 1987,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1987,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/song/1377826892",
+            "evidence": "Guns N' Roses recording first issued on Appetite for Destruction in July 1987; 1988 single is later."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "7o2CTH4ctstm8TNelqjb51",
+              "url": "https://open.spotify.com/track/7o2CTH4ctstm8TNelqjb51",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Sweet Child O' Mine",
+              "sourceArtist": "Guns N' Roses"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_5753a695348e0f87b1e1": {
+      "id": "song_5753a695348e0f87b1e1",
+      "canonicalKey": "genie in a bottle|christina aguilera",
+      "title": "Genie in a Bottle",
+      "artist": "Christina Aguilera",
+      "release": {
+        "answerYear": 1999,
+        "year": 1999,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1999,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/christina-aguilera-genie-in-a-bottle-0/",
+            "evidence": "Christina Aguilera original single charted in October 1999."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "11mwFrKvLXCbcVGNxffGyP",
+              "url": "https://open.spotify.com/track/11mwFrKvLXCbcVGNxffGyP",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Genie in a Bottle",
+              "sourceArtist": "Christina Aguilera"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_27b594cd88a2ef5db6c9": {
+      "id": "song_27b594cd88a2ef5db6c9",
+      "canonicalKey": "respect|aretha franklin",
+      "title": "Respect",
+      "artist": "Aretha Franklin",
+      "release": {
+        "answerYear": 1967,
+        "year": 1967,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1967,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/aretha-franklin-respect-0/",
+            "evidence": "Aretha Franklin 1967 recording; distinct from Otis Redding's earlier song/performance."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "7s25THrKz86DM225dOYwnr",
+              "url": "https://open.spotify.com/track/7s25THrKz86DM225dOYwnr",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Respect",
+              "sourceArtist": "Aretha Franklin"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_36e4f48df666437b7a75": {
+      "id": "song_36e4f48df666437b7a75",
+      "canonicalKey": "can t stand me now|libertines",
+      "title": "Can't Stand Me Now",
+      "artist": "The Libertines",
+      "release": {
+        "answerYear": 2004,
+        "year": 2004,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2004,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/libertines-cant-stand-me-now/",
+            "evidence": "Original Libertines single charted August 2004."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "2EtZFeLn9msgg4qJzT9Vql",
+              "url": "https://open.spotify.com/track/2EtZFeLn9msgg4qJzT9Vql",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Can't Stand Me Now",
+              "sourceArtist": "The Libertines"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_bf5cf45ec492c39f5c72": {
+      "id": "song_bf5cf45ec492c39f5c72",
+      "canonicalKey": "parklife|blur",
+      "title": "Parklife",
+      "artist": "Blur",
+      "release": {
+        "answerYear": 1994,
+        "year": 1994,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1994,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/album/parklife/699665183",
+            "evidence": "Blur's Parklife title track was on the original 1994 album, predating the 2012 remaster."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "7FSzJQV6thyoQptFCUTV9c",
+              "url": "https://open.spotify.com/track/7FSzJQV6thyoQptFCUTV9c",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Parklife",
+              "sourceArtist": "Blur"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_45b1c06efe0a74ba73da": {
+      "id": "song_45b1c06efe0a74ba73da",
+      "canonicalKey": "love train|o jays",
+      "title": "Love Train",
+      "artist": "The O'Jays",
+      "release": {
+        "answerYear": 1972,
+        "year": 1972,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1972,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/album/back-stabbers/169937819",
+            "evidence": "The O'Jays Love Train appears on original August 1972 Back Stabbers album, not a later issue."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "28285KFbyCq8sJofn58qlD",
+              "url": "https://open.spotify.com/track/28285KFbyCq8sJofn58qlD",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Love Train",
+              "sourceArtist": "The O'Jays"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_24d3ee18c9f8a7a05c92": {
+      "id": "song_24d3ee18c9f8a7a05c92",
+      "canonicalKey": "i m a believer|monkees",
+      "title": "I'm a Believer",
+      "artist": "The Monkees",
+      "release": {
+        "answerYear": 1966,
+        "year": 1966,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1966,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/song/435393555",
+            "evidence": "Original Monkees single version documented November 1966; UK chart commenced 1967."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "3G7tRC24Uh09Hmp1KZ7LQ2",
+              "url": "https://open.spotify.com/track/3G7tRC24Uh09Hmp1KZ7LQ2",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "I'm a Believer",
+              "sourceArtist": "The Monkees"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_fe09c54d2c43419686a3": {
+      "id": "song_fe09c54d2c43419686a3",
+      "canonicalKey": "just give me a reason|p nk",
+      "title": "Just Give Me a Reason",
+      "artist": "P!nk feat. Nate Ruess",
+      "release": {
+        "answerYear": 2012,
+        "year": 2012,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2012,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/album/the-truth-about-love/545398133",
+            "evidence": "Original P!nk album includes Nate Ruess duet, released September 2012; 2013 was later single/chart year."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "1mKXFLRA179hdOWQBwUk9e",
+              "url": "https://open.spotify.com/track/1mKXFLRA179hdOWQBwUk9e",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Just Give Me a Reason",
+              "sourceArtist": "P!nk feat. Nate Ruess"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_f5a78d1cd89e2f9b8d99": {
+      "id": "song_f5a78d1cd89e2f9b8d99",
+      "canonicalKey": "one day like this|elbow",
+      "title": "One Day Like This",
+      "artist": "Elbow",
+      "release": {
+        "answerYear": 2008,
+        "year": 2008,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2008,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/elbow-one-day-like-this/",
+            "evidence": "Original Elbow recording was charting by June 2008."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "1OZSVl0JJ1MBzibpuhmmXb",
+              "url": "https://open.spotify.com/track/1OZSVl0JJ1MBzibpuhmmXb",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "One Day Like This",
+              "sourceArtist": "Elbow"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_4e526b77eab1dfc7c584": {
+      "id": "song_4e526b77eab1dfc7c584",
+      "canonicalKey": "praise you|fatboy slim",
+      "title": "Praise You",
+      "artist": "Fatboy Slim",
+      "release": {
+        "answerYear": 1998,
+        "year": 1998,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1998,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/albums/fatboy-slim-youve-come-a-long-way-baby/",
+            "evidence": "Track was on Fatboy Slim's original You've Come a Long Way, Baby, which charted October 1998; 1999 single peaked later."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "10yY7i70r9wtllofw0GIpx",
+              "url": "https://open.spotify.com/track/10yY7i70r9wtllofw0GIpx",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Praise You",
+              "sourceArtist": "Fatboy Slim"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_233d122367242ea10ec0": {
+      "id": "song_233d122367242ea10ec0",
+      "canonicalKey": "that don t impress me much|shania twain",
+      "title": "That Don't Impress Me Much",
+      "artist": "Shania Twain",
+      "release": {
+        "answerYear": 1997,
+        "year": 1997,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1997,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/song/1445669387",
+            "evidence": "Shania Twain original Come On Over recording released November 1997; 1999 chart single came later."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "4I7DV3MIgxJGlObiy9s6nx",
+              "url": "https://open.spotify.com/track/4I7DV3MIgxJGlObiy9s6nx",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "That Don't Impress Me Much",
+              "sourceArtist": "Shania Twain"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_8c93fdc9aed49f0101bf": {
+      "id": "song_8c93fdc9aed49f0101bf",
+      "canonicalKey": "y m c a|village people",
+      "title": "Y.M.C.A.",
+      "artist": "Village People",
+      "release": {
+        "answerYear": 1978,
+        "year": 1978,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1978,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/village-people-ymca/",
+            "evidence": "Village People original single charted November 1978."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "4YOJFyjqh8eAcbKFfv88mV",
+              "url": "https://open.spotify.com/track/4YOJFyjqh8eAcbKFfv88mV",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Y.M.C.A.",
+              "sourceArtist": "Village People"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_e45856c5b4d6f5f78d71": {
+      "id": "song_e45856c5b4d6f5f78d71",
+      "canonicalKey": "flashdance what a feeling|irene cara",
+      "title": "Flashdance... What a Feeling",
+      "artist": "Irene Cara",
+      "release": {
+        "answerYear": 1983,
+        "year": 1983,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1983,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/irene-cara-flashdance-what-a-feeling/",
+            "evidence": "Irene Cara's original film song charted June 1983."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "3cbV252akVZInSvJk7jAYX",
+              "url": "https://open.spotify.com/track/3cbV252akVZInSvJk7jAYX",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Flashdance... What a Feeling",
+              "sourceArtist": "Irene Cara"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_5ace35087fa3eb0bf51b": {
+      "id": "song_5ace35087fa3eb0bf51b",
+      "canonicalKey": "white wedding|billy idol",
+      "title": "White Wedding",
+      "artist": "Billy Idol",
+      "release": {
+        "answerYear": 1982,
+        "year": 1982,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1982,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/album/white-wedding-single/726172007",
+            "evidence": "Billy Idol original White Wedding single was released 1982, not later 2009 remaster."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "1pydT12pGHLgfj3JLxWIUB",
+              "url": "https://open.spotify.com/track/1pydT12pGHLgfj3JLxWIUB",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "White Wedding",
+              "sourceArtist": "Billy Idol"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_aeef987f96a4f0331893": {
+      "id": "song_aeef987f96a4f0331893",
+      "canonicalKey": "november rain|guns n roses",
+      "title": "November Rain",
+      "artist": "Guns N' Roses",
+      "release": {
+        "answerYear": 1991,
+        "year": 1991,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1991,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/album/use-your-illusion-i/1644730026",
+            "evidence": "Guns N' Roses original finished recording released on Use Your Illusion I September 1991; demo dates are not commercial release."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "3YRCqOhFifThpSRFJ1VWFM",
+              "url": "https://open.spotify.com/track/3YRCqOhFifThpSRFJ1VWFM",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "November Rain",
+              "sourceArtist": "Guns N' Roses"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_8f38c17ba07c2d9907b7": {
+      "id": "song_8f38c17ba07c2d9907b7",
+      "canonicalKey": "american pie|don mclean",
+      "title": "American Pie",
+      "artist": "Don McLean",
+      "release": {
+        "answerYear": 1971,
+        "year": 1971,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1971,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/album/american-pie/1440834532",
+            "evidence": "Don McLean's title track was issued on the original album October 1971, ahead of UK 1972 chart."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "1fDsrQ23eTAVFElUMaf38X",
+              "url": "https://open.spotify.com/track/1fDsrQ23eTAVFElUMaf38X",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "American Pie",
+              "sourceArtist": "Don McLean"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_025d5e1f3987161de318": {
+      "id": "song_025d5e1f3987161de318",
+      "canonicalKey": "cotton eye joe|rednex",
+      "title": "Cotton Eye Joe",
+      "artist": "Rednex",
+      "release": {
+        "answerYear": 1994,
+        "year": 1994,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1994,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/rednex-cotton-eye-joe/",
+            "evidence": "Rednex original single charted in December 1994; distinct from traditional song of same name."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "06hsdMbBxWGqBO0TV0Zrkf",
+              "url": "https://open.spotify.com/track/06hsdMbBxWGqBO0TV0Zrkf",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Cotton Eye Joe",
+              "sourceArtist": "Rednex"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_69e2630e41a19a195919": {
+      "id": "song_69e2630e41a19a195919",
+      "canonicalKey": "tubthumping|chumbawamba",
+      "title": "Tubthumping",
+      "artist": "Chumbawamba",
+      "release": {
+        "answerYear": 1997,
+        "year": 1997,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1997,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/chumbawamba-tubthumping/",
+            "evidence": "Chumbawamba original single charted August 1997, not 2019 edition date."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "28O4QR1TELuXdcnVw9Q6Kt",
+              "url": "https://open.spotify.com/track/28O4QR1TELuXdcnVw9Q6Kt",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Tubthumping",
+              "sourceArtist": "Chumbawamba"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_f01b921970ac6d79b41c": {
+      "id": "song_f01b921970ac6d79b41c",
+      "canonicalKey": "crazy in love|beyonce",
+      "title": "Crazy in Love",
+      "artist": "Beyoncé feat. Jay-Z",
+      "release": {
+        "answerYear": 2003,
+        "year": 2003,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2003,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/beyonce-crazy-in-love/",
+            "evidence": "Original Beyoncé/Jay-Z single charted July 2003."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "5IVuqXILoxVWvWEPm82Jxr",
+              "url": "https://open.spotify.com/track/5IVuqXILoxVWvWEPm82Jxr",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Crazy in Love",
+              "sourceArtist": "Beyoncé feat. Jay-Z"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_5dbb4f74ec581454aa36": {
+      "id": "song_5dbb4f74ec581454aa36",
+      "canonicalKey": "i want it that way|backstreet boys",
+      "title": "I Want It That Way",
+      "artist": "Backstreet Boys",
+      "release": {
+        "answerYear": 1999,
+        "year": 1999,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1999,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/backstreet-boys-i-want-it-that-way/",
+            "evidence": "Backstreet Boys original single charted May 1999."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "47BBI51FKFwOMlIiX6m8ya",
+              "url": "https://open.spotify.com/track/47BBI51FKFwOMlIiX6m8ya",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "I Want It That Way",
+              "sourceArtist": "Backstreet Boys"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_cc481d3d344d0a230ea3": {
+      "id": "song_cc481d3d344d0a230ea3",
+      "canonicalKey": "karma chameleon|culture club",
+      "title": "Karma Chameleon",
+      "artist": "Culture Club",
+      "release": {
+        "answerYear": 1983,
+        "year": 1983,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1983,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/culture-club-karma-chameleon/",
+            "evidence": "Culture Club original single charted September 1983, not the remaster's 2022 benchmark year."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "5muHy7Z0bHM4uqExt081ue",
+              "url": "https://open.spotify.com/track/5muHy7Z0bHM4uqExt081ue",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Karma Chameleon",
+              "sourceArtist": "Culture Club"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_d922a7a96d46a950b70c": {
+      "id": "song_d922a7a96d46a950b70c",
+      "canonicalKey": "purple rain|prince",
+      "title": "Purple Rain",
+      "artist": "Prince",
+      "release": {
+        "answerYear": 1984,
+        "year": 1984,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1984,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/album/purple-rain/1746833068",
+            "evidence": "Prince & The Revolution's original Purple Rain album issued June 1984."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "54X78diSLoUDI3joC2bjMz",
+              "url": "https://open.spotify.com/track/54X78diSLoUDI3joC2bjMz",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Purple Rain",
+              "sourceArtist": "Prince"
+            }
+          ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_e94d82f43a3b70addf8d": {
+      "id": "song_e94d82f43a3b70addf8d",
+      "canonicalKey": "viva la vida|coldplay",
+      "title": "Viva la Vida",
+      "artist": "Coldplay",
+      "release": {
+        "answerYear": 2008,
+        "year": 2008,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2008,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/coldplay-viva-la-vida/",
+            "evidence": "Original Coldplay single charted June 2008."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": [
+            {
+              "id": "3Fcfwhm8oRrBvBZ8KGhtea",
+              "url": "https://open.spotify.com/track/3Fcfwhm8oRrBvBZ8KGhtea",
+              "state": "unverified",
+              "origin": "hitster-uk-candidate",
+              "sourceUrl": "https://open.spotify.com/playlist/0Mpj1KwRmY2pHzmj7mfbdh",
+              "sourceTitle": "Viva la Vida",
+              "sourceArtist": "Coldplay"
             }
           ]
         },
@@ -125749,6 +127491,2152 @@
       ],
       "providerRefs": {
         "spotify": "08VeSelC8QYD1MIsK9gAmY",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_b1d63e0a17f2e73b7362",
+      "mode": "greatest",
+      "year": 1976,
+      "metadata": {
+        "releaseYear": 1976,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/chicago-if-you-leave-me-now/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Original single charted in October 1976.",
+        "releaseDateEvidence": "1976",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "0KMGxYKeUzK9wc5DZCt3HT",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_57237171a71c7a16f1b4",
+      "mode": "greatest",
+      "year": 1981,
+      "metadata": {
+        "releaseYear": 1981,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://music.apple.com/us/album/street-songs/1440805214",
+        "sourceProvider": "Apple Music",
+        "releaseYearEvidence": "Original Street Songs album containing the recording issued 7 April 1981.",
+        "releaseDateEvidence": "1981",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "2dCmGcEOQrMQhMMS8Vj7Ca",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_1adc96df0997f241735c",
+      "mode": "greatest",
+      "year": 1960,
+      "metadata": {
+        "releaseYear": 1960,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/sam-cooke-wonderful-world/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Sam Cooke original Wonderful World charted in July 1960; cached 1995 MusicBrainz date is a later issue.",
+        "releaseDateEvidence": "1960",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "2G0GextMwZJLkNxcSZ7ZJ3",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_05e5305735e26c56a548",
+      "mode": "greatest",
+      "year": 2002,
+      "metadata": {
+        "releaseYear": 2002,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://music.apple.com/us/song/1714341619",
+        "sourceProvider": "Apple Music",
+        "releaseYearEvidence": "Song is on Busted's original 2002 album, preceding its 2003 UK single chart peak.",
+        "releaseDateEvidence": "2002",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "5pWRdriPCFhfz0JSswkdHo",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_12ea0203d84c30f27233",
+      "mode": "greatest",
+      "year": 1990,
+      "metadata": {
+        "releaseYear": 1990,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/happy-mondays-step-on/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "1990 original UK single, not the 2007 remaster in the benchmark.",
+        "releaseDateEvidence": "1990",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "4gAU0cHQJFxj1n2ZDiEIzG",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_d484922a70616a316d57",
+      "mode": "greatest",
+      "year": 1990,
+      "metadata": {
+        "releaseYear": 1990,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/deee-lite-groove-is-in-the-heartwhat-is-love/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "1990 original single; reuses already-evidenced Unexpected Years master.",
+        "releaseDateEvidence": "1990",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "2He3NOyqtLNE3RQPpeDdSb",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_be78617200d4ec30b866",
+      "mode": "greatest",
+      "year": 1976,
+      "metadata": {
+        "releaseYear": 1976,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://music.apple.com/us/song/1825612729",
+        "sourceProvider": "Apple Music",
+        "releaseYearEvidence": "Original Starland Vocal Band album features song in 1976.",
+        "releaseDateEvidence": "1976",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "1pBAsoHy7eN9aeVCTAiKua",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_f073bb348aa24318fa38",
+      "mode": "greatest",
+      "year": 1969,
+      "metadata": {
+        "releaseYear": 1969,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.thebeatles.com/get-back",
+        "sourceProvider": "The Beatles official",
+        "releaseYearEvidence": "Beatles' original single with Billy Preston was issued 11 April 1969; 1970 Let It Be mix is later.",
+        "releaseDateEvidence": "1969",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "4MLBqAEzNN89o2M9h92Z26",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_e48ae6d3fdbce1414ad1",
+      "mode": "greatest",
+      "year": 1983,
+      "metadata": {
+        "releaseYear": 1983,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/artist/21136/smiths/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Smiths original UK chart debut was November 1983; benchmark lists later remaster.",
+        "releaseDateEvidence": "1983",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "1FvDJ9KGxcqwv1utyPL3JZ",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_baa3e89faba3a6f20e0b",
+      "mode": "greatest",
+      "year": 1960,
+      "metadata": {
+        "releaseYear": 1960,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/brian-hyland-itsy-bitsy-teenie-weenie-yellow-polka-dot-bikini/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Brian Hyland 1960 original single charted July 1960, not 1961 benchmark year.",
+        "releaseDateEvidence": "1960",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "4aTCNddtjztjuK2EOgz7ZZ",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_088d626e0f49453f3051",
+      "mode": "greatest",
+      "year": 1962,
+      "metadata": {
+        "releaseYear": 1962,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://music.apple.com/us/album/llllloco-motion/1088697736",
+        "sourceProvider": "Apple Music",
+        "releaseYearEvidence": "Little Eva's 1962 album contains the original performance; cached MusicBrainz 1992 is not first release.",
+        "releaseDateEvidence": "1962",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "5xzdDMhFYiuUONB0Mha9VS",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_4289e9ffa4d26438133c",
+      "mode": "greatest",
+      "year": 1994,
+      "metadata": {
+        "releaseYear": 1994,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/oasis-cigarettes-alcohol/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Oasis original release charted October 1994; MusicBrainz 1993 claim conflicts with commercial release evidence.",
+        "releaseDateEvidence": "1994",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "3nK2qGHdVAEOuVAmMSWQPW",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_b94a714f20f8b7ddf72d",
+      "mode": "greatest",
+      "year": 1995,
+      "metadata": {
+        "releaseYear": 1995,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/take-that-back-for-good/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Original Take That single charted April 1995; 1994 cached MusicBrainz date is not accepted.",
+        "releaseDateEvidence": "1995",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "6vcdzohhBSbNdsZBh5IRpQ",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_e8962a8964e4888f49a6",
+      "mode": "greatest",
+      "year": 1981,
+      "metadata": {
+        "releaseYear": 1981,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/human-league-dont-you-want-me-0/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Original single released 27 November 1981 after Dare album; not a 1995 reissue.",
+        "releaseDateEvidence": "1981",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "3L7RtEcu1Hw3OXrpnthngx",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_25552310e06efd60185a",
+      "mode": "greatest",
+      "year": 1966,
+      "metadata": {
+        "releaseYear": 1966,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/supremes-you-cant-hurry-love/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "The Supremes original recording charted September 1966; distinct from Phil Collins cover.",
+        "releaseDateEvidence": "1966",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "4H1iMlEWKZmpKTHCZzDhju",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_c88be61bc9ad76e956cf",
+      "mode": "greatest",
+      "year": 1973,
+      "metadata": {
+        "releaseYear": 1973,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/sweet-ballroom-blitz/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Sweet's original single charted September 1973; 1974 benchmark year is later-market/chart context.",
+        "releaseDateEvidence": "1973",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "3Pu3IChaAoa5EjgUBv5F6x",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_e369cade2727421589f4",
+      "mode": "greatest",
+      "year": 1972,
+      "metadata": {
+        "releaseYear": 1972,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://music.apple.com/us/album/perfect-day/976826793",
+        "sourceProvider": "Apple Music",
+        "releaseYearEvidence": "Lou Reed's Transformer album includes Perfect Day, issued 8 November 1972.",
+        "releaseDateEvidence": "1972",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "4TOMI010Sd4ZAX4aZ5TS85",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_976e867615fdd27037a2",
+      "mode": "greatest",
+      "year": 1979,
+      "metadata": {
+        "releaseYear": 1979,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.thecure.com/release/boys-dont-cry/",
+        "sourceProvider": "The Cure official",
+        "releaseYearEvidence": "Official Cure site dates original single 12 June 1979, not a later re-recording.",
+        "releaseDateEvidence": "1979",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "1QFh8OH1e78dGd3VyJZCAC",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_8c2734e69c41568a351e",
+      "mode": "greatest",
+      "year": 1979,
+      "metadata": {
+        "releaseYear": 1979,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://music.apple.com/us/album/mouth-to-mouth/1552121129",
+        "sourceProvider": "Apple Music",
+        "releaseYearEvidence": "Original Lipps, Inc. Mouth to Mouth album contains Funkytown from November 1979; 1980 was breakout single year.",
+        "releaseDateEvidence": "1979",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "37yIrMPeJYRm7zJ8rr3Uvv",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_f392009fde2c0db957db",
+      "mode": "greatest",
+      "year": 1985,
+      "metadata": {
+        "releaseYear": 1985,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://music.apple.com/us/album/little-creatures/302136342",
+        "sourceProvider": "Apple Music",
+        "releaseYearEvidence": "Talking Heads' original Little Creatures album includes Road to Nowhere in June 1985.",
+        "releaseDateEvidence": "1985",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "2co8fDyaVmxv8xruQWORnC",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_104ae62042aa05f7379c",
+      "mode": "greatest",
+      "year": 2020,
+      "metadata": {
+        "releaseYear": 2020,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/drake-toosie-slide/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Drake original recording charted April 2020.",
+        "releaseDateEvidence": "2020",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "1d2eMMrAuIsw85u3YklKoc",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_79dc1e48e898d9b198ed",
+      "mode": "greatest",
+      "year": 1993,
+      "metadata": {
+        "releaseYear": 1993,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/culture-beat-mr-vain/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Original Culture Beat single charted August 1993.",
+        "releaseDateEvidence": "1993",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "2rTYgHxgcndkUrRoU7x0Sv",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_6fd7e7eaddb905d73a0f",
+      "mode": "greatest",
+      "year": 1987,
+      "metadata": {
+        "releaseYear": 1987,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://music.apple.com/us/song/1377826892",
+        "sourceProvider": "Apple Music",
+        "releaseYearEvidence": "Guns N' Roses recording first issued on Appetite for Destruction in July 1987; 1988 single is later.",
+        "releaseDateEvidence": "1987",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "7o2CTH4ctstm8TNelqjb51",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_5753a695348e0f87b1e1",
+      "mode": "greatest",
+      "year": 1999,
+      "metadata": {
+        "releaseYear": 1999,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/christina-aguilera-genie-in-a-bottle-0/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Christina Aguilera original single charted in October 1999.",
+        "releaseDateEvidence": "1999",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "11mwFrKvLXCbcVGNxffGyP",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_27b594cd88a2ef5db6c9",
+      "mode": "greatest",
+      "year": 1967,
+      "metadata": {
+        "releaseYear": 1967,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/aretha-franklin-respect-0/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Aretha Franklin 1967 recording; distinct from Otis Redding's earlier song/performance.",
+        "releaseDateEvidence": "1967",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "7s25THrKz86DM225dOYwnr",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_36e4f48df666437b7a75",
+      "mode": "greatest",
+      "year": 2004,
+      "metadata": {
+        "releaseYear": 2004,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/libertines-cant-stand-me-now/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Original Libertines single charted August 2004.",
+        "releaseDateEvidence": "2004",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "2EtZFeLn9msgg4qJzT9Vql",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_bf5cf45ec492c39f5c72",
+      "mode": "greatest",
+      "year": 1994,
+      "metadata": {
+        "releaseYear": 1994,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://music.apple.com/us/album/parklife/699665183",
+        "sourceProvider": "Apple Music",
+        "releaseYearEvidence": "Blur's Parklife title track was on the original 1994 album, predating the 2012 remaster.",
+        "releaseDateEvidence": "1994",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "7FSzJQV6thyoQptFCUTV9c",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_45b1c06efe0a74ba73da",
+      "mode": "greatest",
+      "year": 1972,
+      "metadata": {
+        "releaseYear": 1972,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://music.apple.com/us/album/back-stabbers/169937819",
+        "sourceProvider": "Apple Music",
+        "releaseYearEvidence": "The O'Jays Love Train appears on original August 1972 Back Stabbers album, not a later issue.",
+        "releaseDateEvidence": "1972",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "28285KFbyCq8sJofn58qlD",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_24d3ee18c9f8a7a05c92",
+      "mode": "greatest",
+      "year": 1966,
+      "metadata": {
+        "releaseYear": 1966,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://music.apple.com/us/song/435393555",
+        "sourceProvider": "Apple Music",
+        "releaseYearEvidence": "Original Monkees single version documented November 1966; UK chart commenced 1967.",
+        "releaseDateEvidence": "1966",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "3G7tRC24Uh09Hmp1KZ7LQ2",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_fe09c54d2c43419686a3",
+      "mode": "greatest",
+      "year": 2012,
+      "metadata": {
+        "releaseYear": 2012,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://music.apple.com/us/album/the-truth-about-love/545398133",
+        "sourceProvider": "Apple Music",
+        "releaseYearEvidence": "Original P!nk album includes Nate Ruess duet, released September 2012; 2013 was later single/chart year.",
+        "releaseDateEvidence": "2012",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "1mKXFLRA179hdOWQBwUk9e",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_f5a78d1cd89e2f9b8d99",
+      "mode": "greatest",
+      "year": 2008,
+      "metadata": {
+        "releaseYear": 2008,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/elbow-one-day-like-this/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Original Elbow recording was charting by June 2008.",
+        "releaseDateEvidence": "2008",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "1OZSVl0JJ1MBzibpuhmmXb",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_4e526b77eab1dfc7c584",
+      "mode": "greatest",
+      "year": 1998,
+      "metadata": {
+        "releaseYear": 1998,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/albums/fatboy-slim-youve-come-a-long-way-baby/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Track was on Fatboy Slim's original You've Come a Long Way, Baby, which charted October 1998; 1999 single peaked later.",
+        "releaseDateEvidence": "1998",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "10yY7i70r9wtllofw0GIpx",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_233d122367242ea10ec0",
+      "mode": "greatest",
+      "year": 1997,
+      "metadata": {
+        "releaseYear": 1997,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://music.apple.com/us/song/1445669387",
+        "sourceProvider": "Apple Music",
+        "releaseYearEvidence": "Shania Twain original Come On Over recording released November 1997; 1999 chart single came later.",
+        "releaseDateEvidence": "1997",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "4I7DV3MIgxJGlObiy9s6nx",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_8c93fdc9aed49f0101bf",
+      "mode": "greatest",
+      "year": 1978,
+      "metadata": {
+        "releaseYear": 1978,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/village-people-ymca/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Village People original single charted November 1978.",
+        "releaseDateEvidence": "1978",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "4YOJFyjqh8eAcbKFfv88mV",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_e45856c5b4d6f5f78d71",
+      "mode": "greatest",
+      "year": 1983,
+      "metadata": {
+        "releaseYear": 1983,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/irene-cara-flashdance-what-a-feeling/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Irene Cara's original film song charted June 1983.",
+        "releaseDateEvidence": "1983",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "3cbV252akVZInSvJk7jAYX",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_5ace35087fa3eb0bf51b",
+      "mode": "greatest",
+      "year": 1982,
+      "metadata": {
+        "releaseYear": 1982,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://music.apple.com/us/album/white-wedding-single/726172007",
+        "sourceProvider": "Apple Music",
+        "releaseYearEvidence": "Billy Idol original White Wedding single was released 1982, not later 2009 remaster.",
+        "releaseDateEvidence": "1982",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "1pydT12pGHLgfj3JLxWIUB",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_aeef987f96a4f0331893",
+      "mode": "greatest",
+      "year": 1991,
+      "metadata": {
+        "releaseYear": 1991,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://music.apple.com/us/album/use-your-illusion-i/1644730026",
+        "sourceProvider": "Apple Music",
+        "releaseYearEvidence": "Guns N' Roses original finished recording released on Use Your Illusion I September 1991; demo dates are not commercial release.",
+        "releaseDateEvidence": "1991",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "3YRCqOhFifThpSRFJ1VWFM",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_8f38c17ba07c2d9907b7",
+      "mode": "greatest",
+      "year": 1971,
+      "metadata": {
+        "releaseYear": 1971,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://music.apple.com/us/album/american-pie/1440834532",
+        "sourceProvider": "Apple Music",
+        "releaseYearEvidence": "Don McLean's title track was issued on the original album October 1971, ahead of UK 1972 chart.",
+        "releaseDateEvidence": "1971",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "1fDsrQ23eTAVFElUMaf38X",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_025d5e1f3987161de318",
+      "mode": "greatest",
+      "year": 1994,
+      "metadata": {
+        "releaseYear": 1994,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/rednex-cotton-eye-joe/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Rednex original single charted in December 1994; distinct from traditional song of same name.",
+        "releaseDateEvidence": "1994",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "06hsdMbBxWGqBO0TV0Zrkf",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_69e2630e41a19a195919",
+      "mode": "greatest",
+      "year": 1997,
+      "metadata": {
+        "releaseYear": 1997,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/chumbawamba-tubthumping/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Chumbawamba original single charted August 1997, not 2019 edition date.",
+        "releaseDateEvidence": "1997",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "28O4QR1TELuXdcnVw9Q6Kt",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_f01b921970ac6d79b41c",
+      "mode": "greatest",
+      "year": 2003,
+      "metadata": {
+        "releaseYear": 2003,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/beyonce-crazy-in-love/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Original Beyoncé/Jay-Z single charted July 2003.",
+        "releaseDateEvidence": "2003",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "5IVuqXILoxVWvWEPm82Jxr",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_12fddcb3b60ca3256ff3",
+      "mode": "greatest",
+      "year": 1986,
+      "metadata": {
+        "releaseYear": 1986,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.neilfinn.com/dont-dream-its-over",
+        "sourceProvider": "Neil Finn official",
+        "releaseYearEvidence": "Existing source-backed Australian master released on 1986 debut album; reuse identity.",
+        "releaseDateEvidence": "1986",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "56GbZVwxMdf1DENCluYS8A",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_5dbb4f74ec581454aa36",
+      "mode": "greatest",
+      "year": 1999,
+      "metadata": {
+        "releaseYear": 1999,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/backstreet-boys-i-want-it-that-way/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Backstreet Boys original single charted May 1999.",
+        "releaseDateEvidence": "1999",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "47BBI51FKFwOMlIiX6m8ya",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_cc481d3d344d0a230ea3",
+      "mode": "greatest",
+      "year": 1983,
+      "metadata": {
+        "releaseYear": 1983,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/culture-club-karma-chameleon/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Culture Club original single charted September 1983, not the remaster's 2022 benchmark year.",
+        "releaseDateEvidence": "1983",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "5muHy7Z0bHM4uqExt081ue",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_d922a7a96d46a950b70c",
+      "mode": "greatest",
+      "year": 1984,
+      "metadata": {
+        "releaseYear": 1984,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://music.apple.com/us/album/purple-rain/1746833068",
+        "sourceProvider": "Apple Music",
+        "releaseYearEvidence": "Prince & The Revolution's original Purple Rain album issued June 1984.",
+        "releaseDateEvidence": "1984",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "54X78diSLoUDI3joC2bjMz",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_e94d82f43a3b70addf8d",
+      "mode": "greatest",
+      "year": 2008,
+      "metadata": {
+        "releaseYear": 2008,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.officialcharts.com/songs/coldplay-viva-la-vida/",
+        "sourceProvider": "Official Charts",
+        "releaseYearEvidence": "Original Coldplay single charted June 2008.",
+        "releaseDateEvidence": "2008",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "3Fcfwhm8oRrBvBZ8KGhtea",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_f08b9dc4d684c07f204a",
+      "mode": "greatest",
+      "year": 1979,
+      "metadata": {
+        "releaseYear": 1979,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.acdc.com/music/highway-to-hell/",
+        "sourceProvider": "Existing sourced Australian master",
+        "releaseYearEvidence": "Title track of AC/DC's 1979 Highway to Hell.",
+        "releaseDateEvidence": "1979",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_04638a1a85010fba6d56",
+      "mode": "greatest",
+      "year": 1980,
+      "metadata": {
+        "releaseYear": 1980,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.acdc.com/otd-1980-back-in-black-released/",
+        "sourceProvider": "Existing sourced Australian master",
+        "releaseYearEvidence": "Original Back in Black album released 25 July 1980.",
+        "releaseDateEvidence": "1980",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_183d3ed2a903e536cfcf",
+      "mode": "greatest",
+      "year": 1980,
+      "metadata": {
+        "releaseYear": 1980,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://music.apple.com/us/song/1442866405",
+        "sourceProvider": "Existing sourced Australian master",
+        "releaseYearEvidence": "Title track first released on 1980 album.",
+        "releaseDateEvidence": "1980",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_76dd88ea981d6c6a7f75",
+      "mode": "greatest",
+      "year": 1981,
+      "metadata": {
+        "releaseYear": 1981,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.menatworkband.com/discography/business-as-usual/",
+        "sourceProvider": "Existing sourced Australian master",
+        "releaseYearEvidence": "First-release year supported by the cited external source.",
+        "releaseDateEvidence": "1981",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_305da935ec720ee3f32b",
+      "mode": "greatest",
+      "year": 1986,
+      "metadata": {
+        "releaseYear": 1986,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.nfsa.gov.au/collection/item/youre-voice-john-farnham-0",
+        "sourceProvider": "Existing sourced Australian master",
+        "releaseYearEvidence": "Farnham single released September 1986.",
+        "releaseDateEvidence": "1986",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_69a73240336880993b4a",
+      "mode": "greatest",
+      "year": 1994,
+      "metadata": {
+        "releaseYear": 1994,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.nfsa.gov.au/collection/item/tomorrow-silverchair",
+        "sourceProvider": "Existing sourced Australian master",
+        "releaseYearEvidence": "First released on Silverchair's 1994 debut EP, not 1995 album.",
+        "releaseDateEvidence": "1994",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_c0be0156996bddfef9e8",
+      "mode": "greatest",
+      "year": 1996,
+      "metadata": {
+        "releaseYear": 1996,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://music.apple.com/us/song/1670838851",
+        "sourceProvider": "Existing sourced Australian master",
+        "releaseYearEvidence": "First single released May 1996.",
+        "releaseDateEvidence": "1996",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_17646e5fd8ef794edff2",
+      "mode": "greatest",
+      "year": 1997,
+      "metadata": {
+        "releaseYear": 1997,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.nfsa.gov.au/collection/item/truly-madly-deeply-savage-garden",
+        "sourceProvider": "Existing sourced Australian master",
+        "releaseYearEvidence": "Single released March 1997.",
+        "releaseDateEvidence": "1997",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_58cabf45d75591c81d74",
+      "mode": "greatest",
+      "year": 1999,
+      "metadata": {
+        "releaseYear": 1999,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://www.nfsa.gov.au/collection/item/these-days-powderfinger",
+        "sourceProvider": "Existing sourced Australian master",
+        "releaseYearEvidence": "Originally released 1999 as B-side and soundtrack; 2000 was later album re-recording.",
+        "releaseDateEvidence": "1999",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_db378fc86649c48b85f2",
+      "mode": "greatest",
+      "year": 2007,
+      "metadata": {
+        "releaseYear": 2007,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://music.apple.com/us/album/young-modern/1551914561",
+        "sourceProvider": "Existing sourced Australian master",
+        "releaseYearEvidence": "Young Modern released March 2007 and contains Straight Lines.",
+        "releaseDateEvidence": "2007",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_b1d515290e73fedd9d13",
+      "mode": "greatest",
+      "year": 2007,
+      "metadata": {
+        "releaseYear": 2007,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://music.apple.com/us/album/untouched-ep/269193945",
+        "sourceProvider": "Existing sourced Australian master",
+        "releaseYearEvidence": "Untouched EP issued 8 December 2007.",
+        "releaseDateEvidence": "2007",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_97bb3dde54bf3e6b5e87",
+      "mode": "greatest",
+      "year": 2008,
+      "metadata": {
+        "releaseYear": 2008,
+        "source": "reviewed-greatest-hits-v20-2026-11-04",
+        "sourceLabel": "Reviewed original release · recognisable Greatest Hits",
+        "sourceUrl": "https://music.apple.com/us/song/1605860972",
+        "sourceProvider": "Existing sourced Australian master",
+        "releaseYearEvidence": "Empire of the Sun original song first issued in 2008.",
+        "releaseDateEvidence": "2008",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-04"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
         "youtube": null
       }
     }
