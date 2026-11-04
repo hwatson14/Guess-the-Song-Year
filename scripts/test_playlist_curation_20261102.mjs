@@ -7,7 +7,7 @@ const cat=JSON.parse(fs.readFileSync('data/catalogue.json','utf8'));
 const plan=JSON.parse(fs.readFileSync('verification/playlist-curation-2026-11-02.json','utf8'));
 const retired=JSON.parse(fs.readFileSync('verification/playlist-retirements-2026-11-02.json','utf8'));
 assert.deepEqual(compileDatabase(db),cat,'generated catalogue must exactly match the canonical database');
-assert.equal(cat.version,19);
+assert.equal(cat.version,20);
 assert.equal(plan.recordingYearCorrections.length,13);
 assert.equal(plan.newCanonicalSongs.length,20);
 assert.equal(plan.retiredNonSongs.length,3);
@@ -68,7 +68,7 @@ for(let year=1950;year<=2022;year++){
   assert.ok((cat.modes.australian[year]||[]).length>=1,'Australian year '+year+' must be playable');
 }
 // The 884-song historical curation baseline has two subsequent required original-release additions.
-assert.equal(Object.values(cat.modes.greatest).flat().length,886);
+assert.equal(Object.values(cat.modes.greatest).flat().length,944);
 assert.equal(Object.values(cat.modes.australian).flat().length,253);
 assert.equal(new Set(Object.values(cat.modes.australian).flat().map(s=>s.artist)).size,45);
 assert.equal(cat.modes.australian[2022].length,2,'2022 must be backfilled after the Troye Sivan correction');
