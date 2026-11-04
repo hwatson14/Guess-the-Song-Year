@@ -45,7 +45,18 @@ for(const decision of plan.newCanonicalSongs){
   assert.ok(song.release.claims.some(c=>c.sourceUrl===decision.sourceUrl&&c.year===decision.year));
   for(const provider of ['spotify','youtube']){
     assert.equal(song.providers[provider].preferredId,null,'never promote unreviewed provider IDs');
-    assert.equal(song.providers[provider].links.length,0,'never invent provider recordings');
+    // The 2026-11-02 curation did not invent provider IDs. Later v20 promotions
+    // may add sourced, unverified Spotify candidates to an existing master.
+    if(song.providers[provider].links.length){
+      assert.equal(provider,'spotify','No later YouTube candidate was introduced');
+      const v20=JSON.parse(fs.readFileSync('verification/greatest-hits-v20-reviewed.json','utf8'));
+      assert.ok(v20.approvedBenchmarkPromotions.some(x=>x.existingMasterId===song.id),
+        'Every later candidate on a historical master must be in the v20 reviewed ledger');
+      for(const link of song.providers.spotify.links){
+        assert.equal(link.state,'unverified','Do not equate public track link with recording verification');
+        assert.equal(link.origin,'hitster-uk-candidate','Only explicit v20 benchmark candidates are permitted');
+      }
+    }
   }
   for(const mode of decision.modes)assert.equal(db.memberships.filter(m=>m.songId===decision.id&&m.mode===mode).length,1);
 }
