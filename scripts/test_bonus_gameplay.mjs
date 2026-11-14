@@ -97,6 +97,23 @@ async function placing(teams=[team('Team 1'),team('Team 2')],slot=0){
 {const h=await placing([team('Team 1'),team('Team 2',2,[1980],9)]);h.R.startSteal();assert.equal(h.state().screen,'steal');assert.equal(h.state().placementResult,null);assert.doesNotMatch(h.node.innerHTML,/Alpha|Example Artist|answer-year/);h.R.selectStealTeam(1);h.R.selectStealSlot(1);h.R.commitSteal();h.R.commitSteal();assert.equal(h.state().match.teams[1].bonusPoints,1);assert.equal(h.state().match.teams[1].score,9);h.R.handleBack();assert.equal(h.state().screen,'resume');await h.R.resumeMatch();assert.equal(h.state().screen,'steal');
  const reload=await make(JSON.parse(h.store.get('gsy.match.v7')));reload.R.setState({screen:'resume'});reload.R.migrateMatch();await reload.R.resumeMatch();assert.equal(reload.state().screen,'steal');reload.R.revealSteals();reload.R.revealSteals();const m=reload.state().match;assert.equal(reload.state().screen,'reveal');assert.equal(m.teams[0].score,0);assert.equal(m.teams[0].wrong,1);assert.equal(m.teams[1].score,10);assert.deepEqual(Array.from(m.teams[1].timeline),[1980,2000]);assert.equal(m.steal.winner,1);assert.equal(m.history.filter(x=>x.outcome==='steal-won').length,1);reload.R.finishVirtualTurn();assert.equal(reload.state().screen,'gameover')}
 
+// The winning team gets the only highlighted card, including in a shared-year stack.
+{
+ const h=await placing([team('Team 1',2,[1990,2010]),team('Team 2',2,[1980,2000]),team('Team 3')]);
+ h.R.startSteal();h.R.selectStealTeam(1);h.R.selectStealSlot(1);h.R.commitSteal();h.R.revealSteals();
+ const html=h.node.innerHTML;
+ const timeline=name=>html.match(new RegExp(`aria-label="${name} timeline"[\\s\\S]*?</section>`))?.[0]||'';
+ assert.match(html,/result-badge stolen" role="status">Team 2 stole the card/);
+ assert.match(timeline('Team 2'),/data-year="2000".*?class="timeline-card stolen-card" role="img" aria-label="Stolen card" data-card-index="2"/);
+ assert.doesNotMatch(timeline('Team 1'),/stolen-card|data-year="2000"/);
+ assert.doesNotMatch(timeline('Team 3'),/stolen-card/);
+ assert.deepEqual(Array.from(h.state().match.teams[1].timeline),[1980,2000,2000]);
+ const reload=await make(JSON.parse(h.store.get('gsy.match.v7')));
+ reload.R.setState({screen:'resume'});await reload.R.resumeMatch();
+ assert.match(reload.node.innerHTML,/result-badge stolen" role="status">Team 2 stole the card/);
+ assert.equal(reload.state().match.teams[1].score,1);
+}
+
 // Distinct gaps only; active team, empty balances and duplicate team attempts
 // cannot spend. The first correct caller wins when equal years allow two gaps.
 {const h=await placing([team('Team 1',2,[1990,2000,2010]),team('Team 2'),team('Team 3'),team('Team 4',0)]);h.R.startSteal();h.R.selectStealTeam(0);assert.equal(h.state().match.steal.selectedTeam,null);h.R.selectStealTeam(3);assert.equal(h.state().match.steal.selectedTeam,null);h.R.selectStealTeam(1);h.R.selectStealSlot(0);h.R.commitSteal();assert.equal(h.state().match.steal.challenges.length,0);h.R.selectStealSlot(1);h.R.commitSteal();h.R.selectStealTeam(1);assert.equal(h.state().match.steal.selectedTeam,null);h.R.selectStealTeam(2);h.R.selectStealSlot(1);assert.equal(h.state().match.steal.selectedSlot,null);h.R.selectStealSlot(2);h.R.commitSteal();h.R.revealSteals();assert.equal(h.state().match.steal.winner,1);assert.equal(h.state().match.teams[1].score,1);assert.equal(h.state().match.teams[2].score,0);assert.equal(h.state().match.teams[2].bonusPoints,1)}
@@ -113,6 +130,12 @@ async function placing(teams=[team('Team 1'),team('Team 2')],slot=0){
 {const h=await placing([team('Team 1'),team('Team 2',6),team('Team 3')]);h.R.setState({cfg:{playMode:'physical'}});h.R.startSteal();for(const i of [1,2]){h.R.selectStealTeam(i);h.R.commitSteal()}h.R.revealSteals();h.R.finishPhysical(false);const round=h.state().match.round;h.R.finishVirtualTurn();assert.equal(h.state().match.round,round);await h.R.buyBonusYear();h.R.judgePhysicalSteal(false);assert.equal(h.state().match.steal.checkIndex,1);
  const reload=await make(JSON.parse(h.store.get('gsy.match.v7')));reload.R.setState({cfg:{playMode:'physical'},screen:'resume'});await reload.R.resumeMatch();reload.R.judgePhysicalSteal(true);reload.R.judgePhysicalSteal(true);assert.equal(reload.state().match.steal.winner,2);assert.equal(reload.state().match.teams[2].score,1);assert.equal(reload.state().match.steal.physicalPending,false)}
 {const h=await placing();h.R.setState({cfg:{playMode:'physical'}});h.R.startSteal();h.R.selectStealTeam(1);h.R.commitSteal();h.R.revealSteals();h.R.finishPhysical(true);h.R.judgePhysicalSteal(true);assert.equal(h.state().match.teams[0].score,1);assert.equal(h.state().match.teams[1].score,0);assert.equal(h.state().match.teams[1].bonusPoints,1);assert.equal(h.state().match.steal.physicalPending,false)}
+{
+ const h=await placing();h.R.setState({cfg:{playMode:'physical'}});h.R.startSteal();
+ h.R.selectStealTeam(1);h.R.commitSteal();h.R.revealSteals();h.R.finishPhysical(false);h.R.judgePhysicalSteal(true);
+ assert.deepEqual(Array.from(h.state().match.teams[1].timeline),[1990,2000,2010]);
+ assert.match(h.node.innerHTML,/Move the physical card to Team 2’s timeline in year order/);
+}
 
 // Two points are a new-game allowance, never a refill on Resume.
 {const h=await make();await h.R.startMatch();assert.ok(h.state().match.teams.every(t=>t.bonusPoints===2));const old=await make({teams:[team('Team 1',0),team('Team 2',1)]});old.R.migrateMatch();assert.equal(old.state().match.teams[0].bonusPoints,0);assert.equal(old.state().match.teams[1].bonusPoints,1)}
