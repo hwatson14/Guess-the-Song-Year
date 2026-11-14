@@ -78,10 +78,10 @@ for(let year=1950;year<=2022;year++){
   assert.ok((cat.modes.greatest[year]||[]).length>=12,'Greatest Hits 12-song minimum for '+year);
   assert.ok((cat.modes.australian[year]||[]).length>=1,'Australian year '+year+' must be playable');
 }
-// The 884-song historical curation baseline has two subsequent required original-release additions.
-assert.equal(Object.values(cat.modes.greatest).flat().length,944);
-assert.equal(Object.values(cat.modes.australian).flat().length,253);
-assert.equal(new Set(Object.values(cat.modes.australian).flat().map(s=>s.artist)).size,45);
+// Current counts include the subsequent v20 and 15 November curation; historical checks above remain exact.
+assert.equal(Object.values(cat.modes.greatest).flat().length,960);
+assert.equal(Object.values(cat.modes.australian).flat().length,275);
+assert.equal(new Set(Object.values(cat.modes.australian).flat().map(s=>s.artist)).size,61);
 assert.equal(cat.modes.australian[2022].length,2,'2022 must be backfilled after the Troye Sivan correction');
 assert.ok(cat.modes.australian[2007].some(s=>s.title==='Straight Lines'));
 assert.ok(cat.modes.australian[2007].some(s=>s.title==='Untouched'));
