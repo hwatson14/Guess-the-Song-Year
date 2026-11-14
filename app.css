@@ -290,6 +290,9 @@ main.app.screen-reveal .timeline-years{gap:2px}
 .timeline-card-stack{display:grid;grid-template-columns:repeat(var(--timeline-cols,1),minmax(0,1fr));gap:4px;width:100%;min-width:0}
 .timeline-card{display:block;height:30px;min-width:0;border:1px solid #ffffff24;border-radius:7px;background:linear-gradient(145deg,#183138,#102429);box-shadow:inset 0 1px #ffffff0b}
 .timeline-card:after{content:"";display:block;width:22%;min-width:8px;max-width:18px;height:2px;margin:13px auto 0;border-radius:99px;background:#55e4c173}
+.timeline-card.stolen-card{border-color:var(--amber);background:#322a12}
+.timeline-card.stolen-card:after{background:var(--amber)}
+.result-badge.stolen{color:var(--amber);border-color:#f2c66d66;background:#322a12}
 main.app.screen-youtube .timeline-year-row{grid-template-columns:42px minmax(0,1fr);gap:4px}
 main.app.screen-youtube .timeline-year-label,main.app.screen-youtube .timeline-card{height:18px}
 main.app.screen-youtube .timeline-year-label{font-size:11px}

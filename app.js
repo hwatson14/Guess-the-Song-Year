@@ -132,6 +132,7 @@
   function render(){
     const screenChanged=screen!==lastRenderedScreen,modalWasOpen=lastModalOpen,modalChanged=musicModal!==modalWasOpen;
     const boardScroll=root.querySelector('.timeline-board')?.scrollTop||0;
+    const hadStolenCard=!!root.querySelector('.timeline-card.stolen-card');
     const active=document.activeElement;
     const focusAttr=['action','play','victory','provider','slot','stealTeam','stealSlot','modePicker','range'].find(key=>active?.dataset?.[key]!==undefined);
     const focusSelector=focusAttr?`[data-${focusAttr.replace(/[A-Z]/g,c=>'-'+c.toLowerCase())}="${active.dataset[focusAttr]}"]`:null;
@@ -146,6 +147,9 @@
       if(screenChanged){
         const target=root.querySelector('h1,h2')||document.getElementById('mainContent');
         if(target){target.setAttribute('tabindex','-1');target.focus()}
+      }
+      if(screenChanged||!hadStolenCard){
+        root.querySelector('.timeline-card.stolen-card')?.scrollIntoView?.({block:'nearest',inline:'nearest'});
       }
     });
     lastRenderedScreen=screen;lastModalOpen=musicModal;
@@ -241,10 +245,14 @@
       const active=index===match.turn,years=[...(team.timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b);
       const stealing=screen==='steal'&&match.steal?.virtual&&active;
       const choosing=(interactive&&active&&cfg.playMode==='virtual')||stealing,displaySlot=choosing&&pendingSlot!==null?placementBoundarySlot(years,pendingSlot):null,hasPlacement=!stealing&&displaySlot!==null;
+      const stolenYear=screen==='reveal'&&match.steal?.winner===index?Number(current?.year):null;
       const {groups,maxCount}=timelineYearGroups(years);
       const slot=i=>{const boundary=placementBoundarySlot(years,i),label=placementLabel(years,boundary),selected=displaySlot===boundary;if(stealing)return stealGap(boundary,label);return `<button class="timeline-slot placement-gap ${selected?'on selected':''}" data-slot="${boundary}" aria-label="${esc(label)}" aria-pressed="${selected}" ${bonusBusy?'disabled':''}>${selected?'<span class="timeline-mystery"><b>?</b><small>Your song</small></span>':'<span class="timeline-plus">+</span>'}</button>`};
       const rows=groups.map(group=>{
-        const cards=Array.from({length:group.count},(_,cardIndex)=>`<span class="timeline-card" aria-hidden="true" data-card-index="${cardIndex+1}"></span>`).join('');
+        const cards=Array.from({length:group.count},(_,cardIndex)=>{
+          const stolen=group.year===stolenYear&&cardIndex===group.count-1;
+          return `<span class="timeline-card${stolen?' stolen-card':''}" ${stolen?'role="img" aria-label="Stolen card"':'aria-hidden="true"'} data-card-index="${cardIndex+1}"></span>`;
+        }).join('');
         return `${choosing?slot(group.start):''}<div class="timeline-year-row" data-year="${group.year}"><span class="timeline-year-label">${group.year}</span><span class="timeline-card-stack" style="--timeline-cols:${maxCount}">${cards}</span></div>`;
       }).join('')+(choosing?slot(years.length):'');
       return `<section class="team-timeline ${active?'active-team':''}" aria-label="${esc(team.name)} timeline"><div class="team-timeline-header"><h2>${esc(team.name)}${active?' <small>Your turn</small>':''}</h2><div class="team-timeline-totals"><b>${team.score}${cfg.victory==='10'?'/10':''} cards</b><span>${bonusBalance(team)} bonus</span></div></div><div class="timeline-years ${hasPlacement?'has-placement':''}" role="group" aria-label="Older at the top, newer at the bottom"><span class="timeline-direction"><span aria-hidden="true">↑</span> Older</span>${rows||'<span class="timeline-empty">No cards collected yet</span>'}<span class="timeline-direction"><span aria-hidden="true">↓</span> Newer</span></div></section>`;
@@ -273,7 +281,7 @@
     const steal=match.steal,selected=Number.isInteger(steal?.selectedTeam)?match.teams[steal.selectedTeam]:null;
     const teams=match.teams.map((team,i)=>i===match.turn?'':`<button class="steal-team ${steal.selectedTeam===i?'on':''}" data-steal-team="${i}" aria-pressed="${steal.selectedTeam===i}" ${canSteal(i)?'':'disabled'}><b>${esc(team.name)}</b><small>${steal.challenges.some(c=>c.team===i)?'Steal locked':`${bonusBalance(team)} bonus`}</small></button>`).join('');
     const claims=steal.challenges.map(c=>`<li>${esc(match.teams[c.team].name)} · ${steal.virtual?esc(placementLabel(steal.years,c.slot)):'token placed on the table'} · 1 bonus spent</li>`).join('');
-    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>Steal the song</h1><p>${steal.virtual?`${esc(activeTeam().name)} has locked a placement. Choose a challenging team, then a different gap on ${esc(activeTeam().name)}’s timeline.`:'Keep the card face-down. Challengers place a token in a different gap on the active team’s physical timeline, then register below.'} Each attempt costs 1 bonus. First to call chooses first.</p></div><div class="steal-teams" aria-label="Choose a challenging team">${teams}</div>${steal.virtual?timelineBoard():`<div class="steal-physical"><p>The answer stays hidden until all challenges are locked.</p>${claims?`<ol>${claims}</ol>`:''}</div>`}<div class="steal-status" role="status">${selected?`${esc(selected.name)}: ${steal.virtual?'choose a free gap, then lock your steal.':'place your token on the table, then lock your steal.'}`:steal.challenges.length?`${steal.challenges.length} steal${steal.challenges.length===1?'':'s'} locked. More challengers can join before reveal.`:'Choose a challenger, or reveal without stealing.'}</div>${selected?`<div class="board-actionbar"><button class="btn ghost" data-action="cancel-steal">Cancel selection</button><button class="btn primary" data-action="commit-steal" ${steal.virtual&&steal.selectedSlot===null?'disabled':''}>Lock steal · 1 bonus</button></div>`:`<div class="board-actionbar"><button class="btn primary" data-action="reveal-steals">Reveal</button></div>`}`;
+    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>Steal the song</h1><p>${steal.virtual?`${esc(activeTeam().name)} has locked a placement. Choose a challenging team, then a different gap on ${esc(activeTeam().name)}’s timeline.`:'Keep the card face-down. Challengers place a token in a different gap on the active team’s physical timeline, then register below.'} A successful steal adds the card to the challenger’s timeline. Each attempt costs 1 bonus.</p></div><div class="steal-teams" aria-label="Choose a challenging team">${teams}</div>${steal.virtual?timelineBoard():`<div class="steal-physical"><p>The answer stays hidden until all challenges are locked.</p>${claims?`<ol>${claims}</ol>`:''}</div>`}<div class="steal-status" role="status">${selected?`${esc(selected.name)}: ${steal.virtual?'choose a free gap, then lock your steal.':'place your token on the table, then lock your steal.'}`:steal.challenges.length?`${steal.challenges.length} steal${steal.challenges.length===1?'':'s'} locked. More challengers can join before reveal.`:'Choose a challenger, or reveal without stealing.'}</div>${selected?`<div class="board-actionbar"><button class="btn ghost" data-action="cancel-steal">Cancel selection</button><button class="btn primary" data-action="commit-steal" ${steal.virtual&&steal.selectedSlot===null?'disabled':''}>Lock steal · 1 bonus</button></div>`:`<div class="board-actionbar"><button class="btn primary" data-action="reveal-steals">Reveal</button></div>`}`;
   }
   function skippedScreen(){
     const song=current?.song||{};
@@ -283,7 +291,10 @@
     const steal=match?.steal;if(!steal?.challenges.length)return '';
     if(steal.physicalPending){const claim=steal.challenges[steal.checkIndex];return `<div class="bonus-panel steal-result"><strong>Check ${esc(match.teams[claim.team].name)}’s token</strong><p>Was it in a correct gap on ${esc(activeTeam().name)}’s timeline? Check in the order teams called.</p><div class="board-actionbar"><button class="btn ghost" data-action="physical-steal-wrong">Wrong gap</button><button class="btn primary" data-action="physical-steal-correct">Correct · steal card</button></div></div>`}
     if(!steal.resolved)return '';
-    const result=Number.isInteger(steal.winner)?`${esc(match.teams[steal.winner].name)} stole the card. Added to their timeline.`:placementResult?.correct?`${esc(activeTeam().name)} keeps the card. Their placement was correct.`:'No successful steals. Discard this card.';
+    if(Number.isInteger(steal.winner)){
+      return steal.virtual?'':`<div class="bonus-panel steal-result" role="status">Move the physical card to ${esc(match.teams[steal.winner].name)}’s timeline in year order.</div>`;
+    }
+    const result=placementResult?.correct?`${esc(activeTeam().name)} keeps the card. Their placement was correct.`:'No successful steals. Discard this card.';
     return `<div class="bonus-panel steal-result" role="status"><strong>${result}</strong><small>Each challenger spent 1 bonus.</small></div>`;
   }
 
@@ -294,9 +305,10 @@
 
   function revealScreen(){
     const virtual=cfg.playMode==='virtual',marked=!!placementResult,song=current?.song||{};
-    const result=marked?(placementResult.correct?'Correct placement':'Wrong position'):'Mark your placement';
+    const stolenBy=match.teams[match.steal?.winner];
+    const result=stolenBy?`${esc(stolenBy.name)} stole the card`:marked?(placementResult.correct?'Correct placement':'Wrong position'):'Mark your placement';
     const answerContext=song.screenWorkTitle?`${song.screenWorkType==='movie'?'Movie':'TV show'}: ${song.screenWorkTitle}`:song.playbackVariant==='remix'?`Played: ${song.remixTitle||song.title}${song.remixer?` · ${song.remixer} remix`:''}`:'';
-    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>Reveal</h1></div><section class="card answer-card"><div class="answer-top"><div><div class="answer-song">${esc(song.title||'Unknown')}</div><div class="answer-artist">${esc(song.artist||'')}</div>${answerContext?`<div class="answer-context">${esc(answerContext)}</div>`:''}</div><div class="answer-year">${current?.year||'----'}</div></div><div class="result-badge ${marked?(placementResult.correct?'ok':'bad'):''}">${result}</div></section>${timelineBoard()}${stealResultNotice()}${bonusCardNotice()}${marked?`${bonusActions(true)}<div class="board-actionbar"><button class="btn primary" data-action="next-turn" ${bonusBusy||match.steal?.physicalPending?'disabled':''}>${winner()?'See results':'Next Team'}</button></div>`:`<div class="board-actionbar"><button class="btn ghost" data-action="wrong-answer">Wrong placement</button><button class="btn primary" data-action="correct-answer">Correct placement</button></div>`}${!virtual?'<button class="btn text" data-action="update-card-year">Update card year reference</button>':''}`;
+    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>Reveal</h1></div><section class="card answer-card"><div class="answer-top"><div><div class="answer-song">${esc(song.title||'Unknown')}</div><div class="answer-artist">${esc(song.artist||'')}</div>${answerContext?`<div class="answer-context">${esc(answerContext)}</div>`:''}</div><div class="answer-year">${current?.year||'----'}</div></div><div class="result-badge ${stolenBy?'stolen':marked?(placementResult.correct?'ok':'bad'):''}" role="status">${result}</div></section>${timelineBoard()}${stealResultNotice()}${bonusCardNotice()}${marked?`${bonusActions(true)}<div class="board-actionbar"><button class="btn primary" data-action="next-turn" ${bonusBusy||match.steal?.physicalPending?'disabled':''}>${winner()?'See results':'Next Team'}</button></div>`:`<div class="board-actionbar"><button class="btn ghost" data-action="wrong-answer">Wrong placement</button><button class="btn primary" data-action="correct-answer">Correct placement</button></div>`}${!virtual?'<button class="btn text" data-action="update-card-year">Update card year reference</button>':''}`;
   }
 
   function gameOverScreen(){
