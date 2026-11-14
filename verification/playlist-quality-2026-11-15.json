@@ -1,0 +1,390 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-11-15",
+  "baseline": "main v20 2026-11-04",
+  "status": "source-backed proposed implementation; not merged",
+  "purpose": "Strengthen Australian party recognisability and year correctness while keeping canonical-song, chart-year, and review provenance contracts",
+  "nonGoals": [
+    "No automatic provider-link verification",
+    "Do not change fixed chart #1 leader years",
+    "Do not change 200-song Unexpected Years pool",
+    "Do not promote any mode to Ready",
+    "Do not retire deep cuts without a separate review"
+  ],
+  "expected": {
+    "newMasterSongs": 18,
+    "reusedMasterSongs": 4,
+    "addedAustralianMemberships": 22,
+    "addedGreatestMemberships": 16,
+    "correctedCanonicalAnswerYears": 6,
+    "masterSongs": 1188,
+    "memberships": 1581,
+    "greatestSongs": 960,
+    "australianSongs": 275,
+    "unexpectedSongs": 200
+  },
+  "newMasters": [
+    {
+      "songId": "song_f8a0e915f7b1199cfa53",
+      "title": "I'll Never Find Another You",
+      "artist": "The Seekers",
+      "year": 1964,
+      "sourceUrl": "https://www.nfsa.gov.au/collection/item/ill-never-find-another-you-seekers",
+      "sourceProvider": "NFSA",
+      "releaseYearEvidence": "1964 original Seekers single",
+      "modes": [
+        "australian",
+        "greatest"
+      ]
+    },
+    {
+      "songId": "song_4aa2540c3ab8d702afbf",
+      "title": "Friday on My Mind",
+      "artist": "The Easybeats",
+      "year": 1966,
+      "sourceUrl": "https://www.nfsa.gov.au/collection/item/friday-my-mind-easybeats",
+      "sourceProvider": "NFSA",
+      "releaseYearEvidence": "Original Australian release November 1966",
+      "modes": [
+        "australian",
+        "greatest"
+      ]
+    },
+    {
+      "songId": "song_931d5b4b125d75bb6e18",
+      "title": "The Loved One",
+      "artist": "The Loved Ones",
+      "year": 1966,
+      "sourceUrl": "https://www.nfsa.gov.au/collection/item/loved-one-loved-ones",
+      "sourceProvider": "NFSA",
+      "releaseYearEvidence": "1966 Loved Ones original, not the INXS cover",
+      "modes": [
+        "australian"
+      ]
+    },
+    {
+      "songId": "song_6d01e4285ad5933565da",
+      "title": "The Real Thing",
+      "artist": "Russell Morris",
+      "year": 1969,
+      "sourceUrl": "https://www.nfsa.gov.au/collection/item/real-thing-russell-morris",
+      "sourceProvider": "NFSA",
+      "releaseYearEvidence": "Original March 1969 single",
+      "modes": [
+        "australian",
+        "greatest"
+      ]
+    },
+    {
+      "songId": "song_68cbf0d268fecff5b3b0",
+      "title": "Living in the 70s",
+      "artist": "Skyhooks",
+      "year": 1974,
+      "sourceUrl": "https://www.nfsa.gov.au/collection/item/living-70s-skyhooks",
+      "sourceProvider": "NFSA",
+      "releaseYearEvidence": "Original 1974 title single and album",
+      "modes": [
+        "australian",
+        "greatest"
+      ]
+    },
+    {
+      "songId": "song_928e328d75af423207c7",
+      "title": "Howzat",
+      "artist": "Sherbet",
+      "year": 1976,
+      "sourceUrl": "https://www.nfsa.gov.au/collection/item/howzat-sherbet",
+      "sourceProvider": "NFSA",
+      "releaseYearEvidence": "Original May 1976 single",
+      "modes": [
+        "australian",
+        "greatest"
+      ]
+    },
+    {
+      "songId": "song_4e02a10e22d5a17718ae",
+      "title": "Am I Ever Gonna See Your Face Again",
+      "artist": "The Angels",
+      "year": 1976,
+      "sourceUrl": "https://www.nfsa.gov.au/collection/item/the-angels-original-line-up",
+      "sourceProvider": "NFSA",
+      "releaseYearEvidence": "Original studio single 22 March 1976; 1988 live recording must not change answer year",
+      "modes": [
+        "australian",
+        "greatest"
+      ]
+    },
+    {
+      "songId": "song_d7fa6ffefccccdc50298",
+      "title": "Great Southern Land",
+      "artist": "Icehouse",
+      "year": 1982,
+      "sourceUrl": "https://www.nfsa.gov.au/collection/item/great-southern-land-icehouse",
+      "sourceProvider": "NFSA",
+      "releaseYearEvidence": "Original 1982 Icehouse recording",
+      "modes": [
+        "australian",
+        "greatest"
+      ]
+    },
+    {
+      "songId": "song_74f8c8bb698605fb964a",
+      "title": "Hey Little Girl",
+      "artist": "Icehouse",
+      "year": 1982,
+      "sourceUrl": "https://www.icehousepaintbox.com/primitive-man",
+      "sourceProvider": "ICEHOUSE official",
+      "releaseYearEvidence": "Original single October 1982",
+      "modes": [
+        "australian"
+      ]
+    },
+    {
+      "songId": "song_46bcbec74b0feaf3de48",
+      "title": "Electric Blue",
+      "artist": "Icehouse",
+      "year": 1987,
+      "sourceUrl": "https://www.icehousepaintbox.com/moc",
+      "sourceProvider": "ICEHOUSE official",
+      "releaseYearEvidence": "Original single August 1987",
+      "modes": [
+        "australian",
+        "greatest"
+      ]
+    },
+    {
+      "songId": "song_5524eeb3e8cd3665669a",
+      "title": "Never Tear Us Apart",
+      "artist": "INXS",
+      "year": 1987,
+      "sourceUrl": "https://www.inxs.com/music/kick/",
+      "sourceProvider": "INXS official",
+      "releaseYearEvidence": "Original Kick album October 1987",
+      "modes": [
+        "australian",
+        "greatest"
+      ]
+    },
+    {
+      "songId": "song_48488ac5780cd03ca3a1",
+      "title": "Beds Are Burning",
+      "artist": "Midnight Oil",
+      "year": 1987,
+      "sourceUrl": "https://www.midnightoil.com/music/diesel-and-dust/",
+      "sourceProvider": "Midnight Oil official",
+      "releaseYearEvidence": "Original Diesel and Dust album August 1987",
+      "modes": [
+        "australian",
+        "greatest"
+      ]
+    },
+    {
+      "songId": "song_7a2344acf1386313f828",
+      "title": "Treaty",
+      "artist": "Yothu Yindi",
+      "year": 1991,
+      "sourceUrl": "https://www.nfsa.gov.au/collection/item/treaty-yothu-yindi",
+      "sourceProvider": "NFSA",
+      "releaseYearEvidence": "Original 1991 song; dance remix does not change year",
+      "modes": [
+        "australian",
+        "greatest"
+      ]
+    },
+    {
+      "songId": "song_1ff82e3ccdf471091a48",
+      "title": "The Horses",
+      "artist": "Daryl Braithwaite",
+      "year": 1991,
+      "sourceUrl": "https://musicbrainz.org/release-group/0cf52eee-f0d2-4232-81e8-d624a0da22c7",
+      "sourceProvider": "MusicBrainz release group",
+      "releaseYearEvidence": "Daryl Braithwaite's distinct 1991 release; not the Rickie Lee Jones original",
+      "modes": [
+        "australian",
+        "greatest"
+      ]
+    },
+    {
+      "songId": "song_bf2e4adb6e12de4da7fe",
+      "title": "Not Pretty Enough",
+      "artist": "Kasey Chambers",
+      "year": 2001,
+      "sourceUrl": "https://www.nfsa.gov.au/collection/item/not-pretty-enough-kasey-chambers",
+      "sourceProvider": "NFSA",
+      "releaseYearEvidence": "Original 2001 album track; charting single followed 2002",
+      "modes": [
+        "australian"
+      ]
+    },
+    {
+      "songId": "song_6633cc45fe6c153d1240",
+      "title": "Sweet Disposition",
+      "artist": "The Temper Trap",
+      "year": 2008,
+      "sourceUrl": "https://musicbrainz.org/release-group/3dc63e09-05ec-4618-9ba8-debd4ba51e3b",
+      "sourceProvider": "MusicBrainz release group",
+      "releaseYearEvidence": "Australian original single issued 2008, before 2009 international issue",
+      "modes": [
+        "australian",
+        "greatest"
+      ]
+    },
+    {
+      "songId": "song_dce943113be6369a1255",
+      "title": "Big Jet Plane",
+      "artist": "Angus & Julia Stone",
+      "year": 2010,
+      "sourceUrl": "https://musicbrainz.org/release-group/741f41f8-358e-4cc1-89be-cee4a1a24dbd",
+      "sourceProvider": "MusicBrainz release group",
+      "releaseYearEvidence": "Duo's Australian single released May 2010",
+      "modes": [
+        "australian",
+        "greatest"
+      ]
+    },
+    {
+      "songId": "song_0b97b17a468b2f534a41",
+      "title": "Riptide",
+      "artist": "Vance Joy",
+      "year": 2013,
+      "sourceUrl": "https://www.apraamcos.com.au/about-us/news-and-events/vance-joy-joins-the-1-000-000-000-list-for-riptide",
+      "sourceProvider": "APRA AMCOS",
+      "releaseYearEvidence": "Original 2013 track and debut EP",
+      "modes": [
+        "australian",
+        "greatest"
+      ]
+    }
+  ],
+  "reusedMasters": [
+    {
+      "songId": "song_57c40e39925003e06729",
+      "title": "Eagle Rock",
+      "year": 1971,
+      "sourceUrl": "https://www.nfsa.gov.au/collection/item/eagle-rock-daddy-cool",
+      "sourceProvider": "NFSA",
+      "releaseYearEvidence": "Original Daddy Cool single issued in 1971",
+      "alsoGreatest": true,
+      "requireReleaseYearEnrichment": true
+    },
+    {
+      "songId": "song_2b50dacdd331555a3cf7",
+      "title": "Dance Monkey",
+      "year": 2019,
+      "sourceUrl": null,
+      "sourceProvider": "existing canonical source",
+      "releaseYearEvidence": "Previously verified 2019 master",
+      "alsoGreatest": false
+    },
+    {
+      "songId": "song_51be62f16039f0b96812",
+      "title": "Stay",
+      "year": 2021,
+      "sourceUrl": null,
+      "sourceProvider": "existing canonical source",
+      "releaseYearEvidence": "Previously verified 2021 Kid LAROI master",
+      "alsoGreatest": false
+    },
+    {
+      "songId": "song_c998852156878890966d",
+      "title": "Jessie's Girl",
+      "year": 1981,
+      "sourceUrl": null,
+      "sourceProvider": "existing canonical source",
+      "releaseYearEvidence": "Previously evidenced 1981 Rick Springfield master",
+      "alsoGreatest": false
+    }
+  ],
+  "corrections": [
+    {
+      "songId": "song_54ef714bf079a5d879d8",
+      "title": "New York Mining Disaster 1941",
+      "oldYear": 1975,
+      "newYear": 1967,
+      "sourceUrl": "https://www.beegees.com/releases-archive/bee-gees-first/",
+      "sourceProvider": "Bee Gees official",
+      "releaseYearEvidence": "Original first-album and early single dated 1967"
+    },
+    {
+      "songId": "song_3b78303218f94c414d7b",
+      "title": "Melody Fair",
+      "oldYear": 1975,
+      "newYear": 1969,
+      "sourceUrl": "https://www.beegees.com/releases-archive/odessa/",
+      "sourceProvider": "Bee Gees official",
+      "releaseYearEvidence": "Odessa originally released March 1969"
+    },
+    {
+      "songId": "song_575488c1330646f54095",
+      "title": "Jive Talkin’",
+      "oldYear": 1977,
+      "newYear": 1975,
+      "sourceUrl": "https://www.beegees.com/releases-archive/main-course/",
+      "sourceProvider": "Bee Gees official",
+      "releaseYearEvidence": "Main Course original album and single 1975"
+    },
+    {
+      "songId": "song_6545ba5866c5d2e744c7",
+      "title": "You Should Be Dancing",
+      "oldYear": 1977,
+      "newYear": 1976,
+      "sourceUrl": "https://www.beegees.com/releases-archive/children-of-the-world/",
+      "sourceProvider": "Bee Gees official",
+      "releaseYearEvidence": "Children of the World original album issued 1976"
+    },
+    {
+      "songId": "song_37201f62dfc14db6adf2",
+      "title": "Let It Happen",
+      "oldYear": 2017,
+      "newYear": 2015,
+      "sourceUrl": "https://open.spotify.com/album/1bOXAI9EQ7DMX4pcAjkny9",
+      "sourceProvider": "Spotify original single",
+      "releaseYearEvidence": "Original single dated March 2015"
+    },
+    {
+      "songId": "song_6687b37fbbb56ef21557",
+      "title": "Don't Stop",
+      "oldYear": 2019,
+      "newYear": 2014,
+      "sourceUrl": "https://www.officialcharts.com/songs/5-seconds-of-summer-dont-stop/",
+      "sourceProvider": "Official Charts",
+      "releaseYearEvidence": "5 Seconds of Summer single first charted in 2014"
+    }
+  ],
+  "reviewHolds": [
+    {
+      "title": "The Loco-Motion",
+      "artist": "Kylie Minogue",
+      "listedYear": 1992,
+      "issue": "Australian 1987 original versus international 1988 re-recording versus 1992 cached recording date",
+      "sourceUrl": "https://www.stockaitkenwaterman.co.uk/kylie-the-locomotion",
+      "state": "hold-for-exact-recording-audit",
+      "action": "Do not guess year or change globally until version identity verified"
+    },
+    {
+      "title": "Nosebleed Section",
+      "artist": "Hilltop Hoods",
+      "listedYear": 2004,
+      "issue": "NFSA lists 2003 versus current MusicBrainz exact recording first-release 2004",
+      "sourceUrl": "https://www.nfsa.gov.au/stories/deep-dives/sounds-of-australia",
+      "state": "hold-for-first-release-audit",
+      "action": "Compare original album and the selected recording to avoid conflating chart/remaster dates"
+    },
+    {
+      "title": "Am I Ever Gonna See Your Face Again",
+      "artist": "The Angels",
+      "listedYear": 1976,
+      "issue": "Well-known 1988 live recording with crowd chant differs from 1976 original",
+      "sourceUrl": "https://www.nfsa.gov.au/stories/articles/rare-footage-of-the-angels-uncovered",
+      "state": "playback-variant-caution",
+      "action": "Leave provider preferredId blank pending recording-specific review"
+    }
+  ],
+  "qualityPolicy": {
+    "recognitionEstimate": "editorial, not measured",
+    "releaseYear": "original song recording or original album issue, never remaster/chart peak",
+    "provider": "no invented Spotify or YouTube IDs; first playback still requires runtime provider resolution",
+    "identity": "immutable original song IDs and reviewed distinct cover versions",
+    "approval": "branch PR only until full CI"
+  }
+}

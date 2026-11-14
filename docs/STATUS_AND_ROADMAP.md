@@ -1,6 +1,10 @@
 # Status and Roadmap
 
-_Reviewed: 2026-11-04_
+_Reviewed: 2026-11-15_
+
+### 2026-11-15 Australian / Greatest Hits quality pass
+
+The reviewed branch adds **22** Australian placements (+18 new canonical masters, +4 existing masters) and **16** Greatest Hits placements (+15 new, +1 reused), using release evidence from NFSA, official artists/labels, APRA AMCOS and release-group records. Six demonstrably wrong legacy first-release years are corrected, retaining the superseded claims for audit. Australian artist-credit labels rise from 45 to **61** and top-four artist concentration falls from 45.5% to about 42.5%. All #1 chart leaders and the 200-song Unexpected Years preview remain unchanged. Review decisions and unresolved playback/version issues are recorded in `verification/playlist-quality-2026-11-15.json`, with a dedicated regression test. New provider recordings are *not* declared verified; this is a data improvement, not a production playback certification. All existing Beta/Preview statuses remain.
 
 ### 2026-11-04 Greatest Hits v20
 
@@ -16,14 +20,14 @@ PR #31 supplied the v19 catalogue; the original 13-item review queue in this fea
 
 ## Current status
 
-Catalogue v20 is a working multi-mode product backed by normalized JSON source and a deterministic compiler. `data/song-database.json` is the reviewable source; `scripts/song_database.mjs` compiles it into the browser-facing `data/catalogue.json`. The current source contains 1,170 master song records and 1,543 active mode placements.
+Catalogue v20 is a working multi-mode product backed by normalized JSON source and a deterministic compiler. `data/song-database.json` is the reviewable source; `scripts/song_database.mjs` compiles it into the browser-facing `data/catalogue.json`. The current source contains 1,188 master song records and 1,581 active mode placements.
 
 | Area | Status | Current truth |
 |---|---|---|
 | Core gameplay | Stable | Real cards and Virtual play; 1–6 teams; First to 10 or Unlimited; Resume and Back handling |
 | Year range | Implemented | Generic min/max selector, persisted in config/match state; physical out-of-range scans are rejected |
-| Greatest Hits | Beta | 73/73 years; 944 songs; at least 12 per year |
-| Australian | Beta | 73/73 years; 253 songs, 45 artist-credit labels; legacy evidence and shallow pools remain |
+| Greatest Hits | Beta | 73/73 years; 960 songs; at least 12 per year |
+| Australian | Beta | 73/73 years; 275 songs, 61 artist-credit labels; legacy evidence and shallow pools remain |
 | Unexpected Years | Preview | 65/73 years; 200 unique songs; expanded with 160 reviewed, evidence-gated existing masters |
 | #1 US | Beta | 73/73 fixed chart leaders |
 | #1 Australia | Beta | 73/73 fixed chart leaders |
@@ -32,8 +36,8 @@ Catalogue v20 is a working multi-mode product backed by normalized JSON source a
 | TV & Movie Themes | Building | Deterministic union of Movie Themes + TV Themes, inheriting each source work's answer year |
 | Remix: Original Year | Building | Hear an explicitly reviewed remix; answer with the canonical original song release year |
 | One Hit Wonders | Building | Release-year mode over canonical master songs; curation/eligibility evidence still required |
-| Canonical source | Working v20 | 1,170 immutable master identities shared across memberships |
-| Release evidence | Improved | 936 masters externally observed; 234 unresolved |
+| Canonical source | Working v20 | 1,188 immutable master identities shared across memberships |
+| Release evidence | Improved | 961 masters externally observed; 227 unresolved |
 | Provider links | Partially reviewed | Spotify: 651 linked masters / 4 verified preferred tracks. YouTube: 431 linked / 0 verified preferred tracks |
 | Spotify runtime identity | Hardened | Static, cached and searched tracks use the same title + strong lead-artist identity gate; non-404 API failures propagate |
 | Compiler | Working | Offline deterministic JSON compiler from `data/song-database.json` |

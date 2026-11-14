@@ -12,6 +12,7 @@ const key=(title,artist)=>normalize(title)+'|'+normalize(stripLead(artist));
 assert.equal(db.catalogue.version,20);
 assert.equal(cat.version,20);
 assert.deepEqual(compileDatabase(db),cat,'v20 canonical materialization matches compiler');
+// The v20 ledger remains historical; the current totals include the November 15 quality pass.
 assert.equal(ledger.schemaVersion,1);
 assert.equal(audit.schemaVersion,1);
 assert.equal(ledger.approvedBenchmarkPromotions.length,46);
@@ -20,9 +21,9 @@ assert.equal(audit.summary.exactNormalizedAbsent,192,'Historical baseline gap au
 assert.equal(audit.summary.top150,150);
 assert.equal(audit.rankedCandidates.length,192);
 assert.equal(audit.rankedCandidates.filter(x=>x.priorityBand==='top_150').length,150);
-assert.equal(Object.keys(db.songs).length,1170);
-assert.equal(db.memberships.length,1543);
-assert.equal(Object.values(cat.modes.greatest).flat().length,944);
+assert.equal(Object.keys(db.songs).length,1188);
+assert.equal(db.memberships.length,1581);
+assert.equal(Object.values(cat.modes.greatest).flat().length,960);
 assert.equal(cat.coverage.greatest,73);
 for(const candidate of [...ledger.approvedBenchmarkPromotions,...ledger.approvedAustralianCrossovers]){
   const id=candidate.songId||candidate.existingMasterId||songId(key(candidate.title,candidate.artist));
