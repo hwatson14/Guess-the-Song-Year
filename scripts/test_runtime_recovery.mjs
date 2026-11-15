@@ -1,6 +1,6 @@
 import fs from 'node:fs'; import vm from 'node:vm'; import assert from 'node:assert/strict';
 const policy=fs.readFileSync('app-policy.js','utf8'), engine=fs.readFileSync('engine-v7.js','utf8');
-const app=fs.readFileSync('app.js','utf8').replace('  boot();','  window.__test={selectProvider,resumeMatch,listenAgain,startYouTubeListening,finishYouTubeListening,startSpotifyListening,togglePlay,replay,getState:()=>({screen,current,playing,match})};');
+const app=fs.readFileSync('app.js','utf8').replace('  boot();','  window.__test={selectProvider,resumeMatch,listenAgain,startYouTubeListening,finishYouTubeListening,startSpotifyListening,togglePlay,replay,stopPlayback,getState:()=>({screen,current,playing,match})};');
 function make({phase='guess',mode='greatest'}={}){
  const song={title:'Example Song',artist:'Example Artist',year:2000,chartYear:2000,youtubeId:'dead-upload',canonicalKey:'example song|example artist'};
  const current={song,cardId:1,year:2000,provider:'youtube',mode,resolved:{matchPolicy:'title-artist-v1',videoId:'dead-upload',candidateIds:['dead-upload']}};
@@ -55,5 +55,30 @@ for(const operation of ['startSpotifyListening','togglePlay','replay']){
  await R.startYouTubeListening();
  assert.equal(calls.play.length,0,'An old saved candidate cannot bypass the current identity gate');
  assert.equal(R.getState().screen,'error');
+}
+{
+ const {R,E,calls}=make({phase:'ready'});
+ await R.selectProvider('spotify');await R.resumeMatch();
+ let releaseStop,plays=0;
+ E.pauseSpotify=()=>new Promise(resolve=>{releaseStop=resolve});
+ E.playSpotify=async()=>{plays++};
+ R.stopPlayback();
+ const starting=R.startSpotifyListening();
+ await new Promise(resolve=>setImmediate(resolve));
+ assert.equal(plays,0,'the next round cannot send Play until the previous pause finishes');
+ releaseStop();await starting;
+ assert.equal(plays,1);
+ assert.equal(R.getState().playing,true);
+}
+{
+ const {R,E}=make({phase:'ready'});
+ await R.selectProvider('spotify');await R.resumeMatch();
+ let plays=0;
+ E.pauseSpotify=()=>Promise.reject(new E.AppError('SPOTIFY_STOP_FAILED','Previous song could not be stopped'));
+ E.playSpotify=async()=>{plays++};
+ R.stopPlayback();
+ await R.startSpotifyListening();
+ assert.equal(plays,0,'a failed stop must never be ignored before starting the next track');
+ assert.equal(R.getState().screen,'error','the player must expose a recoverable error instead');
 }
 console.log('runtime recovery VM regressions passed: provider reconciliation, failed fixed upload, stale YouTube startup and all three stale Spotify paths');
