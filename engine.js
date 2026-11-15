@@ -28,6 +28,7 @@
   if(!cardYearOverrides||typeof cardYearOverrides!=='object'||Array.isArray(cardYearOverrides))cardYearOverrides={};
   let catalogue=null,cataloguePromise=null,modeManifest=null,modeManifestPromise=null;
   let ytApiPromise=null,ytPlayer=null,ytRequestGeneration=0,ytActiveRequest=null,spotifyPlaybackChain=Promise.resolve();
+  let lastSpotifyPlaybackDeviceId='';
 
   class AppError extends Error{
     constructor(code,message,status=0){super(message);this.name='AppError';this.code=code;this.status=status}
@@ -444,10 +445,27 @@
     return false;
   }
 
+  async function silencePreviousSpotifyTrack(nextDeviceId){
+    // An asynchronous stop may have failed or the player may have resumed its
+    // previous recording. Require silence before asking Spotify to switch.
+    if(!lastSpotifyPlaybackDeviceId)return;
+    const state=await spotifyApi('/me/player');
+    const activeId=state?.device?.id;
+    if(!state?.is_playing||!activeId||(activeId!==nextDeviceId&&activeId!==lastSpotifyPlaybackDeviceId))return;
+    await spotifyApi(`/me/player/pause?device_id=${encodeURIComponent(activeId)}`,{method:'PUT'},true);
+    for(let attempt=0;attempt<5;attempt++){
+      const after=await spotifyApi('/me/player');
+      if(!after?.is_playing||after?.device?.id!==activeId)return;
+      if(attempt<4)await new Promise(resolve=>setTimeout(resolve,250));
+    }
+    throw new AppError('SPOTIFY_PREVIOUS_TRACK_STILL_PLAYING','Spotify has not stopped the previous song. Pause playback on the selected device, then retry.');
+  }
+
   async function playSpotifyNow(uri,track){
     if(!uri)throw new AppError('SPOTIFY_TRACK_MISSING','Spotify track is missing.');
     const pinned=!!spotifyDevice;
     let id=await ensureSpotifyDevice();
+    await silencePreviousSpotifyTrack(id);
     const body=JSON.stringify({uris:[uri],position_ms:0});
     try{await spotifyApi(`/me/player/play?device_id=${encodeURIComponent(id)}`,{method:'PUT',headers:{'Content-Type':'application/json'},body},true)}
     catch(e){
@@ -455,7 +473,7 @@
         const devices=(await spotifyDevices()).filter(x=>x.id&&x.is_restricted!==true);const fallback=devices.find(x=>x.is_active)||devices[0];
         if(!fallback)throw new AppError('SPOTIFY_DEVICE_LOST','Spotify lost the playback device. Choose an available device and retry.',404);
         if(pinned)setSpotifyDevice(fallback.id);id=fallback.id;
-        try{await activateSpotifyDevice(id);await spotifyApi(`/me/player/play?device_id=${encodeURIComponent(id)}`,{method:'PUT',headers:{'Content-Type':'application/json'},body},true)}
+        try{await activateSpotifyDevice(id);await silencePreviousSpotifyTrack(id);await spotifyApi(`/me/player/play?device_id=${encodeURIComponent(id)}`,{method:'PUT',headers:{'Content-Type':'application/json'},body},true)}
         catch(fallbackErr){if(fallbackErr?.status!==404)throw fallbackErr;throw new AppError('SPOTIFY_DEVICE_LOST','Spotify lost the playback device. Choose an available device and retry.',404)}
       }else{
         if(e.status===403)throw new AppError('SPOTIFY_FORBIDDEN','Spotify rejected playback control. Confirm the connected account has Premium and Spotify is open on the target device.',403);
@@ -464,13 +482,13 @@
     }
     // A successful command response does not prove the requested track started.
     // Keep this inside the playback queue so older checks cannot affect a newer play.
-    if(await confirmSpotifyPlayback([uri],id))return id;
+    if(await confirmSpotifyPlayback([uri],id)){lastSpotifyPlaybackDeviceId=id;return id;}
     // Some Spotify clients acknowledge bare-track requests without playing.
     // Retry the exact recording through its album, a documented API request form.
     const album=await spotifyAlbumPlayback(uri,track);
     if(album){
       await spotifyApi(`/me/player/play?device_id=${encodeURIComponent(id)}`,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({context_uri:album.albumUri,offset:{uri:album.uri},position_ms:0})},true);
-      if(await confirmSpotifyPlayback([uri,album.uri],id))return id;
+      if(await confirmSpotifyPlayback([uri,album.uri],id)){lastSpotifyPlaybackDeviceId=id;return id;}
     }
     throw new AppError('SPOTIFY_PLAYBACK_UNCONFIRMED',album?'Spotify accepted both playback methods, but did not report the requested song playing on the selected device.':'Spotify accepted Play but did not report the requested song playing. No verified album context was available for recovery.');
   }
