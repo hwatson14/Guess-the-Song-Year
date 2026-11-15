@@ -83,7 +83,8 @@
       "australian": "Sourced Australian-first repertoire including corrected legacy years and wider mainstream artist coverage; unresolved legacy members remain Beta.",
       "number1_us": "BiMMuDa Billboard year-end position 1",
       "number1_au": "Australian annual chart position 1",
-      "unexpected": "Curated time-warp preview; only listed years are playable and there is no cross-mode fallback."
+      "unexpected": "Curated time-warp preview; only listed years are playable and there is no cross-mode fallback.",
+      "bangers": "V3 Australian singalong curation: source-backed original issue, provider recording review pending."
     }
   },
   "songs": {
@@ -27246,10 +27247,17 @@
       "title": "Eagle Rock",
       "artist": "Daddy Cool",
       "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [],
-        "answerYear": null
+        "answerYear": 1971,
+        "year": 1971,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1971,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.aria.com.au/charts/1971/singles-chart",
+            "evidence": "Existing 1971 Australian chart evidence; exact first issue requires audit"
+          }
+        ]
       },
       "providers": {
         "spotify": {
@@ -27395,10 +27403,17 @@
       "title": "You're the One that I Want",
       "artist": "Olivia Newton-John & John Travolta",
       "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [],
-        "answerYear": null
+        "answerYear": 1978,
+        "year": 1978,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1978,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/chart-news/official-charts-70th-anniversary-the-official-top-10-best-selling-singles-from-the-1970s__37736/",
+            "evidence": "Grease duet released 1978"
+          }
+        ]
       },
       "providers": {
         "spotify": {
@@ -28289,10 +28304,17 @@
       "title": "Mambo No. 5",
       "artist": "Lou Bega",
       "release": {
-        "year": null,
-        "state": "unresolved",
-        "claims": [],
-        "answerYear": null
+        "answerYear": 1999,
+        "year": 1999,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1999,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.aria.com.au/charts/1999/singles-chart",
+            "evidence": "Lou Bega Australian chart 1999; original issue requires audit"
+          }
+        ]
       },
       "providers": {
         "spotify": {
@@ -76339,6 +76361,1166 @@
               "sourceArtist": "Coldplay"
             }
           ]
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_a7cd7ec127ccf36aa862": {
+      "id": "song_a7cd7ec127ccf36aa862",
+      "canonicalKey": "brown eyed girl|van morrison",
+      "title": "Brown Eyed Girl",
+      "artist": "Van Morrison",
+      "release": {
+        "answerYear": 1967,
+        "year": 1967,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1967,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/chart-news/official-charts-announces-the-sixties-definitive-chart-books__27020/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_b6e63ae446166c29967d": {
+      "id": "song_b6e63ae446166c29967d",
+      "canonicalKey": "sweet caroline|neil diamond",
+      "title": "Sweet Caroline",
+      "artist": "Neil Diamond",
+      "release": {
+        "answerYear": 1969,
+        "year": 1969,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1969,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/release-group/735ba6b7-a1f0-4663-9989-ae88c4fef00c",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_4e02a10e22d5a17718ae": {
+      "id": "song_4e02a10e22d5a17718ae",
+      "canonicalKey": "am i ever gonna see your face again|angels",
+      "title": "Am I Ever Gonna See Your Face Again",
+      "artist": "The Angels",
+      "release": {
+        "answerYear": 1976,
+        "year": 1976,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1976,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.nfsa.gov.au/collection/item/the-angels-original-line-up",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_0ba5f2de17c165dfb18b": {
+      "id": "song_0ba5f2de17c165dfb18b",
+      "canonicalKey": "don t stop me now|queen",
+      "title": "Don't Stop Me Now",
+      "artist": "Queen",
+      "release": {
+        "answerYear": 1978,
+        "year": 1978,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1978,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.queenonline.com/news/press-release-queen-greatest-hits-in-japan?prev_filter=01-2020",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_ed077207867a8038f844": {
+      "id": "song_ed077207867a8038f844",
+      "canonicalKey": "gimme gimme gimme a man after midnight|abba",
+      "title": "Gimme! Gimme! Gimme! (A Man After Midnight)",
+      "artist": "ABBA",
+      "release": {
+        "answerYear": 1979,
+        "year": 1979,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1979,
+            "state": "externally_observed",
+            "sourceUrl": "https://abbasite.com/discography/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_7606b4e6d9cc3e11b5d3": {
+      "id": "song_7606b4e6d9cc3e11b5d3",
+      "canonicalKey": "mamma mia|abba",
+      "title": "Mamma Mia",
+      "artist": "ABBA",
+      "release": {
+        "answerYear": 1975,
+        "year": 1975,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1975,
+            "state": "externally_observed",
+            "sourceUrl": "https://abbasite.com/discography/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_1e54c8023ccf731b68e4": {
+      "id": "song_1e54c8023ccf731b68e4",
+      "canonicalKey": "nutbush city limits|ike and tina turner",
+      "title": "Nutbush City Limits",
+      "artist": "Ike & Tina Turner",
+      "release": {
+        "answerYear": 1973,
+        "year": 1973,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1973,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/ike-and-tina-turner-nutbush-city-limits/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_c4998b1bca10ed36d31e": {
+      "id": "song_c4998b1bca10ed36d31e",
+      "canonicalKey": "september|earth wind and fire",
+      "title": "September",
+      "artist": "Earth, Wind & Fire",
+      "release": {
+        "answerYear": 1978,
+        "year": 1978,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1978,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/earth-wind-and-fire-september/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_cb6cc519b6a3331ecd0d": {
+      "id": "song_cb6cc519b6a3331ecd0d",
+      "canonicalKey": "summer nights|john travolta and olivia newton john",
+      "title": "Summer Nights",
+      "artist": "John Travolta & Olivia Newton-John",
+      "release": {
+        "answerYear": 1978,
+        "year": 1978,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1978,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/chart-news/official-charts-70th-anniversary-the-official-top-10-best-selling-singles-from-the-1970s__37736/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_6b247c7056fe86ef035a": {
+      "id": "song_6b247c7056fe86ef035a",
+      "canonicalKey": "take me home country roads|john denver",
+      "title": "Take Me Home, Country Roads",
+      "artist": "John Denver",
+      "release": {
+        "answerYear": 1971,
+        "year": 1971,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1971,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_dbb3914a8b75f07aad48": {
+      "id": "song_dbb3914a8b75f07aad48",
+      "canonicalKey": "we will rock you|queen",
+      "title": "We Will Rock You",
+      "artist": "Queen",
+      "release": {
+        "answerYear": 1977,
+        "year": 1977,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1977,
+            "state": "externally_observed",
+            "sourceUrl": "https://store-au.queenonline.com/collections/news-of-the-world",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_a254f250e921217ba495": {
+      "id": "song_a254f250e921217ba495",
+      "canonicalKey": "flame trees|cold chisel",
+      "title": "Flame Trees",
+      "artist": "Cold Chisel",
+      "release": {
+        "answerYear": 1984,
+        "year": 1984,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1984,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.coldchisel.com/twentieth-century/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_53ec6a9d954fd5f9538f": {
+      "id": "song_53ec6a9d954fd5f9538f",
+      "canonicalKey": "i wanna dance with somebody|whitney houston",
+      "title": "I Wanna Dance with Somebody",
+      "artist": "Whitney Houston",
+      "release": {
+        "answerYear": 1987,
+        "year": 1987,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1987,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/chart-news/the-official-top-40-best-selling-songs-of-1987__32970/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_d1c62d35384144860dd2": {
+      "id": "song_d1c62d35384144860dd2",
+      "canonicalKey": "i want to break free|queen",
+      "title": "I Want to Break Free",
+      "artist": "Queen",
+      "release": {
+        "answerYear": 1984,
+        "year": 1984,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1984,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/chart-news/queens-bestselling-singles-on-the-official-uk-singles-chart__24760/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_9c2ddc6439c5533a8fdd": {
+      "id": "song_9c2ddc6439c5533a8fdd",
+      "canonicalKey": "i m gonna be 500 miles|proclaimers",
+      "title": "I'm Gonna Be (500 Miles)",
+      "artist": "The Proclaimers",
+      "release": {
+        "answerYear": 1988,
+        "year": 1988,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1988,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/artist/24561/proclaimers/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_89d53984f4648ea6d480": {
+      "id": "song_89d53984f4648ea6d480",
+      "canonicalKey": "i m still standing|elton john",
+      "title": "I'm Still Standing",
+      "artist": "Elton John",
+      "release": {
+        "answerYear": 1983,
+        "year": 1983,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1983,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/elton-john-im-still-standing/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_7358d062426249a59f31": {
+      "id": "song_7358d062426249a59f31",
+      "canonicalKey": "love shack|b 52 s",
+      "title": "Love Shack",
+      "artist": "The B-52's",
+      "release": {
+        "answerYear": 1989,
+        "year": 1989,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1989,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicchartsarchive.com/singles/b-52s/love-shack",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_8555edd0982799f0f627": {
+      "id": "song_8555edd0982799f0f627",
+      "canonicalKey": "best|tina turner",
+      "title": "The Best",
+      "artist": "Tina Turner",
+      "release": {
+        "answerYear": 1989,
+        "year": 1989,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1989,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/tina-turner-the-best/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_c5b73234b39d0bed0682": {
+      "id": "song_c5b73234b39d0bed0682",
+      "canonicalKey": "wake me up before you go go|wham",
+      "title": "Wake Me Up Before You Go-Go",
+      "artist": "Wham!",
+      "release": {
+        "answerYear": 1984,
+        "year": 1984,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1984,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/wham-wake-me-up-before-you-go-go/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_1c391c8befcee9b15337": {
+      "id": "song_1c391c8befcee9b15337",
+      "canonicalKey": "all star|smash mouth",
+      "title": "All Star",
+      "artist": "Smash Mouth",
+      "release": {
+        "answerYear": 1999,
+        "year": 1999,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1999,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_ac8bc19455bd3115cdf9": {
+      "id": "song_ac8bc19455bd3115cdf9",
+      "canonicalKey": "all the small things|blink 182",
+      "title": "All the Small Things",
+      "artist": "blink-182",
+      "release": {
+        "answerYear": 1999,
+        "year": 1999,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1999,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_7350a7d135e7d8314bcb": {
+      "id": "song_7350a7d135e7d8314bcb",
+      "canonicalKey": "don t look back in anger|oasis",
+      "title": "Don't Look Back in Anger",
+      "artist": "Oasis",
+      "release": {
+        "answerYear": 1995,
+        "year": 1995,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1995,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_b7b72fff1f18813aa763": {
+      "id": "song_b7b72fff1f18813aa763",
+      "canonicalKey": "everybody backstreet s back|backstreet boys",
+      "title": "Everybody (Backstreet's Back)",
+      "artist": "Backstreet Boys",
+      "release": {
+        "answerYear": 1997,
+        "year": 1997,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1997,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_89f3cd68d437ee81657d": {
+      "id": "song_89f3cd68d437ee81657d",
+      "canonicalKey": "freed from desire|gala",
+      "title": "Freed from Desire",
+      "artist": "Gala",
+      "release": {
+        "answerYear": 1996,
+        "year": 1996,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1996,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_d9e5d7012ef96ce3b162": {
+      "id": "song_d9e5d7012ef96ce3b162",
+      "canonicalKey": "man i feel like a woman|shania twain",
+      "title": "Man! I Feel Like a Woman!",
+      "artist": "Shania Twain",
+      "release": {
+        "answerYear": 1997,
+        "year": 1997,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1997,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_d324d1a2e6f0066b121e": {
+      "id": "song_d324d1a2e6f0066b121e",
+      "canonicalKey": "horses|daryl braithwaite",
+      "title": "The Horses",
+      "artist": "Daryl Braithwaite",
+      "release": {
+        "answerYear": 1990,
+        "year": 1990,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1990,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/album/rise/450241482",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_0b299820a82d335fec5d": {
+      "id": "song_0b299820a82d335fec5d",
+      "canonicalKey": "what s up|4 non blondes",
+      "title": "What's Up?",
+      "artist": "4 Non Blondes",
+      "release": {
+        "answerYear": 1992,
+        "year": 1992,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1992,
+            "state": "externally_observed",
+            "sourceUrl": "https://interscope.com/products/bigger-better-faster-more-lp",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_6f1043d351aa4162fe83": {
+      "id": "song_6f1043d351aa4162fe83",
+      "canonicalKey": "zombie|cranberries",
+      "title": "Zombie",
+      "artist": "The Cranberries",
+      "release": {
+        "answerYear": 1994,
+        "year": 1994,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1994,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_7754b7381b1a895bb97d": {
+      "id": "song_7754b7381b1a895bb97d",
+      "canonicalKey": "dancing in the moonlight|toploader",
+      "title": "Dancing in the Moonlight",
+      "artist": "Toploader",
+      "release": {
+        "answerYear": 1999,
+        "year": 1999,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 1999,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_6cf34a3d22b9c01854c1": {
+      "id": "song_6cf34a3d22b9c01854c1",
+      "canonicalKey": "everytime we touch|cascada",
+      "title": "Everytime We Touch",
+      "artist": "Cascada",
+      "release": {
+        "answerYear": 2005,
+        "year": 2005,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2005,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/release-group/29d3966e-3538-393d-b290-8b9ea519d038",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_7e46e0677cb6b1c12154": {
+      "id": "song_7e46e0677cb6b1c12154",
+      "canonicalKey": "get the party started|p nk",
+      "title": "Get the Party Started",
+      "artist": "P!nk",
+      "release": {
+        "answerYear": 2001,
+        "year": 2001,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2001,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/album/m-ssundaztood-expanded-edition/1459185349",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_de8ca67d7e7201159fc7": {
+      "id": "song_de8ca67d7e7201159fc7",
+      "canonicalKey": "in the end|linkin park",
+      "title": "In the End",
+      "artist": "Linkin Park",
+      "release": {
+        "answerYear": 2000,
+        "year": 2000,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2000,
+            "state": "externally_observed",
+            "sourceUrl": "https://linkinpark.com/about",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_87fbf8e63e196abe56ba": {
+      "id": "song_87fbf8e63e196abe56ba",
+      "canonicalKey": "it s my life|bon jovi",
+      "title": "It's My Life",
+      "artist": "Bon Jovi",
+      "release": {
+        "answerYear": 2000,
+        "year": 2000,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2000,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/bon-jovi-its-my-life/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_0bc6d132f24aa244c09f": {
+      "id": "song_0bc6d132f24aa244c09f",
+      "canonicalKey": "sex on fire|kings of leon",
+      "title": "Sex on Fire",
+      "artist": "Kings of Leon",
+      "release": {
+        "answerYear": 2008,
+        "year": 2008,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2008,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/kings-of-leon-sex-on-fire/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_041cee3120cad371964f": {
+      "id": "song_041cee3120cad371964f",
+      "canonicalKey": "single ladies put a ring on it|beyonce",
+      "title": "Single Ladies (Put a Ring on It)",
+      "artist": "Beyoncé",
+      "release": {
+        "answerYear": 2008,
+        "year": 2008,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2008,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/beyonce-single-ladies-put-a-ring-on-it/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_7978f859bb2f4497a7f0": {
+      "id": "song_7978f859bb2f4497a7f0",
+      "canonicalKey": "stacy s mom|fountains of wayne",
+      "title": "Stacy's Mom",
+      "artist": "Fountains of Wayne",
+      "release": {
+        "answerYear": 2003,
+        "year": 2003,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2003,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/release-group/cf7a8b5b-a228-3ba4-92c1-3f53e5ca64e6",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_ff6f9618cd537aa93843": {
+      "id": "song_ff6f9618cd537aa93843",
+      "canonicalKey": "teenage dirtbag|wheatus",
+      "title": "Teenage Dirtbag",
+      "artist": "Wheatus",
+      "release": {
+        "answerYear": 2000,
+        "year": 2000,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2000,
+            "state": "externally_observed",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Wheatus_%28album%29",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_2b23d2912e49b8155eaa": {
+      "id": "song_2b23d2912e49b8155eaa",
+      "canonicalKey": "valerie|mark ronson feat amy winehouse",
+      "title": "Valerie",
+      "artist": "Mark Ronson feat. Amy Winehouse",
+      "release": {
+        "answerYear": 2007,
+        "year": 2007,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2007,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/mark-ronson-ft-amy-winehouse-valerie/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_169d98331af21dd6fa2f": {
+      "id": "song_169d98331af21dd6fa2f",
+      "canonicalKey": "we are young|fun feat janelle monae",
+      "title": "We Are Young",
+      "artist": "fun. feat. Janelle Monáe",
+      "release": {
+        "answerYear": 2011,
+        "year": 2011,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2011,
+            "state": "externally_observed",
+            "sourceUrl": "https://musicbrainz.org/release/5bebf3fa-e5d8-45a9-ac94-7ede0c7d9fec",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
+    },
+    "song_452148f2a88a0352ff49": {
+      "id": "song_452148f2a88a0352ff49",
+      "canonicalKey": "pink pony club|chappell roan",
+      "title": "Pink Pony Club",
+      "artist": "Chappell Roan",
+      "release": {
+        "answerYear": 2020,
+        "year": 2020,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2020,
+            "state": "externally_observed",
+            "sourceUrl": "https://www.officialcharts.com/songs/chappell-roan-pink-pony-club/",
+            "evidence": "Public source supports original issue; exact provider audio has not been independently auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
         },
         "youtube": {
           "preferredId": null,
@@ -129629,6 +130811,3575 @@
         "sourceProvider",
         "releaseYearEvidence",
         "releaseDateEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_a7cd7ec127ccf36aa862",
+      "mode": "bangers",
+      "year": 1967,
+      "metadata": {
+        "releaseYear": 1967,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/chart-news/official-charts-announces-the-sixties-definitive-chart-books__27020/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_b6e63ae446166c29967d",
+      "mode": "bangers",
+      "year": 1969,
+      "metadata": {
+        "releaseYear": 1969,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/release-group/735ba6b7-a1f0-4663-9989-ae88c4fef00c",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_4e02a10e22d5a17718ae",
+      "mode": "bangers",
+      "year": 1976,
+      "metadata": {
+        "releaseYear": 1976,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.nfsa.gov.au/collection/item/the-angels-original-line-up",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_a38d29a974ae7bfeb35a",
+      "mode": "bangers",
+      "year": 1975,
+      "metadata": {
+        "releaseYear": 1975,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/6374c7d3-35d1-4b9a-9d8d-d2b43502927c",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_8b6b72e5b0360e370c1a",
+      "mode": "bangers",
+      "year": 1976,
+      "metadata": {
+        "releaseYear": 1976,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/a502f559-f70c-4e0d-a5e5-e0cc319d0bd7",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_0ba5f2de17c165dfb18b",
+      "mode": "bangers",
+      "year": 1978,
+      "metadata": {
+        "releaseYear": 1978,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.queenonline.com/news/press-release-queen-greatest-hits-in-japan?prev_filter=01-2020",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_57c40e39925003e06729",
+      "mode": "bangers",
+      "year": 1971,
+      "metadata": {
+        "releaseYear": 1971,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.aria.com.au/charts/1971/singles-chart",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_ed077207867a8038f844",
+      "mode": "bangers",
+      "year": 1979,
+      "metadata": {
+        "releaseYear": 1979,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://abbasite.com/discography/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_f08b9dc4d684c07f204a",
+      "mode": "bangers",
+      "year": 1979,
+      "metadata": {
+        "releaseYear": 1979,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.acdc.com/music/highway-to-hell/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_5789f221c273cdaae0dd",
+      "mode": "bangers",
+      "year": 1978,
+      "metadata": {
+        "releaseYear": 1978,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.gloriagaynor.com/videos/i-will-survive/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_2bb8645a46a54f925a83",
+      "mode": "bangers",
+      "year": 1978,
+      "metadata": {
+        "releaseYear": 1978,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/e97fa9a8-4f38-4e43-b5f1-5047a0f33fa4",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_7606b4e6d9cc3e11b5d3",
+      "mode": "bangers",
+      "year": 1975,
+      "metadata": {
+        "releaseYear": 1975,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://abbasite.com/discography/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_1e54c8023ccf731b68e4",
+      "mode": "bangers",
+      "year": 1973,
+      "metadata": {
+        "releaseYear": 1973,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/songs/ike-and-tina-turner-nutbush-city-limits/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_c4998b1bca10ed36d31e",
+      "mode": "bangers",
+      "year": 1978,
+      "metadata": {
+        "releaseYear": 1978,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/songs/earth-wind-and-fire-september/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_089f87767974e67818d1",
+      "mode": "bangers",
+      "year": 1977,
+      "metadata": {
+        "releaseYear": 1977,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/ef6df59e-177b-4060-b6f6-7ff61a3a0fff",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_cb6cc519b6a3331ecd0d",
+      "mode": "bangers",
+      "year": 1978,
+      "metadata": {
+        "releaseYear": 1978,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/chart-news/official-charts-70th-anniversary-the-official-top-10-best-selling-singles-from-the-1970s__37736/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_ebe56ea5ec62ce255057",
+      "mode": "bangers",
+      "year": 1974,
+      "metadata": {
+        "releaseYear": 1974,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/2b2f23a7-3ee0-4fc0-991c-c0e327ffbb1e",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_6b247c7056fe86ef035a",
+      "mode": "bangers",
+      "year": 1971,
+      "metadata": {
+        "releaseYear": 1971,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_dbb3914a8b75f07aad48",
+      "mode": "bangers",
+      "year": 1977,
+      "metadata": {
+        "releaseYear": 1977,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://store-au.queenonline.com/collections/news-of-the-world",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_be673830a42402ca08ec",
+      "mode": "bangers",
+      "year": 1978,
+      "metadata": {
+        "releaseYear": 1978,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/chart-news/official-charts-70th-anniversary-the-official-top-10-best-selling-singles-from-the-1970s__37736/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_3aa9d3f1eda0306edf00",
+      "mode": "bangers",
+      "year": 1980,
+      "metadata": {
+        "releaseYear": 1980,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/f989fa05-7e2b-4e88-8a95-b5d68480b539",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_135d4bc10adbc158d432",
+      "mode": "bangers",
+      "year": 1982,
+      "metadata": {
+        "releaseYear": 1982,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/6fd7416a-b81b-4f9e-b4b2-674d358d26bb",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_db737420ffde8c915426",
+      "mode": "bangers",
+      "year": 1982,
+      "metadata": {
+        "releaseYear": 1982,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/8564b0bc-df53-4e2a-9b07-f4a372bcc5a5",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_ddf494b0b12f28cbd570",
+      "mode": "bangers",
+      "year": 1981,
+      "metadata": {
+        "releaseYear": 1981,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/5e390f77-3210-4e92-bd8b-fd6014e62b9c",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_76dd88ea981d6c6a7f75",
+      "mode": "bangers",
+      "year": 1981,
+      "metadata": {
+        "releaseYear": 1981,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.menatworkband.com/discography/business-as-usual/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_a254f250e921217ba495",
+      "mode": "bangers",
+      "year": 1984,
+      "metadata": {
+        "releaseYear": 1984,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.coldchisel.com/twentieth-century/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_1eb1350522aed39ddfc4",
+      "mode": "bangers",
+      "year": 1984,
+      "metadata": {
+        "releaseYear": 1984,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Footloose_(song)",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "6W2VbtvMrDXm5vYeB7amkO",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_1cb08a1925247ce1dc84",
+      "mode": "bangers",
+      "year": 1983,
+      "metadata": {
+        "releaseYear": 1983,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/0e5f1add-c943-49a0-b824-169e7f7b82da",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_53ec6a9d954fd5f9538f",
+      "mode": "bangers",
+      "year": 1987,
+      "metadata": {
+        "releaseYear": 1987,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/chart-news/the-official-top-40-best-selling-songs-of-1987__32970/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_d1c62d35384144860dd2",
+      "mode": "bangers",
+      "year": 1984,
+      "metadata": {
+        "releaseYear": 1984,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/chart-news/queens-bestselling-singles-on-the-official-uk-singles-chart__24760/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_9c2ddc6439c5533a8fdd",
+      "mode": "bangers",
+      "year": 1988,
+      "metadata": {
+        "releaseYear": 1988,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/artist/24561/proclaimers/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_89d53984f4648ea6d480",
+      "mode": "bangers",
+      "year": 1983,
+      "metadata": {
+        "releaseYear": 1983,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/songs/elton-john-im-still-standing/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_e89a9ff7ef98eb287ff2",
+      "mode": "bangers",
+      "year": 1989,
+      "metadata": {
+        "releaseYear": 1989,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/3a6062b0-fdf6-4fef-ba83-0287cd229bf0",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_a96ea479b3f7a53adf46",
+      "mode": "bangers",
+      "year": 1986,
+      "metadata": {
+        "releaseYear": 1986,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/c7e5ae79-b20b-46ab-89b4-63612ac3206f",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_7358d062426249a59f31",
+      "mode": "bangers",
+      "year": 1989,
+      "metadata": {
+        "releaseYear": 1989,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicchartsarchive.com/singles/b-52s/love-shack",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_6fd7e7eaddb905d73a0f",
+      "mode": "bangers",
+      "year": 1987,
+      "metadata": {
+        "releaseYear": 1987,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://music.apple.com/us/song/1377826892",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "7o2CTH4ctstm8TNelqjb51",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_8555edd0982799f0f627",
+      "mode": "bangers",
+      "year": 1989,
+      "metadata": {
+        "releaseYear": 1989,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/songs/tina-turner-the-best/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_c5b73234b39d0bed0682",
+      "mode": "bangers",
+      "year": 1984,
+      "metadata": {
+        "releaseYear": 1984,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/songs/wham-wake-me-up-before-you-go-go/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_305da935ec720ee3f32b",
+      "mode": "bangers",
+      "year": 1986,
+      "metadata": {
+        "releaseYear": 1986,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.nfsa.gov.au/collection/item/youre-voice-john-farnham-0",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_b4b9af4e51df5d6a1e98",
+      "mode": "bangers",
+      "year": 1998,
+      "metadata": {
+        "releaseYear": 1998,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/9aa77fa3-1a7d-4ff9-a5ce-8c3dc072fa52",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_1c391c8befcee9b15337",
+      "mode": "bangers",
+      "year": 1999,
+      "metadata": {
+        "releaseYear": 1999,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_ac8bc19455bd3115cdf9",
+      "mode": "bangers",
+      "year": 1999,
+      "metadata": {
+        "releaseYear": 1999,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_653ac4dfa54bdd0343e1",
+      "mode": "bangers",
+      "year": 1997,
+      "metadata": {
+        "releaseYear": 1997,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/5268ded7-3c3c-465b-805f-cb14e407ec2d",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_7350a7d135e7d8314bcb",
+      "mode": "bangers",
+      "year": 1995,
+      "metadata": {
+        "releaseYear": 1995,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_b7b72fff1f18813aa763",
+      "mode": "bangers",
+      "year": 1997,
+      "metadata": {
+        "releaseYear": 1997,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_89f3cd68d437ee81657d",
+      "mode": "bangers",
+      "year": 1996,
+      "metadata": {
+        "releaseYear": 1996,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_5dbb4f74ec581454aa36",
+      "mode": "bangers",
+      "year": 1999,
+      "metadata": {
+        "releaseYear": 1999,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/songs/backstreet-boys-i-want-it-that-way/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "47BBI51FKFwOMlIiX6m8ya",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_a6db35a6947aaa1857e3",
+      "mode": "bangers",
+      "year": 1999,
+      "metadata": {
+        "releaseYear": 1999,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.aria.com.au/charts/1999/singles-chart",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_d9e5d7012ef96ce3b162",
+      "mode": "bangers",
+      "year": 1997,
+      "metadata": {
+        "releaseYear": 1997,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_a70073446948faf33074",
+      "mode": "bangers",
+      "year": 1999,
+      "metadata": {
+        "releaseYear": 1999,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/41e18e2a-7c0f-4b34-abaf-44d4d59ee3e2",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_d324d1a2e6f0066b121e",
+      "mode": "bangers",
+      "year": 1990,
+      "metadata": {
+        "releaseYear": 1990,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://music.apple.com/us/album/rise/450241482",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_8b67630ded5413ca93ed",
+      "mode": "bangers",
+      "year": 1990,
+      "metadata": {
+        "releaseYear": 1990,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/6d19aaa7-1eb5-4488-a54d-fe07d0621a7f",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_b88385a9b1e8e98cff90",
+      "mode": "bangers",
+      "year": 1996,
+      "metadata": {
+        "releaseYear": 1996,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/e0b8217c-1516-47f8-9f73-ca64a3a6220f",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_0b299820a82d335fec5d",
+      "mode": "bangers",
+      "year": 1992,
+      "metadata": {
+        "releaseYear": 1992,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://interscope.com/products/bigger-better-faster-more-lp",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_c03265ca4e233da8bee6",
+      "mode": "bangers",
+      "year": 1995,
+      "metadata": {
+        "releaseYear": 1995,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/580f4553-e29a-4d19-989c-1b097b76de48",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_6f1043d351aa4162fe83",
+      "mode": "bangers",
+      "year": 1994,
+      "metadata": {
+        "releaseYear": 1994,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_f5d6de3b93625921a9d9",
+      "mode": "bangers",
+      "year": 2002,
+      "metadata": {
+        "releaseYear": 2002,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/3969800b-59ae-40dc-8cdd-84b31d212ff1",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_05319e421e8c9a4b8879",
+      "mode": "bangers",
+      "year": 2009,
+      "metadata": {
+        "releaseYear": 2009,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/d76057c6-c29c-41f7-b83e-751b4269851d",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_bcf37184beca3c42833c",
+      "mode": "bangers",
+      "year": 2000,
+      "metadata": {
+        "releaseYear": 2000,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/874a0cff-65ab-42d2-98c7-347750470a2d",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_9072f84fedc0377fab26",
+      "mode": "bangers",
+      "year": 2001,
+      "metadata": {
+        "releaseYear": 2001,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/songs/kylie-minogue-cant-get-you-out-of-my-head/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_c220dd1528a4ab10380c",
+      "mode": "bangers",
+      "year": 2002,
+      "metadata": {
+        "releaseYear": 2002,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/ef82bf7c-dd8b-4bac-85a8-2211376dc3b4",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_f01b921970ac6d79b41c",
+      "mode": "bangers",
+      "year": 2003,
+      "metadata": {
+        "releaseYear": 2003,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/songs/beyonce-crazy-in-love/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "5IVuqXILoxVWvWEPm82Jxr",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_7754b7381b1a895bb97d",
+      "mode": "bangers",
+      "year": 1999,
+      "metadata": {
+        "releaseYear": 1999,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_6cf34a3d22b9c01854c1",
+      "mode": "bangers",
+      "year": 2005,
+      "metadata": {
+        "releaseYear": 2005,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/release-group/29d3966e-3538-393d-b290-8b9ea519d038",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_7e46e0677cb6b1c12154",
+      "mode": "bangers",
+      "year": 2001,
+      "metadata": {
+        "releaseYear": 2001,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://music.apple.com/us/album/m-ssundaztood-expanded-edition/1459185349",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_a2178ab2d1564f166469",
+      "mode": "bangers",
+      "year": 2003,
+      "metadata": {
+        "releaseYear": 2003,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/7287aff2-f103-4602-b7c7-e96314e53461",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_d7458ea536f968962584",
+      "mode": "bangers",
+      "year": 2006,
+      "metadata": {
+        "releaseYear": 2006,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/72fb1447-60b2-4930-9cee-c08e073440e3",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_ff56c99f32491fc3ea15",
+      "mode": "bangers",
+      "year": 2008,
+      "metadata": {
+        "releaseYear": 2008,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/82214173-a7e5-4abc-938e-03031d9241b3",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_63320e76a78f9468f824",
+      "mode": "bangers",
+      "year": 2009,
+      "metadata": {
+        "releaseYear": 2009,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/bc25de97-7c62-4d3f-a200-ac9b0619d438",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_de8ca67d7e7201159fc7",
+      "mode": "bangers",
+      "year": 2000,
+      "metadata": {
+        "releaseYear": 2000,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://linkinpark.com/about",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_87fbf8e63e196abe56ba",
+      "mode": "bangers",
+      "year": 2000,
+      "metadata": {
+        "releaseYear": 2000,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/songs/bon-jovi-its-my-life/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_0e68d36736238c75055d",
+      "mode": "bangers",
+      "year": 2008,
+      "metadata": {
+        "releaseYear": 2008,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/9086b742-358b-4f73-9a14-84cb1a9ce4ce",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_fc534cb3268c8bc35cb3",
+      "mode": "bangers",
+      "year": 2003,
+      "metadata": {
+        "releaseYear": 2003,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/560062d0-e122-46be-9d89-0f3b44077fdf",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_42bae7830278ed8e545f",
+      "mode": "bangers",
+      "year": 2009,
+      "metadata": {
+        "releaseYear": 2009,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/c2656d9f-ed39-46a6-ae6c-9a1cadd48ebc",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_3964771bd68ca531c045",
+      "mode": "bangers",
+      "year": 2008,
+      "metadata": {
+        "releaseYear": 2008,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Poker_Face_(song)",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "5R8dQOPq8haW94K7mgERlO",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_0bc6d132f24aa244c09f",
+      "mode": "bangers",
+      "year": 2008,
+      "metadata": {
+        "releaseYear": 2008,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/songs/kings-of-leon-sex-on-fire/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_041cee3120cad371964f",
+      "mode": "bangers",
+      "year": 2008,
+      "metadata": {
+        "releaseYear": 2008,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/songs/beyonce-single-ladies-put-a-ring-on-it/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_0dcaca65dfcd4b405584",
+      "mode": "bangers",
+      "year": 2002,
+      "metadata": {
+        "releaseYear": 2002,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/f06649e9-056a-4e73-9e97-91cd96efb3ba",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_7978f859bb2f4497a7f0",
+      "mode": "bangers",
+      "year": 2003,
+      "metadata": {
+        "releaseYear": 2003,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/release-group/cf7a8b5b-a228-3ba4-92c1-3f53e5ca64e6",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_ff6f9618cd537aa93843",
+      "mode": "bangers",
+      "year": 2000,
+      "metadata": {
+        "releaseYear": 2000,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Wheatus_%28album%29",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_7a6cba12773a844de497",
+      "mode": "bangers",
+      "year": 2003,
+      "metadata": {
+        "releaseYear": 2003,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/ffb6e773-2d24-420c-90ce-36b6025f31e2",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_80c6c514d1cfa958b63e",
+      "mode": "bangers",
+      "year": 2007,
+      "metadata": {
+        "releaseYear": 2007,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Umbrella_(song)",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "49FYlytm3dAAraYgpoJZux",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_b1d515290e73fedd9d13",
+      "mode": "bangers",
+      "year": 2007,
+      "metadata": {
+        "releaseYear": 2007,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://music.apple.com/us/album/untouched-ep/269193945",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_a63387ff4599f267970e",
+      "mode": "bangers",
+      "year": 2004,
+      "metadata": {
+        "releaseYear": 2004,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/42f7a9b1-38f2-4ca3-b5fd-4e45a7b9e91a",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_2b23d2912e49b8155eaa",
+      "mode": "bangers",
+      "year": 2007,
+      "metadata": {
+        "releaseYear": 2007,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/songs/mark-ronson-ft-amy-winehouse-valerie/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_e94d82f43a3b70addf8d",
+      "mode": "bangers",
+      "year": 2008,
+      "metadata": {
+        "releaseYear": 2008,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/songs/coldplay-viva-la-vida/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "3Fcfwhm8oRrBvBZ8KGhtea",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_7283e948ef61699e0c7a",
+      "mode": "bangers",
+      "year": 2004,
+      "metadata": {
+        "releaseYear": 2004,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "bootstrap_only",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "5rb9QrpfcKFHM1EUbSIurX",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_37a469b998f6233ceb90",
+      "mode": "bangers",
+      "year": 2019,
+      "metadata": {
+        "releaseYear": 2019,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Blinding_Lights",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "0VjIjW4GlUZAMYd2vXMi3b",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_7434da5907e7876f72eb",
+      "mode": "bangers",
+      "year": 2011,
+      "metadata": {
+        "releaseYear": 2011,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Call_Me_Maybe",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "6ol4ZSifr7r3Lb2a9L5ZAB",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_d724f0b863ab6f3669e8",
+      "mode": "bangers",
+      "year": 2010,
+      "metadata": {
+        "releaseYear": 2010,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/d01c5ceb-ba85-4694-a48e-b45830cede19",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_83374bc76727ffffeb99",
+      "mode": "bangers",
+      "year": 2013,
+      "metadata": {
+        "releaseYear": 2013,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/833f00e1-781f-4edd-90e4-e52712618862",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_4c935c55014d0706ce86",
+      "mode": "bangers",
+      "year": 2011,
+      "metadata": {
+        "releaseYear": 2011,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/7c5b6609-0e04-4ea4-a871-513301db8c9a",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_bf7e2612ee2b8bca3c57",
+      "mode": "bangers",
+      "year": 2010,
+      "metadata": {
+        "releaseYear": 2010,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Rolling_in_the_Deep",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "1c8gk2PeTE04A1pIDH9YMk",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_5e678118eb1855c8e79d",
+      "mode": "bangers",
+      "year": 2014,
+      "metadata": {
+        "releaseYear": 2014,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/59fc5ddf-a1d9-4746-902d-71fb5a9a78c2",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_146072a7c39f2f86cbd1",
+      "mode": "bangers",
+      "year": 2014,
+      "metadata": {
+        "releaseYear": 2014,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/9656e1b2-87c1-4208-8a33-fa814961fc9e",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_2377822535dd5e96b8a4",
+      "mode": "bangers",
+      "year": 2011,
+      "metadata": {
+        "releaseYear": 2011,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/0069c0f7-9274-4b4b-a10e-110b90a4bcc0",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_e864f45b56254fcbff46",
+      "mode": "bangers",
+      "year": 2014,
+      "metadata": {
+        "releaseYear": 2014,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://music.apple.com/us/album/uptown-funk-feat-bruno-mars-single/938032038",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_d4f0fb6219eb00068bc0",
+      "mode": "bangers",
+      "year": 2013,
+      "metadata": {
+        "releaseYear": 2013,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/88742878-fc88-40e5-a770-cdd923410359",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_169d98331af21dd6fa2f",
+      "mode": "bangers",
+      "year": 2011,
+      "metadata": {
+        "releaseYear": 2011,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/release/5bebf3fa-e5d8-45a9-ac94-7ede0c7d9fec",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_28fc278fd43af7256d8a",
+      "mode": "bangers",
+      "year": 2011,
+      "metadata": {
+        "releaseYear": 2011,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://musicbrainz.org/recording/70b75f40-442e-48b2-a41e-6b7490b73fbe",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_1be209a117dfa33b15f8",
+      "mode": "bangers",
+      "year": 2020,
+      "metadata": {
+        "releaseYear": 2020,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Levitating_(song)",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": "39LLxExYz6ewLAcYrzQQyP",
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_452148f2a88a0352ff49",
+      "mode": "bangers",
+      "year": 2020,
+      "metadata": {
+        "releaseYear": 2020,
+        "source": "bangers-singalong-v3",
+        "sourceLabel": "Australian singalong · proposed original recording",
+        "sourceUrl": "https://www.officialcharts.com/songs/chappell-roan-pink-pony-club/",
+        "sourceProvider": "Source-backed curated review",
+        "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
         "evidenceState",
         "sourceRetrievalDate",
         "spotifyId",

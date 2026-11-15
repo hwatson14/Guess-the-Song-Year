@@ -10,7 +10,7 @@ See [AGENTS.md](AGENTS.md), [current status and roadmap](docs/STATUS_AND_ROADMAP
 
 ## Current scope
 
-- Five clearly labelled playable music modes (see the status table below)
+- Six clearly labelled playable music modes (see the status table below)
 - Two play styles: **Real cards** and **Virtual**
 - 1–6 teams
 - Adjustable 1950–2022 year range, saved with each match
@@ -49,14 +49,15 @@ Run `node scripts/audit_playlist_quality.mjs` for artist concentration and the h
 | Mode | Status | Coverage | Meaning |
 | --- | --- | ---: | --- |
 | Greatest Hits | Beta | 73/73 years | All years selectable; canonical recording and pool-depth curation continues |
+| Bangers | Preview | Sparse | 102 hugely recognisable Australian-friendly group singalongs; eight year/version conflicts held |
 | Australian | Beta | 73/73 years | All years selectable; shallow pools and legacy evidence remain |
 | Unexpected Years | Preview | 40/73 years | Deliberately sparse one-song-per-covered-year preview |
 | #1 US | Beta | 73/73 years | One fixed US chart leader per chart year |
 | #1 Australia | Beta | 73/73 years | One fixed Australian chart leader per chart year |
 
-Coverage counts usable songs after the runtime filter. Catalogue v20 contains 1,170 master song records across 1,543 active mode placements: 944 Greatest Hits (at least 12 per year), 253 Australian, 200 Unexpected Years, and 73 in each chart mode. Every stored active row is usable. A global identity/provider-ID regression check prevents the same master identity or provider recording ID from reappearing under multiple song records. Original cleanup records remain accounted for in the archive; the expansion ledger retains source recording metadata and withdrawn alias decisions. Run `node scripts/catalogue_summary.mjs` for runtime counts and `node scripts/song_database_report.mjs` for provider coverage.
+Coverage counts usable songs after the runtime filter. Catalogue v20 now contains 1,210 master song records across 1,645 active mode placements (including 102 Bangers memberships): 944 Greatest Hits (at least 12 per year), 253 Australian, 200 Unexpected Years, and 73 in each chart mode. Every stored active row is usable. A global identity/provider-ID regression check prevents the same master identity or provider recording ID from reappearing under multiple song records. Original cleanup records remain accounted for in the archive; the expansion ledger retains source recording metadata and withdrawn alias decisions. Run `node scripts/catalogue_summary.mjs` for runtime counts and `node scripts/song_database_report.mjs` for provider coverage.
 
-The current canonical database has externally observed release-year evidence for 936 masters; 234 remain unresolved. The 2026-11-02 correction pass independently reviewed 13 erroneous canonical release dates, added 20 sourced masters, reused four masters in Australian, and archived three non-song entries without losing their original records. The latest sweep confirmed 40 previously unresolved master years without changing any answer year automatically. Legacy release evidence and exact playback-recording verification remain incomplete, so status stays Beta/Preview.
+The pre-Bangers v20 database had externally observed release-year evidence for 936 masters, with 234 unresolved. The Bangers additions include new source-linked candidates and do not imply complete recording-level verification. The 2026-11-02 correction pass independently reviewed 13 erroneous canonical release dates, added 20 sourced masters, reused four masters in Australian, and archived three non-song entries without losing their original records. The latest sweep confirmed 40 previously unresolved master years without changing any answer year automatically. Legacy release evidence and exact playback-recording verification remain incomplete, so status stays Beta/Preview.
 
 No mode is currently labelled **Ready**. `data/modes.json` is the product source of truth for these labels and their explanations. A sparse mode never silently falls back to another mode: Virtual play deals only supported years, while Real cards report an unavailable year and let the player scan another card or change mode. Additional requested modes are declared as Building until their data and mechanics satisfy the release gate.
 
@@ -117,3 +118,8 @@ The existing catalogue still needs further human curation for canonical release-
 ## Deployment
 
 Run `node scripts/check.mjs` for the shared local/CI validation suite. GitHub Pages uses the same gate and publishes only the staged app assets, data and vendored libraries. A failed validation step prevents deployment. Research outputs and local browser logs are excluded from the deployed site.
+
+
+### Bangers V3 preview (15 November 2026)
+
+The V3 Australian singalong proposal has 110 headliners. The Bangers mode plays 102 sourced/reused canonical songs. Eight contested release years or recording variants remain held outside gameplay (`verification/bangers-v3-implementation.json`). The mode adds 40 source-linked master songs and reuses 62 existing canonical masters, preserving all five original modes. Original-release years, not later chart peaks/remasters, determine the game answer. Provider audio has not yet been independently auditioned. Bangers is **Preview** until that is complete. Real-card scans on unsupported years do not fall back; Virtual deals supported card years.

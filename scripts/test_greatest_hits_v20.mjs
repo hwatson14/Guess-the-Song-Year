@@ -5,6 +5,7 @@ import {compileDatabase,songId} from './song_database.mjs';
 const ledger=JSON.parse(fs.readFileSync('verification/greatest-hits-v20-reviewed.json','utf8'));
 const audit=JSON.parse(fs.readFileSync('verification/greatest-hits-v20-gap-priorities.json','utf8'));
 const db=JSON.parse(fs.readFileSync('data/song-database.json','utf8'));
+const bangers=JSON.parse(fs.readFileSync('verification/bangers-v3-implementation.json','utf8'));
 const cat=JSON.parse(fs.readFileSync('data/catalogue.json','utf8'));
 const normalize=v=>String(v||'').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g,' ').trim();
 const stripLead=v=>String(v||'').replace(/^the\s+/i,'').split(/\s+(?:feat\.?|ft\.?|featuring)\s+/i)[0];
@@ -20,8 +21,8 @@ assert.equal(audit.summary.exactNormalizedAbsent,192,'Historical baseline gap au
 assert.equal(audit.summary.top150,150);
 assert.equal(audit.rankedCandidates.length,192);
 assert.equal(audit.rankedCandidates.filter(x=>x.priorityBand==='top_150').length,150);
-assert.equal(Object.keys(db.songs).length,1170);
-assert.equal(db.memberships.length,1543);
+assert.equal(Object.keys(db.songs).length,1170+bangers.newMasterIds.length);
+assert.equal(db.memberships.length,1543+bangers.included.length);
 assert.equal(Object.values(cat.modes.greatest).flat().length,944);
 assert.equal(cat.coverage.greatest,73);
 for(const candidate of [...ledger.approvedBenchmarkPromotions,...ledger.approvedAustralianCrossovers]){
