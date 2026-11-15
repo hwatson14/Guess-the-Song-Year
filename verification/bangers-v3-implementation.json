@@ -1,0 +1,1031 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-15",
+  "proposedHeadliners": 110,
+  "included": [
+    {
+      "title": "Brown Eyed Girl",
+      "artist": "Van Morrison",
+      "songId": "song_a7cd7ec127ccf36aa862",
+      "answerYear": 1967,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/chart-news/official-charts-announces-the-sixties-definitive-chart-books__27020/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Sweet Caroline",
+      "artist": "Neil Diamond",
+      "songId": "song_b6e63ae446166c29967d",
+      "answerYear": 1969,
+      "origin": "new",
+      "sourceUrl": "https://musicbrainz.org/release-group/735ba6b7-a1f0-4663-9989-ae88c4fef00c",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Am I Ever Gonna See Your Face Again",
+      "artist": "The Angels",
+      "songId": "song_4e02a10e22d5a17718ae",
+      "answerYear": 1976,
+      "origin": "new",
+      "sourceUrl": "https://www.nfsa.gov.au/collection/item/the-angels-original-line-up",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Bohemian Rhapsody",
+      "artist": "Queen",
+      "songId": "song_a38d29a974ae7bfeb35a",
+      "answerYear": 1975,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/6374c7d3-35d1-4b9a-9d8d-d2b43502927c",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Dancing Queen",
+      "artist": "ABBA",
+      "songId": "song_8b6b72e5b0360e370c1a",
+      "answerYear": 1976,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/a502f559-f70c-4e0d-a5e5-e0cc319d0bd7",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Don't Stop Me Now",
+      "artist": "Queen",
+      "songId": "song_0ba5f2de17c165dfb18b",
+      "answerYear": 1978,
+      "origin": "new",
+      "sourceUrl": "https://www.queenonline.com/news/press-release-queen-greatest-hits-in-japan?prev_filter=01-2020",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Eagle Rock",
+      "artist": "Daddy Cool",
+      "songId": "song_57c40e39925003e06729",
+      "answerYear": 1971,
+      "origin": "reused",
+      "sourceUrl": "https://www.aria.com.au/charts/1971/singles-chart",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Gimme! Gimme! Gimme! (A Man After Midnight)",
+      "artist": "ABBA",
+      "songId": "song_ed077207867a8038f844",
+      "answerYear": 1979,
+      "origin": "new",
+      "sourceUrl": "https://abbasite.com/discography/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Highway to Hell",
+      "artist": "AC/DC",
+      "songId": "song_f08b9dc4d684c07f204a",
+      "answerYear": 1979,
+      "origin": "reused",
+      "sourceUrl": "https://www.acdc.com/music/highway-to-hell/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "I Will Survive",
+      "artist": "Gloria Gaynor",
+      "songId": "song_5789f221c273cdaae0dd",
+      "answerYear": 1978,
+      "origin": "reused",
+      "sourceUrl": "https://www.gloriagaynor.com/videos/i-will-survive/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Khe Sanh",
+      "artist": "Cold Chisel",
+      "songId": "song_2bb8645a46a54f925a83",
+      "answerYear": 1978,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/e97fa9a8-4f38-4e43-b5f1-5047a0f33fa4",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Mamma Mia",
+      "artist": "ABBA",
+      "songId": "song_7606b4e6d9cc3e11b5d3",
+      "answerYear": 1975,
+      "origin": "new",
+      "sourceUrl": "https://abbasite.com/discography/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Nutbush City Limits",
+      "artist": "Ike & Tina Turner",
+      "songId": "song_1e54c8023ccf731b68e4",
+      "answerYear": 1973,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/songs/ike-and-tina-turner-nutbush-city-limits/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "September",
+      "artist": "Earth, Wind & Fire",
+      "songId": "song_c4998b1bca10ed36d31e",
+      "answerYear": 1978,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/songs/earth-wind-and-fire-september/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Stayin' Alive",
+      "artist": "Bee Gees",
+      "songId": "song_089f87767974e67818d1",
+      "answerYear": 1977,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/ef6df59e-177b-4060-b6f6-7ff61a3a0fff",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Summer Nights",
+      "artist": "John Travolta & Olivia Newton-John",
+      "songId": "song_cb6cc519b6a3331ecd0d",
+      "answerYear": 1978,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/chart-news/official-charts-70th-anniversary-the-official-top-10-best-selling-singles-from-the-1970s__37736/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Sweet Home Alabama",
+      "artist": "Lynyrd Skynyrd",
+      "songId": "song_ebe56ea5ec62ce255057",
+      "answerYear": 1974,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/2b2f23a7-3ee0-4fc0-991c-c0e327ffbb1e",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Take Me Home, Country Roads",
+      "artist": "John Denver",
+      "songId": "song_6b247c7056fe86ef035a",
+      "answerYear": 1971,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "We Will Rock You",
+      "artist": "Queen",
+      "songId": "song_dbb3914a8b75f07aad48",
+      "answerYear": 1977,
+      "origin": "new",
+      "sourceUrl": "https://store-au.queenonline.com/collections/news-of-the-world",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "You're the One That I Want",
+      "artist": "John Travolta & Olivia Newton-John",
+      "songId": "song_be673830a42402ca08ec",
+      "answerYear": 1978,
+      "origin": "reused",
+      "sourceUrl": "https://www.officialcharts.com/chart-news/official-charts-70th-anniversary-the-official-top-10-best-selling-singles-from-the-1970s__37736/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "9 to 5",
+      "artist": "Dolly Parton",
+      "songId": "song_3aa9d3f1eda0306edf00",
+      "answerYear": 1980,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/f989fa05-7e2b-4e88-8a95-b5d68480b539",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Africa",
+      "artist": "Toto",
+      "songId": "song_135d4bc10adbc158d432",
+      "answerYear": 1982,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/6fd7416a-b81b-4f9e-b4b2-674d358d26bb",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Come On Eileen",
+      "artist": "Dexys Midnight Runners",
+      "songId": "song_db737420ffde8c915426",
+      "answerYear": 1982,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/8564b0bc-df53-4e2a-9b07-f4a372bcc5a5",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Don't Stop Believin'",
+      "artist": "Journey",
+      "songId": "song_ddf494b0b12f28cbd570",
+      "answerYear": 1981,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/5e390f77-3210-4e92-bd8b-fd6014e62b9c",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Down Under",
+      "artist": "Men at Work",
+      "songId": "song_76dd88ea981d6c6a7f75",
+      "answerYear": 1981,
+      "origin": "reused",
+      "sourceUrl": "https://www.menatworkband.com/discography/business-as-usual/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Flame Trees",
+      "artist": "Cold Chisel",
+      "songId": "song_a254f250e921217ba495",
+      "answerYear": 1984,
+      "origin": "new",
+      "sourceUrl": "https://www.coldchisel.com/twentieth-century/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Footloose",
+      "artist": "Kenny Loggins",
+      "songId": "song_1eb1350522aed39ddfc4",
+      "answerYear": 1984,
+      "origin": "reused",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Footloose_(song)",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Girls Just Want to Have Fun",
+      "artist": "Cyndi Lauper",
+      "songId": "song_1cb08a1925247ce1dc84",
+      "answerYear": 1983,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/0e5f1add-c943-49a0-b824-169e7f7b82da",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "I Wanna Dance with Somebody",
+      "artist": "Whitney Houston",
+      "songId": "song_53ec6a9d954fd5f9538f",
+      "answerYear": 1987,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/chart-news/the-official-top-40-best-selling-songs-of-1987__32970/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "I Want to Break Free",
+      "artist": "Queen",
+      "songId": "song_d1c62d35384144860dd2",
+      "answerYear": 1984,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/chart-news/queens-bestselling-singles-on-the-official-uk-singles-chart__24760/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "I'm Gonna Be (500 Miles)",
+      "artist": "The Proclaimers",
+      "songId": "song_9c2ddc6439c5533a8fdd",
+      "answerYear": 1988,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/artist/24561/proclaimers/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "I'm Still Standing",
+      "artist": "Elton John",
+      "songId": "song_89d53984f4648ea6d480",
+      "answerYear": 1983,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/songs/elton-john-im-still-standing/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Like a Prayer",
+      "artist": "Madonna",
+      "songId": "song_e89a9ff7ef98eb287ff2",
+      "answerYear": 1989,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/3a6062b0-fdf6-4fef-ba83-0287cd229bf0",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Livin' on a Prayer",
+      "artist": "Bon Jovi",
+      "songId": "song_a96ea479b3f7a53adf46",
+      "answerYear": 1986,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/c7e5ae79-b20b-46ab-89b4-63612ac3206f",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Love Shack",
+      "artist": "The B-52's",
+      "songId": "song_7358d062426249a59f31",
+      "answerYear": 1989,
+      "origin": "new",
+      "sourceUrl": "https://musicchartsarchive.com/singles/b-52s/love-shack",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Sweet Child o' Mine",
+      "artist": "Guns N' Roses",
+      "songId": "song_6fd7e7eaddb905d73a0f",
+      "answerYear": 1987,
+      "origin": "reused",
+      "sourceUrl": "https://music.apple.com/us/song/1377826892",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "The Best",
+      "artist": "Tina Turner",
+      "songId": "song_8555edd0982799f0f627",
+      "answerYear": 1989,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/songs/tina-turner-the-best/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Wake Me Up Before You Go-Go",
+      "artist": "Wham!",
+      "songId": "song_c5b73234b39d0bed0682",
+      "answerYear": 1984,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/songs/wham-wake-me-up-before-you-go-go/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "You're the Voice",
+      "artist": "John Farnham",
+      "songId": "song_305da935ec720ee3f32b",
+      "answerYear": 1986,
+      "origin": "reused",
+      "sourceUrl": "https://www.nfsa.gov.au/collection/item/youre-voice-john-farnham-0",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "...Baby One More Time",
+      "artist": "Britney Spears",
+      "songId": "song_b4b9af4e51df5d6a1e98",
+      "answerYear": 1998,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/9aa77fa3-1a7d-4ff9-a5ce-8c3dc072fa52",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "All Star",
+      "artist": "Smash Mouth",
+      "songId": "song_1c391c8befcee9b15337",
+      "answerYear": 1999,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "All the Small Things",
+      "artist": "blink-182",
+      "songId": "song_ac8bc19455bd3115cdf9",
+      "answerYear": 1999,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Barbie Girl",
+      "artist": "Aqua",
+      "songId": "song_653ac4dfa54bdd0343e1",
+      "answerYear": 1997,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/5268ded7-3c3c-465b-805f-cb14e407ec2d",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Don't Look Back in Anger",
+      "artist": "Oasis",
+      "songId": "song_7350a7d135e7d8314bcb",
+      "answerYear": 1995,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Everybody (Backstreet's Back)",
+      "artist": "Backstreet Boys",
+      "songId": "song_b7b72fff1f18813aa763",
+      "answerYear": 1997,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Freed from Desire",
+      "artist": "Gala",
+      "songId": "song_89f3cd68d437ee81657d",
+      "answerYear": 1996,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "I Want It That Way",
+      "artist": "Backstreet Boys",
+      "songId": "song_5dbb4f74ec581454aa36",
+      "answerYear": 1999,
+      "origin": "reused",
+      "sourceUrl": "https://www.officialcharts.com/songs/backstreet-boys-i-want-it-that-way/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Mambo No. 5",
+      "artist": "Lou Bega",
+      "songId": "song_a6db35a6947aaa1857e3",
+      "answerYear": 1999,
+      "origin": "reused",
+      "sourceUrl": "https://www.aria.com.au/charts/1999/singles-chart",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Man! I Feel Like a Woman!",
+      "artist": "Shania Twain",
+      "songId": "song_d9e5d7012ef96ce3b162",
+      "answerYear": 1997,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "No Scrubs",
+      "artist": "TLC",
+      "songId": "song_a70073446948faf33074",
+      "answerYear": 1999,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/41e18e2a-7c0f-4b34-abaf-44d4d59ee3e2",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "The Horses",
+      "artist": "Daryl Braithwaite",
+      "songId": "song_d324d1a2e6f0066b121e",
+      "answerYear": 1990,
+      "origin": "new",
+      "sourceUrl": "https://music.apple.com/us/album/rise/450241482",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Thunderstruck",
+      "artist": "AC/DC",
+      "songId": "song_8b67630ded5413ca93ed",
+      "answerYear": 1990,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/6d19aaa7-1eb5-4488-a54d-fe07d0621a7f",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Wannabe",
+      "artist": "Spice Girls",
+      "songId": "song_b88385a9b1e8e98cff90",
+      "answerYear": 1996,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/e0b8217c-1516-47f8-9f73-ca64a3a6220f",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "What's Up?",
+      "artist": "4 Non Blondes",
+      "songId": "song_0b299820a82d335fec5d",
+      "answerYear": 1992,
+      "origin": "new",
+      "sourceUrl": "https://interscope.com/products/bigger-better-faster-more-lp",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Wonderwall",
+      "artist": "Oasis",
+      "songId": "song_c03265ca4e233da8bee6",
+      "answerYear": 1995,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/580f4553-e29a-4d19-989c-1b097b76de48",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Zombie",
+      "artist": "The Cranberries",
+      "songId": "song_6f1043d351aa4162fe83",
+      "answerYear": 1994,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "A Thousand Miles",
+      "artist": "Vanessa Carlton",
+      "songId": "song_f5d6de3b93625921a9d9",
+      "answerYear": 2002,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/3969800b-59ae-40dc-8cdd-84b31d212ff1",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Bad Romance",
+      "artist": "Lady Gaga",
+      "songId": "song_05319e421e8c9a4b8879",
+      "answerYear": 2009,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/d76057c6-c29c-41f7-b83e-751b4269851d",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Bye Bye Bye",
+      "artist": "*NSYNC",
+      "songId": "song_bcf37184beca3c42833c",
+      "answerYear": 2000,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/874a0cff-65ab-42d2-98c7-347750470a2d",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Can't Get You Out of My Head",
+      "artist": "Kylie Minogue",
+      "songId": "song_9072f84fedc0377fab26",
+      "answerYear": 2001,
+      "origin": "reused",
+      "sourceUrl": "https://www.officialcharts.com/songs/kylie-minogue-cant-get-you-out-of-my-head/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Complicated",
+      "artist": "Avril Lavigne",
+      "songId": "song_c220dd1528a4ab10380c",
+      "answerYear": 2002,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/ef82bf7c-dd8b-4bac-85a8-2211376dc3b4",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Crazy in Love",
+      "artist": "Beyoncé",
+      "songId": "song_f01b921970ac6d79b41c",
+      "answerYear": 2003,
+      "origin": "reused",
+      "sourceUrl": "https://www.officialcharts.com/songs/beyonce-crazy-in-love/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Dancing in the Moonlight",
+      "artist": "Toploader",
+      "songId": "song_7754b7381b1a895bb97d",
+      "answerYear": 1999,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Everytime We Touch",
+      "artist": "Cascada",
+      "songId": "song_6cf34a3d22b9c01854c1",
+      "answerYear": 2005,
+      "origin": "new",
+      "sourceUrl": "https://musicbrainz.org/release-group/29d3966e-3538-393d-b290-8b9ea519d038",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Get the Party Started",
+      "artist": "P!nk",
+      "songId": "song_7e46e0677cb6b1c12154",
+      "answerYear": 2001,
+      "origin": "new",
+      "sourceUrl": "https://music.apple.com/us/album/m-ssundaztood-expanded-edition/1459185349",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Hey Ya!",
+      "artist": "OutKast",
+      "songId": "song_a2178ab2d1564f166469",
+      "answerYear": 2003,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/7287aff2-f103-4602-b7c7-e96314e53461",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Hips Don't Lie",
+      "artist": "Shakira",
+      "songId": "song_d7458ea536f968962584",
+      "answerYear": 2006,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/72fb1447-60b2-4930-9cee-c08e073440e3",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Hot N Cold",
+      "artist": "Katy Perry",
+      "songId": "song_ff56c99f32491fc3ea15",
+      "answerYear": 2008,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/82214173-a7e5-4abc-938e-03031d9241b3",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "I Gotta Feeling",
+      "artist": "The Black Eyed Peas",
+      "songId": "song_63320e76a78f9468f824",
+      "answerYear": 2009,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/bc25de97-7c62-4d3f-a200-ac9b0619d438",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "In the End",
+      "artist": "Linkin Park",
+      "songId": "song_de8ca67d7e7201159fc7",
+      "answerYear": 2000,
+      "origin": "new",
+      "sourceUrl": "https://linkinpark.com/about",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "It's My Life",
+      "artist": "Bon Jovi",
+      "songId": "song_87fbf8e63e196abe56ba",
+      "answerYear": 2000,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/songs/bon-jovi-its-my-life/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Love Story",
+      "artist": "Taylor Swift",
+      "songId": "song_0e68d36736238c75055d",
+      "answerYear": 2008,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/9086b742-358b-4f73-9a14-84cb1a9ce4ce",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Mr. Brightside",
+      "artist": "The Killers",
+      "songId": "song_fc534cb3268c8bc35cb3",
+      "answerYear": 2003,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/560062d0-e122-46be-9d89-0f3b44077fdf",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Party in the U.S.A.",
+      "artist": "Miley Cyrus",
+      "songId": "song_42bae7830278ed8e545f",
+      "answerYear": 2009,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/c2656d9f-ed39-46a6-ae6c-9a1cadd48ebc",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Poker Face",
+      "artist": "Lady Gaga",
+      "songId": "song_3964771bd68ca531c045",
+      "answerYear": 2008,
+      "origin": "reused",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Poker_Face_(song)",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Sex on Fire",
+      "artist": "Kings of Leon",
+      "songId": "song_0bc6d132f24aa244c09f",
+      "answerYear": 2008,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/songs/kings-of-leon-sex-on-fire/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Single Ladies (Put a Ring on It)",
+      "artist": "Beyoncé",
+      "songId": "song_041cee3120cad371964f",
+      "answerYear": 2008,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/songs/beyonce-single-ladies-put-a-ring-on-it/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Sk8er Boi",
+      "artist": "Avril Lavigne",
+      "songId": "song_0dcaca65dfcd4b405584",
+      "answerYear": 2002,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/f06649e9-056a-4e73-9e97-91cd96efb3ba",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Stacy's Mom",
+      "artist": "Fountains of Wayne",
+      "songId": "song_7978f859bb2f4497a7f0",
+      "answerYear": 2003,
+      "origin": "new",
+      "sourceUrl": "https://musicbrainz.org/release-group/cf7a8b5b-a228-3ba4-92c1-3f53e5ca64e6",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Teenage Dirtbag",
+      "artist": "Wheatus",
+      "songId": "song_ff6f9618cd537aa93843",
+      "answerYear": 2000,
+      "origin": "new",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Wheatus_%28album%29",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Toxic",
+      "artist": "Britney Spears",
+      "songId": "song_7a6cba12773a844de497",
+      "answerYear": 2003,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/ffb6e773-2d24-420c-90ce-36b6025f31e2",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Umbrella",
+      "artist": "Rihanna",
+      "songId": "song_80c6c514d1cfa958b63e",
+      "answerYear": 2007,
+      "origin": "reused",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Umbrella_(song)",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Untouched",
+      "artist": "The Veronicas",
+      "songId": "song_b1d515290e73fedd9d13",
+      "answerYear": 2007,
+      "origin": "reused",
+      "sourceUrl": "https://music.apple.com/us/album/untouched-ep/269193945",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Unwritten",
+      "artist": "Natasha Bedingfield",
+      "songId": "song_a63387ff4599f267970e",
+      "answerYear": 2004,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/42f7a9b1-38f2-4ca3-b5fd-4e45a7b9e91a",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Valerie",
+      "artist": "Mark Ronson feat. Amy Winehouse",
+      "songId": "song_2b23d2912e49b8155eaa",
+      "answerYear": 2007,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/songs/mark-ronson-ft-amy-winehouse-valerie/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Viva la Vida",
+      "artist": "Coldplay",
+      "songId": "song_e94d82f43a3b70addf8d",
+      "answerYear": 2008,
+      "origin": "reused",
+      "sourceUrl": "https://www.officialcharts.com/songs/coldplay-viva-la-vida/",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Yeah!",
+      "artist": "Usher",
+      "songId": "song_7283e948ef61699e0c7a",
+      "answerYear": 2004,
+      "origin": "reused",
+      "sourceUrl": null,
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Blinding Lights",
+      "artist": "The Weeknd",
+      "songId": "song_37a469b998f6233ceb90",
+      "answerYear": 2019,
+      "origin": "reused",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Blinding_Lights",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Call Me Maybe",
+      "artist": "Carly Rae Jepsen",
+      "songId": "song_7434da5907e7876f72eb",
+      "answerYear": 2011,
+      "origin": "reused",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Call_Me_Maybe",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Firework",
+      "artist": "Katy Perry",
+      "songId": "song_d724f0b863ab6f3669e8",
+      "answerYear": 2010,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/d01c5ceb-ba85-4694-a48e-b45830cede19",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Get Lucky",
+      "artist": "Daft Punk",
+      "songId": "song_83374bc76727ffffeb99",
+      "answerYear": 2013,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/833f00e1-781f-4edd-90e4-e52712618862",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Party Rock Anthem",
+      "artist": "LMFAO",
+      "songId": "song_4c935c55014d0706ce86",
+      "answerYear": 2011,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/7c5b6609-0e04-4ea4-a871-513301db8c9a",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Rolling in the Deep",
+      "artist": "Adele",
+      "songId": "song_bf7e2612ee2b8bca3c57",
+      "answerYear": 2010,
+      "origin": "reused",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Rolling_in_the_Deep",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Shake It Off",
+      "artist": "Taylor Swift",
+      "songId": "song_5e678118eb1855c8e79d",
+      "answerYear": 2014,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/59fc5ddf-a1d9-4746-902d-71fb5a9a78c2",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Shut Up and Dance",
+      "artist": "WALK THE MOON",
+      "songId": "song_146072a7c39f2f86cbd1",
+      "answerYear": 2014,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/9656e1b2-87c1-4208-8a33-fa814961fc9e",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Titanium",
+      "artist": "David Guetta feat. Sia",
+      "songId": "song_2377822535dd5e96b8a4",
+      "answerYear": 2011,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/0069c0f7-9274-4b4b-a10e-110b90a4bcc0",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Uptown Funk",
+      "artist": "Mark Ronson feat. Bruno Mars",
+      "songId": "song_e864f45b56254fcbff46",
+      "answerYear": 2014,
+      "origin": "reused",
+      "sourceUrl": "https://music.apple.com/us/album/uptown-funk-feat-bruno-mars-single/938032038",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Wake Me Up",
+      "artist": "Avicii",
+      "songId": "song_d4f0fb6219eb00068bc0",
+      "answerYear": 2013,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/88742878-fc88-40e5-a770-cdd923410359",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "We Are Young",
+      "artist": "fun. feat. Janelle Monáe",
+      "songId": "song_169d98331af21dd6fa2f",
+      "answerYear": 2011,
+      "origin": "new",
+      "sourceUrl": "https://musicbrainz.org/release/5bebf3fa-e5d8-45a9-ac94-7ede0c7d9fec",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "We Found Love",
+      "artist": "Rihanna",
+      "songId": "song_28fc278fd43af7256d8a",
+      "answerYear": 2011,
+      "origin": "reused",
+      "sourceUrl": "https://musicbrainz.org/recording/70b75f40-442e-48b2-a41e-6b7490b73fbe",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Levitating",
+      "artist": "Dua Lipa",
+      "songId": "song_1be209a117dfa33b15f8",
+      "answerYear": 2020,
+      "origin": "reused",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Levitating_(song)",
+      "providerIdentity": "pending-audition"
+    },
+    {
+      "title": "Pink Pony Club",
+      "artist": "Chappell Roan",
+      "songId": "song_452148f2a88a0352ff49",
+      "answerYear": 2020,
+      "origin": "new",
+      "sourceUrl": "https://www.officialcharts.com/songs/chappell-roan-pink-pony-club/",
+      "providerIdentity": "pending-audition"
+    }
+  ],
+  "held": [
+    {
+      "title": "Billie Jean",
+      "reason": "Current legacy 1983 game answer may conflate single year with first 1982 album.",
+      "artist": "Michael Jackson"
+    },
+    {
+      "title": "Never Gonna Give You Up",
+      "reason": "Current legacy 1988 game year conflicts with 1987 single.",
+      "artist": "Rick Astley"
+    },
+    {
+      "title": "Summer of '69",
+      "reason": "Current master claims 1993; Bryan Adams original 1984 Reckless album.",
+      "artist": "Bryan Adams"
+    },
+    {
+      "title": "Take on Me",
+      "reason": "1984 original versus popular 1985 rerecording.",
+      "artist": "a-ha"
+    },
+    {
+      "title": "Walking on Sunshine",
+      "reason": "1983 original versus popular 1985 rerecording.",
+      "artist": "Katrina and the Waves"
+    },
+    {
+      "title": "Believe",
+      "reason": "Current legacy 1999 game year conflicts with 1998 issue.",
+      "artist": "Cher"
+    },
+    {
+      "title": "Low",
+      "reason": "Current legacy 2008 game year conflicts with 2007 issue.",
+      "artist": "Flo Rida"
+    },
+    {
+      "title": "Since U Been Gone",
+      "reason": "Current master claims 2003, while first 2004 Breakaway issue exists.",
+      "artist": "Kelly Clarkson"
+    }
+  ],
+  "newMasterIds": [
+    "song_a7cd7ec127ccf36aa862",
+    "song_b6e63ae446166c29967d",
+    "song_4e02a10e22d5a17718ae",
+    "song_0ba5f2de17c165dfb18b",
+    "song_ed077207867a8038f844",
+    "song_7606b4e6d9cc3e11b5d3",
+    "song_1e54c8023ccf731b68e4",
+    "song_c4998b1bca10ed36d31e",
+    "song_cb6cc519b6a3331ecd0d",
+    "song_6b247c7056fe86ef035a",
+    "song_dbb3914a8b75f07aad48",
+    "song_a254f250e921217ba495",
+    "song_53ec6a9d954fd5f9538f",
+    "song_d1c62d35384144860dd2",
+    "song_9c2ddc6439c5533a8fdd",
+    "song_89d53984f4648ea6d480",
+    "song_7358d062426249a59f31",
+    "song_8555edd0982799f0f627",
+    "song_c5b73234b39d0bed0682",
+    "song_1c391c8befcee9b15337",
+    "song_ac8bc19455bd3115cdf9",
+    "song_7350a7d135e7d8314bcb",
+    "song_b7b72fff1f18813aa763",
+    "song_89f3cd68d437ee81657d",
+    "song_d9e5d7012ef96ce3b162",
+    "song_d324d1a2e6f0066b121e",
+    "song_0b299820a82d335fec5d",
+    "song_6f1043d351aa4162fe83",
+    "song_7754b7381b1a895bb97d",
+    "song_6cf34a3d22b9c01854c1",
+    "song_7e46e0677cb6b1c12154",
+    "song_de8ca67d7e7201159fc7",
+    "song_87fbf8e63e196abe56ba",
+    "song_0bc6d132f24aa244c09f",
+    "song_041cee3120cad371964f",
+    "song_7978f859bb2f4497a7f0",
+    "song_ff6f9618cd537aa93843",
+    "song_2b23d2912e49b8155eaa",
+    "song_169d98331af21dd6fa2f",
+    "song_452148f2a88a0352ff49"
+  ],
+  "releaseYearEnrichments": [
+    {
+      "title": "Eagle Rock",
+      "songId": "song_57c40e39925003e06729",
+      "year": 1971,
+      "sourceUrl": "https://www.aria.com.au/charts/1971/singles-chart"
+    },
+    {
+      "title": "You're the One that I Want",
+      "songId": "song_be673830a42402ca08ec",
+      "year": 1978,
+      "sourceUrl": "https://www.officialcharts.com/chart-news/official-charts-70th-anniversary-the-official-top-10-best-selling-singles-from-the-1970s__37736/"
+    },
+    {
+      "title": "Mambo No. 5",
+      "songId": "song_a6db35a6947aaa1857e3",
+      "year": 1999,
+      "sourceUrl": "https://www.aria.com.au/charts/1999/singles-chart"
+    }
+  ],
+  "approval": "Implemented Preview; playback/recording source not independently audited",
+  "originalYearPolicy": "Earliest credible issue of intended recording, not chart peak or later remaster"
+}

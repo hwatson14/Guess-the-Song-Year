@@ -80,7 +80,10 @@
       "statusNote": "Derived from Movie Themes and TV Themes; it has no independently curated source catalogue.",
       "yearBasis": "screen",
       "repeatPolicy": "unique",
-      "compositeOf": ["movie_themes", "tv_themes"]
+      "compositeOf": [
+        "movie_themes",
+        "tv_themes"
+      ]
     },
     "remix_original_year": {
       "name": "Remix: Original Year",
@@ -100,6 +103,16 @@
       "status": "building",
       "statusLabel": "Building",
       "statusNote": "Australian-first qualification review and canonical song matching are in progress.",
+      "yearBasis": "release",
+      "repeatPolicy": "unique"
+    },
+    "bangers": {
+      "name": "Bangers",
+      "short": "Bangers",
+      "desc": "Recognisable Australian-party group singalongs. Guess the year the intended recording was first released.",
+      "status": "preview",
+      "statusLabel": "Preview",
+      "statusNote": "Curated 110-song shortlist with eight year/version holds. Sparse coverage, playback recording audition pending. Virtual play recommended.",
       "yearBasis": "release",
       "repeatPolicy": "unique"
     }
