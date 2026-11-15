@@ -13,7 +13,7 @@
   let musicModal=false,deviceList=[],backGuardReady=false,prepareSeq=0,playbackSeq=0,countdownTimer=null,youtubeListenTimer=null,youtubeDownAt=0;
   let lastRenderedScreen=null,lastModalOpen=false;
   let modeReports={},bonusBusy=false;
-  let spotifyStarting=false;
+  let spotifyStarting=false,spotifyStopPending=null;
 
   const esc=s=>String(s??'').replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));
   function load(k,f){try{return JSON.parse(localStorage.getItem(k))??f}catch{return f}}
@@ -689,6 +689,13 @@
     spotifyStarting=true;
     match.phase='playing';match.current=current;saveMatch();screen='playing';render();resetScroll();
     try{
+      // Previous rounds may have issued an asynchronous pause. Never start the
+      // next Spotify track until that stop has completed successfully.
+      const pendingStop=spotifyStopPending;
+      if(pendingStop){
+        await pendingStop;
+        if(seq!==playbackSeq||screen!=='playing'||!current)return;
+      }
       await E.playSpotify(current.resolved.uri,current.resolved);
       if(seq!==playbackSeq||screen!=='playing'||!current)return;
       spotifyStarting=false;playing=true;playNeedsTap=false;recordSongUsed();render();
@@ -776,8 +783,11 @@
 
   async function listenAgain(){
     if(!current)return;
-    await stopPlayback();
+    const stopping=stopPlayback();
+    // Spotify startup checks the stop barrier and handles any pause failure
+    // as a recoverable round error. YouTube retains its original sequence.
     if(current.provider==='spotify'){await startSpotifyListening();return}
+    await stopping;
     beginMusicCountdown();
   }
 
@@ -833,11 +843,18 @@
       playing=true;
     }catch(err){if(seq!==playbackSeq)return;playing=false;showRoundError(err,{cardId:current?.cardId,year:current?.year})}
   }
-  async function stopPlayback(){
+  function stopPlayback(){
     playbackSeq++;playing=false;spotifyStarting=false;
-    if(!current)return;
-    if(current.provider==='youtube'){E.pauseYouTube();return}
-    try{await E.pauseSpotify()}catch{}
+    if(!current)return Promise.resolve();
+    if(current.provider==='youtube'){E.pauseYouTube();return Promise.resolve()}
+    let stopping;
+    try{stopping=Promise.resolve(E.pauseSpotify())}
+    catch(error){stopping=Promise.reject(error)}
+    spotifyStopPending=stopping;
+    // Callers that do not await a UI-triggered stop must not create an
+    // unhandled rejection. The next Spotify startup still sees its failure.
+    stopping.catch(()=>{});
+    return stopping;
   }
 
   function selectSlot(slot){
