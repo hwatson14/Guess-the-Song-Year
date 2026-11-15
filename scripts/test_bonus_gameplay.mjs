@@ -97,10 +97,15 @@ async function placing(teams=[team('Team 1'),team('Team 2')],slot=0){
   assert.match(h.R.virtualTimeline(),/>Steal<\/button>/);
   const before=JSON.stringify(h.state().match.teams);
   h.R.lockPlacement();
+  h.R.lockPlacement();
   assert.equal(h.state().screen,'locked');
   assert.match(h.node.innerHTML,/Undo placement/);
   assert.doesNotMatch(h.node.innerHTML,/Alpha|Example Artist|answer-year/);
   assert.equal(JSON.stringify(h.state().match.teams),before);
+  h.R.handleBack();
+  h.autoReveal();
+  assert.equal(h.state().screen,'resume','Back cancels the automatic reveal');
+  assert.equal(h.state().match.phase,'locked');
   const reload=await make(JSON.parse(h.store.get('gsy.match.v7')));
   await reload.R.resumeMatch();
   assert.equal(reload.state().screen,'locked');

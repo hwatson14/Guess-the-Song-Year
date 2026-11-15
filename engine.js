@@ -296,11 +296,11 @@
     ytApiPromise=new Promise((resolve,reject)=>{
       let settled=false,apiTimeout=null;
       const succeed=()=>{if(settled)return;settled=true;clearTimeout(apiTimeout);resolve()};
-      const fail=err=>{if(settled)return;settled=true;clearTimeout(apiTimeout);reject(err)};
+      const fail=err=>{if(settled)return;settled=true;clearTimeout(apiTimeout);s.remove?.();reject(err)};
       const prior=window.onYouTubeIframeAPIReady;
       window.onYouTubeIframeAPIReady=()=>{try{prior?.()}catch{}succeed()};
-      const s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';s.async=true;s.onerror=()=>fail(new AppError('YOUTUBE_PLAYER_LOAD','Could not load the YouTube player.'));document.head.appendChild(s);
-      apiTimeout=setTimeout(()=>window.YT?.Player?succeed():fail(new AppError('YOUTUBE_PLAYER_LOAD','YouTube did not finish loading. Check the connection and retry.')),8000);
+      const s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';s.async=true;s.onerror=()=>fail(new AppError('YOUTUBE_NETWORK','Could not load the YouTube player. Check the connection and retry.'));document.head.appendChild(s);
+      apiTimeout=setTimeout(()=>window.YT?.Player?succeed():fail(new AppError('YOUTUBE_TIMEOUT','YouTube did not finish loading. Check the connection and retry.')),8000);
     }).catch(err=>{ytApiPromise=null;throw err});
     return ytApiPromise;
   }
@@ -326,21 +326,37 @@
     if(cancelled||generation!==ytRequestGeneration||ytActiveRequest!==request)return {cancelled:true,started:false,needsTap:false};
     const ids=[...(resolved.candidateIds||[resolved.videoId])];
     return new Promise((resolve,reject)=>{
-      let idx=0,settled=false,started=false,player=null;
+      let idx=0,settled=false,state=null,player=null;
       const clearTimers=()=>{clearTimeout(request.readyTimer);clearTimeout(request.fallbackTimer);request.readyTimer=null;request.fallbackTimer=null};
       const ownsPlayer=()=>generation===ytRequestGeneration&&ytActiveRequest===request&&ytPlayer===player;
       const finish=value=>{if(settled)return;settled=true;clearTimers();resolve(value)};
       const fail=e=>{if(settled)return;settled=true;clearTimers();reject(e)};
+      const timeout=()=>fail(new AppError('YOUTUBE_TIMEOUT','YouTube did not start in time. Check the connection and retry this song.'));
+      const armPlaybackTimer=()=>{
+        clearTimeout(request.readyTimer);
+        request.readyTimer=setTimeout(()=>{
+          if(!ownsPlayer())return;
+          if(state===YT.PlayerState.BUFFERING){timeout();return}
+          finish({started:false,needsTap:true,videoId:ids[idx]});
+        },6500);
+      };
       request.cancel=()=>finish({cancelled:true,started:false,needsTap:false});
-      const playIndex=()=>{request.fallbackTimer=null;if(!ownsPlayer())return;const id=ids[idx];if(!id)return fail(new AppError('YOUTUBE_PLAY_FAILED','No playable YouTube version was found.'));if(player?.loadVideoById){player.loadVideoById(id);try{player.playVideo()}catch{}}};
-      ytActiveRequest=request;
+      const playIndex=()=>{
+        request.fallbackTimer=null;
+        if(!ownsPlayer())return;
+        const id=ids[idx];
+        if(!id||!player?.loadVideoById){fail(new AppError('YOUTUBE_PLAY_FAILED','No playable YouTube version was found.'));return}
+        state=null;player.loadVideoById(id);try{player.playVideo()}catch{}
+        armPlaybackTimer();
+      };
       try{
         player=new YT.Player(containerId,{videoId:ids[0],playerVars:{autoplay:1,controls:1,playsinline:1,rel:0,origin:location.origin},events:{
-          onReady:e=>{if(!ownsPlayer()||e.target!==player)return;try{player.playVideo()}catch{};request.readyTimer=setTimeout(()=>{request.readyTimer=null;if(ownsPlayer()&&!started)finish({started:false,needsTap:true,videoId:ids[idx]})},6500)},
-          onStateChange:e=>{if(!ownsPlayer()||e.target!==player)return;onState(e.data);if(e.data===YT.PlayerState.PLAYING){started=true;const chosen=ids[idx];if(resolved.song){const rest=ids.filter(x=>x!==chosen);cachePut('youtube',resolved.song,{ids:[chosen,...rest]})}finish({started:true,needsTap:false,videoId:chosen})}},
-          onError:e=>{if(!ownsPlayer()||e.target!==player)return;cacheDropYoutubeCandidate(resolved.song,ids[idx]);if(idx<ids.length-1){idx++;clearTimeout(request.fallbackTimer);request.fallbackTimer=setTimeout(playIndex,150)}else fail(new AppError('YOUTUBE_PLAY_FAILED','The available YouTube versions could not be played. Try Spotify or another card.'))}
+          onReady:e=>{if(settled||!ownsPlayer()||e.target!==player)return;try{player.playVideo()}catch{};armPlaybackTimer()},
+          onStateChange:e=>{if(!ownsPlayer()||e.target!==player)return;state=e.data;onState(state);if(state===YT.PlayerState.PLAYING){const chosen=ids[idx];if(resolved.song){const rest=ids.filter(x=>x!==chosen);cachePut('youtube',resolved.song,{ids:[chosen,...rest]})}finish({started:true,needsTap:false,videoId:chosen})}},
+          onError:e=>{if(!ownsPlayer()||e.target!==player)return;cacheDropYoutubeCandidate(resolved.song,ids[idx]);if(idx<ids.length-1){idx++;clearTimers();request.fallbackTimer=setTimeout(playIndex,150)}else fail(new AppError('YOUTUBE_PLAY_FAILED','The available YouTube versions could not be played. Try Spotify or another card.'))}
         }});
         request.player=player;ytPlayer=player;
+        request.readyTimer=setTimeout(timeout,10000);
       }catch(e){if(ytActiveRequest===request)ytActiveRequest=null;fail(e)}
     });
   }
@@ -530,8 +546,16 @@
   function enqueueSpotifyPlayback(task){const run=spotifyPlaybackChain.then(task,task);spotifyPlaybackChain=run.catch(()=>{});return run}
   function playSpotify(uri,track){return enqueueSpotifyPlayback(()=>playSpotifyNow(uri,track))}
   // The command queue owns all Spotify device side effects; callers must await the wrapper.
-  function pauseSpotify(){return enqueueSpotifyPlayback(async()=>{
-    const id=lastSpotifyPlaybackDeviceId;
+  function pauseSpotify(expectedUri){return enqueueSpotifyPlayback(async()=>{
+    let id=lastSpotifyPlaybackDeviceId;
+    if(!id&&expectedUri){
+      const state=await spotifyApi('/me/player');
+      const matches=state?.item?.uri===expectedUri||state?.item?.linked_from?.uri===expectedUri;
+      if(state?.is_playing&&matches&&state.device?.id){
+        id=state.device.id;
+        rememberSpotifyPlaybackDevice(id);
+      }
+    }
     if(!id)return;
     try{await spotifyApi(`/me/player/pause?device_id=${encodeURIComponent(id)}`,{method:'PUT'},true)}
     catch(err){

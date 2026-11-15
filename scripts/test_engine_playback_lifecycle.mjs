@@ -36,7 +36,7 @@ function makeHarness({apiReady=true}={}){
       fireState(data){this.config.events.onStateChange({target:this,data})}
       fireError(){this.config.events.onError({target:this})}
     }
-    const YT={Player,PlayerState:{PLAYING:1}};
+    const YT={Player,PlayerState:{PLAYING:1,BUFFERING:3}};
     context.YT=YT;context.window.YT=YT;
   }
   if(apiReady)installApi();
@@ -117,6 +117,28 @@ const tick=()=>new Promise(resolve=>setImmediate(resolve));
   assert.equal(h.E.resumeYouTube(),true);
   assert.equal(h.E.replayYouTube(),true);
   assert.deepEqual(player.seekCalls,[[0,true]]);
+}
+
+{
+  const h=makeHarness();
+  const pending=h.E.playYouTube('player',{videoId:'stalled-before-ready'}).catch(error=>error.code);
+  await tick();
+  h.advance(12000);
+  await tick();
+  const result=await Promise.race([pending,tick().then(()=> 'pending')]);
+  assert.equal(result,'YOUTUBE_TIMEOUT','an iframe that never signals ready must allow a same-song retry');
+}
+
+{
+  const h=makeHarness();
+  const pending=h.E.playYouTube('player',{videoId:'buffering'}).catch(error=>error.code);
+  await tick();
+  h.instances[0].fireReady();
+  h.instances[0].fireState(3);
+  h.advance(6500);
+  await tick();
+  const result=await Promise.race([pending,tick().then(()=> 'pending')]);
+  assert.equal(result,'YOUTUBE_TIMEOUT','buffering must surface as a connection timeout instead of a tap-to-start prompt');
 }
 
 console.log('YouTube playback lifecycle regression tests passed');

@@ -137,4 +137,18 @@ assert.equal(restored.getState().current.cardId,2);
 assert.equal(saved.virtualPos,1);
 assert.equal(saved.turn,1);
 
+// A physical card scanned before catalogue recovery must survive refresh too.
+const physicalReconnect=await make({...config,playMode:'physical'});
+await physicalReconnect.startMatch();
+physicalReconnect.setState({reports:{}});
+physicalReconnect.E.modeReports=()=>new Promise(()=>{});
+void physicalReconnect.prepareCard(2);
+const pendingPhysical=JSON.parse(physicalReconnect.store.get('gsy.match.v7'));
+assert.equal(pendingPhysical.phase,'loading');assert.equal(pendingPhysical.loadingCardId,2);
+const resumedPhysical=await make({...config,playMode:'physical'});
+resumedPhysical.setState({match:pendingPhysical,screen:'resume'});
+await resumedPhysical.resumeMatch();
+assert.equal(resumedPhysical.getState().screen,'ready');
+assert.equal(resumedPhysical.getState().current.cardId,2);
+
 console.log('year range VM regressions passed: starters, persistence, finite exhaustion, refills, fixed repeats, scan rejection and provider failures');

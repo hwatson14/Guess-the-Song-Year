@@ -92,4 +92,12 @@ const pauseCalls=h=>h.calls.filter(c=>c.path.endsWith('/pause'));
   assert.equal(after.state.uri,'spotify:track:second');
 }
 
+{
+  const h=make({state:{uri:'spotify:track:old-match',is_playing:true}});
+  await h.E.pauseSpotify('spotify:track:unrelated');
+  assert.equal(pauseCalls(h).length,0,'a legacy save must not pause a different recording');
+  await h.E.pauseSpotify('spotify:track:old-match');
+  assert.equal(pauseCalls(h).length,1,'a legacy save can pause its matching song after updating');
+}
+
 console.log('Spotify track transition regression passed: quiet switch, no redundant pause, fail closed if old song persists.');

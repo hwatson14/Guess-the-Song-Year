@@ -159,7 +159,8 @@
 
   function errorScreen(){
     const err=runtimeError||{},kind=err.kind||P.preparationErrorKind(err.code);
-    const retryable=(!!err.cardId||err.code?.startsWith('CATALOGUE_'))&&P.canRetryPreparationError(err.code);
+    const providerChanged=!!current?.song&&current.provider!==E.getProvider();
+    const retryable=(!!err.cardId||err.code?.startsWith('CATALOGUE_'))&&(providerChanged||P.canRetryPreparationError(err.code));
     const title=err.code==='SPOTIFY_PREVIOUS_TRACK_STILL_PLAYING'?'Previous song is still playing':['SPOTIFY_NETWORK','SPOTIFY_TIMEOUT','YOUTUBE_NETWORK','YOUTUBE_TIMEOUT','CATALOGUE_NETWORK','CATALOGUE_TIMEOUT'].includes(err.code)?'Connection interrupted':kind==='catalogue'?'No song is available':kind==='track'?'This track would not play':'Music could not be prepared',nextLabel=current?.song?'Skip broken song · free':cfg.playMode==='physical'?'Scan another card · free':'Deal another card · free';
     return `${topLine(true,false)}${matchHeader()}${scoreStrip()}<section class="card error-card" role="alert"><div class="kicker">PLAYBACK PAUSED</div><h1>${esc(title)}</h1><p>${esc(err.message||'Check the music service and try again.')}</p><div class="error-code">${esc(err.code||'PREPARE_FAILED')}</div><div class="error-actions">${retryable?`<button class="btn primary" data-action="retry-card">${err.cardId?'Retry this card':'Retry loading'}</button>`:''}<button class="btn ghost" data-action="skip-card">${nextLabel}</button><button class="btn text" data-action="music">Music settings</button></div></section>`;
   }
@@ -384,7 +385,7 @@
       if(a==='bonus-year')b.onclick=buyBonusYear;
       if(a==='open-track')b.onclick=openTrack;
       if(a==='connect-spotify')b.onclick=()=>E.spotifyConnect();
-      if(a==='disconnect-spotify')b.onclick=()=>{E.spotifyDisconnect();deviceList=[];toast('Spotify disconnected.');render()};
+      if(a==='disconnect-spotify')b.onclick=()=>{E.spotifyDisconnect();spotifyStopPending=null;deviceList=[];toast('Spotify disconnected.');render()};
       if(a==='refresh-devices')b.onclick=()=>refreshDevices(true);
     });
     const ds=document.getElementById('deviceSelect');if(ds)ds.onchange=()=>{E.setSpotifyDevice(ds.value);toast(ds.value?'Playback device saved.':'Device selection set to automatic.')};
@@ -458,7 +459,7 @@
 
   async function refreshDevices(showToast=true){
     if(!E.isSpotifyConnected())return;
-    try{deviceList=await E.spotifyDevices();if(showToast)toast(deviceList.length?`${deviceList.length} Spotify device${deviceList.length===1?'':'s'} found.`:'No Spotify device found. Open Spotify and play/pause once.');render()}catch(err){if(showToast)toast(errorText(err))}
+    try{deviceList=await E.spotifyDevices();if(showToast)toast(deviceList.length?`${deviceList.length} Spotify device${deviceList.length===1?'':'s'} found.`:'No Spotify device found. Open Spotify and play/pause once.');if(musicModal)render()}catch(err){if(showToast)toast(errorText(err))}
   }
 
   async function ensureModeReports(){
@@ -493,25 +494,26 @@
     if(phase==='skipped'&&current){screen='skipped';render();return}
     if(phase==='steal'&&current&&match.steal){screen='steal';render();return}
     if(phase==='locked'&&current){screen='locked';render();return}
-    if(current&&current.provider!==E.getProvider()){
+    const provider=E.getProvider();
+    if(phase==='loading'){
+      const loadingCardId=match.loadingCardId||(cfg.playMode==='virtual'?match.virtualDeck?.[match.virtualPos-1]:null);
+      if(current?.provider===provider)return replaceCurrentSong();
+      if(!current&&loadingCardId)return prepareCard(loadingCardId);
+    }
+    if(phase==='playing'&&current?.provider==='spotify'&&E.isSpotifyConnected())queueSpotifyStop(current.resolved?.uri);
+    if(current&&current.provider!==provider){
       const seq=++prepareSeq;
       try{
         screen='loading';render();
-        const resolved=await E.resolveSong(current.song,E.getProvider());
+        const resolved=await E.resolveSong(current.song,provider);
         if(seq!==prepareSeq)return;
-        current={...current,resolved,provider:E.getProvider()};
+        current={...current,resolved,provider};
         match.current=current;saveMatch();
       }catch(err){if(seq!==prepareSeq)return;showRoundError(err,{cardId:current?.cardId,year:current?.year});return}
     }
     if(phase==='guess'&&current){screen='guess';render();return}
-    const loadingCardId=match.loadingCardId||current?.cardId||(cfg.playMode==='virtual'?match.virtualDeck?.[match.virtualPos-1]:null);
-    if(phase==='loading'&&loadingCardId){
-      if(current){await replaceCurrentSong();return}
-      await prepareCard(loadingCardId);return
-    }
-
     if(phase==='scanner'&&cfg.playMode==='physical'){screen='scanner';render();return}
-    if(['ready','countdown','youtube','playing'].includes(phase)&&current){match.phase='ready';match.loadingCardId=null;saveMatch();screen='ready';render();return}
+    if(['ready','countdown','youtube','playing','loading'].includes(phase)&&current){match.phase='ready';match.loadingCardId=null;saveMatch();screen='ready';render();return}
     nextRound();
   }
 
@@ -535,7 +537,8 @@
     runtimeError={
       code,message:errorText(err),kind:P.preparationErrorKind(code),
       cardId:Number(context.cardId||current?.cardId)||null,
-      year:Number(context.year||current?.year)||null
+      year:Number(context.year||current?.year)||null,
+      replacing:context.replacing===true
     };
     if(match){match.error=runtimeError;match.loadingCardId=null;match.current=current;match.phase='error';saveMatch()}
     screen='error';render();resetScroll();
@@ -545,16 +548,19 @@
     if(!match||screen!=='error')return;
     const cardId=Number(runtimeError?.cardId);
     if(!cardId)return nextRound();
-    if(current?.song&&runtimeError.kind==='provider'){
-      const seq=++prepareSeq,provider=E.getProvider();
+    const provider=E.getProvider();
+    const providerChanged=!!current?.song&&current.provider!==provider;
+    if(runtimeError.replacing&&!providerChanged)return replaceCurrentSong();
+    if(current?.song&&(providerChanged||runtimeError.kind==='provider')){
+      const seq=++prepareSeq;
       screen='loading';render();
       try{
         const resolved=provider===current.provider?current.resolved:await E.resolveSong(current.song,provider);
         if(seq!==prepareSeq)return;
-        if(current.provider==='spotify')stopPlayback();
+        if(spotifyStopPending||current.provider==='spotify')queueSpotifyStop();
         current={...current,resolved,provider};
         match.error=null;runtimeError=null;match.phase='ready';syncCurrent();screen='ready';render();
-      }catch(err){if(seq===prepareSeq)showRoundError(err,{cardId})}
+      }catch(err){if(seq===prepareSeq)showRoundError(err,{cardId,replacing:runtimeError?.replacing})}
       return
     }
     clearRoundState();return prepareCard(cardId);
@@ -587,15 +593,27 @@
   async function prepareCard(cardId){
     if(!match)return;
     const year=E.cardYear(cardId);
+    if(!year||!P.yearInRange(year,selectedRange())){
+      const message=`That card is outside the selected range (${selectedRange().minYear}–${selectedRange().maxYear}).`;
+      if(match.phase==='loading')showRoundError(new E.AppError('MODE_YEAR_UNAVAILABLE',message),{cardId,year});
+      else rejectScannedCard(message);
+      return
+    }
     if(!modeReports[modeId()]){
       const seq=++prepareSeq;
-      screen='loading';render();
+      match.loadingCardId=cardId;match.phase='loading';saveMatch();screen='loading';render();
       try{await ensureModeReports()}catch(err){if(seq===prepareSeq)showRoundError(err,{cardId,year});return}
       if(seq!==prepareSeq)return;
     }
-    if(!year||!P.yearInRange(year,selectedRange())){rejectScannedCard(`That card is outside the selected range (${selectedRange().minYear}–${selectedRange().maxYear}).`);return}
-    if(!(modeReport().years||[]).includes(year)){rejectScannedCard(`${modeInfo().name} has no playable song for ${year}. Scan another card.`);return}
-    if(!yearHasAvailableSong(year)){if(!rangeHasAvailableSong()){endGame('range-exhausted');return}rejectScannedCard(`All usable songs for ${year} have already been used in this game. Scan another card.`);return}
+    const supported=(modeReport().years||[]).includes(year);
+    if(!supported||!yearHasAvailableSong(year)){
+      if(match.phase==='loading'){
+        showRoundError(new E.AppError('MODE_YEAR_UNAVAILABLE',`There are no usable songs left for ${year}. Try another card.`),{cardId,year});return
+      }
+      if(!supported){rejectScannedCard(`${modeInfo().name} has no playable song for ${year}. Scan another card.`);return}
+      if(!rangeHasAvailableSong()){endGame('range-exhausted');return}
+      rejectScannedCard(`All usable songs for ${year} have already been used in this game. Scan another card.`);return
+    }
     const seq=++prepareSeq;
     runtimeError=null;match.error=null;
     match.loadingCardId=cardId;match.phase='loading';saveMatch();screen='loading';render();
@@ -759,6 +777,10 @@
     match.phase='youtube';match.current=current;saveMatch();
     screen='youtube';render();resetScroll();
     try{
+      if(spotifyStopPending){
+        await spotifyStopPending;
+        if(seq!==playbackSeq||screen!=='youtube'||!current)return;
+      }
       if(current.resolved?.matchPolicy!=='title-artist-v1'){
         const resolved=await E.resolveSong(current.song,'youtube');
         if(seq!==playbackSeq||screen!=='youtube'||!current)return;
@@ -800,7 +822,9 @@
       const state=E.youtubePlayer()?.getPlayerState?.();
       if(state!==1){
         if(Date.now()<deadline){setTimeout(waitForPlaying,250);return}
-        playing=false;showRoundError(new E.AppError('YOUTUBE_PLAY_BLOCKED','The browser still blocked YouTube playback. Try again or change music service.'),{cardId:current.cardId,year:current.year});return;
+        playing=false;
+        const err=state===3?new E.AppError('YOUTUBE_TIMEOUT','YouTube is still buffering. Check the connection and retry this song.'):new E.AppError('YOUTUBE_PLAY_BLOCKED','The browser still blocked YouTube playback. Try again or change music service.');
+        showRoundError(err,{cardId:current.cardId,year:current.year});return;
       }
       playing=true;recordSongUsed();armYoutubeStopTimer();
     };
@@ -859,7 +883,7 @@
       }catch(err){lastErr=err;if(song){const k=E.songUseKey?.(song)||E.songKey(song);if(!excluded.includes(k))excluded.push(k)}if(P.preparationErrorKind(err?.code)!=='track')break}
     }
     if(seq!==prepareSeq)return;
-    showRoundError(lastErr||new E.AppError('PREPARE_FAILED','No alternative song could be prepared.'),{cardId,year});
+    showRoundError(lastErr||new E.AppError('PREPARE_FAILED','No alternative song could be prepared.'),{cardId,year,replacing:true});
   }
 
   async function togglePlay(){
@@ -895,13 +919,15 @@
     playbackSeq++;playing=false;spotifyStarting=false;
     if(!current)return Promise.resolve();
     if(current.provider==='youtube'){E.pauseYouTube();return Promise.resolve()}
+    return queueSpotifyStop();
+  }
+  function queueSpotifyStop(expectedUri){
     let stopping;
-    try{stopping=Promise.resolve(E.pauseSpotify())}
+    try{stopping=Promise.resolve(E.pauseSpotify(expectedUri))}
     catch(error){stopping=Promise.reject(error)}
     spotifyStopPending=stopping;
-    // Callers that do not await a UI-triggered stop must not create an
-    // unhandled rejection. The next Spotify startup still sees its failure.
-    stopping.catch(()=>{});
+    // Keep a failed stop visible to the next provider until Retry issues a new one.
+    stopping.then(()=>{if(spotifyStopPending===stopping)spotifyStopPending=null},()=>{});
     return stopping;
   }
 
