@@ -9,6 +9,7 @@ const ledger=JSON.parse(fs.readFileSync('verification/bangers-v3-implementation.
 assert.deepEqual(compileDatabase(db,manifest),cat);
 assert.equal(manifest.modes.bangers.status,'preview');
 assert.equal(manifest.modes.bangers.yearBasis,'release');
+assert.deepEqual(Object.keys(manifest.modes).slice(0,2),['greatest','bangers'],'Bangers must be easy to find in the mode picker');
 assert.equal(ledger.proposedHeadliners,110);
 assert.equal(ledger.included.length,102);
 assert.equal(ledger.newMasterIds.length,40);
