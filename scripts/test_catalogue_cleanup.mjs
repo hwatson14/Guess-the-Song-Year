@@ -36,7 +36,13 @@ const expectedCoverage={...baseline.coverage,unexpected:65};
 for(const [mode,r] of Object.entries(reports)){
   assert.equal(r.songs,r.rawSongs,`${mode}: source and usable totals diverged`);
   if(Object.hasOwn(baseline.coverage,mode))assert.equal(r.coverage,expectedCoverage[mode],`${mode}: year coverage changed`);
-  else{
+  else if(mode==='bangers'){
+    const bangersLedger=JSON.parse(fs.readFileSync('verification/bangers-v3-implementation.json','utf8'));
+    assert.equal(manifest.modes[mode]?.status,'preview','New Bangers is explicitly evidence-gated Preview');
+    assert.equal(r.songs,bangersLedger.included.length,'Bangers must contain only the reviewed V3 selections');
+    assert.equal(r.coverage,new Set(bangersLedger.included.map(x=>x.answerYear)).size,
+      'Bangers coverage must match its own V3 ledger, not the historical cleanup baseline');
+  }else{
     assert.equal(manifest.modes[mode]?.status,'building',`${mode}: only declared building modes may be absent from the historical cleanup baseline`);
     assert.equal(r.coverage,0,`${mode}: new building mode unexpectedly contains production rows`);
     assert.equal(r.songs,0,`${mode}: new building mode unexpectedly contains production songs`);
