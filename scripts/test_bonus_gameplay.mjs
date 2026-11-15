@@ -20,7 +20,7 @@ const current={cardId:1,year:2000,song:catalogue[0],provider:'youtube',resolved:
 const node={innerHTML:'',textContent:'',classList:{add(){},remove(){},toggle(){}},querySelector(){return null},querySelectorAll(){return[]}};
 
 async function make(saved={}){
-  let autoReveal;
+  let scheduledTimeouts=0;
   const store=new Map(), cfg={playMode:'virtual',teams:2,victory:'10',mode:'greatest',minYear:2000,maxYear:2003};
   const base={active:true,mode:'greatest',phase:'reveal',round:4,turn:0,settings:cfg,current,placementResult:{correct:true,slot:1},pendingSlot:null,
     teams:[{name:'Team 1',score:2,correct:2,wrong:0,bonusPoints:0,bonusYears:0,timeline:[1990,2000]},{name:'Team 2',score:1,correct:1,wrong:0,bonusPoints:0,bonusYears:0,timeline:[1991]}],
@@ -33,10 +33,10 @@ async function make(saved={}){
     pauseYouTube(){},destroyYouTube(){},pauseSpotify:async()=>{},replayYouTube:()=>true,baseCardYear:id=>E.cardYear(id),cardYearReference:id=>({year:E.cardYear(id)}),setCardYearReference(){},
     AppError:class AppError extends Error{constructor(code,msg){super(msg);this.code=code}}
   };
-  const ctx=vm.createContext({window:{GSYEngine:E,addEventListener(){},scrollTo(){}},document:{getElementById:id=>['app','toast'].includes(id)?node:null,activeElement:null,querySelectorAll:()=>[],addEventListener(){}},localStorage:{getItem:k=>store.get(k)??null,setItem:(k,v)=>store.set(k,v),removeItem:k=>store.delete(k)},navigator:{},requestAnimationFrame(fn){fn?.()},setTimeout(fn,ms){if(ms===3000){autoReveal=fn;return 2}fn?.();return 1},clearTimeout(id){if(id===2)autoReveal=undefined},setInterval(){return 1},clearInterval(){},URL,console,prompt(){return null},history:{state:null,replaceState(){},pushState(){},back(){}}});
+  const ctx=vm.createContext({window:{GSYEngine:E,addEventListener(){},scrollTo(){}},document:{getElementById:id=>['app','toast'].includes(id)?node:null,activeElement:null,querySelectorAll:()=>[],addEventListener(){}},localStorage:{getItem:k=>store.get(k)??null,setItem:(k,v)=>store.set(k,v),removeItem:k=>store.delete(k)},navigator:{},requestAnimationFrame(fn){fn?.()},setTimeout(fn){scheduledTimeouts++;fn?.();return 1},clearTimeout(){},setInterval(){return 1},clearInterval(){},URL,console,prompt(){return null},history:{state:null,replaceState(){},pushState(){},back(){}}});
   vm.runInContext(policy,ctx); vm.runInContext(source,ctx);
   const R=ctx.window.__test; R.setState({cfg,match:JSON.parse(JSON.stringify(base)),current:base.current,screen:'reveal',pendingSlot:null,placementResult:base.placementResult});
-  return {R,E,store,node,autoReveal:()=>autoReveal?.(),state:()=>R.getState()};
+  return {R,E,store,node,timeoutCount:()=>scheduledTimeouts,state:()=>R.getState()};
 }
 
 // Honour is stored on the active team, adds no card score, and survives reload.
@@ -93,18 +93,19 @@ async function placing(teams=[team('Team 1'),team('Team 2')],slot=0){
 // Lock hides the answer and survives Resume. Undo opens the same card with a clean placement.
 {
   const h=await placing();
-  assert.match(h.R.virtualTimeline(),/>Reveal<\/button>/);
+  assert.match(h.R.virtualTimeline(),/>Lock placement<\/button>/);
   assert.match(h.R.virtualTimeline(),/>Steal<\/button>/);
   const before=JSON.stringify(h.state().match.teams);
+  const timersBefore=h.timeoutCount();
   h.R.lockPlacement();
   h.R.lockPlacement();
+  assert.equal(h.timeoutCount(),timersBefore,'locking a placement must not schedule a reveal');
   assert.equal(h.state().screen,'locked');
   assert.match(h.node.innerHTML,/Undo placement/);
   assert.doesNotMatch(h.node.innerHTML,/Alpha|Example Artist|answer-year/);
   assert.equal(JSON.stringify(h.state().match.teams),before);
   h.R.handleBack();
-  h.autoReveal();
-  assert.equal(h.state().screen,'resume','Back cancels the automatic reveal');
+  assert.equal(h.state().screen,'resume');
   assert.equal(h.state().match.phase,'locked');
   const reload=await make(JSON.parse(h.store.get('gsy.match.v7')));
   await reload.R.resumeMatch();
@@ -115,7 +116,8 @@ async function placing(teams=[team('Team 1'),team('Team 2')],slot=0){
   assert.equal(reload.state().current.cardId,1);
   reload.R.selectSlot(1);
   reload.R.lockPlacement();
-  reload.autoReveal();
+  assert.equal(reload.state().screen,'locked');
+  reload.R.revealPlacement();
   reload.R.undoPlacement();
   reload.R.revealPlacement();
   assert.equal(reload.state().screen,'reveal');
