@@ -9,4 +9,9 @@ assert.match(playbackCss,/@media\(max-width:520px\)[\s\S]*\.screen-setup \.setup
 assert.match(playbackCss,/\.screen-setup \.setup-grid\{[\s\S]*align-content:start;/,'scrollable setup content must start at the top rather than center overflow');
 assert.match(playbackCss,/\.screen-setup \.setup-grid\{[\s\S]*-webkit-overflow-scrolling:touch;/,'mobile setup scrolling should retain momentum scrolling support');
 
+assert.match(appCss,/main\.app:is\([^)]*\.screen-locked[^)]*\)\{[^}]*height:100svh;[^}]*overflow:hidden;/,
+  'a long locked timeline must scroll within the board and keep Undo reachable');
+assert.match(appCss,/\.timeline-board\{[^}]*min-height:0;[^}]*overflow-y:auto;/);
+assert.match(appCss,/\.board-actionbar\{[^}]*flex:none;/);
+
 console.log('Mobile setup scroll regression tests passed');
