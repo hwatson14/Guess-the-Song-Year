@@ -5,7 +5,6 @@
   if(!E||!P)throw new Error('GSYEngine and GSYAppPolicy must load before app.js');
   const root=document.getElementById('app'),toastEl=document.getElementById('toast');
   const CFG_KEY='gsy.config.v7',MATCH_KEY='gsy.match.v7';
-  const PLACEMENT_UNDO_MS=3000;
   const DEFAULT_CFG={playMode:'physical',teams:2,victory:'10',mode:'greatest',minYear:P.GAME_YEAR_MIN,maxYear:P.GAME_YEAR_MAX};
 
   let cfg=load(CFG_KEY,DEFAULT_CFG),match=load(MATCH_KEY,null);
@@ -14,7 +13,7 @@
   let musicModal=false,deviceList=[],backGuardReady=false,prepareSeq=0,playbackSeq=0,countdownTimer=null,youtubeListenTimer=null,youtubeDownAt=0;
   let lastRenderedScreen=null,lastModalOpen=false;
   let modeReports={},bonusBusy=false;
-  let spotifyStarting=false,spotifyStopPending=null,placementRevealTimer=null;
+  let spotifyStarting=false,spotifyStopPending=null;
 
   const esc=s=>String(s??'').replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));
   function load(k,f){try{return JSON.parse(localStorage.getItem(k))??f}catch{return f}}
@@ -47,7 +46,7 @@
     while(slot>0&&slot<years.length&&years[slot-1]===years[slot])slot++;
     return slot;
   }
-  function placementLockCopy(){if(pendingSlot===null)return 'Lock Placement';const years=[...(activeTeam().timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b),slot=placementBoundarySlot(years,pendingSlot),label=placementLabel(years,slot);return `Lock ${label.charAt(0).toLowerCase()}${label.slice(1)}`}
+  function placementLockCopy(){if(pendingSlot===null)return 'Lock placement';const years=[...(activeTeam().timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b),slot=placementBoundarySlot(years,pendingSlot),label=placementLabel(years,slot);return `Lock placement ${label.charAt(0).toLowerCase()}${label.slice(1)}`}
   function selectedRange(){const settings=match?.settings||cfg;return P.normalizeYearRange(settings.minYear,settings.maxYear)}
   function rangeStats(id=cfg.mode){const range=selectedRange();return {...P.rangeStats(modeReport(id),range.minYear,range.maxYear),eligibleCards:virtualCardsForMode(id).length}}
   function yearHasAvailableSong(year){const report=modeReport(modeId());if(!(report.years||[]).includes(Number(year)))return false;if(report.repeatPolicy==='fixed')return true;const keys=report.yearSongKeys?.[year]||report.yearSongKeys?.[String(year)]||[],legacy=report.songLegacyKeys?.[year]||report.songLegacyKeys?.[String(year)]||{};return keys.some(k=>!(match?.used||[]).includes(k)&&!(legacy[k]||[]).some(alias=>(match?.used||[]).includes(alias)))}
@@ -235,11 +234,11 @@
   }
 
   function virtualTimeline(){
-    return `${timelineBoard(true)}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="listen-again" ${bonusBusy||spotifyStarting?'disabled':''}>Listen again</button>${stealButton()}<button class="btn primary" data-action="lock-placement" aria-label="Reveal answer: ${esc(placementLockCopy())}" ${pendingSlot===null||bonusBusy?'disabled':''}>Reveal</button></div>`;
+    return `${timelineBoard(true)}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="listen-again" ${bonusBusy||spotifyStarting?'disabled':''}>Listen again</button>${stealButton()}<button class="btn primary" data-action="lock-placement" aria-label="${esc(placementLockCopy())}" ${pendingSlot===null||bonusBusy?'disabled':''}>Lock placement</button></div>`;
   }
   function lockedScreen(){
     const years=[...activeTeam().timeline].map(Number).filter(Number.isFinite).sort((a,b)=>a-b);
-    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>Placement locked</h1><p>${esc(placementLabel(years,pendingSlot))}</p></div>${timelineBoard()}<div class="board-actionbar"><button class="btn text" data-action="undo-placement">Undo placement</button>${stealButton()}<button class="btn primary" data-action="reveal-placement">Reveal now</button></div>`;
+    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>Placement locked</h1><p>${esc(placementLabel(years,pendingSlot))}</p></div>${timelineBoard()}<div class="board-actionbar"><button class="btn text" data-action="undo-placement">Undo placement</button>${stealButton()}<button class="btn primary" data-action="reveal-placement">Reveal</button></div>`;
   }
   function stealButton(){return match?.teams.length>1?`<button class="btn ghost" data-action="start-steal" ${bonusBusy||(cfg.playMode==='virtual'&&pendingSlot===null)||!match.teams.some((_,i)=>canSteal(i))?'disabled':''}>Steal</button>`:''}
   function bonusBalance(team=activeTeam()){
@@ -412,7 +411,6 @@
 
   function suspendForBackground(){
     if(screen==='scanner')stopScanner();
-    cancelPlacementReveal();
     if(screen==='countdown'){
       cancelCountdown();
       if(match){match.phase='ready';saveMatch()}
@@ -443,7 +441,7 @@
   function handleBack(){
     if(!P.shouldInterceptBack({musicModal,screen}))return false;
     if(musicModal){musicModal=false;render();return true}
-    cancelCountdown();cancelYoutubeListening();cancelPlacementReveal();prepareSeq++;
+    cancelCountdown();cancelYoutubeListening();prepareSeq++;
     if(screen==='scanner')stopScanner();
     if(screen==='playing'||screen==='youtube')stopPlayback();
     screen='resume';render();resetScroll();return true;
@@ -524,7 +522,7 @@
   }
 
   function clearRoundState(){
-    cancelCountdown();cancelYoutubeListening();cancelPlacementReveal();prepareSeq++;
+    cancelCountdown();cancelYoutubeListening();prepareSeq++;
     current=null;pendingSlot=null;placementResult=null;runtimeError=null;playing=false;playNeedsTap=false;youtubeDownAt=0;
     E.destroyYouTube();
     if(match){match.bonusAwarded=false;match.lastBonusYear=null;match.steal=null;match.skipReason=null;match.current=null;match.placementResult=null;match.pendingSlot=null;match.loadingCardId=null;match.error=null;match.phase='between'}
@@ -1004,20 +1002,14 @@
     pendingSlot=slot;match.pendingSlot=slot;
     stopPlayback();
     match.phase='locked';saveMatch();screen='locked';render();
-    placementRevealTimer=setTimeout(revealPlacement,PLACEMENT_UNDO_MS);
-  }
-  function cancelPlacementReveal(){
-    if(placementRevealTimer!==null){clearTimeout(placementRevealTimer);placementRevealTimer=null}
   }
   function undoPlacement(){
     const steal=match?.steal;
     if(!current||cfg.playMode!=='virtual'||(screen!=='locked'&&!(screen==='steal'&&steal?.virtual&&!steal.challenges.length)))return;
-    cancelPlacementReveal();
     pendingSlot=null;match.pendingSlot=null;match.steal=null;match.phase='guess';
     saveMatch();screen='guess';render();
   }
   function revealPlacement(){
-    cancelPlacementReveal();
     if(screen!=='locked'||!current||pendingSlot===null)return;
     const years=[...activeTeam().timeline].map(Number).filter(Number.isFinite).sort((a,b)=>a-b);
     settleVirtualPlacement(years,pendingSlot);
@@ -1041,7 +1033,6 @@
     const virtual=cfg.playMode==='virtual',years=[...(activeTeam().timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b);
     if(virtual&&pendingSlot===null)return;
     const slot=virtual?placementBoundarySlot(years,pendingSlot):null;
-    cancelPlacementReveal();
     match.steal={virtual,years,slot,challenges:[],selectedTeam:null,selectedSlot:null,resolved:false,winner:null};
     cancelYoutubeListening();if(screen!=='locked')stopPlayback();E.destroyYouTube();
     pendingSlot=null;match.pendingSlot=null;match.phase='steal';syncCurrent();screen='steal';render();resetScroll();
