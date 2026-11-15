@@ -118,7 +118,7 @@
     match.error=match.error&&typeof match.error==='object'?match.error:null;
     match.used=Array.isArray(match.used)?match.used:[];
     match.history=Array.isArray(match.history)?match.history:[];
-    for(const team of match.teams||[]){team.bonusPoints=bonusBalance(team);team.bonusYears=Math.max(0,Number(team.bonusYears)||0);team.correct=Number(team.correct)||Number(team.score)||0;team.wrong=Number(team.wrong)||0;team.timeline=Array.isArray(team.timeline)?team.timeline:[]}
+    for(const team of match.teams||[]){team.bonusPoints=bonusBalance(team);team.bonusYears=Math.max(0,Number(team.bonusYears)||0);team.correct=Number(team.correct??team.score)||0;team.wrong=Number(team.wrong)||0;team.timeline=Array.isArray(team.timeline)?team.timeline:[]}
     match.bonusAwarded=match.bonusAwarded===true;
     // Older physical matches recorded outcomes but did not populate their timeline.
     if(cfg.playMode==='physical')for(const [i,team] of (match.teams||[]).entries()){
@@ -313,8 +313,10 @@
     const virtual=cfg.playMode==='virtual',marked=!!placementResult,song=current?.song||{};
     const stolenBy=match.teams[match.steal?.winner];
     const result=stolenBy?`${esc(stolenBy.name)} stole the card`:marked?(placementResult.correct?'Correct placement':'Wrong position'):'Mark your placement';
+    const undoLabel=virtual?'Undo placement':'Undo result';
+    const undo=canUndoReveal()?`<button class="btn text" data-action="undo-reveal" ${bonusBusy?'disabled':''}>${undoLabel}</button>`:'';
     const answerContext=song.screenWorkTitle?`${song.screenWorkType==='movie'?'Movie':'TV show'}: ${song.screenWorkTitle}`:song.playbackVariant==='remix'?`Played: ${song.remixTitle||song.title}${song.remixer?` · ${song.remixer} remix`:''}`:'';
-    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>Reveal</h1></div><section class="card answer-card"><div class="answer-top"><div><div class="answer-song">${esc(song.title||'Unknown')}</div><div class="answer-artist">${esc(song.artist||'')}</div>${answerContext?`<div class="answer-context">${esc(answerContext)}</div>`:''}</div><div class="answer-year">${current?.year||'----'}</div></div><div class="result-badge ${stolenBy?'stolen':marked?(placementResult.correct?'ok':'bad'):''}" role="status">${result}</div></section>${timelineBoard()}${stealResultNotice()}${bonusCardNotice()}${marked?`${bonusActions(true)}<div class="board-actionbar"><button class="btn primary" data-action="next-turn" ${bonusBusy||match.steal?.physicalPending?'disabled':''}>${winner()?'See results':'Next Team'}</button></div>`:`<div class="board-actionbar"><button class="btn ghost" data-action="wrong-answer">Wrong placement</button><button class="btn primary" data-action="correct-answer">Correct placement</button></div>`}${!virtual?'<button class="btn text" data-action="update-card-year">Update card year reference</button>':''}`;
+    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>Reveal</h1></div><section class="card answer-card"><div class="answer-top"><div><div class="answer-song">${esc(song.title||'Unknown')}</div><div class="answer-artist">${esc(song.artist||'')}</div>${answerContext?`<div class="answer-context">${esc(answerContext)}</div>`:''}</div><div class="answer-year">${current?.year||'----'}</div></div><div class="result-badge ${stolenBy?'stolen':marked?(placementResult.correct?'ok':'bad'):''}" role="status">${result}</div></section>${timelineBoard()}${stealResultNotice()}${bonusCardNotice()}${marked?`${bonusActions(true)}<div class="board-actionbar">${undo}<button class="btn primary" data-action="next-turn" ${bonusBusy||match.steal?.physicalPending?'disabled':''}>${winner()?'See results':'Next Team'}</button></div>`:`<div class="board-actionbar"><button class="btn ghost" data-action="wrong-answer">Wrong placement</button><button class="btn primary" data-action="correct-answer">Correct placement</button></div>`}${!virtual?'<button class="btn text" data-action="update-card-year">Update card year reference</button>':''}`;
   }
 
   function gameOverScreen(){
@@ -369,6 +371,7 @@
       if(a==='update-card-year')b.onclick=updateCardYearReference;
       if(a==='lock-placement')b.onclick=lockPlacement;
       if(a==='undo-placement')b.onclick=undoPlacement;
+      if(a==='undo-reveal')b.onclick=undoReveal;
       if(a==='reveal-placement')b.onclick=revealPlacement;
       if(a==='start-steal')b.onclick=startSteal;
       if(a==='next-skipped')b.onclick=()=>{if(screen==='skipped'&&match?.phase==='skipped')nextRound()};
@@ -1008,6 +1011,45 @@
     if(!current||cfg.playMode!=='virtual'||(screen!=='locked'&&!(screen==='steal'&&steal?.virtual&&!steal.challenges.length)))return;
     pendingSlot=null;match.pendingSlot=null;match.steal=null;match.phase='guess';
     saveMatch();screen='guess';render();
+  }
+  function revealRoundEntry(entry){
+    return entry.round===match.round&&entry.cardId===current.cardId;
+  }
+  function revealPlacementEntry(entry){
+    return revealRoundEntry(entry)&&entry.team===match.turn&&entry.outcome===(placementResult.correct?'correct':'wrong');
+  }
+  function canUndoReveal(){
+    return screen==='reveal'&&!!current&&!!placementResult&&match.history.some(revealPlacementEntry);
+  }
+  function removeRevealedCard(team){
+    const index=team.timeline.lastIndexOf(current.year);
+    if(index!==-1)team.timeline.splice(index,1);
+    team.score--;
+  }
+  function undoReveal(){
+    if(bonusBusy||!canUndoReveal())return;
+    const virtual=cfg.playMode==='virtual',team=activeTeam(),steal=match.steal;
+    if(placementResult.correct){removeRevealedCard(team);team.correct--}
+    else team.wrong--;
+    if(Number.isInteger(steal?.winner)){
+      const winner=match.teams[steal.winner];
+      removeRevealedCard(winner);winner.stolen--;
+    }
+    match.history=match.history.filter(entry=>!(revealPlacementEntry(entry)||
+      (revealRoundEntry(entry)&&(entry.outcome==='steal-won'||(virtual&&entry.outcome==='steal-attempt')))));
+    if(virtual){
+      for(const claim of steal?.challenges||[]){
+        const challenger=match.teams[claim.team];
+        challenger.bonusPoints=bonusBalance(challenger)+1;
+      }
+      match.steal=null;
+      pendingSlot=null;match.pendingSlot=null;
+      screen='guess';
+    }else if(steal){
+      steal.winner=null;steal.physicalPending=false;steal.resolved=false;steal.checkIndex=0;
+      for(const claim of steal.challenges)delete claim.correct;
+    }
+    placementResult=null;match.phase=screen;syncCurrent();render();
   }
   function revealPlacement(){
     if(screen!=='locked'||!current||pendingSlot===null)return;

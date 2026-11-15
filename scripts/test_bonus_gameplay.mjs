@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 const policy = fs.readFileSync('app-policy.js','utf8');
 const source = fs.readFileSync('app.js','utf8').replace('  boot();',`  modeReports=E.modeReports();
   window.__test={addBonusPoint,buyBonusYear,newCardForRepeat,finishPhysical,
-    finishVirtualTurn,lockPlacement,undoPlacement,revealPlacement,selectSlot,migrateMatch,handleBack,saveMatch,startMatch,resumeMatch,
+    finishVirtualTurn,lockPlacement,undoPlacement,undoReveal,revealPlacement,selectSlot,migrateMatch,handleBack,saveMatch,startMatch,resumeMatch,
     startSteal,selectStealTeam,selectStealSlot,commitSteal,revealSteals,judgePhysicalSteal,
     revealPhysical,skippedScreen,virtualTimeline,clearRoundState,skipBrokenSong,skipFailedCard,
     bonusActions,youtubeListeningScreen,startSpotifyListening,
@@ -133,6 +133,57 @@ async function placing(teams=[team('Team 1'),team('Team 2')],slot=0){
   assert.equal(h.state().screen,'guess');
   assert.equal(h.state().match.steal,null);
   assert.equal(h.state().match.teams[1].bonusPoints,2);
+}
+
+// Undo on Reveal reopens the current card even after resuming an existing save.
+{
+  const h=await placing([team('Team 1',5,[1990,2000],7),team('Team 2')],1);
+  h.R.lockPlacement();h.R.revealPlacement();
+  h.R.addBonusPoint();await h.R.buyBonusYear();
+  assert.match(h.node.innerHTML,/data-action="undo-reveal"[^>]*>Undo placement/);
+  const saved=JSON.parse(h.store.get('gsy.match.v7'));
+  const reload=await make(saved);
+  reload.R.migrateMatch();await reload.R.resumeMatch();
+  reload.R.undoReveal();reload.R.undoReveal();
+  const reopened=reload.state().match,active=reopened.teams[0];
+  assert.equal(reload.state().screen,'guess');
+  assert.equal(reopened.current.cardId,1);assert.equal(reopened.turn,saved.turn);
+  assert.equal(active.score,8);
+  assert.deepEqual(Array.from(active.timeline),[1990,2000,saved.lastBonusYear.year]);
+  assert.equal(active.bonusPoints,1);
+  assert.deepEqual(Array.from(reopened.history,e=>e.outcome),['bonus-earned','bonus-year']);
+  assert.doesNotMatch(reload.node.innerHTML,/Alpha|answer-year/);
+  reload.R.selectSlot(1);reload.R.lockPlacement();reload.R.revealPlacement();reload.R.addBonusPoint();
+  assert.equal(active.score,9);assert.equal(active.bonusPoints,1,'a placement correction must not grant a second bonus');
+  assert.equal(reopened.history.filter(e=>e.outcome==='correct').length,1);
+}
+
+{
+  const h=await placing([team('Team 1'),team('Team 2',2,[1980,2000],1)]);
+  h.R.startSteal();h.R.selectStealTeam(1);h.R.selectStealSlot(1);h.R.commitSteal();h.R.revealSteals();
+  h.R.undoReveal();
+  const m=h.state().match;
+  assert.equal(h.state().screen,'guess');assert.equal(m.steal,null);
+  assert.equal(m.teams[0].wrong,0);assert.equal(m.teams[1].score,1);assert.equal(m.teams[1].stolen,0);
+  assert.deepEqual(Array.from(m.teams[1].timeline),[1980,2000]);
+  assert.equal(m.teams[1].bonusPoints,2,'refunded because the virtual challenge is reopened');
+  assert.equal(m.history.length,0);
+}
+{
+  const h=await placing();
+  h.R.setState({cfg:{playMode:'physical'}});
+  h.R.startSteal();h.R.selectStealTeam(1);h.R.commitSteal();h.R.revealSteals();
+  h.R.finishPhysical(false);h.R.judgePhysicalSteal(true);
+  assert.match(h.node.innerHTML,/data-action="undo-reveal"[^>]*>Undo result/);
+  h.R.undoReveal();
+  const m=h.state().match;
+  assert.equal(h.state().screen,'reveal');assert.equal(m.placementResult,null);
+  assert.equal(m.teams[0].wrong,0);assert.equal(m.teams[1].score,0);assert.equal(m.teams[1].stolen,0);
+  assert.equal(m.teams[1].bonusPoints,1,'registered physical challenge stays committed');
+  assert.equal(m.steal.winner,null);assert.equal(m.steal.challenges[0].correct,undefined);
+  assert.deepEqual(Array.from(m.history,e=>e.outcome),['steal-attempt']);
+  h.R.finishPhysical(true);
+  assert.equal(m.teams[0].score,1);assert.equal(m.teams[1].score,0);
 }
 
 // A committed steal stays hidden, costs once, survives Back/Resume and wins only
