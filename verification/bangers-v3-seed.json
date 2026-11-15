@@ -1,0 +1,814 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-15",
+  "label": "Australian group-singalong curation V3",
+  "headliners": [
+    {
+      "title": "Brown Eyed Girl",
+      "artist": "Van Morrison",
+      "era": "1960s"
+    },
+    {
+      "title": "Sweet Caroline",
+      "artist": "Neil Diamond",
+      "era": "1960s"
+    },
+    {
+      "title": "Am I Ever Gonna See Your Face Again",
+      "artist": "The Angels",
+      "era": "1970s"
+    },
+    {
+      "title": "Bohemian Rhapsody",
+      "artist": "Queen",
+      "era": "1970s"
+    },
+    {
+      "title": "Dancing Queen",
+      "artist": "ABBA",
+      "era": "1970s"
+    },
+    {
+      "title": "Don't Stop Me Now",
+      "artist": "Queen",
+      "era": "1970s"
+    },
+    {
+      "title": "Eagle Rock",
+      "artist": "Daddy Cool",
+      "era": "1970s"
+    },
+    {
+      "title": "Gimme! Gimme! Gimme! (A Man After Midnight)",
+      "artist": "ABBA",
+      "era": "1970s"
+    },
+    {
+      "title": "Highway to Hell",
+      "artist": "AC/DC",
+      "era": "1970s"
+    },
+    {
+      "title": "I Will Survive",
+      "artist": "Gloria Gaynor",
+      "era": "1970s"
+    },
+    {
+      "title": "Khe Sanh",
+      "artist": "Cold Chisel",
+      "era": "1970s"
+    },
+    {
+      "title": "Mamma Mia",
+      "artist": "ABBA",
+      "era": "1970s"
+    },
+    {
+      "title": "Nutbush City Limits",
+      "artist": "Ike & Tina Turner",
+      "era": "1970s"
+    },
+    {
+      "title": "September",
+      "artist": "Earth, Wind & Fire",
+      "era": "1970s"
+    },
+    {
+      "title": "Stayin' Alive",
+      "artist": "Bee Gees",
+      "era": "1970s"
+    },
+    {
+      "title": "Summer Nights",
+      "artist": "John Travolta & Olivia Newton-John",
+      "era": "1970s"
+    },
+    {
+      "title": "Sweet Home Alabama",
+      "artist": "Lynyrd Skynyrd",
+      "era": "1970s"
+    },
+    {
+      "title": "Take Me Home, Country Roads",
+      "artist": "John Denver",
+      "era": "1970s"
+    },
+    {
+      "title": "We Will Rock You",
+      "artist": "Queen",
+      "era": "1970s"
+    },
+    {
+      "title": "You're the One That I Want",
+      "artist": "John Travolta & Olivia Newton-John",
+      "era": "1970s"
+    },
+    {
+      "title": "9 to 5",
+      "artist": "Dolly Parton",
+      "era": "1980s"
+    },
+    {
+      "title": "Africa",
+      "artist": "Toto",
+      "era": "1980s"
+    },
+    {
+      "title": "Billie Jean",
+      "artist": "Michael Jackson",
+      "era": "1980s"
+    },
+    {
+      "title": "Come On Eileen",
+      "artist": "Dexys Midnight Runners",
+      "era": "1980s"
+    },
+    {
+      "title": "Don't Stop Believin'",
+      "artist": "Journey",
+      "era": "1980s"
+    },
+    {
+      "title": "Down Under",
+      "artist": "Men at Work",
+      "era": "1980s"
+    },
+    {
+      "title": "Flame Trees",
+      "artist": "Cold Chisel",
+      "era": "1980s"
+    },
+    {
+      "title": "Footloose",
+      "artist": "Kenny Loggins",
+      "era": "1980s"
+    },
+    {
+      "title": "Girls Just Want to Have Fun",
+      "artist": "Cyndi Lauper",
+      "era": "1980s"
+    },
+    {
+      "title": "I Wanna Dance with Somebody",
+      "artist": "Whitney Houston",
+      "era": "1980s"
+    },
+    {
+      "title": "I Want to Break Free",
+      "artist": "Queen",
+      "era": "1980s"
+    },
+    {
+      "title": "I'm Gonna Be (500 Miles)",
+      "artist": "The Proclaimers",
+      "era": "1980s"
+    },
+    {
+      "title": "I'm Still Standing",
+      "artist": "Elton John",
+      "era": "1980s"
+    },
+    {
+      "title": "Like a Prayer",
+      "artist": "Madonna",
+      "era": "1980s"
+    },
+    {
+      "title": "Livin' on a Prayer",
+      "artist": "Bon Jovi",
+      "era": "1980s"
+    },
+    {
+      "title": "Love Shack",
+      "artist": "The B-52's",
+      "era": "1980s"
+    },
+    {
+      "title": "Never Gonna Give You Up",
+      "artist": "Rick Astley",
+      "era": "1980s"
+    },
+    {
+      "title": "Summer of '69",
+      "artist": "Bryan Adams",
+      "era": "1980s"
+    },
+    {
+      "title": "Sweet Child o' Mine",
+      "artist": "Guns N' Roses",
+      "era": "1980s"
+    },
+    {
+      "title": "Take on Me",
+      "artist": "a-ha",
+      "era": "1980s"
+    },
+    {
+      "title": "The Best",
+      "artist": "Tina Turner",
+      "era": "1980s"
+    },
+    {
+      "title": "Wake Me Up Before You Go-Go",
+      "artist": "Wham!",
+      "era": "1980s"
+    },
+    {
+      "title": "Walking on Sunshine",
+      "artist": "Katrina and the Waves",
+      "era": "1980s"
+    },
+    {
+      "title": "You're the Voice",
+      "artist": "John Farnham",
+      "era": "1980s"
+    },
+    {
+      "title": "...Baby One More Time",
+      "artist": "Britney Spears",
+      "era": "1990s"
+    },
+    {
+      "title": "All Star",
+      "artist": "Smash Mouth",
+      "era": "1990s"
+    },
+    {
+      "title": "All the Small Things",
+      "artist": "blink-182",
+      "era": "1990s"
+    },
+    {
+      "title": "Barbie Girl",
+      "artist": "Aqua",
+      "era": "1990s"
+    },
+    {
+      "title": "Believe",
+      "artist": "Cher",
+      "era": "1990s"
+    },
+    {
+      "title": "Don't Look Back in Anger",
+      "artist": "Oasis",
+      "era": "1990s"
+    },
+    {
+      "title": "Everybody (Backstreet's Back)",
+      "artist": "Backstreet Boys",
+      "era": "1990s"
+    },
+    {
+      "title": "Freed from Desire",
+      "artist": "Gala",
+      "era": "1990s"
+    },
+    {
+      "title": "I Want It That Way",
+      "artist": "Backstreet Boys",
+      "era": "1990s"
+    },
+    {
+      "title": "Mambo No. 5",
+      "artist": "Lou Bega",
+      "era": "1990s"
+    },
+    {
+      "title": "Man! I Feel Like a Woman!",
+      "artist": "Shania Twain",
+      "era": "1990s"
+    },
+    {
+      "title": "No Scrubs",
+      "artist": "TLC",
+      "era": "1990s"
+    },
+    {
+      "title": "The Horses",
+      "artist": "Daryl Braithwaite",
+      "era": "1990s"
+    },
+    {
+      "title": "Thunderstruck",
+      "artist": "AC/DC",
+      "era": "1990s"
+    },
+    {
+      "title": "Wannabe",
+      "artist": "Spice Girls",
+      "era": "1990s"
+    },
+    {
+      "title": "What's Up?",
+      "artist": "4 Non Blondes",
+      "era": "1990s"
+    },
+    {
+      "title": "Wonderwall",
+      "artist": "Oasis",
+      "era": "1990s"
+    },
+    {
+      "title": "Zombie",
+      "artist": "The Cranberries",
+      "era": "1990s"
+    },
+    {
+      "title": "A Thousand Miles",
+      "artist": "Vanessa Carlton",
+      "era": "2000s"
+    },
+    {
+      "title": "Bad Romance",
+      "artist": "Lady Gaga",
+      "era": "2000s"
+    },
+    {
+      "title": "Bye Bye Bye",
+      "artist": "*NSYNC",
+      "era": "2000s"
+    },
+    {
+      "title": "Can't Get You Out of My Head",
+      "artist": "Kylie Minogue",
+      "era": "2000s"
+    },
+    {
+      "title": "Complicated",
+      "artist": "Avril Lavigne",
+      "era": "2000s"
+    },
+    {
+      "title": "Crazy in Love",
+      "artist": "Beyoncé",
+      "era": "2000s"
+    },
+    {
+      "title": "Dancing in the Moonlight",
+      "artist": "Toploader",
+      "era": "2000s"
+    },
+    {
+      "title": "Everytime We Touch",
+      "artist": "Cascada",
+      "era": "2000s"
+    },
+    {
+      "title": "Get the Party Started",
+      "artist": "P!nk",
+      "era": "2000s"
+    },
+    {
+      "title": "Hey Ya!",
+      "artist": "OutKast",
+      "era": "2000s"
+    },
+    {
+      "title": "Hips Don't Lie",
+      "artist": "Shakira",
+      "era": "2000s"
+    },
+    {
+      "title": "Hot N Cold",
+      "artist": "Katy Perry",
+      "era": "2000s"
+    },
+    {
+      "title": "I Gotta Feeling",
+      "artist": "The Black Eyed Peas",
+      "era": "2000s"
+    },
+    {
+      "title": "In the End",
+      "artist": "Linkin Park",
+      "era": "2000s"
+    },
+    {
+      "title": "It's My Life",
+      "artist": "Bon Jovi",
+      "era": "2000s"
+    },
+    {
+      "title": "Love Story",
+      "artist": "Taylor Swift",
+      "era": "2000s"
+    },
+    {
+      "title": "Low",
+      "artist": "Flo Rida",
+      "era": "2000s"
+    },
+    {
+      "title": "Mr. Brightside",
+      "artist": "The Killers",
+      "era": "2000s"
+    },
+    {
+      "title": "Party in the U.S.A.",
+      "artist": "Miley Cyrus",
+      "era": "2000s"
+    },
+    {
+      "title": "Poker Face",
+      "artist": "Lady Gaga",
+      "era": "2000s"
+    },
+    {
+      "title": "Sex on Fire",
+      "artist": "Kings of Leon",
+      "era": "2000s"
+    },
+    {
+      "title": "Since U Been Gone",
+      "artist": "Kelly Clarkson",
+      "era": "2000s"
+    },
+    {
+      "title": "Single Ladies (Put a Ring on It)",
+      "artist": "Beyoncé",
+      "era": "2000s"
+    },
+    {
+      "title": "Sk8er Boi",
+      "artist": "Avril Lavigne",
+      "era": "2000s"
+    },
+    {
+      "title": "Stacy's Mom",
+      "artist": "Fountains of Wayne",
+      "era": "2000s"
+    },
+    {
+      "title": "Teenage Dirtbag",
+      "artist": "Wheatus",
+      "era": "2000s"
+    },
+    {
+      "title": "Toxic",
+      "artist": "Britney Spears",
+      "era": "2000s"
+    },
+    {
+      "title": "Umbrella",
+      "artist": "Rihanna",
+      "era": "2000s"
+    },
+    {
+      "title": "Untouched",
+      "artist": "The Veronicas",
+      "era": "2000s"
+    },
+    {
+      "title": "Unwritten",
+      "artist": "Natasha Bedingfield",
+      "era": "2000s"
+    },
+    {
+      "title": "Valerie",
+      "artist": "Mark Ronson feat. Amy Winehouse",
+      "era": "2000s"
+    },
+    {
+      "title": "Viva la Vida",
+      "artist": "Coldplay",
+      "era": "2000s"
+    },
+    {
+      "title": "Yeah!",
+      "artist": "Usher",
+      "era": "2000s"
+    },
+    {
+      "title": "Blinding Lights",
+      "artist": "The Weeknd",
+      "era": "2010s"
+    },
+    {
+      "title": "Call Me Maybe",
+      "artist": "Carly Rae Jepsen",
+      "era": "2010s"
+    },
+    {
+      "title": "Firework",
+      "artist": "Katy Perry",
+      "era": "2010s"
+    },
+    {
+      "title": "Get Lucky",
+      "artist": "Daft Punk",
+      "era": "2010s"
+    },
+    {
+      "title": "Party Rock Anthem",
+      "artist": "LMFAO",
+      "era": "2010s"
+    },
+    {
+      "title": "Rolling in the Deep",
+      "artist": "Adele",
+      "era": "2010s"
+    },
+    {
+      "title": "Shake It Off",
+      "artist": "Taylor Swift",
+      "era": "2010s"
+    },
+    {
+      "title": "Shut Up and Dance",
+      "artist": "WALK THE MOON",
+      "era": "2010s"
+    },
+    {
+      "title": "Titanium",
+      "artist": "David Guetta feat. Sia",
+      "era": "2010s"
+    },
+    {
+      "title": "Uptown Funk",
+      "artist": "Mark Ronson feat. Bruno Mars",
+      "era": "2010s"
+    },
+    {
+      "title": "Wake Me Up",
+      "artist": "Avicii",
+      "era": "2010s"
+    },
+    {
+      "title": "We Are Young",
+      "artist": "fun. feat. Janelle Monáe",
+      "era": "2010s"
+    },
+    {
+      "title": "We Found Love",
+      "artist": "Rihanna",
+      "era": "2010s"
+    },
+    {
+      "title": "Levitating",
+      "artist": "Dua Lipa",
+      "era": "2020–22"
+    },
+    {
+      "title": "Pink Pony Club",
+      "artist": "Chappell Roan",
+      "era": "2020–22"
+    }
+  ],
+  "candidates": [
+    {
+      "title": "Brown Eyed Girl",
+      "year": 1967,
+      "sourceUrl": "https://www.officialcharts.com/chart-news/official-charts-announces-the-sixties-definitive-chart-books__27020/"
+    },
+    {
+      "title": "Sweet Caroline",
+      "year": 1969,
+      "sourceUrl": "https://musicbrainz.org/release-group/735ba6b7-a1f0-4663-9989-ae88c4fef00c"
+    },
+    {
+      "title": "Am I Ever Gonna See Your Face Again",
+      "year": 1976,
+      "sourceUrl": "https://www.nfsa.gov.au/collection/item/the-angels-original-line-up"
+    },
+    {
+      "title": "Don't Stop Me Now",
+      "year": 1978,
+      "sourceUrl": "https://www.queenonline.com/news/press-release-queen-greatest-hits-in-japan?prev_filter=01-2020"
+    },
+    {
+      "title": "Gimme! Gimme! Gimme! (A Man After Midnight)",
+      "year": 1979,
+      "sourceUrl": "https://abbasite.com/discography/"
+    },
+    {
+      "title": "Mamma Mia",
+      "year": 1975,
+      "sourceUrl": "https://abbasite.com/discography/"
+    },
+    {
+      "title": "Nutbush City Limits",
+      "year": 1973,
+      "sourceUrl": "https://www.officialcharts.com/songs/ike-and-tina-turner-nutbush-city-limits/"
+    },
+    {
+      "title": "September",
+      "year": 1978,
+      "sourceUrl": "https://www.officialcharts.com/songs/earth-wind-and-fire-september/"
+    },
+    {
+      "title": "Summer Nights",
+      "year": 1978,
+      "sourceUrl": "https://www.officialcharts.com/chart-news/official-charts-70th-anniversary-the-official-top-10-best-selling-singles-from-the-1970s__37736/"
+    },
+    {
+      "title": "Take Me Home, Country Roads",
+      "year": 1971,
+      "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/"
+    },
+    {
+      "title": "We Will Rock You",
+      "year": 1977,
+      "sourceUrl": "https://store-au.queenonline.com/collections/news-of-the-world"
+    },
+    {
+      "title": "Flame Trees",
+      "year": 1984,
+      "sourceUrl": "https://www.coldchisel.com/twentieth-century/"
+    },
+    {
+      "title": "I Wanna Dance with Somebody",
+      "year": 1987,
+      "sourceUrl": "https://www.officialcharts.com/chart-news/the-official-top-40-best-selling-songs-of-1987__32970/"
+    },
+    {
+      "title": "I Want to Break Free",
+      "year": 1984,
+      "sourceUrl": "https://www.officialcharts.com/chart-news/queens-bestselling-singles-on-the-official-uk-singles-chart__24760/"
+    },
+    {
+      "title": "I'm Gonna Be (500 Miles)",
+      "year": 1988,
+      "sourceUrl": "https://www.officialcharts.com/artist/24561/proclaimers/"
+    },
+    {
+      "title": "I'm Still Standing",
+      "year": 1983,
+      "sourceUrl": "https://www.officialcharts.com/songs/elton-john-im-still-standing/"
+    },
+    {
+      "title": "Love Shack",
+      "year": 1989,
+      "sourceUrl": "https://musicchartsarchive.com/singles/b-52s/love-shack"
+    },
+    {
+      "title": "The Best",
+      "year": 1989,
+      "sourceUrl": "https://www.officialcharts.com/songs/tina-turner-the-best/"
+    },
+    {
+      "title": "Wake Me Up Before You Go-Go",
+      "year": 1984,
+      "sourceUrl": "https://www.officialcharts.com/songs/wham-wake-me-up-before-you-go-go/"
+    },
+    {
+      "title": "All Star",
+      "year": 1999,
+      "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/"
+    },
+    {
+      "title": "All the Small Things",
+      "year": 1999,
+      "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/"
+    },
+    {
+      "title": "Don't Look Back in Anger",
+      "year": 1995,
+      "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/"
+    },
+    {
+      "title": "Everybody (Backstreet's Back)",
+      "year": 1997,
+      "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/"
+    },
+    {
+      "title": "Freed from Desire",
+      "year": 1996,
+      "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/"
+    },
+    {
+      "title": "Man! I Feel Like a Woman!",
+      "year": 1997,
+      "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/"
+    },
+    {
+      "title": "The Horses",
+      "year": 1990,
+      "sourceUrl": "https://music.apple.com/us/album/rise/450241482"
+    },
+    {
+      "title": "What's Up?",
+      "year": 1992,
+      "sourceUrl": "https://interscope.com/products/bigger-better-faster-more-lp"
+    },
+    {
+      "title": "Zombie",
+      "year": 1994,
+      "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/"
+    },
+    {
+      "title": "Dancing in the Moonlight",
+      "year": 1999,
+      "sourceUrl": "https://www.officialcharts.com/chart-news/the-uks-official-top-300-most-streamed-songs-of-the-70s-80s-and-90s-revealed__37690/"
+    },
+    {
+      "title": "Everytime We Touch",
+      "year": 2005,
+      "sourceUrl": "https://musicbrainz.org/release-group/29d3966e-3538-393d-b290-8b9ea519d038"
+    },
+    {
+      "title": "Get the Party Started",
+      "year": 2001,
+      "sourceUrl": "https://music.apple.com/us/album/m-ssundaztood-expanded-edition/1459185349"
+    },
+    {
+      "title": "In the End",
+      "year": 2000,
+      "sourceUrl": "https://linkinpark.com/about"
+    },
+    {
+      "title": "It's My Life",
+      "year": 2000,
+      "sourceUrl": "https://www.officialcharts.com/songs/bon-jovi-its-my-life/"
+    },
+    {
+      "title": "Sex on Fire",
+      "year": 2008,
+      "sourceUrl": "https://www.officialcharts.com/songs/kings-of-leon-sex-on-fire/"
+    },
+    {
+      "title": "Single Ladies (Put a Ring on It)",
+      "year": 2008,
+      "sourceUrl": "https://www.officialcharts.com/songs/beyonce-single-ladies-put-a-ring-on-it/"
+    },
+    {
+      "title": "Stacy's Mom",
+      "year": 2003,
+      "sourceUrl": "https://musicbrainz.org/release-group/cf7a8b5b-a228-3ba4-92c1-3f53e5ca64e6"
+    },
+    {
+      "title": "Teenage Dirtbag",
+      "year": 2000,
+      "sourceUrl": "https://en.wikipedia.org/wiki/Wheatus_%28album%29"
+    },
+    {
+      "title": "Valerie",
+      "year": 2007,
+      "sourceUrl": "https://www.officialcharts.com/songs/mark-ronson-ft-amy-winehouse-valerie/"
+    },
+    {
+      "title": "We Are Young",
+      "year": 2011,
+      "sourceUrl": "https://musicbrainz.org/release/5bebf3fa-e5d8-45a9-ac94-7ede0c7d9fec"
+    },
+    {
+      "title": "Pink Pony Club",
+      "year": 2020,
+      "sourceUrl": "https://www.officialcharts.com/songs/chappell-roan-pink-pony-club/"
+    }
+  ],
+  "held": [
+    {
+      "title": "Summer of '69",
+      "reason": "Current master claims 1993; Bryan Adams original 1984 Reckless album."
+    },
+    {
+      "title": "Since U Been Gone",
+      "reason": "Current master claims 2003, while first 2004 Breakaway issue exists."
+    },
+    {
+      "title": "Billie Jean",
+      "reason": "Current legacy 1983 game answer may conflate single year with first 1982 album."
+    },
+    {
+      "title": "Never Gonna Give You Up",
+      "reason": "Current legacy 1988 game year conflicts with 1987 single."
+    },
+    {
+      "title": "Believe",
+      "reason": "Current legacy 1999 game year conflicts with 1998 issue."
+    },
+    {
+      "title": "Low",
+      "reason": "Current legacy 2008 game year conflicts with 2007 issue."
+    },
+    {
+      "title": "Take on Me",
+      "reason": "1984 original versus popular 1985 rerecording."
+    },
+    {
+      "title": "Walking on Sunshine",
+      "reason": "1983 original versus popular 1985 rerecording."
+    }
+  ],
+  "chartOnly": [
+    {
+      "title": "Eagle Rock",
+      "year": 1971,
+      "sourceUrl": "https://www.aria.com.au/charts/1971/singles-chart",
+      "evidence": "Existing 1971 Australian chart evidence; exact first issue requires audit"
+    },
+    {
+      "title": "You're the One That I Want",
+      "year": 1978,
+      "sourceUrl": "https://www.officialcharts.com/chart-news/official-charts-70th-anniversary-the-official-top-10-best-selling-singles-from-the-1970s__37736/",
+      "evidence": "Grease duet released 1978"
+    },
+    {
+      "title": "Mambo No. 5",
+      "year": 1999,
+      "sourceUrl": "https://www.aria.com.au/charts/1999/singles-chart",
+      "evidence": "Lou Bega Australian chart 1999; original issue requires audit"
+    }
+  ],
+  "policy": "Original performance year and shared canonical song IDs. Exclude unresolved year/recording conflicts. Preview, not Ready."
+}

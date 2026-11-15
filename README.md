@@ -10,7 +10,7 @@ See [AGENTS.md](AGENTS.md), [current status and roadmap](docs/STATUS_AND_ROADMAP
 
 ## Current scope
 
-- Five clearly labelled playable music modes (see the status table below)
+- Six clearly labelled playable music modes (see the status table below)
 - Two play styles: **Real cards** and **Virtual**
 - 1–6 teams
 - Adjustable 1950–2022 year range, saved with each match
@@ -49,6 +49,7 @@ Run `node scripts/audit_playlist_quality.mjs` for artist concentration and the h
 | Mode | Status | Coverage | Meaning |
 | --- | --- | ---: | --- |
 | Greatest Hits | Beta | 73/73 years | All years selectable; canonical recording and pool-depth curation continues |
+| Bangers | Preview | Sparse | 102 hugely recognisable Australian-friendly group singalongs; eight year/version conflicts held |
 | Australian | Beta | 73/73 years | All years selectable; shallow pools and legacy evidence remain |
 | Unexpected Years | Preview | 40/73 years | Deliberately sparse one-song-per-covered-year preview |
 | #1 US | Beta | 73/73 years | One fixed US chart leader per chart year |
@@ -117,3 +118,8 @@ The existing catalogue still needs further human curation for canonical release-
 ## Deployment
 
 Run `node scripts/check.mjs` for the shared local/CI validation suite. GitHub Pages uses the same gate and publishes only the staged app assets, data and vendored libraries. A failed validation step prevents deployment. Research outputs and local browser logs are excluded from the deployed site.
+
+
+### Bangers V3 preview (15 November 2026)
+
+The V3 Australian singalong proposal has 110 headliners. The Bangers mode plays 102 sourced/reused canonical songs. Eight contested release years or recording variants remain held outside gameplay (`verification/bangers-v3-implementation.json`). The mode adds 40 source-linked master songs and reuses 62 existing canonical masters, preserving all five original modes. Original-release years, not later chart peaks/remasters, determine the game answer. Provider audio has not yet been independently auditioned. Bangers is **Preview** until that is complete. Real-card scans on unsupported years do not fall back; Virtual deals supported card years.

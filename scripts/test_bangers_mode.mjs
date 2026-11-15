@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {compileDatabase} from './song_database.mjs';
+import {catalogueEngine} from './catalogue_runtime.mjs';
+const db=JSON.parse(fs.readFileSync('data/song-database.json','utf8'));
+const cat=JSON.parse(fs.readFileSync('data/catalogue.json','utf8'));
+const manifest=JSON.parse(fs.readFileSync('data/modes.json','utf8'));
+const ledger=JSON.parse(fs.readFileSync('verification/bangers-v3-implementation.json','utf8'));
+assert.deepEqual(compileDatabase(db,manifest),cat);
+assert.equal(manifest.modes.bangers.status,'preview');
+assert.equal(manifest.modes.bangers.yearBasis,'release');
+assert.equal(ledger.proposedHeadliners,110);
+assert.equal(ledger.included.length,102);
+assert.equal(ledger.newMasterIds.length,40);
+assert.equal(ledger.held.length,8);
+const rows=Object.values(cat.modes.bangers||{}).flat();
+assert.equal(rows.length,102);
+assert.equal(new Set(rows.map(x=>x.songId)).size,102);
+for(const x of ledger.included){
+ const master=db.songs[x.songId],selected=rows.find(r=>r.songId===x.songId);
+ assert.ok(master&&selected);
+ assert.equal(selected.year,master.release.answerYear);
+ assert.equal(selected.year,x.answerYear);
+}
+for(const x of ledger.held)assert.ok(!rows.some(r=>r.title===x.title));
+const E=catalogueEngine(cat,manifest),reports=await E.modeReports();
+assert.equal(reports.bangers.selectable,true);
+assert.equal(reports.bangers.songs,102);
+assert.ok(reports.bangers.years.length>0&&reports.bangers.years.length<73);
+for(const y of reports.bangers.years)assert.equal((await E.chooseSong(y,'bangers',[])).year,y);
+console.log('Bangers 102-song preview selection and original-year invariants passed');
