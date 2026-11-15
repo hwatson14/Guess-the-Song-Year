@@ -81,6 +81,26 @@ const ok=data=>({ok:true,json:async()=>data});
   assert.ok(h.calls.at(-1).includes('/pause'),'queued pause becomes the final provider command');
 }
 
+{
+  const h=make({fetchImpl:async(url,calls)=>{
+    if(calls.length===1)throw new TypeError('Failed to fetch');
+    if(url.pathname.endsWith('/search'))return ok({items:[{id:{videoId:'retry'},snippet:{title:song.title,channelTitle:song.artist}}]});
+    return ok({items:[{id:'retry',status:{embeddable:true},snippet:{title:song.title,channelTitle:song.artist}}]});
+  }});
+  assert.equal((await h.E.resolveSong(song,'youtube')).videoId,'retry');
+  assert.equal(h.calls.filter(x=>x.includes('/search')).length,2);
+}
+{
+  const h=make({fetchImpl:async()=>({ok:false,status:403,json:async()=>({error:{message:'quota exceeded'}})})});
+  await assert.rejects(h.E.resolveSong(song,'youtube'),error=>error.code==='YOUTUBE_QUOTA');
+  assert.equal(h.calls.length,1,'quota failures must not be retried');
+}
+{
+  const h=make({fetchImpl:async()=>{throw new TypeError('Failed to fetch')}});
+  await assert.rejects(h.E.loadCatalogue(),error=>error.code==='CATALOGUE_NETWORK');
+  assert.equal(h.calls.length,2,'catalogue retry is bounded');
+}
+
 console.log('engine playback fixes passed: YouTube cache expiry/revalidation, Spotify match floor, serialized device commands');
 
 for(const fixture of [

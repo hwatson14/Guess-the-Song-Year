@@ -26,7 +26,7 @@ assert.match(engine,/cardYears:'gsy\.cardYearOverrides\.v1'/);
 assert.match(engine,/saveJSON\(LS\.cardYears,cardYearOverrides\)/);
 
 assert.ok(app.indexOf("if(phase==='reveal'&&current)")<app.indexOf("if(current&&current.provider!==E.getProvider())"));
-assert.match(app,/const retryable=!!err\.cardId&&P\.canRetryPreparationError\(err\.code\)/);
+assert.match(app,/const retryable=.*&&P\.canRetryPreparationError\(err\.code\)/);
 assert.match(app,/const seq=\+\+playbackSeq/);
 assert.match(app,/const deadline=Date\.now\(\)\+5000/);
 

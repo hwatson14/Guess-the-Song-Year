@@ -5,6 +5,7 @@
   if(!E||!P)throw new Error('GSYEngine and GSYAppPolicy must load before app.js');
   const root=document.getElementById('app'),toastEl=document.getElementById('toast');
   const CFG_KEY='gsy.config.v7',MATCH_KEY='gsy.match.v7';
+  const PLACEMENT_UNDO_MS=3000;
   const DEFAULT_CFG={playMode:'physical',teams:2,victory:'10',mode:'greatest',minYear:P.GAME_YEAR_MIN,maxYear:P.GAME_YEAR_MAX};
 
   let cfg=load(CFG_KEY,DEFAULT_CFG),match=load(MATCH_KEY,null);
@@ -13,7 +14,7 @@
   let musicModal=false,deviceList=[],backGuardReady=false,prepareSeq=0,playbackSeq=0,countdownTimer=null,youtubeListenTimer=null,youtubeDownAt=0;
   let lastRenderedScreen=null,lastModalOpen=false;
   let modeReports={},bonusBusy=false;
-  let spotifyStarting=false,spotifyStopPending=null;
+  let spotifyStarting=false,spotifyStopPending=null,placementRevealTimer=null;
 
   const esc=s=>String(s??'').replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));
   function load(k,f){try{return JSON.parse(localStorage.getItem(k))??f}catch{return f}}
@@ -136,7 +137,7 @@
     const active=document.activeElement;
     const focusAttr=['action','play','victory','provider','slot','stealTeam','stealSlot','modePicker','range'].find(key=>active?.dataset?.[key]!==undefined);
     const focusSelector=focusAttr?`[data-${focusAttr.replace(/[A-Z]/g,c=>'-'+c.toLowerCase())}="${active.dataset[focusAttr]}"]`:null;
-    const content=screen==='setup'?setupScreen():screen==='resume'?resumeScreen():screen==='scanner'?scannerScreen():screen==='loading'?loadingScreen():screen==='error'?errorScreen():screen==='ready'?readyScreen():screen==='countdown'?countdownScreen():screen==='youtube'?youtubeListeningScreen():screen==='playing'?playingScreen():screen==='guess'?guessScreen():screen==='steal'?stealScreen():screen==='skipped'?skippedScreen():screen==='reveal'?revealScreen():screen==='gameover'?gameOverScreen():setupScreen();
+    const content=screen==='setup'?setupScreen():screen==='resume'?resumeScreen():screen==='scanner'?scannerScreen():screen==='loading'?loadingScreen():screen==='error'?errorScreen():screen==='ready'?readyScreen():screen==='countdown'?countdownScreen():screen==='youtube'?youtubeListeningScreen():screen==='playing'?playingScreen():screen==='guess'?guessScreen():screen==='locked'?lockedScreen():screen==='steal'?stealScreen():screen==='skipped'?skippedScreen():screen==='reveal'?revealScreen():screen==='gameover'?gameOverScreen():setupScreen();
     root.innerHTML=`<main class="app screen-${esc(screen)}" id="mainContent" ${musicModal?'inert aria-hidden="true"':''}>${content}</main>${musicSheet()}`;
     bind();
     if(!screenChanged){const board=root.querySelector('.timeline-board');if(board)board.scrollTop=boardScroll;}
@@ -158,9 +159,9 @@
 
   function errorScreen(){
     const err=runtimeError||{},kind=err.kind||P.preparationErrorKind(err.code);
-    const retryable=!!err.cardId&&P.canRetryPreparationError(err.code);
-    const title=kind==='catalogue'?'No song is available':kind==='track'?'This track would not play':'Music could not be prepared',nextLabel=current?.song?'Skip broken song · free':cfg.playMode==='physical'?'Scan another card · free':'Deal another card · free';
-    return `${topLine(true,false)}${matchHeader()}${scoreStrip()}<section class="card error-card" role="alert"><div class="kicker">PLAYBACK PAUSED</div><h1>${esc(title)}</h1><p>${esc(err.message||'Check the music service and try again.')}</p><div class="error-code">${esc(err.code||'PREPARE_FAILED')}</div><div class="error-actions">${retryable?'<button class="btn primary" data-action="retry-card">Retry this card</button>':''}<button class="btn ghost" data-action="skip-card">${nextLabel}</button><button class="btn text" data-action="music">Music settings</button></div></section>`;
+    const retryable=(!!err.cardId||err.code?.startsWith('CATALOGUE_'))&&P.canRetryPreparationError(err.code);
+    const title=err.code==='SPOTIFY_PREVIOUS_TRACK_STILL_PLAYING'?'Previous song is still playing':['SPOTIFY_NETWORK','SPOTIFY_TIMEOUT','YOUTUBE_NETWORK','YOUTUBE_TIMEOUT','CATALOGUE_NETWORK','CATALOGUE_TIMEOUT'].includes(err.code)?'Connection interrupted':kind==='catalogue'?'No song is available':kind==='track'?'This track would not play':'Music could not be prepared',nextLabel=current?.song?'Skip broken song · free':cfg.playMode==='physical'?'Scan another card · free':'Deal another card · free';
+    return `${topLine(true,false)}${matchHeader()}${scoreStrip()}<section class="card error-card" role="alert"><div class="kicker">PLAYBACK PAUSED</div><h1>${esc(title)}</h1><p>${esc(err.message||'Check the music service and try again.')}</p><div class="error-code">${esc(err.code||'PREPARE_FAILED')}</div><div class="error-actions">${retryable?`<button class="btn primary" data-action="retry-card">${err.cardId?'Retry this card':'Retry loading'}</button>`:''}<button class="btn ghost" data-action="skip-card">${nextLabel}</button><button class="btn text" data-action="music">Music settings</button></div></section>`;
   }
 
   function topLine(back=false,music=true){return `<div class="topline">${back?'<button class="icon-btn" data-action="back" aria-label="Back">‹</button>':'<div class="brand-small">Guess the Song Year</div>'}${music?'<button class="icon-btn" data-action="music" aria-label="Music settings">♫</button>':'<span></span>'}</div>`}
@@ -235,6 +236,10 @@
   function virtualTimeline(){
     return `${timelineBoard(true)}${bonusCardNotice()}${bonusActions()}<div class="board-actionbar"><button class="btn ghost" data-action="listen-again" ${bonusBusy||spotifyStarting?'disabled':''}>Listen again</button>${stealButton()}<button class="btn primary" data-action="lock-placement" aria-label="Reveal answer: ${esc(placementLockCopy())}" ${pendingSlot===null||bonusBusy?'disabled':''}>Reveal</button></div>`;
   }
+  function lockedScreen(){
+    const years=[...activeTeam().timeline].map(Number).filter(Number.isFinite).sort((a,b)=>a-b);
+    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>Placement locked</h1><p>${esc(placementLabel(years,pendingSlot))}</p></div>${timelineBoard()}<div class="board-actionbar"><button class="btn text" data-action="undo-placement">Undo placement</button>${stealButton()}<button class="btn primary" data-action="reveal-placement">Reveal now</button></div>`;
+  }
   function stealButton(){return match?.teams.length>1?`<button class="btn ghost" data-action="start-steal" ${bonusBusy||(cfg.playMode==='virtual'&&pendingSlot===null)||!match.teams.some((_,i)=>canSteal(i))?'disabled':''}>Steal</button>`:''}
   function bonusBalance(team=activeTeam()){
     const n=Number(team?.bonusPoints);return Number.isFinite(n)?Math.max(0,Math.floor(n)):0;
@@ -243,11 +248,11 @@
     const teams=(match?.teams||[]).map((team,index)=>({team,index}));
     return `<div class="timeline-board" aria-label="Team timelines" data-team-count="${teams.length}">${teams.map(({team,index})=>{
       const active=index===match.turn,years=[...(team.timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b);
-      const stealing=screen==='steal'&&match.steal?.virtual&&active;
-      const choosing=(interactive&&active&&cfg.playMode==='virtual')||stealing,displaySlot=choosing&&pendingSlot!==null?placementBoundarySlot(years,pendingSlot):null,hasPlacement=!stealing&&displaySlot!==null;
+      const stealing=screen==='steal'&&match.steal?.virtual&&active,locked=screen==='locked'&&active;
+      const choosing=(interactive&&active&&cfg.playMode==='virtual')||stealing||locked,displaySlot=choosing&&pendingSlot!==null?placementBoundarySlot(years,pendingSlot):null,hasPlacement=!stealing&&displaySlot!==null;
       const stolenYear=screen==='reveal'&&match.steal?.winner===index?Number(current?.year):null;
       const {groups,maxCount}=timelineYearGroups(years);
-      const slot=i=>{const boundary=placementBoundarySlot(years,i),label=placementLabel(years,boundary),selected=displaySlot===boundary;if(stealing)return stealGap(boundary,label);return `<button class="timeline-slot placement-gap ${selected?'on selected':''}" data-slot="${boundary}" aria-label="${esc(label)}" aria-pressed="${selected}" ${bonusBusy?'disabled':''}>${selected?'<span class="timeline-mystery"><b>?</b><small>Your song</small></span>':'<span class="timeline-plus">+</span>'}</button>`};
+      const slot=i=>{const boundary=placementBoundarySlot(years,i),label=placementLabel(years,boundary),selected=displaySlot===boundary;if(stealing)return stealGap(boundary,label);if(locked)return selected?'<div class="steal-marker"><b>?</b><span>Your song<small>Locked placement</small></span></div>':'';return `<button class="timeline-slot placement-gap ${selected?'on selected':''}" data-slot="${boundary}" aria-label="${esc(label)}" aria-pressed="${selected}" ${bonusBusy?'disabled':''}>${selected?'<span class="timeline-mystery"><b>?</b><small>Your song</small></span>':'<span class="timeline-plus">+</span>'}</button>`};
       const rows=groups.map(group=>{
         const cards=Array.from({length:group.count},(_,cardIndex)=>{
           const stolen=group.year===stolenYear&&cardIndex===group.count-1;
@@ -280,8 +285,9 @@
   function stealScreen(){
     const steal=match.steal,selected=Number.isInteger(steal?.selectedTeam)?match.teams[steal.selectedTeam]:null;
     const teams=match.teams.map((team,i)=>i===match.turn?'':`<button class="steal-team ${steal.selectedTeam===i?'on':''}" data-steal-team="${i}" aria-pressed="${steal.selectedTeam===i}" ${canSteal(i)?'':'disabled'}><b>${esc(team.name)}</b><small>${steal.challenges.some(c=>c.team===i)?'Steal locked':`${bonusBalance(team)} bonus`}</small></button>`).join('');
+    const undo=steal.virtual&&!steal.challenges.length?'<button class="btn text" data-action="undo-placement">Undo placement</button>':'';
     const claims=steal.challenges.map(c=>`<li>${esc(match.teams[c.team].name)} · ${steal.virtual?esc(placementLabel(steal.years,c.slot)):'token placed on the table'} · 1 bonus spent</li>`).join('');
-    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>Steal the song</h1><p>${steal.virtual?`${esc(activeTeam().name)} has locked a placement. Choose a challenging team, then a different gap on ${esc(activeTeam().name)}’s timeline.`:'Keep the card face-down. Challengers place a token in a different gap on the active team’s physical timeline, then register below.'} A successful steal adds the card to the challenger’s timeline. Each attempt costs 1 bonus.</p></div><div class="steal-teams" aria-label="Choose a challenging team">${teams}</div>${steal.virtual?timelineBoard():`<div class="steal-physical"><p>The answer stays hidden until all challenges are locked.</p>${claims?`<ol>${claims}</ol>`:''}</div>`}<div class="steal-status" role="status">${selected?`${esc(selected.name)}: ${steal.virtual?'choose a free gap, then lock your steal.':'place your token on the table, then lock your steal.'}`:steal.challenges.length?`${steal.challenges.length} steal${steal.challenges.length===1?'':'s'} locked. More challengers can join before reveal.`:'Choose a challenger, or reveal without stealing.'}</div>${selected?`<div class="board-actionbar"><button class="btn ghost" data-action="cancel-steal">Cancel selection</button><button class="btn primary" data-action="commit-steal" ${steal.virtual&&steal.selectedSlot===null?'disabled':''}>Lock steal · 1 bonus</button></div>`:`<div class="board-actionbar"><button class="btn primary" data-action="reveal-steals">Reveal</button></div>`}`;
+    return `${topLine(true,false)}${matchHeader()}<div class="turn-toolbar"><h1>Steal the song</h1><p>${steal.virtual?`${esc(activeTeam().name)} has locked a placement. Choose a challenging team, then a different gap on ${esc(activeTeam().name)}’s timeline.`:'Keep the card face-down. Challengers place a token in a different gap on the active team’s physical timeline, then register below.'} A successful steal adds the card to the challenger’s timeline. Each attempt costs 1 bonus.</p></div><div class="steal-teams" aria-label="Choose a challenging team">${teams}</div>${steal.virtual?timelineBoard():`<div class="steal-physical"><p>The answer stays hidden until all challenges are locked.</p>${claims?`<ol>${claims}</ol>`:''}</div>`}<div class="steal-status" role="status">${selected?`${esc(selected.name)}: ${steal.virtual?'choose a free gap, then lock your steal.':'place your token on the table, then lock your steal.'}`:steal.challenges.length?`${steal.challenges.length} steal${steal.challenges.length===1?'':'s'} locked. More challengers can join before reveal.`:'Choose a challenger, or reveal without stealing.'}</div>${undo}${selected?`<div class="board-actionbar"><button class="btn ghost" data-action="cancel-steal">Cancel selection</button><button class="btn primary" data-action="commit-steal" ${steal.virtual&&steal.selectedSlot===null?'disabled':''}>Lock steal · 1 bonus</button></div>`:`<div class="board-actionbar"><button class="btn primary" data-action="reveal-steals">Reveal</button></div>`}`;
   }
   function skippedScreen(){
     const song=current?.song||{};
@@ -362,6 +368,8 @@
       if(a==='reveal')b.onclick=revealPhysical;
       if(a==='update-card-year')b.onclick=updateCardYearReference;
       if(a==='lock-placement')b.onclick=lockPlacement;
+      if(a==='undo-placement')b.onclick=undoPlacement;
+      if(a==='reveal-placement')b.onclick=revealPlacement;
       if(a==='start-steal')b.onclick=startSteal;
       if(a==='next-skipped')b.onclick=()=>{if(screen==='skipped'&&match?.phase==='skipped')nextRound()};
       if(a==='commit-steal')b.onclick=commitSteal;
@@ -403,6 +411,7 @@
 
   function suspendForBackground(){
     if(screen==='scanner')stopScanner();
+    cancelPlacementReveal();
     if(screen==='countdown'){
       cancelCountdown();
       if(match){match.phase='ready';saveMatch()}
@@ -433,7 +442,7 @@
   function handleBack(){
     if(!P.shouldInterceptBack({musicModal,screen}))return false;
     if(musicModal){musicModal=false;render();return true}
-    cancelCountdown();cancelYoutubeListening();prepareSeq++;
+    cancelCountdown();cancelYoutubeListening();cancelPlacementReveal();prepareSeq++;
     if(screen==='scanner')stopScanner();
     if(screen==='playing'||screen==='youtube')stopPlayback();
     screen='resume';render();resetScroll();return true;
@@ -452,7 +461,15 @@
     try{deviceList=await E.spotifyDevices();if(showToast)toast(deviceList.length?`${deviceList.length} Spotify device${deviceList.length===1?'':'s'} found.`:'No Spotify device found. Open Spotify and play/pause once.');render()}catch(err){if(showToast)toast(errorText(err))}
   }
 
+  async function ensureModeReports(){
+    if(modeReports[modeId()])return;
+    modeReports=await E.modeReports();
+  }
+
   async function startMatch(){
+    if(!modeReports[modeId()]){
+      try{await ensureModeReports()}catch(err){toast(errorText(err));return}
+    }
     if(!providerReady()){musicModal=true;render();toast('Connect Spotify first, or switch to YouTube.');return}
     const report=modeReport(cfg.mode);
     if(report.selectable===false){toast(`${modeInfo(cfg.mode).name} is still being built. Choose a playable mode.`);return}
@@ -475,6 +492,7 @@
     if(phase==='reveal'&&current){screen='reveal';render();return}
     if(phase==='skipped'&&current){screen='skipped';render();return}
     if(phase==='steal'&&current&&match.steal){screen='steal';render();return}
+    if(phase==='locked'&&current){screen='locked';render();return}
     if(current&&current.provider!==E.getProvider()){
       const seq=++prepareSeq;
       try{
@@ -486,9 +504,14 @@
       }catch(err){if(seq!==prepareSeq)return;showRoundError(err,{cardId:current?.cardId,year:current?.year});return}
     }
     if(phase==='guess'&&current){screen='guess';render();return}
+    const loadingCardId=match.loadingCardId||current?.cardId||(cfg.playMode==='virtual'?match.virtualDeck?.[match.virtualPos-1]:null);
+    if(phase==='loading'&&loadingCardId){
+      if(current){await replaceCurrentSong();return}
+      await prepareCard(loadingCardId);return
+    }
 
     if(phase==='scanner'&&cfg.playMode==='physical'){screen='scanner';render();return}
-    if(['ready','countdown','youtube','playing'].includes(phase)&&current){match.phase='ready';saveMatch();screen='ready';render();return}
+    if(['ready','countdown','youtube','playing'].includes(phase)&&current){match.phase='ready';match.loadingCardId=null;saveMatch();screen='ready';render();return}
     nextRound();
   }
 
@@ -499,10 +522,10 @@
   }
 
   function clearRoundState(){
-    cancelCountdown();cancelYoutubeListening();prepareSeq++;
+    cancelCountdown();cancelYoutubeListening();cancelPlacementReveal();prepareSeq++;
     current=null;pendingSlot=null;placementResult=null;runtimeError=null;playing=false;playNeedsTap=false;youtubeDownAt=0;
     E.destroyYouTube();
-    if(match){match.bonusAwarded=false;match.lastBonusYear=null;match.steal=null;match.skipReason=null;match.current=null;match.placementResult=null;match.pendingSlot=null;match.error=null;match.phase='between'}
+    if(match){match.bonusAwarded=false;match.lastBonusYear=null;match.steal=null;match.skipReason=null;match.current=null;match.placementResult=null;match.pendingSlot=null;match.loadingCardId=null;match.error=null;match.phase='between'}
   }
 
   function showRoundError(err,context={}){
@@ -514,14 +537,27 @@
       cardId:Number(context.cardId||current?.cardId)||null,
       year:Number(context.year||current?.year)||null
     };
-    if(match){match.error=runtimeError;match.current=current;match.phase='error';saveMatch()}
+    if(match){match.error=runtimeError;match.loadingCardId=null;match.current=current;match.phase='error';saveMatch()}
     screen='error';render();resetScroll();
   }
 
-  function retryFailedCard(){
+  async function retryFailedCard(){
+    if(!match||screen!=='error')return;
     const cardId=Number(runtimeError?.cardId);
-    if(!match||!cardId){nextRound();return}
-    clearRoundState();saveMatch();prepareCard(cardId);
+    if(!cardId)return nextRound();
+    if(current?.song&&runtimeError.kind==='provider'){
+      const seq=++prepareSeq,provider=E.getProvider();
+      screen='loading';render();
+      try{
+        const resolved=provider===current.provider?current.resolved:await E.resolveSong(current.song,provider);
+        if(seq!==prepareSeq)return;
+        if(current.provider==='spotify')stopPlayback();
+        current={...current,resolved,provider};
+        match.error=null;runtimeError=null;match.phase='ready';syncCurrent();screen='ready';render();
+      }catch(err){if(seq===prepareSeq)showRoundError(err,{cardId})}
+      return
+    }
+    clearRoundState();return prepareCard(cardId);
   }
 
   function skipFailedCard(){
@@ -530,14 +566,18 @@
     nextRound();
   }
 
-  function nextRound(){
+  async function nextRound(){
+    if(!modeReports[modeId()]){
+      const seq=++prepareSeq;
+      screen='loading';render();
+      try{await ensureModeReports()}catch(err){if(seq===prepareSeq)showRoundError(err);return}
+      if(seq!==prepareSeq)return;
+    }
     if(winner()){endGame('target');return}
     clearRoundState();saveMatch();
     if(cfg.playMode==='physical'){match.phase='scanner';saveMatch();screen='scanner';render();resetScroll()}
-    else{const id=nextVirtualCard();if(!id){endGame('range-exhausted');return}prepareCard(id)}
+    else{const id=takeVirtualCardId();if(!id){endGame('range-exhausted');return}return prepareCard(id)}
   }
-
-  function nextVirtualCard(){const id=takeVirtualCardId();saveMatch();return id}
 
   function rejectScannedCard(message){
     toast(message);
@@ -547,22 +587,29 @@
   async function prepareCard(cardId){
     if(!match)return;
     const year=E.cardYear(cardId);
+    if(!modeReports[modeId()]){
+      const seq=++prepareSeq;
+      screen='loading';render();
+      try{await ensureModeReports()}catch(err){if(seq===prepareSeq)showRoundError(err,{cardId,year});return}
+      if(seq!==prepareSeq)return;
+    }
     if(!year||!P.yearInRange(year,selectedRange())){rejectScannedCard(`That card is outside the selected range (${selectedRange().minYear}–${selectedRange().maxYear}).`);return}
     if(!(modeReport().years||[]).includes(year)){rejectScannedCard(`${modeInfo().name} has no playable song for ${year}. Scan another card.`);return}
     if(!yearHasAvailableSong(year)){if(!rangeHasAvailableSong()){endGame('range-exhausted');return}rejectScannedCard(`All usable songs for ${year} have already been used in this game. Scan another card.`);return}
     const seq=++prepareSeq;
     runtimeError=null;match.error=null;
-    match.phase='loading';saveMatch();screen='loading';render();
+    match.loadingCardId=cardId;match.phase='loading';saveMatch();screen='loading';render();
     const excluded=[...(match.used||[])];let lastErr=null;
     for(let attempt=0;attempt<5;attempt++){
       let song=null;
       try{
         song=await E.chooseSong(year,modeId(),excluded);
-        const resolved=await E.resolveSong(song,E.getProvider());
         if(seq!==prepareSeq)return;
-        current={cardId,year,song,resolved,provider:E.getProvider(),mode:modeId()};
+        const provider=E.getProvider(),resolved=await E.resolveSong(song,provider);
+        if(seq!==prepareSeq)return;
+        current={cardId,year,song,resolved,provider,mode:modeId()};
         match.current=current;match.placementResult=null;
-        match.phase='ready';saveMatch();screen='ready';render();return;
+        match.phase='ready';match.loadingCardId=null;saveMatch();screen='ready';render();return;
       }catch(err){
         lastErr=err;
         if(song){const k=E.songUseKey?.(song)||E.songKey(song);if(!excluded.includes(k))excluded.push(k)}
@@ -796,18 +843,19 @@
     const seq=++prepareSeq;
     const {cardId,year}=current,excluded=[...(match.used||[])];
     const failedKey=E.songUseKey?.(current.song)||E.songKey(current.song);if(!excluded.includes(failedKey))excluded.push(failedKey);
-    E.destroyYouTube();playing=false;match.phase='loading';saveMatch();screen='loading';render();
+    E.destroyYouTube();playing=false;match.loadingCardId=cardId;match.phase='loading';saveMatch();screen='loading';render();
     let lastErr=null;
     for(let attempt=0;attempt<4;attempt++){
       let song=null;
       try{
         song=await E.chooseSong(year,modeId(),excluded);
-        const resolved=await E.resolveSong(song,E.getProvider());
+        if(seq!==prepareSeq)return;
+        const provider=E.getProvider(),resolved=await E.resolveSong(song,provider);
         if(seq!==prepareSeq)return;
         const candidateKey=E.songUseKey?.(song)||E.songKey(song);
         if(candidateKey===failedKey){lastErr=new E.AppError('YOUTUBE_PLAY_FAILED','The failed upload was selected again.');continue}
-        current={cardId,year,song,resolved,provider:E.getProvider(),mode:modeId()};
-        match.current=current;match.phase='ready';saveMatch();screen='ready';render();toast('A replacement track is ready.');return;
+        current={cardId,year,song,resolved,provider,mode:modeId()};
+        match.current=current;match.phase='ready';match.loadingCardId=null;saveMatch();screen='ready';render();toast('A replacement track is ready.');return;
       }catch(err){lastErr=err;if(song){const k=E.songUseKey?.(song)||E.songKey(song);if(!excluded.includes(k))excluded.push(k)}if(P.preparationErrorKind(err?.code)!=='track')break}
     }
     if(seq!==prepareSeq)return;
@@ -927,11 +975,30 @@
     if(bonusBusy||pendingSlot===null||!current||cfg.playMode!=='virtual'||!['playing','guess'].includes(screen))return;
     const team=activeTeam(),years=[...(team.timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b),slot=placementBoundarySlot(years,pendingSlot);
     if(!Number.isInteger(slot)||slot<0||slot>years.length){toast('Choose a valid placement first.');pendingSlot=null;match.pendingSlot=null;saveMatch();render();return}
-    settleVirtualPlacement(years,slot);
+    pendingSlot=slot;match.pendingSlot=slot;
+    stopPlayback();
+    match.phase='locked';saveMatch();screen='locked';render();
+    placementRevealTimer=setTimeout(revealPlacement,PLACEMENT_UNDO_MS);
+  }
+  function cancelPlacementReveal(){
+    if(placementRevealTimer!==null){clearTimeout(placementRevealTimer);placementRevealTimer=null}
+  }
+  function undoPlacement(){
+    const steal=match?.steal;
+    if(!current||cfg.playMode!=='virtual'||(screen!=='locked'&&!(screen==='steal'&&steal?.virtual&&!steal.challenges.length)))return;
+    cancelPlacementReveal();
+    pendingSlot=null;match.pendingSlot=null;match.steal=null;match.phase='guess';
+    saveMatch();screen='guess';render();
+  }
+  function revealPlacement(){
+    cancelPlacementReveal();
+    if(screen!=='locked'||!current||pendingSlot===null)return;
+    const years=[...activeTeam().timeline].map(Number).filter(Number.isFinite).sort((a,b)=>a-b);
+    settleVirtualPlacement(years,pendingSlot);
   }
   function settleVirtualPlacement(years,slot){
     const team=activeTeam(),left=slot>0?years[slot-1]:null,right=slot<years.length?years[slot]:null,correct=P.placementIsCorrect(years,slot,current.year);
-    placementResult={correct,left,right,slot};recordSongUsed();stopPlayback();
+    placementResult={correct,left,right,slot};recordSongUsed();
     if(correct){years.splice(slot,0,current.year);team.timeline=years;team.score++;team.correct=(team.correct||0)+1}else team.wrong=(team.wrong||0)+1;
     logOutcome(correct?'correct':'wrong',{slot,left,right});
     if(match.steal){
@@ -944,12 +1011,13 @@
     pendingSlot=null;match.pendingSlot=null;match.placementResult=placementResult;match.phase='reveal';syncCurrent();screen='reveal';render();resetScroll();
   }
   function startSteal(){
-    if(!match||!current||bonusBusy||!['playing','guess',...(cfg.playMode==='physical'?['youtube']:[])].includes(screen)||!match.teams.some((_,i)=>canSteal(i)))return;
+    if(!match||!current||bonusBusy||!['playing','guess',...(cfg.playMode==='physical'?['youtube']:['locked'])].includes(screen)||!match.teams.some((_,i)=>canSteal(i)))return;
     const virtual=cfg.playMode==='virtual',years=[...(activeTeam().timeline||[])].map(Number).filter(Number.isFinite).sort((a,b)=>a-b);
     if(virtual&&pendingSlot===null)return;
     const slot=virtual?placementBoundarySlot(years,pendingSlot):null;
+    cancelPlacementReveal();
     match.steal={virtual,years,slot,challenges:[],selectedTeam:null,selectedSlot:null,resolved:false,winner:null};
-    cancelYoutubeListening();stopPlayback();E.destroyYouTube();
+    cancelYoutubeListening();if(screen!=='locked')stopPlayback();E.destroyYouTube();
     pendingSlot=null;match.pendingSlot=null;match.phase='steal';syncCurrent();screen='steal';render();resetScroll();
   }
   function selectStealTeam(teamIndex){
