@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 const policy = fs.readFileSync('app-policy.js','utf8');
 const source = fs.readFileSync('app.js','utf8').replace('  boot();',`  modeReports=E.modeReports();
   window.__test={addBonusPoint,buyBonusYear,newCardForRepeat,finishPhysical,
-    finishVirtualTurn,lockPlacement,migrateMatch,handleBack,saveMatch,startMatch,resumeMatch,
+    finishVirtualTurn,lockPlacement,undoPlacement,revealPlacement,selectSlot,migrateMatch,handleBack,saveMatch,startMatch,resumeMatch,
     startSteal,selectStealTeam,selectStealSlot,commitSteal,revealSteals,judgePhysicalSteal,
     revealPhysical,skippedScreen,virtualTimeline,clearRoundState,skipBrokenSong,skipFailedCard,
     bonusActions,youtubeListeningScreen,startSpotifyListening,
@@ -20,6 +20,7 @@ const current={cardId:1,year:2000,song:catalogue[0],provider:'youtube',resolved:
 const node={innerHTML:'',textContent:'',classList:{add(){},remove(){},toggle(){}},querySelector(){return null},querySelectorAll(){return[]}};
 
 async function make(saved={}){
+  let autoReveal;
   const store=new Map(), cfg={playMode:'virtual',teams:2,victory:'10',mode:'greatest',minYear:2000,maxYear:2003};
   const base={active:true,mode:'greatest',phase:'reveal',round:4,turn:0,settings:cfg,current,placementResult:{correct:true,slot:1},pendingSlot:null,
     teams:[{name:'Team 1',score:2,correct:2,wrong:0,bonusPoints:0,bonusYears:0,timeline:[1990,2000]},{name:'Team 2',score:1,correct:1,wrong:0,bonusPoints:0,bonusYears:0,timeline:[1991]}],
@@ -32,10 +33,10 @@ async function make(saved={}){
     pauseYouTube(){},destroyYouTube(){},pauseSpotify:async()=>{},replayYouTube:()=>true,baseCardYear:id=>E.cardYear(id),cardYearReference:id=>({year:E.cardYear(id)}),setCardYearReference(){},
     AppError:class AppError extends Error{constructor(code,msg){super(msg);this.code=code}}
   };
-  const ctx=vm.createContext({window:{GSYEngine:E,addEventListener(){},scrollTo(){}},document:{getElementById:id=>['app','toast'].includes(id)?node:null,activeElement:null,querySelectorAll:()=>[],addEventListener(){}},localStorage:{getItem:k=>store.get(k)??null,setItem:(k,v)=>store.set(k,v),removeItem:k=>store.delete(k)},navigator:{},requestAnimationFrame(fn){fn?.()},setTimeout(fn){fn?.();return 1},clearTimeout(){},setInterval(){return 1},clearInterval(){},URL,console,prompt(){return null},history:{state:null,replaceState(){},pushState(){},back(){}}});
+  const ctx=vm.createContext({window:{GSYEngine:E,addEventListener(){},scrollTo(){}},document:{getElementById:id=>['app','toast'].includes(id)?node:null,activeElement:null,querySelectorAll:()=>[],addEventListener(){}},localStorage:{getItem:k=>store.get(k)??null,setItem:(k,v)=>store.set(k,v),removeItem:k=>store.delete(k)},navigator:{},requestAnimationFrame(fn){fn?.()},setTimeout(fn,ms){if(ms===3000){autoReveal=fn;return 2}fn?.();return 1},clearTimeout(id){if(id===2)autoReveal=undefined},setInterval(){return 1},clearInterval(){},URL,console,prompt(){return null},history:{state:null,replaceState(){},pushState(){},back(){}}});
   vm.runInContext(policy,ctx); vm.runInContext(source,ctx);
   const R=ctx.window.__test; R.setState({cfg,match:JSON.parse(JSON.stringify(base)),current:base.current,screen:'reveal',pendingSlot:null,placementResult:base.placementResult});
-  return {R,E,store,node,state:()=>R.getState()};
+  return {R,E,store,node,autoReveal:()=>autoReveal?.(),state:()=>R.getState()};
 }
 
 // Honour is stored on the active team, adds no card score, and survives reload.
@@ -89,12 +90,52 @@ async function placing(teams=[team('Team 1'),team('Team 2')],slot=0){
  h.R.setState({screen:'guess',placementResult:null,pendingSlot:slot});return h;
 }
 
-// Reveal is always direct, even when funded opponents could steal. No forced gate.
-{const h=await placing();assert.match(h.R.virtualTimeline(),/>Reveal<\/button>/);assert.match(h.R.virtualTimeline(),/>Steal<\/button>/);h.R.lockPlacement();assert.equal(h.state().screen,'reveal');assert.equal(h.state().placementResult.correct,false);assert.equal(h.state().match.steal,undefined);assert.equal(h.state().match.teams[1].bonusPoints,2)}
+// Lock hides the answer and survives Resume. Undo opens the same card with a clean placement.
+{
+  const h=await placing();
+  assert.match(h.R.virtualTimeline(),/>Reveal<\/button>/);
+  assert.match(h.R.virtualTimeline(),/>Steal<\/button>/);
+  const before=JSON.stringify(h.state().match.teams);
+  h.R.lockPlacement();
+  h.R.lockPlacement();
+  assert.equal(h.state().screen,'locked');
+  assert.match(h.node.innerHTML,/Undo placement/);
+  assert.doesNotMatch(h.node.innerHTML,/Alpha|Example Artist|answer-year/);
+  assert.equal(JSON.stringify(h.state().match.teams),before);
+  h.R.handleBack();
+  h.autoReveal();
+  assert.equal(h.state().screen,'resume','Back cancels the automatic reveal');
+  assert.equal(h.state().match.phase,'locked');
+  const reload=await make(JSON.parse(h.store.get('gsy.match.v7')));
+  await reload.R.resumeMatch();
+  assert.equal(reload.state().screen,'locked');
+  reload.R.undoPlacement();
+  assert.equal(reload.state().screen,'guess');
+  assert.equal(reload.state().pendingSlot,null);
+  assert.equal(reload.state().current.cardId,1);
+  reload.R.selectSlot(1);
+  reload.R.lockPlacement();
+  reload.autoReveal();
+  reload.R.undoPlacement();
+  reload.R.revealPlacement();
+  assert.equal(reload.state().screen,'reveal');
+  assert.equal(reload.state().placementResult.correct,true);
+  assert.equal(reload.state().match.teams[0].score,1);
+  assert.equal(reload.state().match.teams[1].bonusPoints,2);
+}
+{
+  const h=await placing();
+  h.R.startSteal();
+  assert.match(h.node.innerHTML,/Undo placement/);
+  h.R.undoPlacement();
+  assert.equal(h.state().screen,'guess');
+  assert.equal(h.state().match.steal,null);
+  assert.equal(h.state().match.teams[1].bonusPoints,2);
+}
 
 // A committed steal stays hidden, costs once, survives Back/Resume and wins only
 // after revealing a wrong active placement. A stolen tenth card wins normally.
-{const h=await placing([team('Team 1'),team('Team 2',2,[1980],9)]);h.R.startSteal();assert.equal(h.state().screen,'steal');assert.equal(h.state().placementResult,null);assert.doesNotMatch(h.node.innerHTML,/Alpha|Example Artist|answer-year/);h.R.selectStealTeam(1);h.R.selectStealSlot(1);h.R.commitSteal();h.R.commitSteal();assert.equal(h.state().match.teams[1].bonusPoints,1);assert.equal(h.state().match.teams[1].score,9);h.R.handleBack();assert.equal(h.state().screen,'resume');await h.R.resumeMatch();assert.equal(h.state().screen,'steal');
+{const h=await placing([team('Team 1'),team('Team 2',2,[1980],9)]);h.R.startSteal();assert.equal(h.state().screen,'steal');assert.equal(h.state().placementResult,null);assert.doesNotMatch(h.node.innerHTML,/Alpha|Example Artist|answer-year/);h.R.selectStealTeam(1);h.R.selectStealSlot(1);h.R.commitSteal();h.R.commitSteal();h.R.undoPlacement();assert.doesNotMatch(h.node.innerHTML,/Undo placement/);assert.equal(h.state().match.teams[1].bonusPoints,1);assert.equal(h.state().match.teams[1].score,9);h.R.handleBack();assert.equal(h.state().screen,'resume');await h.R.resumeMatch();assert.equal(h.state().screen,'steal');
  const reload=await make(JSON.parse(h.store.get('gsy.match.v7')));reload.R.setState({screen:'resume'});reload.R.migrateMatch();await reload.R.resumeMatch();assert.equal(reload.state().screen,'steal');reload.R.revealSteals();reload.R.revealSteals();const m=reload.state().match;assert.equal(reload.state().screen,'reveal');assert.equal(m.teams[0].score,0);assert.equal(m.teams[0].wrong,1);assert.equal(m.teams[1].score,10);assert.deepEqual(Array.from(m.teams[1].timeline),[1980,2000]);assert.equal(m.steal.winner,1);assert.equal(m.history.filter(x=>x.outcome==='steal-won').length,1);reload.R.finishVirtualTurn();assert.equal(reload.state().screen,'gameover')}
 
 // The winning team gets the only highlighted card, including in a shared-year stack.

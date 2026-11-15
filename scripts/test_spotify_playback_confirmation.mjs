@@ -14,7 +14,7 @@ function make({states=[playing()],devices=[device],hang='',expired=false,selecte
     ['gsy.spotifyToken.v6',JSON.stringify({access_token:'TEST',refresh_token:'REFRESH',expires_at:expired?0:Date.now()+3600000})],
     ['gsy.spotifyDevice.v6',selected],
   ]);
-  const calls=[],timers=new Map();let nextTimer=0,read=0,activated='',activationReads=0,albumRequested=false;
+  const calls=[],timers=new Map();let nextTimer=0,read=0,activated='',activationReads=0,albumRequested=false,paused=false;
   const setTimeout=(fn,ms)=>{
     const id=++nextTimer;timers.set(id,{fn,ms});
     if(ms<10000)queueMicrotask(()=>{if(timers.delete(id))fn()});
@@ -34,13 +34,16 @@ function make({states=[playing()],devices=[device],hang='',expired=false,selecte
         return response({devices:devices.map(item=>ready?{...item,is_active:item.id===activated}:item)});
       }
       if(url.pathname.endsWith('/play')){
+        paused=false;
         albumRequested=!!call.body.context_uri;
         const status=albumRequested?albumStatus:playStatus;
         return response(status===403?{error:{message:'Premium required'}}:null,status);
       }
       if(url.pathname==='/v1/tracks/requested')return response(albumTrack||{uri});
       if(url.pathname==='/v1/me/player'&&options.method==='PUT'){activated=JSON.parse(options.body).device_ids[0];return response(null,204)}
+      if(url.pathname.endsWith('/pause')){paused=true;return response(null,204)}
       if(url.pathname==='/v1/me/player'){
+        if(paused)return response(playing({is_playing:false}));
         if(albumRequested&&albumRecovers)return response(playing({item:{uri:albumTrack?.uri||uri}}));
         const state=states[Math.min(read++,states.length-1)];
         return response(state,state===null?204:200);

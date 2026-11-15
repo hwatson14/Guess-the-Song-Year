@@ -15,7 +15,7 @@
 
   const SPOTIFY_CLIENT_ID='c088fe548e9b4f6c886bce6b0db64e16';
   const YOUTUBE_API_KEY='AIzaSyDJvhC5aEQES30hAcwNhc3-eeAR_WWE0K8';
-  const LS={provider:'gsy.provider.v6',token:'gsy.spotifyToken.v6',device:'gsy.spotifyDevice.v6',cache:'gsy.resolveCache.v6',cardYears:'gsy.cardYearOverrides.v1'};
+  const LS={provider:'gsy.provider.v6',token:'gsy.spotifyToken.v6',device:'gsy.spotifyDevice.v6',lastPlaybackDevice:'gsy.lastSpotifyPlaybackDevice.v1',cache:'gsy.resolveCache.v6',cardYears:'gsy.cardYearOverrides.v1'};
   const SCOPES='user-read-playback-state user-modify-playback-state';
   const YOUTUBE_CACHE_TTL_MS=7*24*60*60*1000;
   const YOUTUBE_MATCH_POLICY='title-artist-v1';
@@ -28,7 +28,7 @@
   if(!cardYearOverrides||typeof cardYearOverrides!=='object'||Array.isArray(cardYearOverrides))cardYearOverrides={};
   let catalogue=null,cataloguePromise=null,modeManifest=null,modeManifestPromise=null;
   let ytApiPromise=null,ytPlayer=null,ytRequestGeneration=0,ytActiveRequest=null,spotifyPlaybackChain=Promise.resolve();
-  let lastSpotifyPlaybackDeviceId='';
+  let lastSpotifyPlaybackDeviceId=localStorage.getItem(LS.lastPlaybackDevice)||'';
 
   class AppError extends Error{
     constructor(code,message,status=0){super(message);this.name='AppError';this.code=code;this.status=status}
@@ -85,12 +85,39 @@
     const oldDevice=localStorage.getItem('gsy.device');if(oldDevice&&!spotifyDevice){spotifyDevice=oldDevice;localStorage.setItem(LS.device,spotifyDevice)}
   }
 
+  async function readJson(url,service,{timeout=8000,...options}={}){
+    for(let attempt=0;attempt<2;attempt++){
+      const controller=new AbortController();
+      let timer;
+      try{
+        const result=await Promise.race([(async()=>{
+          const response=await fetch(url,{...options,signal:controller.signal});
+          if(response.status>=500&&attempt===0)return null;
+          const data=await response.json().catch(error=>{
+            if(response.ok||controller.signal.aborted)throw error;
+            return {};
+          });
+          return {response,data};
+        })(),new Promise((_,reject)=>{
+          timer=setTimeout(()=>{
+            reject(new AppError(`${service}_TIMEOUT`,`${service==='YOUTUBE'?'YouTube':'The song catalogue'} took too long to respond. Try again when the connection improves.`));
+            controller.abort();
+          },timeout);
+        })]);
+        if(result)return result;
+      }catch(err){
+        const transport=err?.code===`${service}_TIMEOUT`||err?.name==='TypeError'||err?.name==='AbortError';
+        if(!transport)throw err;
+        if(attempt===1)throw err instanceof AppError?err:new AppError(`${service}_NETWORK`,`${service==='YOUTUBE'?'YouTube':'The song catalogue'} could not be reached. Check the connection and try again.`);
+      }finally{clearTimeout(timer)}
+    }
+  }
+
   async function loadModeManifest(){
     if(modeManifest)return modeManifest;
     if(modeManifestPromise)return modeManifestPromise;
-    modeManifestPromise=fetch('./data/modes.json?v=1',{cache:'no-store'}).then(async r=>{
-      if(!r.ok)throw new Error('mode manifest unavailable');
-      const data=await r.json();
+    modeManifestPromise=readJson('./data/modes.json?v=1','CATALOGUE',{cache:'no-cache'}).then(({response,data})=>{
+      if(!response.ok)throw new Error('mode manifest unavailable');
       for(const [id,meta] of Object.entries(data?.modes||{})){
         if(meta&&typeof meta==='object')MODES[id]=Object.assign(MODES[id]||{},meta);
       }
@@ -102,11 +129,13 @@
   async function loadCatalogue(){
     if(catalogue)return catalogue;
     if(cataloguePromise)return cataloguePromise;
-    cataloguePromise=fetch('./data/catalogue.json?v=7.7.0',{cache:'no-store'}).then(async r=>{
-      if(!r.ok)throw new AppError('CATALOGUE_UNAVAILABLE','The song catalogue is unavailable. Reload the app in a moment.',r.status);
-      const data=await r.json();
+    cataloguePromise=readJson('./data/catalogue.json?v=7.7.0','CATALOGUE',{timeout:12000,cache:'default'}).then(({response,data})=>{
+      if(!response.ok)throw new AppError('CATALOGUE_UNAVAILABLE','The song catalogue is unavailable. Try again in a moment.',response.status);
       if(!data?.modes)throw new AppError('CATALOGUE_INVALID','The song catalogue is invalid.');
       catalogue=data;return data;
+    }).catch(err=>{
+      if(err?.name==='SyntaxError')throw new AppError('CATALOGUE_INVALID','The song catalogue is invalid.');
+      throw err;
     }).finally(()=>cataloguePromise=null);
     return cataloguePromise;
   }
@@ -238,7 +267,7 @@
     if(!ids.length){
       const q=`${matchSong.title} ${mainArtist(matchSong.artist)} official audio`;
       const url=`https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&videoEmbeddable=true&videoSyndicated=true&maxResults=8&safeSearch=none&regionCode=AU&q=${encodeURIComponent(q)}&key=${encodeURIComponent(YOUTUBE_API_KEY)}`;
-      const r=await fetch(url);const payload=await r.json().catch(()=>({}));
+      const {response:r,data:payload}=await readJson(url,'YOUTUBE');
       if(!r.ok){const quota=/quota/i.test(payload?.error?.message||'');throw new AppError(quota?'YOUTUBE_QUOTA':'YOUTUBE_SEARCH_FAILED',quota?'YouTube search quota is temporarily exhausted. Use Spotify or try again later.':`YouTube search failed (${r.status}).`,r.status)}
       const raw=(payload.items||[]).map(x=>({id:x.id?.videoId,title:x.snippet?.title||'',channel:x.snippet?.channelTitle||''})).filter(x=>x.id);
       const valid=(await validateYouTubeIds(raw.map(x=>x.id))).filter(video=>youtubeCandidateAllowed(video,matchSong));
@@ -254,7 +283,7 @@
   async function validateYouTubeIds(ids){
     if(!ids.length)return [];
     const url=`https://www.googleapis.com/youtube/v3/videos?part=status,snippet&id=${encodeURIComponent(ids.join(','))}&key=${encodeURIComponent(YOUTUBE_API_KEY)}`;
-    const r=await fetch(url);const d=await r.json().catch(()=>({}));
+    const {response:r,data:d}=await readJson(url,'YOUTUBE');
     if(!r.ok)throw new AppError('YOUTUBE_VALIDATE_FAILED','YouTube could not validate the candidate videos.',r.status);
     return (d.items||[]).filter(x=>x.status?.embeddable!==false&&x.status?.privacyStatus!=='private'&&x.status?.uploadStatus!=='rejected').map(x=>({id:x.id,title:x.snippet?.title||'',channel:x.snippet?.channelTitle||''}));
   }
@@ -267,11 +296,11 @@
     ytApiPromise=new Promise((resolve,reject)=>{
       let settled=false,apiTimeout=null;
       const succeed=()=>{if(settled)return;settled=true;clearTimeout(apiTimeout);resolve()};
-      const fail=err=>{if(settled)return;settled=true;clearTimeout(apiTimeout);reject(err)};
+      const fail=err=>{if(settled)return;settled=true;clearTimeout(apiTimeout);s.remove?.();reject(err)};
       const prior=window.onYouTubeIframeAPIReady;
       window.onYouTubeIframeAPIReady=()=>{try{prior?.()}catch{}succeed()};
-      const s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';s.async=true;s.onerror=()=>fail(new AppError('YOUTUBE_PLAYER_LOAD','Could not load the YouTube player.'));document.head.appendChild(s);
-      apiTimeout=setTimeout(()=>window.YT?.Player?succeed():fail(new AppError('YOUTUBE_PLAYER_LOAD','YouTube did not finish loading. Check the connection and retry.')),8000);
+      const s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';s.async=true;s.onerror=()=>fail(new AppError('YOUTUBE_NETWORK','Could not load the YouTube player. Check the connection and retry.'));document.head.appendChild(s);
+      apiTimeout=setTimeout(()=>window.YT?.Player?succeed():fail(new AppError('YOUTUBE_TIMEOUT','YouTube did not finish loading. Check the connection and retry.')),8000);
     }).catch(err=>{ytApiPromise=null;throw err});
     return ytApiPromise;
   }
@@ -297,21 +326,37 @@
     if(cancelled||generation!==ytRequestGeneration||ytActiveRequest!==request)return {cancelled:true,started:false,needsTap:false};
     const ids=[...(resolved.candidateIds||[resolved.videoId])];
     return new Promise((resolve,reject)=>{
-      let idx=0,settled=false,started=false,player=null;
+      let idx=0,settled=false,state=null,player=null;
       const clearTimers=()=>{clearTimeout(request.readyTimer);clearTimeout(request.fallbackTimer);request.readyTimer=null;request.fallbackTimer=null};
       const ownsPlayer=()=>generation===ytRequestGeneration&&ytActiveRequest===request&&ytPlayer===player;
       const finish=value=>{if(settled)return;settled=true;clearTimers();resolve(value)};
       const fail=e=>{if(settled)return;settled=true;clearTimers();reject(e)};
+      const timeout=()=>fail(new AppError('YOUTUBE_TIMEOUT','YouTube did not start in time. Check the connection and retry this song.'));
+      const armPlaybackTimer=()=>{
+        clearTimeout(request.readyTimer);
+        request.readyTimer=setTimeout(()=>{
+          if(!ownsPlayer())return;
+          if(state===YT.PlayerState.BUFFERING){timeout();return}
+          finish({started:false,needsTap:true,videoId:ids[idx]});
+        },6500);
+      };
       request.cancel=()=>finish({cancelled:true,started:false,needsTap:false});
-      const playIndex=()=>{request.fallbackTimer=null;if(!ownsPlayer())return;const id=ids[idx];if(!id)return fail(new AppError('YOUTUBE_PLAY_FAILED','No playable YouTube version was found.'));if(player?.loadVideoById){player.loadVideoById(id);try{player.playVideo()}catch{}}};
-      ytActiveRequest=request;
+      const playIndex=()=>{
+        request.fallbackTimer=null;
+        if(!ownsPlayer())return;
+        const id=ids[idx];
+        if(!id||!player?.loadVideoById){fail(new AppError('YOUTUBE_PLAY_FAILED','No playable YouTube version was found.'));return}
+        state=null;player.loadVideoById(id);try{player.playVideo()}catch{}
+        armPlaybackTimer();
+      };
       try{
         player=new YT.Player(containerId,{videoId:ids[0],playerVars:{autoplay:1,controls:1,playsinline:1,rel:0,origin:location.origin},events:{
-          onReady:e=>{if(!ownsPlayer()||e.target!==player)return;try{player.playVideo()}catch{};request.readyTimer=setTimeout(()=>{request.readyTimer=null;if(ownsPlayer()&&!started)finish({started:false,needsTap:true,videoId:ids[idx]})},6500)},
-          onStateChange:e=>{if(!ownsPlayer()||e.target!==player)return;onState(e.data);if(e.data===YT.PlayerState.PLAYING){started=true;const chosen=ids[idx];if(resolved.song){const rest=ids.filter(x=>x!==chosen);cachePut('youtube',resolved.song,{ids:[chosen,...rest]})}finish({started:true,needsTap:false,videoId:chosen})}},
-          onError:e=>{if(!ownsPlayer()||e.target!==player)return;cacheDropYoutubeCandidate(resolved.song,ids[idx]);if(idx<ids.length-1){idx++;clearTimeout(request.fallbackTimer);request.fallbackTimer=setTimeout(playIndex,150)}else fail(new AppError('YOUTUBE_PLAY_FAILED','The available YouTube versions could not be played. Try Spotify or another card.'))}
+          onReady:e=>{if(settled||!ownsPlayer()||e.target!==player)return;try{player.playVideo()}catch{};armPlaybackTimer()},
+          onStateChange:e=>{if(!ownsPlayer()||e.target!==player)return;state=e.data;onState(state);if(state===YT.PlayerState.PLAYING){const chosen=ids[idx];if(resolved.song){const rest=ids.filter(x=>x!==chosen);cachePut('youtube',resolved.song,{ids:[chosen,...rest]})}finish({started:true,needsTap:false,videoId:chosen})}},
+          onError:e=>{if(!ownsPlayer()||e.target!==player)return;cacheDropYoutubeCandidate(resolved.song,ids[idx]);if(idx<ids.length-1){idx++;clearTimers();request.fallbackTimer=setTimeout(playIndex,150)}else fail(new AppError('YOUTUBE_PLAY_FAILED','The available YouTube versions could not be played. Try Spotify or another card.'))}
         }});
         request.player=player;ytPlayer=player;
+        request.readyTimer=setTimeout(timeout,10000);
       }catch(e){if(ytActiveRequest===request)ytActiveRequest=null;fail(e)}
     });
   }
@@ -349,7 +394,7 @@
 
   function setSpotifyToken(t){spotifyToken={...spotifyToken,...t,refresh_token:t.refresh_token||spotifyToken?.refresh_token,expires_at:Date.now()+Number(t.expires_in||3600)*1000};saveJSON(LS.token,spotifyToken)}
   function isSpotifyConnected(){return !!(spotifyToken?.access_token&&spotifyToken?.refresh_token)}
-  function spotifyDisconnect(){spotifyToken=null;localStorage.removeItem(LS.token);localStorage.removeItem('gsy.token');spotifyDevice='';localStorage.removeItem(LS.device);if(provider==='spotify')setProvider('youtube')}
+  function spotifyDisconnect(){spotifyToken=null;localStorage.removeItem(LS.token);localStorage.removeItem('gsy.token');spotifyDevice='';localStorage.removeItem(LS.device);lastSpotifyPlaybackDeviceId='';localStorage.removeItem(LS.lastPlaybackDevice);if(provider==='spotify')setProvider('youtube')}
 
   async function spotifyAccessToken(forceRefresh=false){
     if(!spotifyToken?.access_token)throw new AppError('SPOTIFY_NOT_CONNECTED','Spotify is not connected.');
@@ -461,11 +506,17 @@
     throw new AppError('SPOTIFY_PREVIOUS_TRACK_STILL_PLAYING','Spotify has not stopped the previous song. Pause playback on the selected device, then retry.');
   }
 
+  function rememberSpotifyPlaybackDevice(id){
+    lastSpotifyPlaybackDeviceId=id;
+    try{localStorage.setItem(LS.lastPlaybackDevice,id)}catch{}
+  }
+
   async function playSpotifyNow(uri,track){
     if(!uri)throw new AppError('SPOTIFY_TRACK_MISSING','Spotify track is missing.');
     const pinned=!!spotifyDevice;
     let id=await ensureSpotifyDevice();
     await silencePreviousSpotifyTrack(id);
+    rememberSpotifyPlaybackDevice(id);
     const body=JSON.stringify({uris:[uri],position_ms:0});
     try{await spotifyApi(`/me/player/play?device_id=${encodeURIComponent(id)}`,{method:'PUT',headers:{'Content-Type':'application/json'},body},true)}
     catch(e){
@@ -473,7 +524,7 @@
         const devices=(await spotifyDevices()).filter(x=>x.id&&x.is_restricted!==true);const fallback=devices.find(x=>x.is_active)||devices[0];
         if(!fallback)throw new AppError('SPOTIFY_DEVICE_LOST','Spotify lost the playback device. Choose an available device and retry.',404);
         if(pinned)setSpotifyDevice(fallback.id);id=fallback.id;
-        try{await activateSpotifyDevice(id);await silencePreviousSpotifyTrack(id);await spotifyApi(`/me/player/play?device_id=${encodeURIComponent(id)}`,{method:'PUT',headers:{'Content-Type':'application/json'},body},true)}
+        try{await activateSpotifyDevice(id);await silencePreviousSpotifyTrack(id);rememberSpotifyPlaybackDevice(id);await spotifyApi(`/me/player/play?device_id=${encodeURIComponent(id)}`,{method:'PUT',headers:{'Content-Type':'application/json'},body},true)}
         catch(fallbackErr){if(fallbackErr?.status!==404)throw fallbackErr;throw new AppError('SPOTIFY_DEVICE_LOST','Spotify lost the playback device. Choose an available device and retry.',404)}
       }else{
         if(e.status===403)throw new AppError('SPOTIFY_FORBIDDEN','Spotify rejected playback control. Confirm the connected account has Premium and Spotify is open on the target device.',403);
@@ -482,20 +533,37 @@
     }
     // A successful command response does not prove the requested track started.
     // Keep this inside the playback queue so older checks cannot affect a newer play.
-    if(await confirmSpotifyPlayback([uri],id)){lastSpotifyPlaybackDeviceId=id;return id;}
+    if(await confirmSpotifyPlayback([uri],id))return id;
     // Some Spotify clients acknowledge bare-track requests without playing.
     // Retry the exact recording through its album, a documented API request form.
     const album=await spotifyAlbumPlayback(uri,track);
     if(album){
       await spotifyApi(`/me/player/play?device_id=${encodeURIComponent(id)}`,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({context_uri:album.albumUri,offset:{uri:album.uri},position_ms:0})},true);
-      if(await confirmSpotifyPlayback([uri,album.uri],id)){lastSpotifyPlaybackDeviceId=id;return id;}
+      if(await confirmSpotifyPlayback([uri,album.uri],id))return id;
     }
     throw new AppError('SPOTIFY_PLAYBACK_UNCONFIRMED',album?'Spotify accepted both playback methods, but did not report the requested song playing on the selected device.':'Spotify accepted Play but did not report the requested song playing. No verified album context was available for recovery.');
   }
   function enqueueSpotifyPlayback(task){const run=spotifyPlaybackChain.then(task,task);spotifyPlaybackChain=run.catch(()=>{});return run}
   function playSpotify(uri,track){return enqueueSpotifyPlayback(()=>playSpotifyNow(uri,track))}
   // The command queue owns all Spotify device side effects; callers must await the wrapper.
-  function pauseSpotify(){return enqueueSpotifyPlayback(async()=>{const id=await ensureSpotifyDevice();await spotifyApi(`/me/player/pause?device_id=${encodeURIComponent(id)}`,{method:'PUT'},true)})}
+  function pauseSpotify(expectedUri){return enqueueSpotifyPlayback(async()=>{
+    let id=lastSpotifyPlaybackDeviceId;
+    if(!id&&expectedUri){
+      const state=await spotifyApi('/me/player');
+      const matches=state?.item?.uri===expectedUri||state?.item?.linked_from?.uri===expectedUri;
+      if(state?.is_playing&&matches&&state.device?.id){
+        id=state.device.id;
+        rememberSpotifyPlaybackDevice(id);
+      }
+    }
+    if(!id)return;
+    try{await spotifyApi(`/me/player/pause?device_id=${encodeURIComponent(id)}`,{method:'PUT'},true)}
+    catch(err){
+      if(err?.status!==404)throw err;
+      const state=await spotifyApi('/me/player');
+      if(state?.is_playing&&state?.device?.id===id)throw err;
+    }
+  })}
 
   async function diagnostics(){
     const out=[];out.push({ok:YEAR_MAP.length===309&&YEAR_MAP[67]===1998,text:'308-card year map'});

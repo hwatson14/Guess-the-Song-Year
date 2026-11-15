@@ -10,7 +10,7 @@ function makeStorage(entries){
   return {values, getItem:key=>values.get(key) ?? null, setItem:(key,value)=>values.set(key,String(value)), removeItem:key=>values.delete(key)};
 }
 function load(storage){
-  const context = vm.createContext({window:{}, localStorage:storage, URLSearchParams, location:{search:''},
+  const context = vm.createContext({window:{}, localStorage:storage, URLSearchParams, AbortController, setTimeout, clearTimeout, location:{search:''},
     fetch:async url=>({ok:true,json:async()=>({modes:{}})} )});
   vm.runInContext(source('app-policy.js'), context, {filename:'app-policy.js'});
   vm.runInContext(source('engine.js'), context, {filename:'engine.js'});

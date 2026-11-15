@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import {catalogueEngine} from './catalogue_runtime.mjs';
 
 const source=fs.readFileSync('app.js','utf8').replace('  boot();',`  window.__test={
-  startMatch,migrateMatch,takeVirtualCardId,prepareCard,nextRound,ensureVirtualStarters,resumeMatch,
+  startMatch,migrateMatch,takeVirtualCardId,prepareCard,retryFailedCard,nextRound,ensureVirtualStarters,resumeMatch,
   getState:()=>({cfg,screen,match,current}),
   setState:next=>{if(next.cfg)cfg={...DEFAULT_CFG,...next.cfg};if('match' in next)match=next.match;
     if(next.reports)modeReports=next.reports;if('current' in next)current=next.current;
@@ -115,4 +115,40 @@ failed.E.resolveSong=async()=>{throw new failed.E.AppError('YOUTUBE_VIDEO_NOT_FO
 await failed.startMatch();await flush();
 assert.equal(failed.getState().screen,'error','failed candidates cause recovery, not whole-range completion');
 assert.notEqual(failed.getState().match.endReason,'range-exhausted');
+// A lost connection must keep the match and pending virtual card until recovery.
+const interrupted=await make({...config,minYear:2001,maxYear:2001});
+interrupted.E.resolveSong=()=>new Promise(()=>{});
+await interrupted.startMatch();await flush();
+const saved=JSON.parse(interrupted.store.get('gsy.match.v7'));
+assert.equal(saved.phase,'loading');assert.equal(saved.loadingCardId,2);
+saved.teams[0].score=4;saved.turn=1;
+const restored=await make({...config,minYear:2001,maxYear:2001});
+restored.setState({match:saved,screen:'resume',reports:{}});
+const getReports=restored.E.modeReports;
+restored.E.modeReports=async()=>{throw new restored.E.AppError('CATALOGUE_NETWORK','Offline')};
+await restored.resumeMatch();
+assert.equal(restored.getState().screen,'error');
+assert.equal(saved.error.cardId,2);
+assert.equal(saved.teams[0].score,4);
+restored.E.modeReports=getReports;
+await restored.retryFailedCard();
+assert.equal(restored.getState().screen,'ready');
+assert.equal(restored.getState().current.cardId,2);
+assert.equal(saved.virtualPos,1);
+assert.equal(saved.turn,1);
+
+// A physical card scanned before catalogue recovery must survive refresh too.
+const physicalReconnect=await make({...config,playMode:'physical'});
+await physicalReconnect.startMatch();
+physicalReconnect.setState({reports:{}});
+physicalReconnect.E.modeReports=()=>new Promise(()=>{});
+void physicalReconnect.prepareCard(2);
+const pendingPhysical=JSON.parse(physicalReconnect.store.get('gsy.match.v7'));
+assert.equal(pendingPhysical.phase,'loading');assert.equal(pendingPhysical.loadingCardId,2);
+const resumedPhysical=await make({...config,playMode:'physical'});
+resumedPhysical.setState({match:pendingPhysical,screen:'resume'});
+await resumedPhysical.resumeMatch();
+assert.equal(resumedPhysical.getState().screen,'ready');
+assert.equal(resumedPhysical.getState().current.cardId,2);
+
 console.log('year range VM regressions passed: starters, persistence, finite exhaustion, refills, fixed repeats, scan rejection and provider failures');

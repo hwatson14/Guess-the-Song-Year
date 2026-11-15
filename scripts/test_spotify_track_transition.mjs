@@ -6,10 +6,8 @@ const source=readFileSync('engine.js','utf8');
 const token={access_token:'TEST',refresh_token:'REFRESH',expires_at:Date.now()+3600000};
 const response=(data,status=200)=>({ok:status<400,status,json:async()=>data});
 
-function make({pauseSticks=false}={}){
-  const storage=new Map([['gsy.spotifyToken.v6',JSON.stringify(token)]]);
+function make({pauseSticks=false,storage=new Map([['gsy.spotifyToken.v6',JSON.stringify(token)]]),state={uri:'',is_playing:false}}={}){
   const device={id:'phone',is_active:true,is_restricted:false,volume_percent:50};
-  const state={uri:'',is_playing:false};
   const calls=[];
   const ctx=vm.createContext({
     window:{GSYAppPolicy:{}},location:{origin:'https://example.test',href:'https://example.test/game',search:''},
@@ -41,7 +39,7 @@ function make({pauseSticks=false}={}){
     },
   });
   vm.runInContext(source,ctx,{filename:'engine.js'});
-  return {E:ctx.window.GSYEngine,calls,state};
+  return {E:ctx.window.GSYEngine,calls,state,storage};
 }
 const playCalls=h=>h.calls.filter(c=>c.path.endsWith('/play'));
 const pauseCalls=h=>h.calls.filter(c=>c.path.endsWith('/pause'));
@@ -83,6 +81,23 @@ const pauseCalls=h=>h.calls.filter(c=>c.path.endsWith('/pause'));
   assert.equal(playCalls(h).length,1,'unsafe transition must not start another recording');
   assert.equal(h.calls.filter(c=>c.path==='/v1/me/player'&&c.method==='GET').length,7,
     'initial confirmation plus preflight plus five bounded stop confirmations');
+}
+
+{
+  const before=make();
+  await before.E.playSpotify('spotify:track:first');
+  const after=make({storage:before.storage,state:before.state});
+  await after.E.playSpotify('spotify:track:second');
+  assert.equal(pauseCalls(after).length,1,'refresh must preserve ownership of the earlier playback device');
+  assert.equal(after.state.uri,'spotify:track:second');
+}
+
+{
+  const h=make({state:{uri:'spotify:track:old-match',is_playing:true}});
+  await h.E.pauseSpotify('spotify:track:unrelated');
+  assert.equal(pauseCalls(h).length,0,'a legacy save must not pause a different recording');
+  await h.E.pauseSpotify('spotify:track:old-match');
+  assert.equal(pauseCalls(h).length,1,'a legacy save can pause its matching song after updating');
 }
 
 console.log('Spotify track transition regression passed: quiet switch, no redundant pause, fail closed if old song persists.');

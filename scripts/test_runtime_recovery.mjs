@@ -1,15 +1,15 @@
 import fs from 'node:fs'; import vm from 'node:vm'; import assert from 'node:assert/strict';
 const policy=fs.readFileSync('app-policy.js','utf8'), engine=fs.readFileSync('engine-v7.js','utf8');
-const app=fs.readFileSync('app.js','utf8').replace('  boot();','  window.__test={selectProvider,resumeMatch,listenAgain,startYouTubeListening,finishYouTubeListening,startSpotifyListening,togglePlay,replay,stopPlayback,getState:()=>({screen,current,playing,match})};');
+const app=fs.readFileSync('app.js','utf8').replace('  boot();','  window.__test={selectProvider,resumeMatch,listenAgain,startYouTubeListening,finishYouTubeListening,startSpotifyListening,togglePlay,replay,stopPlayback,retryFailedCard,getState:()=>({screen,current,playing,match})};');
 function make({phase='guess',mode='greatest'}={}){
  const song={title:'Example Song',artist:'Example Artist',year:2000,chartYear:2000,youtubeId:'dead-upload',canonicalKey:'example song|example artist'};
  const current={song,cardId:1,year:2000,provider:'youtube',mode,resolved:{matchPolicy:'title-artist-v1',videoId:'dead-upload',candidateIds:['dead-upload']}};
  const saved={active:true,mode,phase,current,round:0,turn:0,teams:[{name:'Team 1',score:0,correct:0,wrong:0,timeline:[1990],starterYear:1990}],used:[],history:[],virtualDeck:[1],virtualPos:0};
- const store=new Map([['gsy.config.v7',JSON.stringify({playMode:'virtual',teams:1,victory:'10',mode})],['gsy.match.v7',JSON.stringify(saved)]]),node={innerHTML:'',textContent:'',classList:{add(){},remove(){}},querySelector(){return null},querySelectorAll(){return[]}},calls={resolve:[],play:[],pause:0,destroy:0,spotifyPauses:0}; let provider='youtube';
+ const store=new Map([['gsy.config.v7',JSON.stringify({playMode:'virtual',teams:1,victory:'10',mode})],['gsy.match.v7',JSON.stringify(saved)]]),node={set innerHTML(value){html=value;renders++},textContent:'',classList:{add(){},remove(){}},querySelector(){return null},querySelectorAll(){return[]}},calls={resolve:[],play:[],pause:0,destroy:0,spotifyPauses:0}; let provider='youtube',html='',renders=0;
  class AppError extends Error{constructor(code,message){super(message);this.code=code}}
  const E={AppError,MODES:{greatest:{name:'Greatest Hits',status:'beta',yearBasis:'release',repeatPolicy:'unique'},number1_us:{name:'#1 US',status:'beta',yearBasis:'chart',repeatPolicy:'fixed'}},getProvider:()=>provider,setProvider:p=>{provider=p},isSpotifyConnected:()=>true,getSpotifyDevice:()=>'',spotifyDevices:async()=>[],loadCatalogue:async()=>({modes:{greatest:{2000:[song]},number1_us:{2000:[song]}}}),baseCardYear:()=>2000,resolveSong:async s=>{calls.resolve.push(s);return{videoId:s.youtubeId,candidateIds:[s.youtubeId],uri:'spotify:example'}},pauseYouTube:()=>calls.pause++,destroyYouTube:()=>calls.destroy++,pauseSpotify:async()=>{calls.spotifyPauses++},playYouTube:async(c,r)=>{calls.play.push(r.videoId);throw new AppError('YOUTUBE_PLAY_FAILED','blocked upload')}};
  const ctx=vm.createContext({window:{GSYEngine:E,addEventListener(){},scrollTo(){}},document:{getElementById:id=>['app','toast'].includes(id)?node:null,activeElement:null,querySelectorAll:()=>[],addEventListener(){}},localStorage:{getItem:k=>store.get(k)??null,setItem:(k,v)=>store.set(k,v),removeItem:k=>store.delete(k)},navigator:{},requestAnimationFrame(){},setTimeout(){return 1},setInterval(){return 1},clearTimeout(){},clearInterval(){},URL,console});
- vm.runInContext(policy,ctx);vm.runInContext(engine,ctx);vm.runInContext(app,ctx);return{R:ctx.window.__test,E,calls,markup:()=>node.innerHTML};
+ vm.runInContext(policy,ctx);vm.runInContext(engine,ctx);vm.runInContext(app,ctx);return{R:ctx.window.__test,E,calls,markup:()=>html,renders:()=>renders};
 }
 {const{R,E,calls}=make();await R.selectProvider('spotify');await R.resumeMatch();await R.listenAgain();assert.equal(E.getProvider(),'spotify');assert.equal(R.getState().current.provider,'spotify');assert.equal(calls.resolve.length,1)}
 for(const succeeds of [true,false]){
@@ -80,5 +80,55 @@ for(const operation of ['startSpotifyListening','togglePlay','replay']){
  await R.startSpotifyListening();
  assert.equal(plays,0,'a failed stop must never be ignored before starting the next track');
  assert.equal(R.getState().screen,'error','the player must expose a recoverable error instead');
+}
+{
+ const {R,E}=make({phase:'ready'});
+ await R.selectProvider('spotify');await R.resumeMatch();
+ const song=R.getState().current.song;
+ E.playSpotify=async()=>{throw new E.AppError('SPOTIFY_NETWORK','Spotify is offline')};
+ await R.startSpotifyListening();
+ assert.equal(R.getState().screen,'error');
+ await R.retryFailedCard();
+ assert.equal(R.getState().screen,'ready');
+ assert.equal(R.getState().current.song,song,'retry after connection loss keeps the same recording');
+}
+{
+ const {R,E,calls}=make({phase:'ready'});
+ const replacement={title:'Replacement',artist:'Example Artist',year:2000,canonicalKey:'replacement|example artist'};
+ E.chooseSong=async()=>replacement;
+ let online=false;
+ E.resolveSong=async()=>{if(!online)throw new E.AppError('YOUTUBE_NETWORK','Offline');return {videoId:'replacement'}};
+ await R.startYouTubeListening();
+ assert.equal(R.getState().screen,'error');
+ assert.equal(calls.play[0],'dead-upload');
+ online=true;
+ await R.retryFailedCard();
+ assert.equal(R.getState().screen,'ready');
+ assert.equal(R.getState().current.song.title,'Replacement','retry must continue the replacement instead of restoring a known broken upload');
+}
+{
+ const {R,E,renders}=make();
+ let completeDiscovery;
+ E.spotifyDevices=()=>new Promise(resolve=>{completeDiscovery=resolve});
+ await R.selectProvider('spotify');
+ await R.selectProvider('youtube');
+ await R.resumeMatch();
+ const before=renders();
+ completeDiscovery([]);await new Promise(resolve=>setImmediate(resolve));
+ assert.equal(renders(),before,'late Spotify discovery must not replace the current round DOM when settings are closed');
+}
+{
+ const {R,E}=make({phase:'ready'});
+ await R.selectProvider('spotify');await R.resumeMatch();
+ let finishPause,plays=0;
+ E.pauseSpotify=()=>new Promise(resolve=>{finishPause=resolve});
+ R.stopPlayback();
+ await R.selectProvider('youtube');await R.resumeMatch();
+ E.playYouTube=async()=>{plays++;return {started:true}};
+ const turning=R.startYouTubeListening();
+ await new Promise(resolve=>setImmediate(resolve));
+ assert.equal(plays,0,'YouTube must wait for an earlier Spotify track to stop');
+ finishPause();await turning;
+ assert.equal(plays,1);
 }
 console.log('runtime recovery VM regressions passed: provider reconciliation, failed fixed upload, stale YouTube startup and all three stale Spotify paths');
