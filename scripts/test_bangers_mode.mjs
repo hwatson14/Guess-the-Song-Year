@@ -15,8 +15,9 @@ assert.equal(ledger.included.length,102);
 assert.equal(ledger.newMasterIds.length,40);
 assert.equal(ledger.held.length,8);
 const rows=Object.values(cat.modes.bangers||{}).flat();
-assert.equal(rows.length,102);
-assert.equal(new Set(rows.map(x=>x.songId)).size,102);
+assert.equal(rows.length,103);
+assert.equal(new Set(rows.map(x=>x.songId)).size,103);
+assert.ok(rows.some(x=>x.songId==='song_15fb77d7a64343999f05'&&x.title==='I Love It'&&x.artist==='Icona Pop feat. Charli XCX'&&x.year===2012),'Requested Icona Pop track missing or incorrect');
 for(const x of ledger.included){
  const master=db.songs[x.songId],selected=rows.find(r=>r.songId===x.songId);
  assert.ok(master&&selected);
@@ -26,7 +27,7 @@ for(const x of ledger.included){
 for(const x of ledger.held)assert.ok(!rows.some(r=>r.title===x.title));
 const E=catalogueEngine(cat,manifest),reports=await E.modeReports();
 assert.equal(reports.bangers.selectable,true);
-assert.equal(reports.bangers.songs,102);
+assert.equal(reports.bangers.songs,103);
 assert.ok(reports.bangers.years.length>0&&reports.bangers.years.length<73);
 for(const y of reports.bangers.years)assert.equal((await E.chooseSong(y,'bangers',[])).year,y);
 console.log('Bangers 102-song preview selection and original-year invariants passed');

@@ -21,8 +21,8 @@ assert.equal(audit.summary.exactNormalizedAbsent,192,'Historical baseline gap au
 assert.equal(audit.summary.top150,150);
 assert.equal(audit.rankedCandidates.length,192);
 assert.equal(audit.rankedCandidates.filter(x=>x.priorityBand==='top_150').length,150);
-assert.equal(Object.keys(db.songs).length,1170+bangers.newMasterIds.length);
-assert.equal(db.memberships.length,1543+bangers.included.length);
+assert.equal(Object.keys(db.songs).length,1170+bangers.newMasterIds.length+1);
+assert.equal(db.memberships.length,1543+bangers.included.length+1);
 assert.equal(Object.values(cat.modes.greatest).flat().length,944);
 assert.equal(cat.coverage.greatest,73);
 for(const candidate of [...ledger.approvedBenchmarkPromotions,...ledger.approvedAustralianCrossovers]){
