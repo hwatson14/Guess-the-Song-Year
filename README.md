@@ -49,13 +49,13 @@ Run `node scripts/audit_playlist_quality.mjs` for artist concentration and the h
 | Mode | Status | Coverage | Meaning |
 | --- | --- | ---: | --- |
 | Greatest Hits | Beta | 73/73 years | All years selectable; canonical recording and pool-depth curation continues |
-| Bangers | Preview | Sparse | 102 hugely recognisable Australian-friendly group singalongs; eight year/version conflicts held |
+| Bangers | Preview | Sparse | 103 hugely recognisable Australian-friendly group singalongs; eight earlier year/version conflicts held |
 | Australian | Beta | 73/73 years | All years selectable; shallow pools and legacy evidence remain |
 | Unexpected Years | Preview | 40/73 years | Deliberately sparse one-song-per-covered-year preview |
 | #1 US | Beta | 73/73 years | One fixed US chart leader per chart year |
 | #1 Australia | Beta | 73/73 years | One fixed Australian chart leader per chart year |
 
-Coverage counts usable songs after the runtime filter. Catalogue v20 now contains 1,210 master song records across 1,645 active mode placements (including 102 Bangers memberships): 944 Greatest Hits (at least 12 per year), 253 Australian, 200 Unexpected Years, and 73 in each chart mode. Every stored active row is usable. A global identity/provider-ID regression check prevents the same master identity or provider recording ID from reappearing under multiple song records. Original cleanup records remain accounted for in the archive; the expansion ledger retains source recording metadata and withdrawn alias decisions. Run `node scripts/catalogue_summary.mjs` for runtime counts and `node scripts/song_database_report.mjs` for provider coverage.
+Coverage counts usable songs after the runtime filter. Catalogue v20 now contains 1,211 master song records across 1,646 active mode placements (including 103 Bangers memberships): 944 Greatest Hits (at least 12 per year), 253 Australian, 200 Unexpected Years, and 73 in each chart mode. Every stored active row is usable. A global identity/provider-ID regression check prevents the same master identity or provider recording ID from reappearing under multiple song records. Original cleanup records remain accounted for in the archive; the expansion ledger retains source recording metadata and withdrawn alias decisions. Run `node scripts/catalogue_summary.mjs` for runtime counts and `node scripts/song_database_report.mjs` for provider coverage.
 
 The pre-Bangers v20 database had externally observed release-year evidence for 936 masters, with 234 unresolved. The Bangers additions include new source-linked candidates and do not imply complete recording-level verification. The 2026-11-02 correction pass independently reviewed 13 erroneous canonical release dates, added 20 sourced masters, reused four masters in Australian, and archived three non-song entries without losing their original records. The latest sweep confirmed 40 previously unresolved master years without changing any answer year automatically. Legacy release evidence and exact playback-recording verification remain incomplete, so status stays Beta/Preview.
 

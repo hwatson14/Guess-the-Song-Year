@@ -77527,6 +77527,35 @@
           "links": []
         }
       }
+    },
+    "song_15fb77d7a64343999f05": {
+      "id": "song_15fb77d7a64343999f05",
+      "canonicalKey": "i love it|icona pop feat charli xcx",
+      "title": "I Love It",
+      "artist": "Icona Pop feat. Charli XCX",
+      "release": {
+        "answerYear": 2012,
+        "year": 2012,
+        "state": "externally_observed",
+        "claims": [
+          {
+            "year": 2012,
+            "state": "externally_observed",
+            "sourceUrl": "https://music.apple.com/us/song/821412562",
+            "evidence": "Apple Music lists 9 May 2012 for the song. The original Spotify single is also dated 2012 (https://open.spotify.com/album/5hf74KpfuwSJXVs85k3dVI). Playback recording has not been auditioned."
+          }
+        ]
+      },
+      "providers": {
+        "spotify": {
+          "preferredId": null,
+          "links": []
+        },
+        "youtube": {
+          "preferredId": null,
+          "links": []
+        }
+      }
     }
   },
   "memberships": [
@@ -134369,6 +134398,41 @@
         "releaseYearEvidence": "Original recording year candidate; exact provider track not auditioned.",
         "evidenceState": "externally_observed",
         "sourceRetrievalDate": "2026-11-15"
+      },
+      "fieldOrder": [
+        "title",
+        "artist",
+        "year",
+        "releaseYear",
+        "source",
+        "sourceLabel",
+        "sourceUrl",
+        "sourceProvider",
+        "releaseYearEvidence",
+        "evidenceState",
+        "sourceRetrievalDate",
+        "spotifyId",
+        "youtubeId",
+        "canonicalKey"
+      ],
+      "providerRefs": {
+        "spotify": null,
+        "youtube": null
+      }
+    },
+    {
+      "songId": "song_15fb77d7a64343999f05",
+      "mode": "bangers",
+      "year": 2012,
+      "metadata": {
+        "releaseYear": 2012,
+        "source": "family-request-2026-11-19",
+        "sourceLabel": "Family singalong · original release",
+        "sourceUrl": "https://music.apple.com/us/song/821412562",
+        "sourceProvider": "Apple Music; Spotify corroboration",
+        "releaseYearEvidence": "First released in 2012, supported by Apple Music and Spotify; exact playback track not yet auditioned.",
+        "evidenceState": "externally_observed",
+        "sourceRetrievalDate": "2026-11-19"
       },
       "fieldOrder": [
         "title",
